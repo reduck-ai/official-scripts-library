@@ -599,7 +599,7 @@
 			"address": "@reduck/claude.ai/list_models",
 			"path": "scripts/claude.ai/list_models.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/claude.ai/list_models",
-			"lastmod": "2026-09-18"
+			"lastmod": "2026-09-22"
 		},
 		{
 			"address": "@reduck/claude.ai/login_with_google",
@@ -905,7 +905,7 @@
 			"address": "@reduck/discord.com/delete_message",
 			"path": "scripts/discord.com/delete_message.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/discord.com/delete_message",
-			"lastmod": "2026-09-14"
+			"lastmod": "2026-09-22"
 		},
 		{
 			"address": "@reduck/discord.com/edit_message",
@@ -959,7 +959,7 @@
 			"address": "@reduck/discord.com/post_message",
 			"path": "scripts/discord.com/post_message.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/discord.com/post_message",
-			"lastmod": "2026-09-18"
+			"lastmod": "2026-09-22"
 		},
 		{
 			"address": "@reduck/discord.com/read_messages",
@@ -1499,7 +1499,7 @@
 			"address": "@reduck/google.com/search_flights",
 			"path": "scripts/google.com/search_flights.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/google.com/search_flights",
-			"lastmod": "2026-09-08"
+			"lastmod": "2026-09-22"
 		},
 		{
 			"address": "@reduck/google.com/search_places",
@@ -1517,7 +1517,7 @@
 			"address": "@reduck/google.com/search_suggestions",
 			"path": "scripts/google.com/search_suggestions.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/google.com/search_suggestions",
-			"lastmod": "2026-09-08"
+			"lastmod": "2026-09-22"
 		},
 		{
 			"address": "@reduck/greenhouse.io/get_company_jobs",
@@ -1625,7 +1625,7 @@
 			"address": "@reduck/instagram.com/create_reel",
 			"path": "scripts/instagram.com/create_reel.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/instagram.com/create_reel",
-			"lastmod": "2026-09-01"
+			"lastmod": "2026-09-22"
 		},
 		{
 			"address": "@reduck/instagram.com/delete_comment",
@@ -2741,7 +2741,7 @@
 			"address": "@reduck/mail.google.com/list_accounts",
 			"path": "scripts/mail.google.com/list_accounts.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/mail.google.com/list_accounts",
-			"lastmod": "2026-09-21"
+			"lastmod": "2026-09-22"
 		},
 		{
 			"address": "@reduck/mail.google.com/list_drafts",
@@ -4901,7 +4901,7 @@
 			"address": "@reduck/web.whatsapp.com/send_message",
 			"path": "scripts/web.whatsapp.com/send_message.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/web.whatsapp.com/send_message",
-			"lastmod": "2026-09-16"
+			"lastmod": "2026-09-22"
 		},
 		{
 			"address": "@reduck/web.whatsapp.com/set_group_description",

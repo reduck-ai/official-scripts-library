@@ -4,7 +4,7 @@ Automatically get Google search suggestions on google.com. Get the autocomplete 
 
 - Site: google.com
 - Address: `reduck/google.com/search_suggestions`
-- Updated: 2026-09-08 (v2)
+- Updated: 2026-09-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

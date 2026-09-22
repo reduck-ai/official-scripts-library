@@ -4,7 +4,7 @@ Automatically send WhatsApp message or attachment on web.whatsapp.com. Send a Wh
 
 - Site: web.whatsapp.com
 - Address: `reduck/web.whatsapp.com/send_message`
-- Updated: 2026-09-16 (v13)
+- Updated: 2026-09-22 (v15)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -22,9 +22,10 @@ npx @reduck-ai/cli@latest run --script reduck/web.whatsapp.com/send_message
 - `text` (string, optional): Message text. Required when kind is "text".
 - `phone` (string, optional): Recipient phone in international format, no saved contact needed. Confirm this number with the user before running; don't guess or reuse a number from context without checking. Non-digits are stripped, a leading "00" international prefix is removed, and a national number (leading trunk 0) is rejected with a clear error. e.g. "+1 555 123 4567", "15551234567" or "0015551234567". Provide this OR `name`, not both.
 - `caption` (string, optional): Optional caption for image/video/document.
-- `filename` (string, optional): Filename to send it as, e.g. photo.png / clip.mp4 / file.pdf. Required when kind is image/video/document.
+- `filename` (string, optional): Filename to send it as, e.g. photo.png / clip.mp4 / file.pdf. Required when kind is image/video/document. With the `attachment` file input the bytes are taken from that input, but this name is still what the send is verified against.
 - `mimeType` (string, optional): MIME type; inferred from kind + filename extension when omitted.
-- `fileBase64` (string, optional): File contents, base64-encoded (no data: prefix). This is the only way to supply the bytes: they cannot be fetched from a URL at run time, so a large file is limited by whatever the caller's own transport allows inline. Required when kind is image/video/document.
+- `attachment` (string, optional): The file to send, bound through the platform's own file channel and handed to WhatsApp's hidden file input directly. Preferred over fileBase64: it carries the bytes outside the argument payload, so it is not limited by the request size. Use with kind image/video/document; WhatsApp still picks the input by kind, so the kind must match the file.
+- `fileBase64` (string, optional): File contents, base64-encoded (no data: prefix), as an alternative to the `attachment` file input. The bytes ride inside the request, so a large file is limited by whatever the caller's own transport allows inline.
 - `contactName` (string, optional): The saved name of the contact whose card to send, exactly as WhatsApp's address book shows it. Every phone number saved for that contact is included. Required when kind is "contact".
 
 ## Output
@@ -59,7 +60,7 @@ You do not need one. "Send WhatsApp message or attachment" drives the real web.w
 
 ### What information do I need to provide?
 
-Required: kind. Optional: name, text, phone, caption, filename, mimeType, fileBase64, contactName.
+Required: kind. Optional: name, text, phone, caption, filename, mimeType, attachment, fileBase64, contactName.
 
 ### What does it return?
 

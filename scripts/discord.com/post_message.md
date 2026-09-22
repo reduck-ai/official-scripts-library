@@ -4,7 +4,7 @@ Automatically post a Discord message on discord.com. Posts a text message in a D
 
 - Site: discord.com
 - Address: `reduck/discord.com/post_message`
-- Updated: 2026-09-18 (v8)
+- Updated: 2026-09-22 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -19,9 +19,10 @@ npx @reduck-ai/cli@latest run --script reduck/discord.com/post_message
 
 - `channelUrl` (string, required): Full channel URL, e.g. https://discord.com/channels/<guildId>/<channelId>
 - `message` (string, optional): Text of the message. Optional when a file is attached, in which case it becomes the message's caption. Discord refuses anything over 2000 characters client-side.
-- `filename` (string, optional): Name the file is posted under, e.g. report.csv. Required whenever fileBase64 is given, and used to confirm the attachment Discord stored is the one that was sent.
+- `filename` (string, optional): Name the file is posted under, e.g. report.csv. Required whenever fileBase64 is given, and used to confirm the attachment Discord stored is the one that was sent. Not used with the `attachment` file input, which posts the file under the input's own name.
 - `mimeType` (string, optional): Optional content type for the attachment, e.g. text/csv. Guessed from the filename extension when omitted.
-- `fileBase64` (string, optional): Optional file to attach, as base64 bytes. Sent as one message together with the text. Keep it small — the request payload limits this to roughly 380 KB of base64, well under Discord's own upload limit.
+- `attachment` (string, optional): A file to attach, bound through the platform's own file channel and handed to Discord's composer directly. Preferred over fileBase64: it carries the bytes outside the argument payload, so it is not limited to roughly 380 KB. Discord stores the file under the name of this input, so use fileBase64 + filename instead when the posted filename matters.
+- `fileBase64` (string, optional): Optional file to attach, as base64 bytes, as an alternative to the `attachment` file input. Sent as one message together with the text. Keep it small — the request payload limits this to roughly 380 KB of base64, well under Discord's own upload limit. Use this when you need to control the filename the message is posted under.
 
 ## Output
 
@@ -48,7 +49,7 @@ You do not need one. "Post a Discord message" drives the real discord.com pages 
 
 ### What information do I need to provide?
 
-Required: channelUrl. Optional: message, filename, mimeType, fileBase64.
+Required: channelUrl. Optional: message, filename, mimeType, attachment, fileBase64.
 
 ### What does it return?
 

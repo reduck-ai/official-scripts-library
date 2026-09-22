@@ -1,10 +1,10 @@
 # List Claude.ai models and effort levels
 
-Automatically list Claude.ai models and effort levels on claude.ai. List the models the Claude.ai composer offers, the effort levels available for the selected model, and which of each is currently selected. Models come back with their id, their display name and whether they sit in the picker's main list or under "More models". Effort levels are empty when the selected model has none (Haiku, for example, only offers an extended-thinking switch). Requires a signed-in session. Feed a model or effort id to set_model.
+Automatically list Claude.ai models and effort levels on claude.ai. List the models the Claude.ai composer offers, the effort levels available for the selected model, and which of each is currently selected. Takes no arguments. Models come back with their id, their display name and whether they sit in the picker's main list or under "More models". Effort levels are empty when the selected model has none (Haiku, for example, only offers an extended-thinking switch). Requires a signed-in session. Feed a model or effort id to set_model.
 
 - Site: claude.ai
 - Address: `reduck/claude.ai/list_models`
-- Updated: 2026-09-18 (v1)
+- Updated: 2026-09-22 (v1)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -30,7 +30,7 @@ It takes no input.
 
 ### What does "List Claude.ai models and effort levels" do?
 
-List the models the Claude.ai composer offers, the effort levels available for the selected model, and which of each is currently selected. Models come back with their id, their display name and whether they sit in the picker's main list or under "More models". Effort levels are empty when the selected model has none (Haiku, for example, only offers an extended-thinking switch). Requires a signed-in session. Feed a model or effort id to set_model.
+List the models the Claude.ai composer offers, the effort levels available for the selected model, and which of each is currently selected. Takes no arguments. Models come back with their id, their display name and whether they sit in the picker's main list or under "More models". Effort levels are empty when the selected model has none (Haiku, for example, only offers an extended-thinking switch). Requires a signed-in session. Feed a model or effort id to set_model.
 
 ### How do I automatically list Claude.ai models and effort levels on claude.ai?
 

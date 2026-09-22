@@ -1,0 +1,35 @@
+{
+	"count": 5,
+	"scripts": [
+		{
+			"address": "@reduck/admin.atlassian.com/download_invoice",
+			"path": "scripts/admin.atlassian.com/download_invoice.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/admin.atlassian.com/download_invoice",
+			"lastmod": "2026-08-26"
+		},
+		{
+			"address": "@reduck/admin.atlassian.com/list_invoices",
+			"path": "scripts/admin.atlassian.com/list_invoices.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/admin.atlassian.com/list_invoices",
+			"lastmod": "2026-08-21"
+		},
+		{
+			"address": "@reduck/admin.google.com/list_invoices",
+			"path": "scripts/admin.google.com/list_invoices.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/admin.google.com/list_invoices",
+			"lastmod": "2026-08-21"
+		},
+		{
+			"address": "@reduck/admin.mistral.ai/login_with_google",
+			"path": "scripts/admin.mistral.ai/login_with_google.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/admin.mistral.ai/login_with_google",
+			"lastmod": "2026-08-28"
+		},
+		{
+			"address": "@reduck/admin.shopify.com/list_invoices",
+			"path": "scripts/admin.shopify.com/list_invoices.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/admin.shopify.com/list_invoices",
+			"lastmod": "2026-08-21"
+		}
+	]
+}

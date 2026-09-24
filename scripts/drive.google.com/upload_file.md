@@ -4,7 +4,7 @@ Automatically upload a file to Google Drive on drive.google.com. Upload a file i
 
 - Site: drive.google.com
 - Address: `reduck/drive.google.com/upload_file`
-- Updated: 2026-08-25 (v6)
+- Updated: 2026-09-22 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,11 +17,12 @@ npx @reduck-ai/cli@latest run --script reduck/drive.google.com/upload_file
 
 ## Input
 
-- `filename` (string, required): Name to store the file under in Drive, including its extension. Must not already exist in the destination folder.
-- `mime` (string, optional): Content type to store. Defaults to application/octet-stream, or whatever the server reports for a fileUrl.
-- `fileUrl` (string, optional): URL the browser's own machine can fetch the file from, e.g. http://127.0.0.1:8765/clip.mp4 (python3 -m http.server 8765 in the file's directory). Mutually exclusive with fileBase64.
-- `folderId` (string, optional): Destination folder id, i.e. the <id> in drive.google.com/drive/folders/<id>. Omit to upload into the root of My Drive.
-- `fileBase64` (string, optional): The file's bytes, base64-encoded. Suits files up to roughly 96KB; use fileUrl above that. Mutually exclusive with fileUrl.
+- `mime` (string, optional): Content type to store. Defaults to application/octet-stream, or whatever the server reports for a fileUrl. Not used by the attachment input, which carries its own type.
+- `fileUrl` (string, optional): URL the browser's own machine can fetch the file from, e.g. http://127.0.0.1:8765/clip.mp4 (python3 -m http.server 8765 in the file's directory). Pass exactly one of attachment / fileBase64 / fileUrl.
+- `filename` (string, optional): Name to store the file under in Drive, including its extension. Required for fileBase64 and fileUrl, and must not already exist in the destination folder. Not used when the attachment input is used: that route stores the file under the input's own name ('attachment'), which is inherent to the file-input convention.
+- `folderId` (string, optional): Destination folder id, i.e. the <id> in drive.google.com/drive/folders/<id>. Omit to upload into the root of My Drive. Works for every route.
+- `attachment` (string, optional): The file to upload, bound through the platform's own file channel and handed to Drive's own upload input. Preferred over fileBase64: it carries the bytes outside the argument payload, so there is no ~96KB ceiling and no need to serve the file over localhost. Note it is stored in Drive as 'attachment' — use fileBase64 or fileUrl when the stored name matters.
+- `fileBase64` (string, optional): The file's bytes, base64-encoded. Suits files up to roughly 96KB; use the attachment input or fileUrl above that. Pass exactly one of attachment / fileBase64 / fileUrl.
 
 ## Output
 
@@ -47,7 +48,7 @@ You do not need one. "Upload a file to Google Drive" drives the real drive.googl
 
 ### What information do I need to provide?
 
-Required: filename. Optional: mime, fileUrl, folderId, fileBase64.
+Optional: mime, fileUrl, filename, folderId, attachment, fileBase64.
 
 ### What does it return?
 

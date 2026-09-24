@@ -1,5 +1,5 @@
 {
-	"count": 905,
+	"count": 915,
 	"scripts": [
 		{
 			"address": "@reduck/admin.atlassian.com/download_invoice",
@@ -134,10 +134,58 @@
 			"lastmod": "2026-09-11"
 		},
 		{
+			"address": "@reduck/app.clickup.com/add_comment",
+			"path": "scripts/app.clickup.com/add_comment.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/app.clickup.com/add_comment",
+			"lastmod": "2026-09-23"
+		},
+		{
+			"address": "@reduck/app.clickup.com/create_task",
+			"path": "scripts/app.clickup.com/create_task.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/app.clickup.com/create_task",
+			"lastmod": "2026-09-23"
+		},
+		{
+			"address": "@reduck/app.clickup.com/delete_task",
+			"path": "scripts/app.clickup.com/delete_task.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/app.clickup.com/delete_task",
+			"lastmod": "2026-09-23"
+		},
+		{
+			"address": "@reduck/app.clickup.com/find_list",
+			"path": "scripts/app.clickup.com/find_list.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/app.clickup.com/find_list",
+			"lastmod": "2026-09-23"
+		},
+		{
 			"address": "@reduck/app.clickup.com/list_invoices",
 			"path": "scripts/app.clickup.com/list_invoices.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/app.clickup.com/list_invoices",
 			"lastmod": "2026-08-21"
+		},
+		{
+			"address": "@reduck/app.clickup.com/list_my_tasks",
+			"path": "scripts/app.clickup.com/list_my_tasks.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/app.clickup.com/list_my_tasks",
+			"lastmod": "2026-09-23"
+		},
+		{
+			"address": "@reduck/app.clickup.com/list_tasks",
+			"path": "scripts/app.clickup.com/list_tasks.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/app.clickup.com/list_tasks",
+			"lastmod": "2026-09-23"
+		},
+		{
+			"address": "@reduck/app.clickup.com/read_doc",
+			"path": "scripts/app.clickup.com/read_doc.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/app.clickup.com/read_doc",
+			"lastmod": "2026-09-23"
+		},
+		{
+			"address": "@reduck/app.clickup.com/update_task",
+			"path": "scripts/app.clickup.com/update_task.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/app.clickup.com/update_task",
+			"lastmod": "2026-09-23"
 		},
 		{
 			"address": "@reduck/app.hubspot.com/list_invoices",
@@ -503,7 +551,7 @@
 			"address": "@reduck/chatgpt.com/ask",
 			"path": "scripts/chatgpt.com/ask.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/chatgpt.com/ask",
-			"lastmod": "2026-09-21"
+			"lastmod": "2026-09-23"
 		},
 		{
 			"address": "@reduck/chatgpt.com/list_invoices",
@@ -545,7 +593,7 @@
 			"address": "@reduck/claude.ai/ask",
 			"path": "scripts/claude.ai/ask.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/claude.ai/ask",
-			"lastmod": "2026-09-18"
+			"lastmod": "2026-09-23"
 		},
 		{
 			"address": "@reduck/claude.ai/delete_chat",
@@ -1133,7 +1181,7 @@
 			"address": "@reduck/drive.google.com/upload_file",
 			"path": "scripts/drive.google.com/upload_file.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/drive.google.com/upload_file",
-			"lastmod": "2026-08-25"
+			"lastmod": "2026-09-22"
 		},
 		{
 			"address": "@reduck/drive.google.com/upload_via_uploadfile",
@@ -1853,7 +1901,7 @@
 			"address": "@reduck/instagram.com/send_message",
 			"path": "scripts/instagram.com/send_message.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/instagram.com/send_message",
-			"lastmod": "2026-09-18"
+			"lastmod": "2026-09-22"
 		},
 		{
 			"address": "@reduck/instagram.com/share_post",
@@ -1901,7 +1949,7 @@
 			"address": "@reduck/instagram.com/unsend_message",
 			"path": "scripts/instagram.com/unsend_message.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/instagram.com/unsend_message",
-			"lastmod": "2026-09-16"
+			"lastmod": "2026-09-22"
 		},
 		{
 			"address": "@reduck/instagram.com/write_comment",
@@ -2093,7 +2141,7 @@
 			"address": "@reduck/linkedin.com/create_post",
 			"path": "scripts/linkedin.com/create_post.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/linkedin.com/create_post",
-			"lastmod": "2026-09-14"
+			"lastmod": "2026-09-22"
 		},
 		{
 			"address": "@reduck/linkedin.com/delete_comment",
@@ -2573,7 +2621,7 @@
 			"address": "@reduck/linkedin.com/send_message",
 			"path": "scripts/linkedin.com/send_message.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/linkedin.com/send_message",
-			"lastmod": "2026-09-15"
+			"lastmod": "2026-09-22"
 		},
 		{
 			"address": "@reduck/linkedin.com/suggest_locations",
@@ -3626,6 +3674,12 @@
 			"lastmod": "2026-08-14"
 		},
 		{
+			"address": "@reduck/slack.com/download_file",
+			"path": "scripts/slack.com/download_file.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/slack.com/download_file",
+			"lastmod": "2026-09-23"
+		},
+		{
 			"address": "@reduck/slack.com/download_invoice",
 			"path": "scripts/slack.com/download_invoice.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/slack.com/download_invoice",
@@ -3636,6 +3690,12 @@
 			"path": "scripts/slack.com/edit_message.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/slack.com/edit_message",
 			"lastmod": "2026-09-01"
+		},
+		{
+			"address": "@reduck/slack.com/export_conversation",
+			"path": "scripts/slack.com/export_conversation.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/slack.com/export_conversation",
+			"lastmod": "2026-09-23"
 		},
 		{
 			"address": "@reduck/slack.com/get_channel_info",
@@ -4655,7 +4715,7 @@
 			"address": "@reduck/web.telegram.org/send_message",
 			"path": "scripts/web.telegram.org/send_message.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/web.telegram.org/send_message",
-			"lastmod": "2026-09-16"
+			"lastmod": "2026-09-22"
 		},
 		{
 			"address": "@reduck/web.whatsapp.com/add_group_member",
@@ -4697,7 +4757,7 @@
 			"address": "@reduck/web.whatsapp.com/delete_chat",
 			"path": "scripts/web.whatsapp.com/delete_chat.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/web.whatsapp.com/delete_chat",
-			"lastmod": "2026-08-11"
+			"lastmod": "2026-09-22"
 		},
 		{
 			"address": "@reduck/web.whatsapp.com/delete_message",
@@ -4913,7 +4973,7 @@
 			"address": "@reduck/web.whatsapp.com/set_group_photo",
 			"path": "scripts/web.whatsapp.com/set_group_photo.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/web.whatsapp.com/set_group_photo",
-			"lastmod": "2026-08-31"
+			"lastmod": "2026-09-22"
 		},
 		{
 			"address": "@reduck/web.whatsapp.com/star_message",
@@ -5195,13 +5255,13 @@
 			"address": "@reduck/x.com/post_tweet",
 			"path": "scripts/x.com/post_tweet.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/x.com/post_tweet",
-			"lastmod": "2026-09-03"
+			"lastmod": "2026-09-22"
 		},
 		{
 			"address": "@reduck/x.com/quote_tweet",
 			"path": "scripts/x.com/quote_tweet.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/x.com/quote_tweet",
-			"lastmod": "2026-09-21"
+			"lastmod": "2026-09-22"
 		},
 		{
 			"address": "@reduck/x.com/reply_to_tweet",

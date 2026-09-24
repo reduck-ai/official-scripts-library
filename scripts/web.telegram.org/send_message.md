@@ -4,7 +4,7 @@ Automatically send Telegram message or document on web.telegram.org. Send a text
 
 - Site: web.telegram.org
 - Address: `reduck/web.telegram.org/send_message`
-- Updated: 2026-09-16 (v3)
+- Updated: 2026-09-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,9 +18,10 @@ npx @reduck-ai/cli@latest run --script reduck/web.telegram.org/send_message
 ## Input
 
 - `peerId` (string, required): The conversation's peer id, as returned by get_inbox (e.g. "8591421602" for Saved Messages; negative ids are channels and groups). Confirm the target with the user before sending — a peer id is not human-readable, so echo back the chatTitle this returns.
-- `text` (string, optional): The message text. Required on its own for a text message; sent as the document's caption when fileBase64 is also given. Omit for a document with no caption.
-- `filename` (string, optional): Required with fileBase64: the name Telegram gives the document, including its extension (e.g. "report.pdf"). Also what the script verifies the sent bubble against.
-- `fileBase64` (string, optional): Optional: base64 of a file's bytes, to send it as a document. Requires filename. Telegram Web opens its file picker natively, so there is no file input to bind — the bytes have to arrive here and are pasted into the composer. Keep it modest (a few MB); the base64 travels inside the request.
+- `text` (string, optional): The message text. Required on its own for a text message; sent as the document's caption when a file is also given. Omit for a document with no caption.
+- `filename` (string, optional): Required with fileBase64: the name Telegram gives the document, including its extension (e.g. "report.pdf"). Also what the script verifies the sent bubble against. Not used with the `attachment` input, which is sent under its own name.
+- `attachment` (string, optional): A file to send as a document, bound through the platform's own file channel. Preferred over fileBase64: it carries the bytes outside the argument payload, so it is not limited by the request size. Telegram has no file input of its own, so the file is landed on a throwaway input the script creates and then handed to Telegram's paste handler — which means it is sent under the name 'attachment'. Use fileBase64 when the stored filename matters.
+- `fileBase64` (string, optional): Optional: base64 of a file's bytes, to send it as a document. Requires filename. Prefer the `attachment` input, which has no payload ceiling. Keep this modest (a few MB); the base64 travels inside the request.
 - `replyToMessageId` (string, optional): Optional: send this as a reply to an existing message, given its id from get_conversation. Works for both a text message and a document. This is why there is no separate reply script — on Telegram a reply is an ordinary message carrying a reply-to reference.
 
 ## Output
@@ -54,7 +55,7 @@ You do not need one. "Send Telegram message or document" drives the real web.tel
 
 ### What information do I need to provide?
 
-Required: peerId. Optional: text, filename, fileBase64, replyToMessageId.
+Required: peerId. Optional: text, filename, attachment, fileBase64, replyToMessageId.
 
 ### What does it return?
 

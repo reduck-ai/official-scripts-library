@@ -4,7 +4,7 @@ Automatically send LinkedIn message on linkedin.com. Send a message on LinkedIn 
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/send_message`
-- Updated: 2026-09-15 (v23)
+- Updated: 2026-09-22 (v25)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,22 +17,25 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/send_message
 
 ## Input
 
-- `message` (string, optional): The message text to send. Optional if fileBase64 is given; required (non-empty) otherwise.
-- `filename` (string, optional): Filename to attach it as, e.g. photo.png. Required when fileBase64 is set.
-- `mimeType` (string, optional): MIME type of the attachment. Inferred from the filename extension when omitted.
+- `dry_run` (boolean, optional): When true, everything runs — the recipient is resolved, the attachment is staged and confirmed in the composer, and the text is typed — then the run stops before the Send click. Nothing is delivered: sent comes back false and dry_run true. Use it to verify a recipient, a message and an attachment are accepted without messaging a real person.
+- `message` (string, optional): The message text to send. Optional if an attachment or fileBase64 is given; required (non-empty) otherwise.
+- `filename` (string, optional): Filename to attach it as, e.g. photo.png. Required when fileBase64 is set; not used by the attachment input, which is stored under its own name.
+- `mimeType` (string, optional): MIME type of the attachment. Inferred from the filename extension when omitted. Applies to fileBase64 only.
 - `recipient` (string, optional): Start/continue a conversation by the person's display name (e.g. "Jane Doe"). Every match the compose typeahead offers is checked against this name token-by-token (accent/case-insensitive) and the first one that matches is used, so a group conversation or another person ranked above your target does not block the send. A multi-word name must be contained in the match, and a single-word name only passes on an exact full-name match: "Chris" resolving to "Chris Anderson" is refused rather than messaging the wrong person. A name that matches nobody messageable (a misspelling, someone who is not a 1st-degree connection, or your own name) is refused as such. Prefer profileUrl when you have it. Pass this OR threadUrl OR profileUrl.
 - `threadUrl` (string, optional): Reply in an existing conversation: its /messaging/thread/<id>/ URL (from list_inbox). LinkedIn thread ids can rotate over time, so fetch this fresh via list_inbox immediately before use rather than caching it long-term. Pass this OR profileUrl OR recipient.
-- `fileBase64` (string, optional): File contents to attach, base64-encoded (no data: prefix). Optional; combine with message for accompanying text.
+- `attachment` (string, optional): A file to attach (image or document), supplied as a file rather than base64. Preferred over fileBase64: it carries no payload size ceiling. The file is attached under the name 'attachment', since a file input's key is its stored filename.
+- `fileBase64` (string, optional): File contents to attach, base64-encoded (no data: prefix). Fallback for callers that cannot bind a file; prefer the attachment input. Combine with message for accompanying text.
 - `profileUrl` (string, optional): Start/continue a conversation by the person's LinkedIn profile URL (from list_inbox's participants[].profileUrl, search_people, or get_profile), e.g. https://www.linkedin.com/in/<id>. Preferred over recipient: resolves the exact person directly with no name-search ambiguity. Pass this OR threadUrl OR recipient.
 
 ## Output
 
-- `sent` (boolean, required)
+- `sent` (boolean, required): False on a dry run, where nothing was delivered.
+- `dry_run` (boolean, optional): True when this run stopped before the Send click. The attachment was still staged and confirmed, and the text still typed.
 - `message` (string | null, optional)
 - `filename` (string | null, optional)
-- `recipient` (string | null, optional): The conversation counterpart LinkedIn actually resolved and sent the message to. Confirm it's who you meant.
+- `recipient` (string | null, optional): The conversation counterpart LinkedIn actually resolved. Confirm it's who you meant.
 - `threadUrl` (string | null, optional): The conversation's /messaging/thread/<id>/ URL when the page landed on one; null in compose-overlay flows (never a compose URL).
-- `attachmentVisible` (boolean | null, optional): True when the newly sent message renders an image or the filename, confirming the attachment landed rather than only that a message was sent. Null when no attachment was requested.
+- `attachmentVisible` (boolean | null, optional): True when the newly sent message renders an image or the filename, confirming the attachment landed rather than only that a message was sent. Null when no attachment was requested, and null on a dry run, where nothing was sent to inspect — the composer preview check is what proves staging there.
 
 ## FAQ
 
@@ -50,11 +53,11 @@ You do not need one. "Send LinkedIn message" drives the real linkedin.com pages 
 
 ### What information do I need to provide?
 
-Optional: message, filename, mimeType, recipient, threadUrl, fileBase64, profileUrl.
+Optional: dry_run, message, filename, mimeType, recipient, threadUrl, attachment, fileBase64, profileUrl.
 
 ### What does it return?
 
-It returns sent, message, filename, recipient, threadUrl, attachmentVisible.
+It returns sent, dry_run, message, filename, recipient, threadUrl, attachmentVisible.
 
 ### Do I need to be logged in to linkedin.com?
 

@@ -4,7 +4,7 @@ Automatically get LinkedIn company posts on linkedin.com. Get the most recent po
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_company_posts`
-- Updated: 2026-09-03 (v11)
+- Updated: 2026-09-24 (v12)
 - Author: Reduck AI (reduck)
 
 ## Run it

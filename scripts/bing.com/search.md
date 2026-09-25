@@ -1,10 +1,10 @@
 # Bing search
 
-Search the web on Bing and return the page's organic result cards (title, url, snippet, age), paging by offset. Bing's /ck/a redirect wrapper is decoded, so urls are the real destination. Anonymous — no login.
+Search the web on Bing, one page of results at a time. Returns each organic result's title, url, snippet and date, the market Bing answered for, and where the next page starts.
 
 - Site: bing.com
 - Address: `reduck/bing.com/search`
-- Updated: 2026-08-17 (v2)
+- Updated: 2026-09-24 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,29 +17,34 @@ npx @reduck-ai/cli@latest run --script reduck/bing.com/search
 
 ## Input
 
-- `query` (string, required): The search query. Plain text works; site: is refused by Bing with a bot challenge and quoted phrases are relaxed rather than enforced (see the script description).
-- `offset` (integer, optional): Result page, 0 = first (mapped to Bing's &first=offset*10+1), mirroring the SERP pager. Adjacent pages were measured disjoint, so different offsets may be fetched concurrently and unioned; dedupe by url.
+- `query` (string, required): The search query. site: is not supported (Bing answers it with a human-verification challenge and the script fails); quoted phrases are loosened by Bing, not enforced.
+- `first` (integer, optional): Which page to read, as Bing addresses it: the position of its first result. Pages vary in size, so pass the `next` of the previous answer rather than computing it. Default 1.
 
 ## Output
 
-- `count` (integer, required): Number of organic cards on this page. Typically 2-10 and it varies by query: ads and answer blocks share the result list, so a heavily monetised query leaves fewer organic slots. Not a cap the caller can raise.
-- `query` (string, required): The query as passed, echoed back.
-- `offset` (integer, required): The page that was fetched, echoed back.
-- `results` (array, required): The organic result cards on this page, in the order Bing ranked them. Excludes ads, answer panels and video/news blocks, which live in the same list under different classes. Read from the DOM text rather than the rendered layout, so cards stay complete even when Bing collapses the list behind a Copilot answer panel.
+- `next` (integer | null, required): The `first` of the next page; null on the last page. Consecutive pages can repeat a result, so dedupe by url.
+- `count` (integer, required): How many organic results this page holds (results.length), typically 2-10.
+- `first` (integer, required)
+- `query` (string, required)
+- `market` (string | null, required): The market Bing answered for, e.g. "en-US", which follows where the browser is; null if the page does not say.
+- `hasMore` (boolean, required)
+- `results` (array, required): The organic results, in Bing's order. Ads, answer boxes and video carousels are left out.
+- `rewrittenTo` (string | null, required): The query Bing searched instead, when it says so ('These are results for …'); else null.
+- `emptyBecause` (string | null, required): Bing's reason when `results` is empty; null otherwise.
 
 ## FAQ
 
 ### What does "Bing search" do?
 
-Search the web on Bing and return the page's organic result cards (title, url, snippet, age), paging by offset. Bing's /ck/a redirect wrapper is decoded, so urls are the real destination. Anonymous — no login.
+Search the web on Bing, one page of results at a time. Returns each organic result's title, url, snippet and date, the market Bing answered for, and where the next page starts.
 
 ### What information do I need to provide?
 
-Required: query. Optional: offset.
+Required: query. Optional: first.
 
 ### What does it return?
 
-It returns count, query, offset, results.
+It returns next, count, first, query, market, hasMore, results, rewrittenTo, emptyBecause.
 
 ### Do I need to be logged in to bing.com?
 

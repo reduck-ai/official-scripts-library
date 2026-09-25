@@ -1,10 +1,10 @@
-# Get X user posts
+# X (Twitter) posts API: export a user's tweets with views and likes
 
-Automatically get X user posts on x.com. Get a user's Posts tab by handle (x.com/<handle>) — their own tweets and self-threads, newest first. Excludes replies to others (see get_user_replies for the Replies tab), and excludes reposts, which X keeps on a separate Reposts tab. The post count shown on the profile header includes replies, so expect fewer items than that number. Returns per tweet: id, url, text, created_at, lang, likes, retweets, replies, quotes, views, bookmarks, is_retweet, is_quote. Count is capped by how far X paginates before throttling.
+Automatically export a user's tweets with views and likes on x.com. An unofficial X (Twitter) API for a user's posts: export an account's latest tweets with their views, likes, reposts, replies, quotes and bookmarks as data, in one call, without the X API. For the owner-only analytics of each post (impressions, engagements), run get_post_analytics on its id. Get a user's latest posts by handle (x.com/<handle>, the Posts tab), newest first: their own tweets and self-threads, without replies (see get_user_replies) or reposts (see get_user_reposts). Works signed in or signed out. Signed in, it reads the full Posts tab up to count. Signed out, X only shows visitors its few most recent posts, so it returns that short preview and fewer than count is expected; each post's source field says which one you got. Returns per tweet: id, url, text, created_at, lang, likes, retweets, replies, quotes, views, bookmarks, is_retweet, is_quote, source.
 
 - Site: x.com
 - Address: `reduck/x.com/get_user_posts`
-- Updated: 2026-09-03 (v11)
+- Updated: 2026-09-24 (v12)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -22,17 +22,17 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/get_user_posts
 
 ## FAQ
 
-### What does "Get X user posts" do?
+### What does "X (Twitter) posts API: export a user's tweets with views and likes" do?
 
-Get a user's Posts tab by handle (x.com/<handle>) — their own tweets and self-threads, newest first. Excludes replies to others (see get_user_replies for the Replies tab), and excludes reposts, which X keeps on a separate Reposts tab. The post count shown on the profile header includes replies, so expect fewer items than that number. Returns per tweet: id, url, text, created_at, lang, likes, retweets, replies, quotes, views, bookmarks, is_retweet, is_quote. Count is capped by how far X paginates before throttling.
+An unofficial X (Twitter) API for a user's posts: export an account's latest tweets with their views, likes, reposts, replies, quotes and bookmarks as data, in one call, without the X API. For the owner-only analytics of each post (impressions, engagements), run get_post_analytics on its id. Get a user's latest posts by handle (x.com/<handle>, the Posts tab), newest first: their own tweets and self-threads, without replies (see get_user_replies) or reposts (see get_user_reposts). Works signed in or signed out. Signed in, it reads the full Posts tab up to count. Signed out, X only shows visitors its few most recent posts, so it returns that short preview and fewer than count is expected; each post's source field says which one you got. Returns per tweet: id, url, text, created_at, lang, likes, retweets, replies, quotes, views, bookmarks, is_retweet, is_quote, source.
 
-### How do I automatically get X user posts on x.com?
+### How do I automatically export a user's tweets with views and likes on x.com?
 
 Ask an AI agent connected to Reduck to run reduck/x.com/get_user_posts, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/x.com/get_user_posts
 
-### Is there a x.com API to get X user posts?
+### Is there a x.com API to export a user's tweets with views and likes?
 
-You do not need one. "Get X user posts" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
+You do not need one. "X (Twitter) posts API: export a user's tweets with views and likes" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
 
 ### What information do I need to provide?
 
@@ -40,7 +40,7 @@ Required: handle. Optional: count.
 
 ### Do I need to be logged in to x.com?
 
-Yes. It acts as you on x.com: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the x.com cookies saved by the Reduck extension.
+No. It only uses pages of x.com that are reachable without signing in.
 
 ### Does it change anything on x.com, or only read data?
 

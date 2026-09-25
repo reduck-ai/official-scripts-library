@@ -4,7 +4,7 @@ Automatically ask Claude on claude.ai. Open a new Claude.ai chat, send one quest
 
 - Site: claude.ai
 - Address: `reduck/claude.ai/ask`
-- Updated: 2026-09-23 (v14)
+- Updated: 2026-09-24 (v15)
 - Author: Reduck AI (reduck)
 
 ## Run it

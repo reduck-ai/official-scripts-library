@@ -4,7 +4,7 @@ Automatically get LinkedIn post analytics on linkedin.com. Read a LinkedIn post'
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_post_analytics`
-- Updated: 2026-09-07 (v10)
+- Updated: 2026-09-24 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it

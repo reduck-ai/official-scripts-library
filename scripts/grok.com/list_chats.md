@@ -4,7 +4,7 @@ Automatically list Grok Chats on grok.com. List recent Grok conversations (newes
 
 - Site: grok.com
 - Address: `reduck/grok.com/list_chats`
-- Updated: 2026-08-27 (v2)
+- Updated: 2026-09-24 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -1,10 +1,10 @@
-# Get X post analytics
+# X (Twitter) analytics API: export your post analytics data
 
-Automatically get X post analytics on x.com. Read a single X post's owner-only analytics panel (impressions, engagements, detail expands, profile visits, link clicks, and on media posts views/unique views, plus likes, reposts and replies) by post URL or id. Requires that the post belongs to the logged-in account. Returns metrics as a label-to-value list since the set varies by post type; the UI is assumed to be English, and abbreviated large counts (e.g. 1.2K) make `value` approximate. X sometimes shows a transient Retry error, so re-run on failure.
+Automatically export your post analytics data on x.com. An unofficial X (Twitter) analytics API: export the analytics of one of your posts (impressions, engagements, profile visits, link clicks) as data, in one call, without the X API. To export a whole account, list its posts with get_user_posts and run this on each. Read a single X post's owner-only analytics panel (impressions, engagements, detail expands, profile visits, link clicks, and on media posts views/unique views, plus likes, reposts and replies) by post URL or id. Requires that the post belongs to the logged-in account. Returns metrics as a label-to-value list since the set varies by post type; the UI is assumed to be English, and abbreviated large counts (e.g. 1.2K) make `value` approximate. X sometimes shows a transient Retry error, so re-run on failure.
 
 - Site: x.com
 - Address: `reduck/x.com/get_post_analytics`
-- Updated: 2026-09-15 (v9)
+- Updated: 2026-09-24 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -30,17 +30,17 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/get_post_analytics
 
 ## FAQ
 
-### What does "Get X post analytics" do?
+### What does "X (Twitter) analytics API: export your post analytics data" do?
 
-Read a single X post's owner-only analytics panel (impressions, engagements, detail expands, profile visits, link clicks, and on media posts views/unique views, plus likes, reposts and replies) by post URL or id. Requires that the post belongs to the logged-in account. Returns metrics as a label-to-value list since the set varies by post type; the UI is assumed to be English, and abbreviated large counts (e.g. 1.2K) make `value` approximate. X sometimes shows a transient Retry error, so re-run on failure.
+An unofficial X (Twitter) analytics API: export the analytics of one of your posts (impressions, engagements, profile visits, link clicks) as data, in one call, without the X API. To export a whole account, list its posts with get_user_posts and run this on each. Read a single X post's owner-only analytics panel (impressions, engagements, detail expands, profile visits, link clicks, and on media posts views/unique views, plus likes, reposts and replies) by post URL or id. Requires that the post belongs to the logged-in account. Returns metrics as a label-to-value list since the set varies by post type; the UI is assumed to be English, and abbreviated large counts (e.g. 1.2K) make `value` approximate. X sometimes shows a transient Retry error, so re-run on failure.
 
-### How do I automatically get X post analytics on x.com?
+### How do I automatically export your post analytics data on x.com?
 
 Ask an AI agent connected to Reduck to run reduck/x.com/get_post_analytics, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/x.com/get_post_analytics
 
-### Is there a x.com API to get X post analytics?
+### Is there a x.com API to export your post analytics data?
 
-You do not need one. "Get X post analytics" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
+You do not need one. "X (Twitter) analytics API: export your post analytics data" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
 
 ### What information do I need to provide?
 

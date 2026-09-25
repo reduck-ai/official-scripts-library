@@ -4,7 +4,7 @@ Automatically ask ChatGPT on chatgpt.com. Open a new ChatGPT chat, send one ques
 
 - Site: chatgpt.com
 - Address: `reduck/chatgpt.com/ask`
-- Updated: 2026-09-23 (v31)
+- Updated: 2026-09-24 (v32)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,19 +18,22 @@ npx @reduck-ai/cli@latest run --script reduck/chatgpt.com/ask
 ## Input
 
 - `question` (string, required): The question to send as the first message of a new chat.
+- `temporary` (boolean, optional): Ask in a temporary chat set to Unpersonalized: signed in, it is not saved and ignores the account's memory, custom instructions and plugins, while still reporting its searches and their results. Signed out it changes nothing: there is no account to ignore.
 
 ## Output
 
 - `calls` (array, required): One entry per search call, as the page numbers them. A call often runs a whole round of queries at once (measured 2026-09-23: 9 queries in 2 calls) and answers one list for all of them. What the page does not receive: which query returned which result, the call's arguments, and which search backend answered it. Empty when it did not search, and signed out.
 - `model` (string | null, required): Which model answered, by ChatGPT's own id (e.g. "gpt-5-6"). Null when the app does not say.
-- `answer` (string | null, required): The answer as markdown, as ChatGPT's own Copy gives it: each citation is a markdown link to its source. Null signed out.
+- `answer` (string | null, required): The answer as markdown, as ChatGPT's own Copy gives it: each citation is a markdown link to its source. Null signed out, and in a temporary chat, which keeps no copy to read it from: `answers` has its text there.
 - `answers` (array, required): One entry per assistant turn, as rendered. Usually one; ChatGPT sometimes serves a paired-response variant that answers twice and asks which reply you prefer, and neither entry is more official than the other — read the length before reading answers[0]. Inline citation chips appear as their publisher's name in the text, and mathematical notation linearizes lossily.
 - `sources` (array, required): Every page the searches put in front of the model, once each, in the order it got them — the pool the answer could draw on, as opposed to `references`, what it cited. Empty signed out.
 - `searches` (array, required): One entry per round of web searches, in order: what the model typed and the results put in front of it. Empty when it did not search, and signed out.
+- `temporary` (boolean | null, required): Whether the message was sent in a temporary chat, as the send itself stated it. Null when the send did not say, as the signed-out application's does not.
 - `references` (array, required): Every source the answer CITED — not everything the search retrieved (that is `sources`) — deduplicated by url and in the order the answer surfaced them. Empty when the answer did not search, which is a fact about that reply rather than a failure: the same question searches on one run and not the next.
 - `stopReason` (string | null, required): Why generation ended, as ChatGPT records it: "stop" for an answer the model finished. Null signed out. A finished answer can still be only a sentence announcing work it never did; that is what the model returned, not a truncation.
+- `personalized` (boolean | null, required): Whether that temporary chat was allowed the account's memory, custom instructions and plugins, as the send stated it: false is Unpersonalized. Null when the send did not say.
 - `searchContext` (object, required): What the server says about this turn's search, as sent to the page. Sent signed in, and by one of ChatGPT's two signed-out applications; the other one (the one that opens a /uc/ chat) does not put it in the page, so every field is null there whether or not the reply searched. A field is also null when the app did not send it.
-- `conversationId` (string | null, required): The conversation's id, from the /c/<id> or /uc/<id> URL. Null if the app did not navigate.
+- `conversationId` (string | null, required): The conversation's id, from the /c/<id> or /uc/<id> URL. Null if the app did not navigate, which a temporary chat never does.
 - `webSearchQueries` (array, required): The searches ChatGPT issued, in order, as its answer stream names them. Sent signed in, and by one of ChatGPT's two signed-out applications; the one that opens a /uc/ chat does not put them in the page, so the list is empty there even when `references` shows the reply searched. Empty also when the reply did not search.
 
 ## FAQ
@@ -49,11 +52,11 @@ You do not need one. "Ask ChatGPT" drives the real chatgpt.com pages in a browse
 
 ### What information do I need to provide?
 
-Required: question.
+Required: question. Optional: temporary.
 
 ### What does it return?
 
-It returns calls, model, answer, answers, sources, searches, references, stopReason, searchContext, conversationId, webSearchQueries.
+It returns calls, model, answer, answers, sources, searches, temporary, references, stopReason, personalized, searchContext, conversationId, webSearchQueries.
 
 ### Do I need to be logged in to chatgpt.com?
 

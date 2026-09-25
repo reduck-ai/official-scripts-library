@@ -1,10 +1,10 @@
-# Luma API: register for a free event
+# Luma API: register for free Luma events
 
-Automatically register for a free event on luma.com. An unofficial Luma API for attendee registration: Luma's own API lets a host add guests to their events, not register you for someone else's, and this does that programmatically in one call. Register the signed-in Luma account for a free public event by its slug. Custom registration questions are answered from what you pass in `answers`, and a phone number from `phone_number` — nothing is invented, so an unanswered required question is refused rather than guessed at. Required terms and agreement boxes are ticked only when you pass accept_terms:true; optional marketing opt-ins are never ticked. Fails loudly on events that aren't free or aren't open for registration. This signs you up as an attendee under your real identity, so confirm the event with the person you're helping before running it — cancelling afterward is a separate action.
+Automatically register for free Luma events on luma.com. An unofficial Luma API for attendee registration: Luma's own API lets a host add guests to their events, not register you for someone else's, and this does that programmatically in one call. Register the signed-in Luma account for a free public event by its slug. Custom registration questions are answered from what you pass in `answers`, and a phone number from `phone_number` — nothing is invented, so an unanswered required question is refused rather than guessed at. Required terms and agreement boxes are ticked only when you pass accept_terms:true; optional marketing opt-ins are never ticked. Fails loudly on events that aren't free or aren't open for registration. This signs you up as an attendee under your real identity, so confirm the event with the person you're helping before running it — cancelling afterward is a separate action.
 
 - Site: luma.com
 - Address: `reduck/luma.com/register_to_event`
-- Updated: 2026-09-18 (v22)
+- Updated: 2026-09-24 (v22)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -39,17 +39,17 @@ npx @reduck-ai/cli@latest run --script reduck/luma.com/register_to_event
 
 ## FAQ
 
-### What does "Luma API: register for a free event" do?
+### What does "Luma API: register for free Luma events" do?
 
 An unofficial Luma API for attendee registration: Luma's own API lets a host add guests to their events, not register you for someone else's, and this does that programmatically in one call. Register the signed-in Luma account for a free public event by its slug. Custom registration questions are answered from what you pass in `answers`, and a phone number from `phone_number` — nothing is invented, so an unanswered required question is refused rather than guessed at. Required terms and agreement boxes are ticked only when you pass accept_terms:true; optional marketing opt-ins are never ticked. Fails loudly on events that aren't free or aren't open for registration. This signs you up as an attendee under your real identity, so confirm the event with the person you're helping before running it — cancelling afterward is a separate action.
 
-### How do I automatically register for a free event on luma.com?
+### How do I automatically register for free Luma events on luma.com?
 
 Ask an AI agent connected to Reduck to run reduck/luma.com/register_to_event, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/luma.com/register_to_event
 
-### Is there a luma.com API to register for a free event?
+### Is there a luma.com API to register for free Luma events?
 
-You do not need one. "Luma API: register for a free event" drives the real luma.com pages in a browser, so it works whether or not luma.com offers an API for this.
+You do not need one. "Luma API: register for free Luma events" drives the real luma.com pages in a browser, so it works whether or not luma.com offers an API for this.
 
 ### What information do I need to provide?
 

@@ -1,10 +1,10 @@
 # Cancel registration for a Luma event
 
-Automatically cancel registration for a Luma event on luma.com. Cancel the signed-in Luma account's registration for an event by its slug. An event you were never registered for, or already cancelled on, is reported as such rather than an error. This notifies the event organizer that you won't attend, so confirm the event with the person you're helping before running it — re-registering afterward is a separate action.
+Automatically cancel registration for a Luma event on luma.com. Cancel the signed-in Luma account's registration for an event by its slug. A registration already cancelled is reported as such rather than an error; an event the account was never registered for is refused, since there is nothing to cancel. This notifies the event organizer that you won't attend, so confirm the event with the person you're helping before running it — re-registering afterward is a separate action.
 
 - Site: luma.com
 - Address: `reduck/luma.com/unregister_from_event`
-- Updated: 2026-08-20 (v2)
+- Updated: 2026-09-25 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,7 +29,7 @@ npx @reduck-ai/cli@latest run --script reduck/luma.com/unregister_from_event
 
 ### What does "Cancel registration for a Luma event" do?
 
-Cancel the signed-in Luma account's registration for an event by its slug. An event you were never registered for, or already cancelled on, is reported as such rather than an error. This notifies the event organizer that you won't attend, so confirm the event with the person you're helping before running it — re-registering afterward is a separate action.
+Cancel the signed-in Luma account's registration for an event by its slug. A registration already cancelled is reported as such rather than an error; an event the account was never registered for is refused, since there is nothing to cancel. This notifies the event organizer that you won't attend, so confirm the event with the person you're helping before running it — re-registering afterward is a separate action.
 
 ### How do I automatically cancel registration for a Luma event on luma.com?
 

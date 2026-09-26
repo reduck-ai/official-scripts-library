@@ -4,7 +4,7 @@ Automatically search stays near a location on booking.com. Search Booking.com st
 
 - Site: booking.com
 - Address: `reduck/booking.com/search_stays_near_location`
-- Updated: 2026-09-07 (v8)
+- Updated: 2026-09-25 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it

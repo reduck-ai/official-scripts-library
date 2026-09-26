@@ -4,7 +4,7 @@ Automatically get X DM inbox on x.com. List the state of every DM conversation i
 
 - Site: x.com
 - Address: `reduck/x.com/get_inbox`
-- Updated: 2026-09-15 (v6)
+- Updated: 2026-09-25 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically find Email (Hunter) on hunter.io. Looks up a person's professional
 
 - Site: hunter.io
 - Address: `reduck/hunter.io/find_email`
-- Updated: 2026-09-03 (v8)
+- Updated: 2026-09-26 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it

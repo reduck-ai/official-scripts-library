@@ -4,7 +4,7 @@ Automatically search item listings on vinted.com. Search Vinted listings by keyw
 
 - Site: vinted.com
 - Address: `reduck/vinted.com/search_items`
-- Updated: 2026-09-13 (v5)
+- Updated: 2026-09-25 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

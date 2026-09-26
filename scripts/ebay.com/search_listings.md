@@ -4,7 +4,7 @@ Automatically search eBay listings on ebay.com. Search eBay for items by keyword
 
 - Site: ebay.com
 - Address: `reduck/ebay.com/search_listings`
-- Updated: 2026-09-18 (v4)
+- Updated: 2026-09-25 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

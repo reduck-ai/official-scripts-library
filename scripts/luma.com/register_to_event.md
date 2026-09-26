@@ -4,7 +4,7 @@ Automatically register for free Luma events on luma.com. An unofficial Luma API 
 
 - Site: luma.com
 - Address: `reduck/luma.com/register_to_event`
-- Updated: 2026-09-24 (v22)
+- Updated: 2026-09-25 (v26)
 - Author: Reduck AI (reduck)
 
 ## Run it

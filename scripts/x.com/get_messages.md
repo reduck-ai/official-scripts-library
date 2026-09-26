@@ -4,7 +4,7 @@ Automatically get X DM messages on x.com. Fetch all messages in a DM conversatio
 
 - Site: x.com
 - Address: `reduck/x.com/get_messages`
-- Updated: 2026-09-03 (v5)
+- Updated: 2026-09-25 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

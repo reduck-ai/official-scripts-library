@@ -4,7 +4,7 @@ Log into a Slack workspace using Sign in with Google, then open that workspace. 
 
 - Site: slack.com
 - Address: `reduck/slack.com/login_with_google`
-- Updated: 2026-08-21 (v6)
+- Updated: 2026-09-25 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -25,7 +25,10 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/login_with_google
 - `url` (string, required)
 - `loggedIn` (boolean, required)
 - `workspace` (string, required)
+- `teamId` (string | null, optional)
+- `userId` (string | null, optional)
 - `account` (string | null, optional)
+- `already` (boolean, optional)
 
 ## FAQ
 
@@ -39,7 +42,7 @@ Required: workspace. Optional: email.
 
 ### What does it return?
 
-It returns url, account, loggedIn, workspace.
+It returns url, teamId, userId, account, already, loggedIn, workspace.
 
 ### Do I need to be logged in to slack.com?
 

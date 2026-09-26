@@ -4,7 +4,7 @@ Automatically get events from a Luma calendar on luma.com. List the past or futu
 
 - Site: luma.com
 - Address: `reduck/luma.com/get_calendar_events`
-- Updated: 2026-08-19 (v1)
+- Updated: 2026-09-25 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

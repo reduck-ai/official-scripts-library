@@ -4,7 +4,7 @@ Automatically search events by topic or city on luma.com. An unofficial Luma API
 
 - Site: luma.com
 - Address: `reduck/luma.com/search_events`
-- Updated: 2026-09-18 (v3)
+- Updated: 2026-09-25 (v5)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -47,6 +47,7 @@ Shape only: placeholder values generated from the output schema, not a real run.
       "slug": "…",
       "end_at": "2026-01-15T09:30:00Z",
       "address": "…",
+      "is_free": true,
       "event_id": "abc123",
       "start_at": "2026-01-15T09:30:00Z",
       "timezone": "…",
@@ -54,7 +55,10 @@ Shape only: placeholder values generated from the output schema, not a real run.
       "guest_count": 3,
       "calendar_name": "…",
       "calendar_slug": "…",
-      "location_type": "…"
+      "location_type": "…",
+      "show_guest_list": true,
+      "require_approval": true,
+      "registration_availability": "…"
     }
   ],
   "has_more": true,

@@ -4,7 +4,7 @@ Automatically get Luma event details on luma.com. Get the full public details of
 
 - Site: luma.com
 - Address: `reduck/luma.com/get_event`
-- Updated: 2026-08-19 (v1)
+- Updated: 2026-09-25 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -28,19 +28,22 @@ npx @reduck-ai/cli@latest run --script reduck/luma.com/get_event
 - `city` (string | null, optional)
 - `hosts` (array, optional)
 - `end_at` (string | null, optional)
-- `is_free` (boolean | null, optional)
+- `is_free` (boolean | null, optional): Whether every ticket is free.
 - `timezone` (string | null, optional)
 - `cover_url` (string | null, optional)
 - `categories` (array, optional)
 - `coordinate` (object | null, optional)
 - `venue_name` (string | null, optional)
 - `description` (string | null, optional)
-- `guest_count` (integer | null, optional)
+- `guest_count` (integer | null, optional): As Luma reports it. Luma reports 0 when the organizer hides the guest list (show_guest_list false), whatever the real count.
 - `full_address` (string | null, optional)
 - `ticket_count` (integer | null, optional)
 - `calendar_name` (string | null, optional)
 - `calendar_slug` (string | null, optional)
 - `location_type` (string | null, optional)
+- `show_guest_list` (boolean | null, optional): Whether the organizer shows the guest list to guests. False: get_event_attendees returns only the public preview, even after registering.
+- `require_approval` (boolean | null, optional): Whether a registration waits for the organizer's approval.
+- `registration_questions` (array, optional): The event's registration form as Luma declares it, in order. `id` is a key register_to_event's `answers` takes.
 - `registration_availability` (string | null, optional)
 
 ## FAQ
@@ -63,7 +66,7 @@ Required: slug.
 
 ### What does it return?
 
-It returns city, name, slug, hosts, end_at, is_free, event_id, start_at, timezone, cover_url, categories, coordinate, venue_name, description, guest_count, full_address, ticket_count, calendar_name, calendar_slug, location_type, registration_availability.
+It returns city, name, slug, hosts, end_at, is_free, event_id, start_at, timezone, cover_url, categories, coordinate, venue_name, description, guest_count, full_address, ticket_count, calendar_name, calendar_slug, location_type, show_guest_list, require_approval, registration_questions, registration_availability.
 
 ### Do I need to be logged in to luma.com?
 

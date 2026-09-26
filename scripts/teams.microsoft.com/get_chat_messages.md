@@ -4,7 +4,7 @@ Automatically get Chat Messages on teams.microsoft.com. Read messages from a 1:1
 
 - Site: teams.microsoft.com
 - Address: `reduck/teams.microsoft.com/get_chat_messages`
-- Updated: 2026-09-09 (v7)
+- Updated: 2026-09-25 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it

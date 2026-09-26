@@ -4,7 +4,7 @@ Automatically read an Outlook.com email on outlook.live.com. Read one Outlook.co
 
 - Site: outlook.live.com
 - Address: `reduck/outlook.live.com/get_email`
-- Updated: 2026-09-21 (v5)
+- Updated: 2026-09-25 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

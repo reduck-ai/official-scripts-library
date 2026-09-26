@@ -1,10 +1,10 @@
-# Get Google search suggestions
+# Google Autocomplete API: get Google search suggestions for a keyword
 
-Automatically get Google search suggestions on google.com. Get the autocomplete suggestions Google offers for a search query, in the order it ranks them — the completions that would appear as you type in the search box. Partial input works well, so "best crm for" returns the ways people finish that phrase, which makes this a quick way to see what an audience actually searches for around a topic. Suggestions are personalised to the signed-in account and its location, and a query Google does not recognise comes back with an empty list rather than an error. Note that Google sometimes reinterprets an unfamiliar term and answers for a similar one, so the suggestions can drift from exactly what was asked.
+Automatically get Google search suggestions for a keyword on google.com. An unofficial Google Autocomplete API: the completions Google suggests for a phrase, in its ranking order, for keyword research. Get the autocomplete suggestions Google offers for a search query, in the order it ranks them — the completions that would appear as you type in the search box. Partial input works well, so "best crm for" returns the ways people finish that phrase, which makes this a quick way to see what an audience actually searches for around a topic. Suggestions are personalised to the signed-in account and its location, and a query Google does not recognise comes back with an empty list rather than an error. Note that Google sometimes reinterprets an unfamiliar term and answers for a similar one, so the suggestions can drift from exactly what was asked.
 
 - Site: google.com
 - Address: `reduck/google.com/search_suggestions`
-- Updated: 2026-09-22 (v3)
+- Updated: 2026-09-25 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,17 +29,17 @@ npx @reduck-ai/cli@latest run --script reduck/google.com/search_suggestions
 
 ## FAQ
 
-### What does "Get Google search suggestions" do?
+### What does "Google Autocomplete API: get Google search suggestions for a keyword" do?
 
-Get the autocomplete suggestions Google offers for a search query, in the order it ranks them — the completions that would appear as you type in the search box. Partial input works well, so "best crm for" returns the ways people finish that phrase, which makes this a quick way to see what an audience actually searches for around a topic. Suggestions are personalised to the signed-in account and its location, and a query Google does not recognise comes back with an empty list rather than an error. Note that Google sometimes reinterprets an unfamiliar term and answers for a similar one, so the suggestions can drift from exactly what was asked.
+An unofficial Google Autocomplete API: the completions Google suggests for a phrase, in its ranking order, for keyword research. Get the autocomplete suggestions Google offers for a search query, in the order it ranks them — the completions that would appear as you type in the search box. Partial input works well, so "best crm for" returns the ways people finish that phrase, which makes this a quick way to see what an audience actually searches for around a topic. Suggestions are personalised to the signed-in account and its location, and a query Google does not recognise comes back with an empty list rather than an error. Note that Google sometimes reinterprets an unfamiliar term and answers for a similar one, so the suggestions can drift from exactly what was asked.
 
-### How do I automatically get Google search suggestions on google.com?
+### How do I automatically get Google search suggestions for a keyword on google.com?
 
 Ask an AI agent connected to Reduck to run reduck/google.com/search_suggestions, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/google.com/search_suggestions
 
-### Is there a google.com API to get Google search suggestions?
+### Is there a google.com API to get Google search suggestions for a keyword?
 
-You do not need one. "Get Google search suggestions" drives the real google.com pages in a browser, so it works whether or not google.com offers an API for this.
+You do not need one. "Google Autocomplete API: get Google search suggestions for a keyword" drives the real google.com pages in a browser, so it works whether or not google.com offers an API for this.
 
 ### What information do I need to provide?
 

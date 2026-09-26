@@ -1,10 +1,10 @@
-# Explore keyword trends
+# Google Trends API: compare keywords and get related queries
 
-Automatically explore keyword trends on trends.google.com. Google Trends explore for 1-5 keywords in one compare query: interest over time (shared scale), interest by region, per-region share %, related topics and queries (top + rising), for a given geo/date range/category/property.
+Automatically compare keywords and get related queries on trends.google.com. An unofficial Google Trends API: compare up to 5 keywords' search interest over time and by region, and get their top and rising related queries, as data in one call. Google Trends explore for 1-5 keywords in one compare query: interest over time (shared scale), interest by region, per-region share %, related topics and queries (top + rising), for a given geo/date range/category/property.
 
 - Site: trends.google.com
 - Address: `reduck/trends.google.com/explore_keyword`
-- Updated: 2026-09-02 (v3)
+- Updated: 2026-09-25 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -34,17 +34,17 @@ npx @reduck-ai/cli@latest run --script reduck/trends.google.com/explore_keyword
 
 ## FAQ
 
-### What does "Explore keyword trends" do?
+### What does "Google Trends API: compare keywords and get related queries" do?
 
-Google Trends explore for 1-5 keywords in one compare query: interest over time (shared scale), interest by region, per-region share %, related topics and queries (top + rising), for a given geo/date range/category/property.
+An unofficial Google Trends API: compare up to 5 keywords' search interest over time and by region, and get their top and rising related queries, as data in one call. Google Trends explore for 1-5 keywords in one compare query: interest over time (shared scale), interest by region, per-region share %, related topics and queries (top + rising), for a given geo/date range/category/property.
 
-### How do I automatically explore keyword trends on trends.google.com?
+### How do I automatically compare keywords and get related queries on trends.google.com?
 
 Ask an AI agent connected to Reduck to run reduck/trends.google.com/explore_keyword, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/trends.google.com/explore_keyword
 
-### Is there a trends.google.com API to explore keyword trends?
+### Is there a trends.google.com API to compare keywords and get related queries?
 
-You do not need one. "Explore keyword trends" drives the real trends.google.com pages in a browser, so it works whether or not trends.google.com offers an API for this.
+You do not need one. "Google Trends API: compare keywords and get related queries" drives the real trends.google.com pages in a browser, so it works whether or not trends.google.com offers an API for this.
 
 ### What information do I need to provide?
 

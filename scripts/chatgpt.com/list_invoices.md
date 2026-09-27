@@ -4,7 +4,7 @@ Automatically list ChatGPT invoices on chatgpt.com. List the billing history of 
 
 - Site: chatgpt.com
 - Address: `reduck/chatgpt.com/list_invoices`
-- Updated: 2026-08-20 (v6)
+- Updated: 2026-09-26 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

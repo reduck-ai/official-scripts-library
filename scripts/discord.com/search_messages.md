@@ -1,10 +1,10 @@
-# Search Discord messages
+# Search Discord server messages
 
-Automatically search Discord messages on discord.com. Search a Discord server's message history, newest first, using Discord's own search. The query accepts Discord's search syntax (plain words, or filters like from:, in:, has:, before:, during:), so scoping to a channel or author is done in the query itself. Returns per hit: messageId, channelId, url, author (id, handle, name), content, timestamp, plus total_results as Discord reports it and complete, which is false when more hits exist beyond the page read. Discord returns search hits with surrounding context messages; only the hits themselves are returned.
+Automatically search Discord server messages on discord.com. Search a Discord server's message history, newest first, using Discord's own search, as the signed-in account: it reaches every server that account is in, with no bot to invite. The query accepts Discord's search syntax (plain words, or filters like from:, in:, has:, before:, during:), so scoping to a channel or author is done in the query itself. Returns per hit: messageId, channelId, url, author (id, handle, name), content, timestamp, plus total_results as Discord reports it and complete, which is false when more hits exist beyond the page read. Discord returns search hits with surrounding context messages; only the hits themselves are returned. It searches one server at a time; for direct messages (DMs), list the conversations with discord.com/list_dms and read one with discord.com/read_messages.
 
 - Site: discord.com
 - Address: `reduck/discord.com/search_messages`
-- Updated: 2026-09-18 (v5)
+- Updated: 2026-09-26 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -32,17 +32,17 @@ npx @reduck-ai/cli@latest run --script reduck/discord.com/search_messages
 
 ## FAQ
 
-### What does "Search Discord messages" do?
+### What does "Search Discord server messages" do?
 
-Search a Discord server's message history, newest first, using Discord's own search. The query accepts Discord's search syntax (plain words, or filters like from:, in:, has:, before:, during:), so scoping to a channel or author is done in the query itself. Returns per hit: messageId, channelId, url, author (id, handle, name), content, timestamp, plus total_results as Discord reports it and complete, which is false when more hits exist beyond the page read. Discord returns search hits with surrounding context messages; only the hits themselves are returned.
+Search a Discord server's message history, newest first, using Discord's own search, as the signed-in account: it reaches every server that account is in, with no bot to invite. The query accepts Discord's search syntax (plain words, or filters like from:, in:, has:, before:, during:), so scoping to a channel or author is done in the query itself. Returns per hit: messageId, channelId, url, author (id, handle, name), content, timestamp, plus total_results as Discord reports it and complete, which is false when more hits exist beyond the page read. Discord returns search hits with surrounding context messages; only the hits themselves are returned. It searches one server at a time; for direct messages (DMs), list the conversations with discord.com/list_dms and read one with discord.com/read_messages.
 
-### How do I automatically search Discord messages on discord.com?
+### How do I automatically search Discord server messages on discord.com?
 
 Ask an AI agent connected to Reduck to run reduck/discord.com/search_messages, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/discord.com/search_messages
 
-### Is there a discord.com API to search Discord messages?
+### Is there a discord.com API to search Discord server messages?
 
-You do not need one. "Search Discord messages" drives the real discord.com pages in a browser, so it works whether or not discord.com offers an API for this.
+You do not need one. "Search Discord server messages" drives the real discord.com pages in a browser, so it works whether or not discord.com offers an API for this.
 
 ### What information do I need to provide?
 

@@ -1,10 +1,10 @@
 # Download Uber trip receipt PDF
 
-Automatically download Uber trip receipt PDF on riders.uber.com. Download one Uber trip's receipt as a PDF, by tripId (from riders.uber.com/list_trips). Returns the filename and the PDF bytes, base64-encoded (decode and write it yourself). Every completed trip has a receipt, including trips in regions that issue no separate VAT invoice; use riders.uber.com/download_invoice when you specifically need the VAT invoice document.
+Automatically download Uber trip receipt PDF on riders.uber.com. Download one Uber trip's receipt as a PDF, by tripId (from riders.uber.com/list_trips). Returns the filename and the path where the browser saved it (or a url to it on a managed browser), so you can read or move the PDF directly. Every completed trip has a receipt, including trips in regions that issue no separate VAT invoice; use riders.uber.com/download_invoice when you specifically need the VAT invoice document.
 
 - Site: riders.uber.com
 - Address: `reduck/riders.uber.com/download_receipt`
-- Updated: 2026-09-21 (v1)
+- Updated: 2026-09-26 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -21,14 +21,15 @@ npx @reduck-ai/cli@latest run --script reduck/riders.uber.com/download_receipt
 
 ## Output
 
-- `filename` (string, required)
-- `pdf_base64` (string, required): The PDF bytes, base64-encoded — decode and write to disk yourself.
+- `filename` (string, required): The receipt's file name as Uber serves it.
+- `url` (string, optional): On a managed browser, a link to the PDF bytes (the file is not on your machine).
+- `path` (string, optional): Where the PDF is saved on the machine running the browser (on a paired Chrome, its downloads folder). Read or move the file from there.
 
 ## FAQ
 
 ### What does "Download Uber trip receipt PDF" do?
 
-Download one Uber trip's receipt as a PDF, by tripId (from riders.uber.com/list_trips). Returns the filename and the PDF bytes, base64-encoded (decode and write it yourself). Every completed trip has a receipt, including trips in regions that issue no separate VAT invoice; use riders.uber.com/download_invoice when you specifically need the VAT invoice document.
+Download one Uber trip's receipt as a PDF, by tripId (from riders.uber.com/list_trips). Returns the filename and the path where the browser saved it (or a url to it on a managed browser), so you can read or move the PDF directly. Every completed trip has a receipt, including trips in regions that issue no separate VAT invoice; use riders.uber.com/download_invoice when you specifically need the VAT invoice document.
 
 ### How do I automatically download Uber trip receipt PDF on riders.uber.com?
 
@@ -44,7 +45,7 @@ Required: tripId.
 
 ### What does it return?
 
-It returns filename, pdf_base64.
+It returns url, path, filename.
 
 ### Do I need to be logged in to riders.uber.com?
 

@@ -4,7 +4,7 @@ Automatically get TikTok following on tiktok.com. List who a TikTok user follows
 
 - Site: tiktok.com
 - Address: `reduck/tiktok.com/get_following`
-- Updated: 2026-09-08 (v4)
+- Updated: 2026-09-26 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

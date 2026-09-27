@@ -4,7 +4,7 @@ Automatically search Booking.com hotels on booking.com. Search Booking.com for a
 
 - Site: booking.com
 - Address: `reduck/booking.com/search_hotels`
-- Updated: 2026-09-02 (v2)
+- Updated: 2026-09-26 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

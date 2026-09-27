@@ -1,10 +1,10 @@
 # Ask Claude
 
-Automatically ask Claude on claude.ai. Open a new Claude.ai chat, send one question, and wait for the answer to finish (up to 3 minutes). Returns the answer as the markdown the model emitted, the message and conversation ids, why generation stopped, which model answered, the web_search queries it issued, every source its web_search and web_fetch tools surfaced, and — separately — the sources the answer actually cited. Requires a signed-in session: claude.ai has no anonymous chat. Avoid running many of these at once: claude.ai limits how many chats one account may hold concurrently and refuses the extras, so a refused send comes back quickly carrying Claude's own message and only needs to be retried at a slower pace.
+Automatically ask Claude on claude.ai. Open a new Claude.ai chat, send one question, and wait for the answer to finish (up to 100 s). Returns the answer as the markdown the model emitted, the message and conversation ids, why generation stopped, which model answered, each web search it made with the results it was shown, every source its web_search and web_fetch tools surfaced, and — separately — the sources the answer actually cited. Requires a signed-in session: claude.ai has no anonymous chat. Avoid running many of these at once: claude.ai limits how many chats one account may hold concurrently and refuses the extras, so a refused send comes back quickly carrying Claude's own message and only needs to be retried at a slower pace.
 
 - Site: claude.ai
 - Address: `reduck/claude.ai/ask`
-- Updated: 2026-09-24 (v15)
+- Updated: 2026-09-26 (v17)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -25,18 +25,18 @@ npx @reduck-ai/cli@latest run --script reduck/claude.ai/ask
 - `model` (string | null, required): Which model answered, as the conversation records it (e.g. "claude-opus-5") — the server's own name for what ran, not the composer's display label. Null when the conversation carried no model.
 - `answer` (string, required): The assistant's full answer as the markdown source the model emitted (the turn's `text` blocks, concatenated in order). Not the rendered text: the reasoning card and tool-call cards are separate block types and are excluded. It carries NO citation markup — a cited sentence is plain text here, and which sources it cited is `citations`.
 - `sources` (array, required): Every source the model's tools surfaced: each result web_search returned and each page web_fetch loaded, deduped by url. This is the CANDIDATE POOL the model could read, NOT what the answer cited — a one-line answer routinely carries a dozen. See `citations` for what it actually attributed. Empty when no tool ran.
-- `searches` (array, required): One entry per web search call, in call order, each with the tool that ran it and the results it returned. Empty when the model didn't search. This is the per-query view; `sources` is the same pages as one deduped pool together with what web_fetch loaded.
+- `searches` (array, required): One entry per web search call, in call order, each with the results it returned. Empty when the model didn't search. Which index answered is not on the page. This is the per-query view; `sources` is the same pages as one deduped pool together with what web_fetch loaded.
 - `citations` (array, required): The sources the ANSWER ATTRIBUTED a sentence to — the citation pills rendered under the text — in first-cited order, deduped by url. A strict reading of what the answer stood on, as opposed to `sources`, which is everything the tools put in front of it. Empty when the answer cited nothing, which is a real outcome and not a failure: a model answering from training data cites nobody. The span each citation covers is not reported — only which sources were cited.
 - `messageId` (string, required): uuid of the assistant message.
 - `stopReason` (string, required): Why generation ended: "end_turn" for a complete answer, anything else (e.g. "max_tokens") means the answer is truncated.
-- `conversationId` (string, required): Conversation uuid, read off the completion endpoint's own URL (never null — claude.ai has no anonymous chat).
-- `webSearchQueries` (array, required): Search queries the model issued during this answer, with either search tool, in order. Empty when it didn't search. The same calls, each with its tool and result list, are `searches`.
+- `conversationId` (string, required): Conversation uuid, read off the chat's own URL (/chat/<uuid>) once the server holds the conversation.
+- `webSearchQueries` (array, required): Search queries the model issued during this answer, in order. Empty when it didn't search. The same calls, each with its result list, are `searches`.
 
 ## FAQ
 
 ### What does "Ask Claude" do?
 
-Open a new Claude.ai chat, send one question, and wait for the answer to finish (up to 3 minutes). Returns the answer as the markdown the model emitted, the message and conversation ids, why generation stopped, which model answered, the web_search queries it issued, every source its web_search and web_fetch tools surfaced, and — separately — the sources the answer actually cited. Requires a signed-in session: claude.ai has no anonymous chat. Avoid running many of these at once: claude.ai limits how many chats one account may hold concurrently and refuses the extras, so a refused send comes back quickly carrying Claude's own message and only needs to be retried at a slower pace.
+Open a new Claude.ai chat, send one question, and wait for the answer to finish (up to 100 s). Returns the answer as the markdown the model emitted, the message and conversation ids, why generation stopped, which model answered, each web search it made with the results it was shown, every source its web_search and web_fetch tools surfaced, and — separately — the sources the answer actually cited. Requires a signed-in session: claude.ai has no anonymous chat. Avoid running many of these at once: claude.ai limits how many chats one account may hold concurrently and refuses the extras, so a refused send comes back quickly carrying Claude's own message and only needs to be retried at a slower pace.
 
 ### How do I automatically ask Claude on claude.ai?
 

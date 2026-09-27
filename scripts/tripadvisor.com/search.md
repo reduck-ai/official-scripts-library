@@ -4,7 +4,7 @@ Automatically search Tripadvisor on tripadvisor.com. Search Tripadvisor's typeah
 
 - Site: tripadvisor.com
 - Address: `reduck/tripadvisor.com/search`
-- Updated: 2026-09-02 (v3)
+- Updated: 2026-09-26 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

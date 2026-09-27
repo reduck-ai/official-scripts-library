@@ -4,7 +4,7 @@ Automatically list Claude Code sessions on claude.ai. List your Claude Code web 
 
 - Site: claude.ai
 - Address: `reduck/claude.ai/list_code_sessions`
-- Updated: 2026-08-20 (v5)
+- Updated: 2026-09-26 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically get X tweet on x.com. Fetch a tweet by URL — the focal post plus
 
 - Site: x.com
 - Address: `reduck/x.com/get_tweet`
-- Updated: 2026-09-03 (v7)
+- Updated: 2026-09-26 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it

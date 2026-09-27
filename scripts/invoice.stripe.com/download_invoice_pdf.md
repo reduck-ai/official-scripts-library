@@ -1,10 +1,10 @@
 # Download Stripe invoice/receipt PDF
 
-Automatically download Stripe invoice/receipt PDF on invoice.stripe.com. Download a Stripe-hosted invoice or payment receipt PDF from its hosted_invoice_url. Returns the PDF bytes as base64 (decode + write it yourself) plus the real filename. Vendor-agnostic and login-free: the hosted_invoice_url is a public tokenized link, so it works for any Stripe-billed service (Claude, ChatGPT, Notion, Slack, Lovable, ...). An expired or dead URL fails cleanly.
+Automatically download Stripe invoice/receipt PDF on invoice.stripe.com. Download a Stripe-hosted invoice or payment receipt PDF from its hosted_invoice_url. Returns the file's real name and the path where the browser saved it (or a url to it on a managed browser), so you can read or move the PDF directly. Vendor-agnostic and login-free: the hosted_invoice_url is a public tokenized link, so it works for any Stripe-billed service (Claude, ChatGPT, X, Notion, Slack, Lovable, ...). An expired or dead URL fails cleanly.
 
 - Site: invoice.stripe.com
 - Address: `reduck/invoice.stripe.com/download_invoice_pdf`
-- Updated: 2026-08-20 (v5)
+- Updated: 2026-09-26 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -23,14 +23,15 @@ npx @reduck-ai/cli@latest run --script reduck/invoice.stripe.com/download_invoic
 ## Output
 
 - `doc_type` (string, required): Which document was downloaded: invoice or receipt.
-- `filename` (string, required): The real suggested filename (e.g. Invoice-V1L1VMU8-0001.pdf or Receipt-2415-5423.pdf), taken from the file's Content-Disposition.
-- `pdf_base64` (string, required): The PDF file bytes, base64-encoded. Decode and write to a .pdf file at a location of your choosing (the script is sandboxed and cannot write to disk itself).
+- `filename` (string, required): The file's name as Stripe serves it (e.g. Invoice-V1L1VMU8-0001.pdf or Receipt-2415-5423.pdf).
+- `url` (string, optional): On a managed browser, a link to the PDF bytes (the file is not on your machine).
+- `path` (string, optional): Where the PDF is saved on the machine running the browser (on a paired Chrome, its downloads folder). Read or move the file from there.
 
 ## FAQ
 
 ### What does "Download Stripe invoice/receipt PDF" do?
 
-Download a Stripe-hosted invoice or payment receipt PDF from its hosted_invoice_url. Returns the PDF bytes as base64 (decode + write it yourself) plus the real filename. Vendor-agnostic and login-free: the hosted_invoice_url is a public tokenized link, so it works for any Stripe-billed service (Claude, ChatGPT, Notion, Slack, Lovable, ...). An expired or dead URL fails cleanly.
+Download a Stripe-hosted invoice or payment receipt PDF from its hosted_invoice_url. Returns the file's real name and the path where the browser saved it (or a url to it on a managed browser), so you can read or move the PDF directly. Vendor-agnostic and login-free: the hosted_invoice_url is a public tokenized link, so it works for any Stripe-billed service (Claude, ChatGPT, X, Notion, Slack, Lovable, ...). An expired or dead URL fails cleanly.
 
 ### How do I automatically download Stripe invoice/receipt PDF on invoice.stripe.com?
 
@@ -46,7 +47,7 @@ Required: hosted_invoice_url. Optional: doc_type.
 
 ### What does it return?
 
-It returns doc_type, filename, pdf_base64.
+It returns url, path, doc_type, filename.
 
 ### Do I need to be logged in to invoice.stripe.com?
 

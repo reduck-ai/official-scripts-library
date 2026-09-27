@@ -4,7 +4,7 @@ Automatically list Discord channels on discord.com. Lists a Discord server's cha
 
 - Site: discord.com
 - Address: `reduck/discord.com/list_channels`
-- Updated: 2026-09-07 (v4)
+- Updated: 2026-09-26 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -53,7 +53,7 @@ Yes. It acts as you on discord.com: on your own Chrome it reuses your session, a
 
 ### Does it change anything on discord.com, or only read data?
 
-Unknown: its author has not declared whether it changes anything on discord.com, so treat it as if it could.
+It only reads. It looks things up on discord.com and changes nothing there.
 
 ### How do I run it?
 

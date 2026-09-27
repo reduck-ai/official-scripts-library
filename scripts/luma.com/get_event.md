@@ -4,7 +4,7 @@ Automatically get Luma event details on luma.com. Get the full public details of
 
 - Site: luma.com
 - Address: `reduck/luma.com/get_event`
-- Updated: 2026-09-25 (v2)
+- Updated: 2026-09-27 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

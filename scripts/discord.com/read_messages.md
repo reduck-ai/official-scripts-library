@@ -1,10 +1,10 @@
 # Read Discord messages
 
-Automatically read Discord messages on discord.com. Reads the most recent messages of a Discord channel (author, timestamp, text), newest first, scrolling up to load more until the requested count. Requires being logged in. It also reads a thread or a forum post, since both are channels in their own right: pass the post's url (from discord.com/list_forum_posts) and you get its replies plus the opening post, newest first — there is no separate thread-reading script. To list the posts of a forum channel rather than its messages, use discord.com/list_forum_posts instead.
+Automatically read Discord messages on discord.com. Reads the most recent messages of a Discord channel or direct message (author, timestamp, text), newest first, scrolling up to load more until the requested count. Requires being logged in. A DM or group DM is read the same way: pass its url from discord.com/list_dms. It also reads a thread or a forum post, since both are channels in their own right: pass the post's url (from discord.com/list_forum_posts) and you get its replies plus the opening post, newest first — there is no separate thread-reading script. To list the posts of a forum channel rather than its messages, use discord.com/list_forum_posts instead.
 
 - Site: discord.com
 - Address: `reduck/discord.com/read_messages`
-- Updated: 2026-09-03 (v5)
+- Updated: 2026-09-26 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/discord.com/read_messages
 
 ## Input
 
-- `channelUrl` (string, required): Full channel URL, e.g. https://discord.com/channels/<guildId>/<channelId>
+- `channelUrl` (string, required): Full channel URL: https://discord.com/channels/<guildId>/<channelId> for a server channel, or https://discord.com/channels/@me/<channelId> for a direct message (from discord.com/list_dms).
 - `limit` (integer, optional): How many messages to return, newest first. Fewer come back when the channel is shorter.
 
 ## Output
@@ -30,7 +30,7 @@ npx @reduck-ai/cli@latest run --script reduck/discord.com/read_messages
 
 ### What does "Read Discord messages" do?
 
-Reads the most recent messages of a Discord channel (author, timestamp, text), newest first, scrolling up to load more until the requested count. Requires being logged in. It also reads a thread or a forum post, since both are channels in their own right: pass the post's url (from discord.com/list_forum_posts) and you get its replies plus the opening post, newest first — there is no separate thread-reading script. To list the posts of a forum channel rather than its messages, use discord.com/list_forum_posts instead.
+Reads the most recent messages of a Discord channel or direct message (author, timestamp, text), newest first, scrolling up to load more until the requested count. Requires being logged in. A DM or group DM is read the same way: pass its url from discord.com/list_dms. It also reads a thread or a forum post, since both are channels in their own right: pass the post's url (from discord.com/list_forum_posts) and you get its replies plus the opening post, newest first — there is no separate thread-reading script. To list the posts of a forum channel rather than its messages, use discord.com/list_forum_posts instead.
 
 ### How do I automatically read Discord messages on discord.com?
 

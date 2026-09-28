@@ -1,10 +1,10 @@
 # List Uber trips
 
-Automatically list Uber trips on riders.uber.com. List the signed-in rider's past Uber trips (riders.uber.com/trips), newest first. Returns per trip: tripId (uuid), title (destination address), when (e.g. "Jul 10 • 10:50 PM"), amount (e.g. "€12.98"), url. Loads more trips until max is reached or the list runs out. tripId is the join key for riders.uber.com/download_invoice.
+Automatically list Uber trips on riders.uber.com. List the signed-in rider's past Uber trips (riders.uber.com/trips), newest first. Returns per trip: tripId (uuid), title (destination address), when (e.g. "Mar 3 • 8:15 PM"), amount (e.g. "€14.50"), url. Loads more trips until max is reached or the list runs out. tripId is the join key for riders.uber.com/download_invoice.
 
 - Site: riders.uber.com
 - Address: `reduck/riders.uber.com/list_trips`
-- Updated: 2026-09-21 (v3)
+- Updated: 2026-09-27 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -28,7 +28,7 @@ npx @reduck-ai/cli@latest run --script reduck/riders.uber.com/list_trips
 
 ### What does "List Uber trips" do?
 
-List the signed-in rider's past Uber trips (riders.uber.com/trips), newest first. Returns per trip: tripId (uuid), title (destination address), when (e.g. "Jul 10 • 10:50 PM"), amount (e.g. "€12.98"), url. Loads more trips until max is reached or the list runs out. tripId is the join key for riders.uber.com/download_invoice.
+List the signed-in rider's past Uber trips (riders.uber.com/trips), newest first. Returns per trip: tripId (uuid), title (destination address), when (e.g. "Mar 3 • 8:15 PM"), amount (e.g. "€14.50"), url. Loads more trips until max is reached or the list runs out. tripId is the join key for riders.uber.com/download_invoice.
 
 ### How do I automatically list Uber trips on riders.uber.com?
 

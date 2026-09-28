@@ -1,10 +1,10 @@
 # Search Amazon products
 
-Automatically search Amazon products on amazon.com. Search Amazon by free-text query and return one page of results. Returns query, page, zip, url, and items (asin, title, url, price, list_price, rating, review_count, image_url, sponsored). Organic results are stable per page but sponsored slots rotate between fetches; pagination caps around 20 pages.
+Automatically search Amazon products on amazon.com. Search Amazon by free-text query and return one page of results. Returns query, page, zip, url, and items (asin, title, url, price, list_price, rating, review_count, image_url, sponsored, formats). formats lists each edition a result links to (for example Hardcover, Kindle and Audiobook for a book), with its own ASIN, URL and price when shown. Organic results are stable per page but sponsored slots rotate between fetches; pagination caps around 20 pages.
 
 - Site: amazon.com
 - Address: `reduck/amazon.com/search-products`
-- Updated: 2026-08-17 (v7)
+- Updated: 2026-09-27 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -33,7 +33,7 @@ npx @reduck-ai/cli@latest run --script reduck/amazon.com/search-products
 
 ### What does "Search Amazon products" do?
 
-Search Amazon by free-text query and return one page of results. Returns query, page, zip, url, and items (asin, title, url, price, list_price, rating, review_count, image_url, sponsored). Organic results are stable per page but sponsored slots rotate between fetches; pagination caps around 20 pages.
+Search Amazon by free-text query and return one page of results. Returns query, page, zip, url, and items (asin, title, url, price, list_price, rating, review_count, image_url, sponsored, formats). formats lists each edition a result links to (for example Hardcover, Kindle and Audiobook for a book), with its own ASIN, URL and price when shown. Organic results are stable per page but sponsored slots rotate between fetches; pagination caps around 20 pages.
 
 ### How do I automatically search Amazon products on amazon.com?
 

@@ -4,7 +4,7 @@ Automatically delete tab on docs.google.com. Delete one tab of a Google Spreadsh
 
 - Site: docs.google.com
 - Address: `reduck/docs.google.com/sheets_delete_tab`
-- Updated: 2026-08-28 (v3)
+- Updated: 2026-09-27 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Report which Uber rider account this browser is signed in as: the rider id, firs
 
 - Site: riders.uber.com
 - Address: `reduck/riders.uber.com/whoami`
-- Updated: 2026-09-26 (v1)
+- Updated: 2026-09-27 (v1)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically download Uber trip receipt PDF on riders.uber.com. Download one Ub
 
 - Site: riders.uber.com
 - Address: `reduck/riders.uber.com/download_receipt`
-- Updated: 2026-09-26 (v2)
+- Updated: 2026-09-27 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/riders.uber.com/download_receipt
 
 ## Input
 
-- `tripId` (string, required): Trip uuid, e.g. cce57191-e89c-4200-84f7-451553bd95b6
+- `tripId` (string, required): Trip uuid, e.g. 01234567-89ab-cdef-0123-456789abcdef
 
 ## Output
 

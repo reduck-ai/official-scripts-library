@@ -1,10 +1,10 @@
 # List Discord forum posts
 
-Automatically list Discord forum posts on discord.com. List the posts (threads) in a Discord forum channel, newest first. Use this instead of read_messages, which forum channels don't support; pass a returned post's url to read_messages to read its replies. Returns per post: threadId, name, url, createdAt, authorName, messageCount (Discord's reply count, excluding the opening post), openingMessage and tagNames. Does not return user ids, tag ids, or archived/locked/pinned state.
+Automatically list Discord forum posts on discord.com. List the posts (threads) in a Discord forum channel, newest first, optionally only those matching a search text, as the forum's own search box finds them. Use this instead of read_messages, which forum channels don't support; pass a returned post's url to read_messages to read its replies. Returns per post: threadId, name, url, createdAt, authorName, messageCount (Discord's reply count, excluding the opening post), openingMessage and tagNames. Does not return user ids, tag ids, or archived/locked/pinned state.
 
 - Site: discord.com
 - Address: `reduck/discord.com/list_forum_posts`
-- Updated: 2026-09-03 (v6)
+- Updated: 2026-09-27 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -19,6 +19,7 @@ npx @reduck-ai/cli@latest run --script reduck/discord.com/list_forum_posts
 
 - `channelUrl` (string, required): Full forum channel URL, e.g. https://discord.com/channels/<guildId>/<channelId>. Get one from discord.com/list_channels.
 - `limit` (integer, optional): How many posts to return, newest first. Fewer come back when the forum is shorter.
+- `query` (string, optional): Text to type in the forum's search box before listing, as a person would: only the posts Discord matches come back. Omitted: every post, whatever was last searched in that forum.
 
 ## Output
 
@@ -31,7 +32,7 @@ npx @reduck-ai/cli@latest run --script reduck/discord.com/list_forum_posts
 
 ### What does "List Discord forum posts" do?
 
-List the posts (threads) in a Discord forum channel, newest first. Use this instead of read_messages, which forum channels don't support; pass a returned post's url to read_messages to read its replies. Returns per post: threadId, name, url, createdAt, authorName, messageCount (Discord's reply count, excluding the opening post), openingMessage and tagNames. Does not return user ids, tag ids, or archived/locked/pinned state.
+List the posts (threads) in a Discord forum channel, newest first, optionally only those matching a search text, as the forum's own search box finds them. Use this instead of read_messages, which forum channels don't support; pass a returned post's url to read_messages to read its replies. Returns per post: threadId, name, url, createdAt, authorName, messageCount (Discord's reply count, excluding the opening post), openingMessage and tagNames. Does not return user ids, tag ids, or archived/locked/pinned state.
 
 ### How do I automatically list Discord forum posts on discord.com?
 
@@ -43,7 +44,7 @@ You do not need one. "List Discord forum posts" drives the real discord.com page
 
 ### What information do I need to provide?
 
-Required: channelUrl. Optional: limit.
+Required: channelUrl. Optional: limit, query.
 
 ### What does it return?
 

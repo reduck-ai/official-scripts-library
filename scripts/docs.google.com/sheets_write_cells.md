@@ -1,10 +1,10 @@
 # Sheets: write cells
 
-Automatically write cells on docs.google.com. Write a 2D block of values into one tab of a Google Spreadsheet, top-left at startCell (clears the target rectangle first). Returns range, rows, cols, saved. Values are parsed per the spreadsheet locale ("1.5" in a FR sheet becomes 1 May; prefix ' to force text); leading = enters a formula; in-cell newlines are dropped; needs edit rights.
+Automatically write cells on docs.google.com. Write a 2D block of values into one tab of a Google Spreadsheet, top-left at startCell, like the Sheets API: null leaves a cell as it is, "" clears it, anything else replaces it as if typed (dropdown rules and formatting stay; clearing a dropdown cell removes its dropdown). Returns range, rows, cols, saved once every edit is saved. A value the sheet refuses (data validation, outside the grid) stops the run with the sheet's own message. Values are parsed per the spreadsheet locale ("1.5" in a FR sheet becomes 1 May; prefix ' to force text); leading = enters a formula; needs edit rights.
 
 - Site: docs.google.com
 - Address: `reduck/docs.google.com/sheets_write_cells`
-- Updated: 2026-07-31 (v1)
+- Updated: 2026-09-27 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/docs.google.com/sheets_write_cells
 
 ## Input
 
-- `values` (array, required): 2D row-major block. null/"" leaves the (pre-cleared) cell empty. "=..." enters a formula.
+- `values` (array, required): 2D row-major block, as in the Sheets API: null leaves the cell as it is, "" clears it, anything else replaces it as if typed. "=..." enters a formula.
 - `spreadsheetId` (string, required): Spreadsheet id or any full docs.google.com spreadsheet URL
 - `gid` (string | number, optional): Tab gid (from sheets_list_tabs). Default 0.
 - `startCell` (string, optional): Top-left cell in A1 notation, e.g. "B2". Default "A1".
@@ -26,14 +26,14 @@ npx @reduck-ai/cli@latest run --script reduck/docs.google.com/sheets_write_cells
 
 - `cols` (number, required)
 - `rows` (number, required)
-- `range` (string, required): A1 range that was written (and pre-cleared)
-- `saved` (boolean, required): true once the editor's POST /save returned 200
+- `range` (string, required): A1 range the block covers
+- `saved` (boolean, required): true once the document status reads saved, i.e. every edit is on the server
 
 ## FAQ
 
 ### What does "Sheets: write cells" do?
 
-Write a 2D block of values into one tab of a Google Spreadsheet, top-left at startCell (clears the target rectangle first). Returns range, rows, cols, saved. Values are parsed per the spreadsheet locale ("1.5" in a FR sheet becomes 1 May; prefix ' to force text); leading = enters a formula; in-cell newlines are dropped; needs edit rights.
+Write a 2D block of values into one tab of a Google Spreadsheet, top-left at startCell, like the Sheets API: null leaves a cell as it is, "" clears it, anything else replaces it as if typed (dropdown rules and formatting stay; clearing a dropdown cell removes its dropdown). Returns range, rows, cols, saved once every edit is saved. A value the sheet refuses (data validation, outside the grid) stops the run with the sheet's own message. Values are parsed per the spreadsheet locale ("1.5" in a FR sheet becomes 1 May; prefix ' to force text); leading = enters a formula; needs edit rights.
 
 ### How do I automatically write cells on docs.google.com?
 

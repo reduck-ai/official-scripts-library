@@ -4,7 +4,7 @@ Automatically read tab values on docs.google.com. Read one tab of a Google Sprea
 
 - Site: docs.google.com
 - Address: `reduck/docs.google.com/sheets_read_tab`
-- Updated: 2026-08-19 (v1)
+- Updated: 2026-09-27 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -54,7 +54,7 @@ Yes. It acts as you on docs.google.com: on your own Chrome it reuses your sessio
 
 ### Does it change anything on docs.google.com, or only read data?
 
-Unknown: its author has not declared whether it changes anything on docs.google.com, so treat it as if it could.
+It only reads. It looks things up on docs.google.com and changes nothing there.
 
 ### How do I run it?
 

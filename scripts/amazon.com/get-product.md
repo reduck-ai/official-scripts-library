@@ -1,10 +1,10 @@
 # Get Amazon product
 
-Automatically get Amazon product on amazon.com. Fetch a single Amazon product page by ASIN. Returns title, byline, brand, price, list_price, rating, review_count, rating_breakdown, availability, breadcrumb, image_url, feature_bullets, description, attributes, variant_asins, delivery_estimate, return_policy, and seller. The returned asin can differ from the requested one when Amazon resolves a variant. Price, feature_bullets, and attributes are often null or empty for books.
+Automatically get Amazon product on amazon.com. Fetch a single Amazon product page by ASIN. Returns title, byline, brand, price, list_price, rating, review_count, rating_breakdown, availability, breadcrumb, image_url, feature_bullets, description, attributes, variant_asins, delivery_estimate, return_policy, and seller. The returned asin can differ from the requested one when Amazon resolves a variant. For books, brand is null and feature_bullets and attributes are usually empty. Audible audiobook ASINs open Audible's own product page instead, so they fail at once with an error that gives that page's URL.
 
 - Site: amazon.com
 - Address: `reduck/amazon.com/get-product`
-- Updated: 2026-08-28 (v7)
+- Updated: 2026-09-27 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -22,15 +22,15 @@ npx @reduck-ai/cli@latest run --script reduck/amazon.com/get-product
 
 ## Output
 
-- `url` (string, required): Canonical product URL.
+- `url` (string, required): Canonical URL the page declares. Usually /dp/<asin>; some Amazon-brand products declare a /clp/<asin> URL instead.
 - `zip` (string, required): US ZIP the store was pinned to for this fetch.
 - `asin` (string | null, required): ASIN actually displayed (differs from requested when Amazon resolves a variant).
-- `brand` (string | null, required): Brand parsed from the byline.
-- `price` (object | null, required): Featured-offer price as {value, currency}. Null when no single buy-now price shows (e.g. books with a binding picker). {raw,value:null} when a currency symbol couldn't be parsed.
+- `brand` (string | null, required): Brand parsed from the byline. Null for books, whose byline names authors instead.
+- `price` (object | null, required): Featured-offer price as {value, currency}. Null when no buy-now price shows (e.g. a Kindle title not available for purchase). {raw,value:null} when a currency symbol couldn't be parsed.
 - `title` (string | null, required)
 - `byline` (string | null, required): Verbatim byline — e.g. "Visit the Anker Store", "by Author (Author)".
 - `rating` (number | null, required): Average stars out of 5.
-- `seller` (object | null, required): Sold-by seller {name, id}; id is null for Amazon Retail / when no seller link is shown.
+- `seller` (object | null, required): Sold-by seller {name, id}, e.g. {name: "Amazon.com", id: null}; id is null for Amazon Retail / when no seller link is shown. Both null when the page shows no seller.
 - `image_url` (string | null, required): Main product image (high-res when available).
 - `attributes` (object, required): Product-overview spec table; empty when not rendered.
 - `breadcrumb` (array, required): Category path; empty when no wayfinding breadcrumb (e.g. Amazon devices).
@@ -49,7 +49,7 @@ npx @reduck-ai/cli@latest run --script reduck/amazon.com/get-product
 
 ### What does "Get Amazon product" do?
 
-Fetch a single Amazon product page by ASIN. Returns title, byline, brand, price, list_price, rating, review_count, rating_breakdown, availability, breadcrumb, image_url, feature_bullets, description, attributes, variant_asins, delivery_estimate, return_policy, and seller. The returned asin can differ from the requested one when Amazon resolves a variant. Price, feature_bullets, and attributes are often null or empty for books.
+Fetch a single Amazon product page by ASIN. Returns title, byline, brand, price, list_price, rating, review_count, rating_breakdown, availability, breadcrumb, image_url, feature_bullets, description, attributes, variant_asins, delivery_estimate, return_policy, and seller. The returned asin can differ from the requested one when Amazon resolves a variant. For books, brand is null and feature_bullets and attributes are usually empty. Audible audiobook ASINs open Audible's own product page instead, so they fail at once with an error that gives that page's URL.
 
 ### How do I automatically get Amazon product on amazon.com?
 

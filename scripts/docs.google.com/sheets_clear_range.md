@@ -4,7 +4,7 @@ Automatically clear range on docs.google.com. Clear the values of an A1 range in
 
 - Site: docs.google.com
 - Address: `reduck/docs.google.com/sheets_clear_range`
-- Updated: 2026-08-19 (v1)
+- Updated: 2026-09-27 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Log into Canva via Google SSO and land in the Canva app, returning the signed-in
 
 - Site: canva.com
 - Address: `reduck/canva.com/login_with_google`
-- Updated: 2026-08-24 (v14)
+- Updated: 2026-09-28 (v15)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -45,7 +45,7 @@ Yes. It acts as you on canva.com: on your own Chrome it reuses your session, and
 
 ### Does it change anything on canva.com, or only read data?
 
-It makes changes on canva.com, like sending, posting or booking something.
+It makes changes on canva.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

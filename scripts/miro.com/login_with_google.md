@@ -4,7 +4,7 @@ Log into Miro with your Google account and land on the boards dashboard. Returns
 
 - Site: miro.com
 - Address: `reduck/miro.com/login_with_google`
-- Updated: 2026-08-21 (v10)
+- Updated: 2026-09-28 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -45,7 +45,7 @@ Yes. It acts as you on miro.com: on your own Chrome it reuses your session, and 
 
 ### Does it change anything on miro.com, or only read data?
 
-It makes changes on miro.com, like sending, posting or booking something.
+It makes changes on miro.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

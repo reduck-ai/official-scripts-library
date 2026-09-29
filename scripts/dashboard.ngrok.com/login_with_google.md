@@ -4,7 +4,7 @@ Log into the ngrok dashboard via the "Log in with Google" button. Drives the Goo
 
 - Site: dashboard.ngrok.com
 - Address: `reduck/dashboard.ngrok.com/login_with_google`
-- Updated: 2026-08-20 (v3)
+- Updated: 2026-09-28 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -45,7 +45,7 @@ No. It only uses pages of dashboard.ngrok.com that are reachable without signing
 
 ### Does it change anything on dashboard.ngrok.com, or only read data?
 
-It makes changes on dashboard.ngrok.com, like sending, posting or booking something.
+It makes changes on dashboard.ngrok.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

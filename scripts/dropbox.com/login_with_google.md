@@ -4,7 +4,7 @@ Log into Dropbox via Google SSO. Drives Dropbox's Continue-with-Google flow, pic
 
 - Site: dropbox.com
 - Address: `reduck/dropbox.com/login_with_google`
-- Updated: 2026-08-24 (v7)
+- Updated: 2026-09-28 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -45,7 +45,7 @@ No. It only uses pages of dropbox.com that are reachable without signing in.
 
 ### Does it change anything on dropbox.com, or only read data?
 
-It makes changes on dropbox.com, like sending, posting or booking something.
+It makes changes on dropbox.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

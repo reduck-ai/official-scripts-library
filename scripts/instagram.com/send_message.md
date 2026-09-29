@@ -4,7 +4,7 @@ Automatically send Instagram DM on instagram.com. Send a DM to an Instagram user
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/send_message`
-- Updated: 2026-09-22 (v30)
+- Updated: 2026-09-28 (v32)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -66,7 +66,7 @@ Yes. It acts as you on instagram.com: on your own Chrome it reuses your session,
 
 ### Does it change anything on instagram.com, or only read data?
 
-It makes changes on instagram.com, like sending, posting or booking something.
+It makes changes on instagram.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

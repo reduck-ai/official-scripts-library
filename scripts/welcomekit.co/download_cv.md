@@ -1,10 +1,10 @@
 # Download candidate CV
 
-Automatically download candidate CV on welcomekit.co. Download a candidate's CV (resume PDF) from the ATS to a local file on the agent machine. Returns path, filename, size, contentType, and hasResume. Gotcha: hasResume=false (path/filename null) when the candidate attached no CV; the signed resume URL is re-fetched fresh each run.
+Automatically download candidate CV on welcomekit.co. Download a candidate's CV (resume PDF) from the ATS to a local file on the agent machine. Returns path, filename, size, contentType, and hasResume. When the candidate attached no CV, hasResume is false and path and filename are null. The signed resume URL is fetched fresh on each run.
 
 - Site: welcomekit.co
 - Address: `reduck/welcomekit.co/download_cv`
-- Updated: 2026-09-25 (v1)
+- Updated: 2026-09-28 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/welcomekit.co/download_cv
 
 ## Input
 
-- `org` (string, required): REQUIRED. Organization reference as it appears in your dashboard URL https://www.welcomekit.co/dashboard/o/<org>/ (6-char code)
+- `org` (string, required): Organization reference as it appears in your dashboard URL https://www.welcomekit.co/dashboard/o/<org>/ (a 6-character code).
 - `candidateReference` (string, required): Candidate reference from list_candidates, format: reduc-<24 hex chars>
 
 ## Output
@@ -33,7 +33,7 @@ npx @reduck-ai/cli@latest run --script reduck/welcomekit.co/download_cv
 
 ### What does "Download candidate CV" do?
 
-Download a candidate's CV (resume PDF) from the ATS to a local file on the agent machine. Returns path, filename, size, contentType, and hasResume. Gotcha: hasResume=false (path/filename null) when the candidate attached no CV; the signed resume URL is re-fetched fresh each run.
+Download a candidate's CV (resume PDF) from the ATS to a local file on the agent machine. Returns path, filename, size, contentType, and hasResume. When the candidate attached no CV, hasResume is false and path and filename are null. The signed resume URL is fetched fresh on each run.
 
 ### How do I automatically download candidate CV on welcomekit.co?
 
@@ -57,7 +57,7 @@ Yes. It acts as you on welcomekit.co: on your own Chrome it reuses your session,
 
 ### Does it change anything on welcomekit.co, or only read data?
 
-It makes changes on welcomekit.co, like sending, posting or booking something.
+It makes changes on welcomekit.co, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

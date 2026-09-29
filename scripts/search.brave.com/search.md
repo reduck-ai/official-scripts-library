@@ -4,7 +4,7 @@ Search the web on Brave, one page of results at a time. Returns each result's ti
 
 - Site: search.brave.com
 - Address: `reduck/search.brave.com/search`
-- Updated: 2026-09-22 (v13)
+- Updated: 2026-09-28 (v14)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,10 +17,10 @@ npx @reduck-ai/cli@latest run --script reduck/search.brave.com/search
 
 ## Input
 
-- `query` (string, required): Search query. Operators site:/""/OR are honored. NOTE `site:domain` also covers its SUBDOMAINS (site:example.com returns docs.example.com), and `site:domain/path` narrows to a path prefix — the cheapest way to slice a large site.
-- `offset` (integer, optional): 0-based page index (0 = first page, ~20 results). The pool behind one query string is FINITE and its depth varies by query; past its end Brave re-serves earlier pages (measured: `site:reduck.ai` at offset 4 returned offset 2's list). `hasMore` in the output is Brave's own word on whether a next page exists — page while it is true, and dedupe on url anyway. Default 0.
-- `country` (string, optional): ISO-3166 alpha-2 country whose Brave results to read, e.g. "us". Omitted, Brave answers in the country of the browser's own egress, so the same query read from two places is two different result pages (measured 2026-09-22: from France, bare = fr; `us` returns the US App Store, `hl=en_US` Play Store and `/en-en/` site pages). Pass it whenever a reading must be comparable across browsers, or must stand in for another reader's (an assistant's US-side web search).
-- `exactMatch` (boolean, optional): Meant to force the literal query by clicking Brave's 'Search instead for' link. MEASURED NO-OP — do not rely on it. On three typo'd queries (2026-08-08) Brave returned results for the CORRECTED spellings while offering no such link and reporting rewrittenTo null, so the flag did nothing and said nothing about it. It can only work when Brave ANNOUNCES a rewrite, which it appears to have stopped doing for spelling corrections. To pin a literal string, quote it in `query` instead. Default false.
+- `query` (string, required): Search query. The operators site:, quoted phrases and OR are honored. site:domain also covers its subdomains (site:example.com returns docs.example.com), and site:domain/path narrows to a path prefix, which is the cheapest way to slice a large site.
+- `offset` (integer, optional): 0-based page index (0 is the first page, about 20 results). The pool behind one query is limited and its depth varies by query; past its end Brave re-serves earlier pages. hasMore in the output says whether a next page exists: keep paging while it is true, and dedupe on url anyway. Default 0.
+- `country` (string, optional): ISO-3166 alpha-2 country whose Brave results to read, e.g. "us". When omitted, Brave answers for the country of the browser's own network location, so the same query read from two places gives two different result pages. Pass it whenever readings must be comparable across browsers, or must stand in for another reader's, such as an assistant's US-side web search.
+- `exactMatch` (boolean, optional): Intended to force the literal query by clicking Brave's 'Search instead for' link. In practice it has no effect: Brave now corrects spellings without offering that link or reporting a rewrite. To pin a literal string, put it in quotes in query instead. Default false.
 
 ## Output
 

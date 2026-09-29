@@ -4,7 +4,7 @@ Log into Linear via "Continue with Google", using your browser's own signed-in G
 
 - Site: linear.app
 - Address: `reduck/linear.app/login_with_google`
-- Updated: 2026-08-28 (v9)
+- Updated: 2026-09-28 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -45,7 +45,7 @@ No. It only uses pages of linear.app that are reachable without signing in.
 
 ### Does it change anything on linear.app, or only read data?
 
-It makes changes on linear.app, like sending, posting or booking something.
+It makes changes on linear.app, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

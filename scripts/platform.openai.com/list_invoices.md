@@ -4,7 +4,7 @@ Automatically list OpenAI API invoices on platform.openai.com. List invoices on 
 
 - Site: platform.openai.com
 - Address: `reduck/platform.openai.com/list_invoices`
-- Updated: 2026-07-31 (v1)
+- Updated: 2026-09-28 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/platform.openai.com/list_invoices
 
 ## Input
 
-It takes no input.
+- `organization` (string, optional): Which API organization to use if OpenAI asks you to choose one (its name as shown). Defaults to the first one offered.
 
 ## Output
 
@@ -39,7 +39,7 @@ You do not need one. "List OpenAI API invoices" drives the real platform.openai.
 
 ### What information do I need to provide?
 
-Nothing. It takes no input.
+Optional: organization.
 
 ### What does it return?
 

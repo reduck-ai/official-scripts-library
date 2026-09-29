@@ -4,7 +4,7 @@ Log into the Cloudflare dashboard via the Google button. Dismisses the cookie ba
 
 - Site: cloudflare.com
 - Address: `reduck/cloudflare.com/login_with_google`
-- Updated: 2026-08-24 (v4)
+- Updated: 2026-09-28 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -45,7 +45,7 @@ No. It only uses pages of cloudflare.com that are reachable without signing in.
 
 ### Does it change anything on cloudflare.com, or only read data?
 
-It makes changes on cloudflare.com, like sending, posting or booking something.
+It makes changes on cloudflare.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

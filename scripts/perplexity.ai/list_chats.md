@@ -4,7 +4,7 @@ Automatically list Perplexity chats on perplexity.ai. List your recent Perplexit
 
 - Site: perplexity.ai
 - Address: `reduck/perplexity.ai/list_chats`
-- Updated: 2026-08-25 (v1)
+- Updated: 2026-09-28 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

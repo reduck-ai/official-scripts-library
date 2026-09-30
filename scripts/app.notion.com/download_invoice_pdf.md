@@ -1,10 +1,10 @@
-# Download Notion invoice PDF
+# Notion API: download a Notion invoice PDF
 
-Automatically download Notion invoice PDF on app.notion.com. Download a Notion-hosted invoice as a PDF from its hosted_invoice_url (from list_invoices). Renders the page and returns the PDF bytes as base64 (decode + write it yourself) plus a filename — the script is sandboxed and can't write to disk directly.
+Automatically download a Notion invoice PDF on app.notion.com. An unofficial Notion API to download invoice PDFs, which Notion does not send by email. Download a Notion-hosted invoice as a PDF from its hosted_invoice_url (from app.notion.com/list_invoices). Renders the page and returns the PDF bytes as base64 (decode + write it yourself) plus a filename — the script is sandboxed and can't write to disk directly.
 
 - Site: app.notion.com
 - Address: `reduck/app.notion.com/download_invoice_pdf`
-- Updated: 2026-08-24 (v4)
+- Updated: 2026-09-29 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -27,17 +27,17 @@ npx @reduck-ai/cli@latest run --script reduck/app.notion.com/download_invoice_pd
 
 ## FAQ
 
-### What does "Download Notion invoice PDF" do?
+### What does "Notion API: download a Notion invoice PDF" do?
 
-Download a Notion-hosted invoice as a PDF from its hosted_invoice_url (from list_invoices). Renders the page and returns the PDF bytes as base64 (decode + write it yourself) plus a filename — the script is sandboxed and can't write to disk directly.
+An unofficial Notion API to download invoice PDFs, which Notion does not send by email. Download a Notion-hosted invoice as a PDF from its hosted_invoice_url (from app.notion.com/list_invoices). Renders the page and returns the PDF bytes as base64 (decode + write it yourself) plus a filename — the script is sandboxed and can't write to disk directly.
 
-### How do I automatically download Notion invoice PDF on app.notion.com?
+### How do I automatically download a Notion invoice PDF on app.notion.com?
 
 Ask an AI agent connected to Reduck to run reduck/app.notion.com/download_invoice_pdf, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/app.notion.com/download_invoice_pdf
 
-### Is there a app.notion.com API to download Notion invoice PDF?
+### Is there a app.notion.com API to download a Notion invoice PDF?
 
-You do not need one. "Download Notion invoice PDF" drives the real app.notion.com pages in a browser, so it works whether or not app.notion.com offers an API for this.
+You do not need one. "Notion API: download a Notion invoice PDF" drives the real app.notion.com pages in a browser, so it works whether or not app.notion.com offers an API for this.
 
 ### What information do I need to provide?
 

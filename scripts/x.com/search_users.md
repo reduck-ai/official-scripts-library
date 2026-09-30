@@ -1,10 +1,10 @@
-# Search X users
+# Search X (Twitter) users by keyword, with bio and follower counts
 
-Automatically search X users on x.com. Search X for accounts by keyword (the People tab). Returns per account: user_id, handle, name, followers, following, tweets, verified, location, website, bio.
+Automatically search X (Twitter) users by keyword, with bio and follower counts on x.com. Search X for accounts by keyword (the People tab). Returns per account: user_id, handle, name, followers, following, tweets, verified, location, website, bio.
 
 - Site: x.com
 - Address: `reduck/x.com/search_users`
-- Updated: 2026-09-03 (v1)
+- Updated: 2026-09-29 (v1)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -28,17 +28,17 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/search_users
 
 ## FAQ
 
-### What does "Search X users" do?
+### What does "Search X (Twitter) users by keyword, with bio and follower counts" do?
 
 Search X for accounts by keyword (the People tab). Returns per account: user_id, handle, name, followers, following, tweets, verified, location, website, bio.
 
-### How do I automatically search X users on x.com?
+### How do I automatically search X (Twitter) users by keyword, with bio and follower counts on x.com?
 
 Ask an AI agent connected to Reduck to run reduck/x.com/search_users, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/x.com/search_users
 
-### Is there a x.com API to search X users?
+### Is there a x.com API to search X (Twitter) users by keyword, with bio and follower counts?
 
-You do not need one. "Search X users" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
+You do not need one. "Search X (Twitter) users by keyword, with bio and follower counts" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
 
 ### What information do I need to provide?
 

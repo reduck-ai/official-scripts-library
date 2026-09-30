@@ -1,10 +1,10 @@
-# Get X mentions
+# X (Twitter) mentions API: read the tweets that mention you
 
-Automatically get X mentions on x.com. List recent tweets mentioning the logged-in account (the Notifications > Mentions tab). Returns per tweet a canonical record: id, url, author {id, handle, name}, text, created_at, lang, likes, retweets, replies, quotes, bookmarks, views, is_retweet, is_quote, and in_reply_to {id, author_handle} (null unless the mention is a reply). Scrolls until count is met or the list dries up.
+Automatically read the tweets that mention you on x.com. List recent tweets mentioning the logged-in account (the Notifications > Mentions tab). Returns per tweet a canonical record: id, url, author {id, handle, name}, text, created_at, lang, likes, retweets, replies, quotes, bookmarks, views, is_retweet, is_quote, and in_reply_to {id, author_handle} (null unless the mention is a reply). Scrolls until count is met or the list dries up.
 
 - Site: x.com
 - Address: `reduck/x.com/get_mentions`
-- Updated: 2026-09-03 (v4)
+- Updated: 2026-09-29 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -26,17 +26,17 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/get_mentions
 
 ## FAQ
 
-### What does "Get X mentions" do?
+### What does "X (Twitter) mentions API: read the tweets that mention you" do?
 
 List recent tweets mentioning the logged-in account (the Notifications > Mentions tab). Returns per tweet a canonical record: id, url, author {id, handle, name}, text, created_at, lang, likes, retweets, replies, quotes, bookmarks, views, is_retweet, is_quote, and in_reply_to {id, author_handle} (null unless the mention is a reply). Scrolls until count is met or the list dries up.
 
-### How do I automatically get X mentions on x.com?
+### How do I automatically read the tweets that mention you on x.com?
 
 Ask an AI agent connected to Reduck to run reduck/x.com/get_mentions, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/x.com/get_mentions
 
-### Is there a x.com API to get X mentions?
+### Is there a x.com API to read the tweets that mention you?
 
-You do not need one. "Get X mentions" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
+You do not need one. "X (Twitter) mentions API: read the tweets that mention you" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
 
 ### What information do I need to provide?
 

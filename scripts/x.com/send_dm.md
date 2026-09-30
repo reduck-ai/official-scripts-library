@@ -1,10 +1,10 @@
-# Send X DM
+# Send an X (Twitter) DM from an AI agent
 
-Automatically send X DM on x.com. Send a direct message to an X user, addressed by handle. Returns the recipient, a sent flag and conversation_id. Delivery is confirmed by X's own send mutation returning HTTP 200, not by reading the DOM. conversation_id is null for a brand-new DM and for a DM to your own account (the compose dialog renders no existing-conversation cell to read the recipient id from) — a null there does not mean the send failed. A fresh session with no stored encryption keys may need the 4-digit E2E pin.
+Automatically send an X (Twitter) DM from an AI agent on x.com. Send a direct message to an X user, addressed by handle. Returns the recipient, a sent flag and conversation_id. Delivery is confirmed by X's own send mutation returning HTTP 200, not by reading the DOM. conversation_id is null for a brand-new DM and for a DM to your own account (the compose dialog renders no existing-conversation cell to read the recipient id from) — a null there does not mean the send failed. A fresh session with no stored encryption keys may need the 4-digit E2E pin.
 
 - Site: x.com
 - Address: `reduck/x.com/send_dm`
-- Updated: 2026-09-02 (v5)
+- Updated: 2026-09-29 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,17 +29,17 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/send_dm
 
 ## FAQ
 
-### What does "Send X DM" do?
+### What does "Send an X (Twitter) DM from an AI agent" do?
 
 Send a direct message to an X user, addressed by handle. Returns the recipient, a sent flag and conversation_id. Delivery is confirmed by X's own send mutation returning HTTP 200, not by reading the DOM. conversation_id is null for a brand-new DM and for a DM to your own account (the compose dialog renders no existing-conversation cell to read the recipient id from) — a null there does not mean the send failed. A fresh session with no stored encryption keys may need the 4-digit E2E pin.
 
-### How do I automatically send X DM on x.com?
+### How do I automatically send an X (Twitter) DM from an AI agent on x.com?
 
 Ask an AI agent connected to Reduck to run reduck/x.com/send_dm, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/x.com/send_dm
 
-### Is there a x.com API to send X DM?
+### Is there a x.com API to send an X (Twitter) DM from an AI agent?
 
-You do not need one. "Send X DM" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
+You do not need one. "Send an X (Twitter) DM from an AI agent" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
 
 ### What information do I need to provide?
 
@@ -55,7 +55,7 @@ Yes. It acts as you on x.com: on your own Chrome it reuses your session, and on 
 
 ### Does it change anything on x.com, or only read data?
 
-It makes changes on x.com, like sending, posting or booking something.
+It makes changes on x.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

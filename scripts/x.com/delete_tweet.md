@@ -1,10 +1,10 @@
-# Delete tweet
+# Delete a tweet on X (Twitter) from an AI agent
 
-Automatically delete tweet on x.com. Delete one of your own tweets given its URL. Returns the deleted tweet id and a deleted flag.
+Automatically delete a tweet on X (Twitter) from an AI agent on x.com. Delete one of your own tweets given its URL. Returns the deleted tweet id and a deleted flag.
 
 - Site: x.com
 - Address: `reduck/x.com/delete_tweet`
-- Updated: 2026-08-26 (v6)
+- Updated: 2026-09-29 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -28,17 +28,17 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/delete_tweet
 
 ## FAQ
 
-### What does "Delete tweet" do?
+### What does "Delete a tweet on X (Twitter) from an AI agent" do?
 
 Delete one of your own tweets given its URL. Returns the deleted tweet id and a deleted flag.
 
-### How do I automatically delete tweet on x.com?
+### How do I automatically delete a tweet on X (Twitter) from an AI agent on x.com?
 
 Ask an AI agent connected to Reduck to run reduck/x.com/delete_tweet, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/x.com/delete_tweet
 
-### Is there a x.com API to delete tweet?
+### Is there a x.com API to delete a tweet on X (Twitter) from an AI agent?
 
-You do not need one. "Delete tweet" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
+You do not need one. "Delete a tweet on X (Twitter) from an AI agent" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
 
 ### What information do I need to provide?
 
@@ -54,7 +54,7 @@ Yes. It acts as you on x.com: on your own Chrome it reuses your session, and on 
 
 ### Does it change anything on x.com, or only read data?
 
-It makes changes on x.com, like sending, posting or booking something.
+It makes changes on x.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

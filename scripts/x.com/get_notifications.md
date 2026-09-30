@@ -1,10 +1,10 @@
-# Get X notifications
+# Read your X (Twitter) notifications
 
-Automatically get X notifications on x.com. List the logged-in account's Notifications > All tab (not just mentions) — follows, likes, retweets, replies and other notification types X surfaces there. Returns per notification: id, type (a stable X-internal event key, e.g. users_followed_you), icon, text (the rendered notification sentence), url (the notification's target link, if any), timestamp_ms, and users (the accounts referenced in the notification text, with id/handle/name). Scrolls until count is met or the feed dries up.
+Automatically read your X (Twitter) notifications on x.com. List the logged-in account's Notifications > All tab (not just mentions) — follows, likes, retweets, replies and other notification types X surfaces there. Returns per notification: id, type (a stable X-internal event key, e.g. users_followed_you), icon, text (the rendered notification sentence), url (the notification's target link, if any), timestamp_ms, and users (the accounts referenced in the notification text, with id/handle/name). Scrolls until count is met or the feed dries up.
 
 - Site: x.com
 - Address: `reduck/x.com/get_notifications`
-- Updated: 2026-09-03 (v2)
+- Updated: 2026-09-29 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -26,17 +26,17 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/get_notifications
 
 ## FAQ
 
-### What does "Get X notifications" do?
+### What does "Read your X (Twitter) notifications" do?
 
 List the logged-in account's Notifications > All tab (not just mentions) — follows, likes, retweets, replies and other notification types X surfaces there. Returns per notification: id, type (a stable X-internal event key, e.g. users_followed_you), icon, text (the rendered notification sentence), url (the notification's target link, if any), timestamp_ms, and users (the accounts referenced in the notification text, with id/handle/name). Scrolls until count is met or the feed dries up.
 
-### How do I automatically get X notifications on x.com?
+### How do I automatically read your X (Twitter) notifications on x.com?
 
 Ask an AI agent connected to Reduck to run reduck/x.com/get_notifications, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/x.com/get_notifications
 
-### Is there a x.com API to get X notifications?
+### Is there a x.com API to read your X (Twitter) notifications?
 
-You do not need one. "Get X notifications" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
+You do not need one. "Read your X (Twitter) notifications" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
 
 ### What information do I need to provide?
 

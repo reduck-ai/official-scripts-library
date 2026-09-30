@@ -1,10 +1,10 @@
-# Get X trending topics
+# X (Twitter) trends: read trending topics on Explore
 
-Automatically get X trending topics on x.com. Read X's Explore trends for a given tab (trending, news, sports, entertainment or for-you), with each trend's rank, name, context line and post count where shown. Results are personalised to the logged-in account's location and interests, not a global chart.
+Automatically read trending topics on Explore on x.com. Read X's Explore trends for a given tab (trending, news, sports, entertainment or for-you), with each trend's rank, name, context line and post count where shown. Results are personalised to the logged-in account's location and interests, not a global chart.
 
 - Site: x.com
 - Address: `reduck/x.com/get_trending_topics`
-- Updated: 2026-09-03 (v3)
+- Updated: 2026-09-29 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -30,17 +30,17 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/get_trending_topics
 
 ## FAQ
 
-### What does "Get X trending topics" do?
+### What does "X (Twitter) trends: read trending topics on Explore" do?
 
 Read X's Explore trends for a given tab (trending, news, sports, entertainment or for-you), with each trend's rank, name, context line and post count where shown. Results are personalised to the logged-in account's location and interests, not a global chart.
 
-### How do I automatically get X trending topics on x.com?
+### How do I automatically read trending topics on Explore on x.com?
 
 Ask an AI agent connected to Reduck to run reduck/x.com/get_trending_topics, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/x.com/get_trending_topics
 
-### Is there a x.com API to get X trending topics?
+### Is there a x.com API to read trending topics on Explore?
 
-You do not need one. "Get X trending topics" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
+You do not need one. "X (Twitter) trends: read trending topics on Explore" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
 
 ### What information do I need to provide?
 

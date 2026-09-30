@@ -1,10 +1,10 @@
-# Get X DM messages
+# Read your X (Twitter) DMs
 
-Automatically get X DM messages on x.com. Fetch all messages in a DM conversation, addressed by handle or by conversation_id. Returns conversation_id, the other party's handle, and messages with text, sender, direction, date and time. If X shows the Enter Passcode screen, pass the 4-digit E2E pin.
+Automatically read your X (Twitter) DMs on x.com. Fetch all messages in a DM conversation, addressed by handle or by conversation_id. Returns conversation_id, the other party's handle, and messages with text, sender, direction, date and time. If X shows the Enter Passcode screen, pass the 4-digit E2E pin.
 
 - Site: x.com
 - Address: `reduck/x.com/get_messages`
-- Updated: 2026-09-25 (v6)
+- Updated: 2026-09-29 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -31,17 +31,17 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/get_messages
 
 ## FAQ
 
-### What does "Get X DM messages" do?
+### What does "Read your X (Twitter) DMs" do?
 
 Fetch all messages in a DM conversation, addressed by handle or by conversation_id. Returns conversation_id, the other party's handle, and messages with text, sender, direction, date and time. If X shows the Enter Passcode screen, pass the 4-digit E2E pin.
 
-### How do I automatically get X DM messages on x.com?
+### How do I automatically read your X (Twitter) DMs on x.com?
 
 Ask an AI agent connected to Reduck to run reduck/x.com/get_messages, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/x.com/get_messages
 
-### Is there a x.com API to get X DM messages?
+### Is there a x.com API to read your X (Twitter) DMs?
 
-You do not need one. "Get X DM messages" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
+You do not need one. "Read your X (Twitter) DMs" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
 
 ### What information do I need to provide?
 

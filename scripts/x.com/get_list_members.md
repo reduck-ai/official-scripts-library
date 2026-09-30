@@ -1,10 +1,10 @@
-# Get X list members
+# Get the members of an X (Twitter) List
 
-Automatically get X list members on x.com. List the accounts that belong to an X list, given the list's URL or id. Returns per account: user_id, handle, name, followers, following, tweets, verified, location, website, bio.
+Automatically get the members of an X (Twitter) List on x.com. List the accounts that belong to an X list, given the list's URL or id. Returns per account: user_id, handle, name, followers, following, tweets, verified, location, website, bio.
 
 - Site: x.com
 - Address: `reduck/x.com/get_list_members`
-- Updated: 2026-09-03 (v1)
+- Updated: 2026-09-29 (v1)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -28,17 +28,17 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/get_list_members
 
 ## FAQ
 
-### What does "Get X list members" do?
+### What does "Get the members of an X (Twitter) List" do?
 
 List the accounts that belong to an X list, given the list's URL or id. Returns per account: user_id, handle, name, followers, following, tweets, verified, location, website, bio.
 
-### How do I automatically get X list members on x.com?
+### How do I automatically get the members of an X (Twitter) List on x.com?
 
 Ask an AI agent connected to Reduck to run reduck/x.com/get_list_members, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/x.com/get_list_members
 
-### Is there a x.com API to get X list members?
+### Is there a x.com API to get the members of an X (Twitter) List?
 
-You do not need one. "Get X list members" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
+You do not need one. "Get the members of an X (Twitter) List" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
 
 ### What information do I need to provide?
 

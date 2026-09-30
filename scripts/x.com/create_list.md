@@ -1,10 +1,10 @@
-# Create X List
+# Create an X (Twitter) List
 
-Automatically create X List on x.com. Creates a new X List with a name, optional description, and public/private visibility.
+Automatically create an X (Twitter) List on x.com. Create an X (Twitter) List with a name (25 characters at most), an optional description (100) and public or private visibility. Returns the new list_id, its url, the name, the description and whether it is private. Add accounts to it with add_to_list.
 
 - Site: x.com
 - Address: `reduck/x.com/create_list`
-- Updated: 2026-09-08 (v6)
+- Updated: 2026-09-29 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -31,17 +31,17 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/create_list
 
 ## FAQ
 
-### What does "Create X List" do?
+### What does "Create an X (Twitter) List" do?
 
-Creates a new X List with a name, optional description, and public/private visibility.
+Create an X (Twitter) List with a name (25 characters at most), an optional description (100) and public or private visibility. Returns the new list_id, its url, the name, the description and whether it is private. Add accounts to it with add_to_list.
 
-### How do I automatically create X List on x.com?
+### How do I automatically create an X (Twitter) List on x.com?
 
 Ask an AI agent connected to Reduck to run reduck/x.com/create_list, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/x.com/create_list
 
-### Is there a x.com API to create X List?
+### Is there a x.com API to create an X (Twitter) List?
 
-You do not need one. "Create X List" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
+You do not need one. "Create an X (Twitter) List" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
 
 ### What information do I need to provide?
 
@@ -57,7 +57,7 @@ Yes. It acts as you on x.com: on your own Chrome it reuses your session, and on 
 
 ### Does it change anything on x.com, or only read data?
 
-It makes changes on x.com, like sending, posting or booking something.
+It makes changes on x.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

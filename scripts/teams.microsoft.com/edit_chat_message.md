@@ -4,7 +4,7 @@ Automatically edit Chat Message on teams.microsoft.com. Edit one of your own pre
 
 - Site: teams.microsoft.com
 - Address: `reduck/teams.microsoft.com/edit_chat_message`
-- Updated: 2026-09-17 (v12)
+- Updated: 2026-09-29 (v13)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/teams.microsoft.com/edit_chat_mess
 
 ## Input
 
-- `mid` (string, required): Message id of your own message to edit — an opaque string, taken verbatim from send_chat_message's output or get_chat_messages. Two formats coexist: older messages carry a 13-digit epoch-ms id (e.g. "1788513273902"), messages sent from mid-September 2026 onward carry a 19-digit id (e.g. "1325909771129090295") that is not a timestamp. Never construct, parse or validate a mid by digit count or as a date; pass through exactly what you read.
+- `mid` (string, required): Message id of your own message to edit, taken verbatim from get_chat_messages for this chat. Do not use the id returned by send_chat_message: it is not the id Teams stores for the message, so it cannot be found here. The id is an opaque string (older messages carry 13 digits, newer ones 19); never construct or parse it, pass through exactly what get_chat_messages returned.
 - `newText` (string, required): Replacement text for the message.
 - `contactName` (string, required): Display name of the person whose 1:1 chat to open, as it appears in Teams (e.g. "April Deere").
 
@@ -55,7 +55,7 @@ Yes. It acts as you on teams.microsoft.com: on your own Chrome it reuses your se
 
 ### Does it change anything on teams.microsoft.com, or only read data?
 
-It makes changes on teams.microsoft.com, like sending, posting or booking something.
+It makes changes on teams.microsoft.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

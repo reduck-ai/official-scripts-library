@@ -4,7 +4,7 @@ Log into the Mistral admin console (admin.mistral.ai) with Google SSO, handling 
 
 - Site: admin.mistral.ai
 - Address: `reduck/admin.mistral.ai/login_with_google`
-- Updated: 2026-08-28 (v4)
+- Updated: 2026-09-29 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -45,7 +45,7 @@ Yes. It acts as you on admin.mistral.ai: on your own Chrome it reuses your sessi
 
 ### Does it change anything on admin.mistral.ai, or only read data?
 
-It makes changes on admin.mistral.ai, like sending, posting or booking something.
+It makes changes on admin.mistral.ai, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

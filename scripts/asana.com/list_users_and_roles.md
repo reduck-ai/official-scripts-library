@@ -4,7 +4,7 @@ Automatically list Asana team members and roles on asana.com. List a team's memb
 
 - Site: asana.com
 - Address: `reduck/asana.com/list_users_and_roles`
-- Updated: 2026-08-20 (v5)
+- Updated: 2026-09-29 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

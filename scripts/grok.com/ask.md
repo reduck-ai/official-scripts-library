@@ -4,7 +4,7 @@ Automatically ask Grok on grok.com. Open a new Grok conversation, send one quest
 
 - Site: grok.com
 - Address: `reduck/grok.com/ask`
-- Updated: 2026-08-27 (v5)
+- Updated: 2026-09-29 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -53,7 +53,7 @@ Yes. It acts as you on grok.com: on your own Chrome it reuses your session, and 
 
 ### Does it change anything on grok.com, or only read data?
 
-It makes changes on grok.com, like sending, posting or booking something.
+It makes changes on grok.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

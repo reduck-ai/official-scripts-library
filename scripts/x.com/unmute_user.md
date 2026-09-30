@@ -1,10 +1,10 @@
-# Unmute X user
+# Unmute an account on X (Twitter)
 
-Automatically unmute X user on x.com. Unmute an X user by handle. Accounts that aren't muted are reported rather than erroring. Returns handle, muted, was_muted.
+Automatically unmute an account on X (Twitter) on x.com. Unmute an X user by handle. Accounts that aren't muted are reported rather than erroring. Returns handle, muted, was_muted.
 
 - Site: x.com
 - Address: `reduck/x.com/unmute_user`
-- Updated: 2026-09-03 (v5)
+- Updated: 2026-09-29 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,17 +29,17 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/unmute_user
 
 ## FAQ
 
-### What does "Unmute X user" do?
+### What does "Unmute an account on X (Twitter)" do?
 
 Unmute an X user by handle. Accounts that aren't muted are reported rather than erroring. Returns handle, muted, was_muted.
 
-### How do I automatically unmute X user on x.com?
+### How do I automatically unmute an account on X (Twitter) on x.com?
 
 Ask an AI agent connected to Reduck to run reduck/x.com/unmute_user, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/x.com/unmute_user
 
-### Is there a x.com API to unmute X user?
+### Is there a x.com API to unmute an account on X (Twitter)?
 
-You do not need one. "Unmute X user" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
+You do not need one. "Unmute an account on X (Twitter)" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
 
 ### What information do I need to provide?
 
@@ -55,7 +55,7 @@ Yes. It acts as you on x.com: on your own Chrome it reuses your session, and on 
 
 ### Does it change anything on x.com, or only read data?
 
-It makes changes on x.com, like sending, posting or booking something.
+It makes changes on x.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

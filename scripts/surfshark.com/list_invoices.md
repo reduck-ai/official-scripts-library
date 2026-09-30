@@ -1,10 +1,10 @@
 # List Surfshark invoices/receipts
 
-Automatically list Surfshark invoices/receipts on surfshark.com. List and download Surfshark payment receipts from your account's subscription payments page. Returns total and invoices (purchase, date, amount, status, filename, PDF content); each successful payment's receipt PDF is included as base64, while cancelled or failed payments have none and are skipped. Works regardless of the account's display language.
+Automatically list Surfshark invoices/receipts on surfshark.com. List Surfshark payment receipts from your account's subscription payments page. Returns total and invoices (id, purchase, date, amount, status) — metadata only. Feed a row's id to surfshark.com/download_invoice to get that receipt's PDF. Works regardless of the account's display language.
 
 - Site: surfshark.com
 - Address: `reduck/surfshark.com/list_invoices`
-- Updated: 2026-08-21 (v9)
+- Updated: 2026-09-29 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -28,7 +28,7 @@ It takes no input.
 
 ### What does "List Surfshark invoices/receipts" do?
 
-List and download Surfshark payment receipts from your account's subscription payments page. Returns total and invoices (purchase, date, amount, status, filename, PDF content); each successful payment's receipt PDF is included as base64, while cancelled or failed payments have none and are skipped. Works regardless of the account's display language.
+List Surfshark payment receipts from your account's subscription payments page. Returns total and invoices (id, purchase, date, amount, status) — metadata only. Feed a row's id to surfshark.com/download_invoice to get that receipt's PDF. Works regardless of the account's display language.
 
 ### How do I automatically list Surfshark invoices/receipts on surfshark.com?
 

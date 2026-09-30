@@ -1,10 +1,10 @@
-# Switch X display language
+# Change your X (Twitter) display language
 
-Automatically switch X display language on x.com. Change the display language for the signed-in X (Twitter) account, under Settings > Accessibility, display, and languages > Languages. Takes an X locale code (e.g. fr, de, en, it, es, en-gb, zh-cn) and applies it immediately — the account's interface language changes account-wide until switched again. This only affects X's own UI text (menus, buttons), not the language of tweets in your timeline.
+Automatically change your X (Twitter) display language on x.com. Change the display language for the signed-in X (Twitter) account, under Settings > Accessibility, display, and languages > Languages. Takes an X locale code (e.g. fr, de, en, it, es, en-gb, zh-cn) and applies it immediately — the account's interface language changes account-wide until switched again. This only affects X's own UI text (menus, buttons), not the language of tweets in your timeline.
 
 - Site: x.com
 - Address: `reduck/x.com/switch_language`
-- Updated: 2026-08-26 (v3)
+- Updated: 2026-09-29 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -28,17 +28,17 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/switch_language
 
 ## FAQ
 
-### What does "Switch X display language" do?
+### What does "Change your X (Twitter) display language" do?
 
 Change the display language for the signed-in X (Twitter) account, under Settings > Accessibility, display, and languages > Languages. Takes an X locale code (e.g. fr, de, en, it, es, en-gb, zh-cn) and applies it immediately — the account's interface language changes account-wide until switched again. This only affects X's own UI text (menus, buttons), not the language of tweets in your timeline.
 
-### How do I automatically switch X display language on x.com?
+### How do I automatically change your X (Twitter) display language on x.com?
 
 Ask an AI agent connected to Reduck to run reduck/x.com/switch_language, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/x.com/switch_language
 
-### Is there a x.com API to switch X display language?
+### Is there a x.com API to change your X (Twitter) display language?
 
-You do not need one. "Switch X display language" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
+You do not need one. "Change your X (Twitter) display language" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
 
 ### What information do I need to provide?
 
@@ -54,7 +54,7 @@ Yes. It acts as you on x.com: on your own Chrome it reuses your session, and on 
 
 ### Does it change anything on x.com, or only read data?
 
-It makes changes on x.com, like sending, posting or booking something.
+It makes changes on x.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

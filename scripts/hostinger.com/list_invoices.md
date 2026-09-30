@@ -1,10 +1,10 @@
 # List Hostinger invoices
 
-Automatically list Hostinger invoices on hostinger.com. List Hostinger (hPanel) billing invoices from Billing > Payment history. Returns total plus each invoice's payment_id, invoice_id, service, paid_at, amount, filename, and the invoice PDF included as base64. Reads the Paid tab only (not Refund history).
+Automatically list Hostinger invoices on hostinger.com. List Hostinger (hPanel) billing invoices from Billing > Payment history. Returns total plus each invoice's payment_id, invoice_id, service, paid_at, amount and paymentSlug — metadata only. Feed a row's paymentSlug to hostinger.com/download_invoice to get that invoice's PDF. Reads the Paid tab only (not Refund history).
 
 - Site: hostinger.com
 - Address: `reduck/hostinger.com/list_invoices`
-- Updated: 2026-08-21 (v7)
+- Updated: 2026-09-29 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -28,7 +28,7 @@ It takes no input.
 
 ### What does "List Hostinger invoices" do?
 
-List Hostinger (hPanel) billing invoices from Billing > Payment history. Returns total plus each invoice's payment_id, invoice_id, service, paid_at, amount, filename, and the invoice PDF included as base64. Reads the Paid tab only (not Refund history).
+List Hostinger (hPanel) billing invoices from Billing > Payment history. Returns total plus each invoice's payment_id, invoice_id, service, paid_at, amount and paymentSlug — metadata only. Feed a row's paymentSlug to hostinger.com/download_invoice to get that invoice's PDF. Reads the Paid tab only (not Refund history).
 
 ### How do I automatically list Hostinger invoices on hostinger.com?
 

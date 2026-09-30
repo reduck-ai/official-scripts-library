@@ -1,10 +1,10 @@
-# Unretweet
+# Undo a retweet (repost) on X (Twitter)
 
-Automatically unretweet on x.com. Undo your repost of a tweet given its URL. Tweets that aren't currently reposted are reported rather than causing an error. Returns tweet_id, retweeted, was_retweeted.
+Undo your repost of a tweet given its URL. Tweets that aren't currently reposted are reported rather than causing an error. Returns tweet_id, retweeted, was_retweeted.
 
 - Site: x.com
 - Address: `reduck/x.com/unretweet`
-- Updated: 2026-09-03 (v2)
+- Updated: 2026-09-29 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,17 +29,9 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/unretweet
 
 ## FAQ
 
-### What does "Unretweet" do?
+### What does "Undo a retweet (repost) on X (Twitter)" do?
 
 Undo your repost of a tweet given its URL. Tweets that aren't currently reposted are reported rather than causing an error. Returns tweet_id, retweeted, was_retweeted.
-
-### How do I automatically unretweet on x.com?
-
-Ask an AI agent connected to Reduck to run reduck/x.com/unretweet, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/x.com/unretweet
-
-### Is there a x.com API to unretweet?
-
-You do not need one. "Unretweet" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
 
 ### What information do I need to provide?
 
@@ -55,7 +47,7 @@ Yes. It acts as you on x.com: on your own Chrome it reuses your session, and on 
 
 ### Does it change anything on x.com, or only read data?
 
-It makes changes on x.com, like sending, posting or booking something.
+It makes changes on x.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

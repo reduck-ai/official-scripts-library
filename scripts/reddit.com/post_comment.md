@@ -4,7 +4,7 @@ Automatically post Reddit comment on reddit.com. Post a top-level comment on a R
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/post_comment`
-- Updated: 2026-08-20 (v11)
+- Updated: 2026-09-29 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -59,7 +59,7 @@ Yes. It acts as you on reddit.com: on your own Chrome it reuses your session, an
 
 ### Does it change anything on reddit.com, or only read data?
 
-It makes changes on reddit.com, like sending, posting or booking something.
+It makes changes on reddit.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

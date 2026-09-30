@@ -4,7 +4,7 @@ Automatically get subreddit threads on reddit.com. List a subreddit's threads by
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/get_subreddit_threads`
-- Updated: 2026-09-11 (v12)
+- Updated: 2026-09-29 (v13)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -20,7 +20,7 @@ npx @reduck-ai/cli@latest run --script reduck/reddit.com/get_subreddit_threads
 - `subreddit` (string, required): Subreddit name, with or without the r/ prefix. Case-insensitive: Reddit redirects to the canonical casing (r/python -> r/Python) and the script follows it.
 - `sort` (string, optional): Reddit's native subreddit sort. "new" is chronological (supports `since`); best/hot/top/rising are ranked (use `limit`). Default new.
 - `time` (string, optional): Time window for sort:"top" only (default all). Rejected for other sorts.
-- `limit` (number, optional): Max number of threads to return (newest first). Defaults to 25 when `since` is not given. With `since` and no `limit`, the time window is the only bound. A maximum, not a guarantee: fewer matching threads returns what exists.
+- `limit` (number, optional): Max number of threads to return (newest first). With `since` and no `limit`, the time window is the only bound: every post in it is returned. With neither, 25. A maximum, not a guarantee: fewer matching threads returns what exists.
 - `since` (string, optional): sort:"new" only - how far back to go: ISO date ("2026-06-01") or shorthand ("24h", "7d", "2w"). Combine with `limit` to cap a time window.
 
 ## Output

@@ -4,7 +4,7 @@ Automatically search Paris departures by destination on parisaeroport.fr. List t
 
 - Site: parisaeroport.fr
 - Address: `reduck/parisaeroport.fr/search_departures`
-- Updated: 2026-08-03 (v4)
+- Updated: 2026-09-29 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/parisaeroport.fr/search_departures
 
 ## Input
 
-- `destination` (string, required): Free-text destination, e.g. 'Shanghai', 'London', 'New York'. Matched by the site's own typeahead at CITY level (also matches its French names, e.g. 'Londres'), so a multi-airport city returns flights to ALL its airports. To target one airport, filter the returned flights by arrivalIataCode (get the code from suggest_destinations).
+- `destination` (string, required): Destination city as the site names it, which is its French city name, e.g. 'Londres' (not 'London'), 'Shanghai', 'New York'. The site's typeahead matches only its own city names, so an English exonym like 'London' returns 0 flights. Matched at city level, so a multi-airport city returns flights to all its airports. To target one airport, filter the returned flights by arrivalIataCode (get the code from suggest_destinations).
 - `airport` (string, optional): Paris airport filter, applied server-side: 'cdg' (Paris-CDG), 'ory' (Paris-ORY), or 'all' (both).
 
 ## Output

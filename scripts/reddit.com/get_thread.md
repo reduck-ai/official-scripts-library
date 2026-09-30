@@ -4,7 +4,7 @@ Automatically get Reddit thread on reddit.com. Fetch a full Reddit thread from i
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/get_thread`
-- Updated: 2026-09-03 (v5)
+- Updated: 2026-09-29 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

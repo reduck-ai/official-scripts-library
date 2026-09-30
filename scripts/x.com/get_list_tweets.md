@@ -1,10 +1,10 @@
-# Get X list tweets
+# Read an X (Twitter) List's timeline
 
-Automatically get X list tweets on x.com. Read the timeline of an X list — the tweets from its member accounts, newest first, given the list's URL or id. Returns per tweet a canonical record: id, url, author {id, handle, name}, text, created_at, lang, likes, retweets, replies, quotes, bookmarks, views, is_retweet, is_quote.
+Automatically read an X (Twitter) List's timeline on x.com. Read the timeline of an X list — the tweets from its member accounts, newest first, given the list's URL or id. Returns per tweet a canonical record: id, url, author {id, handle, name}, text, created_at, lang, likes, retweets, replies, quotes, bookmarks, views, is_retweet, is_quote.
 
 - Site: x.com
 - Address: `reduck/x.com/get_list_tweets`
-- Updated: 2026-09-03 (v1)
+- Updated: 2026-09-29 (v1)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -28,17 +28,17 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/get_list_tweets
 
 ## FAQ
 
-### What does "Get X list tweets" do?
+### What does "Read an X (Twitter) List's timeline" do?
 
 Read the timeline of an X list — the tweets from its member accounts, newest first, given the list's URL or id. Returns per tweet a canonical record: id, url, author {id, handle, name}, text, created_at, lang, likes, retweets, replies, quotes, bookmarks, views, is_retweet, is_quote.
 
-### How do I automatically get X list tweets on x.com?
+### How do I automatically read an X (Twitter) List's timeline on x.com?
 
 Ask an AI agent connected to Reduck to run reduck/x.com/get_list_tweets, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/x.com/get_list_tweets
 
-### Is there a x.com API to get X list tweets?
+### Is there a x.com API to read an X (Twitter) List's timeline?
 
-You do not need one. "Get X list tweets" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
+You do not need one. "Read an X (Twitter) List's timeline" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
 
 ### What information do I need to provide?
 

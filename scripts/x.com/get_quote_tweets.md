@@ -1,10 +1,10 @@
-# Get X quote tweets
+# Get the quote tweets of a post on X (Twitter)
 
-Automatically get X quote tweets on x.com. List the tweets that quote-tweeted a given X post, by post URL, including each quoter's own commentary. Returns per tweet a canonical record: id, url, author {id, handle, name}, text, created_at, lang, likes, retweets, replies, quotes, bookmarks, views, is_retweet, is_quote.
+Automatically get the quote tweets of a post on X (Twitter) on x.com. List the tweets that quote-tweeted a given X post, by post URL, including each quoter's own commentary. Returns per tweet a canonical record: id, url, author {id, handle, name}, text, created_at, lang, likes, retweets, replies, quotes, bookmarks, views, is_retweet, is_quote.
 
 - Site: x.com
 - Address: `reduck/x.com/get_quote_tweets`
-- Updated: 2026-09-03 (v1)
+- Updated: 2026-09-29 (v1)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -28,17 +28,17 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/get_quote_tweets
 
 ## FAQ
 
-### What does "Get X quote tweets" do?
+### What does "Get the quote tweets of a post on X (Twitter)" do?
 
 List the tweets that quote-tweeted a given X post, by post URL, including each quoter's own commentary. Returns per tweet a canonical record: id, url, author {id, handle, name}, text, created_at, lang, likes, retweets, replies, quotes, bookmarks, views, is_retweet, is_quote.
 
-### How do I automatically get X quote tweets on x.com?
+### How do I automatically get the quote tweets of a post on X (Twitter) on x.com?
 
 Ask an AI agent connected to Reduck to run reduck/x.com/get_quote_tweets, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/x.com/get_quote_tweets
 
-### Is there a x.com API to get X quote tweets?
+### Is there a x.com API to get the quote tweets of a post on X (Twitter)?
 
-You do not need one. "Get X quote tweets" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
+You do not need one. "Get the quote tweets of a post on X (Twitter)" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
 
 ### What information do I need to provide?
 

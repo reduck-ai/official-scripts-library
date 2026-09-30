@@ -1,10 +1,10 @@
-# List Slack invoices
+# Slack API: list your Slack invoices and billing statements
 
-Automatically list Slack invoices on slack.com. List Slack billing statements from the workspace's admin billing history. Returns workspace, total and invoices (date, statement, billId, amount, status, description, pdfUrl) — metadata only. Feed a row's pdfUrl (or billId) to slack.com/download_invoice to fetch that statement's PDF. Requires a workspace billing admin; defaults to the primary workspace, or pass workspaceDomain (e.g. acme.slack.com).
+Automatically list your Slack invoices and billing statements on slack.com. An unofficial Slack API for billing invoices. List Slack billing statements from the workspace's admin billing history. Returns workspace, total and invoices (date, statement, billId, amount, status, description, pdfUrl) — metadata only. Feed a row's pdfUrl (or billId) to slack.com/download_invoice to fetch that statement's PDF. Requires a workspace billing admin; defaults to the primary workspace, or pass workspaceDomain (e.g. acme.slack.com).
 
 - Site: slack.com
 - Address: `reduck/slack.com/list_invoices`
-- Updated: 2026-08-21 (v7)
+- Updated: 2026-09-29 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -27,17 +27,17 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/list_invoices
 
 ## FAQ
 
-### What does "List Slack invoices" do?
+### What does "Slack API: list your Slack invoices and billing statements" do?
 
-List Slack billing statements from the workspace's admin billing history. Returns workspace, total and invoices (date, statement, billId, amount, status, description, pdfUrl) — metadata only. Feed a row's pdfUrl (or billId) to slack.com/download_invoice to fetch that statement's PDF. Requires a workspace billing admin; defaults to the primary workspace, or pass workspaceDomain (e.g. acme.slack.com).
+An unofficial Slack API for billing invoices. List Slack billing statements from the workspace's admin billing history. Returns workspace, total and invoices (date, statement, billId, amount, status, description, pdfUrl) — metadata only. Feed a row's pdfUrl (or billId) to slack.com/download_invoice to fetch that statement's PDF. Requires a workspace billing admin; defaults to the primary workspace, or pass workspaceDomain (e.g. acme.slack.com).
 
-### How do I automatically list Slack invoices on slack.com?
+### How do I automatically list your Slack invoices and billing statements on slack.com?
 
 Ask an AI agent connected to Reduck to run reduck/slack.com/list_invoices, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/slack.com/list_invoices
 
-### Is there a slack.com API to list Slack invoices?
+### Is there a slack.com API to list your Slack invoices and billing statements?
 
-You do not need one. "List Slack invoices" drives the real slack.com pages in a browser, so it works whether or not slack.com offers an API for this.
+You do not need one. "Slack API: list your Slack invoices and billing statements" drives the real slack.com pages in a browser, so it works whether or not slack.com offers an API for this.
 
 ### What information do I need to provide?
 

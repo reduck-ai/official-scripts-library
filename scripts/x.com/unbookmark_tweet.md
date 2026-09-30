@@ -1,10 +1,10 @@
-# Unbookmark tweet
+# Remove a bookmark from a tweet on X (Twitter)
 
-Automatically unbookmark tweet on x.com. Removes your bookmark from a tweet. Safe to run even if it's already removed — nothing happens if it wasn't bookmarked. Returns verification details so the action is auditable.
+Automatically remove a bookmark from a tweet on X (Twitter) on x.com. Remove your bookmark from a tweet on X (Twitter), given its URL. A tweet that is not bookmarked is reported, not an error. Returns tweet_id, bookmarked, was_bookmarked, verified_on_page (the page was read again and shows no bookmark) and account_used.
 
 - Site: x.com
 - Address: `reduck/x.com/unbookmark_tweet`
-- Updated: 2026-07-31 (v3)
+- Updated: 2026-09-29 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,17 +29,17 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/unbookmark_tweet
 
 ## FAQ
 
-### What does "Unbookmark tweet" do?
+### What does "Remove a bookmark from a tweet on X (Twitter)" do?
 
-Removes your bookmark from a tweet. Safe to run even if it's already removed — nothing happens if it wasn't bookmarked. Returns verification details so the action is auditable.
+Remove your bookmark from a tweet on X (Twitter), given its URL. A tweet that is not bookmarked is reported, not an error. Returns tweet_id, bookmarked, was_bookmarked, verified_on_page (the page was read again and shows no bookmark) and account_used.
 
-### How do I automatically unbookmark tweet on x.com?
+### How do I automatically remove a bookmark from a tweet on X (Twitter) on x.com?
 
 Ask an AI agent connected to Reduck to run reduck/x.com/unbookmark_tweet, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/x.com/unbookmark_tweet
 
-### Is there a x.com API to unbookmark tweet?
+### Is there a x.com API to remove a bookmark from a tweet on X (Twitter)?
 
-You do not need one. "Unbookmark tweet" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
+You do not need one. "Remove a bookmark from a tweet on X (Twitter)" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
 
 ### What information do I need to provide?
 
@@ -55,7 +55,7 @@ Yes. It acts as you on x.com: on your own Chrome it reuses your session, and on 
 
 ### Does it change anything on x.com, or only read data?
 
-It makes changes on x.com, like sending, posting or booking something.
+It makes changes on x.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

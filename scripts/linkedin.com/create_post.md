@@ -4,7 +4,7 @@ Automatically create post on linkedin.com. Publish a text post to your LinkedIn 
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/create_post`
-- Updated: 2026-09-22 (v52)
+- Updated: 2026-09-29 (v53)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -69,7 +69,7 @@ Yes. It acts as you on linkedin.com: on your own Chrome it reuses your session, 
 
 ### Does it change anything on linkedin.com, or only read data?
 
-It makes changes on linkedin.com, like sending, posting or booking something.
+It makes changes on linkedin.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

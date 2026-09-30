@@ -1,10 +1,10 @@
 # Create Instagram post
 
-Automatically create Instagram post on instagram.com. Publish a single-image Instagram feed post from an image URL, inline base64 bytes, or a local file path (image_path, which needs a CLI-run device). Drives the web composer (New post → crop → edit → caption → Share) and returns code, pk, url, caption. Supersedes create_post_from_file.
+Automatically create Instagram post on instagram.com. Publish an Instagram feed post, a single image or a carousel of up to 10, from an attached file, image URLs, or inline base64 bytes. Drives the web composer (New post, crop, edit, caption, Share) and returns code, pk, url and the caption Instagram recorded. dry_run stops just before Share. Supersedes create_post_from_file.
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/create_post`
-- Updated: 2026-09-22 (v19)
+- Updated: 2026-09-29 (v22)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -20,11 +20,10 @@ npx @reduck-ai/cli@latest run --script reduck/instagram.com/create_post
 - `caption` (string, optional): Post caption; empty for none. Max 2200 chars.
 - `dry_run` (boolean, optional): When true, the whole composer flow runs — the image is attached, cropped, the edit step passed and the caption typed — and then the run stops on the step before Share. Nothing is published, and code/url come back null with dry_run true. Use it to verify an image and caption are accepted without spending a real, irreversible public post.
 - `image_url` (string, optional): Direct URL of a single image to post (jpeg/png/gif/webp). Fetched by the browser itself, so it works on devices with no outbound network of their own. No size ceiling and no device requirement. Equivalent to passing a 1-item image_urls.
-- `image_path` (string, optional): Path to a single local image file, attached straight from disk by the browser's own low-level file-attach mechanism — no encoding, no size ceiling. Resolved on the machine running the browser, and only works on a device whose browser permits attaching local files directly. An extension-paired browser does not: it refuses with "Not allowed". Absolute paths only. Equivalent to a 1-item images_path.
+- `attachment` (string, optional): A single image to post, bound through the platform's own file channel and handed straight to the composer's file input. Carries the bytes outside the argument payload, so unlike image_base64 it is not capped near 72KB, and it works on every device. One image only — for a carousel use image_urls or images_base64.
 - `image_urls` (array, optional): 1-10 direct image URLs, in order. A single URL publishes a normal post; 2 or more publish a carousel. Each is fetched by the browser itself, so this works on devices with no outbound network of their own. No size ceiling and no device requirement — the general answer, and the only practical route for a carousel of real photos.
-- `images_path` (array, optional): 1-10 paths to local images, in order, attached straight from disk by the browser's own low-level file-attach mechanism. Only works on a device whose browser permits attaching local files directly; an extension-paired browser does not. Absolute paths only. Takes precedence over image_urls.
-- `image_base64` (string, optional): A single image's bytes as base64 (a bare payload or a full data: URL), decoded in-page — needs no network and no local file access. Capped at ~96KB of base64, i.e. about a 72KB file. Line-wrapped output, base64url and missing padding are all accepted. Equivalent to a 1-item images_base64.
-- `images_base64` (array, optional): 1-10 images as base64 (bare payloads or full data: URLs), in order, decoded in-page. Capped across all images combined at ~96KB of base64 total. Real photos will not fit for more than one — use image_urls for a real carousel. Takes precedence over images_path and image_urls.
+- `image_base64` (string, optional): A single image's bytes as base64 (a bare payload or a full data: URL), decoded in-page. Capped at ~96KB of base64, i.e. about a 72KB file. Prefer the `attachment` file input, which has no such cap. Line-wrapped output, base64url and missing padding are all accepted. Equivalent to a 1-item images_base64.
+- `images_base64` (array, optional): 1-10 images as base64 (bare payloads or full data: URLs), in order, decoded in-page. Capped across all images combined at ~96KB of base64 total. Real photos will not fit for more than one — use image_urls for a real carousel. Takes precedence over image_urls.
 
 ## Output
 
@@ -41,7 +40,7 @@ npx @reduck-ai/cli@latest run --script reduck/instagram.com/create_post
 
 ### What does "Create Instagram post" do?
 
-Publish a single-image Instagram feed post from an image URL, inline base64 bytes, or a local file path (image_path, which needs a CLI-run device). Drives the web composer (New post → crop → edit → caption → Share) and returns code, pk, url, caption. Supersedes create_post_from_file.
+Publish an Instagram feed post, a single image or a carousel of up to 10, from an attached file, image URLs, or inline base64 bytes. Drives the web composer (New post, crop, edit, caption, Share) and returns code, pk, url and the caption Instagram recorded. dry_run stops just before Share. Supersedes create_post_from_file.
 
 ### How do I automatically create Instagram post on instagram.com?
 
@@ -53,7 +52,7 @@ You do not need one. "Create Instagram post" drives the real instagram.com pages
 
 ### What information do I need to provide?
 
-Optional: caption, dry_run, image_url, image_path, image_urls, images_path, image_base64, images_base64.
+Optional: caption, dry_run, image_url, attachment, image_urls, image_base64, images_base64.
 
 ### What does it return?
 
@@ -65,7 +64,7 @@ Yes. It acts as you on instagram.com: on your own Chrome it reuses your session,
 
 ### Does it change anything on instagram.com, or only read data?
 
-It makes changes on instagram.com, like sending, posting or booking something.
+It makes changes on instagram.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

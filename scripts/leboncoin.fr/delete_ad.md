@@ -4,7 +4,7 @@ Automatically delete a leboncoin classified ad on leboncoin.fr. Delete one of yo
 
 - Site: leboncoin.fr
 - Address: `reduck/leboncoin.fr/delete_ad`
-- Updated: 2026-09-21 (v1)
+- Updated: 2026-09-29 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -54,7 +54,7 @@ Yes. It acts as you on leboncoin.fr: on your own Chrome it reuses your session, 
 
 ### Does it change anything on leboncoin.fr, or only read data?
 
-It makes changes on leboncoin.fr, like sending, posting or booking something.
+It makes changes on leboncoin.fr, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

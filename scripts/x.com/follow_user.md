@@ -1,10 +1,10 @@
-# Follow X user
+# Follow an account on X (Twitter) from an AI agent
 
-Automatically follow X user on x.com. Follow an X user. Returns handle, was_following, is_following, status. Already-following accounts are reported rather than re-followed; errors on missing or suspended accounts.
+Automatically follow an account on X (Twitter) from an AI agent on x.com. Follow an X user. Returns handle, was_following, is_following, status. Already-following accounts are reported rather than re-followed; errors on missing or suspended accounts.
 
 - Site: x.com
 - Address: `reduck/x.com/follow_user`
-- Updated: 2026-09-03 (v13)
+- Updated: 2026-09-29 (v13)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -30,17 +30,17 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/follow_user
 
 ## FAQ
 
-### What does "Follow X user" do?
+### What does "Follow an account on X (Twitter) from an AI agent" do?
 
 Follow an X user. Returns handle, was_following, is_following, status. Already-following accounts are reported rather than re-followed; errors on missing or suspended accounts.
 
-### How do I automatically follow X user on x.com?
+### How do I automatically follow an account on X (Twitter) from an AI agent on x.com?
 
 Ask an AI agent connected to Reduck to run reduck/x.com/follow_user, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/x.com/follow_user
 
-### Is there a x.com API to follow X user?
+### Is there a x.com API to follow an account on X (Twitter) from an AI agent?
 
-You do not need one. "Follow X user" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
+You do not need one. "Follow an account on X (Twitter) from an AI agent" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
 
 ### What information do I need to provide?
 
@@ -56,7 +56,7 @@ Yes. It acts as you on x.com: on your own Chrome it reuses your session, and on 
 
 ### Does it change anything on x.com, or only read data?
 
-It makes changes on x.com, like sending, posting or booking something.
+It makes changes on x.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

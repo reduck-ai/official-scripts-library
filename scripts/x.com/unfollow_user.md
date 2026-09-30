@@ -1,10 +1,10 @@
-# Unfollow X user
+# Unfollow an account on X (Twitter) from an AI agent
 
-Automatically unfollow X user on x.com. Unfollow an X user. Returns handle, was_following, is_following, status. Accounts you're not following are reported rather than erroring; errors on missing or suspended accounts.
+Automatically unfollow an account on X (Twitter) from an AI agent on x.com. Unfollow an X user. Returns handle, was_following, is_following, status. Accounts you're not following are reported rather than erroring; errors on missing or suspended accounts.
 
 - Site: x.com
 - Address: `reduck/x.com/unfollow_user`
-- Updated: 2026-09-03 (v9)
+- Updated: 2026-09-29 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -30,17 +30,17 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/unfollow_user
 
 ## FAQ
 
-### What does "Unfollow X user" do?
+### What does "Unfollow an account on X (Twitter) from an AI agent" do?
 
 Unfollow an X user. Returns handle, was_following, is_following, status. Accounts you're not following are reported rather than erroring; errors on missing or suspended accounts.
 
-### How do I automatically unfollow X user on x.com?
+### How do I automatically unfollow an account on X (Twitter) from an AI agent on x.com?
 
 Ask an AI agent connected to Reduck to run reduck/x.com/unfollow_user, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/x.com/unfollow_user
 
-### Is there a x.com API to unfollow X user?
+### Is there a x.com API to unfollow an account on X (Twitter) from an AI agent?
 
-You do not need one. "Unfollow X user" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
+You do not need one. "Unfollow an account on X (Twitter) from an AI agent" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
 
 ### What information do I need to provide?
 
@@ -56,7 +56,7 @@ Yes. It acts as you on x.com: on your own Chrome it reuses your session, and on 
 
 ### Does it change anything on x.com, or only read data?
 
-It makes changes on x.com, like sending, posting or booking something.
+It makes changes on x.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

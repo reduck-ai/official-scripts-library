@@ -4,7 +4,7 @@ Log into Apollo.io with Sign in with Google, handling the Google account chooser
 
 - Site: apollo.io
 - Address: `reduck/apollo.io/login_with_google`
-- Updated: 2026-09-25 (v1)
+- Updated: 2026-09-29 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -46,7 +46,7 @@ Yes. It acts as you on apollo.io: on your own Chrome it reuses your session, and
 
 ### Does it change anything on apollo.io, or only read data?
 
-It makes changes on apollo.io, like sending, posting or booking something.
+It makes changes on apollo.io, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

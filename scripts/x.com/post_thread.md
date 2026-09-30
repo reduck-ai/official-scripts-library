@@ -1,10 +1,10 @@
-# Post X tweet thread
+# Post an X (Twitter) thread from an AI agent
 
-Automatically post X tweet thread on x.com. Post a thread (tweetstorm) of N linked tweets in one go via the native multi-post composer. Returns the posted tweets in order with their ids/urls and the thread's root url.
+Automatically post an X (Twitter) thread from an AI agent on x.com. Post a thread (tweetstorm) of N linked tweets in one go via the native multi-post composer. Returns the posted tweets in order with their ids/urls and the thread's root url.
 
 - Site: x.com
 - Address: `reduck/x.com/post_thread`
-- Updated: 2026-08-26 (v18)
+- Updated: 2026-09-29 (v18)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -30,17 +30,17 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/post_thread
 
 ## FAQ
 
-### What does "Post X tweet thread" do?
+### What does "Post an X (Twitter) thread from an AI agent" do?
 
 Post a thread (tweetstorm) of N linked tweets in one go via the native multi-post composer. Returns the posted tweets in order with their ids/urls and the thread's root url.
 
-### How do I automatically post X tweet thread on x.com?
+### How do I automatically post an X (Twitter) thread from an AI agent on x.com?
 
 Ask an AI agent connected to Reduck to run reduck/x.com/post_thread, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/x.com/post_thread
 
-### Is there a x.com API to post X tweet thread?
+### Is there a x.com API to post an X (Twitter) thread from an AI agent?
 
-You do not need one. "Post X tweet thread" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
+You do not need one. "Post an X (Twitter) thread from an AI agent" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
 
 ### What information do I need to provide?
 
@@ -56,7 +56,7 @@ Yes. It acts as you on x.com: on your own Chrome it reuses your session, and on 
 
 ### Does it change anything on x.com, or only read data?
 
-It makes changes on x.com, like sending, posting or booking something.
+It makes changes on x.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

@@ -1,10 +1,10 @@
-# Add to X List
+# Add an account to an X (Twitter) List
 
-Automatically add to X List on x.com. Adds an account to one of this account's X Lists, by exact handle.
+Automatically add an account to an X (Twitter) List on x.com. Add an account to one of your X (Twitter) Lists, by its exact handle and the List's id (from x.com/i/lists/<id>, or from create_list). An account already in the List is reported, not added twice. Returns list_id, handle, already_member, and the List's member count before and after.
 
 - Site: x.com
 - Address: `reduck/x.com/add_to_list`
-- Updated: 2026-09-08 (v15)
+- Updated: 2026-09-29 (v15)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -30,17 +30,17 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/add_to_list
 
 ## FAQ
 
-### What does "Add to X List" do?
+### What does "Add an account to an X (Twitter) List" do?
 
-Adds an account to one of this account's X Lists, by exact handle.
+Add an account to one of your X (Twitter) Lists, by its exact handle and the List's id (from x.com/i/lists/<id>, or from create_list). An account already in the List is reported, not added twice. Returns list_id, handle, already_member, and the List's member count before and after.
 
-### How do I automatically add to X List on x.com?
+### How do I automatically add an account to an X (Twitter) List on x.com?
 
 Ask an AI agent connected to Reduck to run reduck/x.com/add_to_list, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/x.com/add_to_list
 
-### Is there a x.com API to add to X List?
+### Is there a x.com API to add an account to an X (Twitter) List?
 
-You do not need one. "Add to X List" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
+You do not need one. "Add an account to an X (Twitter) List" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
 
 ### What information do I need to provide?
 
@@ -56,7 +56,7 @@ Yes. It acts as you on x.com: on your own Chrome it reuses your session, and on 
 
 ### Does it change anything on x.com, or only read data?
 
-It makes changes on x.com, like sending, posting or booking something.
+It makes changes on x.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

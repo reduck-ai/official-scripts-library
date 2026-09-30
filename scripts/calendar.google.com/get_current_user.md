@@ -4,7 +4,7 @@ Automatically get Current Calendar User on calendar.google.com. Report which Goo
 
 - Site: calendar.google.com
 - Address: `reduck/calendar.google.com/get_current_user`
-- Updated: 2026-09-28 (v2)
+- Updated: 2026-09-29 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

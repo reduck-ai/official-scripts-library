@@ -1,10 +1,10 @@
-# Get post reposters
+# See who reposted (retweeted) a post on X (Twitter)
 
-Automatically get post reposters on x.com. List the accounts that reposted (retweeted) an X post, by post URL. Returns per account: user_id, handle, name, followers, following, tweets, verified, location, website, bio. X returns a sample of reposters, not the full set: high-repost posts cap out a few hundred deep.
+List the accounts that reposted (retweeted) an X post, by post URL. Returns per account: user_id, handle, name, followers, following, tweets, verified, location, website, bio. X returns a sample of reposters, not the full set: high-repost posts cap out a few hundred deep.
 
 - Site: x.com
 - Address: `reduck/x.com/get_reposters`
-- Updated: 2026-09-03 (v4)
+- Updated: 2026-09-29 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,17 +29,9 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/get_reposters
 
 ## FAQ
 
-### What does "Get post reposters" do?
+### What does "See who reposted (retweeted) a post on X (Twitter)" do?
 
 List the accounts that reposted (retweeted) an X post, by post URL. Returns per account: user_id, handle, name, followers, following, tweets, verified, location, website, bio. X returns a sample of reposters, not the full set: high-repost posts cap out a few hundred deep.
-
-### How do I automatically get post reposters on x.com?
-
-Ask an AI agent connected to Reduck to run reduck/x.com/get_reposters, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/x.com/get_reposters
-
-### Is there a x.com API to get post reposters?
-
-You do not need one. "Get post reposters" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
 
 ### What information do I need to provide?
 

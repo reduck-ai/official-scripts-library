@@ -4,7 +4,7 @@ Automatically search Gmail on mail.google.com. Search the signed-in Gmail with t
 
 - Site: mail.google.com
 - Address: `reduck/mail.google.com/search_emails`
-- Updated: 2026-09-14 (v8)
+- Updated: 2026-09-29 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it

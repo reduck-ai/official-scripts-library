@@ -4,7 +4,7 @@ Report which Perplexity account this browser is signed in as: the account email 
 
 - Site: perplexity.ai
 - Address: `reduck/perplexity.ai/whoami`
-- Updated: 2026-09-28 (v1)
+- Updated: 2026-09-29 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -1,10 +1,10 @@
-# Search X tweets
+# X (Twitter) search API: search tweets with every operator, no API key
 
-Automatically search X tweets on x.com. Search X for tweets, supporting all X search operators; the tab arg picks 'top' (ranked sample, default) or 'latest' (chronological). Returns per tweet a canonical record: id, url, author {id, handle, name}, text, created_at, lang, likes, retweets, replies, quotes, bookmarks, views, is_retweet, is_quote, plus followers (the author's follower count, a search-only enrichment), and the top-level query and count. Top is a ranked sample, not exhaustive.
+Automatically search tweets with every operator, no API key on x.com. Search X (Twitter) for tweets with every X search operator, from the Top tab (a ranked sample, the default) or the Latest tab (chronological), picked by the tab arg. Returns per tweet a canonical record: id, url, author {id, handle, name}, text, created_at, lang, likes, retweets, replies, quotes, bookmarks, views, is_retweet, is_quote, plus followers (the author's follower count, a search-only enrichment), and the top-level query and count. Top is a ranked sample, not exhaustive.
 
 - Site: x.com
 - Address: `reduck/x.com/search_tweets`
-- Updated: 2026-09-03 (v6)
+- Updated: 2026-09-29 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,17 +29,17 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/search_tweets
 
 ## FAQ
 
-### What does "Search X tweets" do?
+### What does "X (Twitter) search API: search tweets with every operator, no API key" do?
 
-Search X for tweets, supporting all X search operators; the tab arg picks 'top' (ranked sample, default) or 'latest' (chronological). Returns per tweet a canonical record: id, url, author {id, handle, name}, text, created_at, lang, likes, retweets, replies, quotes, bookmarks, views, is_retweet, is_quote, plus followers (the author's follower count, a search-only enrichment), and the top-level query and count. Top is a ranked sample, not exhaustive.
+Search X (Twitter) for tweets with every X search operator, from the Top tab (a ranked sample, the default) or the Latest tab (chronological), picked by the tab arg. Returns per tweet a canonical record: id, url, author {id, handle, name}, text, created_at, lang, likes, retweets, replies, quotes, bookmarks, views, is_retweet, is_quote, plus followers (the author's follower count, a search-only enrichment), and the top-level query and count. Top is a ranked sample, not exhaustive.
 
-### How do I automatically search X tweets on x.com?
+### How do I automatically search tweets with every operator, no API key on x.com?
 
 Ask an AI agent connected to Reduck to run reduck/x.com/search_tweets, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/x.com/search_tweets
 
-### Is there a x.com API to search X tweets?
+### Is there a x.com API to search tweets with every operator, no API key?
 
-You do not need one. "Search X tweets" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
+You do not need one. "X (Twitter) search API: search tweets with every operator, no API key" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
 
 ### What information do I need to provide?
 

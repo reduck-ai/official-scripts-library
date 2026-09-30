@@ -4,7 +4,7 @@ Automatically download Stripe invoice/receipt PDF on invoice.stripe.com. Downloa
 
 - Site: invoice.stripe.com
 - Address: `reduck/invoice.stripe.com/download_invoice_pdf`
-- Updated: 2026-09-26 (v6)
+- Updated: 2026-09-29 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

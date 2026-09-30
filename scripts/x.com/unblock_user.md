@@ -1,10 +1,10 @@
-# Unblock X user
+# Unblock an account on X (Twitter)
 
-Automatically unblock X user on x.com. Unblock an X user by handle. Accounts that aren't blocked are reported rather than erroring. Returns handle, blocked, was_blocked.
+Automatically unblock an account on X (Twitter) on x.com. Unblock an X user by handle. Accounts that aren't blocked are reported rather than erroring. Returns handle, blocked, was_blocked.
 
 - Site: x.com
 - Address: `reduck/x.com/unblock_user`
-- Updated: 2026-09-03 (v4)
+- Updated: 2026-09-29 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,17 +29,17 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/unblock_user
 
 ## FAQ
 
-### What does "Unblock X user" do?
+### What does "Unblock an account on X (Twitter)" do?
 
 Unblock an X user by handle. Accounts that aren't blocked are reported rather than erroring. Returns handle, blocked, was_blocked.
 
-### How do I automatically unblock X user on x.com?
+### How do I automatically unblock an account on X (Twitter) on x.com?
 
 Ask an AI agent connected to Reduck to run reduck/x.com/unblock_user, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/x.com/unblock_user
 
-### Is there a x.com API to unblock X user?
+### Is there a x.com API to unblock an account on X (Twitter)?
 
-You do not need one. "Unblock X user" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
+You do not need one. "Unblock an account on X (Twitter)" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
 
 ### What information do I need to provide?
 
@@ -55,7 +55,7 @@ Yes. It acts as you on x.com: on your own Chrome it reuses your session, and on 
 
 ### Does it change anything on x.com, or only read data?
 
-It makes changes on x.com, like sending, posting or booking something.
+It makes changes on x.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

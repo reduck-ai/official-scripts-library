@@ -1,10 +1,10 @@
-# Get X user info
+# X (Twitter) profile API: get a user's bio, followers and following
 
-Automatically get X user info on x.com. Look up an X user's profile by handle. Returns handle, user_id, name, bio, location, website, joined, followers_count, following_count, is_verified, is_self, is_following, follows_you. Follower/following counts are exact integers, not X's abbreviated "3.7M" display text. bio and website carry the real destination URLs, with X's t.co shortlinks resolved. is_following is null on your own profile (you have no follow relationship to yourself); user_id is always present.
+Automatically get a user's bio, followers and following on x.com. Look up an X user's profile by handle. Returns handle, user_id, name, bio, location, website, joined, followers_count, following_count, is_verified, is_self, is_following, follows_you. Follower/following counts are exact integers, not X's abbreviated "3.7M" display text. bio and website carry the real destination URLs, with X's t.co shortlinks resolved. is_following is null on your own profile (you have no follow relationship to yourself); user_id is always present.
 
 - Site: x.com
 - Address: `reduck/x.com/get_user_info`
-- Updated: 2026-09-03 (v3)
+- Updated: 2026-09-29 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -37,17 +37,17 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/get_user_info
 
 ## FAQ
 
-### What does "Get X user info" do?
+### What does "X (Twitter) profile API: get a user's bio, followers and following" do?
 
 Look up an X user's profile by handle. Returns handle, user_id, name, bio, location, website, joined, followers_count, following_count, is_verified, is_self, is_following, follows_you. Follower/following counts are exact integers, not X's abbreviated "3.7M" display text. bio and website carry the real destination URLs, with X's t.co shortlinks resolved. is_following is null on your own profile (you have no follow relationship to yourself); user_id is always present.
 
-### How do I automatically get X user info on x.com?
+### How do I automatically get a user's bio, followers and following on x.com?
 
 Ask an AI agent connected to Reduck to run reduck/x.com/get_user_info, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/x.com/get_user_info
 
-### Is there a x.com API to get X user info?
+### Is there a x.com API to get a user's bio, followers and following?
 
-You do not need one. "Get X user info" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
+You do not need one. "X (Twitter) profile API: get a user's bio, followers and following" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
 
 ### What information do I need to provide?
 

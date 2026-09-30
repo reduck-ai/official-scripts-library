@@ -1,10 +1,10 @@
-# Unlike tweet
+# Unlike a tweet on X (Twitter)
 
-Automatically unlike tweet on x.com. Remove your like from a tweet given its URL. Already-unliked tweets are reported rather than erroring. Returns tweet_id, liked, was_liked.
+Automatically unlike a tweet on X (Twitter) on x.com. Remove your like from a tweet given its URL. Already-unliked tweets are reported rather than erroring. Returns tweet_id, liked, was_liked.
 
 - Site: x.com
 - Address: `reduck/x.com/unlike_tweet`
-- Updated: 2026-09-03 (v2)
+- Updated: 2026-09-29 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,17 +29,17 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/unlike_tweet
 
 ## FAQ
 
-### What does "Unlike tweet" do?
+### What does "Unlike a tweet on X (Twitter)" do?
 
 Remove your like from a tweet given its URL. Already-unliked tweets are reported rather than erroring. Returns tweet_id, liked, was_liked.
 
-### How do I automatically unlike tweet on x.com?
+### How do I automatically unlike a tweet on X (Twitter) on x.com?
 
 Ask an AI agent connected to Reduck to run reduck/x.com/unlike_tweet, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/x.com/unlike_tweet
 
-### Is there a x.com API to unlike tweet?
+### Is there a x.com API to unlike a tweet on X (Twitter)?
 
-You do not need one. "Unlike tweet" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
+You do not need one. "Unlike a tweet on X (Twitter)" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
 
 ### What information do I need to provide?
 
@@ -55,7 +55,7 @@ Yes. It acts as you on x.com: on your own Chrome it reuses your session, and on 
 
 ### Does it change anything on x.com, or only read data?
 
-It makes changes on x.com, like sending, posting or booking something.
+It makes changes on x.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

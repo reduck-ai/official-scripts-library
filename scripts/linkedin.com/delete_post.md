@@ -4,7 +4,7 @@ Automatically delete post on linkedin.com. Permanently delete one of the logged-
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/delete_post`
-- Updated: 2026-08-20 (v13)
+- Updated: 2026-09-29 (v14)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -55,7 +55,7 @@ Yes. It acts as you on linkedin.com: on your own Chrome it reuses your session, 
 
 ### Does it change anything on linkedin.com, or only read data?
 
-It makes changes on linkedin.com, like sending, posting or booking something.
+It makes changes on linkedin.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

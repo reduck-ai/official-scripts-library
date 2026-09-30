@@ -1,10 +1,10 @@
-# Block X user
+# Block an account on X (Twitter)
 
-Automatically block X user on x.com. Block an X user by handle. Already-blocked accounts are reported rather than re-blocked. Returns handle, blocked, was_blocked.
+Automatically block an account on X (Twitter) on x.com. Block an X user by handle. Already-blocked accounts are reported rather than re-blocked. Returns handle, blocked, was_blocked.
 
 - Site: x.com
 - Address: `reduck/x.com/block_user`
-- Updated: 2026-08-26 (v5)
+- Updated: 2026-09-29 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,17 +29,17 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/block_user
 
 ## FAQ
 
-### What does "Block X user" do?
+### What does "Block an account on X (Twitter)" do?
 
 Block an X user by handle. Already-blocked accounts are reported rather than re-blocked. Returns handle, blocked, was_blocked.
 
-### How do I automatically block X user on x.com?
+### How do I automatically block an account on X (Twitter) on x.com?
 
 Ask an AI agent connected to Reduck to run reduck/x.com/block_user, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/x.com/block_user
 
-### Is there a x.com API to block X user?
+### Is there a x.com API to block an account on X (Twitter)?
 
-You do not need one. "Block X user" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
+You do not need one. "Block an account on X (Twitter)" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
 
 ### What information do I need to provide?
 
@@ -55,7 +55,7 @@ Yes. It acts as you on x.com: on your own Chrome it reuses your session, and on 
 
 ### Does it change anything on x.com, or only read data?
 
-It makes changes on x.com, like sending, posting or booking something.
+It makes changes on x.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

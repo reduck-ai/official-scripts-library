@@ -1,10 +1,10 @@
-# Get X tweet
+# Get a tweet and its replies on X (Twitter)
 
-Automatically get X tweet on x.com. Fetch a tweet by URL — the focal post plus the surrounding conversation. Returns `tweet` (the focal post; null if deleted/tombstoned) and `replies[]`, which holds every other tweet on the conversation page: both the focal's ancestors (the thread above it, present when the focal is itself a reply; each has `in_reply_to` null or pointing above the focal) and the replies below it (`in_reply_to` points at the focal or a sibling reply). Use `in_reply_to` to tell ancestors from replies and rebuild the thread — the array is not filtered to descendants of the focal. Each entry is a canonical tweet record: id, url, author {id, handle, name}, text, created_at, lang, likes, retweets, replies, quotes, bookmarks, views, is_retweet, is_quote, in_reply_to {id, author_handle}. Scrolls the main thread until `count` is met (then complete=false — more may exist) or it drains (complete=true). Replies behind a "Show more replies"/hidden/probable-spam cursor are not expanded, so even complete=true is a floor, not a guarantee every nested reply was seen.
+Automatically get a tweet and its replies on X (Twitter) on x.com. Fetch a tweet by URL — the focal post plus the surrounding conversation. Returns `tweet` (the focal post; null if deleted/tombstoned) and `replies[]`, which holds every other tweet on the conversation page: both the focal's ancestors (the thread above it, present when the focal is itself a reply; each has `in_reply_to` null or pointing above the focal) and the replies below it (`in_reply_to` points at the focal or a sibling reply). Use `in_reply_to` to tell ancestors from replies and rebuild the thread — the array is not filtered to descendants of the focal. Each entry is a canonical tweet record: id, url, author {id, handle, name}, text, created_at, lang, likes, retweets, replies, quotes, bookmarks, views, is_retweet, is_quote, in_reply_to {id, author_handle}. Scrolls the main thread until `count` is met (then complete=false — more may exist) or it drains (complete=true). Replies behind a "Show more replies"/hidden/probable-spam cursor are not expanded, so even complete=true is a floor, not a guarantee every nested reply was seen.
 
 - Site: x.com
 - Address: `reduck/x.com/get_tweet`
-- Updated: 2026-09-26 (v9)
+- Updated: 2026-09-29 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -30,17 +30,17 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/get_tweet
 
 ## FAQ
 
-### What does "Get X tweet" do?
+### What does "Get a tweet and its replies on X (Twitter)" do?
 
 Fetch a tweet by URL — the focal post plus the surrounding conversation. Returns `tweet` (the focal post; null if deleted/tombstoned) and `replies[]`, which holds every other tweet on the conversation page: both the focal's ancestors (the thread above it, present when the focal is itself a reply; each has `in_reply_to` null or pointing above the focal) and the replies below it (`in_reply_to` points at the focal or a sibling reply). Use `in_reply_to` to tell ancestors from replies and rebuild the thread — the array is not filtered to descendants of the focal. Each entry is a canonical tweet record: id, url, author {id, handle, name}, text, created_at, lang, likes, retweets, replies, quotes, bookmarks, views, is_retweet, is_quote, in_reply_to {id, author_handle}. Scrolls the main thread until `count` is met (then complete=false — more may exist) or it drains (complete=true). Replies behind a "Show more replies"/hidden/probable-spam cursor are not expanded, so even complete=true is a floor, not a guarantee every nested reply was seen.
 
-### How do I automatically get X tweet on x.com?
+### How do I automatically get a tweet and its replies on X (Twitter) on x.com?
 
 Ask an AI agent connected to Reduck to run reduck/x.com/get_tweet, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/x.com/get_tweet
 
-### Is there a x.com API to get X tweet?
+### Is there a x.com API to get a tweet and its replies on X (Twitter)?
 
-You do not need one. "Get X tweet" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
+You do not need one. "Get a tweet and its replies on X (Twitter)" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
 
 ### What information do I need to provide?
 

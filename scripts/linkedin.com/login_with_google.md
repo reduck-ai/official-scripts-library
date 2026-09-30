@@ -4,7 +4,7 @@ Log into LinkedIn via Google SSO. Drives LinkedIn's Continue-with-Google flow, p
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/login_with_google`
-- Updated: 2026-09-03 (v7)
+- Updated: 2026-09-29 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -45,7 +45,7 @@ No. It only uses pages of linkedin.com that are reachable without signing in.
 
 ### Does it change anything on linkedin.com, or only read data?
 
-It makes changes on linkedin.com, like sending, posting or booking something.
+It makes changes on linkedin.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

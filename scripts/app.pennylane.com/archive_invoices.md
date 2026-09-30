@@ -4,7 +4,7 @@ Automatically archive Pennylane supplier invoices on app.pennylane.com. Archive 
 
 - Site: app.pennylane.com
 - Address: `reduck/app.pennylane.com/archive_invoices`
-- Updated: 2026-08-31 (v10)
+- Updated: 2026-09-29 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -55,7 +55,7 @@ Yes. It acts as you on app.pennylane.com: on your own Chrome it reuses your sess
 
 ### Does it change anything on app.pennylane.com, or only read data?
 
-It makes changes on app.pennylane.com, like sending, posting or booking something.
+It makes changes on app.pennylane.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

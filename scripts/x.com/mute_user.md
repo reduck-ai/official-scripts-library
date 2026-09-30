@@ -1,10 +1,10 @@
-# Mute X user
+# Mute an account on X (Twitter)
 
-Automatically mute X user on x.com. Mute an X user by handle (hides their posts from you; invisible to them). Already-muted accounts are reported rather than re-muted. Returns handle, muted, was_muted.
+Automatically mute an account on X (Twitter) on x.com. Mute an X user by handle (hides their posts from you; invisible to them). Already-muted accounts are reported rather than re-muted. Returns handle, muted, was_muted.
 
 - Site: x.com
 - Address: `reduck/x.com/mute_user`
-- Updated: 2026-08-26 (v5)
+- Updated: 2026-09-29 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,17 +29,17 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/mute_user
 
 ## FAQ
 
-### What does "Mute X user" do?
+### What does "Mute an account on X (Twitter)" do?
 
 Mute an X user by handle (hides their posts from you; invisible to them). Already-muted accounts are reported rather than re-muted. Returns handle, muted, was_muted.
 
-### How do I automatically mute X user on x.com?
+### How do I automatically mute an account on X (Twitter) on x.com?
 
 Ask an AI agent connected to Reduck to run reduck/x.com/mute_user, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/x.com/mute_user
 
-### Is there a x.com API to mute X user?
+### Is there a x.com API to mute an account on X (Twitter)?
 
-You do not need one. "Mute X user" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
+You do not need one. "Mute an account on X (Twitter)" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
 
 ### What information do I need to provide?
 
@@ -55,7 +55,7 @@ Yes. It acts as you on x.com: on your own Chrome it reuses your session, and on 
 
 ### Does it change anything on x.com, or only read data?
 
-It makes changes on x.com, like sending, posting or booking something.
+It makes changes on x.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

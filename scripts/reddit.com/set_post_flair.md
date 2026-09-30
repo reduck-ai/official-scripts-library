@@ -4,7 +4,7 @@ Automatically set Reddit post flair on reddit.com. Set or remove the flair on yo
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/set_post_flair`
-- Updated: 2026-09-18 (v1)
+- Updated: 2026-09-29 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -55,7 +55,7 @@ Yes. It acts as you on reddit.com: on your own Chrome it reuses your session, an
 
 ### Does it change anything on reddit.com, or only read data?
 
-It makes changes on reddit.com, like sending, posting or booking something.
+It makes changes on reddit.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

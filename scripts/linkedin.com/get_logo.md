@@ -4,7 +4,7 @@ Automatically get LinkedIn company/showcase logo on linkedin.com. Get the logo i
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_logo`
-- Updated: 2026-09-03 (v6)
+- Updated: 2026-09-29 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

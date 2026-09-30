@@ -1,10 +1,10 @@
-# Retweet
+# Retweet (repost) a tweet on X (Twitter) from an AI agent
 
-Automatically retweet on x.com. Repost (retweet) a tweet given its URL. Safe to repeat: an already-reposted tweet is reported rather than reposted again. Returns tweet_id, retweeted, was_retweeted, and the repost's id.
+Automatically retweet (repost) a tweet on X (Twitter) from an AI agent on x.com. Repost (retweet) a tweet given its URL. Safe to repeat: an already-reposted tweet is reported rather than reposted again. Returns tweet_id, retweeted, was_retweeted, and the repost's id.
 
 - Site: x.com
 - Address: `reduck/x.com/retweet`
-- Updated: 2026-08-26 (v2)
+- Updated: 2026-09-29 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -30,17 +30,17 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/retweet
 
 ## FAQ
 
-### What does "Retweet" do?
+### What does "Retweet (repost) a tweet on X (Twitter) from an AI agent" do?
 
 Repost (retweet) a tweet given its URL. Safe to repeat: an already-reposted tweet is reported rather than reposted again. Returns tweet_id, retweeted, was_retweeted, and the repost's id.
 
-### How do I automatically retweet on x.com?
+### How do I automatically retweet (repost) a tweet on X (Twitter) from an AI agent on x.com?
 
 Ask an AI agent connected to Reduck to run reduck/x.com/retweet, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/x.com/retweet
 
-### Is there a x.com API to retweet?
+### Is there a x.com API to retweet (repost) a tweet on X (Twitter) from an AI agent?
 
-You do not need one. "Retweet" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
+You do not need one. "Retweet (repost) a tweet on X (Twitter) from an AI agent" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
 
 ### What information do I need to provide?
 
@@ -56,7 +56,7 @@ Yes. It acts as you on x.com: on your own Chrome it reuses your session, and on 
 
 ### Does it change anything on x.com, or only read data?
 
-It makes changes on x.com, like sending, posting or booking something.
+It makes changes on x.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

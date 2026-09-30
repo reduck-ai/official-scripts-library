@@ -1,10 +1,10 @@
-# Get X For You feed
+# Read your X (Twitter) For You timeline
 
-Automatically get X For You feed on x.com. Get tweets from your personal For You home feed — the timeline as shown: top-level posts plus the replies and quote-tweets X threads in. Returns per tweet: id, url, author {id, handle, name}, text, created_at, lang, likes, retweets, replies, quotes, bookmarks, views, is_retweet, is_quote, plus ref objects retweeted_tweet/quoted_tweet/in_reply_to (each {id, author_handle}, null when N/A). For a retweet the id is the wrapper, not the original — join via retweeted_tweet.id; in_reply_to != null is the reply test. Count is capped by how far the feed paginates before throttling.
+Automatically read your X (Twitter) For You timeline on x.com. Get tweets from your personal For You home feed — the timeline as shown: top-level posts plus the replies and quote-tweets X threads in. Returns per tweet: id, url, author {id, handle, name}, text, created_at, lang, likes, retweets, replies, quotes, bookmarks, views, is_retweet, is_quote, plus ref objects retweeted_tweet/quoted_tweet/in_reply_to (each {id, author_handle}, null when N/A). For a retweet the id is the wrapper, not the original — join via retweeted_tweet.id; in_reply_to != null is the reply test. Count is capped by how far the feed paginates before throttling.
 
 - Site: x.com
 - Address: `reduck/x.com/get_personal_feed`
-- Updated: 2026-09-03 (v7)
+- Updated: 2026-09-29 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -25,17 +25,17 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/get_personal_feed
 
 ## FAQ
 
-### What does "Get X For You feed" do?
+### What does "Read your X (Twitter) For You timeline" do?
 
 Get tweets from your personal For You home feed — the timeline as shown: top-level posts plus the replies and quote-tweets X threads in. Returns per tweet: id, url, author {id, handle, name}, text, created_at, lang, likes, retweets, replies, quotes, bookmarks, views, is_retweet, is_quote, plus ref objects retweeted_tweet/quoted_tweet/in_reply_to (each {id, author_handle}, null when N/A). For a retweet the id is the wrapper, not the original — join via retweeted_tweet.id; in_reply_to != null is the reply test. Count is capped by how far the feed paginates before throttling.
 
-### How do I automatically get X For You feed on x.com?
+### How do I automatically read your X (Twitter) For You timeline on x.com?
 
 Ask an AI agent connected to Reduck to run reduck/x.com/get_personal_feed, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/x.com/get_personal_feed
 
-### Is there a x.com API to get X For You feed?
+### Is there a x.com API to read your X (Twitter) For You timeline?
 
-You do not need one. "Get X For You feed" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
+You do not need one. "Read your X (Twitter) For You timeline" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
 
 ### What information do I need to provide?
 

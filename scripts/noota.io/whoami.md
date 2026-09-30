@@ -4,7 +4,7 @@ Report which Noota account this browser is signed in as: the account email (and 
 
 - Site: noota.io
 - Address: `reduck/noota.io/whoami`
-- Updated: 2026-09-28 (v1)
+- Updated: 2026-09-29 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

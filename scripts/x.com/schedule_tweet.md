@@ -1,10 +1,10 @@
-# Schedule X Post
+# Schedule a tweet on X (Twitter) from an AI agent
 
-Automatically schedule X Post on x.com. Composes a post and schedules it to send at a future date/time, instead of posting immediately.
+Automatically schedule a tweet on X (Twitter) from an AI agent on x.com. Schedule a post on X (Twitter) to be sent at a later date and time, instead of posting now. Takes the text (280 characters at most) and sendAt, a local time with no offset, read in the account's own display timezone, from about 10 minutes to about 18 months ahead. Returns the scheduled_id, the text and send_at.
 
 - Site: x.com
 - Address: `reduck/x.com/schedule_tweet`
-- Updated: 2026-09-08 (v4)
+- Updated: 2026-09-29 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -28,17 +28,17 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/schedule_tweet
 
 ## FAQ
 
-### What does "Schedule X Post" do?
+### What does "Schedule a tweet on X (Twitter) from an AI agent" do?
 
-Composes a post and schedules it to send at a future date/time, instead of posting immediately.
+Schedule a post on X (Twitter) to be sent at a later date and time, instead of posting now. Takes the text (280 characters at most) and sendAt, a local time with no offset, read in the account's own display timezone, from about 10 minutes to about 18 months ahead. Returns the scheduled_id, the text and send_at.
 
-### How do I automatically schedule X Post on x.com?
+### How do I automatically schedule a tweet on X (Twitter) from an AI agent on x.com?
 
 Ask an AI agent connected to Reduck to run reduck/x.com/schedule_tweet, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/x.com/schedule_tweet
 
-### Is there a x.com API to schedule X Post?
+### Is there a x.com API to schedule a tweet on X (Twitter) from an AI agent?
 
-You do not need one. "Schedule X Post" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
+You do not need one. "Schedule a tweet on X (Twitter) from an AI agent" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
 
 ### What information do I need to provide?
 
@@ -54,7 +54,7 @@ Yes. It acts as you on x.com: on your own Chrome it reuses your session, and on 
 
 ### Does it change anything on x.com, or only read data?
 
-It makes changes on x.com, like sending, posting or booking something.
+It makes changes on x.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

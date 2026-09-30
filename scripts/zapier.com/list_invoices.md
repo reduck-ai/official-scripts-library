@@ -1,10 +1,10 @@
 # List Zapier invoices
 
-Automatically list Zapier invoices on zapier.com. List and download Zapier billing invoices from Settings > Billing & usage > Billing settings > Invoices. Each invoice is an HTML page with no native PDF, so it is rendered to a downloadable PDF. Returns total and invoices (status, date, amount, invoice_id, filename, path). Requires a Zapier session with billing access.
+Automatically list Zapier invoices on zapier.com. List Zapier billing invoices from Settings > Billing & usage > Billing settings > Invoices. Returns total and invoices (status, date, amount, invoice_id, href) — metadata only. Feed a row's href to zapier.com/download_invoice to get that invoice as a PDF (Zapier has no native PDF, so that script renders the invoice page to one). An account with no billing history returns an empty list. Requires a Zapier session with billing access.
 
 - Site: zapier.com
 - Address: `reduck/zapier.com/list_invoices`
-- Updated: 2026-08-21 (v9)
+- Updated: 2026-09-29 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -28,7 +28,7 @@ It takes no input.
 
 ### What does "List Zapier invoices" do?
 
-List and download Zapier billing invoices from Settings > Billing & usage > Billing settings > Invoices. Each invoice is an HTML page with no native PDF, so it is rendered to a downloadable PDF. Returns total and invoices (status, date, amount, invoice_id, filename, path). Requires a Zapier session with billing access.
+List Zapier billing invoices from Settings > Billing & usage > Billing settings > Invoices. Returns total and invoices (status, date, amount, invoice_id, href) — metadata only. Feed a row's href to zapier.com/download_invoice to get that invoice as a PDF (Zapier has no native PDF, so that script renders the invoice page to one). An account with no billing history returns an empty list. Requires a Zapier session with billing access.
 
 ### How do I automatically list Zapier invoices on zapier.com?
 

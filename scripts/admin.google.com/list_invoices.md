@@ -1,10 +1,10 @@
-# List Google Workspace invoices (CSV/PDF) over a date range
+# Google Workspace API: list your Google Workspace invoices by date range
 
-Automatically list Google Workspace invoices (CSV/PDF) over a date range on admin.google.com. Lists Google Workspace billing invoices from the Admin Console over a date range and returns each invoice's document content in CSV or PDF format.
+Automatically list your Google Workspace invoices by date range on admin.google.com. An unofficial Google Workspace API for billing invoices. List Google Workspace billing documents from the Admin Console for one date range (This month … All time) and one format (CSV or PDF). Returns account and invoices (label, format, createdDate, invoiceNumber) — metadata only. Feed a row's label, with the same dateRange and format, to admin.google.com/download_invoice to get the file.
 
 - Site: admin.google.com
 - Address: `reduck/admin.google.com/list_invoices`
-- Updated: 2026-08-21 (v8)
+- Updated: 2026-09-29 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -27,17 +27,17 @@ npx @reduck-ai/cli@latest run --script reduck/admin.google.com/list_invoices
 
 ## FAQ
 
-### What does "List Google Workspace invoices (CSV/PDF) over a date range" do?
+### What does "Google Workspace API: list your Google Workspace invoices by date range" do?
 
-Lists Google Workspace billing invoices from the Admin Console over a date range and returns each invoice's document content in CSV or PDF format.
+An unofficial Google Workspace API for billing invoices. List Google Workspace billing documents from the Admin Console for one date range (This month … All time) and one format (CSV or PDF). Returns account and invoices (label, format, createdDate, invoiceNumber) — metadata only. Feed a row's label, with the same dateRange and format, to admin.google.com/download_invoice to get the file.
 
-### How do I automatically list Google Workspace invoices (CSV/PDF) over a date range on admin.google.com?
+### How do I automatically list your Google Workspace invoices by date range on admin.google.com?
 
 Ask an AI agent connected to Reduck to run reduck/admin.google.com/list_invoices, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/admin.google.com/list_invoices
 
-### Is there a admin.google.com API to list Google Workspace invoices (CSV/PDF) over a date range?
+### Is there a admin.google.com API to list your Google Workspace invoices by date range?
 
-You do not need one. "List Google Workspace invoices (CSV/PDF) over a date range" drives the real admin.google.com pages in a browser, so it works whether or not admin.google.com offers an API for this.
+You do not need one. "Google Workspace API: list your Google Workspace invoices by date range" drives the real admin.google.com pages in a browser, so it works whether or not admin.google.com offers an API for this.
 
 ### What information do I need to provide?
 

@@ -1,10 +1,10 @@
-# Get X follows
+# Export an X (Twitter) account's followers or following
 
-Automatically get X follows on x.com. List a user's followers or the accounts they follow, by handle — selected by the direction arg ('followers', the default, or 'following'). Returns per account: user_id, handle, name, followers, following, tweets, verified, location, website, bio. Scrolls until count is met or the list dries up.
+Automatically export an X (Twitter) account's followers or following on x.com. List a user's followers or the accounts they follow, by handle — selected by the direction arg ('followers', the default, or 'following'). Returns per account: user_id, handle, name, followers, following, tweets, verified, location, website, bio. Scrolls until count is met or the list dries up.
 
 - Site: x.com
 - Address: `reduck/x.com/get_follows`
-- Updated: 2026-09-03 (v3)
+- Updated: 2026-09-29 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -30,17 +30,17 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/get_follows
 
 ## FAQ
 
-### What does "Get X follows" do?
+### What does "Export an X (Twitter) account's followers or following" do?
 
 List a user's followers or the accounts they follow, by handle — selected by the direction arg ('followers', the default, or 'following'). Returns per account: user_id, handle, name, followers, following, tweets, verified, location, website, bio. Scrolls until count is met or the list dries up.
 
-### How do I automatically get X follows on x.com?
+### How do I automatically export an X (Twitter) account's followers or following on x.com?
 
 Ask an AI agent connected to Reduck to run reduck/x.com/get_follows, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/x.com/get_follows
 
-### Is there a x.com API to get X follows?
+### Is there a x.com API to export an X (Twitter) account's followers or following?
 
-You do not need one. "Get X follows" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
+You do not need one. "Export an X (Twitter) account's followers or following" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
 
 ### What information do I need to provide?
 

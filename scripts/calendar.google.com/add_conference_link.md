@@ -4,7 +4,7 @@ Automatically add Google Meet link to a Calendar event on calendar.google.com. A
 
 - Site: calendar.google.com
 - Address: `reduck/calendar.google.com/add_conference_link`
-- Updated: 2026-09-18 (v1)
+- Updated: 2026-09-29 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -53,7 +53,7 @@ Yes. It acts as you on calendar.google.com: on your own Chrome it reuses your se
 
 ### Does it change anything on calendar.google.com, or only read data?
 
-It makes changes on calendar.google.com, like sending, posting or booking something.
+It makes changes on calendar.google.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

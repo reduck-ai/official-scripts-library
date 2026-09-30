@@ -1,10 +1,10 @@
-# Get X DM inbox
+# List your X (Twitter) DM inbox
 
-Automatically get X DM inbox on x.com. List the state of every DM conversation in your X inbox. Returns per conversation: conversation_id, name, handle, last_message, time, sent_by_me, unread. If X shows the Enter Passcode screen, pass the 4-digit E2E pin.
+Automatically list your X (Twitter) DM inbox on x.com. List the state of every DM conversation in your X inbox. Returns per conversation: conversation_id, name, handle, last_message, time, sent_by_me, unread. If X shows the Enter Passcode screen, pass the 4-digit E2E pin.
 
 - Site: x.com
 - Address: `reduck/x.com/get_inbox`
-- Updated: 2026-09-25 (v7)
+- Updated: 2026-09-29 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -25,17 +25,17 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/get_inbox
 
 ## FAQ
 
-### What does "Get X DM inbox" do?
+### What does "List your X (Twitter) DM inbox" do?
 
 List the state of every DM conversation in your X inbox. Returns per conversation: conversation_id, name, handle, last_message, time, sent_by_me, unread. If X shows the Enter Passcode screen, pass the 4-digit E2E pin.
 
-### How do I automatically get X DM inbox on x.com?
+### How do I automatically list your X (Twitter) DM inbox on x.com?
 
 Ask an AI agent connected to Reduck to run reduck/x.com/get_inbox, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/x.com/get_inbox
 
-### Is there a x.com API to get X DM inbox?
+### Is there a x.com API to list your X (Twitter) DM inbox?
 
-You do not need one. "Get X DM inbox" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
+You do not need one. "List your X (Twitter) DM inbox" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
 
 ### What information do I need to provide?
 

@@ -4,7 +4,7 @@ Automatically get current GitHub user on github.com. Report which GitHub account
 
 - Site: github.com
 - Address: `reduck/github.com/get_current_user`
-- Updated: 2026-09-28 (v2)
+- Updated: 2026-09-29 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

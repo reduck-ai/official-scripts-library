@@ -1,10 +1,10 @@
-# Get Community Posts
+# Read an X (Twitter) Community's posts
 
-Automatically get Community Posts on x.com. Reads the post feed of an X Community (Top or Latest), including author, text, media, and engagement counts.
+Automatically read an X (Twitter) Community's posts on x.com. Read the posts of an X (Twitter) Community, by its numeric id (x.com/i/communities/<id>), from its Top tab (default) or its Latest tab. Returns the community_id, the tab, the count, and per post: id, url, author handle and name, text, created_at, has_media, and reply, retweet and like counts. Needs a signed-in account: signed out, X shows no feed.
 
 - Site: x.com
 - Address: `reduck/x.com/get_community_posts`
-- Updated: 2026-09-08 (v4)
+- Updated: 2026-09-29 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -30,17 +30,17 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/get_community_posts
 
 ## FAQ
 
-### What does "Get Community Posts" do?
+### What does "Read an X (Twitter) Community's posts" do?
 
-Reads the post feed of an X Community (Top or Latest), including author, text, media, and engagement counts.
+Read the posts of an X (Twitter) Community, by its numeric id (x.com/i/communities/<id>), from its Top tab (default) or its Latest tab. Returns the community_id, the tab, the count, and per post: id, url, author handle and name, text, created_at, has_media, and reply, retweet and like counts. Needs a signed-in account: signed out, X shows no feed.
 
-### How do I automatically get Community Posts on x.com?
+### How do I automatically read an X (Twitter) Community's posts on x.com?
 
 Ask an AI agent connected to Reduck to run reduck/x.com/get_community_posts, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/x.com/get_community_posts
 
-### Is there a x.com API to get Community Posts?
+### Is there a x.com API to read an X (Twitter) Community's posts?
 
-You do not need one. "Get Community Posts" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
+You do not need one. "Read an X (Twitter) Community's posts" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
 
 ### What information do I need to provide?
 

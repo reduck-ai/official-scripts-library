@@ -1,10 +1,10 @@
-# Edit X Profile
+# Edit your X (Twitter) profile: name, bio, location, website
 
-Automatically edit X Profile on x.com. Updates this account's own display name, bio, location, and/or website link.
+Update the signed-in X (Twitter) account's own display name (50 characters at most), bio (160), location (30) and website link (100). Omit a field to leave it unchanged; an empty string clears the bio, the location or the website. Returns the profile's name, bio, location and url after the edit.
 
 - Site: x.com
 - Address: `reduck/x.com/edit_own_profile`
-- Updated: 2026-09-03 (v1)
+- Updated: 2026-09-29 (v1)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -31,17 +31,9 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/edit_own_profile
 
 ## FAQ
 
-### What does "Edit X Profile" do?
+### What does "Edit your X (Twitter) profile: name, bio, location, website" do?
 
-Updates this account's own display name, bio, location, and/or website link.
-
-### How do I automatically edit X Profile on x.com?
-
-Ask an AI agent connected to Reduck to run reduck/x.com/edit_own_profile, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/x.com/edit_own_profile
-
-### Is there a x.com API to edit X Profile?
-
-You do not need one. "Edit X Profile" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
+Update the signed-in X (Twitter) account's own display name (50 characters at most), bio (160), location (30) and website link (100). Omit a field to leave it unchanged; an empty string clears the bio, the location or the website. Returns the profile's name, bio, location and url after the edit.
 
 ### What information do I need to provide?
 
@@ -57,7 +49,7 @@ Yes. It acts as you on x.com: on your own Chrome it reuses your session, and on 
 
 ### Does it change anything on x.com, or only read data?
 
-It makes changes on x.com, like sending, posting or booking something.
+It makes changes on x.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

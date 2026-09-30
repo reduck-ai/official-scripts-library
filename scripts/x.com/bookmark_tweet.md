@@ -1,10 +1,10 @@
-# Bookmark tweet
+# Bookmark a tweet on X (Twitter)
 
-Automatically bookmark tweet on x.com. Bookmark a tweet given its URL. Already-bookmarked tweets are reported rather than re-bookmarked. Returns tweet_id, bookmarked, was_bookmarked.
+Automatically bookmark a tweet on X (Twitter) on x.com. Bookmark a tweet given its URL. Already-bookmarked tweets are reported rather than re-bookmarked. Returns tweet_id, bookmarked, was_bookmarked.
 
 - Site: x.com
 - Address: `reduck/x.com/bookmark_tweet`
-- Updated: 2026-09-03 (v1)
+- Updated: 2026-09-29 (v1)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -27,17 +27,17 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/bookmark_tweet
 
 ## FAQ
 
-### What does "Bookmark tweet" do?
+### What does "Bookmark a tweet on X (Twitter)" do?
 
 Bookmark a tweet given its URL. Already-bookmarked tweets are reported rather than re-bookmarked. Returns tweet_id, bookmarked, was_bookmarked.
 
-### How do I automatically bookmark tweet on x.com?
+### How do I automatically bookmark a tweet on X (Twitter) on x.com?
 
 Ask an AI agent connected to Reduck to run reduck/x.com/bookmark_tweet, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/x.com/bookmark_tweet
 
-### Is there a x.com API to bookmark tweet?
+### Is there a x.com API to bookmark a tweet on X (Twitter)?
 
-You do not need one. "Bookmark tweet" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
+You do not need one. "Bookmark a tweet on X (Twitter)" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
 
 ### What information do I need to provide?
 
@@ -53,7 +53,7 @@ Yes. It acts as you on x.com: on your own Chrome it reuses your session, and on 
 
 ### Does it change anything on x.com, or only read data?
 
-It makes changes on x.com, like sending, posting or booking something.
+It makes changes on x.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

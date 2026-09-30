@@ -1,10 +1,10 @@
 # List LinkedIn invoices/receipts
 
-Automatically list LinkedIn invoices/receipts on linkedin.com. List and download LinkedIn purchase receipts from the Admin Center > Transactions (Premium, Sales Navigator, etc.). Each receipt PDF is downloaded automatically via the row's ... > Download receipt action. Online purchases expose receipts here; sales-rep-assisted contracts expose invoices instead, and this requires billing-management access. Returns total plus invoices (date, amount, payment_method, invoice_number, status, purchase, filename, path).
+Automatically list LinkedIn invoices/receipts on linkedin.com. List LinkedIn purchase receipts from the Admin Center > Transactions (Premium, Sales Navigator, etc.). Returns total plus invoices (date, amount, payment_method, invoice_number, status, purchase) — metadata only. Feed a row's invoice_number (or purchase + date) to linkedin.com/download_invoice to get that receipt's PDF. Online purchases expose receipts here; sales-rep-assisted contracts expose invoices instead. Requires billing-management access.
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/list_invoices`
-- Updated: 2026-08-21 (v4)
+- Updated: 2026-09-29 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -28,7 +28,7 @@ It takes no input.
 
 ### What does "List LinkedIn invoices/receipts" do?
 
-List and download LinkedIn purchase receipts from the Admin Center > Transactions (Premium, Sales Navigator, etc.). Each receipt PDF is downloaded automatically via the row's ... > Download receipt action. Online purchases expose receipts here; sales-rep-assisted contracts expose invoices instead, and this requires billing-management access. Returns total plus invoices (date, amount, payment_method, invoice_number, status, purchase, filename, path).
+List LinkedIn purchase receipts from the Admin Center > Transactions (Premium, Sales Navigator, etc.). Returns total plus invoices (date, amount, payment_method, invoice_number, status, purchase) — metadata only. Feed a row's invoice_number (or purchase + date) to linkedin.com/download_invoice to get that receipt's PDF. Online purchases expose receipts here; sales-rep-assisted contracts expose invoices instead. Requires billing-management access.
 
 ### How do I automatically list LinkedIn invoices/receipts on linkedin.com?
 

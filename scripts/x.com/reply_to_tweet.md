@@ -1,10 +1,10 @@
-# Reply to tweet
+# Reply to a tweet on X (Twitter) from an AI agent
 
-Automatically reply to tweet on x.com. Reply to a tweet given its URL. Returns the reply's id, url, the parent tweet id, and author handle.
+Automatically reply to a tweet on X (Twitter) from an AI agent on x.com. Reply to a tweet given its URL. Returns the reply's id, url, the parent tweet id, and author handle.
 
 - Site: x.com
 - Address: `reduck/x.com/reply_to_tweet`
-- Updated: 2026-08-26 (v8)
+- Updated: 2026-09-29 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -33,17 +33,17 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/reply_to_tweet
 
 ## FAQ
 
-### What does "Reply to tweet" do?
+### What does "Reply to a tweet on X (Twitter) from an AI agent" do?
 
 Reply to a tweet given its URL. Returns the reply's id, url, the parent tweet id, and author handle.
 
-### How do I automatically reply to tweet on x.com?
+### How do I automatically reply to a tweet on X (Twitter) from an AI agent on x.com?
 
 Ask an AI agent connected to Reduck to run reduck/x.com/reply_to_tweet, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/x.com/reply_to_tweet
 
-### Is there a x.com API to reply to tweet?
+### Is there a x.com API to reply to a tweet on X (Twitter) from an AI agent?
 
-You do not need one. "Reply to tweet" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
+You do not need one. "Reply to a tweet on X (Twitter) from an AI agent" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
 
 ### What information do I need to provide?
 
@@ -59,7 +59,7 @@ Yes. It acts as you on x.com: on your own Chrome it reuses your session, and on 
 
 ### Does it change anything on x.com, or only read data?
 
-It makes changes on x.com, like sending, posting or booking something.
+It makes changes on x.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

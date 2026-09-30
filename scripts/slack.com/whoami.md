@@ -4,7 +4,7 @@ Report which Slack account this browser is signed in as: the user's name, email,
 
 - Site: slack.com
 - Address: `reduck/slack.com/whoami`
-- Updated: 2026-09-25 (v2)
+- Updated: 2026-09-29 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

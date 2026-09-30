@@ -1,10 +1,10 @@
-# X (Twitter) whoami (signed-in account)
+# Check which X (Twitter) account is signed in
 
-Report which X (Twitter) account this browser is signed in as: the @handle, display name and numeric user id. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other X scripts.
+Automatically check which X (Twitter) account is signed in on x.com. Report which X (Twitter) account this browser is signed in as: the @handle, display name and numeric user id. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other X scripts.
 
 - Site: x.com
 - Address: `reduck/x.com/whoami`
-- Updated: 2026-09-25 (v1)
+- Updated: 2026-09-29 (v1)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,9 +29,17 @@ It takes no input.
 
 ## FAQ
 
-### What does "X (Twitter) whoami (signed-in account)" do?
+### What does "Check which X (Twitter) account is signed in" do?
 
 Report which X (Twitter) account this browser is signed in as: the @handle, display name and numeric user id. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other X scripts.
+
+### How do I automatically check which X (Twitter) account is signed in on x.com?
+
+Ask an AI agent connected to Reduck to run reduck/x.com/whoami, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/x.com/whoami
+
+### Is there a x.com API to check which X (Twitter) account is signed in?
+
+You do not need one. "Check which X (Twitter) account is signed in" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
 
 ### What information do I need to provide?
 

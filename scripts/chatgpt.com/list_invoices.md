@@ -1,10 +1,10 @@
-# List ChatGPT invoices
+# ChatGPT billing: list your ChatGPT subscription invoices
 
-Automatically list ChatGPT invoices on chatgpt.com. List the billing history of the signed-in ChatGPT account: every invoice with its date, amount, currency, payment status, the plan it paid for, and a link to the receipt. The full history is returned, not only the most recent entries. Amounts come back in the currency's smallest unit, so 1917 means 19.17 EUR. An account that has never been billed returns an empty list. Feed hosted_invoice_url to invoice.stripe.com/download_invoice_pdf to fetch the PDF.
+Automatically list your ChatGPT subscription invoices on chatgpt.com. ChatGPT subscription invoices, not the OpenAI API platform (that is platform.openai.com/list_invoices). List the billing history of the signed-in ChatGPT account: every invoice with its date, amount, currency, payment status, the plan it paid for, and a link to the receipt. The full history is returned, not only the most recent entries. Amounts come back in the currency's smallest unit, so 1917 means 19.17 EUR. An account that has never been billed returns an empty list. Feed hosted_invoice_url to invoice.stripe.com/download_invoice_pdf to get the PDF.
 
 - Site: chatgpt.com
 - Address: `reduck/chatgpt.com/list_invoices`
-- Updated: 2026-09-26 (v7)
+- Updated: 2026-09-29 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -25,17 +25,17 @@ It takes no input.
 
 ## FAQ
 
-### What does "List ChatGPT invoices" do?
+### What does "ChatGPT billing: list your ChatGPT subscription invoices" do?
 
-List the billing history of the signed-in ChatGPT account: every invoice with its date, amount, currency, payment status, the plan it paid for, and a link to the receipt. The full history is returned, not only the most recent entries. Amounts come back in the currency's smallest unit, so 1917 means 19.17 EUR. An account that has never been billed returns an empty list. Feed hosted_invoice_url to invoice.stripe.com/download_invoice_pdf to fetch the PDF.
+ChatGPT subscription invoices, not the OpenAI API platform (that is platform.openai.com/list_invoices). List the billing history of the signed-in ChatGPT account: every invoice with its date, amount, currency, payment status, the plan it paid for, and a link to the receipt. The full history is returned, not only the most recent entries. Amounts come back in the currency's smallest unit, so 1917 means 19.17 EUR. An account that has never been billed returns an empty list. Feed hosted_invoice_url to invoice.stripe.com/download_invoice_pdf to get the PDF.
 
-### How do I automatically list ChatGPT invoices on chatgpt.com?
+### How do I automatically list your ChatGPT subscription invoices on chatgpt.com?
 
 Ask an AI agent connected to Reduck to run reduck/chatgpt.com/list_invoices, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/chatgpt.com/list_invoices
 
-### Is there a chatgpt.com API to list ChatGPT invoices?
+### Is there a chatgpt.com API to list your ChatGPT subscription invoices?
 
-You do not need one. "List ChatGPT invoices" drives the real chatgpt.com pages in a browser, so it works whether or not chatgpt.com offers an API for this.
+You do not need one. "ChatGPT billing: list your ChatGPT subscription invoices" drives the real chatgpt.com pages in a browser, so it works whether or not chatgpt.com offers an API for this.
 
 ### What information do I need to provide?
 

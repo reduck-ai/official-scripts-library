@@ -4,7 +4,7 @@ Automatically download brand logo pack on brandfetch.com. Given a company domain
 
 - Site: brandfetch.com
 - Address: `reduck/brandfetch.com/download_logo`
-- Updated: 2026-08-17 (v4)
+- Updated: 2026-09-29 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -25,6 +25,8 @@ npx @reduck-ai/cli@latest run --script reduck/brandfetch.com/download_logo
 - `found` (boolean, required): false if Brandfetch has no page for this domain
 - `domain` (string, required)
 - `filename` (string | null, required): Suggested filename of the downloaded zip; null when found is false
+- `url` (string | null, optional): Link to the zip's bytes when they are not on the browser's machine (managed browser); null otherwise
+- `path` (string | null, optional): Path of the downloaded zip on the machine running the browser (extension device); null on a managed browser or when found is false
 
 ## FAQ
 
@@ -46,7 +48,7 @@ Required: domain.
 
 ### What does it return?
 
-It returns brand, found, domain, filename.
+It returns url, path, brand, found, domain, filename.
 
 ### Do I need to be logged in to brandfetch.com?
 
@@ -54,7 +56,7 @@ No. It only uses pages of brandfetch.com that are reachable without signing in.
 
 ### Does it change anything on brandfetch.com, or only read data?
 
-It makes changes on brandfetch.com, like sending, posting or booking something.
+It makes changes on brandfetch.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

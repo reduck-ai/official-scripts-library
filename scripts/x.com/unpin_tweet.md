@@ -1,10 +1,10 @@
-# Unpin tweet from profile
+# Unpin a tweet from your X (Twitter) profile
 
-Automatically unpin tweet from profile on x.com. Unpin your own tweet from the top of your profile, given its URL. Tweets that aren't currently pinned are reported rather than erroring. Returns tweet_id, pinned, was_pinned, and account_used. X can briefly serve a stale pinned-state right after a preceding pin/unpin on the account — if you just changed the pin state, allow a few seconds before calling this again for a reliable was_pinned reading.
+Automatically unpin a tweet from your X (Twitter) profile on x.com. Unpin your own tweet from the top of your profile, given its URL. Tweets that aren't currently pinned are reported rather than erroring. Returns tweet_id, pinned, was_pinned, and account_used. X can briefly serve a stale pinned-state right after a preceding pin/unpin on the account — if you just changed the pin state, allow a few seconds before calling this again for a reliable was_pinned reading.
 
 - Site: x.com
 - Address: `reduck/x.com/unpin_tweet`
-- Updated: 2026-09-03 (v1)
+- Updated: 2026-09-29 (v1)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -28,17 +28,17 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/unpin_tweet
 
 ## FAQ
 
-### What does "Unpin tweet from profile" do?
+### What does "Unpin a tweet from your X (Twitter) profile" do?
 
 Unpin your own tweet from the top of your profile, given its URL. Tweets that aren't currently pinned are reported rather than erroring. Returns tweet_id, pinned, was_pinned, and account_used. X can briefly serve a stale pinned-state right after a preceding pin/unpin on the account — if you just changed the pin state, allow a few seconds before calling this again for a reliable was_pinned reading.
 
-### How do I automatically unpin tweet from profile on x.com?
+### How do I automatically unpin a tweet from your X (Twitter) profile on x.com?
 
 Ask an AI agent connected to Reduck to run reduck/x.com/unpin_tweet, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/x.com/unpin_tweet
 
-### Is there a x.com API to unpin tweet from profile?
+### Is there a x.com API to unpin a tweet from your X (Twitter) profile?
 
-You do not need one. "Unpin tweet from profile" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
+You do not need one. "Unpin a tweet from your X (Twitter) profile" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
 
 ### What information do I need to provide?
 
@@ -54,7 +54,7 @@ Yes. It acts as you on x.com: on your own Chrome it reuses your session, and on 
 
 ### Does it change anything on x.com, or only read data?
 
-It makes changes on x.com, like sending, posting or booking something.
+It makes changes on x.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

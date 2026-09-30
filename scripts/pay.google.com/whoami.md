@@ -4,7 +4,7 @@ Report which Google account this browser uses on Google Pay (email and name) and
 
 - Site: pay.google.com
 - Address: `reduck/pay.google.com/whoami`
-- Updated: 2026-09-28 (v1)
+- Updated: 2026-09-29 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

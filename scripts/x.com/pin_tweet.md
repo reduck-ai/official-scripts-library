@@ -1,10 +1,10 @@
-# Pin tweet to profile
+# Pin a tweet to your X (Twitter) profile
 
-Automatically pin tweet to profile on x.com. Pin one of your own tweets to the top of your profile, given its URL. Already-pinned tweets are reported rather than re-pinned. Pinning a new tweet replaces whatever was previously pinned. Returns tweet_id, pinned, was_pinned, and account_used. X can briefly serve a stale pinned-state right after a preceding pin/unpin on the account — if you just changed the pin state, allow a few seconds before calling this again for a reliable was_pinned reading.
+Automatically pin a tweet to your X (Twitter) profile on x.com. Pin one of your own tweets to the top of your profile, given its URL. Already-pinned tweets are reported rather than re-pinned. Pinning a new tweet replaces whatever was previously pinned. Returns tweet_id, pinned, was_pinned, and account_used. X can briefly serve a stale pinned-state right after a preceding pin/unpin on the account — if you just changed the pin state, allow a few seconds before calling this again for a reliable was_pinned reading.
 
 - Site: x.com
 - Address: `reduck/x.com/pin_tweet`
-- Updated: 2026-09-03 (v1)
+- Updated: 2026-09-29 (v1)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -28,17 +28,17 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/pin_tweet
 
 ## FAQ
 
-### What does "Pin tweet to profile" do?
+### What does "Pin a tweet to your X (Twitter) profile" do?
 
 Pin one of your own tweets to the top of your profile, given its URL. Already-pinned tweets are reported rather than re-pinned. Pinning a new tweet replaces whatever was previously pinned. Returns tweet_id, pinned, was_pinned, and account_used. X can briefly serve a stale pinned-state right after a preceding pin/unpin on the account — if you just changed the pin state, allow a few seconds before calling this again for a reliable was_pinned reading.
 
-### How do I automatically pin tweet to profile on x.com?
+### How do I automatically pin a tweet to your X (Twitter) profile on x.com?
 
 Ask an AI agent connected to Reduck to run reduck/x.com/pin_tweet, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/x.com/pin_tweet
 
-### Is there a x.com API to pin tweet to profile?
+### Is there a x.com API to pin a tweet to your X (Twitter) profile?
 
-You do not need one. "Pin tweet to profile" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
+You do not need one. "Pin a tweet to your X (Twitter) profile" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
 
 ### What information do I need to provide?
 
@@ -54,7 +54,7 @@ Yes. It acts as you on x.com: on your own Chrome it reuses your session, and on 
 
 ### Does it change anything on x.com, or only read data?
 
-It makes changes on x.com, like sending, posting or booking something.
+It makes changes on x.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

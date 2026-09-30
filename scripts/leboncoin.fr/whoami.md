@@ -4,7 +4,7 @@ Report which Leboncoin account this browser is signed in as: the account email (
 
 - Site: leboncoin.fr
 - Address: `reduck/leboncoin.fr/whoami`
-- Updated: 2026-09-28 (v1)
+- Updated: 2026-09-29 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

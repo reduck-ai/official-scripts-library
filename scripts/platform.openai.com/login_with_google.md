@@ -4,7 +4,7 @@ Log into the OpenAI API Platform (platform.openai.com) with Continue with Google
 
 - Site: platform.openai.com
 - Address: `reduck/platform.openai.com/login_with_google`
-- Updated: 2026-09-28 (v1)
+- Updated: 2026-09-30 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

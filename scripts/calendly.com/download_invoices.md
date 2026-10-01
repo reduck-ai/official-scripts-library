@@ -1,10 +1,10 @@
 # Calendly API: download invoices
 
-Automatically download invoices on calendly.com. Log into Calendly via Google SSO, list billing invoices, and download each invoice's PDF into the browser's download directory. Returns per invoice date, title, amount, currency, status, invoiceId, chargeId, filename and path (path is null when no PDF was available for that charge). Runs only on the browser extension, since it needs a native Google SSO session. Org admin only.
+Automatically download invoices on calendly.com. List Calendly billing invoices for the signed-in account and download each invoice's PDF into the browser's download directory. Requires an existing Calendly session — run calendly.com/login_with_google first; this script never signs in itself and fails with "Not signed in" otherwise. Returns per invoice date, title, amount, currency, status, invoiceId, chargeId, filename and path (path is null when no PDF was available for that charge). Org admin only.
 
 - Site: calendly.com
 - Address: `reduck/calendly.com/download_invoices`
-- Updated: 2026-09-18 (v10)
+- Updated: 2026-09-30 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/calendly.com/download_invoices
 
 ## Input
 
-- `email` (string, optional): Google account to pick in the SSO chooser, used only when a fresh sign-in is needed. If the browser already holds a Calendly session the chooser never appears, so this cannot be honoured — the run is then refused rather than silently returning whichever account is signed in. Omit it to read the session that is already active.
+It takes no input.
 
 ## Output
 
@@ -30,7 +30,7 @@ npx @reduck-ai/cli@latest run --script reduck/calendly.com/download_invoices
 
 ### What does "Calendly API: download invoices" do?
 
-Log into Calendly via Google SSO, list billing invoices, and download each invoice's PDF into the browser's download directory. Returns per invoice date, title, amount, currency, status, invoiceId, chargeId, filename and path (path is null when no PDF was available for that charge). Runs only on the browser extension, since it needs a native Google SSO session. Org admin only.
+List Calendly billing invoices for the signed-in account and download each invoice's PDF into the browser's download directory. Requires an existing Calendly session — run calendly.com/login_with_google first; this script never signs in itself and fails with "Not signed in" otherwise. Returns per invoice date, title, amount, currency, status, invoiceId, chargeId, filename and path (path is null when no PDF was available for that charge). Org admin only.
 
 ### How do I automatically download invoices on calendly.com?
 
@@ -42,7 +42,7 @@ You do not need one. "Calendly API: download invoices" drives the real calendly.
 
 ### What information do I need to provide?
 
-Optional: email.
+Nothing. It takes no input.
 
 ### What does it return?
 
@@ -54,7 +54,7 @@ Yes. It acts as you on calendly.com: on your own Chrome it reuses your session, 
 
 ### Does it change anything on calendly.com, or only read data?
 
-It makes changes on calendly.com, like sending, posting or booking something.
+It makes changes on calendly.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

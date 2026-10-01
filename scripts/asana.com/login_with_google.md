@@ -4,7 +4,7 @@ Log into Asana via Google SSO. Picks the Google account (optional email arg), cl
 
 - Site: asana.com
 - Address: `reduck/asana.com/login_with_google`
-- Updated: 2026-09-10 (v7)
+- Updated: 2026-09-30 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -45,7 +45,7 @@ Yes. It acts as you on asana.com: on your own Chrome it reuses your session, and
 
 ### Does it change anything on asana.com, or only read data?
 
-It makes changes on asana.com, like sending, posting or booking something.
+It makes changes on asana.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

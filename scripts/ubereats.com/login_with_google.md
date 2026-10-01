@@ -4,7 +4,7 @@ Log into Uber Eats with Continue with Google through Uber's sign-in, handling th
 
 - Site: ubereats.com
 - Address: `reduck/ubereats.com/login_with_google`
-- Updated: 2026-09-28 (v1)
+- Updated: 2026-09-30 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

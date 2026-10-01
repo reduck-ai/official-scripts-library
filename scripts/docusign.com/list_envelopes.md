@@ -1,10 +1,10 @@
 # DocuSign — list envelopes
 
-Automatically list envelopes on docusign.com. List the envelopes (documents sent for signature) on the signed-in DocuSign account's Agreements page — the last 6 months, first page, as the page loads them: each envelope's id, subject, status, sender, and created / sent / completed / last-modified dates — plus the account's folders (Drafts, Inbox, Sent, Deleted…) with their item counts. Read-only; signed out is a clear error. Only an account with no envelopes has been observed so far.
+Automatically list envelopes on docusign.com. List the envelopes (documents sent for signature) on the signed-in DocuSign account's Agreements page — the last 6 months, first page: each envelope's id, subject, status, sender, and created / sent / completed / last-modified dates — plus the account's folders (Drafts, Inbox, Sent, Deleted…) with their item counts. Read-only; signed out is a clear error. An account with no envelopes returns an empty list.
 
 - Site: docusign.com
 - Address: `reduck/docusign.com/list_envelopes`
-- Updated: 2026-09-28 (v1)
+- Updated: 2026-09-30 (v1)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,7 +29,7 @@ It takes no input.
 
 ### What does "DocuSign — list envelopes" do?
 
-List the envelopes (documents sent for signature) on the signed-in DocuSign account's Agreements page — the last 6 months, first page, as the page loads them: each envelope's id, subject, status, sender, and created / sent / completed / last-modified dates — plus the account's folders (Drafts, Inbox, Sent, Deleted…) with their item counts. Read-only; signed out is a clear error. Only an account with no envelopes has been observed so far.
+List the envelopes (documents sent for signature) on the signed-in DocuSign account's Agreements page — the last 6 months, first page: each envelope's id, subject, status, sender, and created / sent / completed / last-modified dates — plus the account's folders (Drafts, Inbox, Sent, Deleted…) with their item counts. Read-only; signed out is a clear error. An account with no envelopes returns an empty list.
 
 ### How do I automatically list envelopes on docusign.com?
 

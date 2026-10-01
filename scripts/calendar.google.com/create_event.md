@@ -4,7 +4,7 @@ Automatically create a Google Calendar event on calendar.google.com. Create an e
 
 - Site: calendar.google.com
 - Address: `reduck/calendar.google.com/create_event`
-- Updated: 2026-09-03 (v7)
+- Updated: 2026-09-30 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -65,7 +65,7 @@ Yes. It acts as you on calendar.google.com: on your own Chrome it reuses your se
 
 ### Does it change anything on calendar.google.com, or only read data?
 
-It makes changes on calendar.google.com, like sending, posting or booking something.
+It makes changes on calendar.google.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

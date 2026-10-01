@@ -4,7 +4,7 @@ Automatically switch Discord display language on discord.com. Change the display
 
 - Site: discord.com
 - Address: `reduck/discord.com/switch_language`
-- Updated: 2026-08-31 (v4)
+- Updated: 2026-09-30 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -52,7 +52,7 @@ Yes. It acts as you on discord.com: on your own Chrome it reuses your session, a
 
 ### Does it change anything on discord.com, or only read data?
 
-It makes changes on discord.com, like sending, posting or booking something.
+It makes changes on discord.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

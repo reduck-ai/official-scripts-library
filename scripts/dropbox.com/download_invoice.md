@@ -1,10 +1,10 @@
 # Download Dropbox invoice as PDF
 
-Automatically download Dropbox invoice as PDF on dropbox.com. Given an invoiceUrl or receiptUrl from list_invoices, opens the session-gated HTML invoice page and print-to-PDFs it via CDP (Dropbox exposes no direct PDF endpoint). Returns the PDF as base64.
+Automatically download Dropbox invoice as PDF on dropbox.com. Download one Dropbox invoice or receipt as a PDF, given an invoiceUrl or receiptUrl from dropbox.com/list_invoices. Returns the filename and the PDF as base64.
 
 - Site: dropbox.com
 - Address: `reduck/dropbox.com/download_invoice`
-- Updated: 2026-09-29 (v1)
+- Updated: 2026-09-30 (v1)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -28,7 +28,7 @@ npx @reduck-ai/cli@latest run --script reduck/dropbox.com/download_invoice
 
 ### What does "Download Dropbox invoice as PDF" do?
 
-Given an invoiceUrl or receiptUrl from list_invoices, opens the session-gated HTML invoice page and print-to-PDFs it via CDP (Dropbox exposes no direct PDF endpoint). Returns the PDF as base64.
+Download one Dropbox invoice or receipt as a PDF, given an invoiceUrl or receiptUrl from dropbox.com/list_invoices. Returns the filename and the PDF as base64.
 
 ### How do I automatically download Dropbox invoice as PDF on dropbox.com?
 

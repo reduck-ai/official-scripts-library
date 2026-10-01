@@ -1,10 +1,10 @@
 # Download brand logo pack
 
-Automatically download brand logo pack on brandfetch.com. Given a company domain, opens its Brandfetch page and clicks "Download all" to save the full logo/icon/banner pack (SVG/PNG/WebP) to the local Downloads folder via the browser's native download.
+Automatically download brand logo pack on brandfetch.com. Given a company domain, download its full Brandfetch logo pack (logos, icons and banners as SVG/PNG/WebP) as a zip. Returns the brand name and the file; found is false when Brandfetch has no page for the domain.
 
 - Site: brandfetch.com
 - Address: `reduck/brandfetch.com/download_logo`
-- Updated: 2026-09-29 (v7)
+- Updated: 2026-09-30 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -32,7 +32,7 @@ npx @reduck-ai/cli@latest run --script reduck/brandfetch.com/download_logo
 
 ### What does "Download brand logo pack" do?
 
-Given a company domain, opens its Brandfetch page and clicks "Download all" to save the full logo/icon/banner pack (SVG/PNG/WebP) to the local Downloads folder via the browser's native download.
+Given a company domain, download its full Brandfetch logo pack (logos, icons and banners as SVG/PNG/WebP) as a zip. Returns the brand name and the file; found is false when Brandfetch has no page for the domain.
 
 ### How do I automatically download brand logo pack on brandfetch.com?
 

@@ -4,7 +4,7 @@ Log into Grok with Continue with Google, handling the Google account chooser and
 
 - Site: grok.com
 - Address: `reduck/grok.com/login_with_google`
-- Updated: 2026-09-28 (v1)
+- Updated: 2026-09-30 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

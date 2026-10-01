@@ -1,10 +1,10 @@
 # Adobe — list plans
 
-Automatically list plans on adobe.com. List the plans on the signed-in Adobe account (Account → Plans): paid subscriptions as Adobe's billing service returns them, and free memberships (e.g. Creative Cloud Free, Document Cloud Free) with their code, name and description. Read-only; signed out is a clear error. Only the empty paid list has been observed so far (the test account has no paid plan).
+Automatically list plans on adobe.com. List the plans on the signed-in Adobe account (Account → Plans): paid subscriptions, and free memberships (e.g. Creative Cloud Free, Document Cloud Free) with their code, name and description. Read-only; signed out is a clear error. An account with no paid plan returns an empty paid list.
 
 - Site: adobe.com
 - Address: `reduck/adobe.com/list_plans`
-- Updated: 2026-09-28 (v1)
+- Updated: 2026-09-30 (v1)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -30,7 +30,7 @@ It takes no input.
 
 ### What does "Adobe — list plans" do?
 
-List the plans on the signed-in Adobe account (Account → Plans): paid subscriptions as Adobe's billing service returns them, and free memberships (e.g. Creative Cloud Free, Document Cloud Free) with their code, name and description. Read-only; signed out is a clear error. Only the empty paid list has been observed so far (the test account has no paid plan).
+List the plans on the signed-in Adobe account (Account → Plans): paid subscriptions, and free memberships (e.g. Creative Cloud Free, Document Cloud Free) with their code, name and description. Read-only; signed out is a clear error. An account with no paid plan returns an empty paid list.
 
 ### How do I automatically list plans on adobe.com?
 

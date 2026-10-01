@@ -1,10 +1,10 @@
 # Get Current Gmail User
 
-Automatically get Current Gmail User on mail.google.com. Return the signed-in Gmail account's display name and email, read from the account-switcher button's accessible label in the Gmail inbox header.
+Automatically get Current Gmail User on mail.google.com. Return the display name and email of the Gmail account this browser is signed in as.
 
 - Site: mail.google.com
 - Address: `reduck/mail.google.com/get_current_user`
-- Updated: 2026-09-29 (v3)
+- Updated: 2026-09-30 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -28,7 +28,7 @@ It takes no input.
 
 ### What does "Get Current Gmail User" do?
 
-Return the signed-in Gmail account's display name and email, read from the account-switcher button's accessible label in the Gmail inbox header.
+Return the display name and email of the Gmail account this browser is signed in as.
 
 ### How do I automatically get Current Gmail User on mail.google.com?
 

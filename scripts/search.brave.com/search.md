@@ -1,10 +1,10 @@
 # Brave search
 
-Search the web on Brave, one page of results at a time. Returns each result's title, url, snippet and date, plus the query it actually ran.
+Search the web on Brave, one page of results at a time. Returns each result's title, url, snippet and date, plus the query it actually ran. An empty result list means Brave itself found nothing, and the reason is returned in emptyBecause; if the page cannot be read, the script fails with an error instead of returning an empty list.
 
 - Site: search.brave.com
 - Address: `reduck/search.brave.com/search`
-- Updated: 2026-09-28 (v14)
+- Updated: 2026-09-30 (v16)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -20,7 +20,7 @@ npx @reduck-ai/cli@latest run --script reduck/search.brave.com/search
 - `query` (string, required): Search query. The operators site:, quoted phrases and OR are honored. site:domain also covers its subdomains (site:example.com returns docs.example.com), and site:domain/path narrows to a path prefix, which is the cheapest way to slice a large site.
 - `offset` (integer, optional): 0-based page index (0 is the first page, about 20 results). The pool behind one query is limited and its depth varies by query; past its end Brave re-serves earlier pages. hasMore in the output says whether a next page exists: keep paging while it is true, and dedupe on url anyway. Default 0.
 - `country` (string, optional): ISO-3166 alpha-2 country whose Brave results to read, e.g. "us". When omitted, Brave answers for the country of the browser's own network location, so the same query read from two places gives two different result pages. Pass it whenever readings must be comparable across browsers, or must stand in for another reader's, such as an assistant's US-side web search.
-- `exactMatch` (boolean, optional): Intended to force the literal query by clicking Brave's 'Search instead for' link. In practice it has no effect: Brave now corrects spellings without offering that link or reporting a rewrite. To pin a literal string, put it in quotes in query instead. Default false.
+- `exactMatch` (boolean, optional): Deprecated; has no reliable effect, because Brave may correct spellings without saying so. To search a literal string, put it in quotes in query. Default false.
 
 ## Output
 
@@ -38,7 +38,7 @@ npx @reduck-ai/cli@latest run --script reduck/search.brave.com/search
 
 ### What does "Brave search" do?
 
-Search the web on Brave, one page of results at a time. Returns each result's title, url, snippet and date, plus the query it actually ran.
+Search the web on Brave, one page of results at a time. Returns each result's title, url, snippet and date, plus the query it actually ran. An empty result list means Brave itself found nothing, and the reason is returned in emptyBecause; if the page cannot be read, the script fails with an error instead of returning an empty list.
 
 ### What information do I need to provide?
 

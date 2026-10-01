@@ -1,10 +1,10 @@
 # Get current Product Hunt user
 
-Automatically get current Product Hunt user on producthunt.com. Report which Product Hunt account this browser is signed in as: the @username, display name, numeric user id and profile URL, read from the header's own signed-in avatar. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Product Hunt scripts.
+Automatically get current Product Hunt user on producthunt.com. Report which Product Hunt account this browser is signed in as: the @username, display name, numeric user id and profile URL. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Product Hunt scripts.
 
 - Site: producthunt.com
 - Address: `reduck/producthunt.com/get_current_user`
-- Updated: 2026-09-28 (v2)
+- Updated: 2026-09-30 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -31,7 +31,7 @@ It takes no input.
 
 ### What does "Get current Product Hunt user" do?
 
-Report which Product Hunt account this browser is signed in as: the @username, display name, numeric user id and profile URL, read from the header's own signed-in avatar. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Product Hunt scripts.
+Report which Product Hunt account this browser is signed in as: the @username, display name, numeric user id and profile URL. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Product Hunt scripts.
 
 ### How do I automatically get current Product Hunt user on producthunt.com?
 

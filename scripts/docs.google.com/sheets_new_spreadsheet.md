@@ -4,7 +4,7 @@ Create a new Google Spreadsheet in My Drive, optionally with a title. Returns sp
 
 - Site: docs.google.com
 - Address: `reduck/docs.google.com/sheets_new_spreadsheet`
-- Updated: 2026-09-07 (v5)
+- Updated: 2026-09-30 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -47,7 +47,7 @@ Yes. It acts as you on docs.google.com: on your own Chrome it reuses your sessio
 
 ### Does it change anything on docs.google.com, or only read data?
 
-It makes changes on docs.google.com, like sending, posting or booking something.
+It makes changes on docs.google.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

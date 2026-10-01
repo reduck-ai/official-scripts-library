@@ -1,10 +1,10 @@
 # Raycast whoami (signed-in account)
 
-Report which Raycast account this browser is signed in as: the user id, Raycast handle, name, email and whether it has Pro features. Being signed out is reported as a normal answer (loggedIn false), not an error — the anonymous session cookie every visitor gets does not count — so it can be used to check a session before running other Raycast scripts.
+Report which Raycast account this browser is signed in as: the user id, Raycast handle, name, email and whether it has Pro features. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Raycast scripts.
 
 - Site: raycast.com
 - Address: `reduck/raycast.com/whoami`
-- Updated: 2026-09-28 (v1)
+- Updated: 2026-09-30 (v1)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -33,7 +33,7 @@ It takes no input.
 
 ### What does "Raycast whoami (signed-in account)" do?
 
-Report which Raycast account this browser is signed in as: the user id, Raycast handle, name, email and whether it has Pro features. Being signed out is reported as a normal answer (loggedIn false), not an error — the anonymous session cookie every visitor gets does not count — so it can be used to check a session before running other Raycast scripts.
+Report which Raycast account this browser is signed in as: the user id, Raycast handle, name, email and whether it has Pro features. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Raycast scripts.
 
 ### What information do I need to provide?
 

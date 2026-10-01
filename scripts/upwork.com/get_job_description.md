@@ -1,10 +1,10 @@
 # Get job description
 
-Automatically get job description on upwork.com. Fetch a single Upwork job posting's full details by its ciphertext (the ~0… token in the job URL, returned by search_jobs). Covers title, full description, category, occupation, skills, budget or hourly range, workload and duration, experience level, screening questions and attachments. Also covers client activity (applicants, interviews, invites, hires) and the client: country, city, payment verified, member since, score and spend. Works signed out, so no Upwork account is needed; run it on the managed browser, since Upwork's Cloudflare check can block some paired browsers. A job that does not exist or was removed fails with a clear error. Read-only.
+Automatically get job description on upwork.com. Fetch a single Upwork job posting's full details by its ciphertext (the ~0… token in the job URL, returned by search_jobs). Covers title, full description, category, occupation, skills, budget or hourly range, workload and duration, experience level, screening questions and attachments. Also covers client activity (applicants, interviews, invites, hires) and the client: country, city, payment verified, member since, score and spend. No Upwork account needed. A job that does not exist or was removed fails with a clear error. Read-only.
 
 - Site: upwork.com
 - Address: `reduck/upwork.com/get_job_description`
-- Updated: 2026-09-28 (v2)
+- Updated: 2026-09-30 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -51,7 +51,7 @@ npx @reduck-ai/cli@latest run --script reduck/upwork.com/get_job_description
 
 ### What does "Get job description" do?
 
-Fetch a single Upwork job posting's full details by its ciphertext (the ~0… token in the job URL, returned by search_jobs). Covers title, full description, category, occupation, skills, budget or hourly range, workload and duration, experience level, screening questions and attachments. Also covers client activity (applicants, interviews, invites, hires) and the client: country, city, payment verified, member since, score and spend. Works signed out, so no Upwork account is needed; run it on the managed browser, since Upwork's Cloudflare check can block some paired browsers. A job that does not exist or was removed fails with a clear error. Read-only.
+Fetch a single Upwork job posting's full details by its ciphertext (the ~0… token in the job URL, returned by search_jobs). Covers title, full description, category, occupation, skills, budget or hourly range, workload and duration, experience level, screening questions and attachments. Also covers client activity (applicants, interviews, invites, hires) and the client: country, city, payment verified, member since, score and spend. No Upwork account needed. A job that does not exist or was removed fails with a clear error. Read-only.
 
 ### How do I automatically get job description on upwork.com?
 

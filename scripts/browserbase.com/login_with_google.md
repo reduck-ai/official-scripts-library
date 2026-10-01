@@ -1,10 +1,10 @@
 # Browserbase login (Google SSO)
 
-Log into Browserbase with Continue with Google, picking the given Google account, and land on the Browserbase dashboard. Returns straight away if already signed in, and reports the account Browserbase itself holds (read from its Clerk session), never an echo of the argument. Needs the extension-paired browser with that Google account signed in. Warning: if the Google account has no Browserbase account yet, Browserbase creates one (with a new organization) silently during sign-in — there is no sign-up step to stop at.
+Log into Browserbase with Continue with Google, picking the given Google account, and land on the Browserbase dashboard. Returns straight away if already signed in, and reports the account Browserbase itself is signed in as, never an echo of the argument. Needs the extension-paired browser with that Google account signed in. Warning: if the Google account has no Browserbase account yet, Browserbase creates one (with a new organization) silently during sign-in — there is no sign-up step to stop at.
 
 - Site: browserbase.com
 - Address: `reduck/browserbase.com/login_with_google`
-- Updated: 2026-09-28 (v1)
+- Updated: 2026-09-30 (v1)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,7 +29,7 @@ npx @reduck-ai/cli@latest run --script reduck/browserbase.com/login_with_google
 
 ### What does "Browserbase login (Google SSO)" do?
 
-Log into Browserbase with Continue with Google, picking the given Google account, and land on the Browserbase dashboard. Returns straight away if already signed in, and reports the account Browserbase itself holds (read from its Clerk session), never an echo of the argument. Needs the extension-paired browser with that Google account signed in. Warning: if the Google account has no Browserbase account yet, Browserbase creates one (with a new organization) silently during sign-in — there is no sign-up step to stop at.
+Log into Browserbase with Continue with Google, picking the given Google account, and land on the Browserbase dashboard. Returns straight away if already signed in, and reports the account Browserbase itself is signed in as, never an echo of the argument. Needs the extension-paired browser with that Google account signed in. Warning: if the Google account has no Browserbase account yet, Browserbase creates one (with a new organization) silently during sign-in — there is no sign-up step to stop at.
 
 ### What information do I need to provide?
 

@@ -1,10 +1,10 @@
 # Adobe — list orders and invoices
 
-Automatically list orders and invoices on adobe.com. List the orders / invoices and open quotes on the signed-in Adobe account (Account → Orders and invoices), as Adobe's billing service returns them. Read-only; signed out is a clear error. An account with no purchases returns empty lists — only that case has been observed so far.
+Automatically list orders and invoices on adobe.com. List the orders / invoices and open quotes on the signed-in Adobe account (Account → Orders and invoices). Read-only; signed out is a clear error. An account with no purchases returns empty lists.
 
 - Site: adobe.com
 - Address: `reduck/adobe.com/list_orders`
-- Updated: 2026-09-28 (v1)
+- Updated: 2026-09-30 (v1)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -31,7 +31,7 @@ It takes no input.
 
 ### What does "Adobe — list orders and invoices" do?
 
-List the orders / invoices and open quotes on the signed-in Adobe account (Account → Orders and invoices), as Adobe's billing service returns them. Read-only; signed out is a clear error. An account with no purchases returns empty lists — only that case has been observed so far.
+List the orders / invoices and open quotes on the signed-in Adobe account (Account → Orders and invoices). Read-only; signed out is a clear error. An account with no purchases returns empty lists.
 
 ### How do I automatically list orders and invoices on adobe.com?
 

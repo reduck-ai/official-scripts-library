@@ -4,7 +4,7 @@ Automatically update a ClickUp task's name, description or status on app.clickup
 
 - Site: app.clickup.com
 - Address: `reduck/app.clickup.com/update_task`
-- Updated: 2026-09-23 (v1)
+- Updated: 2026-09-30 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -67,7 +67,7 @@ Yes. It acts as you on app.clickup.com: on your own Chrome it reuses your sessio
 
 ### Does it change anything on app.clickup.com, or only read data?
 
-It makes changes on app.clickup.com, like sending, posting or booking something.
+It makes changes on app.clickup.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

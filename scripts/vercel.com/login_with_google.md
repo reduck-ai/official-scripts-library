@@ -4,7 +4,7 @@ Log into Vercel using Sign in with Google, ending on your Vercel dashboard. Retu
 
 - Site: vercel.com
 - Address: `reduck/vercel.com/login_with_google`
-- Updated: 2026-08-21 (v3)
+- Updated: 2026-09-30 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -45,7 +45,7 @@ Yes. It acts as you on vercel.com: on your own Chrome it reuses your session, an
 
 ### Does it change anything on vercel.com, or only read data?
 
-It makes changes on vercel.com, like sending, posting or booking something.
+It makes changes on vercel.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

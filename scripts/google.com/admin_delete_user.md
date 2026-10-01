@@ -4,7 +4,7 @@ Automatically delete a Google Workspace user (Admin console) on google.com. Dele
 
 - Site: google.com
 - Address: `reduck/google.com/admin_delete_user`
-- Updated: 2026-08-10 (v7)
+- Updated: 2026-09-30 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -54,7 +54,7 @@ Yes. It acts as you on google.com: on your own Chrome it reuses your session, an
 
 ### Does it change anything on google.com, or only read data?
 
-It makes changes on google.com, like sending, posting or booking something.
+It makes changes on google.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

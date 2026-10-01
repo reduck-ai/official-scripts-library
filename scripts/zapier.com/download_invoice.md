@@ -1,10 +1,10 @@
 # Download Zapier invoice
 
-Automatically download Zapier invoice on zapier.com. Download a single Zapier invoice as PDF, by href from zapier.com/list_invoices. Each invoice is an HTML page with no native PDF, so this renders it to PDF via CDP. Returns the PDF bytes as base64 plus a filename.
+Automatically download Zapier invoice on zapier.com. Download a single Zapier invoice as a PDF, given its href from zapier.com/list_invoices. Returns the PDF bytes as base64 plus a filename.
 
 - Site: zapier.com
 - Address: `reduck/zapier.com/download_invoice`
-- Updated: 2026-09-29 (v1)
+- Updated: 2026-09-30 (v1)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -28,7 +28,7 @@ npx @reduck-ai/cli@latest run --script reduck/zapier.com/download_invoice
 
 ### What does "Download Zapier invoice" do?
 
-Download a single Zapier invoice as PDF, by href from zapier.com/list_invoices. Each invoice is an HTML page with no native PDF, so this renders it to PDF via CDP. Returns the PDF bytes as base64 plus a filename.
+Download a single Zapier invoice as a PDF, given its href from zapier.com/list_invoices. Returns the PDF bytes as base64 plus a filename.
 
 ### How do I automatically download Zapier invoice on zapier.com?
 

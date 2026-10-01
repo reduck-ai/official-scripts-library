@@ -4,7 +4,7 @@ Log into Surfshark (my.surfshark.com) via Google SSO: dismisses the cookie banne
 
 - Site: my.surfshark.com
 - Address: `reduck/my.surfshark.com/login_with_google`
-- Updated: 2026-08-20 (v3)
+- Updated: 2026-09-30 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -45,7 +45,7 @@ Yes. It acts as you on my.surfshark.com: on your own Chrome it reuses your sessi
 
 ### Does it change anything on my.surfshark.com, or only read data?
 
-It makes changes on my.surfshark.com, like sending, posting or booking something.
+It makes changes on my.surfshark.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

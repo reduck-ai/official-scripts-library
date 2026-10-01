@@ -1,10 +1,10 @@
 # Canva login
 
-Log into Canva via Google SSO and land in the Canva app, returning the signed-in account read back out of the app itself. If the browser already has a Canva session it returns straight away without touching canva.com/login (that page closes its own tab a few seconds after load whenever a session exists). Asking for an account other than the live session is refused by name rather than attempted, because Canva will not show its sign-in modal while any session is open. Needs the extension-paired browser, not a managed/cloud one.
+Log into Canva via Google SSO and land in the Canva app, returning the signed-in account as Canva reports it. If the browser already has a Canva session it returns straight away. Asking for a different account than the one already signed in is refused with a clear error; sign out of Canva first. Needs the extension-paired browser, not a managed/cloud one.
 
 - Site: canva.com
 - Address: `reduck/canva.com/login_with_google`
-- Updated: 2026-09-28 (v15)
+- Updated: 2026-09-30 (v16)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,7 +29,7 @@ npx @reduck-ai/cli@latest run --script reduck/canva.com/login_with_google
 
 ### What does "Canva login" do?
 
-Log into Canva via Google SSO and land in the Canva app, returning the signed-in account read back out of the app itself. If the browser already has a Canva session it returns straight away without touching canva.com/login (that page closes its own tab a few seconds after load whenever a session exists). Asking for an account other than the live session is refused by name rather than attempted, because Canva will not show its sign-in modal while any session is open. Needs the extension-paired browser, not a managed/cloud one.
+Log into Canva via Google SSO and land in the Canva app, returning the signed-in account as Canva reports it. If the browser already has a Canva session it returns straight away. Asking for a different account than the one already signed in is refused with a clear error; sign out of Canva first. Needs the extension-paired browser, not a managed/cloud one.
 
 ### What information do I need to provide?
 

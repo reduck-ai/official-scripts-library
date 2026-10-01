@@ -4,7 +4,7 @@ Automatically get Luma event attendees on luma.com. An unofficial Luma API: get 
 
 - Site: luma.com
 - Address: `reduck/luma.com/get_event_attendees`
-- Updated: 2026-09-29 (v4)
+- Updated: 2026-09-30 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -35,7 +35,7 @@ npx @reduck-ai/cli@latest run --script reduck/luma.com/get_event_attendees
 
 ### What does "Get Luma event attendees" do?
 
-Get the attendees of a Luma event. When the signed-in account is an approved guest and the organizer has the guest list switched on, this returns the FULL roster — every guest, paginated, with their public profile and social handles. Otherwise it falls back to the featured preview Luma shows on the event page and says why in roster_note, so \"few attendees\" is never mistaken for \"the event is empty\". Check roster_scope to tell the two apart. Returns public profile fields only — no email addresses — but it is still a list of real people, so treat the output as personal data.
+Get the attendees of a Luma event. When the signed-in account is an approved guest and the organizer has the guest list switched on, this returns the full roster — every guest, paginated, with their public profile and social handles. Otherwise it returns the featured preview Luma shows on the event page and explains why in roster_note, so a short list is never mistaken for an empty event. Check roster_scope to tell the two apart. Returns public profile fields only — no email addresses — but it is still a list of real people, so treat the output as personal data.
 
 ### How do I automatically get Luma event attendees on luma.com?
 

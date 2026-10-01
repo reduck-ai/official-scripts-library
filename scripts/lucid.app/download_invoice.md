@@ -1,10 +1,10 @@
 # Download a Lucid invoice PDF
 
-Automatically download a Lucid invoice PDF on lucid.app. Download one Lucid (Lucidchart/Lucidspark) billing invoice PDF, given the invoice number that lucid.app/list_invoices returns. Returns the real filename plus the PDF bytes as base64 (decode + write it yourself). Opens the invoices table, addresses the row by its own rowidentifier so a wrong number fails loudly instead of downloading the first row, and reads the bytes from payment.lucid.app rather than relying on the browser download (Lucid serves invoices inline, so the download never completes). Works whatever language the account is set to. Pass pdfUrl instead to skip the billing UI entirely.
+Automatically download a Lucid invoice PDF on lucid.app. Download one Lucid (Lucidchart/Lucidspark) billing invoice PDF, given the invoice number that lucid.app/list_invoices returns. Returns the filename plus the PDF bytes as base64 (decode and write it yourself). A number that does not match an invoice fails with a clear error. Works whatever language the account is set to. Pass pdfUrl (returned by a previous run) instead of number to download it directly.
 
 - Site: lucid.app
 - Address: `reduck/lucid.app/download_invoice`
-- Updated: 2026-09-29 (v1)
+- Updated: 2026-09-30 (v1)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -32,7 +32,7 @@ npx @reduck-ai/cli@latest run --script reduck/lucid.app/download_invoice
 
 ### What does "Download a Lucid invoice PDF" do?
 
-Download one Lucid (Lucidchart/Lucidspark) billing invoice PDF, given the invoice number that lucid.app/list_invoices returns. Returns the real filename plus the PDF bytes as base64 (decode + write it yourself). Opens the invoices table, addresses the row by its own rowidentifier so a wrong number fails loudly instead of downloading the first row, and reads the bytes from payment.lucid.app rather than relying on the browser download (Lucid serves invoices inline, so the download never completes). Works whatever language the account is set to. Pass pdfUrl instead to skip the billing UI entirely.
+Download one Lucid (Lucidchart/Lucidspark) billing invoice PDF, given the invoice number that lucid.app/list_invoices returns. Returns the filename plus the PDF bytes as base64 (decode and write it yourself). A number that does not match an invoice fails with a clear error. Works whatever language the account is set to. Pass pdfUrl (returned by a previous run) instead of number to download it directly.
 
 ### How do I automatically download a Lucid invoice PDF on lucid.app?
 

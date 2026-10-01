@@ -4,7 +4,7 @@ Log into TikTok with Continue with Google, picking the given Google account in G
 
 - Site: tiktok.com
 - Address: `reduck/tiktok.com/login_with_google`
-- Updated: 2026-09-25 (v1)
+- Updated: 2026-09-30 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -43,11 +43,11 @@ It returns userId, already, loggedIn, nickname, username.
 
 ### Do I need to be logged in to tiktok.com?
 
-Yes. It acts as you on tiktok.com: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the tiktok.com cookies saved by the Reduck extension.
+No. It only uses pages of tiktok.com that are reachable without signing in.
 
 ### Does it change anything on tiktok.com, or only read data?
 
-It makes changes on tiktok.com, like sending, posting or booking something.
+It makes changes on tiktok.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

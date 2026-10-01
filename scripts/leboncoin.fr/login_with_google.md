@@ -4,7 +4,7 @@ Log into Leboncoin with Continuer avec Google, handling the Google account choos
 
 - Site: leboncoin.fr
 - Address: `reduck/leboncoin.fr/login_with_google`
-- Updated: 2026-09-28 (v1)
+- Updated: 2026-09-30 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

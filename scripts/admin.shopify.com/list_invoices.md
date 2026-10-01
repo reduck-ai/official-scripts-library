@@ -1,10 +1,10 @@
 # Shopify: list invoices
 
-Automatically list invoices on admin.shopify.com. List a Shopify store's billing invoices — number, date, type, status, amount and invoiceUrl — for the store the signed-in account lands on. Metadata only: feed a row's invoiceUrl to admin.shopify.com/download_invoice to fetch that invoice's PDF. A store that has never been invoiced returns an empty list. Because listing no longer depends on the documents, a store whose PDFs Shopify withholds (for example one it has deactivated) still returns its full invoice list.
+Automatically list invoices on admin.shopify.com. List a Shopify store's billing invoices — number, date, type, status, amount and invoiceUrl — for the store the signed-in account lands on. Metadata only: feed a row's invoiceUrl to admin.shopify.com/download_invoice to fetch that invoice's PDF. A store that has never been invoiced returns an empty list. Deactivated stores still return their full invoice list, even when their PDFs are unavailable.
 
 - Site: admin.shopify.com
 - Address: `reduck/admin.shopify.com/list_invoices`
-- Updated: 2026-09-29 (v11)
+- Updated: 2026-09-30 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -28,7 +28,7 @@ It takes no input.
 
 ### What does "Shopify: list invoices" do?
 
-List a Shopify store's billing invoices — number, date, type, status, amount and invoiceUrl — for the store the signed-in account lands on. Metadata only: feed a row's invoiceUrl to admin.shopify.com/download_invoice to fetch that invoice's PDF. A store that has never been invoiced returns an empty list. Because listing no longer depends on the documents, a store whose PDFs Shopify withholds (for example one it has deactivated) still returns its full invoice list.
+List a Shopify store's billing invoices — number, date, type, status, amount and invoiceUrl — for the store the signed-in account lands on. Metadata only: feed a row's invoiceUrl to admin.shopify.com/download_invoice to fetch that invoice's PDF. A store that has never been invoiced returns an empty list. Deactivated stores still return their full invoice list, even when their PDFs are unavailable.
 
 ### How do I automatically list invoices on admin.shopify.com?
 

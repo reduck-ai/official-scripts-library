@@ -4,7 +4,7 @@ Automatically ask Perplexity on perplexity.ai. Ask Perplexity a question and get
 
 - Site: perplexity.ai
 - Address: `reduck/perplexity.ai/ask`
-- Updated: 2026-09-11 (v13)
+- Updated: 2026-09-30 (v14)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -57,7 +57,7 @@ Yes. It acts as you on perplexity.ai: on your own Chrome it reuses your session,
 
 ### Does it change anything on perplexity.ai, or only read data?
 
-It makes changes on perplexity.ai, like sending, posting or booking something.
+It makes changes on perplexity.ai, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

@@ -4,7 +4,7 @@ Log into Vinted with Continue with Google on the country site where your account
 
 - Site: vinted.com
 - Address: `reduck/vinted.com/login_with_google`
-- Updated: 2026-09-28 (v1)
+- Updated: 2026-09-30 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

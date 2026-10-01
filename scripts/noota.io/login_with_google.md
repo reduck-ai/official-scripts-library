@@ -4,7 +4,7 @@ Log into Noota with Continue with Google, handling the Google account chooser an
 
 - Site: noota.io
 - Address: `reduck/noota.io/login_with_google`
-- Updated: 2026-09-28 (v1)
+- Updated: 2026-09-30 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

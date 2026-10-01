@@ -1,10 +1,10 @@
 # Ask ChatGPT
 
-Automatically ask ChatGPT on chatgpt.com. Open a new ChatGPT chat, send one question, wait for the answer to finish (up to 3 min), and return what the model answered, the sources it cited, the searches it ran, and what ChatGPT itself reports about how it searched.
+Automatically ask ChatGPT on chatgpt.com. Open a new ChatGPT chat, send one question, wait for the answer to finish (up to 3 minutes), and return the answer, the sources it cited, and the web searches it ran.
 
 - Site: chatgpt.com
 - Address: `reduck/chatgpt.com/ask`
-- Updated: 2026-09-26 (v37)
+- Updated: 2026-09-30 (v38)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -39,7 +39,7 @@ npx @reduck-ai/cli@latest run --script reduck/chatgpt.com/ask
 
 ### What does "Ask ChatGPT" do?
 
-Open a new ChatGPT chat, send one question, wait for the answer to finish (up to 3 min), and return what the model answered, the sources it cited, the searches it ran, and what ChatGPT itself reports about how it searched.
+Open a new ChatGPT chat, send one question, wait for the answer to finish (up to 3 minutes), and return the answer, the sources it cited, and the web searches it ran.
 
 ### How do I automatically ask ChatGPT on chatgpt.com?
 
@@ -63,7 +63,7 @@ No. It only uses pages of chatgpt.com that are reachable without signing in.
 
 ### Does it change anything on chatgpt.com, or only read data?
 
-It makes changes on chatgpt.com, like sending, posting or booking something.
+It makes changes on chatgpt.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

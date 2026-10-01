@@ -4,7 +4,7 @@ Automatically post a Discord message on discord.com. Posts a text message in a D
 
 - Site: discord.com
 - Address: `reduck/discord.com/post_message`
-- Updated: 2026-09-22 (v10)
+- Updated: 2026-09-30 (v12)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,6 +18,7 @@ npx @reduck-ai/cli@latest run --script reduck/discord.com/post_message
 ## Input
 
 - `channelUrl` (string, required): Full channel URL, e.g. https://discord.com/channels/<guildId>/<channelId>
+- `dry_run` (boolean, optional): When true, everything runs — the file is staged and confirmed on the composer and the text is typed — and then the run stops before the send keypress. Nothing is posted: sent comes back false, messageId is null and dry_run is true. Use it to verify a channel, a message and an attachment are accepted without posting a real, visible message.
 - `message` (string, optional): Text of the message. Optional when a file is attached, in which case it becomes the message's caption. Discord refuses anything over 2000 characters client-side.
 - `filename` (string, optional): Name the file is posted under, e.g. report.csv. Required whenever fileBase64 is given, and used to confirm the attachment Discord stored is the one that was sent. Not used with the `attachment` file input, which posts the file under the input's own name.
 - `mimeType` (string, optional): Optional content type for the attachment, e.g. text/csv. Guessed from the filename extension when omitted.
@@ -26,12 +27,13 @@ npx @reduck-ai/cli@latest run --script reduck/discord.com/post_message
 
 ## Output
 
-- `sent` (boolean, required)
-- `content` (string | null, optional): Content as stored by Discord.
+- `sent` (boolean, required): False on a dry run, where nothing was posted.
+- `content` (string | null, optional): Content as stored by Discord. Null on a dry run.
+- `dry_run` (boolean, optional): True when this run stopped before the send keypress. The file was still staged and the text still typed — only the send was skipped.
 - `channelId` (string | null, optional)
-- `messageId` (string | null, optional): ID of the created message.
+- `messageId` (string | null, optional): ID of the created message. Null on a dry run.
 - `timestamp` (string | null, optional)
-- `attachment` (object | null, optional): The file Discord stored, read back from its own response — null when no file was sent.
+- `attachment` (object | null, optional): The file Discord stored, read back from its own response — null when no file was sent, and null on a dry run, where nothing was stored.
 
 ## FAQ
 
@@ -49,11 +51,11 @@ You do not need one. "Post a Discord message" drives the real discord.com pages 
 
 ### What information do I need to provide?
 
-Required: channelUrl. Optional: message, filename, mimeType, attachment, fileBase64.
+Required: channelUrl. Optional: dry_run, message, filename, mimeType, attachment, fileBase64.
 
 ### What does it return?
 
-It returns sent, content, channelId, messageId, timestamp, attachment.
+It returns sent, content, dry_run, channelId, messageId, timestamp, attachment.
 
 ### Do I need to be logged in to discord.com?
 
@@ -61,7 +63,7 @@ Yes. It acts as you on discord.com: on your own Chrome it reuses your session, a
 
 ### Does it change anything on discord.com, or only read data?
 
-It makes changes on discord.com, like sending, posting or booking something.
+It makes changes on discord.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

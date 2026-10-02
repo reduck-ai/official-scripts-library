@@ -4,7 +4,7 @@ Automatically get Event Lowest Ticket Price on ticketmaster.com. Open a Ticketma
 
 - Site: ticketmaster.com
 - Address: `reduck/ticketmaster.com/get_lowest_price`
-- Updated: 2026-09-18 (v4)
+- Updated: 2026-10-01 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

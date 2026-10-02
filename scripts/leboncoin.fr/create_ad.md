@@ -4,7 +4,7 @@ Automatically create a leboncoin classified ad on leboncoin.fr. Create a classif
 
 - Site: leboncoin.fr
 - Address: `reduck/leboncoin.fr/create_ad`
-- Updated: 2026-09-29 (v7)
+- Updated: 2026-10-01 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it

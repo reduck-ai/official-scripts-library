@@ -4,7 +4,7 @@ Report which Stripe Dashboard user this browser is signed in as: the user email.
 
 - Site: dashboard.stripe.com
 - Address: `reduck/dashboard.stripe.com/whoami`
-- Updated: 2026-09-30 (v1)
+- Updated: 2026-10-01 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Report which Uber Eats account this browser is signed in as: the account name, t
 
 - Site: ubereats.com
 - Address: `reduck/ubereats.com/whoami`
-- Updated: 2026-09-30 (v1)
+- Updated: 2026-10-01 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

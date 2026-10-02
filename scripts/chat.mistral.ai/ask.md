@@ -4,7 +4,7 @@ Automatically ask Le Chat on chat.mistral.ai. Open a new Le Chat conversation, s
 
 - Site: chat.mistral.ai
 - Address: `reduck/chat.mistral.ai/ask`
-- Updated: 2026-08-26 (v3)
+- Updated: 2026-10-01 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -55,7 +55,7 @@ Yes. It acts as you on chat.mistral.ai: on your own Chrome it reuses your sessio
 
 ### Does it change anything on chat.mistral.ai, or only read data?
 
-It makes changes on chat.mistral.ai, like sending, posting or booking something.
+It makes changes on chat.mistral.ai, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

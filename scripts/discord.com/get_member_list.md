@@ -4,7 +4,7 @@ List the members shown in a Discord server's member sidebar for a given channel.
 
 - Site: discord.com
 - Address: `reduck/discord.com/get_member_list`
-- Updated: 2026-09-15 (v7)
+- Updated: 2026-10-01 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it

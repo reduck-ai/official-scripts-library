@@ -4,7 +4,7 @@ Log into the Stripe Dashboard with Continue with Google, handling the Google acc
 
 - Site: dashboard.stripe.com
 - Address: `reduck/dashboard.stripe.com/login_with_google`
-- Updated: 2026-09-28 (v1)
+- Updated: 2026-10-01 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

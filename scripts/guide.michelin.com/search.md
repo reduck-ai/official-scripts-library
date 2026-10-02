@@ -4,7 +4,7 @@ Automatically search MICHELIN Guide restaurants on guide.michelin.com. Search th
 
 - Site: guide.michelin.com
 - Address: `reduck/guide.michelin.com/search`
-- Updated: 2026-09-03 (v1)
+- Updated: 2026-10-01 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

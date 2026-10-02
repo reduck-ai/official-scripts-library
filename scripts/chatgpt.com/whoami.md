@@ -4,7 +4,7 @@ Report which ChatGPT account this browser is signed in as: the user id, email an
 
 - Site: chatgpt.com
 - Address: `reduck/chatgpt.com/whoami`
-- Updated: 2026-09-30 (v1)
+- Updated: 2026-10-01 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

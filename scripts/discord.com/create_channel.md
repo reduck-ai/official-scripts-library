@@ -4,7 +4,7 @@ Create a channel in a Discord server — text, voice, announcement, stage or for
 
 - Site: discord.com
 - Address: `reduck/discord.com/create_channel`
-- Updated: 2026-09-09 (v7)
+- Updated: 2026-10-01 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -54,7 +54,7 @@ Yes. It acts as you on discord.com: on your own Chrome it reuses your session, a
 
 ### Does it change anything on discord.com, or only read data?
 
-It makes changes on discord.com, like sending, posting or booking something.
+It makes changes on discord.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

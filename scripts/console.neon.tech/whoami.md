@@ -4,7 +4,7 @@ Report which Neon console account this browser is signed in as: email, first nam
 
 - Site: console.neon.tech
 - Address: `reduck/console.neon.tech/whoami`
-- Updated: 2026-09-30 (v1)
+- Updated: 2026-10-01 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

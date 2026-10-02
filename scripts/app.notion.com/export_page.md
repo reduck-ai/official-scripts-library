@@ -4,7 +4,7 @@ Automatically export a Notion page to PDF, HTML or Markdown on app.notion.com. E
 
 - Site: app.notion.com
 - Address: `reduck/app.notion.com/export_page`
-- Updated: 2026-09-16 (v2)
+- Updated: 2026-10-01 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

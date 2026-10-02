@@ -4,7 +4,7 @@ Report which Google account the Google Admin console is signed in as in this bro
 
 - Site: admin.google.com
 - Address: `reduck/admin.google.com/whoami`
-- Updated: 2026-09-30 (v1)
+- Updated: 2026-10-01 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

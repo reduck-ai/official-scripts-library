@@ -4,7 +4,7 @@ Automatically list Linear workspace members and roles on linear.app. List the wo
 
 - Site: linear.app
 - Address: `reduck/linear.app/list_users_and_roles`
-- Updated: 2026-09-07 (v17)
+- Updated: 2026-10-01 (v18)
 - Author: Reduck AI (reduck)
 
 ## Run it

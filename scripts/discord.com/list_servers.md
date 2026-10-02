@@ -4,7 +4,7 @@ Automatically list Discord servers on discord.com. Lists the Discord servers the
 
 - Site: discord.com
 - Address: `reduck/discord.com/list_servers`
-- Updated: 2026-09-17 (v5)
+- Updated: 2026-10-01 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it

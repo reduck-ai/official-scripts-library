@@ -4,7 +4,7 @@ Automatically list calendar events (Outlook) on outlook.live.com. List events fr
 
 - Site: outlook.live.com
 - Address: `reduck/outlook.live.com/list_events`
-- Updated: 2026-09-16 (v1)
+- Updated: 2026-10-01 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

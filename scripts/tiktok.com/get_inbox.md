@@ -4,7 +4,7 @@ Automatically get TikTok direct message inbox on tiktok.com. List the signed-in 
 
 - Site: tiktok.com
 - Address: `reduck/tiktok.com/get_inbox`
-- Updated: 2026-09-03 (v3)
+- Updated: 2026-10-01 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

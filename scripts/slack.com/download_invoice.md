@@ -4,7 +4,7 @@ Automatically download a Slack invoice PDF on slack.com. An unofficial Slack API
 
 - Site: slack.com
 - Address: `reduck/slack.com/download_invoice`
-- Updated: 2026-09-29 (v1)
+- Updated: 2026-10-01 (v2)
 - Author: Reduck AI (reduck)
 
 ## About

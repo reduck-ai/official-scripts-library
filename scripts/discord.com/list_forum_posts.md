@@ -4,7 +4,7 @@ Automatically list Discord forum posts on discord.com. List the posts (threads) 
 
 - Site: discord.com
 - Address: `reduck/discord.com/list_forum_posts`
-- Updated: 2026-09-27 (v7)
+- Updated: 2026-10-01 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it

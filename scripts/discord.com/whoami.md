@@ -4,7 +4,7 @@ Report which Discord account this browser is signed in as: the username, display
 
 - Site: discord.com
 - Address: `reduck/discord.com/whoami`
-- Updated: 2026-09-25 (v1)
+- Updated: 2026-10-01 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

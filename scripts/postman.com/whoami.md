@@ -4,7 +4,7 @@ Report which Postman account this browser is signed in as: the account email. Be
 
 - Site: postman.com
 - Address: `reduck/postman.com/whoami`
-- Updated: 2026-09-30 (v1)
+- Updated: 2026-10-01 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

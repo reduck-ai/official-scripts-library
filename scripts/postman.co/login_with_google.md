@@ -4,7 +4,7 @@ Log into Postman with Sign In with Google, handling the Google account chooser a
 
 - Site: postman.co
 - Address: `reduck/postman.co/login_with_google`
-- Updated: 2026-09-28 (v1)
+- Updated: 2026-10-01 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

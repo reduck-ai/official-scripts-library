@@ -4,7 +4,7 @@ Log into Lucid (Lucidchart) using your connected Google account. Lands on the Lu
 
 - Site: lucid.app
 - Address: `reduck/lucid.app/login_with_google`
-- Updated: 2026-08-20 (v3)
+- Updated: 2026-10-01 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -45,7 +45,7 @@ Yes. It acts as you on lucid.app: on your own Chrome it reuses your session, and
 
 ### Does it change anything on lucid.app, or only read data?
 
-It makes changes on lucid.app, like sending, posting or booking something.
+It makes changes on lucid.app, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

@@ -4,7 +4,7 @@ Report which Crunchbase account this browser is signed in as: email, first name 
 
 - Site: crunchbase.com
 - Address: `reduck/crunchbase.com/whoami`
-- Updated: 2026-09-30 (v1)
+- Updated: 2026-10-01 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

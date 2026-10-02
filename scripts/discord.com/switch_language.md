@@ -4,7 +4,7 @@ Automatically switch Discord display language on discord.com. Change the display
 
 - Site: discord.com
 - Address: `reduck/discord.com/switch_language`
-- Updated: 2026-09-30 (v5)
+- Updated: 2026-10-01 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it

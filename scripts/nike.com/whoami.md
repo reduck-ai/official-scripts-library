@@ -4,7 +4,7 @@ Report which Nike Member account this browser is signed in as: the account email
 
 - Site: nike.com
 - Address: `reduck/nike.com/whoami`
-- Updated: 2026-09-30 (v1)
+- Updated: 2026-10-01 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

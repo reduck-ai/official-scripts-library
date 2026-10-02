@@ -4,7 +4,7 @@ Log into Descript via 'Continue with Google'. Drives the chooser and confirms th
 
 - Site: descript.com
 - Address: `reduck/descript.com/login_with_google`
-- Updated: 2026-09-21 (v3)
+- Updated: 2026-10-01 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -45,7 +45,7 @@ No. It only uses pages of descript.com that are reachable without signing in.
 
 ### Does it change anything on descript.com, or only read data?
 
-It makes changes on descript.com, like sending, posting or booking something.
+It makes changes on descript.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

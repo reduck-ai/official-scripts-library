@@ -4,7 +4,7 @@ Automatically read a TikTok direct message conversation on tiktok.com. Read the 
 
 - Site: tiktok.com
 - Address: `reduck/tiktok.com/get_conversation`
-- Updated: 2026-09-03 (v2)
+- Updated: 2026-10-01 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,8 +18,8 @@ npx @reduck-ai/cli@latest run --script reduck/tiktok.com/get_conversation
 ## Input
 
 - `count` (integer, optional): Target number of messages to collect; the thread is scrolled back until this many are loaded or it reaches the beginning.
-- `username` (string, optional): Handle of the person whose thread to read, with or without a leading @. Give this or conversationId.
-- `conversationId` (string, optional): Conversation id as returned by the inbox script. Give this or username; it also addresses group threads, which have no single handle.
+- `username` (string, optional): Handle of the person whose thread to read, with or without a leading @. Required unless conversationId is given; give exactly one of the two.
+- `conversationId` (string, optional): Conversation id as returned by the inbox script. Required unless username is given; give exactly one of the two. It also addresses group threads, which have no single handle.
 
 ## Output
 

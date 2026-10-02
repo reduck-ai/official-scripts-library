@@ -4,7 +4,7 @@ Automatically list LinkedIn message inbox on linkedin.com. List the classic Link
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/list_inbox`
-- Updated: 2026-09-03 (v5)
+- Updated: 2026-10-01 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

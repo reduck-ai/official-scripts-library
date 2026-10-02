@@ -4,7 +4,7 @@ Automatically save (Favourite) TikTok Video on tiktok.com. Adds a public TikTok 
 
 - Site: tiktok.com
 - Address: `reduck/tiktok.com/save_video`
-- Updated: 2026-09-10 (v6)
+- Updated: 2026-10-01 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -53,7 +53,7 @@ Yes. It acts as you on tiktok.com: on your own Chrome it reuses your session, an
 
 ### Does it change anything on tiktok.com, or only read data?
 
-It makes changes on tiktok.com, like sending, posting or booking something.
+It makes changes on tiktok.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

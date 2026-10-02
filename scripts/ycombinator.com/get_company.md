@@ -4,7 +4,7 @@ Automatically get YC company profile on ycombinator.com. Get one YC company's fu
 
 - Site: ycombinator.com
 - Address: `reduck/ycombinator.com/get_company`
-- Updated: 2026-07-10 (v1)
+- Updated: 2026-10-01 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

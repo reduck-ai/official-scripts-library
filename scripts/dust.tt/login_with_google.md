@@ -4,7 +4,7 @@ Log into Dust with Continue with Google, handling the Google account chooser and
 
 - Site: dust.tt
 - Address: `reduck/dust.tt/login_with_google`
-- Updated: 2026-09-25 (v1)
+- Updated: 2026-10-01 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -47,7 +47,7 @@ Yes. It acts as you on dust.tt: on your own Chrome it reuses your session, and o
 
 ### Does it change anything on dust.tt, or only read data?
 
-It makes changes on dust.tt, like sending, posting or booking something.
+It makes changes on dust.tt, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

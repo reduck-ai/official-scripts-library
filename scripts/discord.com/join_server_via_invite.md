@@ -4,7 +4,7 @@ Join a Discord server using an invite link or code, e.g. https://discord.com/inv
 
 - Site: discord.com
 - Address: `reduck/discord.com/join_server_via_invite`
-- Updated: 2026-09-03 (v16)
+- Updated: 2026-10-01 (v20)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -46,7 +46,7 @@ Yes. It acts as you on discord.com: on your own Chrome it reuses your session, a
 
 ### Does it change anything on discord.com, or only read data?
 
-It makes changes on discord.com, like sending, posting or booking something.
+It makes changes on discord.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

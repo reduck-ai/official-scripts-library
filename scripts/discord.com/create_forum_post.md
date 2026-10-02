@@ -4,7 +4,7 @@ Automatically create a Discord forum post on discord.com. Create a post (thread)
 
 - Site: discord.com
 - Address: `reduck/discord.com/create_forum_post`
-- Updated: 2026-08-27 (v8)
+- Updated: 2026-10-01 (v12)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -59,7 +59,7 @@ Yes. It acts as you on discord.com: on your own Chrome it reuses your session, a
 
 ### Does it change anything on discord.com, or only read data?
 
-It makes changes on discord.com, like sending, posting or booking something.
+It makes changes on discord.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

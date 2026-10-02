@@ -4,7 +4,7 @@ Automatically get Yelp business reviews on yelp.com. List a Yelp business's revi
 
 - Site: yelp.com
 - Address: `reduck/yelp.com/get_reviews`
-- Updated: 2026-08-27 (v8)
+- Updated: 2026-10-01 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it

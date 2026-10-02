@@ -4,7 +4,7 @@ React to a Discord message with a unicode emoji, or remove your own reaction wit
 
 - Site: discord.com
 - Address: `reduck/discord.com/add_reaction`
-- Updated: 2026-09-03 (v24)
+- Updated: 2026-10-01 (v28)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -51,7 +51,7 @@ Yes. It acts as you on discord.com: on your own Chrome it reuses your session, a
 
 ### Does it change anything on discord.com, or only read data?
 
-It makes changes on discord.com, like sending, posting or booking something.
+It makes changes on discord.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

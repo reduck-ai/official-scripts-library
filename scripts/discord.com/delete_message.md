@@ -4,7 +4,7 @@ Automatically delete Discord message on discord.com. Deletes a single Discord me
 
 - Site: discord.com
 - Address: `reduck/discord.com/delete_message`
-- Updated: 2026-09-22 (v4)
+- Updated: 2026-10-01 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -53,7 +53,7 @@ Yes. It acts as you on discord.com: on your own Chrome it reuses your session, a
 
 ### Does it change anything on discord.com, or only read data?
 
-It makes changes on discord.com, like sending, posting or booking something.
+It makes changes on discord.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

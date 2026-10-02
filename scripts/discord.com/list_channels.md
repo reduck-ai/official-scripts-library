@@ -4,7 +4,7 @@ Automatically list Discord channels on discord.com. Lists a Discord server's cha
 
 - Site: discord.com
 - Address: `reduck/discord.com/list_channels`
-- Updated: 2026-09-26 (v6)
+- Updated: 2026-10-01 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

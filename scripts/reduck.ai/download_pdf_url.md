@@ -4,7 +4,7 @@ Automatically download PDF from a direct URL on reduck.ai. Generic PDF/invoice d
 
 - Site: reduck.ai
 - Address: `reduck/reduck.ai/download_pdf_url`
-- Updated: 2026-08-26 (v4)
+- Updated: 2026-10-01 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

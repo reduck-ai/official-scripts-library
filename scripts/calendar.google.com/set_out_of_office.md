@@ -4,7 +4,7 @@ Automatically set Out of Office on calendar.google.com. Create an out-of-office 
 
 - Site: calendar.google.com
 - Address: `reduck/calendar.google.com/set_out_of_office`
-- Updated: 2026-09-24 (v11)
+- Updated: 2026-10-01 (v12)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -62,7 +62,7 @@ Yes. It acts as you on calendar.google.com: on your own Chrome it reuses your se
 
 ### Does it change anything on calendar.google.com, or only read data?
 
-It makes changes on calendar.google.com, like sending, posting or booking something.
+It makes changes on calendar.google.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

@@ -4,7 +4,7 @@ Automatically move an Outlook.com email to a folder on outlook.live.com. Move on
 
 - Site: outlook.live.com
 - Address: `reduck/outlook.live.com/move_email`
-- Updated: 2026-09-16 (v3)
+- Updated: 2026-10-01 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -61,7 +61,7 @@ Yes. It acts as you on outlook.live.com: on your own Chrome it reuses your sessi
 
 ### Does it change anything on outlook.live.com, or only read data?
 
-It makes changes on outlook.live.com, like sending, posting or booking something.
+It makes changes on outlook.live.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

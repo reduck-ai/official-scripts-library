@@ -4,7 +4,7 @@ Bulk delete your Facebook group posts by calling this once per post from an agen
 
 - Site: facebook.com
 - Address: `reduck/facebook.com/delete_own_post`
-- Updated: 2026-09-19 (v2)
+- Updated: 2026-10-02 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -39,11 +39,11 @@ It returns status.
 
 ### Do I need to be logged in to facebook.com?
 
-No. It only uses pages of facebook.com that are reachable without signing in.
+Yes. It acts as you on facebook.com: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the facebook.com cookies saved by the Reduck extension.
 
 ### Does it change anything on facebook.com, or only read data?
 
-It makes changes on facebook.com, like sending, posting or booking something.
+It makes changes on facebook.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

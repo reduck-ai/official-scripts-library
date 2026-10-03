@@ -4,7 +4,7 @@ Automatically reveal Apollo contact email on apollo.io. Reveal a person's email 
 
 - Site: apollo.io
 - Address: `reduck/apollo.io/get_contact_email`
-- Updated: 2026-09-01 (v10)
+- Updated: 2026-10-02 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -53,7 +53,7 @@ Yes. It acts as you on apollo.io: on your own Chrome it reuses your session, and
 
 ### Does it change anything on apollo.io, or only read data?
 
-It makes changes on apollo.io, like sending, posting or booking something.
+It makes changes on apollo.io, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

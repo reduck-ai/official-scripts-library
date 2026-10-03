@@ -4,7 +4,7 @@ Automatically like LinkedIn post on linkedin.com. Like a LinkedIn post by its pe
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/react_post`
-- Updated: 2026-08-28 (v12)
+- Updated: 2026-10-02 (v15)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -25,7 +25,7 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/react_post
 - `status` (string, required)
 - `postUrl` (string, required)
 - `account_used` (object, required): The real account the reaction was performed under, echoed from the session/UI.
-- `verified_on_page` (boolean, required): True if the script independently reloaded the post permalink and confirmed the reaction button's aria-pressed state, not just that the click's own in-page state change fired. Always true on an already_reacted hit (the pre-existing state was what was matched).
+- `verified_on_page` (boolean, required): True if the script independently reloaded the post permalink and confirmed the react control's reacted state, not just that the click's own in-page state change fired. Always true on an already_reacted hit (the pre-existing state was what was matched).
 - `reaction` (string, optional)
 
 ## FAQ
@@ -56,7 +56,7 @@ Yes. It acts as you on linkedin.com: on your own Chrome it reuses your session, 
 
 ### Does it change anything on linkedin.com, or only read data?
 
-It makes changes on linkedin.com, like sending, posting or booking something.
+It makes changes on linkedin.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

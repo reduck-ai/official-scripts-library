@@ -4,7 +4,7 @@ Automatically search G2 software products on g2.com. Search G2's software direct
 
 - Site: g2.com
 - Address: `reduck/g2.com/search_products`
-- Updated: 2026-09-17 (v3)
+- Updated: 2026-09-18 (v3)
 - Author: Reduck AI (reduck)
 
 ## About

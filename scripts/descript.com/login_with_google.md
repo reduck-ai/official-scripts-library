@@ -4,7 +4,7 @@ Log into Descript via 'Continue with Google'. Drives the chooser and confirms th
 
 - Site: descript.com
 - Address: `reduck/descript.com/login_with_google`
-- Updated: 2026-10-01 (v4)
+- Updated: 2026-10-02 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

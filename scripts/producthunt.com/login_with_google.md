@@ -4,7 +4,7 @@ Log into Product Hunt with its Google sign-in option, handling the Google accoun
 
 - Site: producthunt.com
 - Address: `reduck/producthunt.com/login_with_google`
-- Updated: 2026-09-28 (v1)
+- Updated: 2026-10-02 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

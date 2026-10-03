@@ -4,7 +4,7 @@ Log into Pipedrive with the Google button, handling the Google account chooser a
 
 - Site: pipedrive.com
 - Address: `reduck/pipedrive.com/login_with_google`
-- Updated: 2026-09-25 (v1)
+- Updated: 2026-10-02 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -47,7 +47,7 @@ Yes. It acts as you on pipedrive.com: on your own Chrome it reuses your session,
 
 ### Does it change anything on pipedrive.com, or only read data?
 
-It makes changes on pipedrive.com, like sending, posting or booking something.
+It makes changes on pipedrive.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

@@ -4,7 +4,7 @@ Automatically list booked tickets (future / past / pending options) on sncf-conn
 
 - Site: sncf-connect.com
 - Address: `reduck/sncf-connect.com/list_tickets`
-- Updated: 2026-09-08 (v4)
+- Updated: 2026-09-18 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

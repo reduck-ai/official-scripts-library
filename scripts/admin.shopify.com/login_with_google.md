@@ -4,7 +4,7 @@ Log into a Shopify store admin via Google SSO — clicks 'Continue with Google' 
 
 - Site: admin.shopify.com
 - Address: `reduck/admin.shopify.com/login_with_google`
-- Updated: 2026-08-21 (v3)
+- Updated: 2026-10-02 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,7 +18,7 @@ npx @reduck-ai/cli@latest run --script reduck/admin.shopify.com/login_with_googl
 ## Input
 
 - `store` (string, required): Shopify store handle as it appears in admin.shopify.com/store/<store> (e.g. "my-shop"). Must be a store your Google account can access.
-- `email` (string, optional): Google account to pick in the chooser. Omit to use the first/only account.
+- `email` (string, optional): Google account to pick in the chooser. Required when more than one Google account is signed in on the browser; omit only when there is exactly one.
 
 ## Output
 
@@ -48,7 +48,7 @@ Yes. It acts as you on admin.shopify.com: on your own Chrome it reuses your sess
 
 ### Does it change anything on admin.shopify.com, or only read data?
 
-It makes changes on admin.shopify.com, like sending, posting or booking something.
+It makes changes on admin.shopify.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

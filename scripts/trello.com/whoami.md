@@ -4,7 +4,7 @@ Report which Trello account this browser is signed in as: the member id, usernam
 
 - Site: trello.com
 - Address: `reduck/trello.com/whoami`
-- Updated: 2026-09-30 (v1)
+- Updated: 2026-10-02 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

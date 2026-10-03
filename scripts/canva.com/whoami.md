@@ -4,7 +4,7 @@ Report which Canva account this browser is signed in as: the user id, email, dis
 
 - Site: canva.com
 - Address: `reduck/canva.com/whoami`
-- Updated: 2026-09-30 (v1)
+- Updated: 2026-10-02 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

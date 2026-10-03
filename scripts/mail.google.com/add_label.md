@@ -4,7 +4,7 @@ Automatically apply or remove a label on a thread on mail.google.com. Apply a la
 
 - Site: mail.google.com
 - Address: `reduck/mail.google.com/add_label`
-- Updated: 2026-09-07 (v17)
+- Updated: 2026-10-02 (v18)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -64,7 +64,7 @@ Yes. It acts as you on mail.google.com: on your own Chrome it reuses your sessio
 
 ### Does it change anything on mail.google.com, or only read data?
 
-It makes changes on mail.google.com, like sending, posting or booking something.
+It makes changes on mail.google.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

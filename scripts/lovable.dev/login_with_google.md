@@ -4,7 +4,7 @@ Sign in to Lovable with Google and land on the dashboard, ready for the scripts 
 
 - Site: lovable.dev
 - Address: `reduck/lovable.dev/login_with_google`
-- Updated: 2026-08-21 (v5)
+- Updated: 2026-10-02 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -45,7 +45,7 @@ Yes. It acts as you on lovable.dev: on your own Chrome it reuses your session, a
 
 ### Does it change anything on lovable.dev, or only read data?
 
-It makes changes on lovable.dev, like sending, posting or booking something.
+It makes changes on lovable.dev, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

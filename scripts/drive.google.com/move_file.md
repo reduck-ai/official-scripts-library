@@ -4,7 +4,7 @@ Automatically move a Google Drive file to another folder on drive.google.com. Mo
 
 - Site: drive.google.com
 - Address: `reduck/drive.google.com/move_file`
-- Updated: 2026-08-21 (v5)
+- Updated: 2026-10-02 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -19,6 +19,7 @@ npx @reduck-ai/cli@latest run --script reduck/drive.google.com/move_file
 
 - `fileId` (string, required): Google Drive file id to move, i.e. the <id> in drive.google.com/file/d/<id>/view
 - `folderId` (string, required): Destination folder id, i.e. the <id> in drive.google.com/drive/folders/<id>
+- `confirmAccessChange` (boolean, optional): Moving a file out of a shared folder removes access for people who could only see it through that folder, and Drive asks for confirmation first. Set true to confirm that change. When false and Drive asks, the move is cancelled and an error is returned.
 
 ## Output
 
@@ -41,7 +42,7 @@ You do not need one. "Move a Google Drive file to another folder" drives the rea
 
 ### What information do I need to provide?
 
-Required: fileId, folderId.
+Required: fileId, folderId. Optional: confirmAccessChange.
 
 ### What does it return?
 
@@ -53,7 +54,7 @@ Yes. It acts as you on drive.google.com: on your own Chrome it reuses your sessi
 
 ### Does it change anything on drive.google.com, or only read data?
 
-It makes changes on drive.google.com, like sending, posting or booking something.
+It makes changes on drive.google.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

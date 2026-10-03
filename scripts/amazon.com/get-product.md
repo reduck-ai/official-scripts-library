@@ -4,7 +4,7 @@ Automatically get Amazon product on amazon.com. Fetch a single Amazon product pa
 
 - Site: amazon.com
 - Address: `reduck/amazon.com/get-product`
-- Updated: 2026-09-27 (v9)
+- Updated: 2026-10-03 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it

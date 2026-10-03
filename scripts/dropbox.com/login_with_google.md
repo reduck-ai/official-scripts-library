@@ -4,7 +4,7 @@ Log into Dropbox via Google SSO. Drives Dropbox's Continue-with-Google flow, pic
 
 - Site: dropbox.com
 - Address: `reduck/dropbox.com/login_with_google`
-- Updated: 2026-09-28 (v8)
+- Updated: 2026-10-02 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -41,7 +41,7 @@ It returns url, account, loggedIn.
 
 ### Do I need to be logged in to dropbox.com?
 
-No. It only uses pages of dropbox.com that are reachable without signing in.
+Yes. It acts as you on dropbox.com: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the dropbox.com cookies saved by the Reduck extension.
 
 ### Does it change anything on dropbox.com, or only read data?
 

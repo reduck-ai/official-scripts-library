@@ -4,7 +4,7 @@ Automatically ask ChatGPT on chatgpt.com. Open a new ChatGPT chat, send one ques
 
 - Site: chatgpt.com
 - Address: `reduck/chatgpt.com/ask`
-- Updated: 2026-09-30 (v38)
+- Updated: 2026-10-02 (v39)
 - Author: Reduck AI (reduck)
 
 ## Run it

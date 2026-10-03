@@ -4,7 +4,7 @@ Automatically create OAuth client (Web application) on console.cloud.google.com.
 
 - Site: console.cloud.google.com
 - Address: `reduck/console.cloud.google.com/create_oauth_client`
-- Updated: 2026-08-31 (v12)
+- Updated: 2026-09-18 (v12)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -56,7 +56,7 @@ Yes. It acts as you on console.cloud.google.com: on your own Chrome it reuses yo
 
 ### Does it change anything on console.cloud.google.com, or only read data?
 
-It makes changes on console.cloud.google.com, like sending, posting or booking something.
+It makes changes on console.cloud.google.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

@@ -1,10 +1,10 @@
 # Get Amazon product reviews
 
-Automatically get Amazon product reviews on amazon.com. Fetch Amazon customer reviews for an ASIN. Works signed in or anonymously, and says which surface it used. With a session it reads the full /product-reviews/ list: one page of 10, with sort, star, media, reviewer and keyword filters, up to Amazon's 10-page cap. Without one it reads the product page's reviews medley instead (page 1 of top reviews, no filters, other-country reviews included), returns authenticated:false and source:product_page_medley, and throws rather than quietly ignoring a filter or page it cannot serve. Returns product (asin, title, overallRating, totalRatings, reviewCount, starBreakdown) and reviews (id, rating, title, text, date, reviewer, country, variation, helpfulVotes, verifiedPurchase, vine, images, videos). With sortBy=recent a given page is not stable across calls as new reviews arrive, so prefer sortBy=helpful for replay.
+Automatically get Amazon product reviews on amazon.com. Fetch Amazon customer reviews for a product by ASIN. With a signed-in Amazon session it returns one page of 10 reviews, with sort, star, media, verified-purchase and keyword filters, up to Amazon's 10-page limit. Without a session it returns the top reviews shown on the product page (page 1 only, no filters, reviews from other Amazon countries included), says so in the result, and fails with a clear error instead of ignoring a filter or page it cannot serve, or when Amazon hides the reviews from the visitor. Returns the product's rating summary and each review's rating, title, text, date, reviewer, country, variation, helpful votes, verified badge, Vine badge, images and videos. With sortBy=recent a page can change between calls as new reviews arrive; sortBy=helpful is more stable.
 
 - Site: amazon.com
 - Address: `reduck/amazon.com/get-product-reviews`
-- Updated: 2026-09-09 (v8)
+- Updated: 2026-10-02 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,18 +18,18 @@ npx @reduck-ai/cli@latest run --script reduck/amazon.com/get-product-reviews
 ## Input
 
 - `asin` (string, required): 10-char Amazon ASIN.
-- `page` (integer, optional): Review page to fetch (10 reviews/page; Amazon hard-caps reviews pagination at 10). One page per call — the caller loops for more. Ordering is server-controlled; with sortBy=recent the set can shift between calls as new reviews arrive, so page N is not guaranteed stable under replay (sortBy=helpful is far more stable). Pagination needs a session: an anonymous run can only read the product-page medley, which is page 1 only, and page>1 throws there.
-- `sortBy` (string, optional): recent = Most recent; helpful = Top reviews. Honoured only when the run has a session; the anonymous medley serves Amazon's own top-reviews ordering regardless (check `source` in the result).
+- `page` (integer, optional): Review page to fetch (10 reviews/page; Amazon hard-caps reviews pagination at 10). One page per call; the caller loops for more. Ordering is server-controlled; with sortBy=recent the set can shift between calls as new reviews arrive, so page N is not guaranteed stable under replay (sortBy=helpful is far more stable). Pagination needs a session: an anonymous run can only read the top reviews shown on the product page, which is page 1 only, and page>1 throws there.
+- `sortBy` (string, optional): recent = Most recent; helpful = Top reviews. Honoured only when the run has a session; an anonymous run returns the product page's top reviews in Amazon's own order regardless (check `source` in the result).
 - `zipCode` (string, optional): US ZIP used to pin the store to the US.
 - `mediaType` (string, optional): media_reviews_only restricts to reviews with an image or video. Needs a session, and throws on an anonymous run.
 - `filterByStar` (string, optional): Star filter. positive/critical group multiple ratings. Needs a session, and throws on an anonymous run.
-- `reviewerType` (string, optional): verified_reviews restricts to verified purchases (maps to Amazon's avp_only_reviews). Needs a session, and throws on an anonymous run.
+- `reviewerType` (string, optional): verified_reviews restricts to verified purchases. Needs a session, and throws on an anonymous run.
 - `filterByKeyword` (string, optional): Only reviews containing this keyword. This filter returns only ratings that include a written review. Needs a session, and throws on an anonymous run.
 
 ## Output
 
 - `page` (integer, required): Review page this result covers. Always 1 when source=product_page_medley.
-- `source` (string, required): Which Amazon surface produced this result. reviews_page = the full /product-reviews/ list (needs a session; supports sort, filters and pagination; US store only). product_page_medley = the top-reviews block on the product page, all an anonymous browser can read: page 1 only, no filters, Amazon's own ordering, and it mixes in reviews from other Amazon stores (read `country` per review) where reviews_page returns US only. Sort/filter/pagination arguments throw on this surface rather than being silently dropped.
+- `source` (string, required): Which Amazon surface produced this result. reviews_page = the full /product-reviews/ list (needs a session; supports sort, filters and pagination; US store only). product_page_medley = the top-reviews block on the product page, all an anonymous browser can read: page 1 only, no filters, Amazon's own ordering, and it mixes in reviews from other Amazon stores (read `country` per review) where reviews_page returns US only. Sort/filter/pagination arguments throw on this surface rather than being silently dropped. Amazon sometimes serves an anonymous browser the product page without its reviews (rating and star histogram shown, a sign-in prompt in place of the review list); the run then fails with an error saying so instead of returning an empty list, so reviews: [] on this surface means the product really has no written reviews.
 - `product` (object, required)
 - `reviews` (array, required)
 - `authenticated` (boolean, required): Whether the run had a usable Amazon session. False means the result came from the anonymous medley and is thinner BY DESIGN, not by failure: page 1 of top reviews only.
@@ -38,7 +38,7 @@ npx @reduck-ai/cli@latest run --script reduck/amazon.com/get-product-reviews
 
 ### What does "Get Amazon product reviews" do?
 
-Fetch Amazon customer reviews for an ASIN. Works signed in or anonymously, and says which surface it used. With a session it reads the full /product-reviews/ list: one page of 10, with sort, star, media, reviewer and keyword filters, up to Amazon's 10-page cap. Without one it reads the product page's reviews medley instead (page 1 of top reviews, no filters, other-country reviews included), returns authenticated:false and source:product_page_medley, and throws rather than quietly ignoring a filter or page it cannot serve. Returns product (asin, title, overallRating, totalRatings, reviewCount, starBreakdown) and reviews (id, rating, title, text, date, reviewer, country, variation, helpfulVotes, verifiedPurchase, vine, images, videos). With sortBy=recent a given page is not stable across calls as new reviews arrive, so prefer sortBy=helpful for replay.
+Fetch Amazon customer reviews for a product by ASIN. With a signed-in Amazon session it returns one page of 10 reviews, with sort, star, media, verified-purchase and keyword filters, up to Amazon's 10-page limit. Without a session it returns the top reviews shown on the product page (page 1 only, no filters, reviews from other Amazon countries included), says so in the result, and fails with a clear error instead of ignoring a filter or page it cannot serve, or when Amazon hides the reviews from the visitor. Returns the product's rating summary and each review's rating, title, text, date, reviewer, country, variation, helpful votes, verified badge, Vine badge, images and videos. With sortBy=recent a page can change between calls as new reviews arrive; sortBy=helpful is more stable.
 
 ### How do I automatically get Amazon product reviews on amazon.com?
 

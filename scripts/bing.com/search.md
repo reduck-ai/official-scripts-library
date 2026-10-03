@@ -4,7 +4,7 @@ Search the web on Bing, one page of results at a time. Returns each organic resu
 
 - Site: bing.com
 - Address: `reduck/bing.com/search`
-- Updated: 2026-10-01 (v13)
+- Updated: 2026-10-02 (v15)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/bing.com/search
 
 ## Input
 
-- `query` (string, required): The search query. site: is not supported (Bing answers it with a human-verification challenge and the script fails); quoted phrases are loosened by Bing, not enforced.
+- `query` (string, required): The search query. site: works, and limits the results to that site; quoted phrases are loosened by Bing, not enforced.
 - `first` (integer, optional): Which page to read, as Bing addresses it: the position of its first result. Pages vary in size, so pass the `next` of the previous answer rather than computing it. Default 1.
 
 ## Output

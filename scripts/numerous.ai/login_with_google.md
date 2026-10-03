@@ -4,7 +4,7 @@ Log into Numerous.ai using your connected Google account. Signs in via Google's 
 
 - Site: numerous.ai
 - Address: `reduck/numerous.ai/login_with_google`
-- Updated: 2026-08-20 (v5)
+- Updated: 2026-10-02 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -45,7 +45,7 @@ Yes. It acts as you on numerous.ai: on your own Chrome it reuses your session, a
 
 ### Does it change anything on numerous.ai, or only read data?
 
-It makes changes on numerous.ai, like sending, posting or booking something.
+It makes changes on numerous.ai, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

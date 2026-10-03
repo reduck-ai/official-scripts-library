@@ -4,7 +4,7 @@ Log into Figma via Google SSO, driving the OAuth popup and landing in the Figma 
 
 - Site: figma.com
 - Address: `reduck/figma.com/login_with_google`
-- Updated: 2026-08-24 (v7)
+- Updated: 2026-10-02 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -42,11 +42,11 @@ It returns url, account, loggedIn, accountName.
 
 ### Do I need to be logged in to figma.com?
 
-No. It only uses pages of figma.com that are reachable without signing in.
+Yes. It acts as you on figma.com: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the figma.com cookies saved by the Reduck extension.
 
 ### Does it change anything on figma.com, or only read data?
 
-It makes changes on figma.com, like sending, posting or booking something.
+It makes changes on figma.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

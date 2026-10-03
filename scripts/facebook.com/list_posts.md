@@ -4,7 +4,7 @@ Automatically scrape posts from a Facebook group or page on facebook.com. Scrape
 
 - Site: facebook.com
 - Address: `reduck/facebook.com/list_posts`
-- Updated: 2026-09-19 (v9)
+- Updated: 2026-10-02 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -41,7 +41,7 @@ Required: url. Optional: limit, withStatus.
 
 ### Do I need to be logged in to facebook.com?
 
-No. It only uses pages of facebook.com that are reachable without signing in.
+Yes. It acts as you on facebook.com: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the facebook.com cookies saved by the Reduck extension.
 
 ### Does it change anything on facebook.com, or only read data?
 

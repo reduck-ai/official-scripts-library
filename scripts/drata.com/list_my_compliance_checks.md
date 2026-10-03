@@ -4,7 +4,7 @@ Automatically list my compliance checks on drata.com. List the signed-in employe
 
 - Site: drata.com
 - Address: `reduck/drata.com/list_my_compliance_checks`
-- Updated: 2026-09-29 (v1)
+- Updated: 2026-10-02 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

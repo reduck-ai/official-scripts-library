@@ -1,10 +1,10 @@
 # Export a Facebook group member list
 
-Automatically export a Facebook group member list on facebook.com. Export the member list of a Facebook group as structured data, the CSV-style export Facebook itself does not offer. List members of a Facebook group with name, userId, profileUrl, and a subtitle (role like "Admin", bio, mutual-friends, or join-recency line as Facebook shows it). Order follows Facebook's own members view (admins and group contributors, then recent members), so it doubles as a "who's active / who to connect with" surface. Subtitle varies per row (role, bio, or "Membre depuis..."); results are infinite-scroll, capped by limit.
+Automatically export a Facebook group member list on facebook.com. Export the member list of a Facebook group as structured data, the CSV-style export Facebook itself does not offer. List members of a Facebook group with name, userId, profileUrl, and a subtitle (a role like "Admin", a bio, mutual friends, or how long ago they joined, as Facebook shows it). Order follows Facebook's own members view (admins and group contributors, then recent members), so it doubles as a "who's active / who to connect with" surface. Results load as you scroll and are capped by limit.
 
 - Site: facebook.com
 - Address: `reduck/facebook.com/list_group_members`
-- Updated: 2026-09-19 (v5)
+- Updated: 2026-10-02 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,13 +18,13 @@ npx @reduck-ai/cli@latest run --script reduck/facebook.com/list_group_members
 ## Input
 
 - `groupId` (string, required): Numeric id or vanity slug from a group URL (the part after /groups/).
-- `limit` (integer, optional): Max members to return. Members list is infinite-scroll; the script scrolls (arming a GraphQL wait before each scroll) until it has this many or the list stops growing.
+- `limit` (integer, optional): Max members to return. The member list loads as you scroll; the script keeps scrolling until it has this many or the list stops growing.
 
 ## FAQ
 
 ### What does "Export a Facebook group member list" do?
 
-Export the member list of a Facebook group as structured data, the CSV-style export Facebook itself does not offer. List members of a Facebook group with name, userId, profileUrl, and a subtitle (role like "Admin", bio, mutual-friends, or join-recency line as Facebook shows it). Order follows Facebook's own members view (admins and group contributors, then recent members), so it doubles as a "who's active / who to connect with" surface. Subtitle varies per row (role, bio, or "Membre depuis..."); results are infinite-scroll, capped by limit.
+Export the member list of a Facebook group as structured data, the CSV-style export Facebook itself does not offer. List members of a Facebook group with name, userId, profileUrl, and a subtitle (a role like "Admin", a bio, mutual friends, or how long ago they joined, as Facebook shows it). Order follows Facebook's own members view (admins and group contributors, then recent members), so it doubles as a "who's active / who to connect with" surface. Results load as you scroll and are capped by limit.
 
 ### How do I automatically export a Facebook group member list on facebook.com?
 

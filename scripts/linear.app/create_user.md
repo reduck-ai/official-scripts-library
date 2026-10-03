@@ -4,7 +4,7 @@ Automatically invite user(s) to Linear workspace on linear.app. Invite one or mo
 
 - Site: linear.app
 - Address: `reduck/linear.app/create_user`
-- Updated: 2026-08-27 (v4)
+- Updated: 2026-09-18 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -66,7 +66,7 @@ Yes. It acts as you on linear.app: on your own Chrome it reuses your session, an
 
 ### Does it change anything on linear.app, or only read data?
 
-It makes changes on linear.app, like sending, posting or booking something.
+It makes changes on linear.app, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

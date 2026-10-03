@@ -4,7 +4,7 @@ Automatically search Apollo people by job title on apollo.io. Search Apollo's pe
 
 - Site: apollo.io
 - Address: `reduck/apollo.io/search_people`
-- Updated: 2026-09-29 (v14)
+- Updated: 2026-10-02 (v17)
 - Author: Reduck AI (reduck)
 
 ## Run it

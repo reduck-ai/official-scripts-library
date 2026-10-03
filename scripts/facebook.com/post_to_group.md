@@ -4,7 +4,7 @@ Automatically post to a Facebook group without the Groups API on facebook.com. P
 
 - Site: facebook.com
 - Address: `reduck/facebook.com/post_to_group`
-- Updated: 2026-09-19 (v14)
+- Updated: 2026-10-02 (v15)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -59,11 +59,11 @@ It returns name, dryRun, posted, groupId, verified, alreadyPosted, photoAttached
 
 ### Do I need to be logged in to facebook.com?
 
-No. It only uses pages of facebook.com that are reachable without signing in.
+Yes. It acts as you on facebook.com: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the facebook.com cookies saved by the Reduck extension.
 
 ### Does it change anything on facebook.com, or only read data?
 
-It makes changes on facebook.com, like sending, posting or booking something.
+It makes changes on facebook.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

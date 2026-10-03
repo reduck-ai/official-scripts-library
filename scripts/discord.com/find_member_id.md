@@ -4,7 +4,7 @@ Automatically find Discord member ID by name on discord.com. Resolves a Discord 
 
 - Site: discord.com
 - Address: `reduck/discord.com/find_member_id`
-- Updated: 2026-10-01 (v13)
+- Updated: 2026-10-02 (v14)
 - Author: Reduck AI (reduck)
 
 ## Run it

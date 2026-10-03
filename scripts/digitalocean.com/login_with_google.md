@@ -4,7 +4,7 @@ Log into DigitalOcean via 'Sign In with Google'. Auto-selects the sole signed-in
 
 - Site: digitalocean.com
 - Address: `reduck/digitalocean.com/login_with_google`
-- Updated: 2026-09-21 (v2)
+- Updated: 2026-10-02 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -45,7 +45,7 @@ No. It only uses pages of digitalocean.com that are reachable without signing in
 
 ### Does it change anything on digitalocean.com, or only read data?
 
-It makes changes on digitalocean.com, like sending, posting or booking something.
+It makes changes on digitalocean.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

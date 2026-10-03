@@ -4,7 +4,7 @@ Automatically switch Calendly language on calendly.com. Change the display langu
 
 - Site: calendly.com
 - Address: `reduck/calendly.com/switch_language`
-- Updated: 2026-08-31 (v3)
+- Updated: 2026-10-02 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -47,11 +47,11 @@ It returns language.
 
 ### Do I need to be logged in to calendly.com?
 
-No. It only uses pages of calendly.com that are reachable without signing in.
+Yes. It acts as you on calendly.com: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the calendly.com cookies saved by the Reduck extension.
 
 ### Does it change anything on calendly.com, or only read data?
 
-It makes changes on calendly.com, like sending, posting or booking something.
+It makes changes on calendly.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

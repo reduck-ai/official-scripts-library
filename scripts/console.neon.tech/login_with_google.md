@@ -4,7 +4,7 @@ Log into the Neon console via Google OAuth (through Neon's Keycloak): clicks Goo
 
 - Site: console.neon.tech
 - Address: `reduck/console.neon.tech/login_with_google`
-- Updated: 2026-08-20 (v2)
+- Updated: 2026-10-02 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -45,7 +45,7 @@ Yes. It acts as you on console.neon.tech: on your own Chrome it reuses your sess
 
 ### Does it change anything on console.neon.tech, or only read data?
 
-It makes changes on console.neon.tech, like sending, posting or booking something.
+It makes changes on console.neon.tech, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

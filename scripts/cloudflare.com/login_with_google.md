@@ -4,7 +4,7 @@ Log into the Cloudflare dashboard via the Google button. Dismisses the cookie ba
 
 - Site: cloudflare.com
 - Address: `reduck/cloudflare.com/login_with_google`
-- Updated: 2026-09-28 (v5)
+- Updated: 2026-10-02 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

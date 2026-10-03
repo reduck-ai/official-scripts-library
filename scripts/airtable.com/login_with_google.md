@@ -4,7 +4,7 @@ Log into Airtable via Google SSO, picking a specific account when an email is gi
 
 - Site: airtable.com
 - Address: `reduck/airtable.com/login_with_google`
-- Updated: 2026-08-21 (v6)
+- Updated: 2026-10-02 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -45,7 +45,7 @@ No. It only uses pages of airtable.com that are reachable without signing in.
 
 ### Does it change anything on airtable.com, or only read data?
 
-It makes changes on airtable.com, like sending, posting or booking something.
+It makes changes on airtable.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

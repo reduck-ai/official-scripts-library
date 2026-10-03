@@ -4,7 +4,7 @@ Automatically get LinkedIn newsletter edition on linkedin.com. Fetch a single Li
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_newsletter_edition`
-- Updated: 2026-09-08 (v7)
+- Updated: 2026-10-02 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it

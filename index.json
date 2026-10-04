@@ -3491,7 +3491,7 @@
 			"address": "@reduck/linkedin.com/search_people",
 			"path": "scripts/linkedin.com/search_people.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/linkedin.com/search_people",
-			"lastmod": "2026-10-01"
+			"lastmod": "2026-10-03"
 		},
 		{
 			"address": "@reduck/linkedin.com/search_posts",
@@ -3515,7 +3515,7 @@
 			"address": "@reduck/linkedin.com/suggest_locations",
 			"path": "scripts/linkedin.com/suggest_locations.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/linkedin.com/suggest_locations",
-			"lastmod": "2026-09-30"
+			"lastmod": "2026-10-03"
 		},
 		{
 			"address": "@reduck/linkedin.com/unarchive_conversation",

@@ -1001,7 +1001,7 @@
 			"address": "@reduck/claude.ai/ask",
 			"path": "scripts/claude.ai/ask.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/claude.ai/ask",
-			"lastmod": "2026-10-02"
+			"lastmod": "2026-10-04"
 		},
 		{
 			"address": "@reduck/claude.ai/delete_chat",

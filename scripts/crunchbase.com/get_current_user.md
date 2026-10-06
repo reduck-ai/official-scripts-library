@@ -4,7 +4,7 @@ Automatically get Current User on crunchbase.com. Report which Crunchbase accoun
 
 - Site: crunchbase.com
 - Address: `reduck/crunchbase.com/get_current_user`
-- Updated: 2026-09-28 (v2)
+- Updated: 2026-10-05 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

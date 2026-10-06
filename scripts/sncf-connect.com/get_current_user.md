@@ -4,7 +4,7 @@ Automatically get current user on sncf-connect.com. Report which SNCF Connect ac
 
 - Site: sncf-connect.com
 - Address: `reduck/sncf-connect.com/get_current_user`
-- Updated: 2026-09-28 (v4)
+- Updated: 2026-10-05 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

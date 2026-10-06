@@ -4,7 +4,7 @@ Automatically read a ClickUp Doc on app.clickup.com. Returns the full text of a 
 
 - Site: app.clickup.com
 - Address: `reduck/app.clickup.com/read_doc`
-- Updated: 2026-09-23 (v1)
+- Updated: 2026-10-05 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

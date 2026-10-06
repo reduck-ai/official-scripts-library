@@ -4,7 +4,7 @@ Automatically search Events on ticketmaster.com. Search Ticketmaster for events 
 
 - Site: ticketmaster.com
 - Address: `reduck/ticketmaster.com/search_events`
-- Updated: 2026-09-18 (v1)
+- Updated: 2026-10-05 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

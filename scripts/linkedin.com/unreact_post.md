@@ -4,7 +4,7 @@ Automatically remove reaction from LinkedIn post on linkedin.com. Remove your re
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/unreact_post`
-- Updated: 2026-10-02 (v8)
+- Updated: 2026-10-05 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it

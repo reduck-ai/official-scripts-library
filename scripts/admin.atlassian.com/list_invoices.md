@@ -4,7 +4,7 @@ Automatically list Atlassian invoices on admin.atlassian.com. List Atlassian (ad
 
 - Site: admin.atlassian.com
 - Address: `reduck/admin.atlassian.com/list_invoices`
-- Updated: 2026-08-21 (v5)
+- Updated: 2026-10-05 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/admin.atlassian.com/list_invoices
 
 ## Input
 
-It takes no input.
+- `orgId` (string, optional): Atlassian organization id (the <id> in admin.atlassian.com/o/<id>/). Only needed when the account belongs to more than one organization; without it the script fails with the list of available organization ids and names.
 
 ## Output
 
@@ -40,7 +40,7 @@ You do not need one. "List Atlassian invoices" drives the real admin.atlassian.c
 
 ### What information do I need to provide?
 
-Nothing. It takes no input.
+Optional: orgId.
 
 ### What does it return?
 

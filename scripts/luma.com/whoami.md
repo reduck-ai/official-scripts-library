@@ -1,10 +1,10 @@
 # Luma whoami (signed-in account)
 
-Report which Luma account this browser is signed in as: the user id, username, display name and email. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Luma scripts.
+Report which Luma account this browser is signed in as: the account email, the Luma user id, the username and the display name. Being signed out is a normal answer (connected false), not an error, so it can check a session before other Luma scripts run, or be passed as a run's login probe.
 
 - Site: luma.com
 - Address: `reduck/luma.com/whoami`
-- Updated: 2026-09-26 (v1)
+- Updated: 2026-10-05 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -21,18 +21,17 @@ It takes no input.
 
 ## Output
 
-- `evidence` (string, required)
-- `loggedIn` (boolean, required)
-- `name` (string | null, optional)
-- `email` (string | null, optional)
-- `userId` (string | null, optional): Luma user id, e.g. usr-XXXXXXXXXXXXXXX.
-- `username` (string | null, optional): Luma username (luma.com/user/<username>); null when the account never picked one.
+- `name` (string | null, required): The account's display name. Null when signed out.
+- `userId` (string | null, required): Luma user id, e.g. usr-XXXXXXXXXXXXXXX. It stays the same if the account's email changes. Null when signed out.
+- `account` (string | null, required): The signed-in account's email, which a login probe records on the connector it checked. Null when signed out, or when Luma shows no email.
+- `username` (string | null, required): Luma username (luma.com/user/<username>). Null when signed out, or when the account never picked one.
+- `connected` (boolean, required): Whether this browser is signed in to Luma. Signed out is false, not an error, so the script can be passed as a run's `login.probe`.
 
 ## FAQ
 
 ### What does "Luma whoami (signed-in account)" do?
 
-Report which Luma account this browser is signed in as: the user id, username, display name and email. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Luma scripts.
+Report which Luma account this browser is signed in as: the account email, the Luma user id, the username and the display name. Being signed out is a normal answer (connected false), not an error, so it can check a session before other Luma scripts run, or be passed as a run's login probe.
 
 ### What information do I need to provide?
 
@@ -40,7 +39,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns name, email, userId, evidence, loggedIn, username.
+It returns name, userId, account, username, connected.
 
 ### Do I need to be logged in to luma.com?
 

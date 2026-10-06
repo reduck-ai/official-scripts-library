@@ -4,7 +4,7 @@ Automatically unfollow LinkedIn company on linkedin.com. Unfollow a LinkedIn com
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/unfollow_company`
-- Updated: 2026-09-03 (v7)
+- Updated: 2026-10-05 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -59,7 +59,7 @@ Yes. It acts as you on linkedin.com: on your own Chrome it reuses your session, 
 
 ### Does it change anything on linkedin.com, or only read data?
 
-It makes changes on linkedin.com, like sending, posting or booking something.
+It makes changes on linkedin.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

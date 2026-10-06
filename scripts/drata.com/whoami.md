@@ -4,7 +4,7 @@ Report which Drata account this browser is signed in as: the user id, email, fir
 
 - Site: drata.com
 - Address: `reduck/drata.com/whoami`
-- Updated: 2026-09-29 (v3)
+- Updated: 2026-10-05 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

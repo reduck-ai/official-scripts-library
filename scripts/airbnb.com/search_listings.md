@@ -1,11 +1,15 @@
 # Search Airbnb listings
 
-Automatically search Airbnb listings on airbnb.com. Search Airbnb stays for a location and date range. Returns url, page, count, maxPage, and listings (each with id, url, title, name, subtitle, lat, lng, rating, reviewCount, price, originalPrice, badges, details, hostType, imageUrl). One page returns up to 18 listings and Airbnb caps results at roughly 15 pages; paginate via the page arg.
+Automatically search Airbnb listings on airbnb.com. Each stay comes back as a row with its price, rating, review count, coordinates and room link.
 
 - Site: airbnb.com
 - Address: `reduck/airbnb.com/search_listings`
-- Updated: 2026-09-02 (v6)
+- Updated: 2026-10-05 (v6)
 - Author: Reduck AI (reduck)
+
+## About
+
+Handy when you want Airbnb results as rows you can sort instead of pins on a map. Say you rent out a two-bedroom flat in Alfama and want to price the first weekend of December. Search "Alfama, Lisbon" for 4 to 6 December with air conditioning and a kitchen required (amenity ids 5 and 8), and the flats nearby come back with the price Airbnb shows for those nights, the struck-through price if discounted, bedroom count, rating and coordinates. Sticking to the neighborhood rather than all of Lisbon keeps the list to flats a guest would weigh against yours. Leave the dates out and bedroom counts give way to each flat's next free dates. Prices arrive as text, often a whole phrase, in the language and currency Airbnb serves that browser (a browser in France lands on airbnb.fr, and a currency saved in its Airbnb settings counts too), so pull the number out before averaging.
 
 ## Run it
 
@@ -38,6 +42,50 @@ npx @reduck-ai/cli@latest run --script reduck/airbnb.com/search_listings
 - `count` (integer, required)
 - `listings` (array, required)
 - `maxPage` (integer | null, optional)
+
+## Example output
+
+Shape only: placeholder values generated from the output schema, not a real run.
+
+```json
+{
+  "url": "https://example.com/item/123",
+  "page": 1,
+  "count": 3,
+  "maxPage": 3,
+  "listings": [
+    {
+      "id": "abc123",
+      "lat": "2026-01-15T09:30:00Z",
+      "lng": 3.5,
+      "url": "https://example.com/item/123",
+      "name": "Example",
+      "price": "…",
+      "title": "Example",
+      "badges": [
+        "…"
+      ],
+      "images": [
+        "…"
+      ],
+      "rating": 3.5,
+      "details": [
+        "…"
+      ],
+      "hostType": "…",
+      "imageUrl": "https://example.com/item/123",
+      "subtitle": "…",
+      "ratingLabel": "…",
+      "reviewCount": 3,
+      "availability": [
+        "…"
+      ],
+      "originalPrice": "…",
+      "priceQualifier": "…"
+    }
+  ]
+}
+```
 
 ## FAQ
 
@@ -76,5 +124,21 @@ Ask an AI agent connected to Reduck to run reduck/airbnb.com/search_listings, or
 ### Who maintains it?
 
 It is part of Reduck's official curated catalogue.
+
+### Can I find an Airbnb listing by its street address?
+
+Airbnb keeps the street address hidden until a booking is confirmed, so no search result carries one, and the closest you can get is searching the neighborhood or city the address sits in, then comparing each result's photos and coordinates with the place you have in mind. Inside Airbnb reports that listing locations in Airbnb's data sit up to about 150 metres from the real address, so the lat and lng point to a block, not a door.
+
+### How many Airbnb listings can one search return?
+
+One Airbnb search tops out around 270 stays, 18 a page over roughly 15 pages, and the maxPage field (when Airbnb returns pagination) gives the page count for that particular search. Pages can be fetched in any order, so page 9 does not need pages 1 to 8 first. To cover a whole city, search it neighborhood by neighborhood, one search after another on the same browser rather than in parallel, and dedupe by listing id when you merge, since rankings shift between runs and neighboring areas overlap.
+
+### Can I track one Airbnb listing from its link?
+
+The number after /rooms/ in an Airbnb link is the room id, and Reduck's get_listing script for airbnb.com takes that id and returns the listing's day-by-day calendar with minimum nights, plus its house rules and per-category ratings. To follow prices across an area, rerun the same dated search on the same browser on a schedule and compare each id's price string between runs, which shows which listings entered or left the results and which prices moved.
+
+### Can I filter Airbnb by amenities that are not in the filter panel?
+
+Airbnb's filter panel shows only about two dozen amenities, but its search URLs accept several hundred numeric amenity codes through amenities[], according to the code list published by custombnb.app. The amenities input takes those same numbers and requires all of them at once, so [5, 51] keeps only stays with air conditioning and self check-in.
 
 Source: https://reduck.ai/explore/scripts/reduck/airbnb.com/search_listings

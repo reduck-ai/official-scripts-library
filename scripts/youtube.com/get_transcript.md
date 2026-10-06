@@ -1,10 +1,10 @@
 # Get YouTube video transcript
 
-Automatically get YouTube video transcript on youtube.com. Fetch a YouTube video's caption transcript (auto-generated or uploaded) with per-segment timestamps. Returns available:false when the video has no captions in any language. PROBABILISTIC — expect roughly 1 run in 3 to fail and retry rather than treating a failure as a defect: the transcript can only be read by letting YouTube's own player request the caption track (the /api/timedtext endpoint is bound to a token the player mints, so the URLs in the page's own data return an empty response), and when YouTube serves a pre-roll ad the ad occupies the player and the caption request never happens. The script already reloads and retries 3x; more attempts do not help, because an ad that holds the player holds it for every attempt in the run. Retry the call later, or on a viewing context that is not served ads. Separately, on the managed browser YouTube increasingly answers with its "Sign in to confirm you're not a bot" gate and no transcript is returned at all; the paired-extension browser is the more reliable target today.
+Automatically get YouTube video transcript on youtube.com. Fetch a YouTube video's caption transcript (auto-generated or uploaded) with per-segment timestamps. Returns available:false when the video has no captions in any language. Some runs fail when YouTube plays an ad before the video, roughly 1 in 3; the script already retries, so if it still fails, call it again later. The paired-extension browser is more reliable than the managed browser, where YouTube often shows a sign-in check and no transcript is returned.
 
 - Site: youtube.com
 - Address: `reduck/youtube.com/get_transcript`
-- Updated: 2026-10-01 (v22)
+- Updated: 2026-10-05 (v22)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -30,7 +30,7 @@ npx @reduck-ai/cli@latest run --script reduck/youtube.com/get_transcript
 
 ### What does "Get YouTube video transcript" do?
 
-Fetch a YouTube video's caption transcript (auto-generated or uploaded) with per-segment timestamps. Returns available:false when the video has no captions in any language. PROBABILISTIC — expect roughly 1 run in 3 to fail and retry rather than treating a failure as a defect: the transcript can only be read by letting YouTube's own player request the caption track (the /api/timedtext endpoint is bound to a token the player mints, so the URLs in the page's own data return an empty response), and when YouTube serves a pre-roll ad the ad occupies the player and the caption request never happens. The script already reloads and retries 3x; more attempts do not help, because an ad that holds the player holds it for every attempt in the run. Retry the call later, or on a viewing context that is not served ads. Separately, on the managed browser YouTube increasingly answers with its "Sign in to confirm you're not a bot" gate and no transcript is returned at all; the paired-extension browser is the more reliable target today.
+Fetch a YouTube video's caption transcript (auto-generated or uploaded) with per-segment timestamps. Returns available:false when the video has no captions in any language. Some runs fail when YouTube plays an ad before the video, roughly 1 in 3; the script already retries, so if it still fails, call it again later. The paired-extension browser is more reliable than the managed browser, where YouTube often shows a sign-in check and no transcript is returned.
 
 ### How do I automatically get YouTube video transcript on youtube.com?
 

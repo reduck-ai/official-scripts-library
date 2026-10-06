@@ -4,7 +4,7 @@ Report which ClickUp account this browser is signed in as: full name and email f
 
 - Site: app.clickup.com
 - Address: `reduck/app.clickup.com/whoami`
-- Updated: 2026-09-30 (v1)
+- Updated: 2026-10-05 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

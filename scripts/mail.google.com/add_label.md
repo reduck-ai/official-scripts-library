@@ -4,7 +4,7 @@ Automatically apply or remove a label on a thread on mail.google.com. Apply a la
 
 - Site: mail.google.com
 - Address: `reduck/mail.google.com/add_label`
-- Updated: 2026-10-02 (v18)
+- Updated: 2026-10-05 (v19)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,7 +18,7 @@ npx @reduck-ai/cli@latest run --script reduck/mail.google.com/add_label
 ## Input
 
 - `label` (string, required): The label name, matched exactly against the account's labels. Exactness matters, because Gmail's own picker offers to create "Lunch" even when "Lunch Bill" exists, so a partial name would quietly make a second label. Gmail's category names (Social, Updates, Forums, Promotions) appear in the same menu but are not user labels.
-- `threadId` (string, required): The thread's hex id, as returned by mail.google.com/search_emails (its threadId field, Gmail's data-legacy-thread-id). Note that list_inbox does not return thread ids. Must be a received thread: Gmail does not render a conversation heading for a thread you sent to yourself, and those are refused rather than risk labelling the wrong thread.
+- `threadId` (string, required): The thread's id, from the threadId field of mail.google.com/search_emails (list_inbox does not return thread ids). Must be a thread you received; threads you sent only to yourself are refused.
 - `create` (boolean, optional): Allow creating the label when the account does not have it. Default false, so a typo fails loudly instead of quietly making a new label. Ignored when remove is true.
 - `remove` (boolean, optional): Leave false (the default) to apply the label. Set true to take it off.
 - `account` (string, optional): Optional authuser value for a browser signed into several Google accounts. Omit for the default (u/0).

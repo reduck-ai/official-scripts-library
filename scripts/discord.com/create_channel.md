@@ -1,10 +1,10 @@
 # create_channel
 
-Create a channel in a Discord server — text, voice, announcement, stage or forum — optionally inside a category. Requires the Manage Channels permission in that server. Returns the created channel's channelId, name, type, url, parentId and the guildId, read from Discord's own creation response rather than the sidebar, plus already_present when a channel of that name and type already exists in the target category (it is reported, not duplicated — Discord itself allows duplicate channel names). Note Discord lowercases and hyphenates text/forum channel names, so the returned name may differ from the one you passed.
+Create a channel in a Discord server — text, voice, announcement, stage or forum — optionally inside a category. Requires the Manage Channels permission in that server. Returns the new channel's channelId, name, type, url, parentId and guildId. If a channel with the same name and type already exists in that category, it is reported with already_present instead of creating a duplicate. Discord lowercases and hyphenates text and forum channel names, so the returned name may differ from the one you passed.
 
 - Site: discord.com
 - Address: `reduck/discord.com/create_channel`
-- Updated: 2026-10-01 (v11)
+- Updated: 2026-10-05 (v12)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -32,13 +32,13 @@ npx @reduck-ai/cli@latest run --script reduck/discord.com/create_channel
 - `url` (string | null, optional)
 - `parentId` (string | null, optional)
 - `typeCode` (integer | null, optional)
-- `verified_on_page` (boolean, optional): Whether the new channel was confirmed present in the sidebar after creation, rather than only trusting the creation response.
+- `verified_on_page` (boolean, optional): Whether the new channel was confirmed visible in the server's channel list after creation.
 
 ## FAQ
 
 ### What does "create_channel" do?
 
-Create a channel in a Discord server — text, voice, announcement, stage or forum — optionally inside a category. Requires the Manage Channels permission in that server. Returns the created channel's channelId, name, type, url, parentId and the guildId, read from Discord's own creation response rather than the sidebar, plus already_present when a channel of that name and type already exists in the target category (it is reported, not duplicated — Discord itself allows duplicate channel names). Note Discord lowercases and hyphenates text/forum channel names, so the returned name may differ from the one you passed.
+Create a channel in a Discord server — text, voice, announcement, stage or forum — optionally inside a category. Requires the Manage Channels permission in that server. Returns the new channel's channelId, name, type, url, parentId and guildId. If a channel with the same name and type already exists in that category, it is reported with already_present instead of creating a duplicate. Discord lowercases and hyphenates text and forum channel names, so the returned name may differ from the one you passed.
 
 ### What information do I need to provide?
 

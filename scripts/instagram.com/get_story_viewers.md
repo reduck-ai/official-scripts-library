@@ -4,7 +4,7 @@ Automatically get Instagram story viewers on instagram.com. List who has viewed 
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/get_story_viewers`
-- Updated: 2026-09-28 (v1)
+- Updated: 2026-10-05 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

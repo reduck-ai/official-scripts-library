@@ -1,10 +1,10 @@
 # Neon login (Google SSO)
 
-Log into the Neon console via Google OAuth (through Neon's Keycloak): clicks Google and lands on your Neon projects. Skips straight to your projects if you're already signed in.
+Log into the Neon console with Google: clicks Google and lands on your Neon projects. Skips straight to your projects if you're already signed in.
 
 - Site: console.neon.tech
 - Address: `reduck/console.neon.tech/login_with_google`
-- Updated: 2026-10-02 (v3)
+- Updated: 2026-10-05 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,7 +29,7 @@ npx @reduck-ai/cli@latest run --script reduck/console.neon.tech/login_with_googl
 
 ### What does "Neon login (Google SSO)" do?
 
-Log into the Neon console via Google OAuth (through Neon's Keycloak): clicks Google and lands on your Neon projects. Skips straight to your projects if you're already signed in.
+Log into the Neon console with Google: clicks Google and lands on your Neon projects. Skips straight to your projects if you're already signed in.
 
 ### What information do I need to provide?
 

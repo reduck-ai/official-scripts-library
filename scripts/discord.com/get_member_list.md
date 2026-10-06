@@ -1,11 +1,15 @@
 # get_member_list
 
-List the members shown in a Discord server's member sidebar for a given channel. Returns per member their userId, display name without the role badges the row also renders, and whether Discord marks them as an app. userId is null for a member on a default avatar, which carries no id to read. Discord only sends the sidebar the members near the scroll position, so a large server returns those rendered while scrolling rather than a guaranteed roster; complete says which happened, and offline members are omitted where Discord collapses them. The sidebar's role grouping is not returned, as the headings expose no stable handle.
+Member names, user ids and a bot flag from a Discord channel's sidebar, up to the limit you set.
 
 - Site: discord.com
 - Address: `reduck/discord.com/get_member_list`
-- Updated: 2026-10-01 (v11)
+- Updated: 2026-10-05 (v12)
 - Author: Reduck AI (reduck)
+
+## About
+
+Most useful for moderators of small and mid-size servers. Paste the URL of a text channel such as #mod-chat and you get the names the member sidebar lists for it, which means only people who can read that channel. A channel might return 14 rows, two flagged isApp. Compare them against your real mod roster. Leftovers tend to be a helper whose role never got removed, or a bot nobody remembers adding. Names are what the sidebar shows, the server nickname rather than the @username, and role headings are not kept. The userId comes from the avatar URL, so it can be null, for default avatars and possibly others. Big servers are where it falls short. The sidebar is scrolled at most 40 times, half a screen each, and Discord may leave offline members out, so you can end up with online people only. The official route to a full roster is a bot with the GUILD_MEMBERS intent.
 
 ## Run it
 
@@ -25,13 +29,32 @@ npx @reduck-ai/cli@latest run --script reduck/discord.com/get_member_list
 - `count` (integer, required)
 - `members` (array, required)
 - `guildId` (string | null, optional)
-- `complete` (boolean, optional): True when the sidebar stopped yielding new members before limit was reached. Discord only sends the sidebar members near the scroll position, so a large server can return fewer than it holds.
+- `complete` (boolean, optional): True when the full member list was read before limit was reached. On large servers Discord does not show every member at once, so fewer may be returned than the server holds.
+
+## Example output
+
+Shape only: placeholder values generated from the output schema, not a real run.
+
+```json
+{
+  "count": 3,
+  "guildId": "abc123",
+  "members": [
+    {
+      "name": "Example",
+      "isApp": true,
+      "userId": "abc123"
+    }
+  ],
+  "complete": true
+}
+```
 
 ## FAQ
 
 ### What does "get_member_list" do?
 
-List the members shown in a Discord server's member sidebar for a given channel. Returns per member their userId, display name without the role badges the row also renders, and whether Discord marks them as an app. userId is null for a member on a default avatar, which carries no id to read. Discord only sends the sidebar the members near the scroll position, so a large server returns those rendered while scrolling rather than a guaranteed roster; complete says which happened, and offline members are omitted where Discord collapses them. The sidebar's role grouping is not returned, as the headings expose no stable handle.
+List the members of a Discord server, as shown in the member list for a given channel. Returns each member's userId, display name, and whether Discord marks them as an app or bot. userId is null for members using a default avatar. On large servers Discord does not show every member at once, so the result may not be the full roster; complete tells you whether it was. Offline members may be left out, and role groupings are not returned.
 
 ### What information do I need to provide?
 
@@ -56,5 +79,17 @@ Ask an AI agent connected to Reduck to run reduck/discord.com/get_member_list, o
 ### Who maintains it?
 
 It is part of Reduck's official curated catalogue.
+
+### How many members can one run return?
+
+A few hundred at most. limit defaults to 100 and has no ceiling, but the sidebar is scrolled only 40 times, half a screen each, so the exact figure depends on window height. If count is below your limit, complete can still read true when that scroll cap stopped the run, so it does not prove you got everyone. Compare count with the member total Discord shows.
+
+### Does it give me @usernames or roles?
+
+No. Each row has the name the sidebar displays, which is the server nickname or display name rather than the @username. The role headings the sidebar groups people under are not kept, and neither are join dates.
+
+### Why are some people missing from the result?
+
+The sidebar belongs to the channel you pass, so it lists only members who can view that channel. On large servers Discord may also leave offline members out. Voice channels have no member sidebar, and the run stops with an error.
 
 Source: https://reduck.ai/explore/scripts/reduck/discord.com/get_member_list

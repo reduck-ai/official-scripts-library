@@ -4,7 +4,7 @@ Sign in to Lovable with Google and land on the dashboard, ready for the scripts 
 
 - Site: lovable.dev
 - Address: `reduck/lovable.dev/login_with_google`
-- Updated: 2026-10-02 (v6)
+- Updated: 2026-10-05 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

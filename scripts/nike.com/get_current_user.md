@@ -4,7 +4,7 @@ Automatically get current user on nike.com. Report which Nike Member account thi
 
 - Site: nike.com
 - Address: `reduck/nike.com/get_current_user`
-- Updated: 2026-09-28 (v2)
+- Updated: 2026-10-05 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

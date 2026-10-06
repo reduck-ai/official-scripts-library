@@ -1,11 +1,15 @@
 # Ask ChatGPT
 
-Automatically ask ChatGPT on chatgpt.com. Open a new ChatGPT chat, send one question, wait for the answer to finish (up to 3 minutes), and return the answer, the sources it cited, and the web searches it ran.
+Automatically ask ChatGPT on chatgpt.com. See what ChatGPT tells a stranger about your market and which pages it cites to back that up.
 
 - Site: chatgpt.com
 - Address: `reduck/chatgpt.com/ask`
-- Updated: 2026-10-02 (v39)
+- Updated: 2026-10-05 (v39)
 - Author: Reduck AI (reduck)
+
+## About
+
+A growth lead at a French payroll startup sends "What payroll software should a 20-person company in France use?" from a signed-out browser every Monday and logs which vendors the reply names and which review sites it cites, since those are the pages worth getting listed on. Signed out is the closest thing to a stranger asking, but you get little beyond the reply text and its cited references. A signed-in account adds the model id, every query ChatGPT typed and every page those searches pulled up, though saved memory can shape the reply and the chat is kept in that account's history. Those queries are worth a close read, since one question can fan out into many (a September run typed 9 across 2 search calls). Each run is one question in a fresh chat, and setting mode to work is saved on the account, so your own next chat starts in Work too.
 
 ## Run it
 
@@ -34,6 +38,84 @@ npx @reduck-ai/cli@latest run --script reduck/chatgpt.com/ask
 - `searchContext` (object, required): What the server says about this turn's search, as sent to the page. Signed in it is no longer sent (2026-09-26), so every field is null there. One of ChatGPT's two signed-out applications sends it; the other (the one that opens a /uc/ chat) does not. A field is also null when the app did not send it.
 - `conversationId` (string | null, required): The conversation's id, from the /c/<id> or /uc/<id> URL. Null if the app did not navigate.
 - `webSearchQueries` (array, required): The searches ChatGPT issued, in order. Signed in, read from the saved conversation. Signed out, one of ChatGPT's two applications names them on its answer stream; the one that opens a /uc/ chat does not, so the list is empty there even when `references` shows the reply searched. Empty also when the reply did not search.
+
+## Example output
+
+Shape only: placeholder values generated from the output schema, not a real run.
+
+```json
+{
+  "mode": "chat",
+  "calls": [
+    {
+      "call": 3,
+      "tool": "…",
+      "results": [
+        {
+          "ref": "…",
+          "url": "https://example.com/item/123",
+          "rank": 3,
+          "type": "…",
+          "title": "Example",
+          "pubDate": "2026-01-15T09:30:00Z",
+          "snippet": "…",
+          "attribution": "…",
+          "thumbnailUrl": "https://example.com/item/123"
+        }
+      ]
+    }
+  ],
+  "model": "…",
+  "answer": "…",
+  "answers": [
+    "…"
+  ],
+  "sources": [
+    {
+      "url": "https://example.com/item/123",
+      "title": "Example",
+      "attribution": "…"
+    }
+  ],
+  "searches": [
+    {
+      "queries": [
+        "…"
+      ],
+      "results": [
+        {
+          "ref": "…",
+          "url": "https://example.com/item/123",
+          "type": "…",
+          "title": "Example",
+          "pubDate": "2026-01-15T09:30:00Z",
+          "attribution": "…"
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "url": "https://example.com/item/123",
+      "title": "Example",
+      "attribution": "…"
+    }
+  ],
+  "stopReason": "…",
+  "searchContext": {
+    "tool": "…",
+    "useCase": "…",
+    "toolInvoked": true,
+    "locationUsed": "…",
+    "clusterRegion": "…",
+    "locationIsPrecise": true
+  },
+  "conversationId": "abc123",
+  "webSearchQueries": [
+    "…"
+  ]
+}
+```
 
 ## FAQ
 
@@ -72,5 +154,21 @@ Ask an AI agent connected to Reduck to run reduck/chatgpt.com/ask, or run it fro
 ### Who maintains it?
 
 It is part of Reduck's official curated catalogue.
+
+### Why does ChatGPT cite different sources each time I ask the same question?
+
+ChatGPT decides on each reply whether to search the web, so one run can cite several pages and the next none at all. When it does search, the queries it types can change between runs, and the pages it reads and cites shift with them. An empty references list means that reply skipped the search, not that the run failed.
+
+### Does the OpenAI API return the same answer a ChatGPT user sees?
+
+No. OpenAI describes each API request as independent and stateless, so the reply comes from the model and the messages you send, without the history or saved memory a ChatGPT account brings to the app. API usage is billed apart from any ChatGPT plan, and the standard web search tool costs $10 per 1,000 calls plus the retrieved content billed as tokens at the model's rate.
+
+### Can I run a batch of ChatGPT questions at the same time from one account?
+
+You can, but spread them out. When several runs share one signed-in account at the same moment, ChatGPT has been seen sending tabs back to the home page mid-answer, and Reduck's Ask ChatGPT script reopens the chat up to two times, then stops with an error. If ChatGPT refuses a message (a rate limit or a moderation block), the run ends at once with ChatGPT's own error text instead of waiting out its three-minute budget.
+
+### Does ChatGPT answer differently depending on the country I ask from?
+
+It can. OpenAI says ChatGPT search estimates a general location (country, state or city) from your IP address and that a VPN can change that guess, so the same question asked from Paris and from Brussels may come back different. Signed-out replies sometimes report the place in searchContext.locationUsed, and to track one market the sensible habit is to run from a browser in that market and keep it there.
 
 Source: https://reduck.ai/explore/scripts/reduck/chatgpt.com/ask

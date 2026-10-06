@@ -1,10 +1,10 @@
 # Create a Discord forum post
 
-Automatically create a Discord forum post on discord.com. Create a post (thread) in a Discord forum channel, with a title and an opening message. Forum channels reject plain messages — a post is the only way to write to one, which is why discord.com/post_message cannot target a forum. Returns the new post's threadId, name, url, parentId and the opening message id, read from Discord's own creation response. Reply to an existing post with discord.com/post_message against the post's own url (a post is itself a channel), and list a forum's posts with discord.com/list_forum_posts.
+Automatically create a Discord forum post on discord.com. Create a post in a Discord forum channel, with a title and an opening message. Forum channels only accept posts, so discord.com/post_message cannot write to one directly. Returns the new post's threadId, name, url, parentId and opening message id. A post with the exact same title is reported rather than duplicated. To reply to an existing post, use discord.com/post_message with the post's url; to list a forum's posts, use discord.com/list_forum_posts.
 
 - Site: discord.com
 - Address: `reduck/discord.com/create_forum_post`
-- Updated: 2026-10-01 (v12)
+- Updated: 2026-10-05 (v13)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -28,14 +28,14 @@ npx @reduck-ai/cli@latest run --script reduck/discord.com/create_forum_post
 - `threadId` (string, required)
 - `already_present` (boolean, required): True when a post with this exact title already existed, in which case it is reported rather than duplicated.
 - `parentId` (string | null, optional)
-- `verified_on_page` (boolean, optional): Whether the post was confirmed present in the forum grid after creation.
-- `response_captured` (boolean, optional): False when Discord's creation response was not observed and the post was identified from the grid instead. The post is still real; only the response was missed.
+- `verified_on_page` (boolean, optional): Whether the post was confirmed visible in the forum after creation.
+- `response_captured` (boolean, optional): False when Discord's confirmation of the new post was not received and the post was identified from the forum listing instead. The post is still real.
 
 ## FAQ
 
 ### What does "Create a Discord forum post" do?
 
-Create a post (thread) in a Discord forum channel, with a title and an opening message. Forum channels reject plain messages — a post is the only way to write to one, which is why discord.com/post_message cannot target a forum. Returns the new post's threadId, name, url, parentId and the opening message id, read from Discord's own creation response. Reply to an existing post with discord.com/post_message against the post's own url (a post is itself a channel), and list a forum's posts with discord.com/list_forum_posts.
+Create a post in a Discord forum channel, with a title and an opening message. Forum channels only accept posts, so discord.com/post_message cannot write to one directly. Returns the new post's threadId, name, url, parentId and opening message id. A post with the exact same title is reported rather than duplicated. To reply to an existing post, use discord.com/post_message with the post's url; to list a forum's posts, use discord.com/list_forum_posts.
 
 ### How do I automatically create a Discord forum post on discord.com?
 

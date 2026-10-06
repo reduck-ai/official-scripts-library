@@ -1,10 +1,10 @@
 # Search MICHELIN Guide restaurants
 
-Automatically search MICHELIN Guide restaurants on guide.michelin.com. Search the MICHELIN Guide for restaurants in a given locality (city), optionally filtered by distinction (1/2/3 Stars, Bib Gourmand, or Plate). Resolves the locality name to the Guide's city slug, then reads the site's own restaurant index. Returns the total count and one page of restaurants (name, award, green star, cuisines, price, address, chef, coords, absolute URL, image). Paginate with `page`/`hitsPerPage`. Observation only.
+Automatically search MICHELIN Guide restaurants on guide.michelin.com. Search the MICHELIN Guide for restaurants in a city, optionally filtered by distinction (1, 2 or 3 Stars, Bib Gourmand, or Plate). Type the city name as you would say it, for example "Lyon". Returns the total count and one page of restaurants with name, award, green star, cuisines, price, address, chef, map coordinates, link and image. Use page and hitsPerPage to see more results. Only reads the Guide.
 
 - Site: guide.michelin.com
 - Address: `reduck/guide.michelin.com/search`
-- Updated: 2026-10-01 (v2)
+- Updated: 2026-10-05 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -36,7 +36,7 @@ npx @reduck-ai/cli@latest run --script reduck/guide.michelin.com/search
 
 ### What does "Search MICHELIN Guide restaurants" do?
 
-Search the MICHELIN Guide for restaurants in a given locality (city), optionally filtered by distinction (1/2/3 Stars, Bib Gourmand, or Plate). Resolves the locality name to the Guide's city slug, then reads the site's own restaurant index. Returns the total count and one page of restaurants (name, award, green star, cuisines, price, address, chef, coords, absolute URL, image). Paginate with `page`/`hitsPerPage`. Observation only.
+Search the MICHELIN Guide for restaurants in a city, optionally filtered by distinction (1, 2 or 3 Stars, Bib Gourmand, or Plate). Type the city name as you would say it, for example "Lyon". Returns the total count and one page of restaurants with name, award, green star, cuisines, price, address, chef, map coordinates, link and image. Use page and hitsPerPage to see more results. Only reads the Guide.
 
 ### How do I automatically search MICHELIN Guide restaurants on guide.michelin.com?
 

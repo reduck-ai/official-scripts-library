@@ -4,7 +4,7 @@ Automatically get Current User on app.clickup.com. Get the signed-in ClickUp acc
 
 - Site: app.clickup.com
 - Address: `reduck/app.clickup.com/get_current_user`
-- Updated: 2026-09-25 (v1)
+- Updated: 2026-10-05 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

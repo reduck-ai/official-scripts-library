@@ -4,7 +4,7 @@ Automatically get the signed-in account's profile on web.telegram.org. Read the 
 
 - Site: web.telegram.org
 - Address: `reduck/web.telegram.org/get_own_profile`
-- Updated: 2026-09-17 (v2)
+- Updated: 2026-10-05 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

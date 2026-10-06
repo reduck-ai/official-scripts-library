@@ -4,7 +4,7 @@ Automatically create a leboncoin classified ad on leboncoin.fr. Create a classif
 
 - Site: leboncoin.fr
 - Address: `reduck/leboncoin.fr/create_ad`
-- Updated: 2026-10-01 (v8)
+- Updated: 2026-10-05 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,14 +17,14 @@ npx @reduck-ai/cli@latest run --script reduck/leboncoin.fr/create_ad
 
 ## Input
 
-- `photo` (string, required): The ad photo (PNG or JPEG), bound through the platform's own file channel and handed straight to the form's file input. leboncoin refuses to publish an ad with no photo.
+- `photo` (string, required): The ad photo (PNG or JPEG). leboncoin refuses to publish an ad with no photo.
 - `price` (number, required): Asking price in euros.
 - `title` (string, required): Ad title. leboncoin derives the category suggestions from this, so it must describe the item (e.g. "Vélo de ville adulte").
 - `lastName` (string, required): Seller last name, required by the form.
 - `location` (string, required): Street address to advertise from, e.g. "12 rue Duphot Paris". Resolved against leboncoin's own address suggestions; the first suggestion is taken and returned in resolvedLocation.
 - `firstName` (string, required): Seller first name, required by the form.
 - `description` (string, required): Ad body text.
-- `dryRun` (boolean, optional): True (default) fills and validates the entire form — including resolving the address against leboncoin's own suggestions — reads back what would be posted, and returns without submitting, so no ad is created. Set false to actually publish, which takes the free option only. Note what a truthful dry run costs: the ad is created by the form submit itself, not by the later publish-looking button, so a dry run cannot exercise anything past the submit — the boost step and the free-option handling are only covered by a real publish. Do not move this gate later to buy that coverage: an earlier version submitted first and reported published:false, leaving a real, live classified ad on the account every single time.
+- `dryRun` (boolean, optional): True (default) fills and validates the whole form, including resolving the address, reports what would be posted, and stops before submitting, so no ad is created. Set false to actually publish (free option only). The boost and free-option steps after submitting only run on a real publish.
 
 ## Output
 

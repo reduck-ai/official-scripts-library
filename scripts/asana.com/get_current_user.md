@@ -4,7 +4,7 @@ Automatically get Current User on asana.com. Report which Asana account this bro
 
 - Site: asana.com
 - Address: `reduck/asana.com/get_current_user`
-- Updated: 2026-10-01 (v3)
+- Updated: 2026-10-05 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

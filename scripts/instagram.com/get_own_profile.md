@@ -4,7 +4,7 @@ Automatically get own Instagram profile on instagram.com. Read the logged-in Ins
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/get_own_profile`
-- Updated: 2026-09-17 (v2)
+- Updated: 2026-10-05 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -1,10 +1,10 @@
 # delete_channel
 
-Delete a Discord channel by its id — text, voice, announcement, stage or forum. Requires the Manage Channels permission in that server. This cannot be undone: Discord removes the channel together with all of its message history, as its own confirmation dialog warns. Before confirming, the script checks that Discord's confirmation dialog names the very channel that was asked for, so a mis-targeted context menu can never remove the wrong channel, and it refuses outright when the id is a category rather than a channel. Success is taken from Discord's own deletion response, not from the sidebar. Pass expectedName to have the channel's name asserted as well.
+Delete a Discord channel by its id — text, voice, announcement, stage or forum. Requires the Manage Channels permission in that server. This cannot be undone: the channel and all of its message history are removed. Category ids are refused. The script makes sure it is deleting exactly the channel you asked for; pass expectedName to also require that the channel has that name. Returns whether Discord confirmed the deletion and the name of the channel removed.
 
 - Site: discord.com
 - Address: `reduck/discord.com/delete_channel`
-- Updated: 2026-10-01 (v5)
+- Updated: 2026-10-05 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -19,21 +19,21 @@ npx @reduck-ai/cli@latest run --script reduck/discord.com/delete_channel
 
 - `guildId` (string, required): Server id the channel belongs to, e.g. from discord.com/list_servers.
 - `channelId` (string, required): Id of the channel to delete, e.g. from discord.com/list_channels or create_channel's channelId. Must be a channel, not a category — a category id is refused.
-- `expectedName` (string, optional): Optional safety check: the channel's name as it appears in the sidebar (from discord.com/list_channels). When given, the script refuses to delete unless the channel at channelId carries exactly this name. Regardless of this argument, the script always verifies that Discord's own confirmation dialog names the channel it resolved.
+- `expectedName` (string, optional): Optional safety check: the channel's name as shown in Discord (from discord.com/list_channels). When given, nothing is deleted unless the channel at channelId has exactly this name.
 
 ## Output
 
-- `name` (string, required): The channel's name as read from the sidebar before deletion, so the caller has a receipt of what was actually removed.
-- `deleted` (boolean, required): True only when Discord's own DELETE request returned a success status.
+- `name` (string, required): The name of the channel that was deleted, as a receipt of what was removed.
+- `deleted` (boolean, required): True only when Discord confirmed the deletion.
 - `guildId` (string, required)
 - `channelId` (string, required)
-- `verified_gone` (boolean, required): Whether the channel row was confirmed to have disappeared from the sidebar afterwards. A second check, never the assertion — `deleted` is what Discord's API said.
+- `verified_gone` (boolean, required): Whether the channel was also confirmed gone from the server's channel list afterwards.
 
 ## FAQ
 
 ### What does "delete_channel" do?
 
-Delete a Discord channel by its id — text, voice, announcement, stage or forum. Requires the Manage Channels permission in that server. This cannot be undone: Discord removes the channel together with all of its message history, as its own confirmation dialog warns. Before confirming, the script checks that Discord's confirmation dialog names the very channel that was asked for, so a mis-targeted context menu can never remove the wrong channel, and it refuses outright when the id is a category rather than a channel. Success is taken from Discord's own deletion response, not from the sidebar. Pass expectedName to have the channel's name asserted as well.
+Delete a Discord channel by its id — text, voice, announcement, stage or forum. Requires the Manage Channels permission in that server. This cannot be undone: the channel and all of its message history are removed. Category ids are refused. The script makes sure it is deleting exactly the channel you asked for; pass expectedName to also require that the channel has that name. Returns whether Discord confirmed the deletion and the name of the channel removed.
 
 ### What information do I need to provide?
 

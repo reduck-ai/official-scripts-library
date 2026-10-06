@@ -4,7 +4,7 @@ Automatically download Gmail attachments on mail.google.com. Download every atta
 
 - Site: mail.google.com
 - Address: `reduck/mail.google.com/download_attachment`
-- Updated: 2026-10-02 (v15)
+- Updated: 2026-10-05 (v16)
 - Author: Reduck AI (reduck)
 
 ## Run it

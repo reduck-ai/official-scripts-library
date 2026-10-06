@@ -4,7 +4,7 @@ Automatically remove user from GitHub org on github.com. Remove a person from a 
 
 - Site: github.com
 - Address: `reduck/github.com/delete_user`
-- Updated: 2026-08-27 (v5)
+- Updated: 2026-10-05 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -55,7 +55,7 @@ Yes. It acts as you on github.com: on your own Chrome it reuses your session, an
 
 ### Does it change anything on github.com, or only read data?
 
-It makes changes on github.com, like sending, posting or booking something.
+It makes changes on github.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

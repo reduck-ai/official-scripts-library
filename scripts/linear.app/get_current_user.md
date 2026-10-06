@@ -4,7 +4,7 @@ Automatically get Current User on linear.app. Report which Linear account this b
 
 - Site: linear.app
 - Address: `reduck/linear.app/get_current_user`
-- Updated: 2026-09-28 (v2)
+- Updated: 2026-10-05 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

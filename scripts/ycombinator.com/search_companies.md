@@ -1,11 +1,15 @@
 # Search YC startup directory
 
-Automatically search YC startup directory on ycombinator.com. Search the YC startup directory (ycombinator.com/companies) by free-text query plus filters such as batch, industry, tag, region, status, and top/hiring/nonprofit; each multi-value filter is OR'd within itself. Zero-based pagination.
+Automatically search YC startup directory on ycombinator.com. Pull YC companies by batch, tag, region or hiring status with websites and team sizes.
 
 - Site: ycombinator.com
 - Address: `reduck/ycombinator.com/search_companies`
-- Updated: 2026-07-17 (v2)
+- Updated: 2026-10-05 (v2)
 - Author: Reduck AI (reduck)
+
+## About
+
+Send the filters as JSON and get back plain rows for each matching company, with website, oneLiner, batch, teamSize, isHiring and tags. A free-text query is accepted too. Say you sell an API monitoring product to young developer tool startups. You ask for tag "Developer Tools", batches "Spring 2026" and "Summer 2026" and isHiring true, which should fit on one page at the default 40 rows. Sort by teamSize, keep the rows under 15 people, and open each company's url to find the founders before you write to anyone. The directory's company size filter is not exposed here, so size is something you trim after the fetch. Values inside one filter are OR'd, and separate filters are AND'd. The script reads the search key from the directory page on each run and queries the search index directly, so no YC account is needed.
 
 ## Run it
 
@@ -37,6 +41,51 @@ npx @reduck-ai/cli@latest run --script reduck/ycombinator.com/search_companies
 - `nbPages` (integer, required)
 - `companies` (array, required)
 - `hitsPerPage` (integer, optional)
+
+## Example output
+
+Shape only: placeholder values generated from the output schema, not a real run.
+
+```json
+{
+  "page": 1,
+  "total": 3,
+  "nbPages": 3,
+  "companies": [
+    {
+      "id": "abc123",
+      "url": "https://example.com/item/123",
+      "name": "Example",
+      "slug": "…",
+      "tags": [
+        "…"
+      ],
+      "batch": "…",
+      "stage": "…",
+      "status": "…",
+      "logoUrl": "https://example.com/item/123",
+      "regions": [
+        "…"
+      ],
+      "website": "…",
+      "industry": "…",
+      "isHiring": true,
+      "location": "…",
+      "oneLiner": "…",
+      "teamSize": 3,
+      "nonprofit": true,
+      "industries": [
+        "…"
+      ],
+      "launchedAt": "2026-01-15T09:30:00Z",
+      "topCompany": true,
+      "subindustry": "…",
+      "longDescription": "…"
+    }
+  ],
+  "hitsPerPage": 3
+}
+```
 
 ## FAQ
 
@@ -75,5 +124,21 @@ Ask an AI agent connected to Reduck to run reduck/ycombinator.com/search_compani
 ### Who maintains it?
 
 It is part of Reduck's official curated catalogue.
+
+### How do I export every company in the YC directory?
+
+Run one search per batch with count set to 1000 and read total and nbPages in each response. The schema notes that the search index caps a page at 1000 results, so paging one unfiltered query through the whole directory is the wrong approach. Splitting by batch keeps each query small, and you can merge the rows afterwards using the id field.
+
+### Why does my YC batch filter return zero companies?
+
+Filter values are matched as exact text against the directory's labels, so "W24" finds nothing while "Winter 2024" works. A misspelled tag, industry or region behaves the same way and gives an empty companies list rather than an error.
+
+### Can I filter YC companies by team size or number of employees?
+
+There is no team size input. Every result carries teamSize as a number, which can be null, so fetch the batch or tag you want and filter the rows afterwards, for example keeping teamSize of 10 or less.
+
+### Can I search for companies that are not hiring?
+
+No. isHiring, topCompany and nonprofit only filter when set to true, and leaving them out means no constraint. To find companies that are not hiring, fetch without isHiring and drop the rows where isHiring is true.
 
 Source: https://reduck.ai/explore/scripts/reduck/ycombinator.com/search_companies

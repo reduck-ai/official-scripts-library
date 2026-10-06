@@ -4,7 +4,7 @@ Automatically get TikTok user videos on tiktok.com. List a TikTok user's videos 
 
 - Site: tiktok.com
 - Address: `reduck/tiktok.com/get_user_videos`
-- Updated: 2026-09-03 (v2)
+- Updated: 2026-10-05 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -1,10 +1,10 @@
 # List LinkedIn message inbox
 
-Automatically list LinkedIn message inbox on linkedin.com. List the classic LinkedIn messaging inbox conversations (NOT Sales Navigator). Returns each conversation's thread URL/id, counterpart participants (name, profileUrl), unread count, last activity, and last message (text, time, fromSelf, subject). Paginates: a limit above 20 scrolls the inbox to load older conversations, and sinceIso fetches everything back to a given date (e.g. the last N months).
+Automatically list LinkedIn message inbox on linkedin.com. List conversations from the classic LinkedIn messaging inbox (Sales Navigator messages are not included). Returns each conversation's thread URL/id, counterpart participants (name, profileUrl), unread count, last activity, and last message (text, time, fromSelf, subject). Paginates: a limit above 20 scrolls the inbox to load older conversations, and sinceIso fetches everything back to a given date (e.g. the last N months).
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/list_inbox`
-- Updated: 2026-10-01 (v6)
+- Updated: 2026-10-05 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -32,7 +32,7 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/list_inbox
 
 ### What does "List LinkedIn message inbox" do?
 
-List the classic LinkedIn messaging inbox conversations (NOT Sales Navigator). Returns each conversation's thread URL/id, counterpart participants (name, profileUrl), unread count, last activity, and last message (text, time, fromSelf, subject). Paginates: a limit above 20 scrolls the inbox to load older conversations, and sinceIso fetches everything back to a given date (e.g. the last N months).
+List conversations from the classic LinkedIn messaging inbox (Sales Navigator messages are not included). Returns each conversation's thread URL/id, counterpart participants (name, profileUrl), unread count, last activity, and last message (text, time, fromSelf, subject). Paginates: a limit above 20 scrolls the inbox to load older conversations, and sinceIso fetches everything back to a given date (e.g. the last N months).
 
 ### How do I automatically list LinkedIn message inbox on linkedin.com?
 

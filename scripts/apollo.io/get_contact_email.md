@@ -4,7 +4,7 @@ Automatically reveal Apollo contact email on apollo.io. Reveal a person's email 
 
 - Site: apollo.io
 - Address: `reduck/apollo.io/get_contact_email`
-- Updated: 2026-10-02 (v11)
+- Updated: 2026-10-05 (v15)
 - Author: Reduck AI (reduck)
 
 ## Run it

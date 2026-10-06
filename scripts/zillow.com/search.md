@@ -1,11 +1,15 @@
 # Search Zillow listings
 
-Automatically search Zillow listings on zillow.com. Search Zillow listings for sale, for rent or recently sold in a location, with the site's own filters: price range, bedrooms, bathrooms, property type, furnished and space (rentals). Returns one page of cards with zpid, detailUrl, address, price, priceText, beds, baths, area, lat, lng, broker, imgSrc, statusText, units and nearby. Apartment buildings come back as one card whose per-unit prices and bed counts are in units. When too few listings match inside the region, Zillow widens to the surrounding area; those cards have nearby:true. The site's result count includes every unit of a building, so a search can have fewer pages than that count suggests; a page past the last one fails. Pagination stops at 20 pages, and relevance order can change between sessions, so use a fixed sort such as newest when paging in parallel.
+Automatically search Zillow listings on zillow.com. One page of up to 41 homes for sale, for rent or sold, with price, beds, baths, square feet and map pin.
 
 - Site: zillow.com
 - Address: `reduck/zillow.com/search`
-- Updated: 2026-09-27 (v16)
+- Updated: 2026-10-05 (v16)
 - Author: Reduck AI (reduck)
+
+## About
+
+Most people point this at one neighborhood and run it on a schedule instead of refreshing Zillow by hand. Say an investor watching 78704 in South Austin runs it every morning for homes for sale under $650,000, newest first (sort "days"), diffs the zpids against yesterday's run and pulls full details only for the new ones. The filters are the ones on Zillow's own filter bar, and switching status to recently_sold gives you the recent sales in a ZIP, which is where most comp checks start. On rentals and sold searches, an apartment building comes back as a single card with price, beds, baths and area all null; the per-unit numbers sit in units as Zillow's own strings, like "$2,150+" for a starting rent. When filters are tight, Zillow pads the page with listings from outside the area and marks them nearby:true. Drop those cards before you count anything.
 
 ## Run it
 
@@ -63,5 +67,21 @@ Ask an AI agent connected to Reduck to run reduck/zillow.com/search, or run it f
 ### Who maintains it?
 
 It is part of Reduck's official curated catalogue.
+
+### How many Zillow listings can one search return?
+
+Zillow serves 41 homes per page and stops at 20 pages, which caps a single search at about 820 listings; to cover more, split the area by ZIP or by price band. Expect fewer pages than Zillow's headline count divided by 41, because that count includes every unit in an apartment building. If you fetch several pages at once, sort by "days" (newest first), since the default relevance order can shuffle between runs and hand you the same home twice.
+
+### Does this Zillow search return the Zestimate?
+
+No, the search output has no Zestimate field. Pass each zpid to the get_listing script for zillow.com to get the Zestimate along with year built, lot size, the description and rental details such as allowed pets and lease term. Zillow Group's own Zestimates API is aimed at businesses with a commercial use case, and access is granted on request.
+
+### Why does a Zillow search sometimes fail with a Press & Hold error?
+
+Press & Hold is Zillow's bot check. When it won't let the browser through, the run fails with an error naming that gate instead of returning an empty list that looks like nothing matched. The check shows up more when many searches start at the same moment, and on the sibling get_listing script it refused every run from Reduck's hosted cloud browser while almost all runs through the extension in a normal Chrome completed.
+
+### What if Zillow doesn't recognize the location I give it?
+
+Zillow quietly swaps an unknown place name for some default region (a made-up town once came back as Austin, TX), and the script fails when no word of three or more letters from your location appears in the region Zillow picked. Two-letter state codes are ignored, though: if Zillow mapped "Portland, ME" to Portland, OR, the check would not catch it. A bare ZIP skips the check entirely, which is why it pays to glance at the addresses on the first few cards whatever you searched for.
 
 Source: https://reduck.ai/explore/scripts/reduck/zillow.com/search

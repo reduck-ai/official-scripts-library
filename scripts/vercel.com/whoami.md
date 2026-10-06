@@ -4,7 +4,7 @@ Report which Vercel account this browser is signed in as: the user id, email, us
 
 - Site: vercel.com
 - Address: `reduck/vercel.com/whoami`
-- Updated: 2026-09-29 (v2)
+- Updated: 2026-10-05 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

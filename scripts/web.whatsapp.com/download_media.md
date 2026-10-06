@@ -4,7 +4,7 @@ Automatically download media on web.whatsapp.com. Download the media of a WhatsA
 
 - Site: web.whatsapp.com
 - Address: `reduck/web.whatsapp.com/download_media`
-- Updated: 2026-09-09 (v10)
+- Updated: 2026-10-05 (v13)
 - Author: Reduck AI (reduck)
 
 ## Run it

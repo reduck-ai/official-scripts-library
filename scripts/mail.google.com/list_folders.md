@@ -4,7 +4,7 @@ Automatically list Gmail labels / folders on mail.google.com. List the Gmail lab
 
 - Site: mail.google.com
 - Address: `reduck/mail.google.com/list_folders`
-- Updated: 2026-08-24 (v4)
+- Updated: 2026-10-05 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

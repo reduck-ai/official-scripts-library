@@ -4,7 +4,7 @@ Automatically list your Notion invoices across workspaces on app.notion.com. An 
 
 - Site: app.notion.com
 - Address: `reduck/app.notion.com/list_invoices`
-- Updated: 2026-09-29 (v1)
+- Updated: 2026-10-05 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -22,6 +22,7 @@ npx @reduck-ai/cli@latest run --script reduck/app.notion.com/list_invoices
 ## Output
 
 - `invoices` (array, required)
+- `skipped_spaces` (array, optional): Workspaces whose billing the user cannot read (not owner/billing admin); their invoices are NOT in `invoices`.
 
 ## FAQ
 
@@ -43,7 +44,7 @@ Optional: space_id.
 
 ### What does it return?
 
-It returns invoices.
+It returns invoices, skipped_spaces.
 
 ### Do I need to be logged in to app.notion.com?
 

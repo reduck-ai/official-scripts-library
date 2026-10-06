@@ -4,7 +4,7 @@ Automatically get current Lovable user on lovable.dev. Report which Lovable acco
 
 - Site: lovable.dev
 - Address: `reduck/lovable.dev/get_current_user`
-- Updated: 2026-09-28 (v2)
+- Updated: 2026-10-05 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

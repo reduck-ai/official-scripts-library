@@ -4,7 +4,7 @@ Automatically get Current Drive User on drive.google.com. Report which Google ac
 
 - Site: drive.google.com
 - Address: `reduck/drive.google.com/get_current_user`
-- Updated: 2026-09-28 (v2)
+- Updated: 2026-10-05 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

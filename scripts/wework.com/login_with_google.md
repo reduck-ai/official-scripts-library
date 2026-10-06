@@ -4,7 +4,7 @@ Log into WeWork Account Central using Sign in with Google, ending on the Account
 
 - Site: wework.com
 - Address: `reduck/wework.com/login_with_google`
-- Updated: 2026-09-04 (v5)
+- Updated: 2026-10-05 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -45,7 +45,7 @@ Yes. It acts as you on wework.com: on your own Chrome it reuses your session, an
 
 ### Does it change anything on wework.com, or only read data?
 
-It makes changes on wework.com, like sending, posting or booking something.
+It makes changes on wework.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

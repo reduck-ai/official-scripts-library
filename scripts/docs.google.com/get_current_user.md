@@ -4,7 +4,7 @@ Automatically get Current Docs/Sheets User on docs.google.com. Report which Goog
 
 - Site: docs.google.com
 - Address: `reduck/docs.google.com/get_current_user`
-- Updated: 2026-09-28 (v2)
+- Updated: 2026-10-05 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

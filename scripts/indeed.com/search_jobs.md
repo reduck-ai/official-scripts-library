@@ -1,11 +1,15 @@
 # Search Indeed jobs
 
-Automatically search Indeed jobs on indeed.com. Search Indeed's public job listings by keyword, optional free-text location and country site (e.g. "fr" for fr.indeed.com, default "us"). Returns total, page, outOfCountry, and jobs (jobKey, title, company, location, salary, jobTypes, remote, sponsored, postedAgo, url). Anonymous search only reliably supports page=1 — Indeed gates further pages behind a sign-in wall, and the script throws loudly if that gate appears. total/results are only meaningful for the requested location when outOfCountry is false; indeed.com (US) treats non-US locations as out-of-country and returns unrelated jobs.
+Automatically search Indeed jobs on indeed.com. First page of Indeed job cards with salary text, posting age and a jobKey to diff between runs
 
 - Site: indeed.com
 - Address: `reduck/indeed.com/search_jobs`
-- Updated: 2026-09-17 (v4)
+- Updated: 2026-10-05 (v4)
 - Author: Reduck AI (reduck)
+
+## About
+
+Say you're hunting for a data analyst job in Austin. Run query "data analyst", location "Austin, TX" and sortBy "date" each morning, compare the jobKey values with yesterday's list, and open only new ones with a salary. Each run returns one results page of job cards, with salary as raw text when Indeed shows one and postedAgo as a phrase like "3 days ago". Outside the US, set country to "fr", "de" or "uk" so the location belongs to that country's Indeed site. If outOfCountry comes back true, Indeed swapped your location for generic results and total means nothing. Two limits apply. Anonymous search only works for page 1, so narrow the query instead of paging. And Indeed can bounce datacenter traffic to a login page, so a hosted run needs an in-country residential proxy, while your own Chrome sends the search from your home connection. You get the viewjob link, not the job description.
 
 ## Run it
 
@@ -29,6 +33,34 @@ npx @reduck-ai/cli@latest run --script reduck/indeed.com/search_jobs
 - `page` (integer, required)
 - `total` (integer, required): Matching job count reported by Indeed for this query/location. Not meaningful when outOfCountry is true (Indeed falls back to a broad, location-agnostic count).
 - `outOfCountry` (boolean, required): True when Indeed treated the requested location as outside the chosen country site — total and jobs then reflect a fallback, not the requested location.
+
+## Example output
+
+Shape only: placeholder values generated from the output schema, not a real run.
+
+```json
+{
+  "jobs": [
+    {
+      "url": "https://example.com/item/123",
+      "title": "Example",
+      "jobKey": "…",
+      "remote": true,
+      "salary": "…",
+      "company": "…",
+      "jobTypes": [
+        "…"
+      ],
+      "location": "…",
+      "postedAgo": "…",
+      "sponsored": true
+    }
+  ],
+  "page": 1,
+  "total": 3,
+  "outOfCountry": true
+}
+```
 
 ## FAQ
 
@@ -67,5 +99,17 @@ Ask an AI agent connected to Reduck to run reduck/indeed.com/search_jobs, or run
 ### Who maintains it?
 
 It is part of Reduck's official curated catalogue.
+
+### Can I get more than the first page of Indeed results?
+
+Not anonymously. The script is built for page 1. Indeed answers page 2 and beyond in an anonymous session with a sign-in wall, and the script reports that as a pagination error instead of returning an empty list. Whether a signed-in session would work is untested. To see different postings, narrow the query or location, or sort by date so the newest jobs land on page 1.
+
+### Why does a search for jobs in Paris, France on indeed.com return unrelated jobs?
+
+Each Indeed country site searches its own market. A location outside the US on www.indeed.com is treated as out of country, so outOfCountry is true and the page holds fallback listings. Pass country "fr" to search fr.indeed.com instead, and ignore total whenever outOfCountry is true.
+
+### Why did my Indeed search stop with a sign-in wall error on page 1?
+
+Indeed sometimes redirects requests from datacenter IP addresses to its login page, and the script stops with an error that names the network as the cause. Retry from a residential connection. On a Reduck-hosted browser, pass a country such as FR so the session goes through an in-country residential proxy. Your own Chrome is another route, with mixed results so far.
 
 Source: https://reduck.ai/explore/scripts/reduck/indeed.com/search_jobs

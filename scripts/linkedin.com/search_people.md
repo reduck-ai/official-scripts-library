@@ -4,7 +4,7 @@ Automatically search LinkedIn people on linkedin.com. Search LinkedIn people by 
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/search_people`
-- Updated: 2026-10-03 (v19)
+- Updated: 2026-10-05 (v25)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,9 +17,9 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/search_people
 
 ## Input
 
-- `page` (integer, optional): Result page, 10 people per page. Default 1. Pagination verified deterministic (same page from two fresh cold sessions returned identical people in identical order — safe to fan out). LinkedIn caps browsing at ~100 pages; free-tier accounts also hit a monthly commercial-use search limit.
+- `page` (integer, optional): Result page, 10 people per page. Default 1. The same page returns the same people, so pages can be fetched in parallel. LinkedIn caps browsing at ~100 pages; free-tier accounts also hit a monthly commercial-use search limit.
 - `title` (string, optional): Current job title keyword (LinkedIn 'Title' filter, exact-phrase quoted).
-- `geoUrn` (string | array, optional): LinkedIn geo URN id(s) — the location facet, OR-combined (source from suggest_locations). Pure URL templating, no UI; takes precedence over `location`.
+- `geoUrn` (string | array, optional): LinkedIn location id(s) from suggest_locations, OR-combined. Takes precedence over `location`.
 - `school` (string, optional): School name keyword.
 - `company` (string, optional): Company name keyword (free-text 'Company' filter — use currentCompanyIds for an exact company).
 - `keywords` (string, optional): Free-text search query.

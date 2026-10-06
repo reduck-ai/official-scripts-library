@@ -1,10 +1,10 @@
 # add_reaction
 
-React to a Discord message with a unicode emoji, or remove your own reaction with remove:true. Takes the message's own url, as copied from Discord or returned by discord.com/read_messages. Returns the emoji, the message and channel ids, whether your reaction was already there before this ran, and the reaction's count afterwards. Reactions are visible to everyone who can see the channel. Supports a small set of common emoji rather than any glyph, since Discord's picker only accepts an emoji name to search, not a pasted character. Does not work on a forum post's own opening message, whose context menu is shaped differently from a regular message's — react to a reply in the post instead.
+React to a Discord message with a unicode emoji, or remove your own reaction with remove:true. Takes the message's url, as copied from Discord or built from discord.com/read_messages. Returns the emoji, the message and channel ids, whether your reaction was already there, and the reaction count afterwards. Reactions are visible to everyone who can see the channel. Supports a set of common emoji (thumbs up/down, heart, fire, eyes, check mark and similar), not every emoji and not custom server emoji. Does not work on a forum post's opening message; react to a reply in the post instead.
 
 - Site: discord.com
 - Address: `reduck/discord.com/add_reaction`
-- Updated: 2026-10-01 (v28)
+- Updated: 2026-10-05 (v29)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,8 +17,8 @@ npx @reduck-ai/cli@latest run --script reduck/discord.com/add_reaction
 
 ## Input
 
-- `emoji` (string, required): A single unicode emoji, e.g. a thumbs up. Limited to a set of common emoji this script can name for Discord's picker search (thumbs up/down, heart, laughing, fire, 100, eyes, check mark, clap, party popper, thinking, and a few more); an emoji outside that set is refused with a clear reason rather than guessed at. Custom server emoji are not supported.
-- `messageUrl` (string, required): Full message url, e.g. https://discord.com/channels/<guildId>/<channelId>/<messageId>. discord.com/read_messages returns the ids to build one. Must not be a forum/thread post's own opening message (where the channelId and messageId segments are equal) — that message's context menu has no add-reaction entry, so it is refused; react to a reply inside the post instead.
+- `emoji` (string, required): A single unicode emoji, e.g. a thumbs up. Limited to a set of common emoji (thumbs up/down, heart, laughing, fire, 100, eyes, check mark, clap, party popper, thinking, and a few more); an emoji outside that set is refused with a clear reason. Custom server emoji are not supported.
+- `messageUrl` (string, required): Full message url, e.g. https://discord.com/channels/<guildId>/<channelId>/<messageId>. discord.com/read_messages returns the ids to build one. A forum or thread post's own opening message (where the channelId and messageId are equal) is not supported and is refused; react to a reply inside the post instead.
 - `remove` (boolean, optional): Leave false (the default) to add your reaction. Set true to take your own reaction off; other people's reactions are never touched.
 
 ## Output
@@ -28,14 +28,14 @@ npx @reduck-ai/cli@latest run --script reduck/discord.com/add_reaction
 - `channelId` (string, required)
 - `messageId` (string, required)
 - `already_present` (boolean, required): True when the message was already in the requested state, so nothing was written.
-- `count` (integer | null, optional): How many people have reacted with this emoji afterwards, as Discord shows it; null once no pill remains.
-- `request_seen` (boolean, optional): Whether Discord's own reaction request was observed for this change.
+- `count` (integer | null, optional): How many people have reacted with this emoji afterwards; null once no one has.
+- `request_seen` (boolean, optional): Whether Discord confirmed the change.
 
 ## FAQ
 
 ### What does "add_reaction" do?
 
-React to a Discord message with a unicode emoji, or remove your own reaction with remove:true. Takes the message's own url, as copied from Discord or returned by discord.com/read_messages. Returns the emoji, the message and channel ids, whether your reaction was already there before this ran, and the reaction's count afterwards. Reactions are visible to everyone who can see the channel. Supports a small set of common emoji rather than any glyph, since Discord's picker only accepts an emoji name to search, not a pasted character. Does not work on a forum post's own opening message, whose context menu is shaped differently from a regular message's — react to a reply in the post instead.
+React to a Discord message with a unicode emoji, or remove your own reaction with remove:true. Takes the message's url, as copied from Discord or built from discord.com/read_messages. Returns the emoji, the message and channel ids, whether your reaction was already there, and the reaction count afterwards. Reactions are visible to everyone who can see the channel. Supports a set of common emoji (thumbs up/down, heart, fire, eyes, check mark and similar), not every emoji and not custom server emoji. Does not work on a forum post's opening message; react to a reply in the post instead.
 
 ### What information do I need to provide?
 

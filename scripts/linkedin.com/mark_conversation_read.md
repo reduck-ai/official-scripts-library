@@ -4,7 +4,7 @@ Automatically mark LinkedIn conversation as read on linkedin.com. Mark a classic
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/mark_conversation_read`
-- Updated: 2026-09-03 (v1)
+- Updated: 2026-10-05 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -53,7 +53,7 @@ Yes. It acts as you on linkedin.com: on your own Chrome it reuses your session, 
 
 ### Does it change anything on linkedin.com, or only read data?
 
-It makes changes on linkedin.com, like sending, posting or booking something.
+It makes changes on linkedin.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

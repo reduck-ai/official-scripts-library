@@ -4,7 +4,7 @@ Log into Make (formerly Integromat) with Continue with Google, handling the Goog
 
 - Site: make.com
 - Address: `reduck/make.com/login_with_google`
-- Updated: 2026-09-25 (v1)
+- Updated: 2026-10-05 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -47,7 +47,7 @@ Yes. It acts as you on make.com: on your own Chrome it reuses your session, and 
 
 ### Does it change anything on make.com, or only read data?
 
-It makes changes on make.com, like sending, posting or booking something.
+It makes changes on make.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

@@ -4,7 +4,7 @@ Automatically unlike a TikTok video on tiktok.com. Remove your like from a TikTo
 
 - Site: tiktok.com
 - Address: `reduck/tiktok.com/unlike_video`
-- Updated: 2026-08-26 (v2)
+- Updated: 2026-10-05 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -53,7 +53,7 @@ Yes. It acts as you on tiktok.com: on your own Chrome it reuses your session, an
 
 ### Does it change anything on tiktok.com, or only read data?
 
-It makes changes on tiktok.com, like sending, posting or booking something.
+It makes changes on tiktok.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

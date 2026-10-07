@@ -4,7 +4,7 @@ Automatically search France Travail jobs on francetravail.fr. Search France Trav
 
 - Site: francetravail.fr
 - Address: `reduck/francetravail.fr/search_jobs`
-- Updated: 2026-09-10 (v3)
+- Updated: 2026-10-06 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -19,13 +19,15 @@ npx @reduck-ai/cli@latest run --script reduck/francetravail.fr/search_jobs
 
 - `query` (string, required): Free-text job search query, same as France Travail's own search box (e.g. "data engineer").
 - `page` (integer, optional): 1-based page, 20 offers per page.
-- `location` (string, optional): Free-text location: a city or department name (e.g. "Lyon", "Paris"). Omit to search all of France. Resolved server-side to France Travail's own commune/department code; an unrecognized location throws rather than silently searching nationwide. Only commune- and department-level matches are supported (not region or country).
+- `lieux` (string, optional): France Travail location code, if you already know it: a department code with a D suffix (e.g. "75D") or a commune code (e.g. "69123" = Lyon). Skips the location lookup. Takes precedence over location.
+- `location` (string, optional): City or department name (e.g. "Lyon"). Omit to search all of France. Only used when it matches one commune or department exactly (or France Travail returns a single place); when several match (e.g. "Paris" is both), the run refuses and lists their lieux codes so you can pass the right one. The place used is returned as resolvedLocation.
 
 ## Output
 
 - `jobs` (array, required)
 - `page` (integer, required)
 - `total` (integer | null, optional): Matching offer count reported by France Travail's results header. Only populated on page 1 (the page>1 fragment endpoint doesn't repeat it) — null on later pages. 0 with empty jobs[] on page 1 = no matching offers (first-class outcome, not an error).
+- `resolvedLocation` (object | null, optional): The place the search was filtered on (null when no location was given). label/type are null when lieux was passed directly.
 
 ## FAQ
 
@@ -43,11 +45,11 @@ You do not need one. "Search France Travail jobs" drives the real francetravail.
 
 ### What information do I need to provide?
 
-Required: query. Optional: page, location.
+Required: query. Optional: page, lieux, location.
 
 ### What does it return?
 
-It returns jobs, page, total.
+It returns jobs, page, total, resolvedLocation.
 
 ### Do I need to be logged in to francetravail.fr?
 

@@ -4,7 +4,7 @@ Report which Substack account this browser is signed in as: the @handle, display
 
 - Site: substack.com
 - Address: `reduck/substack.com/whoami`
-- Updated: 2026-09-26 (v1)
+- Updated: 2026-10-06 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

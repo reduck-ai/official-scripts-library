@@ -1,10 +1,10 @@
 # Sales Navigator: search accounts
 
-Automatically search accounts on linkedin.com. Search LinkedIn Sales Navigator company accounts by keywords, headquarters geography, and headcount, paginated 25 per page via a 0-based start offset. Returns total, count, start, and accounts (accountId, companyName, industry, employee count and range, description, list/saved status, spotlight badges, salesAccountUrl). Requires a Sales Navigator seat.
+Automatically search accounts on linkedin.com. Search LinkedIn Sales Navigator company accounts by keywords, headquarters location (regionId, a LinkedIn geo id from linkedin.com/suggest_locations — place names are not accepted), and headcount, paginated 25 per page via a 0-based start offset. Returns total, count, start, and accounts (accountId, companyName, industry, employee count and range, description, list/saved status, spotlight badges, salesAccountUrl). Requires a Sales Navigator seat.
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/sales_navigator_search_accounts`
-- Updated: 2026-09-03 (v4)
+- Updated: 2026-10-06 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -19,7 +19,7 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/sales_navigator_searc
 
 - `start` (integer, optional): 0-based result offset; the page returns 25. Pass 0, 25, 50, ... to paginate.
 - `keywords` (string, optional): Free-text keyword box (company name / terms).
-- `geography` (string, optional): HQ location, free text resolved to a region id (e.g. "France", "Paris", "United States").
+- `regionId` (integer, optional): HQ location as a LinkedIn geo id. Get it from linkedin.com/suggest_locations (its geoUrn) and check the label first, e.g. France = 105015875. Place names are not accepted.
 - `companyHeadcount` (array, optional): Company headcount buckets (OR).
 
 ## Output
@@ -34,7 +34,7 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/sales_navigator_searc
 
 ### What does "Sales Navigator: search accounts" do?
 
-Search LinkedIn Sales Navigator company accounts by keywords, headquarters geography, and headcount, paginated 25 per page via a 0-based start offset. Returns total, count, start, and accounts (accountId, companyName, industry, employee count and range, description, list/saved status, spotlight badges, salesAccountUrl). Requires a Sales Navigator seat.
+Search LinkedIn Sales Navigator company accounts by keywords, headquarters location (regionId, a LinkedIn geo id from linkedin.com/suggest_locations — place names are not accepted), and headcount, paginated 25 per page via a 0-based start offset. Returns total, count, start, and accounts (accountId, companyName, industry, employee count and range, description, list/saved status, spotlight badges, salesAccountUrl). Requires a Sales Navigator seat.
 
 ### How do I automatically search accounts on linkedin.com?
 
@@ -46,7 +46,7 @@ You do not need one. "Sales Navigator: search accounts" drives the real linkedin
 
 ### What information do I need to provide?
 
-Optional: start, keywords, geography, companyHeadcount.
+Optional: start, keywords, regionId, companyHeadcount.
 
 ### What does it return?
 

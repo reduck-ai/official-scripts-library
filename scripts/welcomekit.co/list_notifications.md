@@ -4,7 +4,7 @@ Automatically list Welcome to the Jungle recruiter notifications on welcomekit.c
 
 - Site: welcomekit.co
 - Address: `reduck/welcomekit.co/list_notifications`
-- Updated: 2026-07-29 (v1)
+- Updated: 2026-10-06 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/welcomekit.co/list_notifications
 
 ## Input
 
-- `org` (string, required): Organization reference as in the dashboard URL https://www.welcomekit.co/dashboard/o/<org>/ (6-char code, e.g. sfWkCZ).
+- `org` (string, required): Organization reference as in the dashboard URL https://www.welcomekit.co/dashboard/o/<org>/ (6-char code, e.g. abc123).
 
 ## Output
 

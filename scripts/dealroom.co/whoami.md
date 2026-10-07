@@ -4,7 +4,7 @@ Report which Dealroom account this browser is signed in as: email, name and user
 
 - Site: dealroom.co
 - Address: `reduck/dealroom.co/whoami`
-- Updated: 2026-09-28 (v2)
+- Updated: 2026-10-06 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

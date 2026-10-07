@@ -4,7 +4,7 @@ Automatically create or update a HubSpot contact on app.hubspot.com. Create a Hu
 
 - Site: app.hubspot.com
 - Address: `reduck/app.hubspot.com/create_or_update_contact`
-- Updated: 2026-09-25 (v3)
+- Updated: 2026-10-06 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -65,7 +65,7 @@ Yes. It acts as you on app.hubspot.com: on your own Chrome it reuses your sessio
 
 ### Does it change anything on app.hubspot.com, or only read data?
 
-It makes changes on app.hubspot.com, like sending, posting or booking something.
+It makes changes on app.hubspot.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

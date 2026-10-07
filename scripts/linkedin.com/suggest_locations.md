@@ -4,7 +4,7 @@ Automatically suggest LinkedIn locations on linkedin.com. Resolve a free-text lo
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/suggest_locations`
-- Updated: 2026-10-05 (v15)
+- Updated: 2026-10-06 (v16)
 - Author: Reduck AI (reduck)
 
 ## Run it

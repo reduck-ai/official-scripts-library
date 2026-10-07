@@ -1,10 +1,10 @@
 # Delete sent LinkedIn message
 
-Automatically delete sent LinkedIn message on linkedin.com. Permanently delete one of the logged-in member's own sent messages in a classic LinkedIn messaging thread (NOT Sales Navigator), by thread URL from list_inbox. Deletes your most recent message by default, or the most recent one containing `match`. The message is deleted for all participants and replaced with a "This message has been deleted" placeholder. Returns status (deleted/not_found) and the deleted text.
+Automatically delete sent LinkedIn message on linkedin.com. Permanently delete one of the logged-in member's own sent messages in a classic LinkedIn messaging thread (NOT Sales Navigator), by thread URL from list_inbox. Deletes your most recent message by default, or the one message containing `match`; when several of your messages contain it, nothing is deleted and status is ambiguous with the candidates listed. The message is deleted for all participants and replaced with a "This message has been deleted" placeholder. Returns status (deleted/not_found/not_deletable/ambiguous) and the deleted text.
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/delete_message`
-- Updated: 2026-09-03 (v3)
+- Updated: 2026-10-06 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,19 +18,20 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/delete_message
 ## Input
 
 - `threadUrl` (string, required): URL of the conversation thread, e.g. https://www.linkedin.com/messaging/thread/<id>/ (from list_inbox)
-- `match` (string, optional): Optional substring of the message text to pick WHICH of your own messages to delete. Defaults to your most recent message in the thread. If several match, the most recent one wins.
+- `match` (string, optional): Optional substring of the message text to pick which of your own messages to delete. Defaults to your most recent message in the thread. Must match exactly one of your messages; if several match, nothing is deleted and status is ambiguous.
 
 ## Output
 
-- `status` (string, required): deleted = removed; not_found = no own (non-already-deleted) message matching `match` in the loaded thread; not_deletable = a matching message was found but LinkedIn's per-message menu doesn't offer Delete for it (observed on older messages -- deletion appears to have its own time window, separate from the ~60min edit window)
+- `status` (string, required): deleted = removed; not_found = no own (non-already-deleted) message matching `match` in the loaded thread; not_deletable = a matching message was found but LinkedIn's per-message menu doesn't offer Delete for it (observed on older messages); ambiguous = several of your messages contain `match`, nothing was deleted — pass a longer `match` (see candidates)
 - `threadUrl` (string, required)
 - `deletedText` (string | null, required): The message text that was deleted (null unless status=deleted)
+- `candidates` (array, optional): Only when status=ambiguous: the texts of your messages that contain `match`.
 
 ## FAQ
 
 ### What does "Delete sent LinkedIn message" do?
 
-Permanently delete one of the logged-in member's own sent messages in a classic LinkedIn messaging thread (NOT Sales Navigator), by thread URL from list_inbox. Deletes your most recent message by default, or the most recent one containing `match`. The message is deleted for all participants and replaced with a "This message has been deleted" placeholder. Returns status (deleted/not_found) and the deleted text.
+Permanently delete one of the logged-in member's own sent messages in a classic LinkedIn messaging thread (NOT Sales Navigator), by thread URL from list_inbox. Deletes your most recent message by default, or the one message containing `match`; when several of your messages contain it, nothing is deleted and status is ambiguous with the candidates listed. The message is deleted for all participants and replaced with a "This message has been deleted" placeholder. Returns status (deleted/not_found/not_deletable/ambiguous) and the deleted text.
 
 ### How do I automatically delete sent LinkedIn message on linkedin.com?
 
@@ -46,7 +47,7 @@ Required: threadUrl. Optional: match.
 
 ### What does it return?
 
-It returns status, threadUrl, deletedText.
+It returns status, threadUrl, candidates, deletedText.
 
 ### Do I need to be logged in to linkedin.com?
 
@@ -54,7 +55,7 @@ Yes. It acts as you on linkedin.com: on your own Chrome it reuses your session, 
 
 ### Does it change anything on linkedin.com, or only read data?
 
-It makes changes on linkedin.com, like sending, posting or booking something.
+It makes changes on linkedin.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

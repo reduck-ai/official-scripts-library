@@ -4,7 +4,7 @@ Automatically send templated email to candidate on welcomekit.co. Send an email 
 
 - Site: welcomekit.co
 - Address: `reduck/welcomekit.co/send_template_email`
-- Updated: 2026-08-26 (v2)
+- Updated: 2026-10-06 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,7 +18,7 @@ npx @reduck-ai/cli@latest run --script reduck/welcomekit.co/send_template_email
 ## Input
 
 - `org` (string, required): Organization reference as it appears in your dashboard URL https://www.welcomekit.co/dashboard/o/<org>/ (6-char code).
-- `candidateReference` (string, required): Candidate reference from list_candidates, format: <orgprefix>-<24 hex chars>
+- `candidateReference` (string, required): Candidate reference from list_job_candidates, format: <orgprefix>-<24 hex chars>
 - `templateId` (integer, optional): Template id from list_email_templates. Wins over templateName when both given.
 - `bodyOverride` (string, optional): Replace the rendered body (HTML)
 - `templateName` (string, optional): Template name from list_email_templates (case-insensitive exact match)
@@ -61,7 +61,7 @@ Yes. It acts as you on welcomekit.co: on your own Chrome it reuses your session,
 
 ### Does it change anything on welcomekit.co, or only read data?
 
-It makes changes on welcomekit.co, like sending, posting or booking something.
+It makes changes on welcomekit.co, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

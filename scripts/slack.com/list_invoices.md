@@ -1,10 +1,10 @@
-# Slack API: list your Slack invoices and billing statements
+# Slack unofficial API: list your Slack invoices and billing statements
 
 Automatically list your Slack invoices and billing statements on slack.com. An unofficial Slack API for billing invoices. List Slack billing statements from the workspace's admin billing history. Returns workspace, total and invoices (date, statement, billId, amount, status, description, pdfUrl) — metadata only. Feed a row's pdfUrl (or billId) to slack.com/download_invoice to fetch that statement's PDF. Requires a workspace billing admin; defaults to the primary workspace, or pass workspaceDomain (e.g. acme.slack.com).
 
 - Site: slack.com
 - Address: `reduck/slack.com/list_invoices`
-- Updated: 2026-09-29 (v7)
+- Updated: 2026-10-06 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -27,7 +27,7 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/list_invoices
 
 ## FAQ
 
-### What does "Slack API: list your Slack invoices and billing statements" do?
+### What does "Slack unofficial API: list your Slack invoices and billing statements" do?
 
 An unofficial Slack API for billing invoices. List Slack billing statements from the workspace's admin billing history. Returns workspace, total and invoices (date, statement, billId, amount, status, description, pdfUrl) — metadata only. Feed a row's pdfUrl (or billId) to slack.com/download_invoice to fetch that statement's PDF. Requires a workspace billing admin; defaults to the primary workspace, or pass workspaceDomain (e.g. acme.slack.com).
 
@@ -37,7 +37,7 @@ Ask an AI agent connected to Reduck to run reduck/slack.com/list_invoices, or ru
 
 ### Is there a slack.com API to list your Slack invoices and billing statements?
 
-You do not need one. "Slack API: list your Slack invoices and billing statements" drives the real slack.com pages in a browser, so it works whether or not slack.com offers an API for this.
+You do not need one. "Slack unofficial API: list your Slack invoices and billing statements" drives the real slack.com pages in a browser, so it works whether or not slack.com offers an API for this.
 
 ### What information do I need to provide?
 

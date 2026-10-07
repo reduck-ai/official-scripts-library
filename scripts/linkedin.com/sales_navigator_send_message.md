@@ -1,10 +1,10 @@
 # Sales Navigator — send message (regular, by recipient name)
 
-Automatically send message (regular, by recipient name) on linkedin.com. Send a regular message (no InMail, subject, or credit) from the LinkedIn Sales Navigator inbox to a 1st/2nd-degree connection, found by name. It picks the first typeahead match for the name, so recipientResolved echoes the chosen suggestion; confirm it's the right person before relying on the result. The inbox composer only reaches your connections; out-of-network leads need InMail from the lead page instead. Needs a Sales Navigator seat. This is the Sales Navigator inbox, not classic LinkedIn messaging.
+Automatically send message (regular, by recipient name) on linkedin.com. Send a regular message (no InMail, subject, or credit) from the LinkedIn Sales Navigator inbox to a 1st-degree connection, found by exact name. Only a typeahead suggestion whose name equals recipientName is used; when none or several match, the run refuses and lists the suggestions, and nothing is sent. recipientResolved echoes the entry picked. The inbox composer only reaches your connections; out-of-network leads need InMail from the lead page instead. Needs a Sales Navigator seat. This is the Sales Navigator inbox, not classic LinkedIn messaging.
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/sales_navigator_send_message`
-- Updated: 2026-08-26 (v8)
+- Updated: 2026-10-06 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,7 +18,7 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/sales_navigator_send_
 ## Input
 
 - `message` (string, required): Message body to send.
-- `recipientName` (string, required): Lead name to type into the recipient typeahead. The first suggestion is picked, so pass a full, unambiguous name; a partial name can resolve to a stranger. Only 1st-degree connections can receive a regular Sales Navigator message.
+- `recipientName` (string, required): The connection's full name exactly as LinkedIn shows it. Only a suggestion whose name matches exactly is picked; the script refuses when no suggestion or more than one matches. Only 1st-degree connections can receive a regular Sales Navigator message.
 - `dryRun` (boolean, optional): When true, fill the composer and resolve the real Send control, then stop without clicking it. Nothing is sent. May leave an unsent draft in the composer.
 
 ## Output
@@ -33,7 +33,7 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/sales_navigator_send_
 
 ### What does "Sales Navigator — send message (regular, by recipient name)" do?
 
-Send a regular message (no InMail, subject, or credit) from the LinkedIn Sales Navigator inbox to a 1st/2nd-degree connection, found by name. It picks the first typeahead match for the name, so recipientResolved echoes the chosen suggestion; confirm it's the right person before relying on the result. The inbox composer only reaches your connections; out-of-network leads need InMail from the lead page instead. Needs a Sales Navigator seat. This is the Sales Navigator inbox, not classic LinkedIn messaging.
+Send a regular message (no InMail, subject, or credit) from the LinkedIn Sales Navigator inbox to a 1st-degree connection, found by exact name. Only a typeahead suggestion whose name equals recipientName is used; when none or several match, the run refuses and lists the suggestions, and nothing is sent. recipientResolved echoes the entry picked. The inbox composer only reaches your connections; out-of-network leads need InMail from the lead page instead. Needs a Sales Navigator seat. This is the Sales Navigator inbox, not classic LinkedIn messaging.
 
 ### How do I automatically send message (regular, by recipient name) on linkedin.com?
 
@@ -57,7 +57,7 @@ Yes. It acts as you on linkedin.com: on your own Chrome it reuses your session, 
 
 ### Does it change anything on linkedin.com, or only read data?
 
-It makes changes on linkedin.com, like sending, posting or booking something.
+It makes changes on linkedin.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

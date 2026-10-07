@@ -1,10 +1,10 @@
-# Google Workspace API: download a Google Workspace invoice PDF or CSV
+# Google Workspace unofficial API: download an invoice PDF or CSV
 
-Automatically download a Google Workspace invoice PDF or CSV on admin.google.com. An unofficial Google Workspace API to download billing invoices. Download a single Google Workspace billing document (CSV or PDF) by its line-item label from admin.google.com/list_invoices (pass the same dateRange/format used to list it). Returns the file bytes as base64 plus a filename.
+Automatically download an invoice PDF or CSV on admin.google.com. An unofficial Google Workspace API to download billing invoices. Download a single Google Workspace billing document (CSV or PDF) by its line-item label from admin.google.com/list_invoices (pass the same dateRange/format used to list it). Returns the file bytes as base64 plus a filename.
 
 - Site: admin.google.com
 - Address: `reduck/admin.google.com/download_invoice`
-- Updated: 2026-09-29 (v1)
+- Updated: 2026-10-06 (v1)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -28,17 +28,17 @@ npx @reduck-ai/cli@latest run --script reduck/admin.google.com/download_invoice
 
 ## FAQ
 
-### What does "Google Workspace API: download a Google Workspace invoice PDF or CSV" do?
+### What does "Google Workspace unofficial API: download an invoice PDF or CSV" do?
 
 An unofficial Google Workspace API to download billing invoices. Download a single Google Workspace billing document (CSV or PDF) by its line-item label from admin.google.com/list_invoices (pass the same dateRange/format used to list it). Returns the file bytes as base64 plus a filename.
 
-### How do I automatically download a Google Workspace invoice PDF or CSV on admin.google.com?
+### How do I automatically download an invoice PDF or CSV on admin.google.com?
 
 Ask an AI agent connected to Reduck to run reduck/admin.google.com/download_invoice, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/admin.google.com/download_invoice
 
-### Is there a admin.google.com API to download a Google Workspace invoice PDF or CSV?
+### Is there a admin.google.com API to download an invoice PDF or CSV?
 
-You do not need one. "Google Workspace API: download a Google Workspace invoice PDF or CSV" drives the real admin.google.com pages in a browser, so it works whether or not admin.google.com offers an API for this.
+You do not need one. "Google Workspace unofficial API: download an invoice PDF or CSV" drives the real admin.google.com pages in a browser, so it works whether or not admin.google.com offers an API for this.
 
 ### What information do I need to provide?
 

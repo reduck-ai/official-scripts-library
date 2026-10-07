@@ -1,10 +1,10 @@
-# Ahrefs API: get keyword ideas with search volume
+# Ahrefs unofficial API: get keyword ideas with search volume
 
 Automatically get keyword ideas with search volume on ahrefs.com. An unofficial Ahrefs keyword API: keyword and question ideas for a seed, with monthly search volume and difficulty, free, no account. Get keyword ideas for a seed keyword from Ahrefs' free keyword generator, with each one's monthly Google search volume range and ranking difficulty in a chosen country. Returns the first 20 keywords that contain the seed, the first 20 phrased as questions, and how many of each Ahrefs knows in total. Volume comes as a range, as the free tool shows it: fewer than 100, or more than 100, 1,000, 10,000 or 100,000 searches a month. No login required. Run seeds one after another on one browser: several at once from the same browser can go unanswered.
 
 - Site: ahrefs.com
 - Address: `reduck/ahrefs.com/get_keyword_ideas`
-- Updated: 2026-09-25 (v3)
+- Updated: 2026-10-06 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -31,7 +31,7 @@ npx @reduck-ai/cli@latest run --script reduck/ahrefs.com/get_keyword_ideas
 
 ## FAQ
 
-### What does "Ahrefs API: get keyword ideas with search volume" do?
+### What does "Ahrefs unofficial API: get keyword ideas with search volume" do?
 
 An unofficial Ahrefs keyword API: keyword and question ideas for a seed, with monthly search volume and difficulty, free, no account. Get keyword ideas for a seed keyword from Ahrefs' free keyword generator, with each one's monthly Google search volume range and ranking difficulty in a chosen country. Returns the first 20 keywords that contain the seed, the first 20 phrased as questions, and how many of each Ahrefs knows in total. Volume comes as a range, as the free tool shows it: fewer than 100, or more than 100, 1,000, 10,000 or 100,000 searches a month. No login required. Run seeds one after another on one browser: several at once from the same browser can go unanswered.
 
@@ -41,7 +41,7 @@ Ask an AI agent connected to Reduck to run reduck/ahrefs.com/get_keyword_ideas, 
 
 ### Is there a ahrefs.com API to get keyword ideas with search volume?
 
-You do not need one. "Ahrefs API: get keyword ideas with search volume" drives the real ahrefs.com pages in a browser, so it works whether or not ahrefs.com offers an API for this.
+You do not need one. "Ahrefs unofficial API: get keyword ideas with search volume" drives the real ahrefs.com pages in a browser, so it works whether or not ahrefs.com offers an API for this.
 
 ### What information do I need to provide?
 

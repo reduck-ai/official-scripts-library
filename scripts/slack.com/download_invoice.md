@@ -1,10 +1,10 @@
-# Slack API: download a Slack invoice PDF
+# Slack unofficial API: download a Slack invoice PDF
 
 Automatically download a Slack invoice PDF on slack.com. An unofficial Slack API to download billing invoice PDFs. Download one Slack billing statement, given the pdfUrl or billId that slack.com/list_invoices returns. Returns the real filename plus the file bytes inline as base64, so decode and write it yourself — nothing is left on disk. Requires being a workspace billing admin.
 
 - Site: slack.com
 - Address: `reduck/slack.com/download_invoice`
-- Updated: 2026-10-01 (v2)
+- Updated: 2026-10-06 (v2)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -34,7 +34,7 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/download_invoice
 
 ## FAQ
 
-### What does "Slack API: download a Slack invoice PDF" do?
+### What does "Slack unofficial API: download a Slack invoice PDF" do?
 
 An unofficial Slack API to download billing invoice PDFs. Download one Slack billing statement, given the pdfUrl or billId that slack.com/list_invoices returns. Returns the real filename plus the file bytes inline as base64, so decode and write it yourself — nothing is left on disk. Requires being a workspace billing admin.
 
@@ -44,7 +44,7 @@ Ask an AI agent connected to Reduck to run reduck/slack.com/download_invoice, or
 
 ### Is there a slack.com API to download a Slack invoice PDF?
 
-You do not need one. "Slack API: download a Slack invoice PDF" drives the real slack.com pages in a browser, so it works whether or not slack.com offers an API for this.
+You do not need one. "Slack unofficial API: download a Slack invoice PDF" drives the real slack.com pages in a browser, so it works whether or not slack.com offers an API for this.
 
 ### What information do I need to provide?
 

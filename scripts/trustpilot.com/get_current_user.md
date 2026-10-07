@@ -4,7 +4,7 @@ Automatically get current user on trustpilot.com. Report which Trustpilot accoun
 
 - Site: trustpilot.com
 - Address: `reduck/trustpilot.com/get_current_user`
-- Updated: 2026-09-28 (v2)
+- Updated: 2026-10-06 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

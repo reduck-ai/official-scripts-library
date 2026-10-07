@@ -4,7 +4,7 @@ Report which Microsoft Teams account this browser is signed in as — work or pe
 
 - Site: teams.microsoft.com
 - Address: `reduck/teams.microsoft.com/whoami`
-- Updated: 2026-09-28 (v1)
+- Updated: 2026-10-06 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

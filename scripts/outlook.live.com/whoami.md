@@ -4,7 +4,7 @@ Report which Microsoft account this browser is signed in to Outlook.com with: th
 
 - Site: outlook.live.com
 - Address: `reduck/outlook.live.com/whoami`
-- Updated: 2026-09-25 (v1)
+- Updated: 2026-10-06 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

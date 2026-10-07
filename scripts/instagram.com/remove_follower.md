@@ -4,7 +4,7 @@ Automatically remove a follower on instagram.com. Remove a follower from the sig
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/remove_follower`
-- Updated: 2026-09-22 (v4)
+- Updated: 2026-10-06 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -52,7 +52,7 @@ Yes. It acts as you on instagram.com: on your own Chrome it reuses your session,
 
 ### Does it change anything on instagram.com, or only read data?
 
-It makes changes on instagram.com, like sending, posting or booking something.
+It makes changes on instagram.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

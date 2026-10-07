@@ -4,7 +4,7 @@ Report which Google account Google Scholar is signed in as in this browser: disp
 
 - Site: scholar.google.com
 - Address: `reduck/scholar.google.com/whoami`
-- Updated: 2026-09-30 (v1)
+- Updated: 2026-10-06 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

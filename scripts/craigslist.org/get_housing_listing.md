@@ -1,10 +1,10 @@
-# Craigslist API: get a Craigslist apartment listing
+# Craigslist unofficial API: get a Craigslist apartment listing
 
 Automatically get a Craigslist apartment listing on craigslist.org. An unofficial Craigslist API for one apartment listing: address, rent, photos, amenities and the full description as data, from its link. Read one Craigslist housing listing (an apartment, a room or a sublet) from its link, as returned by search_housing. Returns the post id, title, asking rent, the size line (bedrooms and square feet), neighborhood, street address and ZIP code when the poster gave them, map coordinates, bedrooms, bathrooms, whether pets and smoking are allowed, every amenity the listing shows (rent period, laundry, parking, housing type, cats and dogs, furnished, availability date and others), the full description, all photo links, and when it was posted and last updated. A listing that the poster deleted or Craigslist removed comes back as not found rather than as an error. Phone numbers the poster hid behind the site's contact button are not revealed.
 
 - Site: craigslist.org
 - Address: `reduck/craigslist.org/get_housing_listing`
-- Updated: 2026-09-25 (v1)
+- Updated: 2026-10-06 (v1)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -43,7 +43,7 @@ npx @reduck-ai/cli@latest run --script reduck/craigslist.org/get_housing_listing
 
 ## FAQ
 
-### What does "Craigslist API: get a Craigslist apartment listing" do?
+### What does "Craigslist unofficial API: get a Craigslist apartment listing" do?
 
 An unofficial Craigslist API for one apartment listing: address, rent, photos, amenities and the full description as data, from its link. Read one Craigslist housing listing (an apartment, a room or a sublet) from its link, as returned by search_housing. Returns the post id, title, asking rent, the size line (bedrooms and square feet), neighborhood, street address and ZIP code when the poster gave them, map coordinates, bedrooms, bathrooms, whether pets and smoking are allowed, every amenity the listing shows (rent period, laundry, parking, housing type, cats and dogs, furnished, availability date and others), the full description, all photo links, and when it was posted and last updated. A listing that the poster deleted or Craigslist removed comes back as not found rather than as an error. Phone numbers the poster hid behind the site's contact button are not revealed.
 
@@ -53,7 +53,7 @@ Ask an AI agent connected to Reduck to run reduck/craigslist.org/get_housing_lis
 
 ### Is there a craigslist.org API to get a Craigslist apartment listing?
 
-You do not need one. "Craigslist API: get a Craigslist apartment listing" drives the real craigslist.org pages in a browser, so it works whether or not craigslist.org offers an API for this.
+You do not need one. "Craigslist unofficial API: get a Craigslist apartment listing" drives the real craigslist.org pages in a browser, so it works whether or not craigslist.org offers an API for this.
 
 ### What information do I need to provide?
 

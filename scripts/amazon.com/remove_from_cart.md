@@ -4,7 +4,7 @@ Automatically remove Amazon product from cart on amazon.com. Remove a product fr
 
 - Site: amazon.com
 - Address: `reduck/amazon.com/remove_from_cart`
-- Updated: 2026-09-27 (v2)
+- Updated: 2026-10-06 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -54,7 +54,7 @@ Yes. It acts as you on amazon.com: on your own Chrome it reuses your session, an
 
 ### Does it change anything on amazon.com, or only read data?
 
-It makes changes on amazon.com, like sending, posting or booking something.
+It makes changes on amazon.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

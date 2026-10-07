@@ -1,10 +1,10 @@
 # Search LinkedIn people
 
-Automatically search LinkedIn people on linkedin.com. Search LinkedIn people by keywords with optional title, name, company, school, currentCompanyIds/pastCompanyIds (numeric ids from get_company_info), connectionDegrees, connectionOf, location, and pagination (10/page). Returns page, total, locationResolved, and people (name, url, publicId, memberUrn, degree, headline, location, snippet, followers, mutualConnections).
+Automatically search LinkedIn people on linkedin.com. Search LinkedIn people by keywords with optional title, name, company, school, currentCompanyIds/pastCompanyIds (numeric ids from get_company_info), connectionDegrees, connectionOf, geoUrn, and pagination (10/page). Returns page, total, and people (name, url, publicId, memberUrn, degree, headline, location, snippet, followers, mutualConnections). A page with no results returns people: [] and total: 0.
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/search_people`
-- Updated: 2026-10-05 (v25)
+- Updated: 2026-10-06 (v28)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -19,12 +19,11 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/search_people
 
 - `page` (integer, optional): Result page, 10 people per page. Default 1. The same page returns the same people, so pages can be fetched in parallel. LinkedIn caps browsing at ~100 pages; free-tier accounts also hit a monthly commercial-use search limit.
 - `title` (string, optional): Current job title keyword (LinkedIn 'Title' filter, exact-phrase quoted).
-- `geoUrn` (string | array, optional): LinkedIn location id(s) from suggest_locations, OR-combined. Takes precedence over `location`.
+- `geoUrn` (string | array, optional): Location filter: one or more LinkedIn geo ids, OR-combined. This script takes no place names. To filter by a place, call suggest_locations({query:'Paris'}) first and pass the geoUrn of the suggestion you want (e.g. '106383538' for Paris, Île-de-France, France).
 - `school` (string, optional): School name keyword.
 - `company` (string, optional): Company name keyword (free-text 'Company' filter — use currentCompanyIds for an exact company).
 - `keywords` (string, optional): Free-text search query.
 - `lastName` (string, optional): Last name filter.
-- `location` (string, optional): Free-text location ('Paris'). Resolved to LinkedIn's best-matching place; the applied label is returned as locationResolved — check it when the name is ambiguous (Paris, Texas...) or has no single LinkedIn geo (a continent like 'Europe'). Use suggest_locations + geoUrn for precision.
 - `firstName` (string, optional): First name filter.
 - `connectionOf` (string, optional): A member URN — the memberUrn value returned by this script's results or by get_profile (bare ACoAA… tail or full urn:li:fsd_profile:…, both accepted). Restricts results to that member's connections as LinkedIn reveals them to you: for a member outside your 1st degree that is exactly the people you have in common — your possible introducers. Works alone (no other filter needed) and composes with every other facet.
 - `pastCompanyIds` (array, optional): Numeric LinkedIn companyIds — past employer facet, OR-combined.
@@ -34,15 +33,14 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/search_people
 ## Output
 
 - `page` (integer, required)
-- `people` (array, required)
-- `total` (integer | null, optional): Total result count if displayed; null when LinkedIn hides it (observed on free-tier accounts).
-- `locationResolved` (string | null, optional): The geo suggestion label actually applied when args.location was given (else null) — inspect it to confirm the resolved place.
+- `people` (array, required): Empty when the page has no results (past the last page, or no match). Out-of-network 'LinkedIn Member' cards are not included.
+- `total` (integer | null, optional): Total result count if displayed; 0 when LinkedIn shows no results; null when LinkedIn hides it (observed on free-tier accounts).
 
 ## FAQ
 
 ### What does "Search LinkedIn people" do?
 
-Search LinkedIn people by keywords with optional title, name, company, school, currentCompanyIds/pastCompanyIds (numeric ids from get_company_info), connectionDegrees, connectionOf, location, and pagination (10/page). Returns page, total, locationResolved, and people (name, url, publicId, memberUrn, degree, headline, location, snippet, followers, mutualConnections).
+Search LinkedIn people by keywords with optional title, name, company, school, currentCompanyIds/pastCompanyIds (numeric ids from get_company_info), connectionDegrees, connectionOf, geoUrn, and pagination (10/page). Returns page, total, and people (name, url, publicId, memberUrn, degree, headline, location, snippet, followers, mutualConnections). A page with no results returns people: [] and total: 0.
 
 ### How do I automatically search LinkedIn people on linkedin.com?
 
@@ -54,11 +52,11 @@ You do not need one. "Search LinkedIn people" drives the real linkedin.com pages
 
 ### What information do I need to provide?
 
-Optional: page, title, geoUrn, school, company, keywords, lastName, location, firstName, connectionOf, pastCompanyIds, connectionDegrees, currentCompanyIds.
+Optional: page, title, geoUrn, school, company, keywords, lastName, firstName, connectionOf, pastCompanyIds, connectionDegrees, currentCompanyIds.
 
 ### What does it return?
 
-It returns page, total, people, locationResolved.
+It returns page, total, people.
 
 ### Do I need to be logged in to linkedin.com?
 

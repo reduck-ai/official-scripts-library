@@ -4,7 +4,7 @@ Automatically search PAP.fr property listings on pap.fr. Search PAP.fr, the Fren
 
 - Site: pap.fr
 - Address: `reduck/pap.fr/search_listings`
-- Updated: 2026-09-18 (v3)
+- Updated: 2026-10-06 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/pap.fr/search_listings
 
 ## Input
 
-- `location` (string, required): Where to search, as typed into the site's search box: a town ("Bordeaux"), postcode, department or region. The first suggestion the site offers is taken, and the label it resolved to is returned as resolvedLocation.
+- `location` (string, required): Where to search, as typed into the site's search box: a town ("Bordeaux"), postcode, department or region. The suggestion named exactly this (or the only one containing it) is used; when several suggestions match (a town name in several departments) the run refuses and lists them so you can pass one exactly, e.g. "Saint-Denis (93)". The label used is returned as resolvedLocation.
 - `count` (integer, optional): How many listings to collect. A results page holds about 15, so a larger count walks on through further pages and stops early when the results run out.
 - `max_price` (integer, optional): Maximum price in euros (the purchase price, or the monthly rent for a rental).
 - `transaction` (string, optional): vente = for sale, location = long-term rental, vacances = holiday rental.

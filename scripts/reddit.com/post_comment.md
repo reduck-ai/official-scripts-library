@@ -4,7 +4,7 @@ Automatically post Reddit comment on reddit.com. Post a top-level comment on a R
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/post_comment`
-- Updated: 2026-10-05 (v12)
+- Updated: 2026-10-06 (v13)
 - Author: Reduck AI (reduck)
 
 ## Run it

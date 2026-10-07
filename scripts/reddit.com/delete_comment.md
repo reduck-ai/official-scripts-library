@@ -4,7 +4,7 @@ Automatically delete Reddit comment on reddit.com. Delete your own Reddit commen
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/delete_comment`
-- Updated: 2026-08-20 (v8)
+- Updated: 2026-10-06 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -55,7 +55,7 @@ Yes. It acts as you on reddit.com: on your own Chrome it reuses your session, an
 
 ### Does it change anything on reddit.com, or only read data?
 
-It makes changes on reddit.com, like sending, posting or booking something.
+It makes changes on reddit.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

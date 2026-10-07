@@ -4,7 +4,7 @@ Automatically get candidate message thread on welcomekit.co. Get the full email/
 
 - Site: welcomekit.co
 - Address: `reduck/welcomekit.co/get_messages`
-- Updated: 2026-07-17 (v1)
+- Updated: 2026-10-06 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,8 +17,8 @@ npx @reduck-ai/cli@latest run --script reduck/welcomekit.co/get_messages
 
 ## Input
 
-- `org` (string, required): Org reference (6-char, e.g. sfWkCZ).
-- `candidateReference` (string, required): Candidate reference from list_candidates / list_notifications (format <orgprefix>-<24hex>).
+- `org` (string, required): Org reference (6-char, e.g. abc123).
+- `candidateReference` (string, required): Candidate reference from list_job_candidates / list_notifications (format <orgprefix>-<24hex>).
 
 ## Output
 

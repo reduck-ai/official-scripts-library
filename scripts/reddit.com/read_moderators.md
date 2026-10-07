@@ -1,10 +1,10 @@
-# Reddit API: read the full moderator list of subreddits
+# Reddit unofficial API: read the full moderator list of subreddits
 
 Automatically read the full moderator list of subreddits on reddit.com. An unofficial Reddit API: read the full moderator list of a subreddit programmatically, from code or from an AI agent, with typed JSON in and out. Reddit's API needs a registered app and OAuth, and its mod-list endpoint is closed to logged-out callers.
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/read_moderators`
-- Updated: 2026-09-18 (v1)
+- Updated: 2026-10-06 (v1)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -43,7 +43,7 @@ Shape only: placeholder values generated from the output schema, not a real run.
 
 ## FAQ
 
-### What does "Reddit API: read the full moderator list of subreddits" do?
+### What does "Reddit unofficial API: read the full moderator list of subreddits" do?
 
 Returns the complete moderator list of each subreddit you ask for — every moderator, not just the first screen the mod page shows — with each one's permissions. Also reports, per moderator, which of the requested subreddits they moderate, so you can see who sits on several communities at once and how much their mod teams overlap.
 
@@ -53,7 +53,7 @@ Ask an AI agent connected to Reduck to run reduck/reddit.com/read_moderators, or
 
 ### Is there a reddit.com API to read the full moderator list of subreddits?
 
-You do not need one. "Reddit API: read the full moderator list of subreddits" drives the real reddit.com pages in a browser, so it works whether or not reddit.com offers an API for this.
+You do not need one. "Reddit unofficial API: read the full moderator list of subreddits" drives the real reddit.com pages in a browser, so it works whether or not reddit.com offers an API for this.
 
 ### What information do I need to provide?
 

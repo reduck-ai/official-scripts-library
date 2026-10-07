@@ -1,10 +1,10 @@
-# Notion API: list your Notion invoices across workspaces
+# Notion unofficial API: list your Notion invoices across workspaces
 
 Automatically list your Notion invoices across workspaces on app.notion.com. An unofficial Notion API for billing invoices: Notion does not email invoices, so they are only available under Settings > Billing. List every Notion invoice across your workspaces. Returns invoices with space_id, space_name, invoice_id, created_ts, total, currency, status, payment_status, and hosted_invoice_url. Total is in cents and currency is a lowercase ISO code (e.g. eur); feed hosted_invoice_url to app.notion.com/download_invoice_pdf to get the PDF.
 
 - Site: app.notion.com
 - Address: `reduck/app.notion.com/list_invoices`
-- Updated: 2026-10-05 (v4)
+- Updated: 2026-10-06 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -26,7 +26,7 @@ npx @reduck-ai/cli@latest run --script reduck/app.notion.com/list_invoices
 
 ## FAQ
 
-### What does "Notion API: list your Notion invoices across workspaces" do?
+### What does "Notion unofficial API: list your Notion invoices across workspaces" do?
 
 An unofficial Notion API for billing invoices: Notion does not email invoices, so they are only available under Settings > Billing. List every Notion invoice across your workspaces. Returns invoices with space_id, space_name, invoice_id, created_ts, total, currency, status, payment_status, and hosted_invoice_url. Total is in cents and currency is a lowercase ISO code (e.g. eur); feed hosted_invoice_url to app.notion.com/download_invoice_pdf to get the PDF.
 
@@ -36,7 +36,7 @@ Ask an AI agent connected to Reduck to run reduck/app.notion.com/list_invoices, 
 
 ### Is there a app.notion.com API to list your Notion invoices across workspaces?
 
-You do not need one. "Notion API: list your Notion invoices across workspaces" drives the real app.notion.com pages in a browser, so it works whether or not app.notion.com offers an API for this.
+You do not need one. "Notion unofficial API: list your Notion invoices across workspaces" drives the real app.notion.com pages in a browser, so it works whether or not app.notion.com offers an API for this.
 
 ### What information do I need to provide?
 

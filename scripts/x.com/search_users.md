@@ -4,7 +4,7 @@ Automatically search X (Twitter) users by keyword, with bio and follower counts 
 
 - Site: x.com
 - Address: `reduck/x.com/search_users`
-- Updated: 2026-10-05 (v1)
+- Updated: 2026-10-06 (v1)
 - Author: Reduck AI (reduck)
 
 ## About

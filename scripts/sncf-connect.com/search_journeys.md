@@ -1,10 +1,10 @@
-# SNCF Connect API: search train journeys and fares
+# SNCF Connect unofficial API: search train journeys and fares
 
 Automatically search train journeys and fares on sncf-connect.com. An unofficial SNCF Connect API for train search: SNCF Connect has no public API for journeys and fares, and this returns them as JSON, programmatically. Search trains between two cities or stations on a given date via SNCF Connect. Returns each journey (times, duration, operator, best price) with all of its fare offers (class, fare name, price, flexibility, full conditions) and whether the fare can be cancelled free of charge. No journeys means no tickets are on sale for that date. Runs only via the local browser extension, not the hosted cloud browser.
 
 - Site: sncf-connect.com
 - Address: `reduck/sncf-connect.com/search_journeys`
-- Updated: 2026-09-19 (v11)
+- Updated: 2026-10-06 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -30,7 +30,7 @@ npx @reduck-ai/cli@latest run --script reduck/sncf-connect.com/search_journeys
 
 ## FAQ
 
-### What does "SNCF Connect API: search train journeys and fares" do?
+### What does "SNCF Connect unofficial API: search train journeys and fares" do?
 
 An unofficial SNCF Connect API for train search: SNCF Connect has no public API for journeys and fares, and this returns them as JSON, programmatically. Search trains between two cities or stations on a given date via SNCF Connect. Returns each journey (times, duration, operator, best price) with all of its fare offers (class, fare name, price, flexibility, full conditions) and whether the fare can be cancelled free of charge. No journeys means no tickets are on sale for that date. Runs only via the local browser extension, not the hosted cloud browser.
 
@@ -40,7 +40,7 @@ Ask an AI agent connected to Reduck to run reduck/sncf-connect.com/search_journe
 
 ### Is there a sncf-connect.com API to search train journeys and fares?
 
-You do not need one. "SNCF Connect API: search train journeys and fares" drives the real sncf-connect.com pages in a browser, so it works whether or not sncf-connect.com offers an API for this.
+You do not need one. "SNCF Connect unofficial API: search train journeys and fares" drives the real sncf-connect.com pages in a browser, so it works whether or not sncf-connect.com offers an API for this.
 
 ### What information do I need to provide?
 

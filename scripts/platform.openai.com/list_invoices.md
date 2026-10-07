@@ -1,10 +1,10 @@
-# OpenAI API: list your OpenAI API platform invoices with PDF links
+# OpenAI unofficial API: list your platform invoices with PDF links
 
-Automatically list your OpenAI API platform invoices with PDF links on platform.openai.com. An unofficial OpenAI API for platform billing invoices. List invoices on the OpenAI API platform billing account (platform.openai.com, API usage/credits — NOT the ChatGPT subscription, which is chatgpt.com/list_invoices). Returns id, number, total (cents), currency, status, created_ts, hosted_invoice_url, pdf_url. Covers the past 12 months, as the dashboard does.
+Automatically list your platform invoices with PDF links on platform.openai.com. An unofficial OpenAI API for platform billing invoices. List invoices on the OpenAI API platform billing account (platform.openai.com, API usage/credits — NOT the ChatGPT subscription, which is chatgpt.com/list_invoices). Returns id, number, total (cents), currency, status, created_ts, hosted_invoice_url, pdf_url. Covers the past 12 months, as the dashboard does.
 
 - Site: platform.openai.com
 - Address: `reduck/platform.openai.com/list_invoices`
-- Updated: 2026-09-29 (v2)
+- Updated: 2026-10-06 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/platform.openai.com/list_invoices
 
 ## Input
 
-- `organization` (string, optional): Which API organization to use if OpenAI asks you to choose one (its name as shown). Defaults to the first one offered.
+- `organization` (string, optional): Which API organization to use if OpenAI asks you to choose one, by its exact name as shown. When no organization has that name the run stops and lists them. Defaults to the first one offered.
 
 ## Output
 
@@ -25,17 +25,17 @@ npx @reduck-ai/cli@latest run --script reduck/platform.openai.com/list_invoices
 
 ## FAQ
 
-### What does "OpenAI API: list your OpenAI API platform invoices with PDF links" do?
+### What does "OpenAI unofficial API: list your platform invoices with PDF links" do?
 
 An unofficial OpenAI API for platform billing invoices. List invoices on the OpenAI API platform billing account (platform.openai.com, API usage/credits — NOT the ChatGPT subscription, which is chatgpt.com/list_invoices). Returns id, number, total (cents), currency, status, created_ts, hosted_invoice_url, pdf_url. Covers the past 12 months, as the dashboard does.
 
-### How do I automatically list your OpenAI API platform invoices with PDF links on platform.openai.com?
+### How do I automatically list your platform invoices with PDF links on platform.openai.com?
 
 Ask an AI agent connected to Reduck to run reduck/platform.openai.com/list_invoices, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/platform.openai.com/list_invoices
 
-### Is there a platform.openai.com API to list your OpenAI API platform invoices with PDF links?
+### Is there a platform.openai.com API to list your platform invoices with PDF links?
 
-You do not need one. "OpenAI API: list your OpenAI API platform invoices with PDF links" drives the real platform.openai.com pages in a browser, so it works whether or not platform.openai.com offers an API for this.
+You do not need one. "OpenAI unofficial API: list your platform invoices with PDF links" drives the real platform.openai.com pages in a browser, so it works whether or not platform.openai.com offers an API for this.
 
 ### What information do I need to provide?
 

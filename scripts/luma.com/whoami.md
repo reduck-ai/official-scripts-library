@@ -4,7 +4,7 @@ Report which Luma account this browser is signed in as: the account email, the L
 
 - Site: luma.com
 - Address: `reduck/luma.com/whoami`
-- Updated: 2026-10-05 (v3)
+- Updated: 2026-10-06 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

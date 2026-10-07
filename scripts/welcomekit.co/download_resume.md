@@ -1,10 +1,10 @@
 # Download candidate resume
 
-Automatically download candidate resume on welcomekit.co. Download a candidate's CV (resume PDF) from the ATS to a local file on the agent machine. Returns path, filename, size, contentType, and hasResume, which is false (with path/filename null) when the candidate attached no CV; the signed resume URL is re-fetched fresh on every run. Because the extension device runs a single shared browser page, call this one candidate at a time rather than in a parallel batch, which can misattribute a download to the wrong candidate.
+Automatically download candidate resume on welcomekit.co. Download a candidate's CV (resume PDF) from the ATS to a local file on the agent machine. Returns path, filename, size, contentType, and hasResume, which is false (with path/filename null) when the candidate attached no CV. Run it for one candidate at a time: parallel runs can attach a file to the wrong candidate.
 
 - Site: welcomekit.co
 - Address: `reduck/welcomekit.co/download_resume`
-- Updated: 2026-09-11 (v4)
+- Updated: 2026-10-06 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,8 +17,8 @@ npx @reduck-ai/cli@latest run --script reduck/welcomekit.co/download_resume
 
 ## Input
 
-- `org` (string, required): REQUIRED. Organization reference as it appears in your dashboard URL https://www.welcomekit.co/dashboard/o/<org>/ (6-char code)
-- `candidateReference` (string, required): Candidate reference from list_candidates, format: reduc-<24 hex chars>
+- `org` (string, required): Organization reference as it appears in your dashboard URL https://www.welcomekit.co/dashboard/o/<org>/ (6-char code)
+- `candidateReference` (string, required): Candidate reference from list_job_candidates, format: <orgprefix>-<24 hex chars>
 
 ## Output
 
@@ -33,7 +33,7 @@ npx @reduck-ai/cli@latest run --script reduck/welcomekit.co/download_resume
 
 ### What does "Download candidate resume" do?
 
-Download a candidate's CV (resume PDF) from the ATS to a local file on the agent machine. Returns path, filename, size, contentType, and hasResume, which is false (with path/filename null) when the candidate attached no CV; the signed resume URL is re-fetched fresh on every run. Because the extension device runs a single shared browser page, call this one candidate at a time rather than in a parallel batch, which can misattribute a download to the wrong candidate.
+Download a candidate's CV (resume PDF) from the ATS to a local file on the agent machine. Returns path, filename, size, contentType, and hasResume, which is false (with path/filename null) when the candidate attached no CV. Run it for one candidate at a time: parallel runs can attach a file to the wrong candidate.
 
 ### How do I automatically download candidate resume on welcomekit.co?
 

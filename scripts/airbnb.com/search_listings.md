@@ -4,7 +4,7 @@ Automatically search Airbnb listings on airbnb.com. Each stay comes back as a ro
 
 - Site: airbnb.com
 - Address: `reduck/airbnb.com/search_listings`
-- Updated: 2026-10-05 (v6)
+- Updated: 2026-10-06 (v7)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -42,6 +42,7 @@ npx @reduck-ai/cli@latest run --script reduck/airbnb.com/search_listings
 - `count` (integer, required)
 - `listings` (array, required)
 - `maxPage` (integer | null, optional)
+- `resolvedLocation` (object, optional): The place Airbnb actually searched. precision is "city" for a city, "state" for a region, "country" when Airbnb could only place the name at country level (the listings then cover the whole country), "building" for an address.
 
 ## Example output
 
@@ -83,7 +84,26 @@ Shape only: placeholder values generated from the output schema, not a real run.
       "originalPrice": "…",
       "priceQualifier": "…"
     }
-  ]
+  ],
+  "resolvedLocation": {
+    "name": "Example",
+    "bounds": {
+      "northeast": {
+        "lat": "2026-01-15T09:30:00Z",
+        "lng": 3.5
+      },
+      "southwest": {
+        "lat": "2026-01-15T09:30:00Z",
+        "lng": 3.5
+      }
+    },
+    "center": {
+      "lat": "2026-01-15T09:30:00Z",
+      "lng": 3.5
+    },
+    "precision": "…",
+    "canonicalLocation": "…"
+  }
 }
 ```
 
@@ -107,7 +127,7 @@ Required: location. Optional: page, pets, query, adults, checkin, infants, check
 
 ### What does it return?
 
-It returns url, page, count, maxPage, listings.
+It returns url, page, count, maxPage, listings, resolvedLocation.
 
 ### Do I need to be logged in to airbnb.com?
 

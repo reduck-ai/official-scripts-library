@@ -4,7 +4,7 @@ React to a Discord message with a unicode emoji, or remove your own reaction wit
 
 - Site: discord.com
 - Address: `reduck/discord.com/add_reaction`
-- Updated: 2026-10-05 (v29)
+- Updated: 2026-10-06 (v30)
 - Author: Reduck AI (reduck)
 
 ## Run it

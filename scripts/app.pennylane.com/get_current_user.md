@@ -4,7 +4,7 @@ Automatically get Current User on app.pennylane.com. Report which Pennylane acco
 
 - Site: app.pennylane.com
 - Address: `reduck/app.pennylane.com/get_current_user`
-- Updated: 2026-09-28 (v1)
+- Updated: 2026-10-06 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

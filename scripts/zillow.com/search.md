@@ -4,7 +4,7 @@ Automatically search Zillow listings on zillow.com. One page of up to 41 homes f
 
 - Site: zillow.com
 - Address: `reduck/zillow.com/search`
-- Updated: 2026-10-05 (v16)
+- Updated: 2026-10-06 (v17)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -34,11 +34,51 @@ npx @reduck-ai/cli@latest run --script reduck/zillow.com/search
 - `furnished` (boolean, optional): Restrict to Zillow's own "Furnished" rental filter. Only meaningful when status is for_rent — ignored for sale/sold listings. Default false = no restriction (all listings, furnished or not).
 - `homeTypes` (array, optional): The site's Property type filter; omit for all types. For rent it offers houses, townhomes and apartments_condos. For sale and sold it offers houses, townhomes, multi_family, condos, lots_land, apartments and manufactured. A type the chosen status does not offer throws.
 
+## Output
+
+- `region` (string | null, required): The place Zillow searched, as its search box shows it after the search (e.g. "Mission San Francisco CA", "San Francisco CA 94110"). Zillow never refuses a location: one it does not recognise is searched as the nearest place it does, with no error ("Mission District, San Francisco, CA" → "San Francisco CA"; "Nonexistentville, ZZ" → "Austin TX"). Compare it with what you asked for before treating the results as being in that place. Aliases are normal ("SoMa" → "South of Market San Francisco CA").
+- `results` (array, required): The cards the site shows for this search, in the site's order: the in-boundary results first, then the relaxed (nearby) ones. Never empty: Zillow relaxes the boundary rather than showing nothing, so an empty array means a bucket of the answer went unread, not that the region is empty.
+
+## Example output
+
+Shape only: placeholder values generated from the output schema, not a real run.
+
+```json
+{
+  "region": "…",
+  "results": [
+    {
+      "lat": "2026-01-15T09:30:00Z",
+      "lng": 3.5,
+      "area": 3.5,
+      "beds": 3.5,
+      "zpid": "…",
+      "baths": 3.5,
+      "price": 3.5,
+      "units": [
+        {
+          "beds": "…",
+          "price": "…",
+          "roomForRent": true
+        }
+      ],
+      "broker": "…",
+      "imgSrc": "…",
+      "nearby": true,
+      "address": "…",
+      "detailUrl": "https://example.com/item/123",
+      "priceText": "…",
+      "statusText": "…"
+    }
+  ]
+}
+```
+
 ## FAQ
 
 ### What does "Search Zillow listings" do?
 
-Search Zillow listings for sale, for rent or recently sold in a location, with the site's own filters: price range, bedrooms, bathrooms, property type, furnished and space (rentals). Returns one page of cards with zpid, detailUrl, address, price, priceText, beds, baths, area, lat, lng, broker, imgSrc, statusText, units and nearby. Apartment buildings come back as one card whose per-unit prices and bed counts are in units. When too few listings match inside the region, Zillow widens to the surrounding area; those cards have nearby:true. The site's result count includes every unit of a building, so a search can have fewer pages than that count suggests; a page past the last one fails. Pagination stops at 20 pages, and relevance order can change between sessions, so use a fixed sort such as newest when paging in parallel.
+Search Zillow listings for sale, for rent or recently sold in a location, with the site's own filters: price range, bedrooms, bathrooms, property type, furnished and space (rentals). Returns the place Zillow searched, as its search box shows it, and one page of cards with zpid, detailUrl, address, price, priceText, beds, baths, area, lat, lng, broker, imgSrc, statusText, units and nearby. Zillow searches the nearest place it knows when it does not recognise a location, so compare the returned place with the one you asked for. Apartment buildings come back as one card whose per-unit prices and bed counts are in units. When too few listings match inside the region, Zillow widens to the surrounding area; those cards have nearby:true. The site's result count includes every unit of a building, so a search can have fewer pages than that count suggests; a page past the last one fails. Pagination stops at 20 pages, and relevance order can change between sessions, so use a fixed sort such as newest when paging in parallel.
 
 ### How do I automatically search Zillow listings on zillow.com?
 
@@ -51,6 +91,10 @@ You do not need one. "Search Zillow listings" drives the real zillow.com pages i
 ### What information do I need to provide?
 
 Required: location. Optional: page, sort, space, status, maxBeds, minBeds, maxPrice, minBaths, minPrice, furnished, homeTypes.
+
+### What does it return?
+
+It returns region, results.
 
 ### Do I need to be logged in to zillow.com?
 

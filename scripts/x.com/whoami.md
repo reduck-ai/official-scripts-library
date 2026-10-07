@@ -4,7 +4,7 @@ Automatically check which X (Twitter) account is signed in on x.com. Report whic
 
 - Site: x.com
 - Address: `reduck/x.com/whoami`
-- Updated: 2026-09-29 (v1)
+- Updated: 2026-10-06 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

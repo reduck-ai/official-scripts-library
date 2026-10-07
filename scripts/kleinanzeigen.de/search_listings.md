@@ -4,7 +4,7 @@ Automatically search Kleinanzeigen listings on kleinanzeigen.de. Search Kleinanz
 
 - Site: kleinanzeigen.de
 - Address: `reduck/kleinanzeigen.de/search_listings`
-- Updated: 2026-10-02 (v2)
+- Updated: 2026-10-06 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -25,7 +25,8 @@ npx @reduck-ai/cli@latest run --script reduck/kleinanzeigen.de/search_listings
 - `page` (integer, required)
 - `query` (string, required)
 - `total` (integer | null, required): Number of matching listings across Germany, as the site reports it.
-- `listings` (array, required): Listings in page order, including promoted ones. Empty when nothing matches.
+- `listings` (array, required): Listings in page order, including promoted ones. Empty when nothing matches or the page is past the end.
+- `lastPage` (integer, optional): Present only when the requested page is past the end: the last page that has listings. listings is then empty.
 
 ## FAQ
 
@@ -47,7 +48,7 @@ Required: query. Optional: page.
 
 ### What does it return?
 
-It returns page, query, total, listings.
+It returns page, query, total, lastPage, listings.
 
 ### Do I need to be logged in to kleinanzeigen.de?
 

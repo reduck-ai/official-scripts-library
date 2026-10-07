@@ -1,10 +1,10 @@
-# WhatsApp API: delete a message
+# WhatsApp unofficial API: delete a message
 
 Automatically delete a message on web.whatsapp.com. Delete one WhatsApp message by id, for yourself or for everyone, and confirm it is gone.
 
 - Site: web.whatsapp.com
 - Address: `reduck/web.whatsapp.com/delete_message`
-- Updated: 2026-10-05 (v23)
+- Updated: 2026-10-06 (v23)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -47,7 +47,7 @@ Shape only: placeholder values generated from the output schema, not a real run.
 
 ## FAQ
 
-### What does "WhatsApp API: delete a message" do?
+### What does "WhatsApp unofficial API: delete a message" do?
 
 Delete a specific message (by messageId) in a chat, for yourself or for everyone. "everyone" works on your own recent messages within WhatsApp's ~2-day window, or — if you're a group admin — on any other member's message in that group too; fails loudly if the option isn't offered. Verifies the message was actually removed (not just an optimistic UI change) before returning. Deletion, especially scope:"everyone", is irreversible and visible to other participants (an admin deleting someone else's message even shows them "You deleted this message as admin"). Calling agents should get explicit user confirmation before invoking this with scope:"everyone", and before deleting any message the calling user did not author themselves.
 
@@ -57,7 +57,7 @@ Ask an AI agent connected to Reduck to run reduck/web.whatsapp.com/delete_messag
 
 ### Is there a web.whatsapp.com API to delete a message?
 
-You do not need one. "WhatsApp API: delete a message" drives the real web.whatsapp.com pages in a browser, so it works whether or not web.whatsapp.com offers an API for this.
+You do not need one. "WhatsApp unofficial API: delete a message" drives the real web.whatsapp.com pages in a browser, so it works whether or not web.whatsapp.com offers an API for this.
 
 ### What information do I need to provide?
 

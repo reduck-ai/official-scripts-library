@@ -4,7 +4,7 @@ Automatically move ATS candidate stage on welcomekit.co. Move an ATS candidate t
 
 - Site: welcomekit.co
 - Address: `reduck/welcomekit.co/move_candidate_stage`
-- Updated: 2026-08-27 (v2)
+- Updated: 2026-10-06 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,9 +18,9 @@ npx @reduck-ai/cli@latest run --script reduck/welcomekit.co/move_candidate_stage
 ## Input
 
 - `org` (string, required): Organization reference as it appears in your dashboard URL https://www.welcomekit.co/dashboard/o/<org>/ (6-char code).
-- `candidateReference` (string, required): Candidate reference from list_candidates, format: <orgprefix>-<24 hex chars>
+- `candidateReference` (string, required): Candidate reference from list_job_candidates, format: <orgprefix>-<24 hex chars>
 - `stage` (string, optional): Target stage as label: built-in reference (initial, to_refuse, refused, to_meet, interviewed, made_offer, hired), UI alias (New, Rejected, Awaiting Rejection, Offer) or custom column name (e.g. Test sent). Case-insensitive.
-- `stageId` (integer, optional): Target stage id (from list_jobs/list_candidates stages). Wins over stage when both given.
+- `stageId` (integer, optional): Target stage id (from list_jobs/list_job_candidates stages). Wins over stage when both given.
 
 ## Output
 
@@ -60,7 +60,7 @@ Yes. It acts as you on welcomekit.co: on your own Chrome it reuses your session,
 
 ### Does it change anything on welcomekit.co, or only read data?
 
-It makes changes on welcomekit.co, like sending, posting or booking something.
+It makes changes on welcomekit.co, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

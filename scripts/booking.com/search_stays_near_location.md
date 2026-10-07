@@ -4,7 +4,7 @@ Automatically search stays near a location on booking.com. Search Booking.com st
 
 - Site: booking.com
 - Address: `reduck/booking.com/search_stays_near_location`
-- Updated: 2026-09-25 (v9)
+- Updated: 2026-10-06 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -19,7 +19,7 @@ npx @reduck-ai/cli@latest run --script reduck/booking.com/search_stays_near_loca
 
 - `checkin` (string, required): Check-in date, YYYY-MM-DD.
 - `checkout` (string, required): Check-out date, YYYY-MM-DD.
-- `location` (string, required): Free-text place to search near: address, landmark, city or hotel name (e.g. "124 Rue Réaumur, Paris" or "Tour Eiffel"). It must name a place Booking.com can actually find. Booking never answers "no match" — it quietly falls back to the nearest thing it can geocode anywhere in the world — so when the place it settles on shares nothing with what was asked, the search is refused instead of returning hotels somewhere else entirely.
+- `location` (string, required): Free-text place to search near: address, landmark, city or hotel name (e.g. "124 Rue Réaumur, Paris" or "Tour Eiffel"). It must name a place Booking.com can actually find. When several places share the name (e.g. "Paris"), the search is refused and the candidates are listed: add the country or region after a comma ("Paris, France"). Booking never answers "no match" — it quietly falls back to the nearest thing it can geocode anywhere in the world — so when the place it settles on shares nothing with what was asked, the search is refused instead of returning hotels somewhere else entirely. The place used is returned as resolvedLocation.
 - `rooms` (integer, optional): Number of rooms.
 - `adults` (integer, optional): Number of adults.
 - `children` (integer, optional): Number of children.

@@ -4,7 +4,7 @@ Report which Hugging Face account this browser is signed in as: the user id, Hub
 
 - Site: huggingface.co
 - Address: `reduck/huggingface.co/whoami`
-- Updated: 2026-09-28 (v1)
+- Updated: 2026-10-06 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

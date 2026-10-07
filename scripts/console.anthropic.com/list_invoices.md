@@ -1,10 +1,10 @@
 # List Anthropic Console invoices
 
-Automatically list Anthropic Console invoices on console.anthropic.com. List the billing invoices on the signed-in Anthropic Console (platform.claude.com) organization: date, type, invoice number, status, amount and each invoice's Stripe-hosted page, plus the organization id and name. Reads the whole invoice history, following pagination, and works whatever language the Console is in. An organization with no invoices returns an empty list; signed out, it stops with a clear error rather than returning nothing. The Stripe links are re-signed on every load, so use them rather than store them.
+Automatically list Anthropic Console invoices on console.anthropic.com. List your Claude API invoices from the Anthropic Console (platform.claude.com): date, type, invoice number, status, amount and each invoice's Stripe-hosted page, plus the organization id and name. Reads the whole invoice history, following pagination, and works whatever language the Console is in. An organization with no invoices returns an empty list; signed out, it stops with a clear error rather than returning nothing. The Stripe links are re-signed on every load, so use them rather than store them; to download a PDF, feed one to invoice.stripe.com/download_invoice_pdf.
 
 - Site: console.anthropic.com
 - Address: `reduck/console.anthropic.com/list_invoices`
-- Updated: 2026-09-28 (v2)
+- Updated: 2026-10-06 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -31,7 +31,7 @@ It takes no input.
 
 ### What does "List Anthropic Console invoices" do?
 
-List the billing invoices on the signed-in Anthropic Console (platform.claude.com) organization: date, type, invoice number, status, amount and each invoice's Stripe-hosted page, plus the organization id and name. Reads the whole invoice history, following pagination, and works whatever language the Console is in. An organization with no invoices returns an empty list; signed out, it stops with a clear error rather than returning nothing. The Stripe links are re-signed on every load, so use them rather than store them.
+List your Claude API invoices from the Anthropic Console (platform.claude.com): date, type, invoice number, status, amount and each invoice's Stripe-hosted page, plus the organization id and name. Reads the whole invoice history, following pagination, and works whatever language the Console is in. An organization with no invoices returns an empty list; signed out, it stops with a clear error rather than returning nothing. The Stripe links are re-signed on every load, so use them rather than store them; to download a PDF, feed one to invoice.stripe.com/download_invoice_pdf.
 
 ### How do I automatically list Anthropic Console invoices on console.anthropic.com?
 

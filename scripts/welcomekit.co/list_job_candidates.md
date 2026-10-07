@@ -4,7 +4,7 @@ Automatically list candidates of one Welcome to the Jungle job on welcomekit.co.
 
 - Site: welcomekit.co
 - Address: `reduck/welcomekit.co/list_job_candidates`
-- Updated: 2026-09-18 (v4)
+- Updated: 2026-10-06 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

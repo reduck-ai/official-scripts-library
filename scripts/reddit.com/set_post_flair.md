@@ -4,7 +4,7 @@ Automatically set Reddit post flair on reddit.com. Set or remove the flair on yo
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/set_post_flair`
-- Updated: 2026-09-30 (v3)
+- Updated: 2026-10-06 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -1,10 +1,10 @@
 # List Claude invoices
 
-Automatically list Claude invoices on claude.ai. List every invoice across the orgs you have billing access to. Returns invoices (org_uuid, org_name, created_ts, due_date_ts, total, total_excluding_tax, currency, status, num_seats, hosted_invoice_url, invoice_pdf_url, payment_status) and skipped, newest first. Orgs you lack billing access to are reported in skipped rather than raising an error. Feed hosted_invoice_url to invoice.stripe.com/download_invoice_pdf to fetch the PDF (verified public/login-free, no Claude session needed).
+Automatically list Claude invoices on claude.ai. List your Claude (claude.ai) plan invoices, with a PDF link for each, across every organization you have billing access to, newest first. Returns invoices (org_uuid, org_name, created_ts, due_date_ts, total, total_excluding_tax, currency, status, num_seats, hosted_invoice_url, invoice_pdf_url, payment_status) and skipped. Organizations you lack billing access to are reported in skipped rather than raising an error. To download a PDF, feed hosted_invoice_url to invoice.stripe.com/download_invoice_pdf (verified public/login-free, no Claude session needed).
 
 - Site: claude.ai
 - Address: `reduck/claude.ai/list_invoices`
-- Updated: 2026-08-20 (v4)
+- Updated: 2026-10-06 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -28,7 +28,7 @@ npx @reduck-ai/cli@latest run --script reduck/claude.ai/list_invoices
 
 ### What does "List Claude invoices" do?
 
-List every invoice across the orgs you have billing access to. Returns invoices (org_uuid, org_name, created_ts, due_date_ts, total, total_excluding_tax, currency, status, num_seats, hosted_invoice_url, invoice_pdf_url, payment_status) and skipped, newest first. Orgs you lack billing access to are reported in skipped rather than raising an error. Feed hosted_invoice_url to invoice.stripe.com/download_invoice_pdf to fetch the PDF (verified public/login-free, no Claude session needed).
+List your Claude (claude.ai) plan invoices, with a PDF link for each, across every organization you have billing access to, newest first. Returns invoices (org_uuid, org_name, created_ts, due_date_ts, total, total_excluding_tax, currency, status, num_seats, hosted_invoice_url, invoice_pdf_url, payment_status) and skipped. Organizations you lack billing access to are reported in skipped rather than raising an error. To download a PDF, feed hosted_invoice_url to invoice.stripe.com/download_invoice_pdf (verified public/login-free, no Claude session needed).
 
 ### How do I automatically list Claude invoices on claude.ai?
 

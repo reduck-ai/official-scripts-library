@@ -4,7 +4,7 @@ Automatically search APEC jobs on apec.fr. Search APEC (French executive/manager
 
 - Site: apec.fr
 - Address: `reduck/apec.fr/search_jobs`
-- Updated: 2026-08-17 (v3)
+- Updated: 2026-10-06 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -19,13 +19,15 @@ npx @reduck-ai/cli@latest run --script reduck/apec.fr/search_jobs
 
 - `query` (string, required): Free-text job search query, same as APEC's own search box (e.g. "data engineer").
 - `page` (integer, optional): 1-based page, 20 offers per page (APEC's own default page size).
-- `location` (string, optional): Free-text location (e.g. "Paris", "Lyon"). Omit to search all of France. Resolved server-side to APEC's own location code; an unrecognized location throws rather than silently searching nationwide.
+- `lieuId` (integer, optional): Apec location id, if you already know it (e.g. 75 = Paris department, 596717 = Lyon). Skips the location lookup. Takes precedence over location.
+- `location` (string, optional): Location name (e.g. "Lyon"). Omit to search all of France. Only used when it matches one Apec place exactly (or Apec suggests a single place); when several places match, the run refuses and lists them with their lieuId so you can pass the right one. The place used is returned as resolvedLocation.
 
 ## Output
 
 - `jobs` (array, required)
 - `page` (integer, required)
 - `total` (integer, required): Matching offer count reported by APEC's API (totalCount). 0 with empty jobs[] = no matching offers (first-class outcome, not an error).
+- `resolvedLocation` (object | null, optional): The place the search was filtered on (null when no location was given). label/type are null when lieuId was passed directly.
 
 ## FAQ
 
@@ -43,11 +45,11 @@ You do not need one. "Search APEC jobs" drives the real apec.fr pages in a brows
 
 ### What information do I need to provide?
 
-Required: query. Optional: page, location.
+Required: query. Optional: page, lieuId, location.
 
 ### What does it return?
 
-It returns jobs, page, total.
+It returns jobs, page, total, resolvedLocation.
 
 ### Do I need to be logged in to apec.fr?
 

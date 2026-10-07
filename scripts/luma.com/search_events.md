@@ -1,10 +1,10 @@
-# Luma API: search events by topic or city
+# Luma unofficial API: search events by topic or city
 
 Automatically search events by topic or city on luma.com. An unofficial Luma API: search public events by topic or city programmatically, from code or from an AI agent, with typed JSON in and out. Luma's official API is for hosts managing their own events and has no public event search.
 
 - Site: luma.com
 - Address: `reduck/luma.com/search_events`
-- Updated: 2026-09-25 (v5)
+- Updated: 2026-10-06 (v5)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -68,7 +68,7 @@ Shape only: placeholder values generated from the output schema, not a real run.
 
 ## FAQ
 
-### What does "Luma API: search events by topic or city" do?
+### What does "Luma unofficial API: search events by topic or city" do?
 
 Search upcoming public events on Luma, filtered by a category topic (e.g. "crypto", "fitness") or a curated city (e.g. "paris", "london"), paginated.
 
@@ -78,7 +78,7 @@ Ask an AI agent connected to Reduck to run reduck/luma.com/search_events, or run
 
 ### Is there a luma.com API to search events by topic or city?
 
-You do not need one. "Luma API: search events by topic or city" drives the real luma.com pages in a browser, so it works whether or not luma.com offers an API for this.
+You do not need one. "Luma unofficial API: search events by topic or city" drives the real luma.com pages in a browser, so it works whether or not luma.com offers an API for this.
 
 ### What information do I need to provide?
 

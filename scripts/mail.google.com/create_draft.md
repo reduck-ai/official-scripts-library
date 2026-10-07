@@ -4,7 +4,7 @@ Automatically create a Gmail draft on mail.google.com. Compose a Gmail message a
 
 - Site: mail.google.com
 - Address: `reduck/mail.google.com/create_draft`
-- Updated: 2026-08-27 (v24)
+- Updated: 2026-10-06 (v25)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -62,7 +62,7 @@ Yes. It acts as you on mail.google.com: on your own Chrome it reuses your sessio
 
 ### Does it change anything on mail.google.com, or only read data?
 
-It makes changes on mail.google.com, like sending, posting or booking something.
+It makes changes on mail.google.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

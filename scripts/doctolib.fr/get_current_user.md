@@ -4,7 +4,7 @@ Automatically get current user on doctolib.fr. Report which Doctolib patient acc
 
 - Site: doctolib.fr
 - Address: `reduck/doctolib.fr/get_current_user`
-- Updated: 2026-09-28 (v2)
+- Updated: 2026-10-06 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -1,10 +1,10 @@
-# OpenAI API: download an OpenAI API platform invoice PDF
+# OpenAI unofficial API: download an OpenAI platform invoice PDF
 
-Automatically download an OpenAI API platform invoice PDF on platform.openai.com. An unofficial OpenAI API to download platform billing invoice PDFs. Download a billing invoice PDF from the signed-in OpenAI API platform organization (platform.openai.com; API usage and credits, not the ChatGPT subscription). Pass the invoice id (in_...) or number (e.g. PFWBT7SS-0003) as shown by list_invoices, or omit it for the most recent invoice. If OpenAI asks which API organization to use, it picks the one named in organization, or else the first offered. Returns the invoice number, status, total (cents), created date, and where the PDF was saved, plus every invoice number on the organization. It fails with the list of available invoices if the requested one does not exist. Read-only.
+Automatically download an OpenAI platform invoice PDF on platform.openai.com. An unofficial OpenAI API to download platform billing invoice PDFs. Download a billing invoice PDF from the signed-in OpenAI API platform organization (platform.openai.com; API usage and credits, not the ChatGPT subscription). Pass the invoice id (in_...) or number (e.g. PFWBT7SS-0003) as shown by list_invoices, or omit it for the most recent invoice. If OpenAI asks which API organization to use, it picks the one named in organization, or else the first offered. Returns the invoice number, status, total (cents), created date, and where the PDF was saved, plus every invoice number on the organization. It fails with the list of available invoices if the requested one does not exist. Read-only.
 
 - Site: platform.openai.com
 - Address: `reduck/platform.openai.com/download_invoice_pdf`
-- Updated: 2026-09-29 (v2)
+- Updated: 2026-10-06 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,7 +18,7 @@ npx @reduck-ai/cli@latest run --script reduck/platform.openai.com/download_invoi
 ## Input
 
 - `invoice` (string, optional): Invoice id (in_...) or invoice number (e.g. PFWBT7SS-0003) as listed by list_invoices. Omit for the most recent invoice.
-- `organization` (string, optional): Which API organization to use if OpenAI asks you to choose one (its name as shown). Defaults to the first one offered.
+- `organization` (string, optional): Which API organization to use if OpenAI asks you to choose one, by its exact name as shown. When no organization has that name the run stops and lists them. Defaults to the first one offered.
 
 ## Output
 
@@ -35,17 +35,17 @@ npx @reduck-ai/cli@latest run --script reduck/platform.openai.com/download_invoi
 
 ## FAQ
 
-### What does "OpenAI API: download an OpenAI API platform invoice PDF" do?
+### What does "OpenAI unofficial API: download an OpenAI platform invoice PDF" do?
 
 An unofficial OpenAI API to download platform billing invoice PDFs. Download a billing invoice PDF from the signed-in OpenAI API platform organization (platform.openai.com; API usage and credits, not the ChatGPT subscription). Pass the invoice id (in_...) or number (e.g. PFWBT7SS-0003) as shown by list_invoices, or omit it for the most recent invoice. If OpenAI asks which API organization to use, it picks the one named in organization, or else the first offered. Returns the invoice number, status, total (cents), created date, and where the PDF was saved, plus every invoice number on the organization. It fails with the list of available invoices if the requested one does not exist. Read-only.
 
-### How do I automatically download an OpenAI API platform invoice PDF on platform.openai.com?
+### How do I automatically download an OpenAI platform invoice PDF on platform.openai.com?
 
 Ask an AI agent connected to Reduck to run reduck/platform.openai.com/download_invoice_pdf, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/platform.openai.com/download_invoice_pdf
 
-### Is there a platform.openai.com API to download an OpenAI API platform invoice PDF?
+### Is there a platform.openai.com API to download an OpenAI platform invoice PDF?
 
-You do not need one. "OpenAI API: download an OpenAI API platform invoice PDF" drives the real platform.openai.com pages in a browser, so it works whether or not platform.openai.com offers an API for this.
+You do not need one. "OpenAI unofficial API: download an OpenAI platform invoice PDF" drives the real platform.openai.com pages in a browser, so it works whether or not platform.openai.com offers an API for this.
 
 ### What information do I need to provide?
 

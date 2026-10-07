@@ -4,7 +4,7 @@ Automatically search Malt freelancers on malt.com. Search Malt freelancers by ke
 
 - Site: malt.com
 - Address: `reduck/malt.com/search_freelancers`
-- Updated: 2026-09-29 (v11)
+- Updated: 2026-10-06 (v12)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,12 +18,13 @@ npx @reduck-ai/cli@latest run --script reduck/malt.com/search_freelancers
 ## Input
 
 - `query` (string, required): Free-text keyword or skill, e.g. "React developer"
-- `location` (string, required): City name to search near, e.g. "London" or "Paris". The script picks the first matching city suggestion from Malt's own autocomplete.
+- `location` (string, required): City name to search near, e.g. "London" or "Paris" (optionally with its country, "Paris, France"). Only a Malt city suggestion named exactly this is used; when none or several match, the run refuses and lists the suggestions.
 
 ## Output
 
 - `profiles` (array, optional)
 - `totalElements` (integer | null, optional): Total freelancers matching the query, as reported by Malt (only the first page of profiles is returned)
+- `resolvedLocation` (string | null, optional): The city suggestion that was selected, as Malt displays it (e.g. "Lyon, France").
 
 ## FAQ
 
@@ -45,7 +46,7 @@ Required: query, location.
 
 ### What does it return?
 
-It returns profiles, totalElements.
+It returns profiles, totalElements, resolvedLocation.
 
 ### Do I need to be logged in to malt.com?
 

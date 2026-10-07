@@ -1,10 +1,10 @@
 # Get Kleinanzeigen listing details
 
-Automatically get Kleinanzeigen listing details on kleinanzeigen.de. Get the full details of a Kleinanzeigen listing from its link or id: title, price, location, posting date, full description, attributes such as condition or type, seller name and type with a link to the seller's other listings, and all photos.
+Automatically get Kleinanzeigen listing details on kleinanzeigen.de. Get the full details of a Kleinanzeigen listing from its link or id: title, price, location, posting date, full description, attributes such as condition or type, whether the seller is a private person or a business (businesses are named) with a link to the seller's other listings, and all photos.
 
 - Site: kleinanzeigen.de
 - Address: `reduck/kleinanzeigen.de/get_listing`
-- Updated: 2026-10-02 (v2)
+- Updated: 2026-10-06 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -38,7 +38,7 @@ npx @reduck-ai/cli@latest run --script reduck/kleinanzeigen.de/get_listing
 
 ### What does "Get Kleinanzeigen listing details" do?
 
-Get the full details of a Kleinanzeigen listing from its link or id: title, price, location, posting date, full description, attributes such as condition or type, seller name and type with a link to the seller's other listings, and all photos.
+Get the full details of a Kleinanzeigen listing from its link or id: title, price, location, posting date, full description, attributes such as condition or type, whether the seller is a private person or a business (businesses are named) with a link to the seller's other listings, and all photos.
 
 ### How do I automatically get Kleinanzeigen listing details on kleinanzeigen.de?
 

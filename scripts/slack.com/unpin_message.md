@@ -1,10 +1,10 @@
-# Slack API: unpin a message
+# Slack unofficial API: unpin a message
 
 Automatically unpin a message on slack.com. An unofficial Slack API: unpin a Slack message programmatically, from code or from an AI agent, with typed JSON in and out. It needs no Slack app or token, only your signed-in browser.
 
 - Site: slack.com
 - Address: `reduck/slack.com/unpin_message`
-- Updated: 2026-09-18 (v4)
+- Updated: 2026-10-06 (v4)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -53,7 +53,7 @@ Shape only: placeholder values generated from the output schema, not a real run.
 
 ## FAQ
 
-### What does "Slack API: unpin a message" do?
+### What does "Slack unofficial API: unpin a message" do?
 
 Remove a pinned message from its channel by channel (name or id) and message ts. Requires login.
 
@@ -63,7 +63,7 @@ Ask an AI agent connected to Reduck to run reduck/slack.com/unpin_message, or ru
 
 ### Is there a slack.com API to unpin a message?
 
-You do not need one. "Slack API: unpin a message" drives the real slack.com pages in a browser, so it works whether or not slack.com offers an API for this.
+You do not need one. "Slack unofficial API: unpin a message" drives the real slack.com pages in a browser, so it works whether or not slack.com offers an API for this.
 
 ### What information do I need to provide?
 
@@ -79,7 +79,7 @@ Yes. It acts as you on slack.com: on your own Chrome it reuses your session, and
 
 ### Does it change anything on slack.com, or only read data?
 
-It makes changes on slack.com, like sending, posting or booking something.
+It makes changes on slack.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

@@ -1,10 +1,10 @@
-# Google Scholar API: search authors
+# Google Scholar unofficial API: search authors
 
 Automatically search authors on scholar.google.com. Search Google Scholar's author (Profiles) directory by name/keywords. Returns each matching author's id, name, affiliation, verified-email domain, interest tags, and total cited-by count, plus a cursor for the next page.
 
 - Site: scholar.google.com
 - Address: `reduck/scholar.google.com/search_authors`
-- Updated: 2026-09-18 (v4)
+- Updated: 2026-10-06 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -27,7 +27,7 @@ npx @reduck-ai/cli@latest run --script reduck/scholar.google.com/search_authors
 
 ## FAQ
 
-### What does "Google Scholar API: search authors" do?
+### What does "Google Scholar unofficial API: search authors" do?
 
 Search Google Scholar's author (Profiles) directory by name/keywords. Returns each matching author's id, name, affiliation, verified-email domain, interest tags, and total cited-by count, plus a cursor for the next page.
 
@@ -37,7 +37,7 @@ Ask an AI agent connected to Reduck to run reduck/scholar.google.com/search_auth
 
 ### Is there a scholar.google.com API to search authors?
 
-You do not need one. "Google Scholar API: search authors" drives the real scholar.google.com pages in a browser, so it works whether or not scholar.google.com offers an API for this.
+You do not need one. "Google Scholar unofficial API: search authors" drives the real scholar.google.com pages in a browser, so it works whether or not scholar.google.com offers an API for this.
 
 ### What information do I need to provide?
 

@@ -4,7 +4,7 @@ Report which Calendly account this browser is signed in as: the user id, email, 
 
 - Site: calendly.com
 - Address: `reduck/calendly.com/whoami`
-- Updated: 2026-09-28 (v2)
+- Updated: 2026-10-06 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

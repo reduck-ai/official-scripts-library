@@ -4,7 +4,7 @@ Report which Anthropic Console (platform.claude.com) account this browser is sig
 
 - Site: console.anthropic.com
 - Address: `reduck/console.anthropic.com/whoami`
-- Updated: 2026-09-28 (v1)
+- Updated: 2026-10-06 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

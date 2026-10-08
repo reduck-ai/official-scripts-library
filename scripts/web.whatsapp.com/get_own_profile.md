@@ -4,7 +4,7 @@ Automatically get own profile on web.whatsapp.com. Read the logged-in WhatsApp a
 
 - Site: web.whatsapp.com
 - Address: `reduck/web.whatsapp.com/get_own_profile`
-- Updated: 2026-10-06 (v6)
+- Updated: 2026-10-07 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

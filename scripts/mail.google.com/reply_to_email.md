@@ -1,10 +1,10 @@
 # Reply to Gmail thread
 
-Automatically reply to Gmail thread on mail.google.com. Reply (or reply-all) in a Gmail thread by its hex threadId (as returned by search_emails), with a plain-text body. Replies to the latest message of the thread. Returns sent, threadId, replyAll.
+Automatically reply to Gmail thread on mail.google.com. Reply (or reply-all) inside an existing Gmail conversation, given its thread id or the conversation's link, so the reply stays in the same thread with the original subject and quoted history. Optionally add Cc recipients, attach one file, or schedule the reply for later. Returns whether it was sent or scheduled, the conversation id and subject, and for scheduled replies the time Gmail shows.
 
 - Site: mail.google.com
 - Address: `reduck/mail.google.com/reply_to_email`
-- Updated: 2026-09-17 (v6)
+- Updated: 2026-10-07 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,22 +17,33 @@ npx @reduck-ai/cli@latest run --script reduck/mail.google.com/reply_to_email
 
 ## Input
 
-- `body` (string, required): Plain-text reply body (newlines preserved).
-- `threadId` (string, required): Hex legacy thread id, e.g. "19f2817451c27480".
-- `account` (string, optional): Google account email to act as (authuser=). Without it Gmail picks u/0, which is NOT deterministic when several accounts share the browser's cookie jar.
+- `body` (string, required): Plain-text reply body (newlines preserved). Long bodies are fine.
+- `cc` (any, optional): Optional Cc address(es) added to the reply. A single string or an array of strings.
+- `sendAt` (string, optional): Optional. Schedule the reply instead of sending it now: a local date and time with no offset (e.g. 2026-10-09T09:00), read in the browser's time zone. Must be at least a few minutes ahead.
+- `account` (string, optional): Google account email to act as. Without it Gmail picks the first signed-in account, which may not be the one you expect if several accounts share the browser.
 - `replyAll` (boolean, optional): Reply to all recipients instead of just the sender.
+- `threadId` (string, optional): Hex thread id as returned by search_emails, e.g. "19f2817451c27480". Give this or threadUrl.
+- `threadUrl` (string, optional): The Gmail address of the conversation, as copied from the browser (e.g. https://mail.google.com/mail/u/0/#inbox/FMfcgz...). Give this or threadId.
+- `attachment` (string, optional): Optional file to attach. From an agent: files: { attachment: { relativePath: "invoice.pdf" } }, a name inside the reduck folder on the Desktop. From the CLI: file:attachment=/path/to/file.
+- `attachmentName` (string, optional): Filename the recipient sees, with its extension. Defaults to the file's own name.
 
 ## Output
 
-- `sent` (boolean, required)
+- `sent` (boolean, required): True when the reply went out now. False when it was scheduled instead.
 - `replyAll` (boolean, required)
-- `threadId` (string, required)
+- `threadId` (string, required): Hex id of the conversation the reply was added to.
+- `cc` (array, optional)
+- `subject` (string | null, optional): Subject of the conversation the reply joined.
+- `scheduled` (boolean, optional)
+- `attachment` (string, optional)
+- `scheduledFor` (string | null, optional): The send date and time as Gmail shows it on the Scheduled list, in the account's language.
+- `foundInScheduled` (boolean, optional)
 
 ## FAQ
 
 ### What does "Reply to Gmail thread" do?
 
-Reply (or reply-all) in a Gmail thread by its hex threadId (as returned by search_emails), with a plain-text body. Replies to the latest message of the thread. Returns sent, threadId, replyAll.
+Reply (or reply-all) inside an existing Gmail conversation, given its thread id or the conversation's link, so the reply stays in the same thread with the original subject and quoted history. Optionally add Cc recipients, attach one file, or schedule the reply for later. Returns whether it was sent or scheduled, the conversation id and subject, and for scheduled replies the time Gmail shows.
 
 ### How do I automatically reply to Gmail thread on mail.google.com?
 
@@ -44,11 +55,11 @@ You do not need one. "Reply to Gmail thread" drives the real mail.google.com pag
 
 ### What information do I need to provide?
 
-Required: threadId, body. Optional: account, replyAll.
+Required: body. Optional: cc, sendAt, account, replyAll, threadId, threadUrl, attachment, attachmentName.
 
 ### What does it return?
 
-It returns sent, replyAll, threadId.
+It returns cc, sent, subject, replyAll, threadId, scheduled, attachment, scheduledFor, foundInScheduled.
 
 ### Do I need to be logged in to mail.google.com?
 
@@ -56,7 +67,7 @@ Yes. It acts as you on mail.google.com: on your own Chrome it reuses your sessio
 
 ### Does it change anything on mail.google.com, or only read data?
 
-It makes changes on mail.google.com, like sending, posting or booking something.
+It makes changes on mail.google.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

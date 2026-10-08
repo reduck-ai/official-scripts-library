@@ -4,7 +4,7 @@ Search the web on Bing, one page of results at a time. Returns each organic resu
 
 - Site: bing.com
 - Address: `reduck/bing.com/search`
-- Updated: 2026-10-02 (v15)
+- Updated: 2026-10-07 (v15)
 - Author: Reduck AI (reduck)
 
 ## Run it

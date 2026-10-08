@@ -4,7 +4,7 @@ Automatically search YC startup directory on ycombinator.com. Pull YC companies 
 
 - Site: ycombinator.com
 - Address: `reduck/ycombinator.com/search_companies`
-- Updated: 2026-10-05 (v2)
+- Updated: 2026-10-07 (v3)
 - Author: Reduck AI (reduck)
 
 ## About

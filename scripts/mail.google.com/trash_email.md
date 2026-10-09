@@ -4,7 +4,7 @@ Automatically trash Gmail thread on mail.google.com. Move a Gmail thread to the 
 
 - Site: mail.google.com
 - Address: `reduck/mail.google.com/trash_email`
-- Updated: 2026-09-07 (v3)
+- Updated: 2026-10-08 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -54,7 +54,7 @@ Yes. It acts as you on mail.google.com: on your own Chrome it reuses your sessio
 
 ### Does it change anything on mail.google.com, or only read data?
 
-It makes changes on mail.google.com, like sending, posting or booking something.
+It makes changes on mail.google.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

@@ -4,7 +4,7 @@ Log into lemlist with Google sign-in, handling the Google account chooser and co
 
 - Site: lemlist.com
 - Address: `reduck/lemlist.com/login_with_google`
-- Updated: 2026-10-02 (v1)
+- Updated: 2026-10-08 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

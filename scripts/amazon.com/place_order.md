@@ -4,7 +4,7 @@ Place the order on an open Amazon.com checkout and get its order number(s), to t
 
 - Site: amazon.com
 - Address: `reduck/amazon.com/place_order`
-- Updated: 2026-09-27 (v5)
+- Updated: 2026-10-08 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -47,7 +47,7 @@ Yes. It acts as you on amazon.com: on your own Chrome it reuses your session, an
 
 ### Does it change anything on amazon.com, or only read data?
 
-It makes changes on amazon.com, like sending, posting or booking something.
+It makes changes on amazon.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

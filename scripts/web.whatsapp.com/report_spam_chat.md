@@ -4,7 +4,7 @@ Automatically report spam chat on web.whatsapp.com. Reports a chat to WhatsApp (
 
 - Site: web.whatsapp.com
 - Address: `reduck/web.whatsapp.com/report_spam_chat`
-- Updated: 2026-10-06 (v6)
+- Updated: 2026-10-08 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

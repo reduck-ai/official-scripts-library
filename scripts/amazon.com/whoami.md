@@ -4,7 +4,7 @@ Report whether this browser is signed in to Amazon.com and, if so, the account's
 
 - Site: amazon.com
 - Address: `reduck/amazon.com/whoami`
-- Updated: 2026-10-05 (v6)
+- Updated: 2026-10-08 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it

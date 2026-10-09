@@ -4,7 +4,7 @@ Automatically list Amazon category page on amazon.com. List one page of an Amazo
 
 - Site: amazon.com
 - Address: `reduck/amazon.com/list-category`
-- Updated: 2026-08-17 (v3)
+- Updated: 2026-10-08 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

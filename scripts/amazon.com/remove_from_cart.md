@@ -4,7 +4,7 @@ Automatically remove Amazon product from cart on amazon.com. Remove a product fr
 
 - Site: amazon.com
 - Address: `reduck/amazon.com/remove_from_cart`
-- Updated: 2026-10-06 (v3)
+- Updated: 2026-10-08 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

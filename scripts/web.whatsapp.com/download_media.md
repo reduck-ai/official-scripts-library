@@ -1,10 +1,10 @@
 # WhatsApp — Download media
 
-Automatically download media on web.whatsapp.com. Download the media of a WhatsApp message (image, document, audio/voice) by chat name + message id (the `id` from get_conversation / search_messages), returned as base64 plus filename, mimeType and size. Documents come back byte-for-byte — a file sent by send_message round-trips identically — and carry the filename WhatsApp itself saves them under. Images are read from the inline blob, which is WhatsApp's own rendition and may be smaller than a large original, so imageWidth/Height are reported rather than implying full fidelity. Audio/voice notes use the same path as documents but are unverified for lack of a fixture. Video, sticker, GIF and location messages are not supported: they are refused with their actual kind named, so check a message's `media` field from get_conversation if you are unsure what it holds.
+Automatically download media on web.whatsapp.com. Download the media of a WhatsApp message (image, document, audio/voice) by chat name + message id (the `id` from get_conversation / search_messages), returned as base64 plus filename, mimeType and size. Documents come back byte-for-byte under the filename WhatsApp saves them as. Images are WhatsApp's displayed rendition, which may be smaller than a large original, so imageWidth/Height are reported. Video, sticker, GIF and location messages are not supported and are refused with their actual kind named; check a message's `media` field from get_conversation if unsure.
 
 - Site: web.whatsapp.com
 - Address: `reduck/web.whatsapp.com/download_media`
-- Updated: 2026-10-05 (v13)
+- Updated: 2026-10-09 (v13)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -34,7 +34,7 @@ npx @reduck-ai/cli@latest run --script reduck/web.whatsapp.com/download_media
 
 ### What does "WhatsApp — Download media" do?
 
-Download the media of a WhatsApp message (image, document, audio/voice) by chat name + message id (the `id` from get_conversation / search_messages), returned as base64 plus filename, mimeType and size. Documents come back byte-for-byte — a file sent by send_message round-trips identically — and carry the filename WhatsApp itself saves them under. Images are read from the inline blob, which is WhatsApp's own rendition and may be smaller than a large original, so imageWidth/Height are reported rather than implying full fidelity. Audio/voice notes use the same path as documents but are unverified for lack of a fixture. Video, sticker, GIF and location messages are not supported: they are refused with their actual kind named, so check a message's `media` field from get_conversation if you are unsure what it holds.
+Download the media of a WhatsApp message (image, document, audio/voice) by chat name + message id (the `id` from get_conversation / search_messages), returned as base64 plus filename, mimeType and size. Documents come back byte-for-byte under the filename WhatsApp saves them as. Images are WhatsApp's displayed rendition, which may be smaller than a large original, so imageWidth/Height are reported. Video, sticker, GIF and location messages are not supported and are refused with their actual kind named; check a message's `media` field from get_conversation if unsure.
 
 ### How do I automatically download media on web.whatsapp.com?
 

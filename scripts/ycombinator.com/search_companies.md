@@ -4,7 +4,7 @@ Automatically search YC startup directory on ycombinator.com. Pull YC companies 
 
 - Site: ycombinator.com
 - Address: `reduck/ycombinator.com/search_companies`
-- Updated: 2026-10-07 (v3)
+- Updated: 2026-10-09 (v4)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -32,7 +32,7 @@ npx @reduck-ai/cli@latest run --script reduck/ycombinator.com/search_companies
 - `isHiring` (boolean, optional): Only companies currently hiring (true filters; false/omitted = no filter).
 - `nonprofit` (boolean, optional): Only nonprofits (true filters; false/omitted = no filter).
 - `topCompany` (boolean, optional): Only YC top companies (true filters; false/omitted = no filter).
-- `hitsPerPage` (integer, optional): Results per page (Algolia caps at 1000). Alias: count.
+- `hitsPerPage` (integer, optional): Results per page, at most 1000. Alias: count.
 
 ## Output
 

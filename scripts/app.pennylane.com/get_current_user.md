@@ -1,10 +1,10 @@
 # Get Current User
 
-Automatically get Current User on app.pennylane.com. Report which Pennylane account this browser is signed in as: email and name from the app's own users/me. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Pennylane scripts.
+Automatically get Current User on app.pennylane.com. Report which Pennylane account this browser is signed in as: email and name. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Pennylane scripts.
 
 - Site: app.pennylane.com
 - Address: `reduck/app.pennylane.com/get_current_user`
-- Updated: 2026-10-06 (v2)
+- Updated: 2026-10-09 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,7 +29,7 @@ It takes no input.
 
 ### What does "Get Current User" do?
 
-Report which Pennylane account this browser is signed in as: email and name from the app's own users/me. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Pennylane scripts.
+Report which Pennylane account this browser is signed in as: email and name. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Pennylane scripts.
 
 ### How do I automatically get Current User on app.pennylane.com?
 

@@ -4,7 +4,7 @@ Automatically get Reddit chat inbox on reddit.com. List the conversations in you
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/get_inbox`
-- Updated: 2026-09-03 (v2)
+- Updated: 2026-10-09 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -53,7 +53,7 @@ Yes. It acts as you on reddit.com: on your own Chrome it reuses your session, an
 
 ### Does it change anything on reddit.com, or only read data?
 
-Unknown: its author has not declared whether it changes anything on reddit.com, so treat it as if it could.
+It only reads. It looks things up on reddit.com and changes nothing there.
 
 ### How do I run it?
 

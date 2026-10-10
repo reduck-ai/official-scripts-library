@@ -1,10 +1,10 @@
 # Get Current User
 
-Automatically get Current User on asana.com. Report which Asana account this browser is signed in as: name, email and user gid, from Asana's own users/me. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Asana scripts.
+Automatically get Current User on asana.com. Report which Asana account this browser is signed in as: name, email and user gid. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Asana scripts.
 
 - Site: asana.com
 - Address: `reduck/asana.com/get_current_user`
-- Updated: 2026-10-05 (v4)
+- Updated: 2026-10-09 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -30,7 +30,7 @@ It takes no input.
 
 ### What does "Get Current User" do?
 
-Report which Asana account this browser is signed in as: name, email and user gid, from Asana's own users/me. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Asana scripts.
+Report which Asana account this browser is signed in as: name, email and user gid. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Asana scripts.
 
 ### How do I automatically get Current User on asana.com?
 

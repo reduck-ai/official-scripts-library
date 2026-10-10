@@ -1,10 +1,10 @@
 # Get subreddit info
 
-Automatically get subreddit info on reddit.com. Fetch a subreddit's metadata from its page: title, description, weekly active users / contributions, created date, visibility, rules (title + body), and the full moderator list (username, permissions, joined). Banned/private subs return status with detail; unknown subs throw.
+Automatically get subreddit info on reddit.com. Fetch a subreddit's metadata: title, description, created date, weekly visitors and contributions, its type (public, restricted…), every rule (title and body), and its full moderator list with each moderator's permissions and join date. A banned or private subreddit returns its status and nothing else; an unknown name throws. The moderator list is null when Reddit does not show it to the browser's session.
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/get_subreddit_info`
-- Updated: 2026-09-29 (v9)
+- Updated: 2026-10-09 (v12)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -21,14 +21,14 @@ npx @reduck-ai/cli@latest run --script reduck/reddit.com/get_subreddit_info
 
 ## Output
 
-- `status` (string, required): How reddit itself classifies the subreddit. For a live one this is about.json's subreddit_type ("public", "restricted", "user", ...). For one that cannot be read it is the gate: "banned", "missing" (never existed), "private", or "gold_only". Sourced entirely from about.json rather than from rendered page copy, so it does not change with the interface language.
+- `status` (string, required): How Reddit classifies the subreddit: for a live one its subreddit_type ("public", "restricted", "user", ...); for one that cannot be read, the gate ("banned", "private", "gold_only").
 - `subreddit` (string, required)
 - `id` (string | null, optional)
 - `rules` (array | null, optional)
 - `title` (string | null, optional)
-- `detail` (string | null, optional): For a gated or banned subreddit, reddit's own machine reason code from about.json - "banned", "private", "gold_only" - or null when the subreddit is live or simply never existed. Before v5 this was an English sentence scraped off the page; it is now a code, so it is stable across languages and comparable.
+- `detail` (string | null, optional): For a gated or banned subreddit, Reddit's own reason code ("banned", "private", "gold_only"); null when the subreddit is live.
 - `created` (string | null, optional)
-- `moderators` (array | null, optional)
+- `moderators` (array | null, optional): Every moderator, in Reddit's order. null when Reddit does not show the list to this browser's session.
 - `description` (string | null, optional)
 - `weekly_active_users` (number | null, optional)
 - `weekly_contributions` (number | null, optional)
@@ -37,7 +37,7 @@ npx @reduck-ai/cli@latest run --script reduck/reddit.com/get_subreddit_info
 
 ### What does "Get subreddit info" do?
 
-Fetch a subreddit's metadata from its page: title, description, weekly active users / contributions, created date, visibility, rules (title + body), and the full moderator list (username, permissions, joined). Banned/private subs return status with detail; unknown subs throw.
+Fetch a subreddit's metadata: title, description, created date, weekly visitors and contributions, its type (public, restricted…), every rule (title and body), and its full moderator list with each moderator's permissions and join date. A banned or private subreddit returns its status and nothing else; an unknown name throws. The moderator list is null when Reddit does not show it to the browser's session.
 
 ### How do I automatically get subreddit info on reddit.com?
 

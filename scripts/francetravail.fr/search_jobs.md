@@ -1,10 +1,10 @@
 # Search France Travail jobs
 
-Automatically search France Travail jobs on francetravail.fr. Search France Travail (formerly Pôle Emploi) public job listings by keyword, optional free-text location (city or department), and page (20 offers/page). Returns total (page 1 only) and jobs (jobId, title, company, location, description, contract, postedAgo, url). Location free text is resolved via France Travail's own public geo API to a commune or department code (same as picking the first suggestion in the UI); an unrecognized location throws instead of silently searching nationwide. Page 1 is read directly from the results page; later pages are fetched via the site's own "load more" mechanism. total is only returned for page 1 — later pages don't repeat it.
+Automatically search France Travail jobs on francetravail.fr. Search France Travail (formerly Pôle Emploi) public job listings by keyword, optional free-text location (city or department) or location code, and page (20 offers/page). Returns jobs (jobId, title, company, location, description, contract, postedAgo, url) and, on page 1 only, the total match count. An ambiguous or unrecognized location is refused rather than silently searching nationwide.
 
 - Site: francetravail.fr
 - Address: `reduck/francetravail.fr/search_jobs`
-- Updated: 2026-10-06 (v4)
+- Updated: 2026-10-09 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -33,7 +33,7 @@ npx @reduck-ai/cli@latest run --script reduck/francetravail.fr/search_jobs
 
 ### What does "Search France Travail jobs" do?
 
-Search France Travail (formerly Pôle Emploi) public job listings by keyword, optional free-text location (city or department), and page (20 offers/page). Returns total (page 1 only) and jobs (jobId, title, company, location, description, contract, postedAgo, url). Location free text is resolved via France Travail's own public geo API to a commune or department code (same as picking the first suggestion in the UI); an unrecognized location throws instead of silently searching nationwide. Page 1 is read directly from the results page; later pages are fetched via the site's own "load more" mechanism. total is only returned for page 1 — later pages don't repeat it.
+Search France Travail (formerly Pôle Emploi) public job listings by keyword, optional free-text location (city or department) or location code, and page (20 offers/page). Returns jobs (jobId, title, company, location, description, contract, postedAgo, url) and, on page 1 only, the total match count. An ambiguous or unrecognized location is refused rather than silently searching nationwide.
 
 ### How do I automatically search France Travail jobs on francetravail.fr?
 

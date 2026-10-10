@@ -1,10 +1,10 @@
 # List Dropcontact billing invoices
 
-Automatically list Dropcontact billing invoices on dropcontact.com. Lists the Dropcontact billing invoices (Stripe-hosted) for the signed-in account, going from the app's billing settings into the Stripe customer portal and reading its invoice history. Requires an authenticated app.dropcontact.com session. Returns per invoice: date, amount, status, statusTone and hostedInvoiceUrl — an invoice.stripe.com page with its own download button, so this returns links rather than PDF files. `status` is the wording the portal shows, in whatever language it serves it; `statusTone` is the language-independent reading of the same badge ("positive" for a settled invoice). date and amount are nullable. Works in any portal language.
+Automatically list Dropcontact billing invoices on dropcontact.com. List the billing invoices of the signed-in Dropcontact account. Returns per invoice: date, amount, status, statusTone and hostedInvoiceUrl (an invoice page with its own download button, so this returns links rather than PDF files). `status` is the wording shown, in whatever language it is served; `statusTone` is the language-independent reading of the same badge ("positive" for a settled invoice). date and amount are nullable. Accounts with no active subscription have no invoices to read and say so.
 
 - Site: dropcontact.com
 - Address: `reduck/dropcontact.com/list_invoices`
-- Updated: 2026-10-06 (v8)
+- Updated: 2026-10-09 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -27,7 +27,7 @@ It takes no input.
 
 ### What does "List Dropcontact billing invoices" do?
 
-Lists the Dropcontact billing invoices (Stripe-hosted) for the signed-in account, going from the app's billing settings into the Stripe customer portal and reading its invoice history. Requires an authenticated app.dropcontact.com session. Returns per invoice: date, amount, status, statusTone and hostedInvoiceUrl — an invoice.stripe.com page with its own download button, so this returns links rather than PDF files. `status` is the wording the portal shows, in whatever language it serves it; `statusTone` is the language-independent reading of the same badge ("positive" for a settled invoice). date and amount are nullable. Works in any portal language.
+List the billing invoices of the signed-in Dropcontact account. Returns per invoice: date, amount, status, statusTone and hostedInvoiceUrl (an invoice page with its own download button, so this returns links rather than PDF files). `status` is the wording shown, in whatever language it is served; `statusTone` is the language-independent reading of the same badge ("positive" for a settled invoice). date and amount are nullable. Accounts with no active subscription have no invoices to read and say so.
 
 ### How do I automatically list Dropcontact billing invoices on dropcontact.com?
 

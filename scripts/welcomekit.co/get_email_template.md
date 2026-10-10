@@ -1,10 +1,10 @@
 # Get Welcome to the Jungle email templates (with body)
 
-Automatically get Welcome to the Jungle email templates (with body) on welcomekit.co. Read the ATS organization's email templates WITH their full content (subject + body), not just id/name. Returns every template, or filter to one by id or name (case-insensitive). body/subject carry placeholders like [firstname], [job_name]. Use to inspect exactly what send_template_email will send before sending it.
+Automatically get Welcome to the Jungle email templates (with body) on welcomekit.co. Read the ATS organization's email templates with their full content (subject + body), not just id/name. Returns every template, or filter to one by id or name (case-insensitive). body/subject carry placeholders like [firstname], [job_name]. Use to inspect exactly what send_template_email will send before sending it.
 
 - Site: welcomekit.co
 - Address: `reduck/welcomekit.co/get_email_template`
-- Updated: 2026-10-06 (v1)
+- Updated: 2026-10-09 (v1)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -30,7 +30,7 @@ npx @reduck-ai/cli@latest run --script reduck/welcomekit.co/get_email_template
 
 ### What does "Get Welcome to the Jungle email templates (with body)" do?
 
-Read the ATS organization's email templates WITH their full content (subject + body), not just id/name. Returns every template, or filter to one by id or name (case-insensitive). body/subject carry placeholders like [firstname], [job_name]. Use to inspect exactly what send_template_email will send before sending it.
+Read the ATS organization's email templates with their full content (subject + body), not just id/name. Returns every template, or filter to one by id or name (case-insensitive). body/subject carry placeholders like [firstname], [job_name]. Use to inspect exactly what send_template_email will send before sending it.
 
 ### How do I automatically get Welcome to the Jungle email templates (with body) on welcomekit.co?
 

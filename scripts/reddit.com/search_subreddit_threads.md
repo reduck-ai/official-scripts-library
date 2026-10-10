@@ -4,7 +4,7 @@ Automatically search Reddit threads across several subreddits with a list of que
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/search_subreddit_threads`
-- Updated: 2026-10-06 (v1)
+- Updated: 2026-10-09 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

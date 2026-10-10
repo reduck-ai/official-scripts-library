@@ -1,10 +1,10 @@
 # Search Events
 
-Automatically search Events on ticketmaster.com. Search Ticketmaster for events by keyword and return the top results (title, id, url, venue/city/state, start date, cancelled/soldOut flags) read from the search page's own hydration state.
+Automatically search Events on ticketmaster.com. Search Ticketmaster for events by keyword and return the top results: title, id, url, venue/city/state, start date, and cancelled/soldOut flags.
 
 - Site: ticketmaster.com
 - Address: `reduck/ticketmaster.com/search_events`
-- Updated: 2026-10-05 (v2)
+- Updated: 2026-10-09 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -30,7 +30,7 @@ npx @reduck-ai/cli@latest run --script reduck/ticketmaster.com/search_events
 
 ### What does "Search Events" do?
 
-Search Ticketmaster for events by keyword and return the top results (title, id, url, venue/city/state, start date, cancelled/soldOut flags) read from the search page's own hydration state.
+Search Ticketmaster for events by keyword and return the top results: title, id, url, venue/city/state, start date, and cancelled/soldOut flags.
 
 ### How do I automatically search Events on ticketmaster.com?
 

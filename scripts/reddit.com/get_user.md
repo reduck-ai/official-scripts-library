@@ -4,7 +4,7 @@ Automatically get Reddit user profile on reddit.com. Fetch a Reddit user's profi
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/get_user`
-- Updated: 2026-09-08 (v6)
+- Updated: 2026-10-09 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

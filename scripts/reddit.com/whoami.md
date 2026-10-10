@@ -4,7 +4,7 @@ Report which Reddit account the browser is signed in as: the username (the u/ ha
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/whoami`
-- Updated: 2026-09-29 (v4)
+- Updated: 2026-10-09 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

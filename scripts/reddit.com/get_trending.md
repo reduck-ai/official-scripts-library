@@ -1,10 +1,10 @@
 # Get trending Reddit posts
 
-Automatically get trending Reddit posts on reddit.com. List Reddit's trending threads from the r/popular (or r/all) feed, with optional sort. Returns url, title, subreddit, author, score, comment count, date and displayed text per thread.
+Automatically get trending Reddit posts on reddit.com. List Reddit's trending threads from r/popular, with optional sort. Returns id, url, title, subreddit, author, score, comment count, date, post type and the post's text per thread. limit is a maximum: fewer come back when the feed stops serving.
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/get_trending`
-- Updated: 2026-09-03 (v2)
+- Updated: 2026-10-09 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,21 +17,19 @@ npx @reduck-ai/cli@latest run --script reduck/reddit.com/get_trending
 
 ## Input
 
-- `feed` (string, optional): Which cross-Reddit feed (default popular)
 - `sort` (string, optional): Feed sort. Omit for Reddit's default ranking.
-- `limit` (number, optional): Max threads to return (default 25), paginating via the feed's infinite scroll
+- `limit` (number, optional): Max threads to return (default 25). A maximum: fewer come back when the feed stops serving.
 
 ## Output
 
 - `count` (number, required)
 - `threads` (array, required)
-- `feed` (string, optional)
 
 ## FAQ
 
 ### What does "Get trending Reddit posts" do?
 
-List Reddit's trending threads from the r/popular (or r/all) feed, with optional sort. Returns url, title, subreddit, author, score, comment count, date and displayed text per thread.
+List Reddit's trending threads from r/popular, with optional sort. Returns id, url, title, subreddit, author, score, comment count, date, post type and the post's text per thread. limit is a maximum: fewer come back when the feed stops serving.
 
 ### How do I automatically get trending Reddit posts on reddit.com?
 
@@ -43,11 +41,11 @@ You do not need one. "Get trending Reddit posts" drives the real reddit.com page
 
 ### What information do I need to provide?
 
-Optional: feed, sort, limit.
+Optional: sort, limit.
 
 ### What does it return?
 
-It returns feed, count, threads.
+It returns count, threads.
 
 ### Do I need to be logged in to reddit.com?
 

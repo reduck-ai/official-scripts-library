@@ -4,7 +4,7 @@ Automatically export an X (Twitter) user's reposts (retweets) on x.com. Get a us
 
 - Site: x.com
 - Address: `reduck/x.com/get_user_reposts`
-- Updated: 2026-09-29 (v2)
+- Updated: 2026-10-09 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

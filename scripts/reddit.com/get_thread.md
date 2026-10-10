@@ -1,10 +1,10 @@
 # Get Reddit thread
 
-Automatically get Reddit thread on reddit.com. Fetch a full Reddit thread from its URL. Returns title, op_text, score, num_comments, and comments (author, body, score, nesting depth). Compare num_comments to total_comments to detect truncation; use all_comments to expand every "more replies" thread automatically.
+Automatically get Reddit thread on reddit.com. Fetch a Reddit thread by its id or URL: the post (title, text, author, score, upvote ratio, comment count, type, link) and its comments in thread order, each with author, text, score, date, permalink and nesting depth. Needs a browser signed in to Reddit. By default it returns the first page of comments Reddit shows when the thread opens; set all_comments to expand every "more replies" and get the whole tree. num_comments counts deleted and removed comments too, so the list can be shorter than that number even when it is complete. sort picks Reddit's own comment order (best, top, new, controversial, old, Q&A).
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/get_thread`
-- Updated: 2026-09-29 (v6)
+- Updated: 2026-10-09 (v12)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -43,7 +43,7 @@ npx @reduck-ai/cli@latest run --script reduck/reddit.com/get_thread
 
 ### What does "Get Reddit thread" do?
 
-Fetch a full Reddit thread from its URL. Returns title, op_text, score, num_comments, and comments (author, body, score, nesting depth). Compare num_comments to total_comments to detect truncation; use all_comments to expand every "more replies" thread automatically.
+Fetch a Reddit thread by its id or URL: the post (title, text, author, score, upvote ratio, comment count, type, link) and its comments in thread order, each with author, text, score, date, permalink and nesting depth. Needs a browser signed in to Reddit. By default it returns the first page of comments Reddit shows when the thread opens; set all_comments to expand every "more replies" and get the whole tree. num_comments counts deleted and removed comments too, so the list can be shorter than that number even when it is complete. sort picks Reddit's own comment order (best, top, new, controversial, old, Q&A).
 
 ### How do I automatically get Reddit thread on reddit.com?
 
@@ -63,7 +63,7 @@ It returns id, score, title, author, domain, created, op_text, comments, permali
 
 ### Do I need to be logged in to reddit.com?
 
-No. It only uses pages of reddit.com that are reachable without signing in.
+Yes. It acts as you on reddit.com: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the reddit.com cookies saved by the Reduck extension.
 
 ### Does it change anything on reddit.com, or only read data?
 

@@ -1,10 +1,10 @@
 # Zapier whoami
 
-Report which Zapier account this browser is signed in as: email and name, from Zapier's own session endpoint. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Zapier scripts.
+Report which Zapier account this browser is signed in as: email and name. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Zapier scripts.
 
 - Site: zapier.com
 - Address: `reduck/zapier.com/whoami`
-- Updated: 2026-10-06 (v2)
+- Updated: 2026-10-09 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,7 +29,7 @@ It takes no input.
 
 ### What does "Zapier whoami" do?
 
-Report which Zapier account this browser is signed in as: email and name, from Zapier's own session endpoint. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Zapier scripts.
+Report which Zapier account this browser is signed in as: email and name. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Zapier scripts.
 
 ### What information do I need to provide?
 

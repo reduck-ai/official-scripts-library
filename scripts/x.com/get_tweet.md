@@ -4,7 +4,7 @@ Automatically get a tweet and its replies on X (Twitter) on x.com. Fetch a tweet
 
 - Site: x.com
 - Address: `reduck/x.com/get_tweet`
-- Updated: 2026-09-29 (v9)
+- Updated: 2026-10-09 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,6 +18,7 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/get_tweet
 ## Input
 
 - `tweet_url` (string, required): Full URL of the tweet, e.g. https://x.com/handle/status/123
+- `sort` (string, optional): Order of the replies, as in the page's Sort replies menu: relevance (X's default ranking), recency (newest first) or likes (most liked first).
 - `count` (integer, optional): Max replies to return. Default 50.
 
 ## Output
@@ -44,7 +45,7 @@ You do not need one. "Get a tweet and its replies on X (Twitter)" drives the rea
 
 ### What information do I need to provide?
 
-Required: tweet_url. Optional: count.
+Required: tweet_url. Optional: sort, count.
 
 ### What does it return?
 
@@ -56,7 +57,7 @@ Yes. It acts as you on x.com: on your own Chrome it reuses your session, and on 
 
 ### Does it change anything on x.com, or only read data?
 
-Unknown: its author has not declared whether it changes anything on x.com, so treat it as if it could.
+It only reads. It looks things up on x.com and changes nothing there.
 
 ### How do I run it?
 

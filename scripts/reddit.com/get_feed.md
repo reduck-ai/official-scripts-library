@@ -4,7 +4,7 @@ Automatically get Reddit home feed on reddit.com. Get the signed-in account's ow
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/get_feed`
-- Updated: 2026-09-03 (v3)
+- Updated: 2026-10-09 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

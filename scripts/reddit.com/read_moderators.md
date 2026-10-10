@@ -4,7 +4,7 @@ Automatically read the full moderator list of subreddits on reddit.com. An unoff
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/read_moderators`
-- Updated: 2026-10-06 (v1)
+- Updated: 2026-10-09 (v3)
 - Author: Reduck AI (reduck)
 
 ## About

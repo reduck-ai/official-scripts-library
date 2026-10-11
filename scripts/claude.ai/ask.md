@@ -1,10 +1,10 @@
 # Ask Claude
 
-Automatically ask Claude on claude.ai. Open a new Claude.ai chat, send one question, and wait for the answer to finish (up to 100 s). Returns the answer as the markdown the model emitted, the message and conversation ids, why generation stopped, which model answered, each web search it made with the results it was shown, every source its web_search and web_fetch tools surfaced, and — separately — the sources the answer actually cited. Requires a signed-in session: claude.ai has no anonymous chat. Avoid running many of these at once: claude.ai limits how many chats one account may hold concurrently and refuses the extras, so a refused send comes back quickly carrying Claude's own message and only needs to be retried at a slower pace.
+Automatically ask Claude on claude.ai. Open a new Claude.ai chat, send one question, and wait for the answer to finish (up to 100 s). Returns the answer as the markdown the model emitted, the message and conversation ids, why generation stopped, which model answered, each web search it made with the results it was shown, every source its web_search and web_fetch tools surfaced, and — separately — the sources the answer actually cited. Requires a signed-in session: claude.ai has no anonymous chat, and a signed-out browser fails at once with an error that says so. When the account has used up its 5-hour or weekly allowance, it fails at once with the time the allowance resets, without sending anything. Avoid running many of these at once: claude.ai limits how many chats one account may hold concurrently and refuses the extras, so a refused send comes back quickly carrying Claude's own message and only needs to be retried at a slower pace.
 
 - Site: claude.ai
 - Address: `reduck/claude.ai/ask`
-- Updated: 2026-10-04 (v24)
+- Updated: 2026-10-10 (v25)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -36,7 +36,7 @@ npx @reduck-ai/cli@latest run --script reduck/claude.ai/ask
 
 ### What does "Ask Claude" do?
 
-Open a new Claude.ai chat, send one question, and wait for the answer to finish (up to 100 s). Returns the answer as the markdown the model emitted, the message and conversation ids, why generation stopped, which model answered, each web search it made with the results it was shown, every source its web_search and web_fetch tools surfaced, and — separately — the sources the answer actually cited. Requires a signed-in session: claude.ai has no anonymous chat. Avoid running many of these at once: claude.ai limits how many chats one account may hold concurrently and refuses the extras, so a refused send comes back quickly carrying Claude's own message and only needs to be retried at a slower pace.
+Open a new Claude.ai chat, send one question, and wait for the answer to finish (up to 100 s). Returns the answer as the markdown the model emitted, the message and conversation ids, why generation stopped, which model answered, each web search it made with the results it was shown, every source its web_search and web_fetch tools surfaced, and — separately — the sources the answer actually cited. Requires a signed-in session: claude.ai has no anonymous chat, and a signed-out browser fails at once with an error that says so. When the account has used up its 5-hour or weekly allowance, it fails at once with the time the allowance resets, without sending anything. Avoid running many of these at once: claude.ai limits how many chats one account may hold concurrently and refuses the extras, so a refused send comes back quickly carrying Claude's own message and only needs to be retried at a slower pace.
 
 ### How do I automatically ask Claude on claude.ai?
 

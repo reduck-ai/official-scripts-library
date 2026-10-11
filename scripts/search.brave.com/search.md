@@ -4,7 +4,7 @@ Brave's ranked results for any query or site: check, about 20 a page, with title
 
 - Site: search.brave.com
 - Address: `reduck/search.brave.com/search`
-- Updated: 2026-10-05 (v16)
+- Updated: 2026-10-10 (v17)
 - Author: Reduck AI (reduck)
 
 ## About

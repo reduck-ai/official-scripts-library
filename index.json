@@ -1013,7 +1013,7 @@
 			"address": "@reduck/claude.ai/ask",
 			"path": "scripts/claude.ai/ask.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/claude.ai/ask",
-			"lastmod": "2026-10-04"
+			"lastmod": "2026-10-10"
 		},
 		{
 			"address": "@reduck/claude.ai/delete_chat",
@@ -3593,7 +3593,7 @@
 			"address": "@reduck/linkedin.com/suggest_locations",
 			"path": "scripts/linkedin.com/suggest_locations.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/linkedin.com/suggest_locations",
-			"lastmod": "2026-10-06"
+			"lastmod": "2026-10-10"
 		},
 		{
 			"address": "@reduck/linkedin.com/unarchive_conversation",
@@ -4073,7 +4073,7 @@
 			"address": "@reduck/nike.com/get_current_user",
 			"path": "scripts/nike.com/get_current_user.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/nike.com/get_current_user",
-			"lastmod": "2026-10-05"
+			"lastmod": "2026-10-10"
 		},
 		{
 			"address": "@reduck/nike.com/get_product",
@@ -4877,7 +4877,7 @@
 			"address": "@reduck/search.brave.com/search",
 			"path": "scripts/search.brave.com/search.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/search.brave.com/search",
-			"lastmod": "2026-10-05"
+			"lastmod": "2026-10-10"
 		},
 		{
 			"address": "@reduck/search.brave.com/submit_url",

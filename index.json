@@ -3989,7 +3989,7 @@
 			"address": "@reduck/meteoblue.com/get_14day_forecast",
 			"path": "scripts/meteoblue.com/get_14day_forecast.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/meteoblue.com/get_14day_forecast",
-			"lastmod": "2026-07-20"
+			"lastmod": "2026-10-11"
 		},
 		{
 			"address": "@reduck/meteojob.com/search_jobs",

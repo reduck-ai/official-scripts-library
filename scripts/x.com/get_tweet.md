@@ -4,7 +4,7 @@ Automatically get a tweet and its replies on X (Twitter) on x.com. Fetch a tweet
 
 - Site: x.com
 - Address: `reduck/x.com/get_tweet`
-- Updated: 2026-10-09 (v10)
+- Updated: 2026-10-12 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -19,14 +19,14 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/get_tweet
 
 - `tweet_url` (string, required): Full URL of the tweet, e.g. https://x.com/handle/status/123
 - `sort` (string, optional): Order of the replies, as in the page's Sort replies menu: relevance (X's default ranking), recency (newest first) or likes (most liked first).
-- `count` (integer, optional): Max replies to return. Default 50.
+- `count` (integer, optional): How many replies to return. Without it, the script returns the first page X shows (often 20 to 40). With it, the script loads more until it has count, reaches the end, or X stops loading; complete says whether it reached the end.
 
 ## Output
 
-- `count` (integer, required): Number of replies returned. 0 is a first-class outcome (no replies, or replies hidden).
-- `tweet` (object | null, required): The tweet at tweet_url (the conversation focal/root); null if it can't be found (deleted / tombstoned).
+- `count` (integer, required): Number of replies returned. 0 is a valid answer.
+- `tweet` (object, required): The tweet at tweet_url. A deleted or unavailable tweet is an error.
 - `replies` (array, required)
-- `complete` (boolean, required): True iff the reply pull drained the main thread (no further page loaded, or a page added nothing) rather than stopping at count. False means it hit the cap and more replies may exist, so absence of a given reply is not proof. Nested Show-more-replies are not expanded, so true is a floor, not a guarantee every nested reply was seen.
+- `complete` (boolean, required): True when X showed the end of the conversation and every reply it sent is returned. False when there may be more. Replies behind "Show replies" are not opened, so true is a floor.
 - `tweet_id` (string, required)
 
 ## FAQ

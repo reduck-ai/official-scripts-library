@@ -4,7 +4,7 @@ Automatically get the quote tweets of a post on X (Twitter) on x.com. Each quote
 
 - Site: x.com
 - Address: `reduck/x.com/get_quote_tweets`
-- Updated: 2026-10-05 (v1)
+- Updated: 2026-10-12 (v2)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -21,14 +21,15 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/get_quote_tweets
 
 ## Input
 
-- `url` (string, required): Full URL of the X post whose quote-tweets you want, e.g. 'https://x.com/<handle>/status/<id>'. Query/hash are stripped.
-- `count` (integer, optional): Max quote-tweets to return. Scrolls until count is met or results dry up. Default 20, max 100.
+- `url` (string, required): Full URL of the post whose quotes you want, e.g. 'https://x.com/<handle>/status/<id>'.
+- `count` (integer, optional): How many to return. Without it, the script returns the first page X shows (often 20 to 40). With it, the script loads more until it has count, reaches the end, or X stops loading; complete says whether it reached the end.
 
 ## Output
 
 - `url` (string, required)
-- `count` (integer, required): Number of quote-tweets returned. 0 is a first-class outcome (no quotes).
+- `count` (integer, required): Number of quotes returned. 0 is a valid answer.
 - `tweets` (array, required)
+- `complete` (boolean, required): True when X showed the end of the quotes and every one it sent is returned. False when there may be more: count was reached, X stopped loading, or no count was given and the first page is not the end.
 
 ## Example output
 
@@ -57,9 +58,24 @@ Shape only: placeholder values generated from the output schema, not a real run.
       "retweets": 3,
       "bookmarks": 3,
       "created_at": "2026-01-15T09:30:00Z",
-      "is_retweet": true
+      "is_retweet": true,
+      "in_reply_to": {
+        "id": "abc123",
+        "author_handle": "…"
+      },
+      "reposted_at": "2026-01-15T09:30:00Z",
+      "reposted_by": {
+        "id": "abc123",
+        "name": "Example",
+        "handle": "…"
+      },
+      "quoted_tweet": {
+        "id": "abc123",
+        "author_handle": "…"
+      }
     }
-  ]
+  ],
+  "complete": true
 }
 ```
 
@@ -83,7 +99,7 @@ Required: url. Optional: count.
 
 ### What does it return?
 
-It returns url, count, tweets.
+It returns url, count, tweets, complete.
 
 ### Do I need to be logged in to x.com?
 

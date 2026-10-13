@@ -1,10 +1,10 @@
 # Search Kiwi flights
 
-Automatically search Kiwi flights on kiwi.com. Search one-way flights on Kiwi for a given origin, destination, and date. One-way only; results are the visible flight cards (capped by max), not the full result set. Returns departure, arrival, duration, airline, origin, destination, stops, price, currency.
+Automatically search Kiwi flights on kiwi.com. Search one-way flights on Kiwi.com between two places on a date. Origin and destination are Kiwi place slugs; get them from kiwi.com/suggest_places. Returns up to 10 itineraries in Kiwi's Best order, each with local departure and arrival times, airport codes, duration, stops, airlines and price, plus the currency and Kiwi's total count of itineraries. Fails with a clear error when Kiwi does not recognise a place.
 
 - Site: kiwi.com
 - Address: `reduck/kiwi.com/search_flights`
-- Updated: 2026-08-31 (v8)
+- Updated: 2026-10-12 (v16)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,16 +17,22 @@ npx @reduck-ai/cli@latest run --script reduck/kiwi.com/search_flights
 
 ## Input
 
-- `date` (string, required): Departure date, ISO YYYY-MM-DD (one-way only).
-- `origin` (string, required): Origin city or airport typed into Kiwi's origin field (e.g. 'Paris' or 'CDG'). Ambiguous city names (e.g. multiple 'London's worldwide) are resolved automatically to the most relevant match.
-- `destination` (string, required): Destination city or airport (e.g. 'London' or 'LON'). Ambiguous city names (e.g. multiple 'London's worldwide) are resolved automatically to the most relevant match.
-- `max` (integer, optional): Max flight cards to return. Default 10.
+- `date` (string, required): Departure date, YYYY-MM-DD. One-way only.
+- `origin` (string, required): Kiwi place slug of the departure city or airport, e.g. 'paris-france' or 'charles-de-gaulle-paris-france'. Get it from kiwi.com/suggest_places.
+- `destination` (string, required): Kiwi place slug of the arrival city or airport, e.g. 'barcelona-spain'. Get it from kiwi.com/suggest_places.
+- `max` (integer, optional): How many itineraries to return, in Kiwi's 'Best' order. Kiwi sends 10 at a time; total says how many exist.
+
+## Output
+
+- `total` (integer | null, required): How many itineraries Kiwi found in all.
+- `currency` (string | null, required): Currency of every price, as Kiwi priced the search (ISO code, e.g. EUR).
+- `itineraries` (array, required)
 
 ## FAQ
 
 ### What does "Search Kiwi flights" do?
 
-Search one-way flights on Kiwi for a given origin, destination, and date. One-way only; results are the visible flight cards (capped by max), not the full result set. Returns departure, arrival, duration, airline, origin, destination, stops, price, currency.
+Search one-way flights on Kiwi.com between two places on a date. Origin and destination are Kiwi place slugs; get them from kiwi.com/suggest_places. Returns up to 10 itineraries in Kiwi's Best order, each with local departure and arrival times, airport codes, duration, stops, airlines and price, plus the currency and Kiwi's total count of itineraries. Fails with a clear error when Kiwi does not recognise a place.
 
 ### How do I automatically search Kiwi flights on kiwi.com?
 
@@ -39,6 +45,10 @@ You do not need one. "Search Kiwi flights" drives the real kiwi.com pages in a b
 ### What information do I need to provide?
 
 Required: origin, destination, date. Optional: max.
+
+### What does it return?
+
+It returns total, currency, itineraries.
 
 ### Do I need to be logged in to kiwi.com?
 

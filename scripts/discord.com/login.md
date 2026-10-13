@@ -4,7 +4,7 @@ Opens the Discord web app in the browser and reports whether the account is sign
 
 - Site: discord.com
 - Address: `reduck/discord.com/login`
-- Updated: 2026-10-05 (v15)
+- Updated: 2026-10-12 (v16)
 - Author: Reduck AI (reduck)
 
 ## Run it

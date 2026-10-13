@@ -4,7 +4,7 @@ Automatically search La French Tech jobs on la-french-tech.welcomekit.co. Search
 
 - Site: la-french-tech.welcomekit.co
 - Address: `reduck/la-french-tech.welcomekit.co/search_jobs`
-- Updated: 2026-08-28 (v7)
+- Updated: 2026-10-12 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it

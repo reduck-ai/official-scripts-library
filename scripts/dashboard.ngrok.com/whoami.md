@@ -4,7 +4,7 @@ Report which ngrok dashboard account this browser is signed in as: the email, nu
 
 - Site: dashboard.ngrok.com
 - Address: `reduck/dashboard.ngrok.com/whoami`
-- Updated: 2026-10-08 (v2)
+- Updated: 2026-10-12 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -1,10 +1,10 @@
 # Search LinkedIn posts
 
-Automatically search LinkedIn posts on linkedin.com. Search LinkedIn posts by keyword, newest-first or by relevance. Returns each post's permalink (a lnkd.in short link — this surface exposes no activity id, so urn is always null), author name, profile URL and headline, full text, relative age, and reaction/comment/repost counts. Accepts limit (default 10) and sortBy ("relevance" | "date_posted").
+Automatically search LinkedIn posts on linkedin.com. Search LinkedIn posts by keyword, newest-first or by relevance. Returns each post's permalink (a lnkd.in short link) and activity urn, author name, profile URL and headline, full text, relative age, and reaction/comment/repost counts. Accepts limit (default 10) and sortBy ("relevance" | "date_posted").
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/search_posts`
-- Updated: 2026-09-17 (v10)
+- Updated: 2026-10-12 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -32,7 +32,7 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/search_posts
 
 ### What does "Search LinkedIn posts" do?
 
-Search LinkedIn posts by keyword, newest-first or by relevance. Returns each post's permalink (a lnkd.in short link — this surface exposes no activity id, so urn is always null), author name, profile URL and headline, full text, relative age, and reaction/comment/repost counts. Accepts limit (default 10) and sortBy ("relevance" | "date_posted").
+Search LinkedIn posts by keyword, newest-first or by relevance. Returns each post's permalink (a lnkd.in short link) and activity urn, author name, profile URL and headline, full text, relative age, and reaction/comment/repost counts. Accepts limit (default 10) and sortBy ("relevance" | "date_posted").
 
 ### How do I automatically search LinkedIn posts on linkedin.com?
 

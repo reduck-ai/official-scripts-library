@@ -4,7 +4,7 @@ Automatically read an X (Twitter) List's timeline on x.com. Read the timeline of
 
 - Site: x.com
 - Address: `reduck/x.com/get_list_tweets`
-- Updated: 2026-09-29 (v1)
+- Updated: 2026-10-12 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,14 +17,15 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/get_list_tweets
 
 ## Input
 
-- `list` (string, required): The list's numeric id (e.g. '1272593321181851648'), or any X URL containing it (e.g. 'https://x.com/i/lists/1272593321181851648' or a list's 'https://x.com/<handle>/lists/<slug>' page — the id is read from wherever it appears).
-- `count` (integer, optional): Max tweets to return. Scrolls until count is met or the list dries up. Default 20, max 100.
+- `list` (string, required): The list's numeric id (e.g. '1272593321181851648'), or any X URL containing it (e.g. 'https://x.com/i/lists/1272593321181851648').
+- `count` (integer, optional): How many to return. Without it, the script returns the first page X shows (often 20 to 40). With it, the script loads more until it has count, reaches the end, or X stops loading; complete says whether it reached the end.
 
 ## Output
 
-- `count` (integer, required): Number of tweets returned. 0 is a first-class outcome (empty list).
+- `count` (integer, required): Number of tweets returned. 0 is a valid answer.
 - `tweets` (array, required)
 - `list_id` (string, required)
+- `complete` (boolean, required): True when X showed the end of the list's timeline and every one it sent is returned. False when there may be more: count was reached, X stopped loading, or no count was given and the first page is not the end.
 
 ## FAQ
 
@@ -46,7 +47,7 @@ Required: list. Optional: count.
 
 ### What does it return?
 
-It returns count, tweets, list_id.
+It returns count, tweets, list_id, complete.
 
 ### Do I need to be logged in to x.com?
 

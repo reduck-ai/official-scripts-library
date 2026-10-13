@@ -4,7 +4,7 @@ Automatically search Station F jobs on jobs.stationf.co. Up to 20 campus opening
 
 - Site: jobs.stationf.co
 - Address: `reduck/jobs.stationf.co/search_jobs`
-- Updated: 2026-10-05 (v6)
+- Updated: 2026-10-12 (v7)
 - Author: Reduck AI (reduck)
 
 ## About

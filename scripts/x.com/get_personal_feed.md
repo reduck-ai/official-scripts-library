@@ -4,7 +4,7 @@ Automatically read your X (Twitter) For You timeline on x.com. Get tweets from y
 
 - Site: x.com
 - Address: `reduck/x.com/get_personal_feed`
-- Updated: 2026-09-29 (v7)
+- Updated: 2026-10-12 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,11 +17,13 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/get_personal_feed
 
 ## Input
 
-- `count` (integer, optional): Max tweets to collect. The feed loads ~20-35 per fetch; the script scrolls to accumulate pages until count is met or the feed stops yielding new tweets.
+- `count` (integer, optional): How many to return. Without it, the script returns the first page X shows (often 20 to 40). With it, the script loads more until it has count, reaches the end, or X stops loading; complete says whether it reached the end.
 
 ## Output
 
+- `count` (integer, required): Number of tweets returned. 0 is a valid answer.
 - `tweets` (array, required)
+- `complete` (boolean, required): True when X showed the end of the feed and every one it sent is returned. False when there may be more: count was reached, X stopped loading, or no count was given and the first page is not the end.
 
 ## FAQ
 
@@ -43,7 +45,7 @@ Optional: count.
 
 ### What does it return?
 
-It returns tweets.
+It returns count, tweets, complete.
 
 ### Do I need to be logged in to x.com?
 

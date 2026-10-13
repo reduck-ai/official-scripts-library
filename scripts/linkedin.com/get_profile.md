@@ -1,10 +1,10 @@
 # Get LinkedIn profile
 
-Automatically get LinkedIn profile on linkedin.com. Fetch a LinkedIn profile's top card and About section by publicId. Returns profileUrl, name, headline, degree, memberUrn, location, currentCompany, followers, connections, and about. Check name first: non-null means the record is trustworthy; null means the fetch failed. Requires being logged in to LinkedIn.
+Automatically get LinkedIn profile on linkedin.com. Get one LinkedIn profile by its public id or profile URL: name, headline, location and its geo id, current company, About text, photo, connection degree, follower and connection counts, the stable member id, and the full lists of experience, education, languages, certifications and honors, in the order the profile shows them, with LinkedIn's ids for companies and schools and dates as month and year. A role's location is the text the member saved, which can be translated or misspelled. Skills are in linkedin.com/get_profile_skills and contact details in linkedin.com/get_profile_contact_info. A field is null and a list is empty when the profile does not show it. Fails with a clear message when the browser is not signed in to LinkedIn, when the profile does not exist, or when LinkedIn limits the account.
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_profile`
-- Updated: 2026-09-03 (v19)
+- Updated: 2026-10-12 (v22)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,26 +17,34 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/get_profile
 
 ## Input
 
-- `publicId` (string, required): LinkedIn public profile id - the part after /in/ in the profile URL.
+- `publicId` (string, required): The LinkedIn public profile id, the part after /in/ in the profile URL (for example "williamhgates"). A full profile URL is also accepted.
 
 ## Output
 
-- `name` (string | null, required): The profile owner's name, and the response health check. Non-null means the top card parsed and the whole record is trustworthy. Null means the parse failed (auth wall, block, or blank render) — treat every other field as invalid rather than interpreting the nulls.
+- `name` (string, required): The profile owner's full name.
+- `honors` (array, required)
+- `education` (array, required): Every education entry, in the order the profile shows them.
+- `languages` (array, required)
+- `experience` (array, required): Every role, one entry per role, in the order the profile shows them. Roles at one company share its company fields.
 - `profileUrl` (string, required): Canonical profile URL.
-- `about` (string | null, optional): Full About prose, line breaks preserved. Null means no About text was captured — either the profile has none, or (rarely) it did not load in time. Disambiguate with name: when name is non-null the top card parsed cleanly, so a null here almost always means the profile genuinely has no About section.
-- `degree` (string | null, optional): Connection degree, normalised to "1st", "2nd" or "3rd" (with a trailing + when LinkedIn shows its 3rd-or-beyond badge) so it can be compared directly whatever language the page rendered in. Null on your own profile or when no badge is shown.
-- `headline` (string | null, optional): Top-card headline line. Null when the profile has no headline.
-- `location` (string | null, optional): Top-card location as rendered. Null when the profile exposes no contact link, which is the row it shares.
-- `followers` (integer | null, optional): Top-card follower count as an integer, grouping separators removed. Null when the card shows no follower count.
-- `memberUrn` (string | null, optional): Stable internal member id (an ACoAA… token, the tail of urn:li:fsd_profile:<id>). Unlike publicId it never changes, so it is the join key for search_people's connectionOf. Read from the profile card ids LinkedIn renders for the page, so it is present on every profile — including your own and members you are not connected to.
-- `connections` (string | null, optional): Top-card connection count, canonicalised: the digits as a string (e.g. "25"), or "500+" for the capped value LinkedIn displays once a member passes 500. Null when the card shows no connection count.
-- `currentCompany` (string | null, optional): Top-card current-employer chip. Null when the card surfaces no company chip — the employer is then only in get_profile_experience.
+- `certifications` (array, required)
+- `about` (string | null, optional): The full About text, line breaks kept. Null when the profile has no About section.
+- `degree` (string | null, optional): Connection degree to the signed-in account: "1st", "2nd" or "3rd", with a trailing + for LinkedIn's 3rd-or-beyond badge. Null on your own profile or when no badge is shown.
+- `geoUrn` (string | null, optional): LinkedIn's id for that location (for example "104004912"). Pass it to linkedin.com/search_people's geoUrn to find people there.
+- `headline` (string | null, optional): The profile headline. Null when the profile has none.
+- `location` (string | null, optional): The profile location, as LinkedIn names it. Null when the profile shows none.
+- `photoUrl` (string | null, optional): The profile photo, largest size. A signed link that expires after some weeks: download the image to keep it. Null when the profile has no photo.
+- `followers` (integer | null, optional): Follower count shown on the profile header. Null when the header shows none.
+- `memberUrn` (string | null, optional): Stable internal member id (an ACoAA... token). Unlike publicId it never changes. Use it as connectionOf in linkedin.com/search_people.
+- `connections` (string | null, optional): Connection count shown on the profile header: digits as a string, or "500+" once a member passes 500. Null when the header shows none.
+- `currentCompany` (string | null, optional): The company of the first current position in the experience list. Null when no position is current.
+- `currentCompanyUrn` (string | null, optional): LinkedIn's id for that company. Null when the company has no LinkedIn page.
 
 ## FAQ
 
 ### What does "Get LinkedIn profile" do?
 
-Fetch a LinkedIn profile's top card and About section by publicId. Returns profileUrl, name, headline, degree, memberUrn, location, currentCompany, followers, connections, and about. Check name first: non-null means the record is trustworthy; null means the fetch failed. Requires being logged in to LinkedIn.
+Get one LinkedIn profile by its public id or profile URL: name, headline, location and its geo id, current company, About text, photo, connection degree, follower and connection counts, the stable member id, and the full lists of experience, education, languages, certifications and honors, in the order the profile shows them, with LinkedIn's ids for companies and schools and dates as month and year. A role's location is the text the member saved, which can be translated or misspelled. Skills are in linkedin.com/get_profile_skills and contact details in linkedin.com/get_profile_contact_info. A field is null and a list is empty when the profile does not show it. Fails with a clear message when the browser is not signed in to LinkedIn, when the profile does not exist, or when LinkedIn limits the account.
 
 ### How do I automatically get LinkedIn profile on linkedin.com?
 
@@ -52,7 +60,7 @@ Required: publicId.
 
 ### What does it return?
 
-It returns name, about, degree, headline, location, followers, memberUrn, profileUrl, connections, currentCompany.
+It returns name, about, degree, geoUrn, honors, headline, location, photoUrl, education, followers, languages, memberUrn, experience, profileUrl, connections, certifications, currentCompany, currentCompanyUrn.
 
 ### Do I need to be logged in to linkedin.com?
 

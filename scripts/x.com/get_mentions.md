@@ -4,7 +4,7 @@ Automatically read tweets that mention you on x.com. List recent tweets mentioni
 
 - Site: x.com
 - Address: `reduck/x.com/get_mentions`
-- Updated: 2026-10-06 (v4)
+- Updated: 2026-10-12 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,11 +17,12 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/get_mentions
 
 ## Input
 
-- `count` (integer, optional): Max mentions to return. Default 50.
+- `count` (integer, optional): How many to return. Without it, the script returns the first page X shows (often 20 to 40). With it, the script loads more until it has count, reaches the end, or X stops loading; complete says whether it reached the end.
 
 ## Output
 
-- `count` (integer, required): Number of mentions returned. 0 is a first-class outcome (no mentions).
+- `count` (integer, required): Number of mentions returned. 0 is a valid answer.
+- `complete` (boolean, required): True when X showed the end of the mentions and every one it sent is returned. False when there may be more: count was reached, X stopped loading, or no count was given and the first page is not the end.
 - `mentions` (array, required)
 
 ## FAQ
@@ -44,7 +45,7 @@ Optional: count.
 
 ### What does it return?
 
-It returns count, mentions.
+It returns count, complete, mentions.
 
 ### Do I need to be logged in to x.com?
 

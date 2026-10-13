@@ -4,7 +4,7 @@ Automatically search YouTube videos on youtube.com. Search YouTube videos by que
 
 - Site: youtube.com
 - Address: `reduck/youtube.com/search_videos`
-- Updated: 2026-08-18 (v5)
+- Updated: 2026-10-12 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,9 +18,9 @@ npx @reduck-ai/cli@latest run --script reduck/youtube.com/search_videos
 ## Input
 
 - `query` (string, optional): Free-text search query. Provide this OR channelUrl OR playlistUrl.
-- `channelUrl` (string, optional): A channel URL — lists that channel's videos (its /videos tab). Query params you include are preserved (e.g. ?hl=fr to force the UI locale), and a URL already pointing at /videos is used as-is.
-- `maxResults` (integer, optional): Max videos to return (scrolls to load more). Default 20.
-- `playlistUrl` (string, optional): A playlist URL — lists that playlist's videos.
+- `channelUrl` (string, optional): A channel URL — lists that channel's videos (its /videos tab), newest first. Query params you include are preserved (e.g. ?hl=fr&persist_hl=1 to force the UI locale), and a URL already pointing at /videos is used as-is.
+- `maxResults` (integer, optional): Max videos to return. Further pages are loaded until this many videos or the end of the list. Default 20.
+- `playlistUrl` (string, optional): A playlist URL — lists that playlist's videos, in playlist order.
 
 ## FAQ
 

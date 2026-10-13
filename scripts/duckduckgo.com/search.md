@@ -1,10 +1,10 @@
 # DuckDuckGo search
 
-Search DuckDuckGo for a query and return up to `count` web results, optionally scoped to a region via `kl`. Returns total, noResults and results (rank, title, url, snippet). `total` counts the distinct results collected before truncation to `count`, so it can exceed results.length. Note that site:, "quotes" and OR are honoured as a hard AND, so an over-constrained query legitimately comes back empty with noResults true.
+Search DuckDuckGo for a query and return up to `count` web results, optionally scoped to a region via `kl`. Returns total, noResults and results (rank, title, url, snippet). `total` counts the distinct results collected before truncation to `count`, so it can exceed results.length. The operators site:, "quotes" and OR are honoured as a hard AND, so an over-constrained query legitimately comes back empty with noResults true.
 
 - Site: duckduckgo.com
 - Address: `reduck/duckduckgo.com/search`
-- Updated: 2026-09-03 (v6)
+- Updated: 2026-10-12 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -31,7 +31,7 @@ npx @reduck-ai/cli@latest run --script reduck/duckduckgo.com/search
 
 ### What does "DuckDuckGo search" do?
 
-Search DuckDuckGo for a query and return up to `count` web results, optionally scoped to a region via `kl`. Returns total, noResults and results (rank, title, url, snippet). `total` counts the distinct results collected before truncation to `count`, so it can exceed results.length. Note that site:, "quotes" and OR are honoured as a hard AND, so an over-constrained query legitimately comes back empty with noResults true.
+Search DuckDuckGo for a query and return up to `count` web results, optionally scoped to a region via `kl`. Returns total, noResults and results (rank, title, url, snippet). `total` counts the distinct results collected before truncation to `count`, so it can exceed results.length. The operators site:, "quotes" and OR are honoured as a hard AND, so an over-constrained query legitimately comes back empty with noResults true.
 
 ### What information do I need to provide?
 

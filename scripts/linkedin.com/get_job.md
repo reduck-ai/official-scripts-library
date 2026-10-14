@@ -1,10 +1,10 @@
 # Get LinkedIn job
 
-Automatically get LinkedIn job on linkedin.com. Fetch a LinkedIn job posting by numeric ID. Returns id, url, status (live/expired), title, company, location, posted, applicants, workplaceType, employmentType, description, and companyInfo (name, url, industry, followers, employeeRange, membersOnLinkedIn, description).
+Automatically get LinkedIn job on linkedin.com. Fetch one LinkedIn job posting by numeric id (the jobId of linkedin.com/search_jobs). Returns its title, LinkedIn's state (LISTED while it takes applications), creation date, whether it is reposted, its place and geo id, the labels and line under the title, the full description, the apply link or Easy Apply, whether you applied, and the company with its id, name, page, industry and industry id, member count, declared size and description. A posting LinkedIn does not have fails with a clear message, as does a browser that is not signed in.
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_job`
-- Updated: 2026-09-29 (v7)
+- Updated: 2026-10-13 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,31 +17,32 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/get_job
 
 ## Input
 
-- `id` (string, required): LinkedIn numeric job ID (the trailing digits of a /jobs/view/... URL).
+- `id` (string, required): LinkedIn numeric job id: the jobId of linkedin.com/search_jobs, or the digits of a /jobs/view/ URL.
 
 ## Output
 
 - `id` (string, required)
-- `url` (string, required): Final URL after any redirect.
-- `source` (string, required): Which renderer produced this result. member = the signed-in /jobs/view/ page, which carries the full 'About the company' card (followers, employee range, members on LinkedIn) but no job-criteria list. guest = the signed-out page, which carries the job-criteria list instead and only the company's name, URL and industry.
-- `status` (string, required)
-- `authenticated` (boolean, required): Whether the run had a LinkedIn session. False means the guest surface produced this result, which is thinner in company detail and richer in job criteria.
-- `title` (string, optional)
-- `posted` (string, optional): Localized relative time (e.g. 'il y a 2 jours', '2 days ago', 'vor 3 Tagen').
-- `company` (string, optional)
-- `criteria` (array, optional): Job-criteria list (seniority level, employment type, job function, industries), with localized keys. Present on the guest surface only; the member surface no longer renders it, so expect an empty array when source=member.
-- `location` (string, optional)
-- `applicants` (string | null, optional): Applicant-volume line from the top card. Null when LinkedIn hides it.
-- `companyInfo` (object | null, optional): The company card. Null if absent. On the guest surface only name, url and industry are available.
-- `description` (string, optional)
-- `workplaceType` (string | null, optional): On-site | Remote | Hybrid (localized). Null when absent.
-- `employmentType` (string | null, optional): Full-time, Part-time, Contract, Internship... (localized). Null when absent.
+- `url` (string, required): https://www.linkedin.com/jobs/view/<id>/
+- `state` (string, required): LinkedIn's state of the posting: LISTED while it takes applications; another value (for example CLOSED) once it does not.
+- `title` (string, required)
+- `description` (string, required): The full job description text.
+- `geoId` (string | null, optional): Geo id of that place, the form linkedin.com/search_jobs takes.
+- `applied` (boolean, optional): Whether the signed-in member applied.
+- `company` (object | null, optional): The company that posted the job. null when the posting names no company page.
+- `applyUrl` (string | null, optional): The company's own application page, when the posting sends applicants there. null for Easy Apply.
+- `location` (string | null, optional): The posting's place, for example "Denver, Colorado, United States".
+- `reposted` (boolean, optional)
+- `subtitle` (string | null, optional): The line under the title as LinkedIn shows it: place, when it was posted, applicant activity.
+- `appliedAt` (string | null, optional)
+- `createdAt` (string | null, optional): When the posting was created (ISO 8601). A reposted job keeps its first date here.
+- `easyApply` (boolean, optional)
+- `highlights` (array, optional): The labels under the title as LinkedIn shows them, for example the workplace type and the job type. In the account's interface language.
 
 ## FAQ
 
 ### What does "Get LinkedIn job" do?
 
-Fetch a LinkedIn job posting by numeric ID. Returns id, url, status (live/expired), title, company, location, posted, applicants, workplaceType, employmentType, description, and companyInfo (name, url, industry, followers, employeeRange, membersOnLinkedIn, description).
+Fetch one LinkedIn job posting by numeric id (the jobId of linkedin.com/search_jobs). Returns its title, LinkedIn's state (LISTED while it takes applications), creation date, whether it is reposted, its place and geo id, the labels and line under the title, the full description, the apply link or Easy Apply, whether you applied, and the company with its id, name, page, industry and industry id, member count, declared size and description. A posting LinkedIn does not have fails with a clear message, as does a browser that is not signed in.
 
 ### How do I automatically get LinkedIn job on linkedin.com?
 
@@ -57,7 +58,7 @@ Required: id.
 
 ### What does it return?
 
-It returns id, url, title, posted, source, status, company, criteria, location, applicants, companyInfo, description, authenticated, workplaceType, employmentType.
+It returns id, url, geoId, state, title, applied, company, applyUrl, location, reposted, subtitle, appliedAt, createdAt, easyApply, highlights, description.
 
 ### Do I need to be logged in to linkedin.com?
 

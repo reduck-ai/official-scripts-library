@@ -4,7 +4,7 @@ Automatically read trending topics on Explore on x.com. Read X's Explore trends 
 
 - Site: x.com
 - Address: `reduck/x.com/get_trending_topics`
-- Updated: 2026-09-29 (v3)
+- Updated: 2026-10-13 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,7 +18,7 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/get_trending_topics
 ## Input
 
 - `tab` (string, optional): Which Explore tab to read. "trending" returns ranked topics (rank + "Music · Trending" + name), while news, sports and entertainment return headline stories (headline + "9 hours ago · Other · 195K posts"). "for_you" mixes the two shapes in one list, so expect some rows with a rank and some without.
-- `limit` (integer, optional): Maximum entries to return, in the order X ranks them. The trending tab renders about 30 without scrolling and the topical tabs far fewer — sports returned only 5 — so asking for more scrolls until the list stops growing and simply returns what the tab holds.
+- `limit` (integer, optional): Maximum entries to return, in the order X ranks them. A tab holds what X sends when it opens (about 30 on trending, far fewer on the topical tabs; sports returned only 5), so asking for more simply returns what the tab holds.
 
 ## Output
 
@@ -26,7 +26,7 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/get_trending_topics
 - `url` (string, required): The Explore tab URL actually read.
 - `count` (integer, required)
 - `trends` (array, required)
-- `note` (string | null, optional): Set when a tab rendered no rows at all — normal for for_you, which is a timeline rather than a list.
+- `note` (string | null, optional): Set when a tab rendered no rows at all.
 
 ## FAQ
 

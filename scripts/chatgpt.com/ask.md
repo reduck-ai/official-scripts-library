@@ -4,7 +4,7 @@ Automatically ask ChatGPT on chatgpt.com. See what ChatGPT tells a stranger abou
 
 - Site: chatgpt.com
 - Address: `reduck/chatgpt.com/ask`
-- Updated: 2026-10-10 (v48)
+- Updated: 2026-10-13 (v50)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -22,22 +22,20 @@ npx @reduck-ai/cli@latest run --script reduck/chatgpt.com/ask
 ## Input
 
 - `question` (string, required): The question to send as the first message of a new chat.
-- `mode` (string, optional): Signed in, which ChatGPT application answers: chat, or work (Work mode, with its own models and larger search result lists). The choice is saved on the account, so it holds for later chats too. Omitted: whichever the account used last; `mode` in the result says which.
 
 ## Output
 
-- `mode` (string | null, required): The ChatGPT application that answered: chat, or work (Work mode), as the saved conversation records it. Null signed out, where the page offers no choice.
-- `calls` (array | null, required): One entry per search call, as the page numbers them. A call often runs a whole round of queries at once (measured 2026-09-23: 9 queries in 2 calls) and answers one list for all of them. What the page does not receive: which query returned which result, the call's arguments, and which search backend answered it. Empty when it did not search. Null when this run could not see the searches (signed out).
-- `model` (string | null, required): Which model answered, by ChatGPT's own id (e.g. "gpt-5-6"). Null when the app does not say.
-- `answer` (string | null, required): The answer as markdown, as ChatGPT's own Copy gives it: each citation is a markdown link to its source. Null signed out: `answers` has its text there.
-- `answers` (array, required): One entry per assistant turn, as rendered. Usually one; ChatGPT sometimes serves a paired-response variant that answers twice and asks which reply you prefer, and neither entry is more official than the other — read the length before reading answers[0]. Inline citation chips appear as their publisher's name in the text, and mathematical notation linearizes lossily.
+- `calls` (array | null, required): One entry per search call. A call often runs a whole round of queries at once and answers one list for all of them. What the page does not receive: which query returned which result, the call's arguments, and which search backend answered it. Empty when it did not search. Null when this run could not see the searches (signed out).
+- `model` (string | null, required): Which model answered, by ChatGPT's own id (e.g. "gpt-6"). Null when the app does not say.
+- `answer` (string | null, required): The last entry of `answers`. Null signed out: `answers` has its text there.
+- `answers` (array, required): One entry per reply, usually one; ChatGPT sometimes answers twice and asks which reply you prefer, and neither entry is more official than the other — read the length before reading answers[0]. Signed in, each is ChatGPT's own markdown of the reply, with each citation as a markdown link to its source and widgets (images, forms) left out. Signed out, the reply's text as rendered.
 - `sources` (array | null, required): Every page the searches put in front of the model, once each, in the order it got them — the pool the answer could draw on, as opposed to `references`, what it cited. Empty when it did not search. Null when this run could not see the searches (signed out).
 - `searches` (array | null, required): One entry per round of web searches, in order: what the model typed and the results put in front of it. Empty when it did not search. Null when this run could not see the searches (signed out).
-- `references` (array | null, required): Every source the answer CITED — not everything the search retrieved (that is `sources`) — deduplicated by url and in the order the answer surfaced them. Empty when the answer cited nothing, which is a fact about that reply: the same question searches on one run and not the next. Null when this run could not see the citations (signed out, ChatGPT shows its citation chips but not the pages behind them): unknown, not none.
-- `stopReason` (string | null, required): Why generation ended, as ChatGPT records it: "stop" for an answer the model finished. Null when ChatGPT records no reason: signed out, and in Work mode (`mode: "work"`), whose answers never carry one (measured 2026-09-25, 4 of 4 Work runs). Null is then not a cut-off answer; the script returns only once the answer has stopped growing. A finished answer can still be only a sentence announcing work it never did; that is what the model returned, not a truncation.
-- `searchContext` (object, required): What the server says about this turn's search, as sent to the page. Signed in it is not sent, so every field but the location is null there. A field is also null when the app did not send it.
-- `conversationId` (string | null, required): The conversation's id, from the /c/<id> or /uc/<id> URL. Null if the app did not navigate.
-- `webSearchQueries` (array | null, required): The searches ChatGPT issued, in order, read from the saved conversation. Empty when the reply did not search. Null when this run could not see the searches (signed out).
+- `references` (array | null, required): Every source the answer CITED or linked — not everything the search retrieved (that is `sources`) — deduplicated by url and in the order the answer surfaced them. Empty when the answer cited nothing, which is a fact about that reply: the same question searches on one run and not the next. Null when this run could not see the citations (signed out): unknown, not none.
+- `stopReason` (string | null, required): Why generation ended, as ChatGPT records it: "stop" for an answer the model finished. Null when ChatGPT records no reason, and signed out. A finished answer can still be only a sentence announcing work it never did; that is what the model returned, not a truncation.
+- `searchContext` (object, required): What the server says about this turn, as sent to the page. Every field is null signed out, and a field is null when the app did not send it.
+- `conversationId` (string | null, required): The conversation's id. Null if the app did not create one.
+- `webSearchQueries` (array | null, required): The searches ChatGPT issued, in order. Empty when the reply did not search. Null when this run could not see the searches (signed out).
 
 ## Example output
 
@@ -45,7 +43,6 @@ Shape only: placeholder values generated from the output schema, not a real run.
 
 ```json
 {
-  "mode": "chat",
   "calls": [
     {
       "call": 3,
@@ -133,11 +130,11 @@ You do not need one. "Ask ChatGPT" drives the real chatgpt.com pages in a browse
 
 ### What information do I need to provide?
 
-Required: question. Optional: mode.
+Required: question.
 
 ### What does it return?
 
-It returns mode, calls, model, answer, answers, sources, searches, references, stopReason, searchContext, conversationId, webSearchQueries.
+It returns calls, model, answer, answers, sources, searches, references, stopReason, searchContext, conversationId, webSearchQueries.
 
 ### Do I need to be logged in to chatgpt.com?
 

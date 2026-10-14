@@ -1,10 +1,10 @@
 # Search WhatsApp messages
 
-Automatically search WhatsApp messages on web.whatsapp.com. Global keyword search across all WhatsApp chats. Returns matching messages with the chat name, date label, matched snippet and message id. WhatsApp Web caps how many message hits it surfaces; older ones are only on the phone.
+Automatically search WhatsApp messages on web.whatsapp.com. Search WhatsApp messages by words, in every chat or inside one chat given by its `chatId` from get_inbox. Returns the matching messages, newest first, each with its id, chat, sender (in groups), time and text, so a hit feeds get_conversation and the message scripts. Results come in pages: ask the next page while `complete` is false. A page can hold fewer results than asked. An empty list means nothing matched. Searching opens no chat and marks nothing as read. The search covers the messages this browser holds; older ones may only be on the phone. If WhatsApp Web is open in another tab of the same browser, the run stops and asks to close that tab.
 
 - Site: web.whatsapp.com
 - Address: `reduck/web.whatsapp.com/search_messages`
-- Updated: 2026-09-16 (v3)
+- Updated: 2026-10-13 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,14 +17,21 @@ npx @reduck-ai/cli@latest run --script reduck/web.whatsapp.com/search_messages
 
 ## Input
 
-- `query` (string, required): Keyword(s) to search for across all conversations.
-- `count` (integer, optional): Max number of message hits to return.
+- `query` (string, required): Words to search for in message text.
+- `page` (integer, optional): Page of results, newest first. Ask the next page while `complete` is false.
+- `count` (integer, optional): Results per page.
+- `chatId` (string, optional): Search inside this chat only, as get_inbox returns it in `chatId`. Omit to search every chat.
+
+## Output
+
+- `complete` (boolean, required): True when no further page exists.
+- `messages` (array, required): Matching messages, newest first.
 
 ## FAQ
 
 ### What does "Search WhatsApp messages" do?
 
-Global keyword search across all WhatsApp chats. Returns matching messages with the chat name, date label, matched snippet and message id. WhatsApp Web caps how many message hits it surfaces; older ones are only on the phone.
+Search WhatsApp messages by words, in every chat or inside one chat given by its `chatId` from get_inbox. Returns the matching messages, newest first, each with its id, chat, sender (in groups), time and text, so a hit feeds get_conversation and the message scripts. Results come in pages: ask the next page while `complete` is false. A page can hold fewer results than asked. An empty list means nothing matched. Searching opens no chat and marks nothing as read. The search covers the messages this browser holds; older ones may only be on the phone. If WhatsApp Web is open in another tab of the same browser, the run stops and asks to close that tab.
 
 ### How do I automatically search WhatsApp messages on web.whatsapp.com?
 
@@ -36,7 +43,11 @@ You do not need one. "Search WhatsApp messages" drives the real web.whatsapp.com
 
 ### What information do I need to provide?
 
-Required: query. Optional: count.
+Required: query. Optional: page, count, chatId.
+
+### What does it return?
+
+It returns complete, messages.
 
 ### Do I need to be logged in to web.whatsapp.com?
 
@@ -44,7 +55,7 @@ Yes. It acts as you on web.whatsapp.com: on your own Chrome it reuses your sessi
 
 ### Does it change anything on web.whatsapp.com, or only read data?
 
-Unknown: its author has not declared whether it changes anything on web.whatsapp.com, so treat it as if it could.
+It only reads. It looks things up on web.whatsapp.com and changes nothing there.
 
 ### How do I run it?
 

@@ -1,10 +1,10 @@
 # Get WhatsApp conversation
 
-Automatically get WhatsApp conversation on web.whatsapp.com. Open a WhatsApp chat by its exact name (as returned by get_inbox) and return its messages in chronological order: sender, direction (sent/received), time, date, text and media type. `count` = how many recent messages to load (scrolls up for older). A message that was deleted for everyone is still returned, flagged with `deleted: true` and carrying no text, so it is never mistaken for a message that could not be read.
+Automatically get WhatsApp conversation on web.whatsapp.com. Read the most recent messages of one WhatsApp chat, oldest first. Give the chat by its `chatId` from get_inbox. Each message gives its id, type, sender (in groups), time, text or caption, whether it was deleted for everyone, the delivery status of your own messages, file details for media, and its reactions with counts. `complete` is true when the start of the chat's history was reached. Reading does not open the chat, so nothing is marked as read and the other person gets no read receipt. If WhatsApp Web is open in another tab of the same browser, the run stops and asks to close that tab. If the browser is not linked to WhatsApp, the run stops and says so. An unknown chatId stops the run with an error.
 
 - Site: web.whatsapp.com
 - Address: `reduck/web.whatsapp.com/get_conversation`
-- Updated: 2026-09-29 (v22)
+- Updated: 2026-10-13 (v24)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,14 +17,21 @@ npx @reduck-ai/cli@latest run --script reduck/web.whatsapp.com/get_conversation
 
 ## Input
 
-- `name` (string, required): Exact chat/contact/group name to open (the `name` field from get_inbox).
-- `count` (integer, optional): How many most-recent messages to return (scrolls up to load older).
+- `chatId` (string, required): The chat's id, as get_inbox returns it in `chatId`.
+- `count` (integer, optional): How many of the most recent messages to return.
+
+## Output
+
+- `name` (string, required): Chat title, as the chat list shows it.
+- `chatId` (string, required)
+- `complete` (boolean, required): True when the start of the chat's history was reached, so no earlier message exists on this device.
+- `messages` (array, required): Messages oldest first, ending with the newest one.
 
 ## FAQ
 
 ### What does "Get WhatsApp conversation" do?
 
-Open a WhatsApp chat by its exact name (as returned by get_inbox) and return its messages in chronological order: sender, direction (sent/received), time, date, text and media type. `count` = how many recent messages to load (scrolls up for older). A message that was deleted for everyone is still returned, flagged with `deleted: true` and carrying no text, so it is never mistaken for a message that could not be read.
+Read the most recent messages of one WhatsApp chat, oldest first. Give the chat by its `chatId` from get_inbox. Each message gives its id, type, sender (in groups), time, text or caption, whether it was deleted for everyone, the delivery status of your own messages, file details for media, and its reactions with counts. `complete` is true when the start of the chat's history was reached. Reading does not open the chat, so nothing is marked as read and the other person gets no read receipt. If WhatsApp Web is open in another tab of the same browser, the run stops and asks to close that tab. If the browser is not linked to WhatsApp, the run stops and says so. An unknown chatId stops the run with an error.
 
 ### How do I automatically get WhatsApp conversation on web.whatsapp.com?
 
@@ -36,7 +43,11 @@ You do not need one. "Get WhatsApp conversation" drives the real web.whatsapp.co
 
 ### What information do I need to provide?
 
-Required: name. Optional: count.
+Required: chatId. Optional: count.
+
+### What does it return?
+
+It returns name, chatId, complete, messages.
 
 ### Do I need to be logged in to web.whatsapp.com?
 

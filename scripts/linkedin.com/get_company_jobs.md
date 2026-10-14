@@ -1,10 +1,10 @@
 # Get LinkedIn company jobs
 
-Automatically get LinkedIn company jobs on linkedin.com. Get a LinkedIn company's open job postings by numeric companyId, worldwide by default, paginated (25/page). Returns total, page, and jobs (jobId, title, location, postedAgo, benefits, easyApply, url). Pass only a companyId from get_company_info - slugs are rejected and an invalid id makes LinkedIn silently drop the filter and return total 0 (indistinguishable from no openings); postedAgo is null on a "Viewed" marker.
+Automatically get LinkedIn company jobs on linkedin.com. Get a LinkedIn company's open job postings by numeric company id (from linkedin.com/get_company_info or search_companies), worldwide unless a geoId is given, with an optional keyword filter, 25 per page. Returns the total, the company name LinkedIn filtered on, and the jobs in the same shape as linkedin.com/search_jobs (id, title, location, the line under it, when it was listed, reposted, promoted, Easy Apply). companyName is null when LinkedIn does not list the company in its filter, which is what an id it does not know gives; a known company with no openings returns total 0. For other filters, use search_jobs with companyIds. Fails with a clear message when the browser is not signed in or LinkedIn limits the account.
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_company_jobs`
-- Updated: 2026-09-03 (v8)
+- Updated: 2026-10-13 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,22 +17,24 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/get_company_jobs
 
 ## Input
 
-- `companyId` (string | integer, required): Numeric inner LinkedIn company ID (e.g. 3008681). This is the companyId returned by linkedin.com/get_company_info — chain from it; slugs are NOT accepted here. Battle-tested caveat: an unknown/invalid id makes LinkedIn silently DROP the company filter and the script returns total 0 — indistinguishable from a company with no openings, so only pass ids that came from get_company_info.
-- `page` (integer, optional): 1-based page, 25 jobs per page (start=(page-1)*25). Caller loops while (page-1)*25 < total. A page beyond the last one returns the no-results state (total 0), so don't probe blindly. Job lists move as postings open/close; cross-page fan-out can skip/dupe near edits.
-- `geoId` (string | integer, optional): LinkedIn geo filter. Defaults to 92000000 = Worldwide ON PURPOSE: the UI's own default silently restricts to the viewer's country (battle-tested: 39 US results vs 48 worldwide for the same company).
-- `keywords` (string, optional): Optional free-text filter within the company's jobs (same as the search box).
+- `companyId` (string | integer, required): Numeric LinkedIn company id (for example 1035), from linkedin.com/get_company_info or linkedin.com/search_companies. Slugs are not accepted.
+- `page` (integer, optional): 1-based page, 25 jobs per page. Read the next page while (page - 1) * 25 < total. Postings open and close between calls, so a posting near a page edge can be skipped or repeated.
+- `geoId` (string | integer, optional): LinkedIn geo id to limit the openings to a place, from linkedin.com/suggest_locations. Omit for worldwide: LinkedIn's own interface otherwise narrows the list to the viewer's country.
+- `keywords` (string, optional): Free-text filter within the company's openings, the same as the search box.
 
 ## Output
 
 - `jobs` (array, required)
 - `page` (integer, required)
-- `total` (integer, required): Total open postings for this filter, read from the SSR blob ('N results' header). 0 with empty jobs[] = company has no matching openings (first-class outcome, not an error).
+- `total` (integer, required): Number of open postings that match, as LinkedIn counts them. 0 with an empty jobs list means the company has no matching openings.
+- `companyId` (string, required)
+- `companyName` (string | null, optional): The company LinkedIn filtered on, as its filter shows it. null when LinkedIn did not list the company in its filter.
 
 ## FAQ
 
 ### What does "Get LinkedIn company jobs" do?
 
-Get a LinkedIn company's open job postings by numeric companyId, worldwide by default, paginated (25/page). Returns total, page, and jobs (jobId, title, location, postedAgo, benefits, easyApply, url). Pass only a companyId from get_company_info - slugs are rejected and an invalid id makes LinkedIn silently drop the filter and return total 0 (indistinguishable from no openings); postedAgo is null on a "Viewed" marker.
+Get a LinkedIn company's open job postings by numeric company id (from linkedin.com/get_company_info or search_companies), worldwide unless a geoId is given, with an optional keyword filter, 25 per page. Returns the total, the company name LinkedIn filtered on, and the jobs in the same shape as linkedin.com/search_jobs (id, title, location, the line under it, when it was listed, reposted, promoted, Easy Apply). companyName is null when LinkedIn does not list the company in its filter, which is what an id it does not know gives; a known company with no openings returns total 0. For other filters, use search_jobs with companyIds. Fails with a clear message when the browser is not signed in or LinkedIn limits the account.
 
 ### How do I automatically get LinkedIn company jobs on linkedin.com?
 
@@ -48,7 +50,7 @@ Required: companyId. Optional: page, geoId, keywords.
 
 ### What does it return?
 
-It returns jobs, page, total.
+It returns jobs, page, total, companyId, companyName.
 
 ### Do I need to be logged in to linkedin.com?
 
@@ -56,7 +58,7 @@ Yes. It acts as you on linkedin.com: on your own Chrome it reuses your session, 
 
 ### Does it change anything on linkedin.com, or only read data?
 
-Unknown: its author has not declared whether it changes anything on linkedin.com, so treat it as if it could.
+It only reads. It looks things up on linkedin.com and changes nothing there.
 
 ### How do I run it?
 

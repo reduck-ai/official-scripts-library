@@ -4,7 +4,7 @@ Automatically update a ClickUp task's name, description or status on app.clickup
 
 - Site: app.clickup.com
 - Address: `reduck/app.clickup.com/update_task`
-- Updated: 2026-09-30 (v2)
+- Updated: 2026-10-13 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

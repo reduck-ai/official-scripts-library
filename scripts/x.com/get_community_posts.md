@@ -4,7 +4,7 @@ Automatically read an X (Twitter) Community's posts on x.com. Read the posts of 
 
 - Site: x.com
 - Address: `reduck/x.com/get_community_posts`
-- Updated: 2026-09-29 (v4)
+- Updated: 2026-10-13 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,7 +18,7 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/get_community_posts
 ## Input
 
 - `communityId` (string, required): The community's numeric id, from its URL: x.com/i/communities/<communityId>. Found via More → Communities → a topic pill (e.g. Technology), or on any post's community badge link.
-- `sort` (string, optional): Which of the community's own tabs to read. "top" is the community's default ranked view; "latest" is strict reverse-chronological.
+- `sort` (string, optional): Which of the community's own tabs to read. "top" is the community's default ranked view; "latest" is reverse-chronological, except the post community mods pinned, which X lists first on both tabs (its posts carry pinned: true).
 - `limit` (integer, optional): Maximum posts to return. The tab loads a batch at a time; asking for more scrolls until the count is met or the tab stops returning new posts.
 
 ## Output
@@ -26,6 +26,7 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/get_community_posts
 - `sort` (string, required)
 - `count` (integer, required)
 - `posts` (array, required)
+- `complete` (boolean, required): True when X showed the end of the feed and every post it sent is returned. False when more may exist: the limit was reached or X stopped loading.
 - `community_id` (string, required)
 
 ## FAQ
@@ -48,7 +49,7 @@ Required: communityId. Optional: sort, limit.
 
 ### What does it return?
 
-It returns sort, count, posts, community_id.
+It returns sort, count, posts, complete, community_id.
 
 ### Do I need to be logged in to x.com?
 

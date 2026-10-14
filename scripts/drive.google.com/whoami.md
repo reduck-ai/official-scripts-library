@@ -1,10 +1,10 @@
 # Google Drive whoami (signed-in account)
 
-Report which Google account Google Drive is signed in as in this browser: display name and email, read from Google's account button. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Drive scripts.
+Report which Google account Google Drive is signed in as in this browser: display name and email. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Drive scripts.
 
 - Site: drive.google.com
 - Address: `reduck/drive.google.com/whoami`
-- Updated: 2026-09-30 (v1)
+- Updated: 2026-10-13 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,7 +29,7 @@ It takes no input.
 
 ### What does "Google Drive whoami (signed-in account)" do?
 
-Report which Google account Google Drive is signed in as in this browser: display name and email, read from Google's account button. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Drive scripts.
+Report which Google account Google Drive is signed in as in this browser: display name and email. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Drive scripts.
 
 ### What information do I need to provide?
 

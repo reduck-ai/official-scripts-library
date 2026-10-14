@@ -1,10 +1,10 @@
 # Get WhatsApp inbox
 
-Automatically get WhatsApp inbox on web.whatsapp.com. List the WhatsApp chat list (inbox): for each chat its name, date/time label, read/unread status, unread message count and last-message snippet. Ordered top→down (most recent first). `count` caps how many chats to return.
+Automatically get WhatsApp inbox on web.whatsapp.com. List the chats of the WhatsApp chat list, in the order the list shows them, most recent first. Pick the same tab as the app: all chats, unread, favorites, groups, or archived. Each chat gives its id, its name, when it was last active, its unread count, whether it is pinned, muted, a favorite or marked unread by hand, and its last message with id, type, sender, time and text. `total` tells how many chats the tab holds, so a result cut by `count` is visible. Reading the list does not open a chat and marks nothing as read. If WhatsApp Web is open in another tab of the same browser, the run stops and asks to close that tab, because taking the session would disconnect it. If the browser is not linked to WhatsApp, the run stops and says so.
 
 - Site: web.whatsapp.com
 - Address: `reduck/web.whatsapp.com/get_inbox`
-- Updated: 2026-09-17 (v10)
+- Updated: 2026-10-13 (v12)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,14 +17,19 @@ npx @reduck-ai/cli@latest run --script reduck/web.whatsapp.com/get_inbox
 
 ## Input
 
-- `count` (integer, optional): Max number of chats to return, from the top of the list.
-- `since` (string, optional): Optional ISO datetime. Return only chats whose last activity is at or after this instant, which is how a caller polls for new messages. Chats whose timestamp could not be resolved are always returned, never silently dropped.
+- `count` (integer, optional): Maximum number of chats to return, from the top of the list.
+- `filter` (string, optional): Which list to read, as the chat list's own tabs: all chats, unread ones, favorites, groups, or the archived chats.
+
+## Output
+
+- `chats` (array, required): Chats in the order the list shows them, most recent first.
+- `total` (integer, required): How many chats the list holds for this filter. More than the number returned means count cut the list.
 
 ## FAQ
 
 ### What does "Get WhatsApp inbox" do?
 
-List the WhatsApp chat list (inbox): for each chat its name, date/time label, read/unread status, unread message count and last-message snippet. Ordered top→down (most recent first). `count` caps how many chats to return.
+List the chats of the WhatsApp chat list, in the order the list shows them, most recent first. Pick the same tab as the app: all chats, unread, favorites, groups, or archived. Each chat gives its id, its name, when it was last active, its unread count, whether it is pinned, muted, a favorite or marked unread by hand, and its last message with id, type, sender, time and text. `total` tells how many chats the tab holds, so a result cut by `count` is visible. Reading the list does not open a chat and marks nothing as read. If WhatsApp Web is open in another tab of the same browser, the run stops and asks to close that tab, because taking the session would disconnect it. If the browser is not linked to WhatsApp, the run stops and says so.
 
 ### How do I automatically get WhatsApp inbox on web.whatsapp.com?
 
@@ -36,7 +41,11 @@ You do not need one. "Get WhatsApp inbox" drives the real web.whatsapp.com pages
 
 ### What information do I need to provide?
 
-Optional: count, since.
+Optional: count, filter.
+
+### What does it return?
+
+It returns chats, total.
 
 ### Do I need to be logged in to web.whatsapp.com?
 

@@ -4,7 +4,7 @@ Automatically export an X (Twitter) account's followers or following on x.com. L
 
 - Site: x.com
 - Address: `reduck/x.com/get_follows`
-- Updated: 2026-09-29 (v3)
+- Updated: 2026-10-13 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -26,6 +26,7 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/get_follows
 - `count` (integer, required): Number of accounts returned. 0 is a first-class outcome (none, or protected/hidden).
 - `handle` (string, required)
 - `accounts` (array, required)
+- `complete` (boolean, required): True when X showed the end of the list and every account it sent is returned. False when more may exist: count was reached or X stopped loading.
 - `direction` (string, required)
 
 ## FAQ
@@ -48,7 +49,7 @@ Required: handle. Optional: count, direction.
 
 ### What does it return?
 
-It returns count, handle, accounts, direction.
+It returns count, handle, accounts, complete, direction.
 
 ### Do I need to be logged in to x.com?
 

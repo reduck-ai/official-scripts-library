@@ -1,10 +1,10 @@
 # List a Google Drive folder
 
-Automatically list a Google Drive folder on drive.google.com. List the files and sub-folders directly inside a Google Drive folder, without recursing or downloading anything. Returns each item's id, name, type, size, last-modified date, owner and link. Omit folderId to list My Drive's root.
+Automatically list a Google Drive folder on drive.google.com. List the files and sub-folders directly inside a Google Drive folder, without recursing or downloading anything. Returns each item's id, name, type, size, dates, owner and link, folders first, one page at a time: pass nextPageToken back as pageToken to read the next page. Omit folderId to list My Drive's root. An empty folder returns empty lists.
 
 - Site: drive.google.com
 - Address: `reduck/drive.google.com/list_folder`
-- Updated: 2026-08-25 (v1)
+- Updated: 2026-10-13 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,23 +17,25 @@ npx @reduck-ai/cli@latest run --script reduck/drive.google.com/list_folder
 
 ## Input
 
-- `folderId` (string, optional): Google Drive folder id, i.e. the <id> in drive.google.com/drive/folders/<id>. Omit to list the root of My Drive.
+- `folderId` (string, optional): Google Drive folder id, the <id> in drive.google.com/drive/folders/<id>. Omit to list the root of My Drive.
+- `pageSize` (integer, optional): Number of items per page, up to 1000.
+- `pageToken` (string, optional): The nextPageToken of the previous page, to read the next one.
 
 ## Output
 
-- `url` (string, required)
-- `count` (number, required): Folders plus files returned.
+- `count` (integer, required): Folders plus files on this page.
 - `files` (array, required)
 - `folders` (array, required)
-- `complete` (boolean, required): False when the folder holds more rows than the listing payload described; missingMetadataFor then carries their ids.
 - `folderId` (string, required): The folder listed, or "root" for My Drive.
-- `missingMetadataFor` (array, optional)
+- `folderName` (string, required)
+- `nextPageToken` (string | null, required): Pass it as pageToken to read the next page. Null on the last page.
+- `url` (string, optional)
 
 ## FAQ
 
 ### What does "List a Google Drive folder" do?
 
-List the files and sub-folders directly inside a Google Drive folder, without recursing or downloading anything. Returns each item's id, name, type, size, last-modified date, owner and link. Omit folderId to list My Drive's root.
+List the files and sub-folders directly inside a Google Drive folder, without recursing or downloading anything. Returns each item's id, name, type, size, dates, owner and link, folders first, one page at a time: pass nextPageToken back as pageToken to read the next page. Omit folderId to list My Drive's root. An empty folder returns empty lists.
 
 ### How do I automatically list a Google Drive folder on drive.google.com?
 
@@ -45,11 +47,11 @@ You do not need one. "List a Google Drive folder" drives the real drive.google.c
 
 ### What information do I need to provide?
 
-Optional: folderId.
+Optional: folderId, pageSize, pageToken.
 
 ### What does it return?
 
-It returns url, count, files, folders, complete, folderId, missingMetadataFor.
+It returns url, count, files, folders, folderId, folderName, nextPageToken.
 
 ### Do I need to be logged in to drive.google.com?
 

@@ -4,7 +4,7 @@ Automatically get LinkedIn message thread on linkedin.com. You get the latest me
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_thread`
-- Updated: 2026-10-05 (v5)
+- Updated: 2026-10-13 (v10)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -21,13 +21,69 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/get_thread
 
 ## Input
 
-- `threadUrl` (string, required): A LinkedIn /messaging/thread/<id>/ URL, as returned by linkedin.com/list_inbox.
+- `threadUrl` (string, required): A LinkedIn /messaging/thread/<id>/ URL, as linkedin.com/list_inbox returns it.
+- `cursor` (string, optional): nextCursor from the previous page, to read the 20 messages before it. Omit for the newest 20.
+
+## Output
+
+- `messages` (array, required)
+- `threadId` (string, required)
+- `threadUrl` (string, required)
+- `nextCursor` (string | null, required): Pass as cursor for the 20 older messages; null when the conversation starts on this page.
+- `participants` (array, required)
+- `title` (string | null, optional)
+- `groupChat` (boolean, optional)
+
+## Example output
+
+Shape only: placeholder values generated from the output schema, not a real run.
+
+```json
+{
+  "title": "Example",
+  "messages": [
+    {
+      "at": "2026-01-15T09:30:00Z",
+      "id": "abc123",
+      "from": {
+        "kind": "…",
+        "name": "Example",
+        "distance": "…",
+        "profileUrl": "https://example.com/item/123"
+      },
+      "text": "…",
+      "subject": "…",
+      "fromSelf": true,
+      "attachments": [
+        {
+          "url": "https://example.com/item/123",
+          "name": "Example",
+          "text": "…",
+          "type": "…"
+        }
+      ]
+    }
+  ],
+  "threadId": "abc123",
+  "groupChat": true,
+  "threadUrl": "https://example.com/item/123",
+  "nextCursor": "…",
+  "participants": [
+    {
+      "kind": "…",
+      "name": "Example",
+      "distance": "…",
+      "profileUrl": "https://example.com/item/123"
+    }
+  ]
+}
+```
 
 ## FAQ
 
 ### What does "Get LinkedIn message thread" do?
 
-Read a classic LinkedIn messaging conversation (NOT Sales Navigator) by its thread URL from list_inbox. Returns the participants and messages (from, fromSelf, text, time, subject) in chronological order. Returns the most recent page only.
+Read a classic LinkedIn messaging conversation (not Sales Navigator) by its thread URL from list_inbox. Returns the other participants and 20 messages per page in chronological order: sender, whether you sent it, text, subject, time and attachments. The first page holds the newest messages. To read older ones, pass nextCursor as cursor; nextCursor is null when the conversation starts on this page. Reading does not mark the conversation as read. A thread URL that the signed-in account cannot see fails with a clear error.
 
 ### How do I automatically get LinkedIn message thread on linkedin.com?
 
@@ -39,7 +95,11 @@ You do not need one. "Get LinkedIn message thread" drives the real linkedin.com 
 
 ### What information do I need to provide?
 
-Required: threadUrl.
+Required: threadUrl. Optional: cursor.
+
+### What does it return?
+
+It returns title, messages, threadId, groupChat, threadUrl, nextCursor, participants.
 
 ### Do I need to be logged in to linkedin.com?
 

@@ -1,10 +1,10 @@
 # Search LinkedIn companies
 
-Automatically search LinkedIn companies on linkedin.com. Search LinkedIn companies by keywords, with an optional company-size filter and pagination (10/page). Returns total, page, and companies (name, url, slug, companyId, pageType, industry, location, snippet, followers, pageBy). Browsing caps at ~100 pages (~1000 companies) regardless of total; companyId can occasionally be null for a whole page; and the companies vertical also surfaces /school/ pages.
+Automatically search LinkedIn companies on linkedin.com. Search LinkedIn companies by keywords, with an optional company-size filter and a page number (10 companies per page). Returns page, total, hasNextPage and companies (name, url, slug, companyId, pageType, industry, location, snippet, followers, and pageBy, the parent company page of a showcase page). companyId is the id that linkedin.com/search_people takes as currentCompanyIds. The results also include showcase and school pages.
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/search_companies`
-- Updated: 2026-09-03 (v3)
+- Updated: 2026-10-13 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -24,14 +24,15 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/search_companies
 ## Output
 
 - `page` (integer, required)
-- `total` (integer, required): Total result count as displayed (LinkedIn may prefix with 'About'). 0 when no results. Display value only: pagination stops at ~100 pages (~1000 companies) however large this number is.
-- `companies` (array, required)
+- `total` (integer | null, required): The result count LinkedIn shows above the list. 0 on its empty state. Null when the page shows no count. Paging stops at about 100 pages (about 1000 companies) however large this number is.
+- `companies` (array, required): The companies on this page, in LinkedIn order. Empty only when LinkedIn shows its empty state.
+- `hasNextPage` (boolean | null, required): Whether LinkedIn offers a next page. False on the last page and on the empty state. Null only when a full page shows no pager.
 
 ## FAQ
 
 ### What does "Search LinkedIn companies" do?
 
-Search LinkedIn companies by keywords, with an optional company-size filter and pagination (10/page). Returns total, page, and companies (name, url, slug, companyId, pageType, industry, location, snippet, followers, pageBy). Browsing caps at ~100 pages (~1000 companies) regardless of total; companyId can occasionally be null for a whole page; and the companies vertical also surfaces /school/ pages.
+Search LinkedIn companies by keywords, with an optional company-size filter and a page number (10 companies per page). Returns page, total, hasNextPage and companies (name, url, slug, companyId, pageType, industry, location, snippet, followers, and pageBy, the parent company page of a showcase page). companyId is the id that linkedin.com/search_people takes as currentCompanyIds. The results also include showcase and school pages.
 
 ### How do I automatically search LinkedIn companies on linkedin.com?
 
@@ -47,7 +48,7 @@ Required: keywords. Optional: page, companySizes.
 
 ### What does it return?
 
-It returns page, total, companies.
+It returns page, total, companies, hasNextPage.
 
 ### Do I need to be logged in to linkedin.com?
 

@@ -4,7 +4,7 @@ Automatically search X (Twitter) users by keyword, with bio and follower counts 
 
 - Site: x.com
 - Address: `reduck/x.com/search_users`
-- Updated: 2026-10-06 (v1)
+- Updated: 2026-10-13 (v2)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -29,6 +29,7 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/search_users
 - `count` (integer, required): Number of accounts returned. 0 is a first-class outcome (no matches).
 - `query` (string, required)
 - `users` (array, required)
+- `complete` (boolean, required): True when X showed the end of the results and every account it sent is returned. False when more may exist: count was reached or X stopped loading.
 
 ## Example output
 
@@ -51,7 +52,8 @@ Shape only: placeholder values generated from the output schema, not a real run.
       "followers": 1200,
       "following": 3
     }
-  ]
+  ],
+  "complete": true
 }
 ```
 
@@ -75,7 +77,7 @@ Required: query. Optional: count.
 
 ### What does it return?
 
-It returns count, query, users.
+It returns count, query, users, complete.
 
 ### Do I need to be logged in to x.com?
 

@@ -1,10 +1,10 @@
 # Reply to a WhatsApp message
 
-Automatically reply to a WhatsApp message on web.whatsapp.com. Reply (quote) to a specific message by messageId in a chat, then send text. Confirms the quote context attached before sending, and confirms delivery via WhatsApp's own status indicator — not just the outgoing bubble appearing — throwing if WhatsApp reports the send failed.
+Automatically reply to a WhatsApp message on web.whatsapp.com. Reply to one WhatsApp message with text, quoting it, given the message's id from get_conversation or get_inbox. The chat is found from the message id. Returns the reply's own id, which delete_message takes, with the time and the delivery status. The run succeeds only when WhatsApp's server has acknowledged the reply and it quotes that message. A message deleted for everyone cannot be replied to. Confirm the text with the user before sending. If WhatsApp Web is open in another tab of the same browser, the run stops and asks to close that tab.
 
 - Site: web.whatsapp.com
 - Address: `reduck/web.whatsapp.com/reply_to_message`
-- Updated: 2026-09-16 (v11)
+- Updated: 2026-10-13 (v12)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,21 +17,24 @@ npx @reduck-ai/cli@latest run --script reduck/web.whatsapp.com/reply_to_message
 
 ## Input
 
-- `name` (string, required): Exact chat name to open (from get_inbox).
-- `text` (string, required): The reply text to send.
-- `messageId` (string, required): Message id to reply to (from get_conversation or search_messages). Note: if this message was sent immediately after another message from the same sender with no time gap, WhatsApp may have grouped them into a single row that only exposes the newest message's id — replying to an earlier, swallowed message in such a group will fail with a clear error. Very old messages in long conversations may also be unreachable.
+- `text` (string, required): The reply text.
+- `messageId` (string, required): The message to reply to, as get_conversation or get_inbox returns it in `id`.
 
 ## Output
 
-- `sent` (boolean, required): True once the reply is confirmed sent: the outgoing bubble appeared and WhatsApp itself did not flag it as failed to send.
-- `text` (string, required)
-- `repliedTo` (string, required)
+- `id` (string, required): The reply's own message id, usable by delete_message and the other message scripts.
+- `sent` (boolean, required): True once WhatsApp's server acknowledged the reply.
+- `chatId` (string, required)
+- `repliedTo` (string, required): The id of the message quoted.
+- `at` (string | null, optional): When it was sent, ISO datetime.
+- `text` (string, optional)
+- `status` (any, optional): Delivery status when the run ended.
 
 ## FAQ
 
 ### What does "Reply to a WhatsApp message" do?
 
-Reply (quote) to a specific message by messageId in a chat, then send text. Confirms the quote context attached before sending, and confirms delivery via WhatsApp's own status indicator — not just the outgoing bubble appearing — throwing if WhatsApp reports the send failed.
+Reply to one WhatsApp message with text, quoting it, given the message's id from get_conversation or get_inbox. The chat is found from the message id. Returns the reply's own id, which delete_message takes, with the time and the delivery status. The run succeeds only when WhatsApp's server has acknowledged the reply and it quotes that message. A message deleted for everyone cannot be replied to. Confirm the text with the user before sending. If WhatsApp Web is open in another tab of the same browser, the run stops and asks to close that tab.
 
 ### How do I automatically reply to a WhatsApp message on web.whatsapp.com?
 
@@ -43,11 +46,11 @@ You do not need one. "Reply to a WhatsApp message" drives the real web.whatsapp.
 
 ### What information do I need to provide?
 
-Required: name, messageId, text.
+Required: messageId, text.
 
 ### What does it return?
 
-It returns sent, text, repliedTo.
+It returns at, id, sent, text, chatId, status, repliedTo.
 
 ### Do I need to be logged in to web.whatsapp.com?
 
@@ -55,7 +58,7 @@ Yes. It acts as you on web.whatsapp.com: on your own Chrome it reuses your sessi
 
 ### Does it change anything on web.whatsapp.com, or only read data?
 
-It makes changes on web.whatsapp.com, like sending, posting or booking something.
+It makes changes on web.whatsapp.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

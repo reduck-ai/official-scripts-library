@@ -1,10 +1,10 @@
 # Get Google Maps place details
 
-Automatically get Google Maps place details on google.com. Get one Google Maps place/business details by placeId (canonical ChIJ... from search_places), place URL, or free-text name+location. Returns name, fullAddress, phone, website, instagram, category, rating, reviews, hours, plusCode, lat, lng, placeId, placeUrl, resolvedUrl, matched, elapsed_s. matched is false when it did not resolve; the free-text path falls back to the first search result, so it can resolve the wrong place. Business fields (rating/reviews/hours/category/lat/lng/plusCode) are null when the place does not expose them.
+Automatically get Google Maps place details on google.com. Get one Google Maps place by its place id (from search_places), its Maps link, or a query that names one place. Returns name, address, phone, website, Instagram link, main category and all categories, star rating, number of reviews, price range, the opening hours of the week as numbers in the place's own time zone, plus code, time zone and coordinates. A place id or link that Google Maps does not know fails with a clear error. A query that Maps answers with a list of places fails and asks for search_places, rather than picking one of them. Fields a place does not show are empty or null.
 
 - Site: google.com
 - Address: `reduck/google.com/get_place`
-- Updated: 2026-09-17 (v7)
+- Updated: 2026-10-13 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,36 +17,38 @@ npx @reduck-ai/cli@latest run --script reduck/google.com/get_place
 
 ## Input
 
-- `query` (string, optional): Free-text name + location (e.g. 'Casita of Brooklyn'), used only when no placeId/place URL is available; resolves via search + first result.
-- `placeId` (string, optional): Canonical Google place ID (e.g. 'ChIJ...'), as returned by search_places. The precise, preferred input.
-- `placeUrl` (string, optional): A Google Maps place URL. A '?q=place_id:' or '/data=' URL resolves directly to the place; anything else is treated as free text.
-- `settleMs` (number, optional): Milliseconds to wait for the place panel to settle after loading.
+- `gl` (string, optional): Region (e.g. 'fr', 'us'). Empty: the browser's region.
+- `hl` (string, optional): Language of the category names (e.g. 'en', 'fr'). Empty: the browser's language.
+- `query` (string, optional): Name and location of one place (e.g. 'Café de Flore Paris'). It works only when Maps opens it as one place; a query that Maps answers with a list fails and names search_places.
+- `placeId` (string, optional): Google place id (e.g. 'ChIJ...'), as search_places returns it. The preferred input.
+- `placeUrl` (string, optional): A Google Maps place link: a '?q=place_id:' link or a '/maps/place/.../data=' link opens that place directly.
 
 ## Output
 
-- `lat` (number | null, optional): Latitude parsed from the resolved Maps URL; null when not resolvable.
-- `lng` (number | null, optional): Longitude parsed from the resolved Maps URL; null when not resolvable.
-- `name` (string | null, optional): Place name. Taken from the detail panel heading, or from the canonical URL when the panel did not render (in which case matched is false).
-- `hours` (string | null, optional): Today's opening-hours summary; null when not shown.
-- `phone` (string, optional)
-- `rating` (number | null, optional): Average Google rating 0-5; null when the place has no rating.
-- `matched` (boolean, optional): True only when the place detail panel rendered or a real field (website/phone/address) was read. False means the place did not resolve and the other fields are unreliable.
-- `placeId` (string, optional): The placeId actually used (resolved from the arg or the URL; empty on the free-text path).
-- `reviews` (integer | null, optional): Google review count, read from the rating header block; null when not shown.
-- `website` (string, optional)
-- `category` (string | null, optional): Primary Google Maps business category; null when none.
-- `placeUrl` (string, optional): Echo of the placeUrl arg.
-- `plusCode` (string | null, optional): Google Plus Code (open location code); null when not shown.
-- `elapsed_s` (number, optional)
-- `instagram` (string, optional): Instagram profile URL when the place links one; empty otherwise.
-- `fullAddress` (string, optional)
-- `resolvedUrl` (string, optional): Final Maps URL after redirect (the canonical place URL when a place loaded).
+- `name` (string, required)
+- `placeId` (string, required): Google place id: the input of get_place_reviews.
+- `lat` (number | null, optional)
+- `lng` (number | null, optional)
+- `phone` (string, optional): Empty when the place has none.
+- `price` (string | null, optional)
+- `rating` (number | null, optional): Average star rating 1-5; null when the place has no rating.
+- `address` (string, optional)
+- `reviews` (number | null, optional): Number of reviews; null when the place has none.
+- `website` (string, optional): Empty when the place has none.
+- `category` (string | null, optional)
+- `placeUrl` (string, optional)
+- `plusCode` (string | null, optional)
+- `timezone` (string | null, optional): IANA time zone of the place, e.g. 'Europe/Paris'.
+- `instagram` (string, optional): Instagram profile link when the place shows one; empty otherwise.
+- `categories` (array, optional)
+- `resolvedUrl` (string, optional): The Maps URL the place opened at.
+- `openingHours` (array | null, optional): The week Maps shows, in the place's own time zone: one entry per opening interval, none for a day it is closed. null when the place shows no hours.
 
 ## FAQ
 
 ### What does "Get Google Maps place details" do?
 
-Get one Google Maps place/business details by placeId (canonical ChIJ... from search_places), place URL, or free-text name+location. Returns name, fullAddress, phone, website, instagram, category, rating, reviews, hours, plusCode, lat, lng, placeId, placeUrl, resolvedUrl, matched, elapsed_s. matched is false when it did not resolve; the free-text path falls back to the first search result, so it can resolve the wrong place. Business fields (rating/reviews/hours/category/lat/lng/plusCode) are null when the place does not expose them.
+Get one Google Maps place by its place id (from search_places), its Maps link, or a query that names one place. Returns name, address, phone, website, Instagram link, main category and all categories, star rating, number of reviews, price range, the opening hours of the week as numbers in the place's own time zone, plus code, time zone and coordinates. A place id or link that Google Maps does not know fails with a clear error. A query that Maps answers with a list of places fails and asks for search_places, rather than picking one of them. Fields a place does not show are empty or null.
 
 ### How do I automatically get Google Maps place details on google.com?
 
@@ -58,11 +60,11 @@ You do not need one. "Get Google Maps place details" drives the real google.com 
 
 ### What information do I need to provide?
 
-Optional: query, placeId, placeUrl, settleMs.
+Optional: gl, hl, query, placeId, placeUrl.
 
 ### What does it return?
 
-It returns lat, lng, name, hours, phone, rating, matched, placeId, reviews, website, category, placeUrl, plusCode, elapsed_s, instagram, fullAddress, resolvedUrl.
+It returns lat, lng, name, phone, price, rating, address, placeId, reviews, website, category, placeUrl, plusCode, timezone, instagram, categories, resolvedUrl, openingHours.
 
 ### Do I need to be logged in to google.com?
 

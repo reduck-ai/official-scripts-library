@@ -4,7 +4,7 @@ Automatically get LinkedIn connections on linkedin.com. Your own 1st-degree Link
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_connections`
-- Updated: 2026-10-05 (v5)
+- Updated: 2026-10-13 (v6)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -21,12 +21,13 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/get_connections
 
 ## Input
 
-- `count` (integer, optional): Max connections to return. Omit to fetch all of them.
+- `count` (integer, optional): How many connections to return, newest first. Default 100. LinkedIn loads 10 per step, so a large count on a large network takes long and counts against the account: ask for all of them only when you need them.
 
 ## Output
 
-- `total` (integer, required): Total connection count LinkedIn reports at the top of the list (may exceed connections.length if count capped it).
-- `connections` (array, required)
+- `total` (integer, required): The connection count LinkedIn shows above the list.
+- `complete` (boolean, required): True when connections holds every connection (total reached). False when count stopped the list first.
+- `connections` (array, required): Newest first, as LinkedIn sorts them by default.
 
 ## Example output
 
@@ -35,6 +36,7 @@ Shape only: placeholder values generated from the output schema, not a real run.
 ```json
 {
   "total": 3,
+  "complete": true,
   "connections": [
     {
       "name": "Example",
@@ -52,7 +54,7 @@ Shape only: placeholder values generated from the output schema, not a real run.
 
 ### What does "Get LinkedIn connections" do?
 
-List the logged-in member's 1st-degree LinkedIn connections (My Network > Connections), scrolling to load up to count. Returns each connection's name, headline, profile URL, member URN, and the "Connected on" date text, plus the total connection count LinkedIn reports.
+List the signed-in member's 1st-degree LinkedIn connections (My Network > Connections), newest first, up to count (default 100). Returns the total connection count LinkedIn shows, complete (true only when every connection came back), and each connection's name, headline, profile URL, public id, member URN and the connected-on date as shown. LinkedIn loads 10 connections per step, so a large count takes long and counts against the account. When the list stops loading before count and before the total, the run fails and says where it stopped; it never returns part of the list as all of it.
 
 ### How do I automatically get LinkedIn connections on linkedin.com?
 
@@ -68,7 +70,7 @@ Optional: count.
 
 ### What does it return?
 
-It returns total, connections.
+It returns total, complete, connections.
 
 ### Do I need to be logged in to linkedin.com?
 

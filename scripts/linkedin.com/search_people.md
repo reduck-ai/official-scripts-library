@@ -1,10 +1,10 @@
 # Search LinkedIn people
 
-Automatically search LinkedIn people on linkedin.com. Search LinkedIn people by keywords with optional title, name, company, school, currentCompanyIds/pastCompanyIds (numeric ids from get_company_info), connectionDegrees, connectionOf, geoUrn, and pagination (10/page). Returns page, total, and people (name, url, publicId, memberUrn, degree, headline, location, snippet, followers, mutualConnections). A page with no results returns people: [] and total: 0.
+Automatically search LinkedIn people on linkedin.com. Search LinkedIn people by keywords with optional title, name, company, school, currentCompanyIds/pastCompanyIds (numeric ids from get_company_info), connectionDegrees, connectionOf, geoUrn, and a page number (10 people per page). Returns page, total, hasNextPage and people (name, url, publicId, memberUrn, degree, headline, location, snippet, followers, the mutual-connections line, and the members in common as data: up to two named mutuals with their profile, and mutualCount).
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/search_people`
-- Updated: 2026-10-06 (v28)
+- Updated: 2026-10-13 (v30)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -33,14 +33,15 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/search_people
 ## Output
 
 - `page` (integer, required)
-- `people` (array, required): Empty when the page has no results (past the last page, or no match). Out-of-network 'LinkedIn Member' cards are not included.
-- `total` (integer | null, optional): Total result count if displayed; 0 when LinkedIn shows no results; null when LinkedIn hides it (observed on free-tier accounts).
+- `total` (integer | null, required): 0 when LinkedIn shows its empty state. Null otherwise: LinkedIn shows no result count on a results page.
+- `people` (array, required): The people on this page, in LinkedIn's order. Empty only when LinkedIn shows its empty state, or when every card is an out-of-network member LinkedIn does not name.
+- `hasNextPage` (boolean | null, required): Whether LinkedIn offers a next page. False on the last page and on the empty state. Null only when a full page shows no pager.
 
 ## FAQ
 
 ### What does "Search LinkedIn people" do?
 
-Search LinkedIn people by keywords with optional title, name, company, school, currentCompanyIds/pastCompanyIds (numeric ids from get_company_info), connectionDegrees, connectionOf, geoUrn, and pagination (10/page). Returns page, total, and people (name, url, publicId, memberUrn, degree, headline, location, snippet, followers, mutualConnections). A page with no results returns people: [] and total: 0.
+Search LinkedIn people by keywords with optional title, name, company, school, currentCompanyIds/pastCompanyIds (numeric ids from get_company_info), connectionDegrees, connectionOf, geoUrn, and a page number (10 people per page). Returns page, total, hasNextPage and people (name, url, publicId, memberUrn, degree, headline, location, snippet, followers, the mutual-connections line, and the members in common as data: up to two named mutuals with their profile, and mutualCount).
 
 ### How do I automatically search LinkedIn people on linkedin.com?
 
@@ -56,7 +57,7 @@ Optional: page, title, geoUrn, school, company, keywords, lastName, firstName, c
 
 ### What does it return?
 
-It returns page, total, people.
+It returns page, total, people, hasNextPage.
 
 ### Do I need to be logged in to linkedin.com?
 

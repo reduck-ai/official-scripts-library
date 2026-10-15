@@ -4,7 +4,7 @@ Automatically list Klarstein category products on klarstein.fr. List products in
 
 - Site: klarstein.fr
 - Address: `reduck/klarstein.fr/list_category_products`
-- Updated: 2026-09-18 (v3)
+- Updated: 2026-10-14 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

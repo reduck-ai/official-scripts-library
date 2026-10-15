@@ -4,7 +4,7 @@ Automatically list ChatGPT models on chatgpt.com. List the models ChatGPT offers
 
 - Site: chatgpt.com
 - Address: `reduck/chatgpt.com/list_models`
-- Updated: 2026-09-18 (v1)
+- Updated: 2026-10-14 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -1,10 +1,10 @@
 # Search Amazon products
 
-Automatically search Amazon products on amazon.com. Search Amazon by free-text query and return one page of results. Returns query, page, zip, url, and items (asin, title, url, price, list_price, rating, review_count, image_url, sponsored, formats). formats lists each edition a result links to (for example Hardcover, Kindle and Audiobook for a book), with its own ASIN, URL and price when shown. Organic results are stable per page but sponsored slots rotate between fetches; pagination caps around 20 pages.
+Automatically search Amazon products on amazon.com. Search Amazon by free-text query and return one page of results. Returns query, page, zip, url, has_next_page and items (asin, title, url, price, list_price, rating, review_count, image_url, sponsored, formats). formats lists each edition a result links to (for example Hardcover, Kindle and Audiobook for a book), with its own ASIN, URL and price when shown. has_next_page is false on the last page, on a page past the last one (Amazon stops near page 20) and when nothing matches the query; then Amazon can still show a few unrelated sponsored products. Organic results are stable per page but sponsored slots rotate between fetches.
 
 - Site: amazon.com
 - Address: `reduck/amazon.com/search-products`
-- Updated: 2026-10-08 (v12)
+- Updated: 2026-10-14 (v13)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -26,14 +26,15 @@ npx @reduck-ai/cli@latest run --script reduck/amazon.com/search-products
 - `url` (string, required)
 - `zip` (string, required)
 - `page` (integer, required)
-- `items` (array, required)
+- `items` (array, required): The results in page order, sponsored ones included. When nothing matches the query, Amazon can still show a few sponsored products that are not about it.
 - `query` (string, required)
+- `has_next_page` (boolean, required): True when Amazon offers a next page of results for this search. False on the last page, on a page past the last one, and when nothing matches the query.
 
 ## FAQ
 
 ### What does "Search Amazon products" do?
 
-Search Amazon by free-text query and return one page of results. Returns query, page, zip, url, and items (asin, title, url, price, list_price, rating, review_count, image_url, sponsored, formats). formats lists each edition a result links to (for example Hardcover, Kindle and Audiobook for a book), with its own ASIN, URL and price when shown. Organic results are stable per page but sponsored slots rotate between fetches; pagination caps around 20 pages.
+Search Amazon by free-text query and return one page of results. Returns query, page, zip, url, has_next_page and items (asin, title, url, price, list_price, rating, review_count, image_url, sponsored, formats). formats lists each edition a result links to (for example Hardcover, Kindle and Audiobook for a book), with its own ASIN, URL and price when shown. has_next_page is false on the last page, on a page past the last one (Amazon stops near page 20) and when nothing matches the query; then Amazon can still show a few unrelated sponsored products. Organic results are stable per page but sponsored slots rotate between fetches.
 
 ### How do I automatically search Amazon products on amazon.com?
 
@@ -49,7 +50,7 @@ Required: query. Optional: page, zipCode.
 
 ### What does it return?
 
-It returns url, zip, page, items, query.
+It returns url, zip, page, items, query, has_next_page.
 
 ### Do I need to be logged in to amazon.com?
 

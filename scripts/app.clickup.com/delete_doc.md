@@ -4,7 +4,7 @@ Automatically delete a ClickUp Doc on app.clickup.com. Moves a ClickUp Doc to th
 
 - Site: app.clickup.com
 - Address: `reduck/app.clickup.com/delete_doc`
-- Updated: 2026-09-24 (v1)
+- Updated: 2026-10-14 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -63,7 +63,7 @@ Yes. It acts as you on app.clickup.com: on your own Chrome it reuses your sessio
 
 ### Does it change anything on app.clickup.com, or only read data?
 
-It makes changes on app.clickup.com, like sending, posting or booking something.
+It makes changes on app.clickup.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

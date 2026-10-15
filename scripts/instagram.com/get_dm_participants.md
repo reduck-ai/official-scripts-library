@@ -4,7 +4,7 @@ Automatically get Instagram DM participants on instagram.com. List the participa
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/get_dm_participants`
-- Updated: 2026-09-03 (v1)
+- Updated: 2026-10-14 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

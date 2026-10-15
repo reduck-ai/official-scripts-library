@@ -4,7 +4,7 @@ Automatically search Instagram hashtags on instagram.com. Search Instagram hasht
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/search_hashtag`
-- Updated: 2026-09-03 (v4)
+- Updated: 2026-10-14 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,7 +18,7 @@ npx @reduck-ai/cli@latest run --script reduck/instagram.com/search_hashtag
 ## Input
 
 - `query` (string, required): Hashtag term without the leading #, e.g. "space".
-- `count` (integer, optional): Upper bound on hashtags returned. Instagram caps its own hashtag suggestions at about 5 no matter what is requested, so this only ever limits downward — asking for 20 still yields about 5.
+- `count` (integer, optional): Upper bound on hashtags returned. Instagram may suggest fewer than this.
 
 ## FAQ
 
@@ -40,7 +40,7 @@ Required: query. Optional: count.
 
 ### Do I need to be logged in to instagram.com?
 
-Yes. It acts as you on instagram.com: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the instagram.com cookies saved by the Reduck extension.
+No. It only uses pages of instagram.com that are reachable without signing in.
 
 ### Does it change anything on instagram.com, or only read data?
 

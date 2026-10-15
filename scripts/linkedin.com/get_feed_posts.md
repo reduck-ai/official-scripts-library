@@ -4,7 +4,7 @@ Automatically get LinkedIn feed posts on linkedin.com. Get posts from the logged
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_feed_posts`
-- Updated: 2026-09-03 (v12)
+- Updated: 2026-10-14 (v13)
 - Author: Reduck AI (reduck)
 
 ## Run it

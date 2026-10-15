@@ -4,7 +4,7 @@ Automatically get Instagram DM inbox on instagram.com. List the state of every D
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/get_inbox`
-- Updated: 2026-10-07 (v4)
+- Updated: 2026-10-14 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,7 +18,7 @@ npx @reduck-ai/cli@latest run --script reduck/instagram.com/get_inbox
 ## Input
 
 - `count` (number, optional): Max conversations to fetch; 0 = every page Instagram serves.
-- `since` (string, optional): Optional ISO datetime. Return only conversations whose last activity is at or after this instant, and stop paginating once older activity is reached — this is how a caller polls for new messages. Threads with no resolvable timestamp are always returned, never silently dropped.
+- `since` (string, optional): Optional ISO datetime. Stop loading older pages once a conversation older than this is reached: this is how a caller polls for new messages. Every conversation read is returned, including the few older ones on the last page read; compare last_activity against since to keep the new ones. reached_since says whether the cutoff was reached.
 
 ## Output
 

@@ -4,7 +4,7 @@ Automatically get YouTube video on youtube.com. Get a single YouTube video's met
 
 - Site: youtube.com
 - Address: `reduck/youtube.com/get_video`
-- Updated: 2026-08-14 (v1)
+- Updated: 2026-10-14 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

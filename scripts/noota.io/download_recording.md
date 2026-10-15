@@ -4,7 +4,7 @@ Automatically download meeting recording on noota.io. Opens one of your Noota me
 
 - Site: noota.io
 - Address: `reduck/noota.io/download_recording`
-- Updated: 2026-09-28 (v1)
+- Updated: 2026-10-14 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -1,10 +1,10 @@
 # Get Instagram DM attachment
 
-Automatically get Instagram DM attachment on instagram.com. Download the media attached to an Instagram DM message (photo, video, clip/reel share, voice note) by thread_id plus message id. Returns filename, mimeType, size and the bytes as base64, plus the direct media URL. Omit the message id to take the most recent media in the thread.
+Automatically get Instagram DM attachment on instagram.com. Download the media attached to an Instagram DM message (photo, video, GIF, shared post preview) by thread_id plus message id (from get_dm_messages), among the thread's 20 most recent messages. Returns filename, mimeType, size and the bytes as base64, plus the direct media URL. Omit the message id to take the most recent media in the thread. base64 is null when the media exceeds maxBytes, and for GIFs, whose server does not let the page read them: mediaUrl is still returned.
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/get_dm_attachment`
-- Updated: 2026-09-03 (v1)
+- Updated: 2026-10-14 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -38,7 +38,7 @@ npx @reduck-ai/cli@latest run --script reduck/instagram.com/get_dm_attachment
 
 ### What does "Get Instagram DM attachment" do?
 
-Download the media attached to an Instagram DM message (photo, video, clip/reel share, voice note) by thread_id plus message id. Returns filename, mimeType, size and the bytes as base64, plus the direct media URL. Omit the message id to take the most recent media in the thread.
+Download the media attached to an Instagram DM message (photo, video, GIF, shared post preview) by thread_id plus message id (from get_dm_messages), among the thread's 20 most recent messages. Returns filename, mimeType, size and the bytes as base64, plus the direct media URL. Omit the message id to take the most recent media in the thread. base64 is null when the media exceeds maxBytes, and for GIFs, whose server does not let the page read them: mediaUrl is still returned.
 
 ### How do I automatically get Instagram DM attachment on instagram.com?
 

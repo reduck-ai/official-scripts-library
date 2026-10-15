@@ -4,7 +4,7 @@ Automatically unsend an Instagram DM on instagram.com. Remove a message you sent
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/unsend_message`
-- Updated: 2026-09-22 (v5)
+- Updated: 2026-10-14 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -59,7 +59,7 @@ Yes. It acts as you on instagram.com: on your own Chrome it reuses your session,
 
 ### Does it change anything on instagram.com, or only read data?
 
-It makes changes on instagram.com, like sending, posting or booking something.
+It makes changes on instagram.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

@@ -1,10 +1,10 @@
 # Get Instagram DM messages
 
-Automatically get Instagram DM messages on instagram.com. Read the messages of a DM conversation by thread_id (get the thread_id from get_inbox). count=0 fetches every page. Returns thread_id, title, users, count, and messages in chronological order (oldest to newest), each with sent_by_me, sender, type, text, timestamp, and date (ISO). Timestamps are microsecond epochs; text is null for non-text items (use type, e.g. clip/media_share/like/action_log); sender is null for your own messages (sent_by_me=true).
+Automatically get Instagram DM messages on instagram.com. Read the messages of a DM conversation by thread_id (get the thread_id from get_inbox). count=0 fetches every page. Returns thread_id, title, users, last_seen_at, count, and messages in chronological order (oldest to newest), each with id, sent_by_me, sender, type (Instagram's own content type for text, images, videos, GIFs, shared posts and so on), text, timestamp, date (ISO), status and reactions. Timestamps are microsecond epochs; text is null for messages without text; sender is null for your own messages (sent_by_me=true). Reactions carry no time.
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/get_dm_messages`
-- Updated: 2026-09-15 (v8)
+- Updated: 2026-10-14 (v16)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -24,6 +24,7 @@ npx @reduck-ai/cli@latest run --script reduck/instagram.com/get_dm_messages
 
 - `count` (number, required)
 - `users` (array, required)
+- `complete` (boolean, required): True when the whole conversation was read; false when count stopped the read before the oldest message.
 - `messages` (array, required)
 - `thread_id` (string, required)
 - `last_seen_at` (array, required): Per-participant read position for the thread, as Instagram reports it. Empty when Instagram returns none.
@@ -33,7 +34,7 @@ npx @reduck-ai/cli@latest run --script reduck/instagram.com/get_dm_messages
 
 ### What does "Get Instagram DM messages" do?
 
-Read the messages of a DM conversation by thread_id (get the thread_id from get_inbox). count=0 fetches every page. Returns thread_id, title, users, count, and messages in chronological order (oldest to newest), each with sent_by_me, sender, type, text, timestamp, and date (ISO). Timestamps are microsecond epochs; text is null for non-text items (use type, e.g. clip/media_share/like/action_log); sender is null for your own messages (sent_by_me=true).
+Read the messages of a DM conversation by thread_id (get the thread_id from get_inbox). count=0 fetches every page. Returns thread_id, title, users, last_seen_at, count, and messages in chronological order (oldest to newest), each with id, sent_by_me, sender, type (Instagram's own content type for text, images, videos, GIFs, shared posts and so on), text, timestamp, date (ISO), status and reactions. Timestamps are microsecond epochs; text is null for messages without text; sender is null for your own messages (sent_by_me=true). Reactions carry no time.
 
 ### How do I automatically get Instagram DM messages on instagram.com?
 
@@ -49,7 +50,7 @@ Required: thread_id. Optional: count.
 
 ### What does it return?
 
-It returns count, title, users, messages, thread_id, last_seen_at.
+It returns count, title, users, complete, messages, thread_id, last_seen_at.
 
 ### Do I need to be logged in to instagram.com?
 

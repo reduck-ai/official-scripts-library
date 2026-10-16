@@ -4,7 +4,7 @@ Automatically search Perplexity chats on perplexity.ai. Type a topic you remembe
 
 - Site: perplexity.ai
 - Address: `reduck/perplexity.ai/search_chats`
-- Updated: 2026-10-05 (v1)
+- Updated: 2026-10-15 (v2)
 - Author: Reduck AI (reduck)
 
 ## About

@@ -4,7 +4,7 @@ Automatically get Leboncoin ad on leboncoin.fr. Fetch a single Leboncoin classif
 
 - Site: leboncoin.fr
 - Address: `reduck/leboncoin.fr/get_ad`
-- Updated: 2026-09-14 (v4)
+- Updated: 2026-10-15 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/leboncoin.fr/get_ad
 
 ## Input
 
-- `url` (string, required): Full Leboncoin ad URL, e.g. 'https://www.leboncoin.fr/ad/voitures/1234567890' (as returned by the search script's ads[].url).
+- `url` (string, required): Leboncoin ad URL, e.g. 'https://www.leboncoin.fr/ad/voitures/1234567890', as returned by the search script's ads[].url.
 
 ## Output
 

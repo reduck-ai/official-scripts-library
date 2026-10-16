@@ -4,7 +4,7 @@ Automatically invite user to GitHub org on github.com. Invite a person to a GitH
 
 - Site: github.com
 - Address: `reduck/github.com/create_user`
-- Updated: 2026-08-27 (v5)
+- Updated: 2026-10-15 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -27,6 +27,7 @@ npx @reduck-ai/cli@latest run --script reduck/github.com/create_user
 - `role` (string, required)
 - `message` (string | null, required): The confirmation banner text shown after sending the invitation.
 - `identifier` (string, required)
+- `reinstated` (boolean, optional): True when the person was a former member and GitHub re-invited them with their previous privileges (their previous role applies, not the role argument).
 
 ## FAQ
 
@@ -48,7 +49,7 @@ Required: org, identifier. Optional: role.
 
 ### What does it return?
 
-It returns org, role, message, identifier.
+It returns org, role, message, identifier, reinstated.
 
 ### Do I need to be logged in to github.com?
 
@@ -56,7 +57,7 @@ Yes. It acts as you on github.com: on your own Chrome it reuses your session, an
 
 ### Does it change anything on github.com, or only read data?
 
-It makes changes on github.com, like sending, posting or booking something.
+It makes changes on github.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

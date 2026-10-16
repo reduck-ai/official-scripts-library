@@ -911,7 +911,7 @@
 			"address": "@reduck/canva.com/whoami",
 			"path": "scripts/canva.com/whoami.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/canva.com/whoami",
-			"lastmod": "2026-10-02"
+			"lastmod": "2026-10-15"
 		},
 		{
 			"address": "@reduck/capterra.com/get_product_reviews",
@@ -2243,13 +2243,13 @@
 			"address": "@reduck/github.com/change_role",
 			"path": "scripts/github.com/change_role.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/github.com/change_role",
-			"lastmod": "2026-08-27"
+			"lastmod": "2026-10-15"
 		},
 		{
 			"address": "@reduck/github.com/create_user",
 			"path": "scripts/github.com/create_user.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/github.com/create_user",
-			"lastmod": "2026-08-27"
+			"lastmod": "2026-10-15"
 		},
 		{
 			"address": "@reduck/github.com/delete_user",
@@ -2669,7 +2669,7 @@
 			"address": "@reduck/instagram.com/get_post_comments",
 			"path": "scripts/instagram.com/get_post_comments.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/instagram.com/get_post_comments",
-			"lastmod": "2026-09-03"
+			"lastmod": "2026-10-15"
 		},
 		{
 			"address": "@reduck/instagram.com/get_post_likers",
@@ -2687,7 +2687,7 @@
 			"address": "@reduck/instagram.com/get_saved_posts",
 			"path": "scripts/instagram.com/get_saved_posts.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/instagram.com/get_saved_posts",
-			"lastmod": "2026-10-02"
+			"lastmod": "2026-10-15"
 		},
 		{
 			"address": "@reduck/instagram.com/get_stories",
@@ -2963,7 +2963,7 @@
 			"address": "@reduck/leboncoin.fr/get_ad",
 			"path": "scripts/leboncoin.fr/get_ad.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/leboncoin.fr/get_ad",
-			"lastmod": "2026-09-14"
+			"lastmod": "2026-10-15"
 		},
 		{
 			"address": "@reduck/leboncoin.fr/get_seller_profile",
@@ -2993,13 +2993,13 @@
 			"address": "@reduck/leboncoin.fr/search",
 			"path": "scripts/leboncoin.fr/search.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/leboncoin.fr/search",
-			"lastmod": "2026-10-05"
+			"lastmod": "2026-10-15"
 		},
 		{
 			"address": "@reduck/leboncoin.fr/whoami",
 			"path": "scripts/leboncoin.fr/whoami.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/leboncoin.fr/whoami",
-			"lastmod": "2026-09-29"
+			"lastmod": "2026-10-15"
 		},
 		{
 			"address": "@reduck/lemlist.com/add_lead_to_campaign",
@@ -3107,7 +3107,7 @@
 			"address": "@reduck/linkedin.com/connect_with_note",
 			"path": "scripts/linkedin.com/connect_with_note.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/linkedin.com/connect_with_note",
-			"lastmod": "2026-09-15"
+			"lastmod": "2026-10-15"
 		},
 		{
 			"address": "@reduck/linkedin.com/connect",
@@ -3215,7 +3215,7 @@
 			"address": "@reduck/linkedin.com/get_company_posts",
 			"path": "scripts/linkedin.com/get_company_posts.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/linkedin.com/get_company_posts",
-			"lastmod": "2026-10-05"
+			"lastmod": "2026-10-15"
 		},
 		{
 			"address": "@reduck/linkedin.com/get_connections",
@@ -4409,7 +4409,7 @@
 			"address": "@reduck/perplexity.ai/search_chats",
 			"path": "scripts/perplexity.ai/search_chats.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/perplexity.ai/search_chats",
-			"lastmod": "2026-10-05"
+			"lastmod": "2026-10-15"
 		},
 		{
 			"address": "@reduck/perplexity.ai/whoami",
@@ -5417,7 +5417,7 @@
 			"address": "@reduck/sncf-connect.com/get_current_user",
 			"path": "scripts/sncf-connect.com/get_current_user.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/sncf-connect.com/get_current_user",
-			"lastmod": "2026-10-05"
+			"lastmod": "2026-10-15"
 		},
 		{
 			"address": "@reduck/sncf-connect.com/list_tickets",

@@ -4,7 +4,7 @@ Automatically search Leboncoin ads on leboncoin.fr. Up to 35 ads per call, each 
 
 - Site: leboncoin.fr
 - Address: `reduck/leboncoin.fr/search`
-- Updated: 2026-10-05 (v6)
+- Updated: 2026-10-15 (v7)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -21,18 +21,23 @@ npx @reduck-ai/cli@latest run --script reduck/leboncoin.fr/search
 
 ## Input
 
-- `page` (integer, optional): Page index (capped at max_pages=100).
+- `page` (integer, optional): Page index, 35 ads per page (capped at max_pages=100). A page past the last one fails with the page count.
+- `sort` (any, optional): Result order. newest orders on listed_at. Promoted ads are placed among the results whatever the order.
 - `text` (string, optional): Free-text query, e.g. 'iphone 13' or 'table en chêne'. The aliases query, keyword and keywords are accepted for the same thing; pass whichever you have.
-- `query` (string, optional): Alias for text. Accepted because it is a common name for a search term; it behaves identically.
-- `keyword` (string, optional): Alias for text. Accepted because it is a common name for a search term; it behaves identically.
-- `keywords` (string, optional): Alias for text. Accepted because it is a common name for a search term; it behaves identically.
+- `query` (string, optional): Alias for text.
+- `keyword` (string, optional): Alias for text.
+- `category` (string, optional): Leboncoin category id, as category_id in the results (e.g. '55' for bikes, '17' for phones). Omit to search every category.
+- `keywords` (string, optional): Alias for text.
 - `locations` (any, optional): City name, a comma-separated list of cities, or an array of city names, e.g. 'Paris', 'Paris,Lyon' or ['Paris','Lyon']. An empty array counts as no location filter.
+- `price_max` (integer, optional): Highest price in euros, inclusive.
+- `price_min` (integer, optional): Lowest price in euros, inclusive.
+- `owner_type` (any, optional): Only ads from private sellers, or only from professional sellers. Omit for both.
 
 ## Output
 
 - `ads` (array, required)
 - `count` (integer, required)
-- `total` (integer, required)
+- `total` (integer, required): Number of ads Leboncoin reports for this search.
 - `max_pages` (integer, required)
 
 ## Example output
@@ -49,6 +54,8 @@ Shape only: placeholder values generated from the output schema, not a real run.
       "title": "Example",
       "zipcode": "…",
       "currency": "…",
+      "promoted": true,
+      "listed_at": "2026-01-15T09:30:00Z",
       "price_eur": 3.5,
       "thumb_url": "https://example.com/item/123",
       "category_id": "abc123",
@@ -68,7 +75,7 @@ Shape only: placeholder values generated from the output schema, not a real run.
 
 ### What does "Search Leboncoin ads" do?
 
-Search Leboncoin classifieds by keyword and/or location. Returns total, max_pages, count, and ads (each with id, url, title, price_eur, currency, city, zipcode, category_id, category_name, seller_type, published_at, thumb_url, image_count). Paging is capped at max_pages=100.
+Search Leboncoin classifieds by keyword, location, category, price range and seller type, sorted by relevance, newest or price. Returns total, max_pages, count and one page of 35 ads (id, url, title, price, city, zipcode, category, seller type, publication and listing dates, thumbnail, photo count, and whether the ad is promoted). Leboncoin places promoted ads among the results whatever the sort. A search with no match returns an empty list; a page past the last one fails with the page count.
 
 ### How do I automatically search Leboncoin ads on leboncoin.fr?
 
@@ -80,7 +87,7 @@ You do not need one. "Search Leboncoin ads" drives the real leboncoin.fr pages i
 
 ### What information do I need to provide?
 
-Optional: page, text, query, keyword, keywords, locations.
+Optional: page, sort, text, query, keyword, category, keywords, locations, price_max, price_min, owner_type.
 
 ### What does it return?
 

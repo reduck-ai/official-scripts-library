@@ -4,7 +4,7 @@ Automatically get LinkedIn company posts on linkedin.com. You get up to the 50 n
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_company_posts`
-- Updated: 2026-10-05 (v12)
+- Updated: 2026-10-15 (v14)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -21,14 +21,14 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/get_company_posts
 
 ## Input
 
-- `company` (string, required): LinkedIn company page URL (e.g. https://www.linkedin.com/company/fintech-collective/) or bare slug (fintech-collective).
-- `count` (integer, optional): How many of the most recent posts to return. Default 10 (one feed fetch); above 10 the script scroll-paginates by 10 per round. Capped at 50.
+- `company` (string, required): LinkedIn company page URL (e.g. https://www.linkedin.com/company/anthropicresearch/) or its slug (anthropicresearch).
+- `count` (integer, optional): How many of the most recent posts to return. Default 10.
 
 ## Output
 
-- `posts` (array, required): Newest first (ordered by activity id, which encodes the timestamp — NOT by the feed's display order).
-- `total` (integer, required): Total posts on the page, from the feed module's paging metadata in the cold SSR blob. 0 with posts:[] = page has never posted ('No posts yet' state, first-class outcome).
-- `company` (string, required): Slug as requested (after URL parsing).
+- `posts` (array, required): Newest first.
+- `company` (string, required): The company slug, as requested.
+- `complete` (boolean, required): True when the page has no more posts than these. False when count stopped the list first.
 
 ## Example output
 
@@ -38,19 +38,18 @@ Shape only: placeholder values generated from the output schema, not a real run.
 {
   "posts": [
     {
-      "age": "…",
       "url": "https://example.com/item/123",
+      "urn": "…",
       "text": "…",
       "reposts": 3,
       "comments": 3,
       "isRepost": true,
       "postedAt": "2026-01-15T09:30:00Z",
-      "reactions": 3,
-      "activityId": "abc123"
+      "reactions": 3
     }
   ],
-  "total": 3,
-  "company": "…"
+  "company": "…",
+  "complete": true
 }
 ```
 
@@ -58,7 +57,7 @@ Shape only: placeholder values generated from the output schema, not a real run.
 
 ### What does "Get LinkedIn company posts" do?
 
-Get the most recent posts of a LinkedIn company page (newest first) from its URL or slug, up to count. Returns company, total, and posts (activityId, url, text, postedAt, age, isRepost, reactions, comments, reposts).
+Get the most recent posts of a LinkedIn company page, newest first, from its URL or slug, up to count (default 10, at most 50). Returns each post's id and link, full text, publication time, whether the company reposted it, and its reaction, comment and repost counts, plus complete: true when the page has no more posts than these. A page that has never posted returns an empty list. An unknown company fails with a clear error.
 
 ### How do I automatically get LinkedIn company posts on linkedin.com?
 
@@ -74,7 +73,7 @@ Required: company. Optional: count.
 
 ### What does it return?
 
-It returns posts, total, company.
+It returns posts, company, complete.
 
 ### Do I need to be logged in to linkedin.com?
 

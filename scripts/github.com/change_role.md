@@ -1,10 +1,10 @@
 # Change GitHub org member's role
 
-Automatically change GitHub org member's role on github.com. Change an existing GitHub org member's role between Member and Owner (via People > row menu > Change role). Identify the member by their GitHub username/login (not their invite email — this only works on accepted members, not pending invitations). Returns the confirmation banner text.
+Automatically change GitHub org member's role on github.com. Change a GitHub organization member's role between member and owner. Identify the member by their GitHub username (accepted members only; a pending invitation has no role to change). Returns GitHub's confirmation message. Fails clearly when the member is not in the organization, when the member is the organization's last owner, or when GitHub asks the signed-in owner to confirm access first.
 
 - Site: github.com
 - Address: `reduck/github.com/change_role`
-- Updated: 2026-08-27 (v3)
+- Updated: 2026-10-15 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -32,7 +32,7 @@ npx @reduck-ai/cli@latest run --script reduck/github.com/change_role
 
 ### What does "Change GitHub org member's role" do?
 
-Change an existing GitHub org member's role between Member and Owner (via People > row menu > Change role). Identify the member by their GitHub username/login (not their invite email — this only works on accepted members, not pending invitations). Returns the confirmation banner text.
+Change a GitHub organization member's role between member and owner. Identify the member by their GitHub username (accepted members only; a pending invitation has no role to change). Returns GitHub's confirmation message. Fails clearly when the member is not in the organization, when the member is the organization's last owner, or when GitHub asks the signed-in owner to confirm access first.
 
 ### How do I automatically change GitHub org member's role on github.com?
 
@@ -56,7 +56,7 @@ Yes. It acts as you on github.com: on your own Chrome it reuses your session, an
 
 ### Does it change anything on github.com, or only read data?
 
-It makes changes on github.com, like sending, posting or booking something.
+It makes changes on github.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

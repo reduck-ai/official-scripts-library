@@ -1,10 +1,10 @@
-# Get current user
+# Get the signed-in SNCF Connect user
 
-Automatically get current user on sncf-connect.com. Report which SNCF Connect account this browser is signed in as: name and email from the account's personal-info page. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other SNCF Connect scripts.
+Automatically get the signed-in SNCF Connect user on sncf-connect.com. Report which SNCF Connect account this browser is signed in as: name and email from the account's personal-info page. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other SNCF Connect scripts.
 
 - Site: sncf-connect.com
 - Address: `reduck/sncf-connect.com/get_current_user`
-- Updated: 2026-10-05 (v5)
+- Updated: 2026-10-15 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -27,17 +27,17 @@ It takes no input.
 
 ## FAQ
 
-### What does "Get current user" do?
+### What does "Get the signed-in SNCF Connect user" do?
 
 Report which SNCF Connect account this browser is signed in as: name and email from the account's personal-info page. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other SNCF Connect scripts.
 
-### How do I automatically get current user on sncf-connect.com?
+### How do I automatically get the signed-in SNCF Connect user on sncf-connect.com?
 
 Ask an AI agent connected to Reduck to run reduck/sncf-connect.com/get_current_user, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/sncf-connect.com/get_current_user
 
-### Is there a sncf-connect.com API to get current user?
+### Is there a sncf-connect.com API to get the signed-in SNCF Connect user?
 
-You do not need one. "Get current user" drives the real sncf-connect.com pages in a browser, so it works whether or not sncf-connect.com offers an API for this.
+You do not need one. "Get the signed-in SNCF Connect user" drives the real sncf-connect.com pages in a browser, so it works whether or not sncf-connect.com offers an API for this.
 
 ### What information do I need to provide?
 

@@ -1,10 +1,10 @@
 # List the signed-in account's saved Instagram posts
 
-Automatically list the signed-in account's saved Instagram posts on instagram.com. List the posts the signed-in Instagram account has saved (bookmarked), from the "All posts" saved collection. Returns each post's code (the /p/&lt;code&gt;/ URL segment), owner username, caption text, like count, and taken-at timestamp. Only you can see what you've saved — this is your own private list.
+Automatically list the signed-in account's saved Instagram posts on instagram.com. List the posts the signed-in Instagram account has saved (bookmarked), from the "All posts" saved collection. Returns each post's short code and link, owner username, caption text, like count, and taken-at timestamp, plus whether more saved posts exist. An account with nothing saved returns an empty list. Only you can see what you've saved: this is your own private list.
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/get_saved_posts`
-- Updated: 2026-10-02 (v4)
+- Updated: 2026-10-15 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,7 +29,7 @@ It takes no input.
 
 ### What does "List the signed-in account's saved Instagram posts" do?
 
-List the posts the signed-in Instagram account has saved (bookmarked), from the "All posts" saved collection. Returns each post's code (the /p/&lt;code&gt;/ URL segment), owner username, caption text, like count, and taken-at timestamp. Only you can see what you've saved — this is your own private list.
+List the posts the signed-in Instagram account has saved (bookmarked), from the "All posts" saved collection. Returns each post's short code and link, owner username, caption text, like count, and taken-at timestamp, plus whether more saved posts exist. An account with nothing saved returns an empty list. Only you can see what you've saved: this is your own private list.
 
 ### How do I automatically list the signed-in account's saved Instagram posts on instagram.com?
 

@@ -1,10 +1,10 @@
-# Luma unofficial API: search events by topic or city
+# Search Luma events
 
-Automatically search events by topic or city on luma.com. An unofficial Luma API: search public events by topic or city programmatically, from code or from an AI agent, with typed JSON in and out. Luma's official API is for hosts managing their own events and has no public event search.
+Automatically search Luma events on luma.com. An unofficial Luma API: search public events by topic or city programmatically, from code or from an AI agent, with typed JSON in and out. Luma's official API is for hosts managing their own events and has no public event search.
 
 - Site: luma.com
 - Address: `reduck/luma.com/search_events`
-- Updated: 2026-10-06 (v5)
+- Updated: 2026-10-16 (v6)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -23,10 +23,10 @@ npx @reduck-ai/cli@latest run --script reduck/luma.com/search_events
 
 - `city` (string, optional): Curated Luma city slug to filter by (e.g. "paris", "london", "new-york"). Mutually exclusive with topic.
 - `limit` (integer, optional): Max events to return per call. Default 25.
-- `topic` (string, optional): Category slug to filter by (e.g. "crypto", "arts-culture", "fitness"). Mutually exclusive with city. Some categories are only served per-place and cannot be browsed globally; those fail naming the slug, and the way to browse them is `city`.
+- `topic` (string, optional): Category slug to filter by (e.g. "crypto", "arts-culture", "fitness"). Mutually exclusive with city. Some categories are only served per place and cannot be browsed globally; those fail naming the slug, and the way to browse them is `city`.
 - `cursor` (string, optional): Pagination cursor from a previous call's next_cursor.
-- `latitude` (number, optional): Optional latitude to bias/sort results by proximity. Only affects ordering — it does NOT satisfy a category that Luma serves per-place.
-- `longitude` (number, optional): Optional longitude to bias/sort results by proximity. Only affects ordering — it does NOT satisfy a category that Luma serves per-place.
+- `latitude` (number, optional): Optional latitude to sort results by proximity. It only changes the order; it does not satisfy a category that Luma serves per place.
+- `longitude` (number, optional): Optional longitude to sort results by proximity. It only changes the order; it does not satisfy a category that Luma serves per place.
 
 ## Output
 
@@ -68,17 +68,17 @@ Shape only: placeholder values generated from the output schema, not a real run.
 
 ## FAQ
 
-### What does "Luma unofficial API: search events by topic or city" do?
+### What does "Search Luma events" do?
 
-Search upcoming public events on Luma, filtered by a category topic (e.g. "crypto", "fitness") or a curated city (e.g. "paris", "london"), paginated.
+Search upcoming public events on Luma by category topic (e.g. "crypto", "fitness") or by curated city (e.g. "paris", "london"), one page at a time: pass next_cursor back as cursor for the next page.
 
-### How do I automatically search events by topic or city on luma.com?
+### How do I automatically search Luma events on luma.com?
 
 Ask an AI agent connected to Reduck to run reduck/luma.com/search_events, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/luma.com/search_events
 
-### Is there a luma.com API to search events by topic or city?
+### Is there a luma.com API to search Luma events?
 
-You do not need one. "Luma unofficial API: search events by topic or city" drives the real luma.com pages in a browser, so it works whether or not luma.com offers an API for this.
+You do not need one. "Search Luma events" drives the real luma.com pages in a browser, so it works whether or not luma.com offers an API for this.
 
 ### What information do I need to provide?
 

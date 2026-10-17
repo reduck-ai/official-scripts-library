@@ -1,10 +1,10 @@
 # Search Reddit
 
-Automatically search Reddit on reddit.com. Search posts across all of Reddit (no subreddit restriction), with optional sort and time window. Returns count and threads (each with id, url, title, author, subreddit, score, num_comments, created, nsfw, preview_text). `limit` is a maximum: fewer matching posts than requested returns however many exist. Useful to discover which subreddits discuss a topic. The sort changes how relevant the results are: `top` orders Reddit's matches by score, and because Reddit matches loosely, a heavily upvoted post only tangentially related to the query can outrank the genuine matches. That is Reddit's own ranking, returned as-is. Use the default `relevance` sort when on-topic results matter, and treat a non-zero count under `top` as "Reddit returned something", not as proof the posts are about the topic. Reddit refuses connections from datacenter addresses, so this works as-is on your own browser; on a hosted cloud browser the session has to be given a country so it exits through a residential address, otherwise Reddit blocks it and the script says so.
+Automatically search Reddit on reddit.com. Search posts across all of Reddit, with Reddit's own sort and time window. Returns count and threads (id, url, title, author, subreddit, score, num_comments, created, nsfw, preview_text) in the order Reddit lists them. `limit` is a maximum: fewer matching posts return what exists, and no match returns count 0. Reddit matches loosely, so under the `top` sort a heavily upvoted post only loosely related to the query can come before closer matches; use the default `relevance` sort when on-topic results matter.
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/search_reddit`
-- Updated: 2026-10-09 (v13)
+- Updated: 2026-10-16 (v16)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -22,17 +22,19 @@ npx @reduck-ai/cli@latest run --script reduck/reddit.com/search_reddit
 - `limit` (number, optional): Max results, paginating via the site's own infinite scroll (default 25)
 - `query` (string, optional): Alias for `topic` (accepted for compatibility — prefer `topic`).
 - `topic` (string, optional): Search query. Canonical name for this field; `query` is accepted as an alias.
+- `queries` (array, optional): Run several searches in one run (max 20), one after another in the same tab, instead of the single-query fields above. Each item takes the same fields (same defaults). Returns {results} with one answer per query, in order: {count, threads, error}, error null when fine. If Reddit serves a block/bot-check page or rate-limits (429), the remaining queries are not sent and carry that error.
 
 ## Output
 
-- `count` (number, required)
-- `threads` (array, required)
+- `count` (number, optional)
+- `results` (array, optional): Batch mode only: one answer per query, in order.
+- `threads` (any, optional)
 
 ## FAQ
 
 ### What does "Search Reddit" do?
 
-Search posts across all of Reddit (no subreddit restriction), with optional sort and time window. Returns count and threads (each with id, url, title, author, subreddit, score, num_comments, created, nsfw, preview_text). `limit` is a maximum: fewer matching posts than requested returns however many exist. Useful to discover which subreddits discuss a topic. The sort changes how relevant the results are: `top` orders Reddit's matches by score, and because Reddit matches loosely, a heavily upvoted post only tangentially related to the query can outrank the genuine matches. That is Reddit's own ranking, returned as-is. Use the default `relevance` sort when on-topic results matter, and treat a non-zero count under `top` as "Reddit returned something", not as proof the posts are about the topic. Reddit refuses connections from datacenter addresses, so this works as-is on your own browser; on a hosted cloud browser the session has to be given a country so it exits through a residential address, otherwise Reddit blocks it and the script says so.
+Search posts across all of Reddit, with Reddit's own sort and time window. Returns count and threads (id, url, title, author, subreddit, score, num_comments, created, nsfw, preview_text) in the order Reddit lists them. `limit` is a maximum: fewer matching posts return what exists, and no match returns count 0. Reddit matches loosely, so under the `top` sort a heavily upvoted post only loosely related to the query can come before closer matches; use the default `relevance` sort when on-topic results matter.
 
 ### How do I automatically search Reddit on reddit.com?
 
@@ -44,11 +46,11 @@ You do not need one. "Search Reddit" drives the real reddit.com pages in a brows
 
 ### What information do I need to provide?
 
-Optional: sort, time, limit, query, topic.
+Optional: sort, time, limit, query, topic, queries.
 
 ### What does it return?
 
-It returns count, threads.
+It returns count, results, threads.
 
 ### Do I need to be logged in to reddit.com?
 

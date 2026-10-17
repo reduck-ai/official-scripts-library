@@ -1,10 +1,10 @@
 # Get a tweet and its replies on X (Twitter)
 
-Automatically get a tweet and its replies on X (Twitter) on x.com. Fetch a tweet by URL — the focal post plus the surrounding conversation. Returns `tweet` (the focal post; null if deleted/tombstoned) and `replies[]`, which holds every other tweet on the conversation page: both the focal's ancestors (the thread above it, present when the focal is itself a reply; each has `in_reply_to` null or pointing above the focal) and the replies below it (`in_reply_to` points at the focal or a sibling reply). Use `in_reply_to` to tell ancestors from replies and rebuild the thread — the array is not filtered to descendants of the focal. Each entry is a canonical tweet record: id, url, author {id, handle, name}, text, created_at, lang, likes, retweets, replies, quotes, bookmarks, views, is_retweet, is_quote, in_reply_to {id, author_handle}. Scrolls the main thread until `count` is met (then complete=false — more may exist) or it drains (complete=true). Replies behind a "Show more replies"/hidden/probable-spam cursor are not expanded, so even complete=true is a floor, not a guarantee every nested reply was seen.
+Automatically get a tweet and its replies on X (Twitter) on x.com. Get a tweet on X (Twitter) by URL, with the conversation around it: `tweet` (the post itself) and `replies` (every other post of its conversation on the page: the thread above it when it is a reply, and the replies below; use in_reply_to to rebuild the thread). Each post has id, url, author, text, created_at, lang, counts, in_reply_to and quoted_tweet. With count, it loads more replies until it has count or X reaches the end. complete is true only when X reached the end and left no folded replies (Show replies, hidden or probable-spam sections), which this script does not open. A deleted or unavailable tweet is an error. Requires being signed in to X.
 
 - Site: x.com
 - Address: `reduck/x.com/get_tweet`
-- Updated: 2026-10-12 (v11)
+- Updated: 2026-10-16 (v13)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,23 +17,25 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/get_tweet
 
 ## Input
 
-- `tweet_url` (string, required): Full URL of the tweet, e.g. https://x.com/handle/status/123
 - `sort` (string, optional): Order of the replies, as in the page's Sort replies menu: relevance (X's default ranking), recency (newest first) or likes (most liked first).
 - `count` (integer, optional): How many replies to return. Without it, the script returns the first page X shows (often 20 to 40). With it, the script loads more until it has count, reaches the end, or X stops loading; complete says whether it reached the end.
+- `tweet_url` (string, optional): Full URL of the tweet, e.g. https://x.com/handle/status/123. Pass this or tweet_urls.
+- `tweet_urls` (array, optional): Several tweet URLs (max 10), read one after another in the same page, instead of tweet_url. sort and count apply to each. Returns {results}, one per URL in order, each with error null or what went wrong. A rate limit, lock or sign-in wall stops the batch: the remaining URLs carry that error.
 
 ## Output
 
-- `count` (integer, required): Number of replies returned. 0 is a valid answer.
-- `tweet` (object, required): The tweet at tweet_url. A deleted or unavailable tweet is an error.
-- `replies` (array, required)
-- `complete` (boolean, required): True when X showed the end of the conversation and every reply it sent is returned. False when there may be more. Replies behind "Show replies" are not opened, so true is a floor.
-- `tweet_id` (string, required)
+- `count` (integer, optional): Number of replies returned. 0 is a valid answer.
+- `tweet` (any, optional): The tweet at tweet_url. A deleted or unavailable tweet is an error.
+- `replies` (array, optional)
+- `results` (array, optional): With tweet_urls only: one result per URL, in order, with the same fields as a single answer (tweet, tweet_id, count, complete, replies) plus tweet_url and error. When error is set, only tweet_url and error are present.
+- `complete` (boolean, optional): True when X showed the end of the conversation and every reply it sent is returned. False when there may be more. Replies behind "Show replies" are not opened, so true is a floor.
+- `tweet_id` (string, optional)
 
 ## FAQ
 
 ### What does "Get a tweet and its replies on X (Twitter)" do?
 
-Fetch a tweet by URL — the focal post plus the surrounding conversation. Returns `tweet` (the focal post; null if deleted/tombstoned) and `replies[]`, which holds every other tweet on the conversation page: both the focal's ancestors (the thread above it, present when the focal is itself a reply; each has `in_reply_to` null or pointing above the focal) and the replies below it (`in_reply_to` points at the focal or a sibling reply). Use `in_reply_to` to tell ancestors from replies and rebuild the thread — the array is not filtered to descendants of the focal. Each entry is a canonical tweet record: id, url, author {id, handle, name}, text, created_at, lang, likes, retweets, replies, quotes, bookmarks, views, is_retweet, is_quote, in_reply_to {id, author_handle}. Scrolls the main thread until `count` is met (then complete=false — more may exist) or it drains (complete=true). Replies behind a "Show more replies"/hidden/probable-spam cursor are not expanded, so even complete=true is a floor, not a guarantee every nested reply was seen.
+Get a tweet on X (Twitter) by URL, with the conversation around it: `tweet` (the post itself) and `replies` (every other post of its conversation on the page: the thread above it when it is a reply, and the replies below; use in_reply_to to rebuild the thread). Each post has id, url, author, text, created_at, lang, counts, in_reply_to and quoted_tweet. With count, it loads more replies until it has count or X reaches the end. complete is true only when X reached the end and left no folded replies (Show replies, hidden or probable-spam sections), which this script does not open. A deleted or unavailable tweet is an error. Requires being signed in to X.
 
 ### How do I automatically get a tweet and its replies on X (Twitter) on x.com?
 
@@ -45,11 +47,11 @@ You do not need one. "Get a tweet and its replies on X (Twitter)" drives the rea
 
 ### What information do I need to provide?
 
-Required: tweet_url. Optional: sort, count.
+Optional: sort, count, tweet_url, tweet_urls.
 
 ### What does it return?
 
-It returns count, tweet, replies, complete, tweet_id.
+It returns count, tweet, replies, results, complete, tweet_id.
 
 ### Do I need to be logged in to x.com?
 

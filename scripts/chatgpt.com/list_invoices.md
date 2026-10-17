@@ -1,10 +1,10 @@
 # ChatGPT billing: list your ChatGPT subscription invoices
 
-Automatically list your ChatGPT subscription invoices on chatgpt.com. ChatGPT subscription invoices, not the OpenAI API platform (that is platform.openai.com/list_invoices). List the billing history of every ChatGPT account the signed-in user belongs to — the personal account and each Business, Team or Enterprise workspace — whichever one the browser currently has open. Each invoice comes with its date, amount, currency, payment status, the plan it paid for, a link to the receipt, and the account it belongs to; a separate accounts list shows each account, how many invoices it has, and whether its billing could be read. The full history is returned, not only the most recent entries. Amounts come back in the currency's smallest unit, so 1917 means 19.17 EUR. When the browser is not signed in to ChatGPT, the result says so with signed_in set to false and empty lists; check it before reading an empty list as an account that was never billed. Feed hosted_invoice_url to invoice.stripe.com/download_invoice_pdf to get the PDF.
+Automatically list your ChatGPT subscription invoices on chatgpt.com. ChatGPT subscription invoices, not the OpenAI API platform. Lists the billing history of the ChatGPT account currently open in this browser, as its Billing page shows it: only that account's invoices, never those of the user's other accounts. To get another account's invoices, switch ChatGPT to that account, then run this again. A Business, Team or Enterprise workspace open in the browser has no personal Billing page, and the run fails saying so. Each invoice comes with its date, amount, currency, payment status, plan and a link to the invoice; the result also names the active account and lists every account the user belongs to. Amounts are in the currency's smallest unit, so 1917 means 19.17 EUR. The Billing page shows the most recent invoices first and this script cannot page further: when ChatGPT says older invoices exist, complete is false and next_cursor holds the cursor ChatGPT gave, but those older invoices are not returned. When the browser is not signed in to ChatGPT, the run fails with a not-signed-in error. Pass hosted_invoice_url to the Stripe invoice PDF download script to get the PDF.
 
 - Site: chatgpt.com
 - Address: `reduck/chatgpt.com/list_invoices`
-- Updated: 2026-09-30 (v10)
+- Updated: 2026-10-16 (v12)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -21,15 +21,18 @@ It takes no input.
 
 ## Output
 
-- `accounts` (array, required)
+- `account` (any, required): The account open in this browser, whose invoices are listed.
+- `accounts` (array, required): Every ChatGPT account the user belongs to; only the active one's invoices are listed.
+- `complete` (boolean, required): false when ChatGPT says the account has older invoices than the ones its Billing page loads.
 - `invoices` (array, required)
-- `signed_in` (boolean, required): false when this browser is not signed in to ChatGPT; invoices and accounts are then empty because nothing could be read, not because the account was never billed.
+- `signed_in` (boolean, required): Always true: a browser that is not signed in to ChatGPT makes the run fail with a not-signed-in error.
+- `next_cursor` (string | null, required): The cursor ChatGPT gave for its older invoices when complete is false; null otherwise. This script cannot page with it.
 
 ## FAQ
 
 ### What does "ChatGPT billing: list your ChatGPT subscription invoices" do?
 
-ChatGPT subscription invoices, not the OpenAI API platform (that is platform.openai.com/list_invoices). List the billing history of every ChatGPT account the signed-in user belongs to — the personal account and each Business, Team or Enterprise workspace — whichever one the browser currently has open. Each invoice comes with its date, amount, currency, payment status, the plan it paid for, a link to the receipt, and the account it belongs to; a separate accounts list shows each account, how many invoices it has, and whether its billing could be read. The full history is returned, not only the most recent entries. Amounts come back in the currency's smallest unit, so 1917 means 19.17 EUR. When the browser is not signed in to ChatGPT, the result says so with signed_in set to false and empty lists; check it before reading an empty list as an account that was never billed. Feed hosted_invoice_url to invoice.stripe.com/download_invoice_pdf to get the PDF.
+ChatGPT subscription invoices, not the OpenAI API platform. Lists the billing history of the ChatGPT account currently open in this browser, as its Billing page shows it: only that account's invoices, never those of the user's other accounts. To get another account's invoices, switch ChatGPT to that account, then run this again. A Business, Team or Enterprise workspace open in the browser has no personal Billing page, and the run fails saying so. Each invoice comes with its date, amount, currency, payment status, plan and a link to the invoice; the result also names the active account and lists every account the user belongs to. Amounts are in the currency's smallest unit, so 1917 means 19.17 EUR. The Billing page shows the most recent invoices first and this script cannot page further: when ChatGPT says older invoices exist, complete is false and next_cursor holds the cursor ChatGPT gave, but those older invoices are not returned. When the browser is not signed in to ChatGPT, the run fails with a not-signed-in error. Pass hosted_invoice_url to the Stripe invoice PDF download script to get the PDF.
 
 ### How do I automatically list your ChatGPT subscription invoices on chatgpt.com?
 
@@ -45,7 +48,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns accounts, invoices, signed_in.
+It returns account, accounts, complete, invoices, signed_in, next_cursor.
 
 ### Do I need to be logged in to chatgpt.com?
 

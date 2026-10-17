@@ -4,7 +4,7 @@ Brave's ranked results for any query or site: check, about 20 a page, with title
 
 - Site: search.brave.com
 - Address: `reduck/search.brave.com/search`
-- Updated: 2026-10-10 (v17)
+- Updated: 2026-10-16 (v22)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -21,22 +21,23 @@ npx @reduck-ai/cli@latest run --script reduck/search.brave.com/search
 
 ## Input
 
-- `query` (string, required): Search query. The operators site:, quoted phrases and OR are honored. site:domain also covers its subdomains (site:example.com returns docs.example.com), and site:domain/path narrows to a path prefix, which is the cheapest way to slice a large site.
+- `query` (string, optional): Search query. The operators site:, quoted phrases and OR are honored. site:domain also covers its subdomains (site:example.com returns docs.example.com), and site:domain/path narrows to a path prefix, which is the cheapest way to slice a large site.
 - `offset` (integer, optional): 0-based page index (0 is the first page, about 20 results). The pool behind one query is limited and its depth varies by query; past its end Brave re-serves earlier pages. hasMore in the output says whether a next page exists: keep paging while it is true, and dedupe on url anyway. Default 0.
 - `country` (string, optional): ISO-3166 alpha-2 country whose Brave results to read, e.g. "us". When omitted, Brave answers for the country of the browser's own network location, so the same query read from two places gives two different result pages. Pass it whenever readings must be comparable across browsers, or must stand in for another reader's, such as an assistant's US-side web search.
+- `queries` (array, optional): Run several searches in one run (max 10), one after another in the same tab, with a pause of a few seconds between them, instead of the single-query fields above. Each item takes the same fields. Returns {results} with one answer per query, in order, each with an error (null when fine). If Brave shows its anti-bot check, the remaining queries are not sent and carry that error.
 - `exactMatch` (boolean, optional): Deprecated; has no reliable effect, because Brave may correct spellings without saying so. To search a literal string, put it in quotes in query. Default false.
 
 ## Output
 
-- `count` (integer, required): How many result cards were extracted from THIS page — literally results.length. NOT a match count and NOT an estimate of what Brave holds for the query; there is no such number on the page. A full page reads ~16-20.
-- `query` (string, required)
-- `offset` (integer, required)
-- `hasMore` (boolean, required): Whether Brave offers a next page for this query — its pager's next-page control, enabled or disabled. false on a pool's last page and on an empty answer. This is the end-of-pool signal: page while true, dedupe on url regardless, because the last page can repeat an earlier one.
-- `results` (array, required): The page's organic web results, in rank order. EMPTY ONLY WHEN BRAVE SAID SO — see `emptyBecause`. If this script reads zero rows off a page that Brave answered normally it THROWS instead of returning [], because a silent empty is indistinguishable from a real one to any schema and would be read as 'the domain has nothing on this topic'.
-- `emptyBecause` (string | null, required): Why `results` is empty, in Brave's own terms — and null whenever `results` is non-empty. One of: the operators were relaxed (too few documents matched them), Brave's no-matches banner, or its no-results message. This is what makes an empty answer READABLE: an empty set is a fact about the query, never a scraper failure, because the failure case throws.
-- `operatorsApplied` (boolean, required): Whether Brave honored the operators in `query`. false = Brave found too few matching documents, dropped the operators and answered a RELAXED query instead (it shows a 'search operators were not applied — Too few matches were found' banner): `results` are then soft relevance over the whole web, NOT filtered, so treat them as empty for any hard-filter use such as a site: coverage check. ONLY MEANINGFUL WHEN `query` CONTAINS AN OPERATOR — for an operator-free query it is vacuously true. Detected language-independently via the banner's /help/operators link, with the English sentence as a fallback; either signal reports false, so it errs toward warning you.
+- `count` (integer, optional): How many results were read from this page (results.length). Not a match count.
+- `query` (string, optional)
+- `offset` (integer, optional)
 - `country` (string | null, optional): The country the results were read for, lowercased, as passed in; null when none was passed and the page is the egress's own locale.
-- `rewrittenTo` (string | null, optional): What Brave actually searched if it ANNOUNCED an auto-rewrite, else null. Read off the English 'Showing results for' line, so it stays null on a localized SERP — and also, measured, when Brave silently corrects a typo and announces nothing. null therefore means 'no rewrite was announced', never 'the literal query was searched'.
+- `hasMore` (boolean, optional): Whether Brave offers a next page for this query. false on a pool's last page and on an empty answer. Brave can re-serve an earlier page past the end, so dedupe on url.
+- `results` (array, optional): Single query: the page's organic web results, in rank order, empty only when Brave said so (see emptyBecause). With queries: one answer per query, in order.
+- `rewrittenTo` (string | null, optional): Always null: Brave announces a rewrite only in translated text, which is not read. Quote the query to stop Brave rewriting it.
+- `emptyBecause` (string | null, optional): Why results is empty, in Brave's own terms, and null whenever results is not empty.
+- `operatorsApplied` (boolean, optional): Whether Brave applied the operators in query. false means Brave answered a relaxed query instead, so results are not filtered by the operators.
 
 ## Example output
 
@@ -50,12 +51,7 @@ Shape only: placeholder values generated from the output schema, not a real run.
   "country": 3,
   "hasMore": true,
   "results": [
-    {
-      "age": "…",
-      "url": "https://example.com/item/123",
-      "title": "Example",
-      "snippet": "…"
-    }
+    "…"
   ],
   "rewrittenTo": "…",
   "emptyBecause": "…",
@@ -71,7 +67,7 @@ Search the web on Brave, one page of results at a time. Returns each result's ti
 
 ### What information do I need to provide?
 
-Required: query. Optional: offset, country, exactMatch.
+Optional: query, offset, country, queries, exactMatch.
 
 ### What does it return?
 

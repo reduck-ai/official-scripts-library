@@ -4,7 +4,7 @@ Automatically search eBay listings on ebay.com. One page of active listings (abo
 
 - Site: ebay.com
 - Address: `reduck/ebay.com/search_listings`
-- Updated: 2026-10-05 (v5)
+- Updated: 2026-10-16 (v6)
 - Author: Reduck AI (reduck)
 
 ## About

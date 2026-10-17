@@ -4,7 +4,7 @@ Automatically list your Slack invoices and billing statements on slack.com. An u
 
 - Site: slack.com
 - Address: `reduck/slack.com/list_invoices`
-- Updated: 2026-10-06 (v7)
+- Updated: 2026-10-16 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it

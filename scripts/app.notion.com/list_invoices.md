@@ -4,7 +4,7 @@ Automatically list your Notion invoices across workspaces on app.notion.com. An 
 
 - Site: app.notion.com
 - Address: `reduck/app.notion.com/list_invoices`
-- Updated: 2026-10-12 (v8)
+- Updated: 2026-10-16 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -52,7 +52,7 @@ Yes. It acts as you on app.notion.com: on your own Chrome it reuses your session
 
 ### Does it change anything on app.notion.com, or only read data?
 
-Unknown: its author has not declared whether it changes anything on app.notion.com, so treat it as if it could.
+It only reads. It looks things up on app.notion.com and changes nothing there.
 
 ### How do I run it?
 

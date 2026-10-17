@@ -1,10 +1,10 @@
 # List Claude invoices
 
-Automatically list Claude invoices on claude.ai. List your Claude (claude.ai) plan invoices, with a PDF link for each, across every organization you have billing access to, newest first. Returns invoices (org_uuid, org_name, created_ts, due_date_ts, total, total_excluding_tax, currency, status, num_seats, hosted_invoice_url, invoice_pdf_url, payment_status) and skipped. Organizations you lack billing access to are reported in skipped rather than raising an error. To download a PDF, feed hosted_invoice_url to invoice.stripe.com/download_invoice_pdf (verified public/login-free, no Claude session needed).
+Automatically list Claude invoices on claude.ai. List the Claude (claude.ai) plan invoices of the organization currently open in this browser, as its billing settings show them, newest first. To get another organization's invoices, switch to it in claude.ai, then run this again. Each invoice comes with its number, date, total and total before tax (in the currency's smallest unit, so 10800 means 108.00 EUR), currency, status, seats, payment status and a link to its PDF. When the open organization gives you no billing access, the result lists it in skipped with no invoices. complete is false when claude.ai says the organization has older invoices than its billing page shows; those are not returned. The run fails when the browser is not signed in to claude.ai, or when org_uuid is given and a different organization is open. To save a PDF, pass its link to the Stripe invoice PDF download script.
 
 - Site: claude.ai
 - Address: `reduck/claude.ai/list_invoices`
-- Updated: 2026-10-06 (v4)
+- Updated: 2026-10-16 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,18 +17,19 @@ npx @reduck-ai/cli@latest run --script reduck/claude.ai/list_invoices
 
 ## Input
 
-- `org_uuid` (string, optional): Restrict to a single org's invoices by its uuid. Omit to list invoices across every org you have billing access to.
+- `org_uuid` (string, optional): Optional check: the uuid of the organization you expect to be open in claude.ai. The run fails if a different organization is open.
 
 ## Output
 
 - `skipped` (array, required)
+- `complete` (boolean, required): false when claude.ai says the organization has older invoices than its billing page loads.
 - `invoices` (array, required)
 
 ## FAQ
 
 ### What does "List Claude invoices" do?
 
-List your Claude (claude.ai) plan invoices, with a PDF link for each, across every organization you have billing access to, newest first. Returns invoices (org_uuid, org_name, created_ts, due_date_ts, total, total_excluding_tax, currency, status, num_seats, hosted_invoice_url, invoice_pdf_url, payment_status) and skipped. Organizations you lack billing access to are reported in skipped rather than raising an error. To download a PDF, feed hosted_invoice_url to invoice.stripe.com/download_invoice_pdf (verified public/login-free, no Claude session needed).
+List the Claude (claude.ai) plan invoices of the organization currently open in this browser, as its billing settings show them, newest first. To get another organization's invoices, switch to it in claude.ai, then run this again. Each invoice comes with its number, date, total and total before tax (in the currency's smallest unit, so 10800 means 108.00 EUR), currency, status, seats, payment status and a link to its PDF. When the open organization gives you no billing access, the result lists it in skipped with no invoices. complete is false when claude.ai says the organization has older invoices than its billing page shows; those are not returned. The run fails when the browser is not signed in to claude.ai, or when org_uuid is given and a different organization is open. To save a PDF, pass its link to the Stripe invoice PDF download script.
 
 ### How do I automatically list Claude invoices on claude.ai?
 
@@ -44,7 +45,7 @@ Optional: org_uuid.
 
 ### What does it return?
 
-It returns skipped, invoices.
+It returns skipped, complete, invoices.
 
 ### Do I need to be logged in to claude.ai?
 

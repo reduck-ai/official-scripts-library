@@ -1,10 +1,10 @@
-# Ask Claude
+# Ask Claude on claude.ai
 
-Automatically ask Claude on claude.ai. Open a new Claude.ai chat, send one question, and wait for the answer to finish (up to 100 s). Returns the answer as the markdown the model emitted, the message and conversation ids, why generation stopped, which model answered, each web search it made with the results it was shown, every source its web_search and web_fetch tools surfaced, and — separately — the sources the answer actually cited. Requires a signed-in session: claude.ai has no anonymous chat, and a signed-out browser fails at once with an error that says so. When the account has used up its 5-hour or weekly allowance, it fails at once with the time the allowance resets, without sending anything. Avoid running many of these at once: claude.ai limits how many chats one account may hold concurrently and refuses the extras, so a refused send comes back quickly carrying Claude's own message and only needs to be retried at a slower pace.
+Automatically ask Claude on claude.ai on claude.ai. Open a new Claude.ai chat, send one question, and wait for the answer to finish (up to 100 s). Returns the answer as the markdown the model emitted, the message and conversation ids, why generation stopped, which model answered, each web search it made with the results it was shown, every source its web_search and web_fetch tools surfaced, and — separately — the sources the answer actually cited. Requires a signed-in session: claude.ai has no anonymous chat, and a signed-out browser fails at once with an error that says so. When the account has used up its 5-hour or weekly allowance, it fails at once with the time the allowance resets, without sending anything. Avoid running many of these at once: claude.ai limits how many chats one account may hold concurrently and refuses the extras, so a refused send comes back quickly carrying Claude's own message and only needs to be retried at a slower pace.
 
 - Site: claude.ai
 - Address: `reduck/claude.ai/ask`
-- Updated: 2026-10-12 (v26)
+- Updated: 2026-10-16 (v27)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -34,17 +34,17 @@ npx @reduck-ai/cli@latest run --script reduck/claude.ai/ask
 
 ## FAQ
 
-### What does "Ask Claude" do?
+### What does "Ask Claude on claude.ai" do?
 
 Open a new Claude.ai chat, send one question, and wait for the answer to finish (up to 100 s). Returns the answer as the markdown the model emitted, the message and conversation ids, why generation stopped, which model answered, each web search it made with the results it was shown, every source its web_search and web_fetch tools surfaced, and — separately — the sources the answer actually cited. Requires a signed-in session: claude.ai has no anonymous chat, and a signed-out browser fails at once with an error that says so. When the account has used up its 5-hour or weekly allowance, it fails at once with the time the allowance resets, without sending anything. Avoid running many of these at once: claude.ai limits how many chats one account may hold concurrently and refuses the extras, so a refused send comes back quickly carrying Claude's own message and only needs to be retried at a slower pace.
 
-### How do I automatically ask Claude on claude.ai?
+### How do I automatically ask Claude on claude.ai on claude.ai?
 
 Ask an AI agent connected to Reduck to run reduck/claude.ai/ask, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/claude.ai/ask
 
-### Is there a claude.ai API to ask Claude?
+### Is there a claude.ai API to ask Claude on claude.ai?
 
-You do not need one. "Ask Claude" drives the real claude.ai pages in a browser, so it works whether or not claude.ai offers an API for this.
+You do not need one. "Ask Claude on claude.ai" drives the real claude.ai pages in a browser, so it works whether or not claude.ai offers an API for this.
 
 ### What information do I need to provide?
 
@@ -60,7 +60,7 @@ Yes. It acts as you on claude.ai: on your own Chrome it reuses your session, and
 
 ### Does it change anything on claude.ai, or only read data?
 
-It only reads. It looks things up on claude.ai and changes nothing there.
+It makes changes on claude.ai, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

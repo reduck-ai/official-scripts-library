@@ -1,10 +1,10 @@
 # X (Twitter) posts unofficial API: export a user's tweets and stats
 
-Automatically export a user's tweets and stats on x.com. An unofficial X (Twitter) API for a user's posts: export an account's latest tweets with their views, likes, reposts, replies, quotes and bookmarks as data, in one call, without the X API. For the owner-only analytics of each post (impressions, engagements), run get_post_analytics on its id. Get a user's latest posts by handle (x.com/<handle>, the Posts tab), newest first: their own tweets and self-threads, without replies (see get_user_replies) or reposts (see get_user_reposts). Works signed in or signed out. Signed in, it reads the full Posts tab up to count. Signed out, X only shows visitors its few most recent posts, so it returns that short preview and fewer than count is expected; each post's source field says which one you got. Returns per tweet: id, url, text, created_at, lang, likes, retweets, replies, quotes, views, bookmarks, is_retweet, is_quote, source.
+Automatically export a user's tweets and stats on x.com. Get an X (Twitter) user's latest posts by handle (the Posts tab of x.com/<handle>), with their views, likes, reposts, replies, quotes and bookmarks. Returns { posts, complete }. Posts come in the order X shows them: the pinned post, if any, first, then newest first, with each self-thread kept in thread order. complete is true only when X marked the end of the tab and every post fits in count. Replies (see get_user_replies) and reposts (see get_user_reposts) are not included. Works signed in or signed out. Signed out, X only shows visitors a short preview of recent posts, so fewer than count is expected, complete is false, and in_reply_to and quoted_tweet are not available; each post's source field says which one you got.
 
 - Site: x.com
 - Address: `reduck/x.com/get_user_posts`
-- Updated: 2026-10-12 (v13)
+- Updated: 2026-10-16 (v20)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,14 +17,21 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/get_user_posts
 
 ## Input
 
-- `handle` (string, required): X handle, with or without the @, e.g. NASA
 - `count` (integer, optional): How many to return. Without it, the script returns the first page X shows (often 20 to 40). With it, the script loads more until it has count, reaches the end, or X stops loading.
+- `handle` (string, optional): X handle, with or without the @, e.g. NASA. Pass this or handles.
+- `handles` (array, optional): Several X handles (max 10), read one after another in the same page, instead of handle. count applies to each. Returns {results}, one per handle in order, each with error null or what went wrong. A rate limit, lock or sign-in wall stops the batch: the remaining handles carry that error.
+
+## Output
+
+- `posts` (any, optional)
+- `results` (array, optional): With handles only: one result per handle, in order, with the same fields as a single answer (posts, complete) plus handle and error. When error is set, only handle and error are present.
+- `complete` (boolean, optional): True only when X marked the end of the Posts tab and every post fits in count; false when count stopped the read, X stopped loading, or for the signed-out preview.
 
 ## FAQ
 
 ### What does "X (Twitter) posts unofficial API: export a user's tweets and stats" do?
 
-An unofficial X (Twitter) API for a user's posts: export an account's latest tweets with their views, likes, reposts, replies, quotes and bookmarks as data, in one call, without the X API. For the owner-only analytics of each post (impressions, engagements), run get_post_analytics on its id. Get a user's latest posts by handle (x.com/<handle>, the Posts tab), newest first: their own tweets and self-threads, without replies (see get_user_replies) or reposts (see get_user_reposts). Works signed in or signed out. Signed in, it reads the full Posts tab up to count. Signed out, X only shows visitors its few most recent posts, so it returns that short preview and fewer than count is expected; each post's source field says which one you got. Returns per tweet: id, url, text, created_at, lang, likes, retweets, replies, quotes, views, bookmarks, is_retweet, is_quote, source.
+Get an X (Twitter) user's latest posts by handle (the Posts tab of x.com/<handle>), with their views, likes, reposts, replies, quotes and bookmarks. Returns { posts, complete }. Posts come in the order X shows them: the pinned post, if any, first, then newest first, with each self-thread kept in thread order. complete is true only when X marked the end of the tab and every post fits in count. Replies (see get_user_replies) and reposts (see get_user_reposts) are not included. Works signed in or signed out. Signed out, X only shows visitors a short preview of recent posts, so fewer than count is expected, complete is false, and in_reply_to and quoted_tweet are not available; each post's source field says which one you got.
 
 ### How do I automatically export a user's tweets and stats on x.com?
 
@@ -36,7 +43,11 @@ You do not need one. "X (Twitter) posts unofficial API: export a user's tweets a
 
 ### What information do I need to provide?
 
-Required: handle. Optional: count.
+Optional: count, handle, handles.
+
+### What does it return?
+
+It returns posts, results, complete.
 
 ### Do I need to be logged in to x.com?
 

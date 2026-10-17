@@ -1,10 +1,10 @@
 # Google Autocomplete unofficial API: get autocomplete keywords
 
-Automatically get autocomplete keywords on google.com. An unofficial Google Search autocomplete suggestion API: the autocomplete keywords Google suggests for a phrase, in its ranking order, for SEO and keyword research. Get the autocomplete suggestions Google offers for a search query, in the order it ranks them — the completions that would appear as you type in the search box. Partial input works well, so "best crm for" returns the ways people finish that phrase, which makes this a quick way to see what an audience actually searches for around a topic. Suggestions are personalised to the signed-in account and its location, and a query Google does not recognise comes back with an empty list rather than an error. Note that Google sometimes reinterprets an unfamiliar term and answers for a similar one, so the suggestions can drift from exactly what was asked.
+Automatically get autocomplete keywords on google.com. Get the autocomplete suggestions Google Search offers for a query, in the order it ranks them: the completions that appear as you type in the search box. Partial input works well, so "best crm for" returns the ways people finish that phrase, useful for SEO and keyword research. Suggestions follow the browser's account and location. A query Google has no completions for returns an empty list. Google sometimes answers an unfamiliar term with completions of a similar one.
 
 - Site: google.com
 - Address: `reduck/google.com/search_suggestions`
-- Updated: 2026-10-06 (v3)
+- Updated: 2026-10-16 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -31,7 +31,7 @@ npx @reduck-ai/cli@latest run --script reduck/google.com/search_suggestions
 
 ### What does "Google Autocomplete unofficial API: get autocomplete keywords" do?
 
-An unofficial Google Search autocomplete suggestion API: the autocomplete keywords Google suggests for a phrase, in its ranking order, for SEO and keyword research. Get the autocomplete suggestions Google offers for a search query, in the order it ranks them — the completions that would appear as you type in the search box. Partial input works well, so "best crm for" returns the ways people finish that phrase, which makes this a quick way to see what an audience actually searches for around a topic. Suggestions are personalised to the signed-in account and its location, and a query Google does not recognise comes back with an empty list rather than an error. Note that Google sometimes reinterprets an unfamiliar term and answers for a similar one, so the suggestions can drift from exactly what was asked.
+Get the autocomplete suggestions Google Search offers for a query, in the order it ranks them: the completions that appear as you type in the search box. Partial input works well, so "best crm for" returns the ways people finish that phrase, useful for SEO and keyword research. Suggestions follow the browser's account and location. A query Google has no completions for returns an empty list. Google sometimes answers an unfamiliar term with completions of a similar one.
 
 ### How do I automatically get autocomplete keywords on google.com?
 

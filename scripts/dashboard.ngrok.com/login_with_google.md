@@ -1,10 +1,10 @@
 # ngrok login (Google SSO)
 
-Log into the ngrok dashboard via the "Log in with Google" button. Drives the Google account chooser (and consent screen if one appears) and lands on dashboard.ngrok.com. If already signed in, returns immediately. Requires running on the extension-paired browser rather than a managed/cloud browser. If Google requires a step-up (password re-confirm, 2FA, or passkey), that has to be cleared manually before this can complete — re-run afterward. Optional `email` arg picks which account row to use in the chooser; omit for the first row.
+Sign in to ngrok with a Google account and return the signed-in ngrok account. Returns at once when already signed in. Needs the paired browser, which holds the Google session. Pass email to pick an account; it fails by name when that account is not signed in to Google, when Google asks for a password, 2FA or passkey check (clear it once by hand, then re-run), or when the Google account has no ngrok account.
 
 - Site: dashboard.ngrok.com
 - Address: `reduck/dashboard.ngrok.com/login_with_google`
-- Updated: 2026-09-28 (v4)
+- Updated: 2026-10-16 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,7 +29,7 @@ npx @reduck-ai/cli@latest run --script reduck/dashboard.ngrok.com/login_with_goo
 
 ### What does "ngrok login (Google SSO)" do?
 
-Log into the ngrok dashboard via the "Log in with Google" button. Drives the Google account chooser (and consent screen if one appears) and lands on dashboard.ngrok.com. If already signed in, returns immediately. Requires running on the extension-paired browser rather than a managed/cloud browser. If Google requires a step-up (password re-confirm, 2FA, or passkey), that has to be cleared manually before this can complete — re-run afterward. Optional `email` arg picks which account row to use in the chooser; omit for the first row.
+Sign in to ngrok with a Google account and return the signed-in ngrok account. Returns at once when already signed in. Needs the paired browser, which holds the Google session. Pass email to pick an account; it fails by name when that account is not signed in to Google, when Google asks for a password, 2FA or passkey check (clear it once by hand, then re-run), or when the Google account has no ngrok account.
 
 ### What information do I need to provide?
 

@@ -4,7 +4,7 @@ Search the web on Bing, one page of results at a time. Returns each organic resu
 
 - Site: bing.com
 - Address: `reduck/bing.com/search`
-- Updated: 2026-10-12 (v18)
+- Updated: 2026-10-16 (v26)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,20 +17,21 @@ npx @reduck-ai/cli@latest run --script reduck/bing.com/search
 
 ## Input
 
-- `query` (string, required): The search query. site: works, and limits the results to that site; quoted phrases are loosened by Bing, not enforced.
 - `first` (integer, optional): Which page to read, as Bing addresses it: the position of its first result. Pages vary in size, so pass the `next` of the previous answer rather than computing it. Default 1.
+- `query` (string, optional): The search query. site: works, and limits the results to that site; quoted phrases are loosened by Bing, not enforced.
+- `queries` (array, optional): Run several searches in one run (max 10), one after another in the same tab, with a pause of a few seconds between them, instead of the single-query fields above. Each item takes the same fields. Returns {results} with one answer per query, in order, each with an error (null when fine). If Bing shows a human-verification check that waits for a person, the remaining queries are not sent and carry that error.
 
 ## Output
 
-- `next` (integer | null, required): The `first` of the next page; null on the last page. Consecutive pages can repeat a result, so dedupe by url.
-- `count` (integer, required): How many organic results this page holds (results.length), typically 2-10.
-- `first` (integer, required)
-- `query` (string, required)
-- `market` (string | null, required): The market Bing answered for, e.g. "en-US", which follows where the browser is; null if the page does not say.
-- `hasMore` (boolean, required)
-- `results` (array, required): The organic results, in Bing's order. Ads, answer boxes and video carousels are left out.
-- `rewrittenTo` (string | null, required): The query Bing searched instead, when it says so ('These are results for …'); else null.
-- `emptyBecause` (string | null, required): Bing's reason when `results` is empty; null otherwise.
+- `next` (integer | null, optional): The `first` of the next page; null on the last page. Consecutive pages can repeat a result, so dedupe by url.
+- `count` (integer, optional): How many organic results this page holds (results.length), typically 2-10.
+- `first` (integer, optional)
+- `query` (string, optional)
+- `market` (string | null, optional): The market Bing answered for, e.g. "en-US", which follows where the browser is; null if the page does not say.
+- `hasMore` (boolean, optional)
+- `results` (array, optional): Single query: the organic results, in Bing's order (ads, answer boxes and video carousels left out). With queries: one answer per query, in order.
+- `rewrittenTo` (string | null, optional): The query Bing searched instead, when it says so ('These are results for …'); else null.
+- `emptyBecause` (string | null, optional): Bing's reason when `results` is empty; null otherwise.
 
 ## FAQ
 
@@ -40,7 +41,7 @@ Search the web on Bing, one page of results at a time. Returns each organic resu
 
 ### What information do I need to provide?
 
-Required: query. Optional: first.
+Optional: first, query, queries.
 
 ### What does it return?
 

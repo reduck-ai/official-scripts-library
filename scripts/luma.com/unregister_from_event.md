@@ -4,7 +4,7 @@ Automatically cancel registration for a Luma event on luma.com. Cancel the signe
 
 - Site: luma.com
 - Address: `reduck/luma.com/unregister_from_event`
-- Updated: 2026-09-25 (v3)
+- Updated: 2026-10-16 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -53,7 +53,7 @@ Yes. It acts as you on luma.com: on your own Chrome it reuses your session, and 
 
 ### Does it change anything on luma.com, or only read data?
 
-It makes changes on luma.com, like sending, posting or booking something.
+It makes changes on luma.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

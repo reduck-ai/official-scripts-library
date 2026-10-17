@@ -4,7 +4,7 @@ Automatically upload a file to CSM-Testcenter (file input) on csm-testcenter.org
 
 - Site: csm-testcenter.org
 - Address: `reduck/csm-testcenter.org/upload_via_uploadfile`
-- Updated: 2026-09-18 (v5)
+- Updated: 2026-10-16 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -55,7 +55,7 @@ No. It only uses pages of csm-testcenter.org that are reachable without signing 
 
 ### Does it change anything on csm-testcenter.org, or only read data?
 
-It makes changes on csm-testcenter.org, like sending, posting or booking something.
+It makes changes on csm-testcenter.org, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

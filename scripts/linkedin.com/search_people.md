@@ -4,7 +4,7 @@ Automatically search LinkedIn people on linkedin.com. Search LinkedIn people by 
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/search_people`
-- Updated: 2026-10-13 (v30)
+- Updated: 2026-10-16 (v31)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -36,6 +36,7 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/search_people
 - `total` (integer | null, required): 0 when LinkedIn shows its empty state. Null otherwise: LinkedIn shows no result count on a results page.
 - `people` (array, required): The people on this page, in LinkedIn's order. Empty only when LinkedIn shows its empty state, or when every card is an out-of-network member LinkedIn does not name.
 - `hasNextPage` (boolean | null, required): Whether LinkedIn offers a next page. False on the last page and on the empty state. Null only when a full page shows no pager.
+- `hiddenCount` (integer, required): Cards on this page for out-of-network members LinkedIn does not name. They are counted here and not returned in people.
 
 ## FAQ
 
@@ -57,7 +58,7 @@ Optional: page, title, geoUrn, school, company, keywords, lastName, firstName, c
 
 ### What does it return?
 
-It returns page, total, people, hasNextPage.
+It returns page, total, people, hasNextPage, hiddenCount.
 
 ### Do I need to be logged in to linkedin.com?
 

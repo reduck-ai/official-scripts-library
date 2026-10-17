@@ -4,7 +4,7 @@ Automatically search LinkedIn posts on linkedin.com. Search LinkedIn posts by ke
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/search_posts`
-- Updated: 2026-10-13 (v12)
+- Updated: 2026-10-16 (v13)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,13 +18,14 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/search_posts
 ## Input
 
 - `limit` (integer, optional): Maximum posts to return (default 10). Results are scrolled until this many cards have loaded; fewer come back when the query has fewer posts.
-- `sortBy` (string, optional): Result ordering. Anything other than "date_posted" falls back to relevance.
+- `sortBy` (string, optional): Result ordering: relevance (default) or date_posted.
 - `keyword` (string, optional): Search terms, as typed into LinkedIn's content search. "keywords" is accepted as an alias for this field (it is what LinkedIn's own URL calls it).
 - `keywords` (string, optional): Alias for "keyword" — same meaning; pass either one.
 
 ## Output
 
 - `posts` (array, required)
+- `complete` (boolean, required): True only when LinkedIn showed the end of the results before limit was reached.
 - `start` (number, optional)
 - `total` (number | null, optional)
 
@@ -48,7 +49,7 @@ Optional: limit, sortBy, keyword, keywords.
 
 ### What does it return?
 
-It returns posts, start, total.
+It returns posts, start, total, complete.
 
 ### Do I need to be logged in to linkedin.com?
 

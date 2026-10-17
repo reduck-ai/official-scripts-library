@@ -4,7 +4,7 @@ Each reposter comes back as one row with followers, following, bio and website.
 
 - Site: x.com
 - Address: `reduck/x.com/get_reposters`
-- Updated: 2026-10-05 (v4)
+- Updated: 2026-10-16 (v6)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -21,15 +21,18 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/get_reposters
 
 ## Input
 
-- `url` (string, required): Full URL of the X post, e.g. 'https://x.com/<handle>/status/<id>'. Query/hash are stripped.
+- `url` (string, optional): Full URL of the X post, e.g. 'https://x.com/<handle>/status/<id>'. Query/hash are stripped. Pass this or urls.
+- `urls` (array, optional): Several post URLs (max 10), read one after another in the same page, instead of url. count applies to each. Returns {results}, one per post in order, each with error null or what went wrong. A rate limit, lock or sign-in wall stops the batch: the remaining posts carry that error.
 - `count` (integer, optional): Max reposters to return. Scrolls until count is met or the list dries up. Default 100.
 
 ## Output
 
-- `url` (string, required)
-- `count` (integer, required): Number of reposters returned. 0 is a first-class outcome (no reposts, or reposters hidden).
-- `reposters` (array, required)
-- `account_used` (string | null, required): handle of the logged-in account that performed this lookup, read from the account switcher UI (not assumed from input) — audit-trail consistency with the action scripts.
+- `url` (string, optional)
+- `count` (integer, optional): Number of reposters returned. 0 is a first-class outcome (no reposts, or reposters hidden).
+- `results` (array, optional): With urls only: one result per post, in order, with the same fields as a single answer (url, count, complete, reposters, account_used) plus error. When error is set, only url and error are present.
+- `complete` (boolean, optional): True only when X marked the end of the list and every reposter fits in count. X shows a sample of reposters, so a long list can end before the repost total.
+- `reposters` (any, optional)
+- `account_used` (string | null, optional): Handle of the signed-in account that performed this lookup, read from the page.
 
 ## Example output
 
@@ -39,20 +42,18 @@ Shape only: placeholder values generated from the output schema, not a real run.
 {
   "url": "https://example.com/item/123",
   "count": 3,
-  "reposters": [
+  "results": [
     {
-      "bio": "…",
-      "name": "Example",
-      "handle": "…",
-      "tweets": 3,
-      "user_id": "abc123",
-      "website": "…",
-      "location": "…",
-      "verified": true,
-      "followers": 1200,
-      "following": 3
+      "url": "https://example.com/item/123",
+      "count": 3,
+      "error": "…",
+      "complete": true,
+      "reposters": "…",
+      "account_used": "…"
     }
   ],
+  "complete": true,
+  "reposters": "…",
   "account_used": "…"
 }
 ```
@@ -65,11 +66,11 @@ List the accounts that reposted (retweeted) an X post, by post URL. Returns per 
 
 ### What information do I need to provide?
 
-Required: url. Optional: count.
+Optional: url, urls, count.
 
 ### What does it return?
 
-It returns url, count, reposters, account_used.
+It returns url, count, results, complete, reposters, account_used.
 
 ### Do I need to be logged in to x.com?
 

@@ -4,7 +4,7 @@ Automatically compare keywords, get related queries on trends.google.com. See wh
 
 - Site: trends.google.com
 - Address: `reduck/trends.google.com/explore_keyword`
-- Updated: 2026-10-06 (v3)
+- Updated: 2026-10-17 (v4)
 - Author: Reduck AI (reduck)
 
 ## About

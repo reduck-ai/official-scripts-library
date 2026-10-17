@@ -4,7 +4,7 @@ Automatically get LinkedIn profile experience on linkedin.com. Get the full expe
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_profile_experience`
-- Updated: 2026-09-03 (v11)
+- Updated: 2026-10-16 (v12)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -22,6 +22,7 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/get_profile_experienc
 
 ## Output
 
+- `complete` (boolean, required): True when every experience entry was loaded. False when count stopped the list first.
 - `positions` (array, required)
 
 ## FAQ
@@ -44,7 +45,7 @@ Required: publicId. Optional: count.
 
 ### What does it return?
 
-It returns positions.
+It returns complete, positions.
 
 ### Do I need to be logged in to linkedin.com?
 

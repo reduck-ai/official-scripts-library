@@ -4,7 +4,7 @@ Automatically get Reddit thread on reddit.com. Fetch a Reddit thread by its id o
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/get_thread`
-- Updated: 2026-10-09 (v12)
+- Updated: 2026-10-16 (v17)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -19,24 +19,27 @@ npx @reduck-ai/cli@latest run --script reduck/reddit.com/get_thread
 
 - `id` (string, optional): Post base36 id from the permalink (e.g. "1ldvy4n"), the part after /comments/. Pass this OR url.
 - `url` (string, optional): Thread URL (full https://www.reddit.com/r/.../comments/... or the /r/.../comments/... path). Pass this OR id.
-- `sort` (string, optional): Comment sort via Reddit's ?sort= ("confidence" = Best). Default: Reddit's Best.
-- `all_comments` (boolean, optional): Expand every "more replies" loader for the full tree (slower on big threads). Default: only comments rendered on load.
+- `sort` (string, optional): Comment sort via Reddit's ?sort= ("confidence" = Best). Default: Reddit's Best. Applies to every url in batch mode.
+- `urls` (array, optional): Read several threads in one run (max 20), one after another in the same tab, instead of id/url. Each item takes the same forms as url. Returns {results} with one result per url, in order, each with an `error` (null when fine). If Reddit blocks or rate-limits the browser, the remaining urls are not read and carry that error.
+- `all_comments` (boolean, optional): Expand every "more replies" loader for the full tree (slower on big threads). Default: only comments rendered on load. Applies to every url in batch mode.
 
 ## Output
 
-- `id` (string, required): Reddit fullname, e.g. t3_1ldvy4n
-- `score` (number, required)
-- `title` (string, required)
-- `author` (string, required)
-- `created` (string, required)
-- `op_text` (string, required)
-- `comments` (array, required)
-- `permalink` (string, required)
-- `post_type` (string, required)
-- `subreddit` (string, required)
-- `num_comments` (number, required): Reddit's total comment count; compare with comments.length to detect on-load truncation
+- `id` (string, optional): Reddit fullname, e.g. t3_1ldvy4n
+- `score` (number | null, optional): Null while Reddit hides the post's score.
+- `title` (string, optional)
+- `author` (string, optional)
 - `domain` (string | null, optional)
+- `created` (string, optional)
+- `op_text` (string, optional)
+- `results` (array, optional): Batch mode only: one result per url, in order. Same fields as the single-thread output (null when the thread could not be read) plus error.
+- `comments` (array, optional)
+- `complete` (boolean, optional): True when every comment of the thread is in comments: no 'more replies' loader was left unexpanded. Pass all_comments to expand them.
+- `permalink` (string, optional)
+- `post_type` (string, optional)
+- `subreddit` (string, optional)
 - `content_href` (string | null, optional): Submission target: external link for link posts, the thread url for self posts
+- `num_comments` (number, optional): Reddit's total comment count; compare with comments.length to detect on-load truncation
 - `upvote_ratio` (number | null, optional)
 
 ## FAQ
@@ -55,11 +58,11 @@ You do not need one. "Get Reddit thread" drives the real reddit.com pages in a b
 
 ### What information do I need to provide?
 
-Optional: id, url, sort, all_comments.
+Optional: id, url, sort, urls, all_comments.
 
 ### What does it return?
 
-It returns id, score, title, author, domain, created, op_text, comments, permalink, post_type, subreddit, content_href, num_comments, upvote_ratio.
+It returns id, score, title, author, domain, created, op_text, results, comments, complete, permalink, post_type, subreddit, content_href, num_comments, upvote_ratio.
 
 ### Do I need to be logged in to reddit.com?
 

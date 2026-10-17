@@ -4,7 +4,7 @@ Automatically get the quote tweets of a post on X (Twitter) on x.com. Each quote
 
 - Site: x.com
 - Address: `reduck/x.com/get_quote_tweets`
-- Updated: 2026-10-12 (v2)
+- Updated: 2026-10-16 (v4)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -21,15 +21,17 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/get_quote_tweets
 
 ## Input
 
-- `url` (string, required): Full URL of the post whose quotes you want, e.g. 'https://x.com/<handle>/status/<id>'.
+- `url` (string, optional): Full URL of the post whose quotes you want, e.g. 'https://x.com/<handle>/status/<id>'. Pass this or urls.
+- `urls` (array, optional): Several post URLs (max 10), read one after another in the same page, instead of url. count applies to each. Returns {results}, one per post in order, each with error null or what went wrong. A rate limit, lock or sign-in wall stops the batch: the remaining posts carry that error.
 - `count` (integer, optional): How many to return. Without it, the script returns the first page X shows (often 20 to 40). With it, the script loads more until it has count, reaches the end, or X stops loading; complete says whether it reached the end.
 
 ## Output
 
-- `url` (string, required)
-- `count` (integer, required): Number of quotes returned. 0 is a valid answer.
-- `tweets` (array, required)
-- `complete` (boolean, required): True when X showed the end of the quotes and every one it sent is returned. False when there may be more: count was reached, X stopped loading, or no count was given and the first page is not the end.
+- `url` (string, optional)
+- `count` (integer, optional): Number of quotes returned. 0 is a valid answer.
+- `tweets` (any, optional)
+- `results` (array, optional): With urls only: one result per post, in order, with the same fields as a single answer (url, count, complete, tweets) plus error. When error is set, only url and error are present.
+- `complete` (boolean, optional): True when X showed the end of the quotes and every one it sent is returned. False when there may be more: count was reached, X stopped loading, or no count was given and the first page is not the end.
 
 ## Example output
 
@@ -39,40 +41,14 @@ Shape only: placeholder values generated from the output schema, not a real run.
 {
   "url": "https://example.com/item/123",
   "count": 3,
-  "tweets": [
+  "tweets": "…",
+  "results": [
     {
-      "id": "abc123",
       "url": "https://example.com/item/123",
-      "lang": "…",
-      "text": "…",
-      "likes": 1200,
-      "views": 1200,
-      "author": {
-        "id": "abc123",
-        "name": "Example",
-        "handle": "…"
-      },
-      "quotes": 3,
-      "replies": 3,
-      "is_quote": true,
-      "retweets": 3,
-      "bookmarks": 3,
-      "created_at": "2026-01-15T09:30:00Z",
-      "is_retweet": true,
-      "in_reply_to": {
-        "id": "abc123",
-        "author_handle": "…"
-      },
-      "reposted_at": "2026-01-15T09:30:00Z",
-      "reposted_by": {
-        "id": "abc123",
-        "name": "Example",
-        "handle": "…"
-      },
-      "quoted_tweet": {
-        "id": "abc123",
-        "author_handle": "…"
-      }
+      "count": 3,
+      "error": "…",
+      "tweets": "…",
+      "complete": true
     }
   ],
   "complete": true
@@ -95,11 +71,11 @@ You do not need one. "Get the quote tweets of a post on X (Twitter)" drives the 
 
 ### What information do I need to provide?
 
-Required: url. Optional: count.
+Optional: url, urls, count.
 
 ### What does it return?
 
-It returns url, count, tweets, complete.
+It returns url, count, tweets, results, complete.
 
 ### Do I need to be logged in to x.com?
 

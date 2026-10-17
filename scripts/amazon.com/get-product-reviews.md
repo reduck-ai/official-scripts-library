@@ -4,7 +4,7 @@ Automatically get Amazon product reviews on amazon.com. You get each review's te
 
 - Site: amazon.com
 - Address: `reduck/amazon.com/get-product-reviews`
-- Updated: 2026-10-08 (v11)
+- Updated: 2026-10-16 (v12)
 - Author: Reduck AI (reduck)
 
 ## About

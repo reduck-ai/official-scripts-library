@@ -4,7 +4,7 @@ Automatically get Instagram profile on instagram.com. You get the follower, foll
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/get_profile`
-- Updated: 2026-10-05 (v6)
+- Updated: 2026-10-16 (v7)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -67,7 +67,7 @@ Shape only: placeholder values generated from the output schema, not a real run.
 
 ### What does "Get Instagram profile" do?
 
-Get an Instagram profile by username. With a session: exact data from Instagram's profile API (source=api). Logged out, where Instagram still serves the profile publicly: falls back to the page's og metadata (source=og_meta) — counts are approximate (K/M/B rounded) and unknown fields (biography, is_verified, is_private, is_business, category, external_url) are null. When Instagram login-walls the profile instead, the run FAILS rather than returning an empty payload, so a walled run can never be mistaken for a profile that hides its counts. Returns source, username, user_id, full_name, biography, followers, following, posts, is_verified, is_private, is_business, category, external_url, and profile_pic_url.
+Get an Instagram profile by username: username, user id, full name, biography, followers, following, posts, whether it is verified, private or a business, category, external link and profile picture. Signed in, the data is exact (source api). Signed out, where Instagram still shows the profile publicly, it returns the page's public summary instead (source og_meta): counts are rounded (K, M, B) and biography, verified, private, business, category and external link are null. An unknown username fails with an error that says so; a profile Instagram hides behind its login page fails too, so an empty result is never returned.
 
 ### How do I automatically get Instagram profile on instagram.com?
 

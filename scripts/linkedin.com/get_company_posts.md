@@ -4,7 +4,7 @@ Automatically get LinkedIn company posts on linkedin.com. You get up to the 50 n
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_company_posts`
-- Updated: 2026-10-15 (v14)
+- Updated: 2026-10-16 (v17)
 - Author: Reduck AI (reduck)
 
 ## About

@@ -4,7 +4,7 @@ Automatically export an X (Twitter) account's followers or following on x.com. L
 
 - Site: x.com
 - Address: `reduck/x.com/get_follows`
-- Updated: 2026-10-14 (v5)
+- Updated: 2026-10-16 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,17 +17,19 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/get_follows
 
 ## Input
 
-- `handle` (string, required): Target user's handle (with or without @).
 - `count` (integer, optional): Max accounts to return. Scrolls until count is met or the list dries up. Default 100.
+- `handle` (string, optional): Target user's handle (with or without @). Pass this or handles.
+- `handles` (array, optional): Several handles (max 5), read one after another in the same page, with a pause of a few seconds between them, instead of handle. count and direction apply to each. Returns {results}, one per handle in order, each with error null or what went wrong. A rate limit, lock or sign-in wall stops the batch: the remaining handles carry that error.
 - `direction` (any, optional): Which list to read: the user's 'followers', or the accounts they follow ('following').
 
 ## Output
 
-- `count` (integer, required): Number of accounts returned. 0 is a first-class outcome (none, or protected/hidden).
-- `handle` (string, required)
-- `accounts` (array, required)
-- `complete` (boolean, required): True when X showed the end of the list and every account it sent is returned. False when more may exist: count was reached or X stopped loading.
-- `direction` (string, required)
+- `count` (integer, optional): Number of accounts returned. 0 is a first-class outcome (none, or protected/hidden).
+- `handle` (string, optional)
+- `results` (array, optional): With handles only: one result per handle, in order, with the same fields as a single answer (handle, direction, count, complete, accounts) plus error. When error is set, only handle and error are present.
+- `accounts` (any, optional)
+- `complete` (boolean, optional): True when X showed the end of the list and every account it sent is returned. False when more may exist: count was reached or X stopped loading.
+- `direction` (string, optional)
 
 ## FAQ
 
@@ -45,11 +47,11 @@ You do not need one. "Export an X (Twitter) account's followers or following" dr
 
 ### What information do I need to provide?
 
-Required: handle. Optional: count, direction.
+Optional: count, handle, handles, direction.
 
 ### What does it return?
 
-It returns count, handle, accounts, complete, direction.
+It returns count, handle, results, accounts, complete, direction.
 
 ### Do I need to be logged in to x.com?
 

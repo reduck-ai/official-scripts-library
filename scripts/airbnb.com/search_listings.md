@@ -4,7 +4,7 @@ Automatically search Airbnb listings on airbnb.com. Each stay comes back as a ro
 
 - Site: airbnb.com
 - Address: `reduck/airbnb.com/search_listings`
-- Updated: 2026-10-06 (v7)
+- Updated: 2026-10-16 (v10)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -21,28 +21,40 @@ npx @reduck-ai/cli@latest run --script reduck/airbnb.com/search_listings
 
 ## Input
 
-- `location` (string, required): Destination (city / region / neighborhood), e.g. 'Paris' or 'Lisbon, Portugal'. Spaces become dashes in the URL slug.
-- `page` (integer, optional): Result page (up to 18 listings/page; Airbnb caps at ~15 pages). Default 1.
-- `pets` (integer, optional): Number of pets.
-- `query` (string, optional): Extra free-text query refinement.
+- `location` (string, required): Destination as a person types it: a city, a region or a neighborhood, e.g. "Paris" or "Lisbon, Portugal".
+- `ib` (boolean, optional): Instant Book only.
+- `page` (integer, optional): Result page, 18 listings each. Airbnb stops at about 15 pages: maxPage says how many this search has.
+- `pets` (integer, optional): Number of pets; 1 or more keeps only listings that allow pets.
 - `adults` (integer, optional): Number of adults. Default 2.
-- `checkin` (string, optional): Check-in date ISO YYYY-MM-DD. Pair with checkout for date-aware results/pricing.
-- `infants` (integer, optional): Number of infants.
-- `checkout` (string, optional): Check-out date ISO YYYY-MM-DD.
-- `children` (integer, optional): Number of children.
-- `amenities` (array, optional): Airbnb amenity-filter ids (the site's own filter pills), AND-combined as &amenities[]=<id>. Ids are sparse/non-sequential — common ones: 5=Air conditioning, 4=Wifi, 8=Kitchen, 9=Free parking, 7=Pool, 25=Hot tub, 30=Heating, 33=Washer, 34=Dryer, 58=TV, 51=Self check-in, 47=Dedicated workspace, 15=Gym, 16=Breakfast, 99=BBQ grill, 97=EV charger, 286=Crib, 45=Hair dryer, 46=Iron, 11=Smoking allowed, 27=Indoor fireplace, 35=Smoke alarm, 36=Carbon monoxide alarm.
-- `category_tag` (string, optional): Airbnb category tag filter (e.g. 'Tag:8225').
-- `titleStartsWith` (string, optional): Client-side filter: keep only listings whose title starts with this string.
-- `l2_property_type_id` (integer | string, optional): Property-type filter id.
+- `checkin` (string, optional): Check-in date, YYYY-MM-DD. With checkout, prices are for those dates.
+- `infants` (integer, optional)
+- `checkout` (string, optional): Check-out date, YYYY-MM-DD.
+- `children` (integer, optional)
+- `currency` (string, optional): ISO 4217 currency for prices. Default USD.
+- `min_beds` (integer, optional)
+- `tier_ids` (array, optional): Listing tiers, e.g. Luxe (values from list_search_filters).
+- `amenities` (array, optional): Amenity ids, all required (values from list_search_filters, key amenities).
+- `price_max` (integer, optional): Maximum price, in currency.
+- `price_min` (integer, optional): Minimum price, in currency.
+- `room_types` (array, optional): Room types, e.g. ["Entire home/apt"] or ["Private room"] (values from list_search_filters).
+- `kg_and_tags` (array, optional): Property tags, e.g. hotel, beachfront (values from list_search_filters).
+- `min_bedrooms` (integer, optional)
+- `min_bathrooms` (integer, optional)
+- `guest_favorite` (boolean, optional): Guest favorites only.
+- `host_languages` (array, optional): Host language codes, e.g. ["fr"] (values from list_search_filters).
+- `bathroom_privacy` (string, optional): e.g. "ENSUITE" for a private attached bathroom (values from list_search_filters).
+- `neighborhood_ids` (array, optional): Neighborhood ids of this location (values from list_search_filters for the same location).
+- `l2_property_type_ids` (array, optional): Property type ids, e.g. house or apartment (values from list_search_filters).
 
 ## Output
 
 - `url` (string, required)
 - `page` (integer, required)
-- `count` (integer, required)
+- `count` (integer, required): Listings on this page.
 - `listings` (array, required)
+- `resolvedLocation` (object, required): The place Airbnb searched. precision is "city", "state" for a region, "country" when Airbnb could place the name only at country level (the listings then cover the whole country), "building" for an address.
 - `maxPage` (integer | null, optional)
-- `resolvedLocation` (object, optional): The place Airbnb actually searched. precision is "city" for a city, "state" for a region, "country" when Airbnb could only place the name at country level (the listings then cover the whole country), "building" for an address.
+- `totalCount` (integer | null, optional): Listings the whole search matches, as Airbnb counts them.
 
 ## Example output
 
@@ -85,6 +97,7 @@ Shape only: placeholder values generated from the output schema, not a real run.
       "priceQualifier": "…"
     }
   ],
+  "totalCount": 3,
   "resolvedLocation": {
     "name": "Example",
     "bounds": {
@@ -111,7 +124,7 @@ Shape only: placeholder values generated from the output schema, not a real run.
 
 ### What does "Search Airbnb listings" do?
 
-Search Airbnb stays for a location and date range. Returns url, page, count, maxPage, and listings (each with id, url, title, name, subtitle, lat, lng, rating, reviewCount, price, originalPrice, badges, details, hostType, imageUrl). One page returns up to 18 listings and Airbnb caps results at roughly 15 pages; paginate via the page arg.
+Search Airbnb stays in a location, with or without dates, with the filters Airbnb offers: guests, price range, room type, bedrooms, beds, bathrooms, Instant Book, guest favorites, amenities, property type, tags, host language and neighborhood (List Airbnb search filters gives their values). Returns one page of up to 18 listings (room id, name, price line, rating and review count, coordinates, badges, room details or next free dates, photos), the total count of matching listings, the number of pages (Airbnb stops at about 15) and the place Airbnb searched. A filter nothing matches returns an empty list. A location Airbnb cannot place fails with an error instead of returning its worldwide default list. Prices are in the currency you ask for (USD by default).
 
 ### How do I automatically search Airbnb listings on airbnb.com?
 
@@ -123,11 +136,11 @@ You do not need one. "Search Airbnb listings" drives the real airbnb.com pages i
 
 ### What information do I need to provide?
 
-Required: location. Optional: page, pets, query, adults, checkin, infants, checkout, children, amenities, category_tag, titleStartsWith, l2_property_type_id.
+Required: location. Optional: ib, page, pets, adults, checkin, infants, checkout, children, currency, min_beds, tier_ids, amenities, price_max, price_min, room_types, kg_and_tags, min_bedrooms, min_bathrooms, guest_favorite, host_languages, bathroom_privacy, neighborhood_ids, l2_property_type_ids.
 
 ### What does it return?
 
-It returns url, page, count, maxPage, listings, resolvedLocation.
+It returns url, page, count, maxPage, listings, totalCount, resolvedLocation.
 
 ### Do I need to be logged in to airbnb.com?
 

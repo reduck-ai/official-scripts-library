@@ -1,10 +1,10 @@
-# Get subreddit info
+# Get Reddit subreddit info
 
-Automatically get subreddit info on reddit.com. Fetch a subreddit's metadata: title, description, created date, weekly visitors and contributions, its type (public, restricted…), every rule (title and body), and its full moderator list with each moderator's permissions and join date. A banned or private subreddit returns its status and nothing else; an unknown name throws. The moderator list is null when Reddit does not show it to the browser's session.
+Automatically get Reddit subreddit info on reddit.com. Fetch a subreddit's metadata: title, description, created date, weekly visitors and contributions, its type (public, restricted…), every rule (title and body), and its full moderator list with each moderator's permissions and join date. A banned or private subreddit returns its status and nothing else; an unknown name throws. The moderator list is null when Reddit does not show it to the browser's session.
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/get_subreddit_info`
-- Updated: 2026-10-09 (v12)
+- Updated: 2026-10-16 (v14)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -35,17 +35,17 @@ npx @reduck-ai/cli@latest run --script reduck/reddit.com/get_subreddit_info
 
 ## FAQ
 
-### What does "Get subreddit info" do?
+### What does "Get Reddit subreddit info" do?
 
 Fetch a subreddit's metadata: title, description, created date, weekly visitors and contributions, its type (public, restricted…), every rule (title and body), and its full moderator list with each moderator's permissions and join date. A banned or private subreddit returns its status and nothing else; an unknown name throws. The moderator list is null when Reddit does not show it to the browser's session.
 
-### How do I automatically get subreddit info on reddit.com?
+### How do I automatically get Reddit subreddit info on reddit.com?
 
 Ask an AI agent connected to Reduck to run reduck/reddit.com/get_subreddit_info, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/reddit.com/get_subreddit_info
 
-### Is there a reddit.com API to get subreddit info?
+### Is there a reddit.com API to get Reddit subreddit info?
 
-You do not need one. "Get subreddit info" drives the real reddit.com pages in a browser, so it works whether or not reddit.com offers an API for this.
+You do not need one. "Get Reddit subreddit info" drives the real reddit.com pages in a browser, so it works whether or not reddit.com offers an API for this.
 
 ### What information do I need to provide?
 

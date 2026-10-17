@@ -4,7 +4,7 @@ Automatically like TikTok Comment on tiktok.com. Pass the text of one top-level 
 
 - Site: tiktok.com
 - Address: `reduck/tiktok.com/like_comment`
-- Updated: 2026-10-05 (v4)
+- Updated: 2026-10-16 (v5)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -22,14 +22,15 @@ npx @reduck-ai/cli@latest run --script reduck/tiktok.com/like_comment
 ## Input
 
 - `videoUrl` (string, required): The video's canonical URL, e.g. https://www.tiktok.com/@someuser/video/1234567890123456789.
-- `commentText` (string, required): The exact, full text of the top-level comment to like, as it appears on the video. Comments have no visible ID in the UI, so text is the only handle a caller can read off the page — it must match exactly (including emoji), and must be unique among top-level comments on the video.
+- `commentText` (string, required): The exact, full text of the top-level comment, as it appears on the video. Comments have no visible ID, so the text is the handle: it must match exactly (including emoji) and be unique among the top-level comments shown.
+- `like` (boolean, optional): true (default) likes the comment; false removes your like.
 
 ## Output
 
-- `liked` (boolean, required)
+- `liked` (boolean, required): Whether the comment carries your like after the run, read back from the page.
 - `video_url` (string, required)
 - `comment_text` (string, required)
-- `already_liked` (boolean, required)
+- `already_liked` (boolean, required): Whether the comment already had your like before the run.
 
 ## Example output
 
@@ -60,7 +61,7 @@ You do not need one. "Like TikTok Comment" drives the real tiktok.com pages in a
 
 ### What information do I need to provide?
 
-Required: videoUrl, commentText.
+Required: videoUrl, commentText. Optional: like.
 
 ### What does it return?
 

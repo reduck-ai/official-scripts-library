@@ -4,7 +4,7 @@ Automatically get Google Maps place reviews on google.com. Get the reviews of a 
 
 - Site: google.com
 - Address: `reduck/google.com/get_place_reviews`
-- Updated: 2026-10-12 (v18)
+- Updated: 2026-10-16 (v19)
 - Author: Reduck AI (reduck)
 
 ## Run it

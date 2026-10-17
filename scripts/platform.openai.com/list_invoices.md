@@ -1,10 +1,10 @@
 # OpenAI unofficial API: list your platform invoices with PDF links
 
-Automatically list your platform invoices with PDF links on platform.openai.com. An unofficial OpenAI API for platform billing invoices. List invoices on the OpenAI API platform billing account (platform.openai.com, API usage/credits — NOT the ChatGPT subscription, which is chatgpt.com/list_invoices). Returns id, number, total (cents), currency, status, created_ts, hosted_invoice_url, pdf_url. Covers the past 12 months, as the dashboard does.
+Automatically list your platform invoices with PDF links on platform.openai.com. List the invoices of an OpenAI API platform billing account (API usage and credits; for the ChatGPT subscription use chatgpt.com/list_invoices). Returns id, number, total (in cents), amount paid, currency, status, creation time, hosted invoice link and PDF link. Covers the past 12 months, as the billing page does. An account in several organizations picks the first one offered, or the one named exactly by organization; an unknown name fails and lists the organizations offered.
 
 - Site: platform.openai.com
 - Address: `reduck/platform.openai.com/list_invoices`
-- Updated: 2026-10-06 (v3)
+- Updated: 2026-10-16 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -27,7 +27,7 @@ npx @reduck-ai/cli@latest run --script reduck/platform.openai.com/list_invoices
 
 ### What does "OpenAI unofficial API: list your platform invoices with PDF links" do?
 
-An unofficial OpenAI API for platform billing invoices. List invoices on the OpenAI API platform billing account (platform.openai.com, API usage/credits — NOT the ChatGPT subscription, which is chatgpt.com/list_invoices). Returns id, number, total (cents), currency, status, created_ts, hosted_invoice_url, pdf_url. Covers the past 12 months, as the dashboard does.
+List the invoices of an OpenAI API platform billing account (API usage and credits; for the ChatGPT subscription use chatgpt.com/list_invoices). Returns id, number, total (in cents), amount paid, currency, status, creation time, hosted invoice link and PDF link. Covers the past 12 months, as the billing page does. An account in several organizations picks the first one offered, or the one named exactly by organization; an unknown name fails and lists the organizations offered.
 
 ### How do I automatically list your platform invoices with PDF links on platform.openai.com?
 

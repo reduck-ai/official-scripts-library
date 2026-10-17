@@ -4,7 +4,7 @@ Automatically search Google on google.com. You get about ten organic results per
 
 - Site: google.com
 - Address: `reduck/google.com/search_site`
-- Updated: 2026-10-05 (v11)
+- Updated: 2026-10-16 (v24)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -21,8 +21,9 @@ npx @reduck-ai/cli@latest run --script reduck/google.com/search_site
 
 ## Input
 
-- `query` (string, required): Full Google query, e.g. 'site:linkedin.com/in Ex-UiPath' or any free-text search.
 - `page` (integer, optional): Result page, 0 = first (maps to Google's &start=page*10), mirroring the SERP pager. Pages are deterministic under replay and disjoint across page numbers, so callers may fetch different pages concurrently and union the results. Note that results are personalised and geo-located to the browser's Google session, so ordering is stable only for a given account, IP and moment.
+- `query` (string, optional): Full Google query, e.g. 'site:linkedin.com/in Ex-UiPath' or any free-text search.
+- `queries` (array, optional): Run several searches in one run (max 5), one after another in the same tab, with a pause of several seconds between them, instead of the single-query fields above. Each item takes the same fields. Returns {results} with one answer per query, in order: {query, page, results, error}, error null when fine. If Google shows its anti-bot check or a cookie wall it cannot pass, the remaining queries are not sent and carry that error.
 - `freshness` (string, optional): Canonical Google time filter (mapped to tbs=qdr:<value>). One of h (past hour), d (past 24h), w (past week), y (past year), m (past month), optionally with a multiplier: d2 = past 2 days, w3 = past 3 weeks, m6 = past 6 months, h5 = past 5 hours. Omit for all-time.
 - `sortByDate` (boolean, optional): When true, sort results by date (newest first) instead of relevance (tbs=sbd:1). Combines with freshness.
 
@@ -30,7 +31,7 @@ npx @reduck-ai/cli@latest run --script reduck/google.com/search_site
 
 ### What does "Search Google" do?
 
-Run a Google search and return the page's organic result cards (title, url, site, byline, meta, snippet), with redirect wrappers already cleaned from urls. Runs logged out by default; if the browser happens to carry Google cookies, results are personalized to that account/IP.
+Run a Google search and return one page of organic results (title, url, site, byline, meta, snippet), with Google's link wrappers resolved to the destination url. Results can be personalized to the browser's Google account and location. Narrow queries return the same results in the same order on replay; very broad ones may reorder. For more coverage, fetch several pages or split the query (different site: paths, phrases, or freshness windows), and dedupe by url. An empty list means Google found nothing; when Google shows its anti-bot check, the run fails and says so.
 
 ### How do I automatically search Google on google.com?
 
@@ -42,7 +43,7 @@ You do not need one. "Search Google" drives the real google.com pages in a brows
 
 ### What information do I need to provide?
 
-Required: query. Optional: page, freshness, sortByDate.
+Optional: page, query, queries, freshness, sortByDate.
 
 ### Do I need to be logged in to google.com?
 

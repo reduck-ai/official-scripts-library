@@ -4,7 +4,7 @@ Automatically search a subreddit on reddit.com. Search posts within a single sub
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/search_subreddit`
-- Updated: 2026-10-09 (v9)
+- Updated: 2026-10-16 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it

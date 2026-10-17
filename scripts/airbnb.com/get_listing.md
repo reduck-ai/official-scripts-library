@@ -1,10 +1,10 @@
-# Get Airbnb listing (+availability)
+# Get Airbnb listing
 
-Automatically get Airbnb listing (+availability) on airbnb.com. Fetch one Airbnb listing by room id: title, propertyType, capacity, rating and per-category ratings, host, images, description, sleeping arrangement, house rules, location (lat/lng), and the month-by-month availability calendar (per-day available/minNights/checkin-checkout). The only_available arg trims the calendar to bookable days.
+Automatically get Airbnb listing on airbnb.com. Get one Airbnb listing by room id: name, property and room type, capacity, ratings and per-category ratings, host, photos, description, sleeping arrangement, amenities (with the ones not included), things to know (house rules, safety, cancellation summary), location, and the 12-month availability calendar, every day with its available flag and minimum stay. With checkin and checkout it also returns the booking quote for those dates and guests (price lines and total, or available false with Airbnb's reason) and the cancellation policy's refund milestones. Airbnb opens calendars about 12 months ahead; dates beyond that fail with an error that says so. Prices are in the currency you ask for (USD by default). A listing that does not exist or was removed fails with an error that says so.
 
 - Site: airbnb.com
 - Address: `reduck/airbnb.com/get_listing`
-- Updated: 2026-09-02 (v5)
+- Updated: 2026-10-16 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,56 +17,61 @@ npx @reduck-ai/cli@latest run --script reduck/airbnb.com/get_listing
 
 ## Input
 
-- `id` (string, required): Airbnb room id (numeric).
+- `id` (string, required): Airbnb room id, the number in /rooms/<id> (search_listings returns it).
+- `pets` (integer, optional): Number of pets.
 - `adults` (integer, optional): Number of adults. Default 2.
-- `checkin` (string, optional): Check-in ISO YYYY-MM-DD. Pair with checkout. Sets the URL dates; availability is returned regardless.
-- `checkout` (string, optional): Check-out ISO YYYY-MM-DD.
-- `only_available` (boolean, optional): When true, the availability calendar includes only bookable days (drops blocked days and empty months) — much smaller output. Default false returns every day with its available flag.
+- `checkin` (string, optional): Check-in date, YYYY-MM-DD. With checkout, the result carries the quote and the cancellation policy for these dates. Airbnb opens its calendars about 12 months ahead.
+- `infants` (integer, optional): Number of infants (under 2).
+- `checkout` (string, optional): Check-out date, YYYY-MM-DD.
+- `children` (integer, optional): Number of children (2-12).
+- `currency` (string, optional): ISO 4217 currency for prices, e.g. USD or EUR. Default USD.
 
 ## Output
 
 - `id` (string, required)
 - `url` (string, required)
-- `availability` (array | null, required)
+- `name` (string | null, required): The listing's own name, as its host wrote it.
+- `quote` (object | null, required): The booking quote for the dates and guests asked for. Null without dates. available is false when the listing cannot be booked for them, with Airbnb's reason code (e.g. DATE); lines and total are then empty.
+- `title` (string | null, required): Airbnb's summary line, e.g. "Rental unit in Lisbon · ★4.88 · 1 bedroom · 2 beds · 1 bath".
+- `images` (array, required)
+- `amenities` (array, required): Every amenity the listing page lists, available or not (the group "Not included" lists the ones it lacks).
+- `availability` (array, required): The calendar the page loads: 12 months from the current one, day by day.
+- `thingsToKnow` (array, required): The things-to-know blocks: type is Airbnb's own code (HOUSE_RULES, SAFETY_AND_PROPERTY, CANCELLATION_POLICY, INSTANT_BOOK...), items are the lines the page shows.
+- `cancellationPolicy` (object | null, required): The refund milestones for the dates asked for. Null without dates: Airbnb gives them only for dates.
 - `lat` (number | null, optional)
 - `lng` (number | null, optional)
-- `host` (any, optional)
-- `title` (string | null, optional)
-- `images` (array, optional)
+- `host` (object | null, optional)
 - `rating` (number | null, optional)
-- `roomType` (string | null, optional)
+- `roomType` (string | null, optional): Entire home/apt, Private room, Shared room or Hotel room.
 - `sleeping` (array, optional)
-- `houseRules` (array, optional)
 - `description` (string | null, optional)
-- `reviewCount` (number | null, optional)
+- `reviewCount` (integer | null, optional)
 - `propertyType` (string | null, optional)
-- `personCapacity` (number | null, optional)
+- `personCapacity` (integer | null, optional)
 - `categoryRatings` (object, optional)
-- `locationSummary` (string | null, optional)
-- `metaDescription` (string | null, optional)
-- `locationSubtitle` (string | null, optional)
+- `locationSubtitle` (string | null, optional): The place line of the location section, e.g. "Lisbon, Portugal".
 
 ## FAQ
 
-### What does "Get Airbnb listing (+availability)" do?
+### What does "Get Airbnb listing" do?
 
-Fetch one Airbnb listing by room id: title, propertyType, capacity, rating and per-category ratings, host, images, description, sleeping arrangement, house rules, location (lat/lng), and the month-by-month availability calendar (per-day available/minNights/checkin-checkout). The only_available arg trims the calendar to bookable days.
+Get one Airbnb listing by room id: name, property and room type, capacity, ratings and per-category ratings, host, photos, description, sleeping arrangement, amenities (with the ones not included), things to know (house rules, safety, cancellation summary), location, and the 12-month availability calendar, every day with its available flag and minimum stay. With checkin and checkout it also returns the booking quote for those dates and guests (price lines and total, or available false with Airbnb's reason) and the cancellation policy's refund milestones. Airbnb opens calendars about 12 months ahead; dates beyond that fail with an error that says so. Prices are in the currency you ask for (USD by default). A listing that does not exist or was removed fails with an error that says so.
 
-### How do I automatically get Airbnb listing (+availability) on airbnb.com?
+### How do I automatically get Airbnb listing on airbnb.com?
 
 Ask an AI agent connected to Reduck to run reduck/airbnb.com/get_listing, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/airbnb.com/get_listing
 
-### Is there a airbnb.com API to get Airbnb listing (+availability)?
+### Is there a airbnb.com API to get Airbnb listing?
 
-You do not need one. "Get Airbnb listing (+availability)" drives the real airbnb.com pages in a browser, so it works whether or not airbnb.com offers an API for this.
+You do not need one. "Get Airbnb listing" drives the real airbnb.com pages in a browser, so it works whether or not airbnb.com offers an API for this.
 
 ### What information do I need to provide?
 
-Required: id. Optional: adults, checkin, checkout, only_available.
+Required: id. Optional: pets, adults, checkin, infants, checkout, children, currency.
 
 ### What does it return?
 
-It returns id, lat, lng, url, host, title, images, rating, roomType, sleeping, houseRules, description, reviewCount, availability, propertyType, personCapacity, categoryRatings, locationSummary, metaDescription, locationSubtitle.
+It returns id, lat, lng, url, host, name, quote, title, images, rating, roomType, sleeping, amenities, description, reviewCount, availability, propertyType, thingsToKnow, personCapacity, categoryRatings, locationSubtitle, cancellationPolicy.
 
 ### Do I need to be logged in to airbnb.com?
 

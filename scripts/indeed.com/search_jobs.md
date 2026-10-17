@@ -4,7 +4,7 @@ Automatically search Indeed jobs on indeed.com. First page of Indeed job cards w
 
 - Site: indeed.com
 - Address: `reduck/indeed.com/search_jobs`
-- Updated: 2026-10-05 (v4)
+- Updated: 2026-10-16 (v5)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -31,8 +31,8 @@ npx @reduck-ai/cli@latest run --script reduck/indeed.com/search_jobs
 
 - `jobs` (array, required)
 - `page` (integer, required)
-- `total` (integer, required): Matching job count reported by Indeed for this query/location. Not meaningful when outOfCountry is true (Indeed falls back to a broad, location-agnostic count).
-- `outOfCountry` (boolean, required): True when Indeed treated the requested location as outside the chosen country site — total and jobs then reflect a fallback, not the requested location.
+- `total` (integer, required): Matching job count reported by Indeed for this query/location.
+- `outOfCountry` (boolean, required): Indeed's own flag, as it sends it: true when Indeed treats this browser as visiting the country site from outside that country. Indeed judges it from the browser's network, not from the location searched: the same Denver search on indeed.com is true from a French connection and false from a US one, with the same Colorado jobs.
 
 ## Example output
 
@@ -66,7 +66,7 @@ Shape only: placeholder values generated from the output schema, not a real run.
 
 ### What does "Search Indeed jobs" do?
 
-Search Indeed's public job listings by keyword, optional free-text location and country site (e.g. "fr" for fr.indeed.com, default "us"). Returns total, page, outOfCountry, and jobs (jobKey, title, company, location, salary, jobTypes, remote, sponsored, postedAgo, url). Anonymous search only reliably supports page=1 — Indeed gates further pages behind a sign-in wall, and the script throws loudly if that gate appears. total/results are only meaningful for the requested location when outOfCountry is false; indeed.com (US) treats non-US locations as out-of-country and returns unrelated jobs.
+Search Indeed's public job listings by keyword, optional free-text location and country site (e.g. "fr" for fr.indeed.com, default "us"). Returns total, page, outOfCountry (whether Indeed treats this browser as visiting from outside that country), and jobs (jobKey, title, company, location, salary, jobTypes, remote, sponsored, postedAgo, url). Only page 1 is available without signing in; a later page, or a search Indeed refuses to serve, fails with a message that says so.
 
 ### How do I automatically search Indeed jobs on indeed.com?
 

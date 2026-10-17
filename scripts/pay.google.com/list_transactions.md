@@ -4,7 +4,7 @@ Automatically list Google Payments activity (Google One, YouTube, Google Play ch
 
 - Site: pay.google.com
 - Address: `reduck/pay.google.com/list_transactions`
-- Updated: 2026-10-06 (v6)
+- Updated: 2026-10-16 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -22,6 +22,7 @@ npx @reduck-ai/cli@latest run --script reduck/pay.google.com/list_transactions
 ## Output
 
 - `total` (integer, required)
+- `complete` (boolean, required): true only when the whole activity list was read (an empty timeline). false when max cut the list or scrolling loaded nothing more: the page gives no end-of-list signal, so the list may continue.
 - `transactions` (array, required)
 
 ## FAQ
@@ -44,7 +45,7 @@ Optional: max.
 
 ### What does it return?
 
-It returns total, transactions.
+It returns total, complete, transactions.
 
 ### Do I need to be logged in to pay.google.com?
 

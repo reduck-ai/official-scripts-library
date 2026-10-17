@@ -1,10 +1,10 @@
-# Get 14-day weather forecast
+# Get meteoblue 14-day weather forecast
 
-Automatically get 14-day weather forecast on meteoblue.com. 14-day weather forecast for any city worldwide (meteoblue): per-day condition, min/max temp, predictability. Optional date filter (YYYY-MM-DD).
+Automatically get meteoblue 14-day weather forecast on meteoblue.com. 14-day weather forecast for any city worldwide (meteoblue): per-day condition, min/max temp, predictability. Optional date filter (YYYY-MM-DD).
 
 - Site: meteoblue.com
 - Address: `reduck/meteoblue.com/get_14day_forecast`
-- Updated: 2026-10-11 (v3)
+- Updated: 2026-10-16 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -27,17 +27,17 @@ npx @reduck-ai/cli@latest run --script reduck/meteoblue.com/get_14day_forecast
 
 ## FAQ
 
-### What does "Get 14-day weather forecast" do?
+### What does "Get meteoblue 14-day weather forecast" do?
 
 14-day weather forecast for any city worldwide (meteoblue): per-day condition, min/max temp, predictability. Optional date filter (YYYY-MM-DD).
 
-### How do I automatically get 14-day weather forecast on meteoblue.com?
+### How do I automatically get meteoblue 14-day weather forecast on meteoblue.com?
 
 Ask an AI agent connected to Reduck to run reduck/meteoblue.com/get_14day_forecast, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/meteoblue.com/get_14day_forecast
 
-### Is there a meteoblue.com API to get 14-day weather forecast?
+### Is there a meteoblue.com API to get meteoblue 14-day weather forecast?
 
-You do not need one. "Get 14-day weather forecast" drives the real meteoblue.com pages in a browser, so it works whether or not meteoblue.com offers an API for this.
+You do not need one. "Get meteoblue 14-day weather forecast" drives the real meteoblue.com pages in a browser, so it works whether or not meteoblue.com offers an API for this.
 
 ### What information do I need to provide?
 

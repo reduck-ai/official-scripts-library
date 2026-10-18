@@ -4,7 +4,7 @@ Each reposter comes back as one row with followers, following, bio and website.
 
 - Site: x.com
 - Address: `reduck/x.com/get_reposters`
-- Updated: 2026-10-16 (v6)
+- Updated: 2026-10-17 (v6)
 - Author: Reduck AI (reduck)
 
 ## About

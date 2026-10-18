@@ -4,7 +4,7 @@ Automatically export an X (Twitter) account's followers or following on x.com. L
 
 - Site: x.com
 - Address: `reduck/x.com/get_follows`
-- Updated: 2026-10-16 (v9)
+- Updated: 2026-10-17 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -19,7 +19,7 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/get_follows
 
 - `count` (integer, optional): Max accounts to return. Scrolls until count is met or the list dries up. Default 100.
 - `handle` (string, optional): Target user's handle (with or without @). Pass this or handles.
-- `handles` (array, optional): Several handles (max 5), read one after another in the same page, with a pause of a few seconds between them, instead of handle. count and direction apply to each. Returns {results}, one per handle in order, each with error null or what went wrong. A rate limit, lock or sign-in wall stops the batch: the remaining handles carry that error.
+- `handles` (array, optional): Several handles (max 10), read one after another in the same page, instead of handle. count and direction apply to each. Returns {results}, one per handle in order, each with error null or what went wrong. A rate limit, lock or sign-in wall stops the batch: the remaining handles carry that error.
 - `direction` (any, optional): Which list to read: the user's 'followers', or the accounts they follow ('following').
 
 ## Output

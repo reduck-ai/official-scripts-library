@@ -4943,7 +4943,7 @@
 			"address": "@reduck/search.brave.com/search",
 			"path": "scripts/search.brave.com/search.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/search.brave.com/search",
-			"lastmod": "2026-10-16"
+			"lastmod": "2026-10-17"
 		},
 		{
 			"address": "@reduck/search.brave.com/submit_url",
@@ -6839,7 +6839,7 @@
 			"address": "@reduck/x.com/get_follows",
 			"path": "scripts/x.com/get_follows.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/x.com/get_follows",
-			"lastmod": "2026-10-16"
+			"lastmod": "2026-10-17"
 		},
 		{
 			"address": "@reduck/x.com/get_inbox",
@@ -6893,13 +6893,13 @@
 			"address": "@reduck/x.com/get_quote_tweets",
 			"path": "scripts/x.com/get_quote_tweets.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/x.com/get_quote_tweets",
-			"lastmod": "2026-10-16"
+			"lastmod": "2026-10-17"
 		},
 		{
 			"address": "@reduck/x.com/get_reposters",
 			"path": "scripts/x.com/get_reposters.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/x.com/get_reposters",
-			"lastmod": "2026-10-16"
+			"lastmod": "2026-10-17"
 		},
 		{
 			"address": "@reduck/x.com/get_trending_topics",

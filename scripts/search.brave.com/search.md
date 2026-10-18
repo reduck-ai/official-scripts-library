@@ -4,7 +4,7 @@ Brave's ranked results for any query or site: check, about 20 a page, with title
 
 - Site: search.brave.com
 - Address: `reduck/search.brave.com/search`
-- Updated: 2026-10-16 (v22)
+- Updated: 2026-10-17 (v23)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -25,7 +25,7 @@ npx @reduck-ai/cli@latest run --script reduck/search.brave.com/search
 - `offset` (integer, optional): 0-based page index (0 is the first page, about 20 results). The pool behind one query is limited and its depth varies by query; past its end Brave re-serves earlier pages. hasMore in the output says whether a next page exists: keep paging while it is true, and dedupe on url anyway. Default 0.
 - `country` (string, optional): ISO-3166 alpha-2 country whose Brave results to read, e.g. "us". When omitted, Brave answers for the country of the browser's own network location, so the same query read from two places gives two different result pages. Pass it whenever readings must be comparable across browsers, or must stand in for another reader's, such as an assistant's US-side web search.
 - `queries` (array, optional): Run several searches in one run (max 10), one after another in the same tab, with a pause of a few seconds between them, instead of the single-query fields above. Each item takes the same fields. Returns {results} with one answer per query, in order, each with an error (null when fine). If Brave shows its anti-bot check, the remaining queries are not sent and carry that error.
-- `exactMatch` (boolean, optional): Deprecated; has no reliable effect, because Brave may correct spellings without saying so. To search a literal string, put it in quotes in query. Default false.
+- `exactMatch` (boolean, optional): Deprecated and ignored: Brave may correct spellings without saying so. To search a literal string, put it in quotes in query.
 
 ## Output
 

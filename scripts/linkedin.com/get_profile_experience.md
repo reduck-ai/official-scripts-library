@@ -4,7 +4,7 @@ Automatically get LinkedIn profile experience on linkedin.com. Get the full expe
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_profile_experience`
-- Updated: 2026-10-16 (v12)
+- Updated: 2026-10-19 (v13)
 - Author: Reduck AI (reduck)
 
 ## Run it

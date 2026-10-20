@@ -4,7 +4,7 @@ Automatically get Gmail thread on mail.google.com. Read a Gmail thread by its he
 
 - Site: mail.google.com
 - Address: `reduck/mail.google.com/get_thread`
-- Updated: 2026-10-16 (v8)
+- Updated: 2026-10-19 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it

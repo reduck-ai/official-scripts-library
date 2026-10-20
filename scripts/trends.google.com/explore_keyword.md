@@ -1,10 +1,10 @@
-# Google Trends unofficial API: compare keywords, get related queries
+# Compare keywords on Google Trends
 
-Automatically compare keywords, get related queries on trends.google.com. See which of up to five terms gets more search interest, over time and by region.
+Automatically compare keywords on Google Trends on trends.google.com. See which of up to five terms gets more search interest, over time and by region.
 
 - Site: trends.google.com
 - Address: `reduck/trends.google.com/explore_keyword`
-- Updated: 2026-10-17 (v4)
+- Updated: 2026-10-19 (v4)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -98,17 +98,17 @@ Shape only: placeholder values generated from the output schema, not a real run.
 
 ## FAQ
 
-### What does "Google Trends unofficial API: compare keywords, get related queries" do?
+### What does "Compare keywords on Google Trends" do?
 
-An unofficial Google Trends API: compare up to 5 keywords' search interest over time and by region, and get their top and rising related queries, as data in one call. Google Trends explore for 1-5 keywords in one compare query: interest over time (shared scale), interest by region, per-region share %, related topics and queries (top + rising), for a given geo/date range/category/property.
+Google Trends explore for 1-5 keywords in one compare query: interest over time (shared scale), interest by region, per-region share %, related topics and queries (top and rising), for a given geo, date range, category and property.
 
-### How do I automatically compare keywords, get related queries on trends.google.com?
+### How do I automatically compare keywords on Google Trends on trends.google.com?
 
 Ask an AI agent connected to Reduck to run reduck/trends.google.com/explore_keyword, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/trends.google.com/explore_keyword
 
-### Is there a trends.google.com API to compare keywords, get related queries?
+### Is there a trends.google.com API to compare keywords on Google Trends?
 
-You do not need one. "Google Trends unofficial API: compare keywords, get related queries" drives the real trends.google.com pages in a browser, so it works whether or not trends.google.com offers an API for this.
+You do not need one. "Compare keywords on Google Trends" drives the real trends.google.com pages in a browser, so it works whether or not trends.google.com offers an API for this.
 
 ### What information do I need to provide?
 

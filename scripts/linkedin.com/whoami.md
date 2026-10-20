@@ -4,7 +4,7 @@ Report which LinkedIn member this browser is signed in as: the vanity slug other
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/whoami`
-- Updated: 2026-10-16 (v2)
+- Updated: 2026-10-19 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -21,17 +21,17 @@ It takes no input.
 
 ## Output
 
-- `evidence` (string, required): How the verdict was reached — e.g. 'voyager /me 200', 'voyager /me 401', 'redirected to …/uas/login', 'no LinkedIn session cookie in this browser'. Present for both verdicts so a false is auditable rather than bare.
+- `evidence` (string, required): How the verdict was reached, in a short phrase, e.g. 'no LinkedIn session cookie in this browser'. Present for both verdicts so a false is auditable rather than bare.
 - `loggedIn` (boolean, required): True when LinkedIn identified a signed-in member for this browser. False is a real answer, not a failure — it means the session is absent or dead.
 - `checkedAt` (string, required): ISO timestamp of the check, so a polled result can be aged.
 - `fullName` (string | null, optional): firstName + lastName as LinkedIn returns them; null when signed out.
 - `lastName` (string | null, optional)
-- `memberId` (number | null, optional): LinkedIn's numeric member id (voyager plainId).
+- `memberId` (number | null, optional): LinkedIn's numeric member id.
 - `firstName` (string | null, optional)
 - `memberUrn` (string | null, optional): Stable member urn (urn:li:fs_miniProfile:…). Survives a vanity-slug rename, unlike publicIdentifier, so prefer it as a join key.
 - `profileUrl` (string | null, optional): Canonical /in/ URL built from publicIdentifier. Null when signed out.
 - `publicIdentifier` (string | null, optional): The member's vanity slug — the part after /in/ in their profile URL. This is the publicId that other linkedin.com scripts take as an argument. Null when signed out.
-- `premiumSubscriber` (boolean | null, optional): Whether the signed-in member holds a Premium subscription, as voyager reports it. Null when signed out or when LinkedIn omits the field.
+- `premiumSubscriber` (boolean | null, optional): Whether the signed-in member holds a Premium subscription, as LinkedIn reports it. Null when signed out or when LinkedIn omits the field.
 
 ## FAQ
 

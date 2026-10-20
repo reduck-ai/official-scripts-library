@@ -4,7 +4,7 @@ Automatically export an X (Twitter) account's followers or following on x.com. L
 
 - Site: x.com
 - Address: `reduck/x.com/get_follows`
-- Updated: 2026-10-17 (v6)
+- Updated: 2026-10-19 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,15 +18,14 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/get_follows
 ## Input
 
 - `count` (integer, optional): Max accounts to return. Scrolls until count is met or the list dries up. Default 100.
-- `handle` (string, optional): Target user's handle (with or without @). Pass this or handles.
-- `handles` (array, optional): Several handles (max 10), read one after another in the same page, instead of handle. count and direction apply to each. Returns {results}, one per handle in order, each with error null or what went wrong. A rate limit, lock or sign-in wall stops the batch: the remaining handles carry that error.
+- `handle` (string, optional): Target user's handle (with or without @).
+- `handles` (array, optional): Not supported since 19 Oct 2026: the run fails with a message saying so. Send one handle per call and fan out with run_script's scripts.
 - `direction` (any, optional): Which list to read: the user's 'followers', or the accounts they follow ('following').
 
 ## Output
 
 - `count` (integer, optional): Number of accounts returned. 0 is a first-class outcome (none, or protected/hidden).
 - `handle` (string, optional)
-- `results` (array, optional): With handles only: one result per handle, in order, with the same fields as a single answer (handle, direction, count, complete, accounts) plus error. When error is set, only handle and error are present.
 - `accounts` (any, optional)
 - `complete` (boolean, optional): True when X showed the end of the list and every account it sent is returned. False when more may exist: count was reached or X stopped loading.
 - `direction` (string, optional)
@@ -51,7 +50,7 @@ Optional: count, handle, handles, direction.
 
 ### What does it return?
 
-It returns count, handle, results, accounts, complete, direction.
+It returns count, handle, accounts, complete, direction.
 
 ### Do I need to be logged in to x.com?
 

@@ -1,10 +1,10 @@
 # Get Instagram profile highlights
 
-Automatically get Instagram profile highlights on instagram.com. List an Instagram user's Story Highlights by their numeric user_id (from get_profile). Returns each highlight's id, title, media_count, cover_image, created_at, and updated_at. This is the highlights tray on the profile, not the individual story items inside each highlight.
+Automatically get Instagram profile highlights on instagram.com. List an Instagram user's Story Highlights by username (from get_profile). Returns each highlight's id, title and cover image, as the profile's highlights tray shows them; a profile with no highlights returns an empty list. This is the tray on the profile, not the story items inside each highlight. Fails with a clear error when the browser is not signed in to Instagram or the username does not exist.
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/get_highlights`
-- Updated: 2026-09-03 (v1)
+- Updated: 2026-10-19 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,18 +17,18 @@ npx @reduck-ai/cli@latest run --script reduck/instagram.com/get_highlights
 
 ## Input
 
-- `user_id` (string, required): Numeric user id (get_profile returns it as user_id).
+- `username` (string, required): Instagram username, without the @ (get_profile returns it).
 
 ## Output
 
-- `user_id` (string, required)
+- `username` (string, required)
 - `highlights` (array, required)
 
 ## FAQ
 
 ### What does "Get Instagram profile highlights" do?
 
-List an Instagram user's Story Highlights by their numeric user_id (from get_profile). Returns each highlight's id, title, media_count, cover_image, created_at, and updated_at. This is the highlights tray on the profile, not the individual story items inside each highlight.
+List an Instagram user's Story Highlights by username (from get_profile). Returns each highlight's id, title and cover image, as the profile's highlights tray shows them; a profile with no highlights returns an empty list. This is the tray on the profile, not the story items inside each highlight. Fails with a clear error when the browser is not signed in to Instagram or the username does not exist.
 
 ### How do I automatically get Instagram profile highlights on instagram.com?
 
@@ -40,11 +40,11 @@ You do not need one. "Get Instagram profile highlights" drives the real instagra
 
 ### What information do I need to provide?
 
-Required: user_id.
+Required: username.
 
 ### What does it return?
 
-It returns user_id, highlights.
+It returns username, highlights.
 
 ### Do I need to be logged in to instagram.com?
 

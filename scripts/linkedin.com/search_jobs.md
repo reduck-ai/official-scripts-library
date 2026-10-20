@@ -4,7 +4,7 @@ Automatically search LinkedIn jobs on linkedin.com. Search LinkedIn job postings
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/search_jobs`
-- Updated: 2026-10-13 (v16)
+- Updated: 2026-10-19 (v17)
 - Author: Reduck AI (reduck)
 
 ## Run it

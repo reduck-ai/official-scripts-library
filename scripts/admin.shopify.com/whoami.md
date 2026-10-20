@@ -1,10 +1,10 @@
 # Shopify Admin whoami (signed-in account)
 
-Report which Shopify account the Shopify admin is signed in as in this browser: the account email and name, and the store it opened. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Shopify admin scripts.
+Report whether this browser is signed in to the Shopify admin, and which store it opened: the store handle, the store's name and the store's contact email (not the signed-in user's own identity). Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Shopify admin scripts.
 
 - Site: admin.shopify.com
 - Address: `reduck/admin.shopify.com/whoami`
-- Updated: 2026-09-30 (v1)
+- Updated: 2026-10-19 (v1)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -31,7 +31,7 @@ It takes no input.
 
 ### What does "Shopify Admin whoami (signed-in account)" do?
 
-Report which Shopify account the Shopify admin is signed in as in this browser: the account email and name, and the store it opened. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Shopify admin scripts.
+Report whether this browser is signed in to the Shopify admin, and which store it opened: the store handle, the store's name and the store's contact email (not the signed-in user's own identity). Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Shopify admin scripts.
 
 ### What information do I need to provide?
 

@@ -4,7 +4,7 @@ Report which Claude.ai account the browser is signed in as: id (the sign-in emai
 
 - Site: claude.ai
 - Address: `reduck/claude.ai/whoami`
-- Updated: 2026-10-16 (v3)
+- Updated: 2026-10-19 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

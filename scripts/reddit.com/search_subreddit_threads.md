@@ -1,10 +1,10 @@
-# Search Reddit threads across several subreddits with a list of queries
+# Search Reddit threads in a subreddit, with post text
 
-Automatically search Reddit threads across several subreddits with a list of queries on reddit.com. Run several search queries across one or more subreddits in a single pass and get back the matching threads, deduplicated across queries and subreddits: title, subreddit, permalink, upvotes, comment count, creation date, flair, and the opening of the post body. Each thread also lists which of your queries matched it, and results are ordered by how many queries matched, then by upvotes. Sort and time window are configurable, and any query that a subreddit refuses is reported separately instead of failing the whole run.
+Automatically search Reddit threads in a subreddit, with post text on reddit.com. Search one subreddit for a query and get one page of matching threads in Reddit's order, each with title, subreddit, permalink, upvotes, comment count, creation time, flair and the post's full text. Sort and time window are configurable; pass the returned after value to read the next page (null on the last one). Requires being signed in to Reddit. A subreddit that refuses the search (private, banned) fails with its HTTP status. To search several subreddits or queries, run the script once per pair.
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/search_subreddit_threads`
-- Updated: 2026-10-16 (v3)
+- Updated: 2026-10-19 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,40 +17,42 @@ npx @reduck-ai/cli@latest run --script reduck/reddit.com/search_subreddit_thread
 
 ## Input
 
-- `queries` (array, required)
-- `subreddits` (array, required): Subreddit names without r/
+- `query` (string, required): Search text, in Reddit's search syntax.
+- `subreddit` (string, required): Subreddit name, with or without the r/ prefix.
 - `sort` (string, optional)
 - `time` (string, optional)
-- `limit` (number, optional)
-- `bodyChars` (number, optional)
+- `after` (string, optional): Pass the after value of the previous answer to read the next page.
+- `limit` (integer, optional): Threads per page.
 
 ## Output
 
-- `count` (number, optional)
-- `errors` (array, optional)
-- `threads` (array, optional)
+- `after` (string | null, required): Cursor for the next page; null on the last page.
+- `query` (string, required)
+- `threads` (array, required)
+- `subreddit` (string, required)
+- `count` (integer, optional)
 
 ## FAQ
 
-### What does "Search Reddit threads across several subreddits with a list of queries" do?
+### What does "Search Reddit threads in a subreddit, with post text" do?
 
-Run several search queries across one or more subreddits in a single pass and get back the matching threads, deduplicated across queries and subreddits: title, subreddit, permalink, upvotes, comment count, creation date, flair, and the opening of the post body. Each thread also lists which of your queries matched it, and results are ordered by how many queries matched, then by upvotes. Sort and time window are configurable, and any query that a subreddit refuses is reported separately instead of failing the whole run.
+Search one subreddit for a query and get one page of matching threads in Reddit's order, each with title, subreddit, permalink, upvotes, comment count, creation time, flair and the post's full text. Sort and time window are configurable; pass the returned after value to read the next page (null on the last one). Requires being signed in to Reddit. A subreddit that refuses the search (private, banned) fails with its HTTP status. To search several subreddits or queries, run the script once per pair.
 
-### How do I automatically search Reddit threads across several subreddits with a list of queries on reddit.com?
+### How do I automatically search Reddit threads in a subreddit, with post text on reddit.com?
 
 Ask an AI agent connected to Reduck to run reduck/reddit.com/search_subreddit_threads, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/reddit.com/search_subreddit_threads
 
-### Is there a reddit.com API to search Reddit threads across several subreddits with a list of queries?
+### Is there a reddit.com API to search Reddit threads in a subreddit, with post text?
 
-You do not need one. "Search Reddit threads across several subreddits with a list of queries" drives the real reddit.com pages in a browser, so it works whether or not reddit.com offers an API for this.
+You do not need one. "Search Reddit threads in a subreddit, with post text" drives the real reddit.com pages in a browser, so it works whether or not reddit.com offers an API for this.
 
 ### What information do I need to provide?
 
-Required: subreddits, queries. Optional: sort, time, limit, bodyChars.
+Required: subreddit, query. Optional: sort, time, after, limit.
 
 ### What does it return?
 
-It returns count, errors, threads.
+It returns after, count, query, threads, subreddit.
 
 ### Do I need to be logged in to reddit.com?
 

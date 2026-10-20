@@ -4,7 +4,7 @@ Automatically get a tweet and its replies on X (Twitter) on x.com. Get a tweet o
 
 - Site: x.com
 - Address: `reduck/x.com/get_tweet`
-- Updated: 2026-10-16 (v13)
+- Updated: 2026-10-19 (v17)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -19,15 +19,14 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/get_tweet
 
 - `sort` (string, optional): Order of the replies, as in the page's Sort replies menu: relevance (X's default ranking), recency (newest first) or likes (most liked first).
 - `count` (integer, optional): How many replies to return. Without it, the script returns the first page X shows (often 20 to 40). With it, the script loads more until it has count, reaches the end, or X stops loading; complete says whether it reached the end.
-- `tweet_url` (string, optional): Full URL of the tweet, e.g. https://x.com/handle/status/123. Pass this or tweet_urls.
-- `tweet_urls` (array, optional): Several tweet URLs (max 10), read one after another in the same page, instead of tweet_url. sort and count apply to each. Returns {results}, one per URL in order, each with error null or what went wrong. A rate limit, lock or sign-in wall stops the batch: the remaining URLs carry that error.
+- `tweet_url` (string, optional): Full URL of the tweet, e.g. https://x.com/handle/status/123.
+- `tweet_urls` (array, optional): Not supported since 19 Oct 2026: the run fails with a message saying so. Send one tweet_url per call and fan out with run_script's scripts.
 
 ## Output
 
 - `count` (integer, optional): Number of replies returned. 0 is a valid answer.
 - `tweet` (any, optional): The tweet at tweet_url. A deleted or unavailable tweet is an error.
 - `replies` (array, optional)
-- `results` (array, optional): With tweet_urls only: one result per URL, in order, with the same fields as a single answer (tweet, tweet_id, count, complete, replies) plus tweet_url and error. When error is set, only tweet_url and error are present.
 - `complete` (boolean, optional): True when X showed the end of the conversation and every reply it sent is returned. False when there may be more. Replies behind "Show replies" are not opened, so true is a floor.
 - `tweet_id` (string, optional)
 
@@ -51,7 +50,7 @@ Optional: sort, count, tweet_url, tweet_urls.
 
 ### What does it return?
 
-It returns count, tweet, replies, results, complete, tweet_id.
+It returns count, tweet, replies, complete, tweet_id.
 
 ### Do I need to be logged in to x.com?
 

@@ -4,7 +4,7 @@ Automatically list invoices on vercel.com. List a Vercel team's billing invoices
 
 - Site: vercel.com
 - Address: `reduck/vercel.com/list_invoices`
-- Updated: 2026-10-16 (v7)
+- Updated: 2026-10-19 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically get trending Reddit posts on reddit.com. List Reddit's trending th
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/get_trending`
-- Updated: 2026-10-16 (v6)
+- Updated: 2026-10-19 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

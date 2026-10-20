@@ -1,10 +1,10 @@
 # Unsend an Instagram DM
 
-Automatically unsend an Instagram DM on instagram.com. Remove a message you sent from an Instagram DM conversation, so it disappears for everyone in the thread. Identify the message by its text, or leave the text out to take back the most recent thing you sent. Only your own messages can be taken back. If the text you give matches more than one of your messages the run refuses rather than guessing which to remove, and if it matches none it says so without touching the conversation. Removal is confirmed by re-reading the conversation from Instagram itself, not from the screen, and it cannot be undone.
+Automatically unsend an Instagram DM on instagram.com. Remove a message you sent from an Instagram DM conversation, so it disappears for everyone in the thread. Identify the message by its text, or leave the text out to take back the most recent thing you sent. Only your own messages can be taken back. If the text you give matches more than one of your messages the run refuses rather than guessing which to remove, and if it matches none it says so without touching the conversation. The run checks that the message is really gone before reporting success. Removal cannot be undone.
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/unsend_message`
-- Updated: 2026-10-14 (v7)
+- Updated: 2026-10-19 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -35,7 +35,7 @@ npx @reduck-ai/cli@latest run --script reduck/instagram.com/unsend_message
 
 ### What does "Unsend an Instagram DM" do?
 
-Remove a message you sent from an Instagram DM conversation, so it disappears for everyone in the thread. Identify the message by its text, or leave the text out to take back the most recent thing you sent. Only your own messages can be taken back. If the text you give matches more than one of your messages the run refuses rather than guessing which to remove, and if it matches none it says so without touching the conversation. Removal is confirmed by re-reading the conversation from Instagram itself, not from the screen, and it cannot be undone.
+Remove a message you sent from an Instagram DM conversation, so it disappears for everyone in the thread. Identify the message by its text, or leave the text out to take back the most recent thing you sent. Only your own messages can be taken back. If the text you give matches more than one of your messages the run refuses rather than guessing which to remove, and if it matches none it says so without touching the conversation. The run checks that the message is really gone before reporting success. Removal cannot be undone.
 
 ### How do I automatically unsend an Instagram DM on instagram.com?
 

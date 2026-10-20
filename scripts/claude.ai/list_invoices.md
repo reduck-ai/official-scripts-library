@@ -4,7 +4,7 @@ Automatically list Claude invoices on claude.ai. List the Claude (claude.ai) pla
 
 - Site: claude.ai
 - Address: `reduck/claude.ai/list_invoices`
-- Updated: 2026-10-16 (v6)
+- Updated: 2026-10-19 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it

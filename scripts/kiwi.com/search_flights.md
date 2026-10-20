@@ -4,7 +4,7 @@ Automatically search Kiwi flights on kiwi.com. Search one-way flights on Kiwi.co
 
 - Site: kiwi.com
 - Address: `reduck/kiwi.com/search_flights`
-- Updated: 2026-10-16 (v17)
+- Updated: 2026-10-19 (v18)
 - Author: Reduck AI (reduck)
 
 ## Run it

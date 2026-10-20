@@ -4,7 +4,7 @@ Automatically cancel registration for a Luma event on luma.com. Cancel the signe
 
 - Site: luma.com
 - Address: `reduck/luma.com/unregister_from_event`
-- Updated: 2026-10-16 (v4)
+- Updated: 2026-10-19 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

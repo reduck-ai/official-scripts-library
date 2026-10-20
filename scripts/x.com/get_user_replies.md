@@ -4,7 +4,7 @@ Automatically export an X (Twitter) user's replies on x.com. Get a user's Replie
 
 - Site: x.com
 - Address: `reduck/x.com/get_user_replies`
-- Updated: 2026-10-12 (v10)
+- Updated: 2026-10-19 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -19,6 +19,11 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/get_user_replies
 
 - `handle` (string, required): X handle, with or without the @, e.g. NASA
 - `count` (integer, optional): How many to return. Without it, the script returns the first page X shows (often 20 to 40). With it, the script loads more until it has count, reaches the end, or X stops loading.
+
+## Output
+
+- `tweets` (array, required): Newest first.
+- `complete` (boolean, required): True when X marked the end of the Replies tab and every reply fits in count. False when count stopped the read first, or X stopped loading more.
 
 ## FAQ
 
@@ -37,6 +42,10 @@ You do not need one. "Export an X (Twitter) user's replies" drives the real x.co
 ### What information do I need to provide?
 
 Required: handle. Optional: count.
+
+### What does it return?
+
+It returns tweets, complete.
 
 ### Do I need to be logged in to x.com?
 

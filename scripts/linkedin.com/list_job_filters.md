@@ -4,7 +4,7 @@ Automatically list LinkedIn job search filters on linkedin.com. List the filters
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/list_job_filters`
-- Updated: 2026-10-13 (v1)
+- Updated: 2026-10-19 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

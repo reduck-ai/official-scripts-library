@@ -4,7 +4,7 @@ Automatically list Google Payments activity (Google One, YouTube, Google Play ch
 
 - Site: pay.google.com
 - Address: `reduck/pay.google.com/list_transactions`
-- Updated: 2026-10-16 (v7)
+- Updated: 2026-10-19 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it

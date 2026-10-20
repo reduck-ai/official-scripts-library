@@ -4,7 +4,7 @@ Report which Qonto account this browser is signed in as: the account email. Bein
 
 - Site: qonto.com
 - Address: `reduck/qonto.com/whoami`
-- Updated: 2026-10-08 (v2)
+- Updated: 2026-10-19 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

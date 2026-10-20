@@ -1,10 +1,10 @@
-# X (Twitter) profile unofficial API: get a user's bio and followers
+# Get X (Twitter) user profile
 
-Automatically get a user's bio and followers on x.com. Look up an X (Twitter) user's profile by handle. Returns handle, user_id, name, bio, location, website, joined, followers_count, following_count, is_verified, is_self, is_following, follows_you. Counts are exact integers. bio and website carry the real destination URLs, with X's shortlinks resolved. is_following is null on your own profile. Any of is_self, is_following, follows_you and is_verified is null when X does not say. Requires being signed in to X; a missing or suspended account is an error that says which.
+Automatically get X (Twitter) user profile on x.com. Look up an X (Twitter) user's profile by handle. Returns handle, user_id, name, bio, location, website, joined, followers_count, following_count, is_verified, is_self, is_following, follows_you. Counts are exact integers. bio and website carry the real destination URLs, with X's shortlinks resolved. is_following is null on your own profile. Any of is_self, is_following, follows_you and is_verified is null when X does not say. Requires being signed in to X; a missing or suspended account is an error that says which.
 
 - Site: x.com
 - Address: `reduck/x.com/get_user_info`
-- Updated: 2026-10-16 (v13)
+- Updated: 2026-10-19 (v14)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -37,17 +37,17 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/get_user_info
 
 ## FAQ
 
-### What does "X (Twitter) profile unofficial API: get a user's bio and followers" do?
+### What does "Get X (Twitter) user profile" do?
 
 Look up an X (Twitter) user's profile by handle. Returns handle, user_id, name, bio, location, website, joined, followers_count, following_count, is_verified, is_self, is_following, follows_you. Counts are exact integers. bio and website carry the real destination URLs, with X's shortlinks resolved. is_following is null on your own profile. Any of is_self, is_following, follows_you and is_verified is null when X does not say. Requires being signed in to X; a missing or suspended account is an error that says which.
 
-### How do I automatically get a user's bio and followers on x.com?
+### How do I automatically get X (Twitter) user profile on x.com?
 
 Ask an AI agent connected to Reduck to run reduck/x.com/get_user_info, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/x.com/get_user_info
 
-### Is there a x.com API to get a user's bio and followers?
+### Is there a x.com API to get X (Twitter) user profile?
 
-You do not need one. "X (Twitter) profile unofficial API: get a user's bio and followers" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
+You do not need one. "Get X (Twitter) user profile" drives the real x.com pages in a browser, so it works whether or not x.com offers an API for this.
 
 ### What information do I need to provide?
 

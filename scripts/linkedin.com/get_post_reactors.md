@@ -4,7 +4,7 @@ Automatically get LinkedIn post reactors on linkedin.com. Total reaction count p
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_post_reactors`
-- Updated: 2026-10-05 (v14)
+- Updated: 2026-10-19 (v17)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -28,7 +28,8 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/get_post_reactors
 ## Output
 
 - `total` (number, required): Total number of reactions on the post (all reaction types combined), read from the post's own reactions-count control. 0 when the post has no reactions.
-- `reactors` (array, required): The reactors, in the order LinkedIn lists them, capped by `limit`. A list shorter than `total` means `limit` was reached. Empty with total 0 means the post genuinely has no reactions — confirmed by the post's action bar having rendered while no reactions-count control exists. A post that renders neither is reported as an error instead.
+- `complete` (boolean, required): True when the list reached the smaller of total and limit. False when LinkedIn stopped loading more reactors before that, so the list is partial: retry, or treat it as a sample.
+- `reactors` (array, required): The reactors, in the order LinkedIn lists them, capped by `limit`. Shorter than total with complete true means `limit` was reached; complete false means LinkedIn stopped loading early. Empty with total 0 means the post genuinely has no reactions — confirmed by the post's action bar having rendered while no reactions-count control exists. A post that renders neither is reported as an error instead.
 
 ## Example output
 
@@ -37,6 +38,7 @@ Shape only: placeholder values generated from the output schema, not a real run.
 ```json
 {
   "total": 3,
+  "complete": true,
   "reactors": [
     {
       "name": "Example",
@@ -69,7 +71,7 @@ Optional: url, limit, postUrl.
 
 ### What does it return?
 
-It returns total, reactors.
+It returns total, complete, reactors.
 
 ### Do I need to be logged in to linkedin.com?
 

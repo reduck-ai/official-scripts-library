@@ -1,10 +1,10 @@
 # Get meteoblue 14-day weather forecast
 
-Automatically get meteoblue 14-day weather forecast on meteoblue.com. 14-day weather forecast for any city worldwide (meteoblue): per-day condition, min/max temp, predictability. Optional date filter (YYYY-MM-DD).
+Automatically get meteoblue 14-day weather forecast on meteoblue.com. 14-day weather forecast from meteoblue for one place, given its meteoblue location url (from meteoblue.com/search_locations): per day, the date, weekday, sky condition, min/max temperature in °C and meteoblue's predictability. A url meteoblue does not serve fails with that.
 
 - Site: meteoblue.com
 - Address: `reduck/meteoblue.com/get_14day_forecast`
-- Updated: 2026-10-16 (v4)
+- Updated: 2026-10-19 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,19 +17,18 @@ npx @reduck-ai/cli@latest run --script reduck/meteoblue.com/get_14day_forecast
 
 ## Input
 
-- `location` (string, required): City name as a human types it, e.g. "Luçon", "Oakland", "Marina di Andora". Resolved via meteoblue's own location search (first/best match, ranked by relevance).
-- `date` (string, optional): Optional ISO date (YYYY-MM-DD). When given, `days` contains only that day — empty array if the date is outside the 14-day window (not an error).
+- `location` (string, required): meteoblue location url, e.g. "paris_france_2988507": get it from meteoblue.com/search_locations.
 
 ## Output
 
-- `days` (array, required): One entry per forecast day (14 unless filtered by the date arg; empty if date out of window)
+- `days` (array, required): One entry per forecast day, as the 14-day table shows them.
 - `location` (object, required)
 
 ## FAQ
 
 ### What does "Get meteoblue 14-day weather forecast" do?
 
-14-day weather forecast for any city worldwide (meteoblue): per-day condition, min/max temp, predictability. Optional date filter (YYYY-MM-DD).
+14-day weather forecast from meteoblue for one place, given its meteoblue location url (from meteoblue.com/search_locations): per day, the date, weekday, sky condition, min/max temperature in °C and meteoblue's predictability. A url meteoblue does not serve fails with that.
 
 ### How do I automatically get meteoblue 14-day weather forecast on meteoblue.com?
 
@@ -41,7 +40,7 @@ You do not need one. "Get meteoblue 14-day weather forecast" drives the real met
 
 ### What information do I need to provide?
 
-Required: location. Optional: date.
+Required: location.
 
 ### What does it return?
 

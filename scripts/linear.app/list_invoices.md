@@ -1,10 +1,10 @@
 # List Linear invoices
 
-Automatically list Linear invoices on linear.app. List the invoices on a Linear workspace's billing page (linear.app/<workspace>/settings/billing, "Recent invoices" section). Requires you to already be logged in to Linear in your browser. Each invoice row exposes a public Stripe hosted-invoice URL ("View" link). Returns workspace + invoices[{date, description, amount, url}] exactly as displayed (amount is the shown string e.g. "$12.00"); empty list is a valid result for a workspace with no invoices.
+Automatically list Linear invoices on linear.app. List the invoices on a Linear workspace's billing page. Requires you to be signed in to Linear in your browser. Returns workspace and invoices (date, description, amount, url), with amount as Linear shows it (e.g. "$12.00") and url a link to the hosted invoice. A workspace with no invoices returns an empty list.
 
 - Site: linear.app
 - Address: `reduck/linear.app/list_invoices`
-- Updated: 2026-10-16 (v9)
+- Updated: 2026-10-19 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -28,7 +28,7 @@ npx @reduck-ai/cli@latest run --script reduck/linear.app/list_invoices
 
 ### What does "List Linear invoices" do?
 
-List the invoices on a Linear workspace's billing page (linear.app/<workspace>/settings/billing, "Recent invoices" section). Requires you to already be logged in to Linear in your browser. Each invoice row exposes a public Stripe hosted-invoice URL ("View" link). Returns workspace + invoices[{date, description, amount, url}] exactly as displayed (amount is the shown string e.g. "$12.00"); empty list is a valid result for a workspace with no invoices.
+List the invoices on a Linear workspace's billing page. Requires you to be signed in to Linear in your browser. Returns workspace and invoices (date, description, amount, url), with amount as Linear shows it (e.g. "$12.00") and url a link to the hosted invoice. A workspace with no invoices returns an empty list.
 
 ### How do I automatically list Linear invoices on linear.app?
 

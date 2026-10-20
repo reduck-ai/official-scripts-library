@@ -4,7 +4,7 @@ Automatically get journeys (Citymapper) on citymapper.com. Public-transport jour
 
 - Site: citymapper.com
 - Address: `reduck/citymapper.com/get_journeys`
-- Updated: 2026-10-16 (v4)
+- Updated: 2026-10-19 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

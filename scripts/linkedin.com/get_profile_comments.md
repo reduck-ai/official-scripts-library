@@ -4,7 +4,7 @@ Automatically get LinkedIn profile comments on linkedin.com. Get the comments a 
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_profile_comments`
-- Updated: 2026-10-16 (v3)
+- Updated: 2026-10-19 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -23,6 +23,7 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/get_profile_comments
 ## Output
 
 - `comments` (array, required)
+- `complete` (boolean, required): true when the feed ended and every comment of it is returned; false when count stopped the list first.
 
 ## FAQ
 
@@ -44,7 +45,7 @@ Required: publicId. Optional: count.
 
 ### What does it return?
 
-It returns comments.
+It returns comments, complete.
 
 ### Do I need to be logged in to linkedin.com?
 

@@ -1,10 +1,10 @@
-# Notion unofficial API: list your Notion invoices across workspaces
+# List Notion invoices across workspaces
 
-Automatically list your Notion invoices across workspaces on app.notion.com. An unofficial Notion API for billing invoices: Notion does not email invoices, so they are only available in each workspace's billing settings. List every Notion invoice across your workspaces. Returns invoices with space_id, space_name, invoice_id, created_ts, total, currency, status, payment_status, and hosted_invoice_url. Total is in cents and currency is a lowercase ISO code (e.g. eur); feed hosted_invoice_url to app.notion.com/download_invoice_pdf to get the PDF. Workspaces whose billing you cannot read are listed in skipped_spaces with the reason.
+Automatically list Notion invoices across workspaces on app.notion.com. List every Notion invoice across your workspaces. Notion does not email invoices; they are only available in each workspace's billing settings. Returns invoices with space_id, space_name, invoice_id, created_ts, total, currency, status, payment_status, and hosted_invoice_url. Total is in cents and currency is a lowercase ISO code (e.g. eur); feed hosted_invoice_url to app.notion.com/download_invoice_pdf to get the PDF. Workspaces whose billing you cannot read are listed in skipped_spaces with the reason.
 
 - Site: app.notion.com
 - Address: `reduck/app.notion.com/list_invoices`
-- Updated: 2026-10-16 (v10)
+- Updated: 2026-10-19 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -26,17 +26,17 @@ npx @reduck-ai/cli@latest run --script reduck/app.notion.com/list_invoices
 
 ## FAQ
 
-### What does "Notion unofficial API: list your Notion invoices across workspaces" do?
+### What does "List Notion invoices across workspaces" do?
 
-An unofficial Notion API for billing invoices: Notion does not email invoices, so they are only available in each workspace's billing settings. List every Notion invoice across your workspaces. Returns invoices with space_id, space_name, invoice_id, created_ts, total, currency, status, payment_status, and hosted_invoice_url. Total is in cents and currency is a lowercase ISO code (e.g. eur); feed hosted_invoice_url to app.notion.com/download_invoice_pdf to get the PDF. Workspaces whose billing you cannot read are listed in skipped_spaces with the reason.
+List every Notion invoice across your workspaces. Notion does not email invoices; they are only available in each workspace's billing settings. Returns invoices with space_id, space_name, invoice_id, created_ts, total, currency, status, payment_status, and hosted_invoice_url. Total is in cents and currency is a lowercase ISO code (e.g. eur); feed hosted_invoice_url to app.notion.com/download_invoice_pdf to get the PDF. Workspaces whose billing you cannot read are listed in skipped_spaces with the reason.
 
-### How do I automatically list your Notion invoices across workspaces on app.notion.com?
+### How do I automatically list Notion invoices across workspaces on app.notion.com?
 
 Ask an AI agent connected to Reduck to run reduck/app.notion.com/list_invoices, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/app.notion.com/list_invoices
 
-### Is there a app.notion.com API to list your Notion invoices across workspaces?
+### Is there a app.notion.com API to list Notion invoices across workspaces?
 
-You do not need one. "Notion unofficial API: list your Notion invoices across workspaces" drives the real app.notion.com pages in a browser, so it works whether or not app.notion.com offers an API for this.
+You do not need one. "List Notion invoices across workspaces" drives the real app.notion.com pages in a browser, so it works whether or not app.notion.com offers an API for this.
 
 ### What information do I need to provide?
 

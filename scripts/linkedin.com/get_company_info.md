@@ -4,7 +4,7 @@ Automatically get LinkedIn company info on linkedin.com. Get a LinkedIn company'
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_company_info`
-- Updated: 2026-10-16 (v14)
+- Updated: 2026-10-19 (v18)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -19,19 +19,19 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/get_company_info
 
 - `url` (string, optional): LinkedIn company page URL (e.g. https://www.linkedin.com/company/almapay/), a bare slug (e.g. almapay), or the numeric company id.
 - `slug` (string, optional): Alias for url — accepted for compatibility; prefer url.
-- `urls` (array, optional): Read several companies in one run (max 10), one after another in the same tab, instead of url. Each item takes the same forms as url. Returns {results} with one entry per item, in order. If LinkedIn walls or rate-limits the account, the run stops and the items not read yet carry that error.
+- `urls` (array, optional): Not supported since 19 Oct 2026: the run fails with a message saying so. Send one url per call and fan out with run_script's scripts.
 - `company` (string, optional): Alias for url — accepted for compatibility; prefer url.
 - `companySlug` (string, optional): Alias for url — accepted for compatibility; prefer url.
 - `companyUrlOrSlug` (string, optional): Alias for url — accepted for compatibility; prefer url.
 
 ## Output
 
-- `name` (string, optional)
+- `name` (string, required)
+- `companyId` (string, required): Inner numeric LinkedIn company ID from urn:li:fsd_company:N (e.g. 18834371 for almapay). Stable join key, and accepted as input in place of the slug.
+- `universalName` (string, required): Canonical slug as LinkedIn returns it — may differ from the requested one if the page was renamed or redirected, which is why it is worth reading back rather than assuming the slug you asked for.
 - `phone` (string | null, optional)
 - `logoUrl` (string | null, optional)
-- `results` (array, optional): Batch mode only: one entry per urls item, in order, with the same fields as a single read plus input and error.
 - `tagline` (string | null, optional)
-- `companyId` (string, optional): Inner numeric LinkedIn company ID from urn:li:fsd_company:N (e.g. 18834371 for almapay). Stable join key, and accepted as input in place of the slug.
 - `locations` (array, optional)
 - `industries` (array | null, optional): The industries the company page lists. Null when the page data does not carry them.
 - `websiteUrl` (string | null, optional): Company-declared website, returned verbatim — can be a linkedin.com self-link when the company set its own LinkedIn page as website (seen on stealth pages). Not normalized; filter linkedin.com values downstream if you need a real external site.
@@ -42,7 +42,6 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/get_company_info
 - `specialities` (array, optional)
 - `employeeCount` (integer | null, optional): Count of LinkedIn members associated with the page, not the declared size — on catch-all/stealth pages it can wildly exceed employeeCountRange (battle-tested: 5,933 members on a page declaring 2-10). Use employeeCountRange for the company's self-declared size.
 - `followerCount` (integer | null, optional)
-- `universalName` (string, optional): Canonical slug as LinkedIn returns it — may differ from the requested one if the page was renamed or redirected, which is why it is worth reading back rather than assuming the slug you asked for.
 - `employeeCountRange` (object | null, optional)
 
 ## FAQ
@@ -65,7 +64,7 @@ Optional: url, slug, urls, company, companySlug, companyUrlOrSlug.
 
 ### What does it return?
 
-It returns name, phone, logoUrl, results, tagline, companyId, locations, industries, websiteUrl, description, foundedYear, linkedinUrl, headquarters, specialities, employeeCount, followerCount, universalName, employeeCountRange.
+It returns name, phone, logoUrl, tagline, companyId, locations, industries, websiteUrl, description, foundedYear, linkedinUrl, headquarters, specialities, employeeCount, followerCount, universalName, employeeCountRange.
 
 ### Do I need to be logged in to linkedin.com?
 

@@ -4,7 +4,7 @@ Automatically search Luma events on luma.com. An unofficial Luma API: search pub
 
 - Site: luma.com
 - Address: `reduck/luma.com/search_events`
-- Updated: 2026-10-16 (v6)
+- Updated: 2026-10-19 (v7)
 - Author: Reduck AI (reduck)
 
 ## About

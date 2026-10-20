@@ -4,7 +4,7 @@ You get all 30 front-page stories ranked as on the site, with points and comment
 
 - Site: news.ycombinator.com
 - Address: `reduck/news.ycombinator.com/top_stories`
-- Updated: 2026-10-16 (v4)
+- Updated: 2026-10-19 (v5)
 - Author: Reduck AI (reduck)
 
 ## About

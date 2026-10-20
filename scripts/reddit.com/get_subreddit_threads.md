@@ -4,7 +4,7 @@ Automatically get subreddit threads on reddit.com. List a subreddit's threads by
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/get_subreddit_threads`
-- Updated: 2026-10-16 (v18)
+- Updated: 2026-10-19 (v21)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -22,7 +22,7 @@ npx @reduck-ai/cli@latest run --script reduck/reddit.com/get_subreddit_threads
 - `limit` (number, optional): Max number of threads to return (newest first). With `since` and no `limit`, the time window is the only bound: every post in it is returned. With neither, 25. A maximum, not a guarantee: fewer matching threads returns what exists. Per subreddit in batch mode.
 - `since` (string, optional): sort:"new" only - how far back to go: ISO date ("2026-06-01") or shorthand ("24h", "7d", "2w"). Combine with `limit` to cap a time window.
 - `subreddit` (string, optional): Subreddit name, with or without the r/ prefix. Case-insensitive: Reddit redirects to the canonical casing (r/python -> r/Python) and the script follows it. Pass this OR subreddits.
-- `subreddits` (array, optional): Read several subreddits in one run (max 20), one after another in the same tab, instead of subreddit. Returns {results} with one result per subreddit, in order, each with an `error` (null when fine). If Reddit blocks or rate-limits the browser, the remaining subreddits are not read and carry that error.
+- `subreddits` (array, optional): Read several subreddits in one run (max 10), one after another in the same tab with a random 2-5 s pause between two, instead of subreddit. Returns {results} with one result per subreddit, in order, each with an `error` (null when fine). If Reddit blocks or rate-limits the browser, the remaining subreddits are not read and carry that error.
 
 ## Output
 

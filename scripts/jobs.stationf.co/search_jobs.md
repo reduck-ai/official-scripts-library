@@ -4,7 +4,7 @@ Automatically search Station F jobs on jobs.stationf.co. Up to 20 campus opening
 
 - Site: jobs.stationf.co
 - Address: `reduck/jobs.stationf.co/search_jobs`
-- Updated: 2026-10-12 (v7)
+- Updated: 2026-10-19 (v8)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -25,7 +25,7 @@ npx @reduck-ai/cli@latest run --script reduck/jobs.stationf.co/search_jobs
 - `page` (integer, optional): 1-based page number. Must be within the visible pagination window for the current query/filters (throws otherwise).
 - `query` (string, optional): Free-text keyword, e.g. "developer", "product manager"
 - `department` (string, optional): Exact department/profession facet label as shown on the site, e.g. "Tech", "Business", "Sales", "Operations"
-- `contractType` (string, optional): Exact contract-type facet label as shown on the site (English), e.g. "Full-Time", "Internship", "Apprenticeship", "Fixed-Term"
+- `contractType` (string, optional): Contract type id, exactly as jobs return it in their contractType field (one id per contract type: full-time, internship, apprenticeship, freelance, temporary).
 
 ## Output
 
@@ -81,7 +81,7 @@ Shape only: placeholder values generated from the output schema, not a real run.
 
 ### What does "Search Station F jobs" do?
 
-Search job listings on Station F's public careers board (jobs.stationf.co, an embeddable careers widget aggregating openings across Station F resident startups) by free-text keyword and optional filters: department/profession (site's own category label, e.g. "Tech", "Business", "Sales", "Operations", "Comm / Marketing"), city (e.g. "Paris"), and contractType (site's own English label, e.g. "Full-Time", "Internship", "Apprenticeship", "Fixed-Term"). Filter values must match the site's own labels exactly — an unrecognized value throws rather than silently searching unfiltered. Pagination is 1-based via page; requesting a page beyond what's available throws rather than silently returning page 1. Returns total, page, totalPages, and jobs (id, reference, slug, title, url, company {name, slug, employees, logoUrl}, department, profession, contractType + contractTypeLabel, remote, salary, office, offices, publishedAt, promoted). A query/filter combination with no matches returns an empty jobs list, not an error.
+Search job listings on Station F's public careers board (jobs.stationf.co, openings across Station F resident startups) by free-text keyword and optional filters: department/profession (site's own category label, e.g. "Tech", "Business", "Sales", "Operations", "Comm / Marketing"), city (e.g. "Paris"), and contractType (an id, exactly as each job returns it in its contractType field). Filter values must match exactly; an unrecognized value throws rather than silently searching unfiltered. Pagination is 1-based via page; requesting a page beyond what's available throws rather than silently returning page 1. Returns total, page, totalPages, and jobs (id, reference, slug, title, url, company {name, slug, employees, logoUrl}, department, profession, contractType + contractTypeLabel, remote, salary, office, offices, publishedAt, promoted). A query/filter combination with no matches returns an empty jobs list, not an error.
 
 ### How do I automatically search Station F jobs on jobs.stationf.co?
 

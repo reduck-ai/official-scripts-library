@@ -1,10 +1,10 @@
 # List Gmail drafts
 
-Automatically list Gmail drafts on mail.google.com. List the unsent drafts in the signed-in Gmail account, each with the identifier needed to open, edit or send it, plus its subject, preview text, whether it carries an attachment, and the date Gmail shows. Gmail's own draft total is returned alongside the number of drafts read, so a mailbox with more drafts than one screenful is visible as such rather than looking complete. An account with no drafts is a normal empty result, not an error. Note that the drafts list does not show who a draft is addressed to — Gmail puts the word "Draft" where the recipient would be — so recipients have to come from opening the draft itself.
+Automatically list Gmail drafts on mail.google.com. List the unsent drafts in the signed-in Gmail account, each with the identifier needed to open, edit or send it, plus its subject, preview text, whether it carries an attachment, and the date Gmail shows. Replies saved inside an existing conversation are listed alongside new messages. Gmail's own draft total is returned alongside the number of drafts read, so a mailbox with more drafts than one screenful is visible as such rather than looking complete. An account with no drafts is a normal empty result, not an error. The drafts list does not show who a draft is addressed to, since Gmail puts the word "Draft" where the recipient would be, so recipients have to come from opening the draft itself.
 
 - Site: mail.google.com
 - Address: `reduck/mail.google.com/list_drafts`
-- Updated: 2026-09-07 (v2)
+- Updated: 2026-10-19 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,7 +29,7 @@ It takes no input.
 
 ### What does "List Gmail drafts" do?
 
-List the unsent drafts in the signed-in Gmail account, each with the identifier needed to open, edit or send it, plus its subject, preview text, whether it carries an attachment, and the date Gmail shows. Gmail's own draft total is returned alongside the number of drafts read, so a mailbox with more drafts than one screenful is visible as such rather than looking complete. An account with no drafts is a normal empty result, not an error. Note that the drafts list does not show who a draft is addressed to — Gmail puts the word "Draft" where the recipient would be — so recipients have to come from opening the draft itself.
+List the unsent drafts in the signed-in Gmail account, each with the identifier needed to open, edit or send it, plus its subject, preview text, whether it carries an attachment, and the date Gmail shows. Replies saved inside an existing conversation are listed alongside new messages. Gmail's own draft total is returned alongside the number of drafts read, so a mailbox with more drafts than one screenful is visible as such rather than looking complete. An account with no drafts is a normal empty result, not an error. The drafts list does not show who a draft is addressed to, since Gmail puts the word "Draft" where the recipient would be, so recipients have to come from opening the draft itself.
 
 ### How do I automatically list Gmail drafts on mail.google.com?
 

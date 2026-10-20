@@ -4,7 +4,7 @@ Automatically get Amazon product reviews on amazon.com. You get each review's te
 
 - Site: amazon.com
 - Address: `reduck/amazon.com/get-product-reviews`
-- Updated: 2026-10-16 (v12)
+- Updated: 2026-10-19 (v15)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -36,7 +36,7 @@ npx @reduck-ai/cli@latest run --script reduck/amazon.com/get-product-reviews
 - `source` (string, required): Which Amazon surface produced this result. reviews_page = the full /product-reviews/ list (needs a session; supports sort, filters and pagination; US store only). product_page_medley = the top-reviews block on the product page, all an anonymous browser can read: page 1 only, no filters, Amazon's own ordering, and it mixes in reviews from other Amazon stores (read `country` per review) where reviews_page returns US only. Sort/filter/pagination arguments throw on this surface rather than being silently dropped. Amazon sometimes serves an anonymous browser the product page without its reviews (rating and star histogram shown, a sign-in prompt in place of the review list); the run then fails with an error saying so instead of returning an empty list, so reviews: [] on this surface means the product really has no written reviews.
 - `product` (object, required)
 - `reviews` (array, required)
-- `authenticated` (boolean, required): Whether the run had a usable Amazon session. False means the result came from the anonymous medley and is thinner BY DESIGN, not by failure: page 1 of top reviews only.
+- `authenticated` (boolean, required): Whether the run had a usable Amazon session. False means the result came from the anonymous medley and is thinner by design, not by failure: page 1 of top reviews only.
 
 ## Example output
 

@@ -4,7 +4,7 @@ Automatically search Reddit on reddit.com. Search posts across all of Reddit, wi
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/search_reddit`
-- Updated: 2026-10-16 (v16)
+- Updated: 2026-10-19 (v21)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -22,13 +22,12 @@ npx @reduck-ai/cli@latest run --script reduck/reddit.com/search_reddit
 - `limit` (number, optional): Max results, paginating via the site's own infinite scroll (default 25)
 - `query` (string, optional): Alias for `topic` (accepted for compatibility — prefer `topic`).
 - `topic` (string, optional): Search query. Canonical name for this field; `query` is accepted as an alias.
-- `queries` (array, optional): Run several searches in one run (max 20), one after another in the same tab, instead of the single-query fields above. Each item takes the same fields (same defaults). Returns {results} with one answer per query, in order: {count, threads, error}, error null when fine. If Reddit serves a block/bot-check page or rate-limits (429), the remaining queries are not sent and carry that error.
+- `queries` (array, optional): Not supported since 19 Oct 2026: the run fails with a message saying so. Send one topic per call and fan out with run_script's scripts.
 
 ## Output
 
-- `count` (number, optional)
-- `results` (array, optional): Batch mode only: one answer per query, in order.
-- `threads` (any, optional)
+- `count` (number, required)
+- `threads` (any, required)
 
 ## FAQ
 
@@ -50,7 +49,7 @@ Optional: sort, time, limit, query, topic, queries.
 
 ### What does it return?
 
-It returns count, results, threads.
+It returns count, threads.
 
 ### Do I need to be logged in to reddit.com?
 

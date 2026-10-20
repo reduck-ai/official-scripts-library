@@ -4,7 +4,7 @@ Automatically list Uber trips on riders.uber.com. List the signed-in rider's pas
 
 - Site: riders.uber.com
 - Address: `reduck/riders.uber.com/list_trips`
-- Updated: 2026-10-16 (v5)
+- Updated: 2026-10-19 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

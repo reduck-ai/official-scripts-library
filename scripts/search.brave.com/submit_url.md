@@ -4,7 +4,7 @@ Automatically submit URL to Brave on search.brave.com. One URL per call, no site
 
 - Site: search.brave.com
 - Address: `reduck/search.brave.com/submit_url`
-- Updated: 2026-10-16 (v3)
+- Updated: 2026-10-19 (v4)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -26,8 +26,8 @@ npx @reduck-ai/cli@latest run --script reduck/search.brave.com/submit_url
 ## Output
 
 - `url` (string, required): The URL that was submitted, echoed back from the args.
-- `detail` (string | null, required): The panel's explanatory line, verbatim ('Thank you for your submission.' / 'Please insert a valid URL.'). This is where Brave states WHY a submission was rejected. null when the panel has no detail row — kept nullable because only the success and invalid-URL variants have been observed.
-- `heading` (string, required): The outcome panel's heading, verbatim as rendered ('Success' / 'Error'). Localized by Brave, so branch on `accepted` instead. Required and non-empty on purpose: Brave shows a 'Verifying you're a human being' step in the SAME panel before deciding, and that intermediate state has no heading — so a missing one means the script read the panel before the verdict existed, which must fail loudly rather than validate as a successful submission.
+- `detail` (string | null, required): The panel's explanatory line, verbatim ('Thank you for your submission.' / 'Please insert a valid URL.'). This is where Brave states why a submission was rejected. null when the panel has no detail row — kept nullable because only the success and invalid-URL variants have been observed.
+- `heading` (string, required): The outcome panel's heading, verbatim as rendered ('Success' / 'Error'). Localized by Brave, so branch on `accepted` instead. Required and non-empty on purpose: Brave shows a 'Verifying you're a human being' step in the same panel before deciding, and that intermediate state has no heading — so a missing one means the script read the panel before the verdict existed, which must fail loudly rather than validate as a successful submission.
 - `accepted` (boolean, required): Whether Brave accepted the submission: true = the success panel, false = the error panel (e.g. a malformed URL). Read off the panel's own `error` class, not its wording, so it survives localization. Acceptance is a queued re-fetch request only — it carries no promise that the page gets crawled, indexed or ranked.
 
 ## Example output

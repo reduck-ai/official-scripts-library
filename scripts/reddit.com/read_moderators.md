@@ -1,10 +1,10 @@
-# Reddit unofficial API: read the full moderator list of subreddits
+# Read Reddit subreddit moderators
 
-Automatically read the full moderator list of subreddits on reddit.com. An unofficial Reddit API: read the full moderator list of a subreddit programmatically, from code or from an AI agent, with typed JSON in and out. Reddit's API needs a registered app and OAuth, and its mod-list endpoint is closed to logged-out callers.
+Automatically read Reddit subreddit moderators on reddit.com. An unofficial Reddit API: read the full moderator list of a subreddit programmatically, from code or from an AI agent, with typed JSON in and out. Reddit's API needs a registered app and OAuth, and its mod-list endpoint is closed to logged-out callers.
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/read_moderators`
-- Updated: 2026-10-16 (v4)
+- Updated: 2026-10-19 (v6)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -21,13 +21,13 @@ npx @reduck-ai/cli@latest run --script reduck/reddit.com/read_moderators
 
 ## Input
 
-- `subreddits` (array, required): Subreddit names without the r/ prefix, e.g. ["AI_Agents","LocalLLaMA"]
+- `subreddit` (string, optional): Subreddit name, with or without the r/ prefix, e.g. "LocalLLaMA".
+- `subreddits` (array, optional): Not supported since 19 Oct 2026: the run fails with a message saying so. Send one subreddit per call and fan out with run_script's scripts.
 
 ## Output
 
-- `counts` (object, optional)
-- `overlaps` (array, optional)
-- `perSubreddit` (object, optional)
+- `subreddit` (string, required)
+- `moderators` (array, required): Every moderator of the subreddit, in Reddit's order.
 
 ## Example output
 
@@ -35,33 +35,39 @@ Shape only: placeholder values generated from the output schema, not a real run.
 
 ```json
 {
-  "counts": {},
-  "overlaps": [],
-  "perSubreddit": {}
+  "subreddit": "…",
+  "moderators": [
+    {
+      "name": "Example",
+      "perms": [
+        "…"
+      ]
+    }
+  ]
 }
 ```
 
 ## FAQ
 
-### What does "Reddit unofficial API: read the full moderator list of subreddits" do?
+### What does "Read Reddit subreddit moderators" do?
 
-Returns the complete moderator list of each subreddit you ask for — every moderator, not just the first screen the mod page shows — with each one's permissions. Also reports, per moderator, which of the requested subreddits they moderate, so you can see who sits on several communities at once and how much their mod teams overlap.
+Returns the complete moderator list of one subreddit, every moderator rather than just the first screen the mod page shows, with each one's permissions, in Reddit's order. Requires being signed in to Reddit. A banned or private subreddit fails with Reddit's reason. To read several subreddits, run the script once per subreddit (fan out with run_script's scripts). Until 19 Oct 2026 the argument was a `subreddits` list answering {perSubreddit, overlaps, counts}; a call still sending it fails with a message saying so, and overlaps and counts are the caller's to derive.
 
-### How do I automatically read the full moderator list of subreddits on reddit.com?
+### How do I automatically read Reddit subreddit moderators on reddit.com?
 
 Ask an AI agent connected to Reduck to run reduck/reddit.com/read_moderators, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/reddit.com/read_moderators
 
-### Is there a reddit.com API to read the full moderator list of subreddits?
+### Is there a reddit.com API to read Reddit subreddit moderators?
 
-You do not need one. "Reddit unofficial API: read the full moderator list of subreddits" drives the real reddit.com pages in a browser, so it works whether or not reddit.com offers an API for this.
+You do not need one. "Read Reddit subreddit moderators" drives the real reddit.com pages in a browser, so it works whether or not reddit.com offers an API for this.
 
 ### What information do I need to provide?
 
-Required: subreddits.
+Optional: subreddit, subreddits.
 
 ### What does it return?
 
-It returns counts, overlaps, perSubreddit.
+It returns subreddit, moderators.
 
 ### Do I need to be logged in to reddit.com?
 

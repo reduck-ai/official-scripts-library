@@ -1,10 +1,10 @@
 # Discord login
 
-Opens the Discord web app in the browser and reports whether the account is signed in, together with the username and display name it is signed in as. Run this first: the other Discord scripts need the web app open on a signed-in session.
+Opens the Discord web app on the signed-in session and returns the username and display name it is signed in as. Run this first: the other Discord scripts need a signed-in session. Fails with a signed-out error when the browser is not signed in to Discord, or when Discord is open in another tab of the same account.
 
 - Site: discord.com
 - Address: `reduck/discord.com/login`
-- Updated: 2026-10-12 (v16)
+- Updated: 2026-10-19 (v17)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -21,17 +21,15 @@ It takes no input.
 
 ## Output
 
-- `url` (string, required)
-- `state` (string, required): Which surface the browser landed on. "app" is the signed-in web app. "login" is Discord's login page. "anonymous" is the marketing homepage still offering guest onboarding, which a signed-out browser reaches without ever being redirected to /login. Both of the latter two mean loggedIn is false.
-- `loggedIn` (boolean, required): True only when the browser landed on the signed-in web app. A signed-out browser is a normal result reported as false, not an error.
-- `username` (string | null, optional): Null unless loggedIn is true.
-- `displayName` (string | null, optional): Null unless loggedIn is true.
+- `url` (string, required): Where the signed-in web app is open.
+- `username` (string | null, required)
+- `displayName` (string | null, required)
 
 ## FAQ
 
 ### What does "Discord login" do?
 
-Opens the Discord web app in the browser and reports whether the account is signed in, together with the username and display name it is signed in as. Run this first: the other Discord scripts need the web app open on a signed-in session.
+Opens the Discord web app on the signed-in session and returns the username and display name it is signed in as. Run this first: the other Discord scripts need a signed-in session. Fails with a signed-out error when the browser is not signed in to Discord, or when Discord is open in another tab of the same account.
 
 ### What information do I need to provide?
 
@@ -39,7 +37,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns url, state, loggedIn, username, displayName.
+It returns url, username, displayName.
 
 ### Do I need to be logged in to discord.com?
 

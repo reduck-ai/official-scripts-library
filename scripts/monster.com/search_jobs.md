@@ -4,7 +4,7 @@ Automatically search Monster jobs on monster.com. Search Monster's US job listin
 
 - Site: monster.com
 - Address: `reduck/monster.com/search_jobs`
-- Updated: 2026-08-30 (v7)
+- Updated: 2026-10-19 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically search Indeed jobs on indeed.com. First page of Indeed job cards w
 
 - Site: indeed.com
 - Address: `reduck/indeed.com/search_jobs`
-- Updated: 2026-10-16 (v5)
+- Updated: 2026-10-19 (v6)
 - Author: Reduck AI (reduck)
 
 ## About

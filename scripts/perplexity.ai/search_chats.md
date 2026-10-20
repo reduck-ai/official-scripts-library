@@ -4,7 +4,7 @@ Automatically search Perplexity chats on perplexity.ai. Type a topic you remembe
 
 - Site: perplexity.ai
 - Address: `reduck/perplexity.ai/search_chats`
-- Updated: 2026-10-15 (v2)
+- Updated: 2026-10-19 (v3)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -22,12 +22,14 @@ npx @reduck-ai/cli@latest run --script reduck/perplexity.ai/search_chats
 ## Input
 
 - `query` (string, required): Search term, matched against thread titles and answer text.
+- `cursor` (string, optional): nextCursor from a previous run with the same query, to read the next page.
 
 ## Output
 
 - `chats` (array, required)
 - `query` (string, required)
-- `hasMore` (boolean, required): Whether more matching threads exist beyond the ones returned here.
+- `hasMore` (boolean, required): Whether more matching items exist beyond the ones returned here.
+- `nextCursor` (string | null, required): Pass as cursor, with the same query, to read the next page; null on the last page.
 
 ## Example output
 
@@ -37,6 +39,7 @@ Shape only: placeholder values generated from the output schema, not a real run.
 {
   "chats": [
     {
+      "kind": "…",
       "mode": "…",
       "title": "Example",
       "chatId": "abc123",
@@ -48,7 +51,8 @@ Shape only: placeholder values generated from the output schema, not a real run.
     }
   ],
   "query": "…",
-  "hasMore": true
+  "hasMore": true,
+  "nextCursor": "…"
 }
 ```
 
@@ -68,11 +72,11 @@ You do not need one. "Search Perplexity chats" drives the real perplexity.ai pag
 
 ### What information do I need to provide?
 
-Required: query.
+Required: query. Optional: cursor.
 
 ### What does it return?
 
-It returns chats, query, hasMore.
+It returns chats, query, hasMore, nextCursor.
 
 ### Do I need to be logged in to perplexity.ai?
 

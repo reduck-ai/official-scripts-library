@@ -4,7 +4,7 @@ Automatically list your ChatGPT subscription invoices on chatgpt.com. ChatGPT su
 
 - Site: chatgpt.com
 - Address: `reduck/chatgpt.com/list_invoices`
-- Updated: 2026-10-16 (v12)
+- Updated: 2026-10-19 (v13)
 - Author: Reduck AI (reduck)
 
 ## Run it

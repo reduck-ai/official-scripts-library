@@ -4,7 +4,7 @@ Automatically get LinkedIn profile contact info on linkedin.com. Get a LinkedIn 
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_profile_contact_info`
-- Updated: 2026-10-16 (v10)
+- Updated: 2026-10-19 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it

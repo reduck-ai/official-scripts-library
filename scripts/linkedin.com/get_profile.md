@@ -4,7 +4,7 @@ Automatically get LinkedIn profile on linkedin.com. Get one LinkedIn profile by 
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_profile`
-- Updated: 2026-10-16 (v24)
+- Updated: 2026-10-19 (v28)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,27 +18,26 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/get_profile
 ## Input
 
 - `publicId` (string, optional): The LinkedIn public profile id, the part after /in/ in the profile URL (for example "williamhgates"). A full profile URL is also accepted.
-- `publicIds` (array, optional): Read several profiles in one run (max 10), one after another in the same tab, instead of publicId. Each item takes the same forms as publicId. Returns {results} with one entry per id, in order. If LinkedIn rate-limits or walls the account, the run stops and the ids not read yet carry that error.
+- `publicIds` (array, optional): Not supported since 19 Oct 2026: the run fails with a message saying so. Send one publicId per call and fan out with run_script's scripts.
 
 ## Output
 
-- `name` (string, optional): The profile owner's full name.
+- `name` (string, required): The profile owner's full name.
+- `honors` (array, required)
+- `education` (array, required): Every education entry, in the order the profile shows them.
+- `languages` (array, required)
+- `experience` (array, required): Every role, one entry per role, in the order the profile shows them. Roles at one company share its company fields.
+- `profileUrl` (string, required): Canonical profile URL.
+- `certifications` (array, required)
 - `about` (string | null, optional): The full About text, line breaks kept. Null when the profile has no About section.
 - `degree` (string | null, optional): Connection degree to the signed-in account: "1st", "2nd" or "3rd", with a trailing + for LinkedIn's 3rd-or-beyond badge. Null on your own profile or when no badge is shown.
 - `geoUrn` (string | null, optional): LinkedIn's id for that location (for example "104004912"). Pass it to linkedin.com/search_people's geoUrn to find people there.
-- `honors` (array, optional)
-- `results` (array, optional): Batch mode only: one entry per publicIds item, in order, with the same fields as a single read plus publicId and error.
 - `headline` (string | null, optional): The profile headline. Null when the profile has none.
 - `location` (string | null, optional): The profile location, as LinkedIn names it. Null when the profile shows none.
 - `photoUrl` (string | null, optional): The profile photo, largest size. A signed link that expires after some weeks: download the image to keep it. Null when the profile has no photo.
-- `education` (array, optional): Every education entry, in the order the profile shows them.
 - `followers` (integer | null, optional): Follower count shown on the profile header. Null when the header shows none.
-- `languages` (array, optional)
 - `memberUrn` (string | null, optional): Stable internal member id (an ACoAA... token). Unlike publicId it never changes. Use it as connectionOf in linkedin.com/search_people.
-- `experience` (array, optional): Every role, one entry per role, in the order the profile shows them. Roles at one company share its company fields.
-- `profileUrl` (string, optional): Canonical profile URL.
 - `connections` (string | null, optional): Connection count shown on the profile header: digits as a string, or "500+" once a member passes 500. Null when the header shows none.
-- `certifications` (array, optional)
 - `currentCompany` (string | null, optional): The company of the first current position in the experience list. Null when no position is current.
 - `currentCompanyUrn` (string | null, optional): LinkedIn's id for that company. Null when the company has no LinkedIn page.
 
@@ -62,7 +61,7 @@ Optional: publicId, publicIds.
 
 ### What does it return?
 
-It returns name, about, degree, geoUrn, honors, results, headline, location, photoUrl, education, followers, languages, memberUrn, experience, profileUrl, connections, certifications, currentCompany, currentCompanyUrn.
+It returns name, about, degree, geoUrn, honors, headline, location, photoUrl, education, followers, languages, memberUrn, experience, profileUrl, connections, certifications, currentCompany, currentCompanyUrn.
 
 ### Do I need to be logged in to linkedin.com?
 

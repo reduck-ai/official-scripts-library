@@ -4,7 +4,7 @@ Automatically get Pinterest pin details on pinterest.com. Fetches a single Pinte
 
 - Site: pinterest.com
 - Address: `reduck/pinterest.com/get_pin`
-- Updated: 2026-10-16 (v3)
+- Updated: 2026-10-19 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

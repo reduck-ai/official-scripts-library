@@ -4,7 +4,7 @@ Automatically get Reddit user profile on reddit.com. Fetch a Reddit user's profi
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/get_user`
-- Updated: 2026-10-16 (v8)
+- Updated: 2026-10-19 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,17 +18,19 @@ npx @reduck-ai/cli@latest run --script reduck/reddit.com/get_user
 ## Input
 
 - `username` (string, required): Reddit username, with or without the u/ prefix
-- `limit` (integer, optional): Max number of recent posts/comments to return (slices the SSR'd overview feed). Default 25.
+- `limit` (integer, optional): Max number of recent posts and comments to return. Default 25.
 
 ## Output
 
-- `karma` (string | null, required): As displayed (may be abbreviated, e.g. "16.7k")
-- `recent` (array, required): Recent posts and comments from the SSR'd overview feed. Empty when the account hides its posts, which is a real outcome rather than a session effect.
+- `karma` (integer | null, required): Total karma, post plus comment karma, exact.
+- `recent` (array, required): Recent posts and comments from the profile's overview feed. Empty when the account hides its posts, which is a real outcome rather than a session effect.
 - `username` (string, required)
-- `reddit_age` (string | null, optional): As displayed, e.g. "10 y"
+- `cake_day` (string | null, optional): Date the account was created (ISO 8601).
+- `post_karma` (integer | null, optional)
 - `description` (string | null, optional)
 - `display_name` (string | null, optional)
-- `contributions` (string | null, optional)
+- `comment_karma` (integer | null, optional)
+- `contributions` (integer | null, optional): Contribution count; null when Reddit shows it abbreviated.
 
 ## FAQ
 
@@ -50,7 +52,7 @@ Required: username. Optional: limit.
 
 ### What does it return?
 
-It returns karma, recent, username, reddit_age, description, display_name, contributions.
+It returns karma, recent, cake_day, username, post_karma, description, display_name, comment_karma, contributions.
 
 ### Do I need to be logged in to reddit.com?
 

@@ -4,7 +4,7 @@ Automatically search Businesses on google.com. Search for businesses on Google M
 
 - Site: google.com
 - Address: `reduck/google.com/maps_search_businesses`
-- Updated: 2026-08-25 (v5)
+- Updated: 2026-10-19 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

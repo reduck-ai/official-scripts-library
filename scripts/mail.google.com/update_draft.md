@@ -4,7 +4,7 @@ Automatically update a Gmail draft on mail.google.com. Change the subject and/or
 
 - Site: mail.google.com
 - Address: `reduck/mail.google.com/update_draft`
-- Updated: 2026-09-07 (v8)
+- Updated: 2026-10-19 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -61,7 +61,7 @@ Yes. It acts as you on mail.google.com: on your own Chrome it reuses your sessio
 
 ### Does it change anything on mail.google.com, or only read data?
 
-It makes changes on mail.google.com, like sending, posting or booking something.
+It makes changes on mail.google.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

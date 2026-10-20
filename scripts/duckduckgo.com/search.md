@@ -4,7 +4,7 @@ Search DuckDuckGo for a query and return up to `count` web results, optionally s
 
 - Site: duckduckgo.com
 - Address: `reduck/duckduckgo.com/search`
-- Updated: 2026-10-16 (v8)
+- Updated: 2026-10-19 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -25,6 +25,7 @@ npx @reduck-ai/cli@latest run --script reduck/duckduckgo.com/search
 
 - `total` (integer, required)
 - `results` (array, required)
+- `complete` (boolean, required): true when DuckDuckGo reported no further results and none were cut by count; false when count stopped the list first.
 - `noResults` (boolean, required): true = DuckDuckGo explicitly returned its no-results page (an honest zero, not a block).
 
 ## FAQ
@@ -39,7 +40,7 @@ Required: query. Optional: kl, count.
 
 ### What does it return?
 
-It returns total, results, noResults.
+It returns total, results, complete, noResults.
 
 ### Do I need to be logged in to duckduckgo.com?
 

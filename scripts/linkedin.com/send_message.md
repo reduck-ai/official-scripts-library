@@ -4,7 +4,7 @@ Automatically send LinkedIn message on linkedin.com. Send a message on LinkedIn 
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/send_message`
-- Updated: 2026-09-30 (v26)
+- Updated: 2026-10-19 (v28)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -21,7 +21,7 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/send_message
 - `message` (string, optional): The message text to send. Optional if an attachment or fileBase64 is given; required (non-empty) otherwise.
 - `filename` (string, optional): Filename to attach it as, e.g. photo.png. Required when fileBase64 is set; not used by the attachment input, which is stored under its own name.
 - `mimeType` (string, optional): MIME type of the attachment. Inferred from the filename extension when omitted. Applies to fileBase64 only.
-- `recipient` (string, optional): Start/continue a conversation by the person's display name (e.g. "Jane Doe"). Every match the compose typeahead offers is checked against this name token-by-token (accent/case-insensitive) and the first one that matches is used, so a group conversation or another person ranked above your target does not block the send. A multi-word name must be contained in the match, and a single-word name only passes on an exact full-name match: "Chris" resolving to "Chris Anderson" is refused rather than messaging the wrong person. A name that matches nobody messageable (a misspelling, someone who is not a 1st-degree connection, or your own name) is refused as such. Prefer profileUrl when you have it. Pass exactly one of threadUrl, profileUrl or recipient.
+- `recipient` (string, optional): Start/continue a conversation by the person's display name (e.g. "Jane Doe"). Every match the compose typeahead offers is checked against this name token-by-token (accent/case-insensitive) and the first one that matches is used, so a group conversation or another person ranked above your target does not block the send. A multi-word name must match the row's first and last names in order: middle names and credentials may differ ("Marie Dupont" matches "Marie Claire Dupont", "Jane Doe, PhD" matches "Jane Doe"), but "Luc Martin" does not match "Jean-Luc Martin" and "Marie Claire Dupont" does not match "Marie Dupont". A single-word name only passes on an exact full-name match: "Chris" resolving to "Chris Anderson" is refused rather than messaging the wrong person. A name that matches nobody messageable (a misspelling, someone who is not a 1st-degree connection, or your own name) is refused as such. Prefer profileUrl when you have it. Pass exactly one of threadUrl, profileUrl or recipient.
 - `threadUrl` (string, optional): Reply in an existing conversation: its /messaging/thread/<id>/ URL (from list_inbox). LinkedIn thread ids can rotate over time, so fetch this fresh via list_inbox immediately before use rather than caching it long-term. Pass exactly one of threadUrl, profileUrl or recipient.
 - `attachment` (string, optional): A file to attach (image or document), supplied as a file rather than base64. Preferred over fileBase64: it carries no payload size ceiling. The file is attached under the name 'attachment', since a file input's key is its stored filename.
 - `fileBase64` (string, optional): File contents to attach, base64-encoded (no data: prefix). Fallback for callers that cannot bind a file; prefer the attachment input. Combine with message for accompanying text.

@@ -4,7 +4,7 @@ Automatically list invoices on cursor.com. List Cursor billing invoices for the 
 
 - Site: cursor.com
 - Address: `reduck/cursor.com/list_invoices`
-- Updated: 2026-10-16 (v5)
+- Updated: 2026-10-19 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

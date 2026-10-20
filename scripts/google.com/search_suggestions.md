@@ -1,10 +1,10 @@
-# Google Autocomplete unofficial API: get autocomplete keywords
+# Get Google Search autocomplete suggestions
 
-Automatically get autocomplete keywords on google.com. Get the autocomplete suggestions Google Search offers for a query, in the order it ranks them: the completions that appear as you type in the search box. Partial input works well, so "best crm for" returns the ways people finish that phrase, useful for SEO and keyword research. Suggestions follow the browser's account and location. A query Google has no completions for returns an empty list. Google sometimes answers an unfamiliar term with completions of a similar one.
+Automatically get Google Search autocomplete suggestions on google.com. Get the autocomplete suggestions Google Search offers for a query, in the order it ranks them: the completions that appear as you type in the search box. Partial input works well, so "best crm for" returns the ways people finish that phrase, useful for SEO and keyword research. Suggestions follow the browser's account and location. A query Google has no completions for returns an empty list. Google sometimes answers an unfamiliar term with completions of a similar one.
 
 - Site: google.com
 - Address: `reduck/google.com/search_suggestions`
-- Updated: 2026-10-16 (v5)
+- Updated: 2026-10-19 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,17 +29,17 @@ npx @reduck-ai/cli@latest run --script reduck/google.com/search_suggestions
 
 ## FAQ
 
-### What does "Google Autocomplete unofficial API: get autocomplete keywords" do?
+### What does "Get Google Search autocomplete suggestions" do?
 
 Get the autocomplete suggestions Google Search offers for a query, in the order it ranks them: the completions that appear as you type in the search box. Partial input works well, so "best crm for" returns the ways people finish that phrase, useful for SEO and keyword research. Suggestions follow the browser's account and location. A query Google has no completions for returns an empty list. Google sometimes answers an unfamiliar term with completions of a similar one.
 
-### How do I automatically get autocomplete keywords on google.com?
+### How do I automatically get Google Search autocomplete suggestions on google.com?
 
 Ask an AI agent connected to Reduck to run reduck/google.com/search_suggestions, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/google.com/search_suggestions
 
-### Is there a google.com API to get autocomplete keywords?
+### Is there a google.com API to get Google Search autocomplete suggestions?
 
-You do not need one. "Google Autocomplete unofficial API: get autocomplete keywords" drives the real google.com pages in a browser, so it works whether or not google.com offers an API for this.
+You do not need one. "Get Google Search autocomplete suggestions" drives the real google.com pages in a browser, so it works whether or not google.com offers an API for this.
 
 ### What information do I need to provide?
 

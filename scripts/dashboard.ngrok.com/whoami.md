@@ -1,10 +1,10 @@
 # ngrok whoami (signed-in account)
 
-Report which ngrok dashboard account this browser is signed in as: the email, numeric account id and plan (Free, Personal, Pro…). Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other ngrok scripts.
+Report which ngrok dashboard account this browser is signed in as: the email, numeric account id and plan (Free, Personal, Pro…). Fails with a signed-out error when the browser is not signed in to ngrok.
 
 - Site: dashboard.ngrok.com
 - Address: `reduck/dashboard.ngrok.com/whoami`
-- Updated: 2026-10-12 (v3)
+- Updated: 2026-10-20 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -31,7 +31,7 @@ It takes no input.
 
 ### What does "ngrok whoami (signed-in account)" do?
 
-Report which ngrok dashboard account this browser is signed in as: the email, numeric account id and plan (Free, Personal, Pro…). Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other ngrok scripts.
+Report which ngrok dashboard account this browser is signed in as: the email, numeric account id and plan (Free, Personal, Pro…). Fails with a signed-out error when the browser is not signed in to ngrok.
 
 ### What information do I need to provide?
 

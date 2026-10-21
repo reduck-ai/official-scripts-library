@@ -1,10 +1,10 @@
 # OpenAI Platform whoami
 
-Report which OpenAI API Platform account this browser is signed in as: the account email, name and default organization. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other platform.openai.com scripts.
+Report which OpenAI API Platform account this browser is signed in as: the account email, name and default organization. When the browser is signed out, the run fails with a signed-out error that asks to sign in to platform.openai.com, so it can be used to check a session before running other platform.openai.com scripts.
 
 - Site: platform.openai.com
 - Address: `reduck/platform.openai.com/whoami`
-- Updated: 2026-10-06 (v2)
+- Updated: 2026-10-20 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -30,7 +30,7 @@ It takes no input.
 
 ### What does "OpenAI Platform whoami" do?
 
-Report which OpenAI API Platform account this browser is signed in as: the account email, name and default organization. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other platform.openai.com scripts.
+Report which OpenAI API Platform account this browser is signed in as: the account email, name and default organization. When the browser is signed out, the run fails with a signed-out error that asks to sign in to platform.openai.com, so it can be used to check a session before running other platform.openai.com scripts.
 
 ### What information do I need to provide?
 

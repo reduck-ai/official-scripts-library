@@ -1,10 +1,10 @@
 # Grok whoami
 
-Report which Grok account this browser is signed in as: the account email and name. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Grok scripts.
+Report which Grok account this browser is signed in as: the account email and name. When the browser is signed out of Grok, the run fails with a signed-out error asking you to sign in to grok.com.
 
 - Site: grok.com
 - Address: `reduck/grok.com/whoami`
-- Updated: 2026-09-30 (v2)
+- Updated: 2026-10-20 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,7 +29,7 @@ It takes no input.
 
 ### What does "Grok whoami" do?
 
-Report which Grok account this browser is signed in as: the account email and name. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Grok scripts.
+Report which Grok account this browser is signed in as: the account email and name. When the browser is signed out of Grok, the run fails with a signed-out error asking you to sign in to grok.com.
 
 ### What information do I need to provide?
 

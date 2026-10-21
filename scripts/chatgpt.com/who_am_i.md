@@ -1,10 +1,10 @@
 # Who am I (ChatGPT)
 
-Report which ChatGPT account the browser is signed into: id, name, email, picture, identity provider — or loggedIn:false when the browser is anonymous. Reads the session endpoint the app itself hydrates auth from; never returns the session's access token.
+Report which ChatGPT account the browser is signed into: id, name, email, picture and identity provider, or loggedIn:false when the browser is anonymous. Never returns the session's access token.
 
 - Site: chatgpt.com
 - Address: `reduck/chatgpt.com/who_am_i`
-- Updated: 2026-09-21 (v3)
+- Updated: 2026-10-20 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -28,7 +28,7 @@ It takes no input.
 
 ### What does "Who am I (ChatGPT)" do?
 
-Report which ChatGPT account the browser is signed into: id, name, email, picture, identity provider — or loggedIn:false when the browser is anonymous. Reads the session endpoint the app itself hydrates auth from; never returns the session's access token.
+Report which ChatGPT account the browser is signed into: id, name, email, picture and identity provider, or loggedIn:false when the browser is anonymous. Never returns the session's access token.
 
 ### What information do I need to provide?
 

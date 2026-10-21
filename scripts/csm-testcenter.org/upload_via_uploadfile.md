@@ -4,7 +4,7 @@ Automatically upload a file to CSM-Testcenter (file input) on csm-testcenter.org
 
 - Site: csm-testcenter.org
 - Address: `reduck/csm-testcenter.org/upload_via_uploadfile`
-- Updated: 2026-10-19 (v7)
+- Updated: 2026-10-20 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -23,7 +23,6 @@ npx @reduck-ai/cli@latest run --script reduck/csm-testcenter.org/upload_via_uplo
 
 - `url` (string, required)
 - `uploaded` (object, required): What the browser actually held when the form was submitted.
-- `resultText` (string, required)
 - `fields` (object, optional): The site's result table verbatim, as label to value.
 - `sha256` (string | null, optional): Checksum the site computed over what it received, lowercased. Compare against the bytes sent to prove the upload arrived intact; null if the result page stopped reporting one.
 
@@ -47,7 +46,7 @@ Optional: test-upload.pdf.
 
 ### What does it return?
 
-It returns url, fields, sha256, uploaded, resultText.
+It returns url, fields, sha256, uploaded.
 
 ### Do I need to be logged in to csm-testcenter.org?
 

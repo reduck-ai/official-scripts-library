@@ -1,10 +1,10 @@
 # Threads whoami (signed-in account)
 
-Report which Threads account this browser is signed in as: the user id and @username. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Threads scripts.
+Report which Threads account this browser is signed in as: the user id and @username. When the browser is signed out of Threads, the run fails with a signed-out error asking you to sign in to threads.com.
 
 - Site: threads.com
 - Address: `reduck/threads.com/whoami`
-- Updated: 2026-09-30 (v1)
+- Updated: 2026-10-20 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -30,7 +30,7 @@ It takes no input.
 
 ### What does "Threads whoami (signed-in account)" do?
 
-Report which Threads account this browser is signed in as: the user id and @username. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Threads scripts.
+Report which Threads account this browser is signed in as: the user id and @username. When the browser is signed out of Threads, the run fails with a signed-out error asking you to sign in to threads.com.
 
 ### What information do I need to provide?
 

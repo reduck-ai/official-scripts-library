@@ -1,10 +1,10 @@
 # Post a Discord message
 
-Automatically post a Discord message on discord.com. Posts a text message, optionally with a file attached, in a Discord channel addressed by its URL. Requires being logged in to Discord. Returns `sent` plus the created message's messageId, channelId, timestamp and content as Discord stored it. The message is visible to everyone who can see the channel. Empty messages and messages over 2000 characters are refused with a clear reason. Use dry_run to check a channel and message without posting.
+Automatically post a Discord message on discord.com. Posts a text message, optionally with a file attached (the attachment file input, renamed with filename), in a Discord channel addressed by its URL. Requires being logged in to Discord. Returns `sent` plus the created message's messageId, channelId, timestamp and content as Discord stored it. The message is visible to everyone who can see the channel. Empty messages, messages over 2000 characters and forum channels are refused with a clear reason. Use dry_run to check a channel and message without posting.
 
 - Site: discord.com
 - Address: `reduck/discord.com/post_message`
-- Updated: 2026-10-08 (v20)
+- Updated: 2026-10-20 (v21)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -20,10 +20,8 @@ npx @reduck-ai/cli@latest run --script reduck/discord.com/post_message
 - `channelUrl` (string, required): Full channel URL, e.g. https://discord.com/channels/<guildId>/<channelId>
 - `dry_run` (boolean, optional): When true, the message and any attachment are prepared in the channel but not sent. Nothing is posted: sent comes back false, messageId is null and dry_run is true. Use it to check that a channel, message and attachment are accepted without posting a real, visible message.
 - `message` (string, optional): Text of the message. Optional when a file is attached, in which case it becomes the message's caption. Up to 2000 characters.
-- `filename` (string, optional): Name the file is posted under, e.g. report.csv. Required whenever fileBase64 is given. Not used with the `attachment` file input, which posts the file under the input's own name.
-- `mimeType` (string, optional): Optional content type for the attachment, e.g. text/csv. Guessed from the filename extension when omitted.
-- `attachment` (string, optional): A file to attach. Preferred over fileBase64 for larger files, as it is not limited to roughly 380 KB. The file is posted under the name of this input, so use fileBase64 + filename instead when the posted filename matters.
-- `fileBase64` (string, optional): Optional file to attach, as base64 bytes, as an alternative to the `attachment` file input. Sent as one message together with the text. Limited to roughly 380 KB of base64, well under Discord's own upload limit. Use this when you need to control the posted filename.
+- `filename` (string, optional): Name the attached file is posted under, e.g. report.csv. Omitted: the file keeps the name it arrives with.
+- `attachment` (string, optional): A file to attach to the message.
 
 ## Output
 
@@ -39,7 +37,7 @@ npx @reduck-ai/cli@latest run --script reduck/discord.com/post_message
 
 ### What does "Post a Discord message" do?
 
-Posts a text message, optionally with a file attached, in a Discord channel addressed by its URL. Requires being logged in to Discord. Returns `sent` plus the created message's messageId, channelId, timestamp and content as Discord stored it. The message is visible to everyone who can see the channel. Empty messages and messages over 2000 characters are refused with a clear reason. Use dry_run to check a channel and message without posting.
+Posts a text message, optionally with a file attached (the attachment file input, renamed with filename), in a Discord channel addressed by its URL. Requires being logged in to Discord. Returns `sent` plus the created message's messageId, channelId, timestamp and content as Discord stored it. The message is visible to everyone who can see the channel. Empty messages, messages over 2000 characters and forum channels are refused with a clear reason. Use dry_run to check a channel and message without posting.
 
 ### How do I automatically post a Discord message on discord.com?
 
@@ -51,7 +49,7 @@ You do not need one. "Post a Discord message" drives the real discord.com pages 
 
 ### What information do I need to provide?
 
-Required: channelUrl. Optional: dry_run, message, filename, mimeType, attachment, fileBase64.
+Required: channelUrl. Optional: dry_run, message, filename, attachment.
 
 ### What does it return?
 

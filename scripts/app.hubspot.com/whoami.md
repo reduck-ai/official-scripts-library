@@ -1,10 +1,10 @@
 # HubSpot whoami (signed-in account)
 
-Report which HubSpot account this browser is signed in as: the numeric user id, email, first name and last name. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other HubSpot scripts.
+Report which HubSpot account this browser is signed in as: the numeric user id, email, first name and last name. If the browser is not signed in to HubSpot, the run fails with a signed-out error that says to sign in, then retry.
 
 - Site: app.hubspot.com
 - Address: `reduck/app.hubspot.com/whoami`
-- Updated: 2026-10-06 (v2)
+- Updated: 2026-10-20 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -32,7 +32,7 @@ It takes no input.
 
 ### What does "HubSpot whoami (signed-in account)" do?
 
-Report which HubSpot account this browser is signed in as: the numeric user id, email, first name and last name. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other HubSpot scripts.
+Report which HubSpot account this browser is signed in as: the numeric user id, email, first name and last name. If the browser is not signed in to HubSpot, the run fails with a signed-out error that says to sign in, then retry.
 
 ### What information do I need to provide?
 

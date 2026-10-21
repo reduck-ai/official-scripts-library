@@ -1,10 +1,10 @@
 # Adobe whoami (signed-in account)
 
-Report which Adobe account this browser is signed in as: the Adobe ID, email, display name, first and last name, account type (personal Adobe ID vs enterprise / federated) and country. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Adobe scripts.
+Report which Adobe account this browser is signed in as: the Adobe ID, email, display name, first and last name, account type (personal Adobe ID vs enterprise / federated) and country. Fails with a sign-in error when the browser is not signed in to Adobe.
 
 - Site: adobe.com
 - Address: `reduck/adobe.com/whoami`
-- Updated: 2026-09-28 (v1)
+- Updated: 2026-10-20 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -35,7 +35,7 @@ It takes no input.
 
 ### What does "Adobe whoami (signed-in account)" do?
 
-Report which Adobe account this browser is signed in as: the Adobe ID, email, display name, first and last name, account type (personal Adobe ID vs enterprise / federated) and country. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Adobe scripts.
+Report which Adobe account this browser is signed in as: the Adobe ID, email, display name, first and last name, account type (personal Adobe ID vs enterprise / federated) and country. Fails with a sign-in error when the browser is not signed in to Adobe.
 
 ### What information do I need to provide?
 

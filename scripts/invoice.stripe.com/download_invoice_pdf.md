@@ -4,7 +4,7 @@ Automatically download Stripe invoice/receipt PDF on invoice.stripe.com. Downloa
 
 - Site: invoice.stripe.com
 - Address: `reduck/invoice.stripe.com/download_invoice_pdf`
-- Updated: 2026-10-19 (v13)
+- Updated: 2026-10-20 (v14)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,8 +17,9 @@ npx @reduck-ai/cli@latest run --script reduck/invoice.stripe.com/download_invoic
 
 ## Input
 
-- `hosted_invoice_url` (string, required): A Stripe-related invoice URL from a vendor's list_invoices script -- any of: a Stripe hosted invoice page (invoice.stripe.com/i/...), an HTML receipt page with Download invoice/receipt links (e.g. pay.stripe.com/receipts/invoices/...), or a direct file URL that downloads immediately (pay.stripe.com/invoice/.../pdf, a presigned S3/Orb link). The script detects which shape it is from the page itself.
 - `doc_type` (string, optional): Which PDF to download: 'invoice' (the formal invoice, default) or 'receipt' (the payment receipt, only present once paid). For a direct-file-URL page there is only ever one document available -- requesting the one that isn't there fails loud rather than silently returning the wrong one mislabeled.
+- `hostedInvoiceUrl` (string, optional): Same as hosted_invoice_url, under the name console.anthropic.com/list_invoices returns it. Pass one of hosted_invoice_url or hostedInvoiceUrl.
+- `hosted_invoice_url` (string, optional): A Stripe-related invoice URL from a vendor's list_invoices script -- any of: a Stripe hosted invoice page (invoice.stripe.com/i/...), an HTML receipt page with Download invoice/receipt links (e.g. pay.stripe.com/receipts/invoices/...), or a direct file URL that downloads immediately (pay.stripe.com/invoice/.../pdf, a presigned S3/Orb link). The script detects which shape it is from the page itself.
 
 ## Output
 
@@ -43,7 +44,7 @@ You do not need one. "Download Stripe invoice/receipt PDF" drives the real invoi
 
 ### What information do I need to provide?
 
-Required: hosted_invoice_url. Optional: doc_type.
+Optional: doc_type, hostedInvoiceUrl, hosted_invoice_url.
 
 ### What does it return?
 

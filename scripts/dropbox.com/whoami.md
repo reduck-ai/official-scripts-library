@@ -1,10 +1,10 @@
 # Dropbox whoami (signed-in account)
 
-Report which Dropbox account this browser is signed in as: the account id, numeric user id, email, display name, account type (basic, plus, business…) and country. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Dropbox scripts. Read-only by construction: it never opens Dropbox's sign-in page, whose Google One Tap would sign an account in on its own.
+Report which Dropbox account this browser is signed in as: the account id, numeric user id, email, display name, account type (basic, plus, business…) and country. When the browser is not signed in to Dropbox, the run fails with a signed-out error that says to sign in, then retry. It only reads and never signs an account in.
 
 - Site: dropbox.com
 - Address: `reduck/dropbox.com/whoami`
-- Updated: 2026-10-06 (v2)
+- Updated: 2026-10-20 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -34,7 +34,7 @@ It takes no input.
 
 ### What does "Dropbox whoami (signed-in account)" do?
 
-Report which Dropbox account this browser is signed in as: the account id, numeric user id, email, display name, account type (basic, plus, business…) and country. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Dropbox scripts. Read-only by construction: it never opens Dropbox's sign-in page, whose Google One Tap would sign an account in on its own.
+Report which Dropbox account this browser is signed in as: the account id, numeric user id, email, display name, account type (basic, plus, business…) and country. When the browser is not signed in to Dropbox, the run fails with a signed-out error that says to sign in, then retry. It only reads and never signs an account in.
 
 ### What information do I need to provide?
 

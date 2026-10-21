@@ -1,10 +1,10 @@
 # Amazon whoami (signed-in account)
 
-Report whether this browser is signed in to Amazon.com and, if so, the account's first name from the header greeting (Amazon hides the full name and email behind a password re-check). Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Amazon scripts.
+Report which Amazon.com account this browser is signed in as: the account's first name from the header greeting (Amazon hides the full name and email behind a password re-check). Fails with a signed-out error when the browser is not signed in to Amazon.
 
 - Site: amazon.com
 - Address: `reduck/amazon.com/whoami`
-- Updated: 2026-10-08 (v8)
+- Updated: 2026-10-20 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,7 +29,7 @@ It takes no input.
 
 ### What does "Amazon whoami (signed-in account)" do?
 
-Report whether this browser is signed in to Amazon.com and, if so, the account's first name from the header greeting (Amazon hides the full name and email behind a password re-check). Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Amazon scripts.
+Report which Amazon.com account this browser is signed in as: the account's first name from the header greeting (Amazon hides the full name and email behind a password re-check). Fails with a signed-out error when the browser is not signed in to Amazon.
 
 ### What information do I need to provide?
 

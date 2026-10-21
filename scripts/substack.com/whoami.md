@@ -1,10 +1,10 @@
 # Substack whoami (signed-in account)
 
-Report which Substack account this browser is signed in as: the @handle, display name, email and numeric user id. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Substack scripts.
+Report which Substack account this browser is signed in as: the @handle, display name, email and numeric user id. When the browser is signed out, the run fails with a signed-out error that says to sign in to Substack.
 
 - Site: substack.com
 - Address: `reduck/substack.com/whoami`
-- Updated: 2026-10-06 (v2)
+- Updated: 2026-10-20 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -32,7 +32,7 @@ It takes no input.
 
 ### What does "Substack whoami (signed-in account)" do?
 
-Report which Substack account this browser is signed in as: the @handle, display name, email and numeric user id. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Substack scripts.
+Report which Substack account this browser is signed in as: the @handle, display name, email and numeric user id. When the browser is signed out, the run fails with a signed-out error that says to sign in to Substack.
 
 ### What information do I need to provide?
 

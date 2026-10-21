@@ -4,7 +4,7 @@ Automatically get Amazon seller profile and feedback on amazon.com. Look up an A
 
 - Site: amazon.com
 - Address: `reduck/amazon.com/get-seller`
-- Updated: 2026-10-19 (v8)
+- Updated: 2026-10-20 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it

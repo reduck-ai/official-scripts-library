@@ -4,7 +4,7 @@ Automatically get LinkedIn post on linkedin.com. Fetch a single LinkedIn post by
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_post`
-- Updated: 2026-09-03 (v34)
+- Updated: 2026-10-20 (v35)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,8 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/get_post
 
 ## Input
 
-- `postUrl` (string, required): LinkedIn post permalink, e.g. https://www.linkedin.com/posts/<slug>-<id>-<code>/ or https://www.linkedin.com/feed/update/urn:li:activity:<id>/. Query string is stripped. A sponsored post's permalink has no viewable page and will be refused.
+- `url` (string, optional): Same as postUrl, under the name linkedin.com/get_company_posts returns it. Pass one of postUrl or url.
+- `postUrl` (string, optional): LinkedIn post permalink, e.g. https://www.linkedin.com/posts/<slug>-<id>-<code>/ or https://www.linkedin.com/feed/update/urn:li:activity:<id>/. Query string is stripped. A sponsored post's permalink has no viewable page and will be refused.
 
 ## Output
 
@@ -49,7 +50,7 @@ You do not need one. "Get LinkedIn post" drives the real linkedin.com pages in a
 
 ### What information do I need to provide?
 
-Required: postUrl.
+Optional: url, postUrl.
 
 ### What does it return?
 

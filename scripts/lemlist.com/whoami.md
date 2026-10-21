@@ -1,10 +1,10 @@
 # lemlist whoami (signed-in account)
 
-Report which lemlist account this browser is signed in as: the user id, email and name. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other lemlist scripts.
+Report which lemlist account this browser is signed in as: the user id and email. Fails with a sign-in error when the browser is not signed in to lemlist.
 
 - Site: lemlist.com
 - Address: `reduck/lemlist.com/whoami`
-- Updated: 2026-10-14 (v6)
+- Updated: 2026-10-20 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -30,7 +30,7 @@ It takes no input.
 
 ### What does "lemlist whoami (signed-in account)" do?
 
-Report which lemlist account this browser is signed in as: the user id, email and name. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other lemlist scripts.
+Report which lemlist account this browser is signed in as: the user id and email. Fails with a sign-in error when the browser is not signed in to lemlist.
 
 ### What information do I need to provide?
 

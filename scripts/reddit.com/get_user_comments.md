@@ -1,10 +1,10 @@
 # Get Reddit user comments
 
-Automatically get Reddit user comments on reddit.com. Fetch a Reddit user's recent comments from their profile Comments tab (with or without u/ prefix). Returns subreddit, post title/url, comment body/permalink, score, timestamp, and stickied flag. Scrolls to load more when limit exceeds one page.
+Automatically get Reddit user comments on reddit.com. Fetch a Reddit user's recent comments from their profile Comments tab (with or without u/ prefix), one page at a time, newest first. Returns subreddit, post title/url, comment body/permalink, score, timestamp, and stickied flag. A profile with no comments returns an empty list; an unknown user fails. Pass the returned nextCursor as cursor to read the next page; it is null on the last page.
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/get_user_comments`
-- Updated: 2026-10-19 (v7)
+- Updated: 2026-10-20 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,18 +18,19 @@ npx @reduck-ai/cli@latest run --script reduck/reddit.com/get_user_comments
 ## Input
 
 - `username` (string, required): Reddit username, with or without the u/ prefix
-- `limit` (integer, optional): Max number of comments to return. Scrolls to load more pages as needed.
+- `cursor` (string, optional): The nextCursor of the previous answer, to read the next page. Omit for the first page.
 
 ## Output
 
 - `comments` (array, required)
 - `username` (string, required)
+- `nextCursor` (string | null, required): Pass as cursor to read the next page; null on the last page.
 
 ## FAQ
 
 ### What does "Get Reddit user comments" do?
 
-Fetch a Reddit user's recent comments from their profile Comments tab (with or without u/ prefix). Returns subreddit, post title/url, comment body/permalink, score, timestamp, and stickied flag. Scrolls to load more when limit exceeds one page.
+Fetch a Reddit user's recent comments from their profile Comments tab (with or without u/ prefix), one page at a time, newest first. Returns subreddit, post title/url, comment body/permalink, score, timestamp, and stickied flag. A profile with no comments returns an empty list; an unknown user fails. Pass the returned nextCursor as cursor to read the next page; it is null on the last page.
 
 ### How do I automatically get Reddit user comments on reddit.com?
 
@@ -41,11 +42,11 @@ You do not need one. "Get Reddit user comments" drives the real reddit.com pages
 
 ### What information do I need to provide?
 
-Required: username. Optional: limit.
+Required: username. Optional: cursor.
 
 ### What does it return?
 
-It returns comments, username.
+It returns comments, username, nextCursor.
 
 ### Do I need to be logged in to reddit.com?
 

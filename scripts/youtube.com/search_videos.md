@@ -4,7 +4,7 @@ Automatically search YouTube videos on youtube.com. Search YouTube videos by que
 
 - Site: youtube.com
 - Address: `reduck/youtube.com/search_videos`
-- Updated: 2026-10-19 (v10)
+- Updated: 2026-10-20 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it

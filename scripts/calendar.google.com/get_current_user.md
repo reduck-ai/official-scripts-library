@@ -1,10 +1,10 @@
 # Get Current Calendar User
 
-Automatically get Current Calendar User on calendar.google.com. Report which Google account Google Calendar is signed in as in this browser: display name and email, read from Google's account button. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Calendar scripts.
+Automatically get Current Calendar User on calendar.google.com. Report which Google account Google Calendar is signed in as in this browser: display name and email, read from Google's account button. When the browser is not signed in, the run fails with a signed-out error that says to sign in, so it can be used to check a session before running other Calendar scripts.
 
 - Site: calendar.google.com
 - Address: `reduck/calendar.google.com/get_current_user`
-- Updated: 2026-09-29 (v4)
+- Updated: 2026-10-20 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,7 +29,7 @@ It takes no input.
 
 ### What does "Get Current Calendar User" do?
 
-Report which Google account Google Calendar is signed in as in this browser: display name and email, read from Google's account button. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Calendar scripts.
+Report which Google account Google Calendar is signed in as in this browser: display name and email, read from Google's account button. When the browser is not signed in, the run fails with a signed-out error that says to sign in, so it can be used to check a session before running other Calendar scripts.
 
 ### How do I automatically get Current Calendar User on calendar.google.com?
 

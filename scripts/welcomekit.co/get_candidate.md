@@ -4,7 +4,7 @@ Automatically get candidate full profile on welcomekit.co. Get a candidate's ful
 
 - Site: welcomekit.co
 - Address: `reduck/welcomekit.co/get_candidate`
-- Updated: 2026-10-06 (v4)
+- Updated: 2026-10-20 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

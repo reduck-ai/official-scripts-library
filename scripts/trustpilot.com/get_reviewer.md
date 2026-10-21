@@ -4,7 +4,7 @@ Automatically get Trustpilot reviewer profile on trustpilot.com. Get a Trustpilo
 
 - Site: trustpilot.com
 - Address: `reduck/trustpilot.com/get_reviewer`
-- Updated: 2026-08-14 (v3)
+- Updated: 2026-10-20 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

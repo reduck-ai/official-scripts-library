@@ -1,10 +1,10 @@
 # Google Scholar whoami (signed-in account)
 
-Report which Google account Google Scholar is signed in as in this browser: display name and email. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Google Scholar scripts.
+Report which Google account Google Scholar is signed in as in this browser: display name and email. When the browser is not signed in, the run fails with a signed-out error that says to sign in, so it can be used to check a session before running other Google Scholar scripts.
 
 - Site: scholar.google.com
 - Address: `reduck/scholar.google.com/whoami`
-- Updated: 2026-10-06 (v2)
+- Updated: 2026-10-20 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -30,7 +30,7 @@ It takes no input.
 
 ### What does "Google Scholar whoami (signed-in account)" do?
 
-Report which Google account Google Scholar is signed in as in this browser: display name and email. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Google Scholar scripts.
+Report which Google account Google Scholar is signed in as in this browser: display name and email. When the browser is not signed in, the run fails with a signed-out error that says to sign in, so it can be used to check a session before running other Google Scholar scripts.
 
 ### What information do I need to provide?
 

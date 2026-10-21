@@ -4,7 +4,7 @@ Automatically search X (Twitter) posts on x.com. Search X (Twitter) for tweets w
 
 - Site: x.com
 - Address: `reduck/x.com/search_tweets`
-- Updated: 2026-10-19 (v8)
+- Updated: 2026-10-20 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,7 +18,7 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/search_tweets
 ## Input
 
 - `query` (string, required): Raw X search query. Supports all X search operators, e.g. '"AI automation" min_faves:500 since:2026-06-04'. Combining -filter:replies with min_faves and since can unexpectedly return zero results; using fewer operators together is more reliable. The query is taken literally, so if it targets a person or organization ambiguously (a bare first name, a nickname, or a handle you are not certain is exact, meant for from:/to:/@ targeting), resolve the exact handle first (for example via get_user_info, or by asking) rather than guessing: a wrong guess does not error, it searches the wrong thing and returns a plausible-looking but incorrect result set.
-- `tab` (string, optional): Which search tab: 'top' (ranked, default) or 'latest' (chronological). Top is a sample, not an exhaustive ranking.
+- `tab` (string, optional): Which search tab: 'top' (ranked, default) or 'latest' (chronological); either casing is accepted. Top is a sample, not an exhaustive ranking.
 - `count` (integer, optional): How many to return. Without it, the script returns the first page X shows (often 20 to 40). With it, the script loads more until it has count, reaches the end, or X stops loading; complete says whether it reached the end.
 
 ## Output

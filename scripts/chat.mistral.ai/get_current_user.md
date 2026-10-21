@@ -1,10 +1,10 @@
-# Get current user
+# Get current Mistral Le Chat user
 
-Automatically get current user on chat.mistral.ai. Report which Mistral (Le Chat) account this browser is signed in as: email and name, from Mistral's own session service. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Le Chat scripts.
+Automatically get current Mistral Le Chat user on chat.mistral.ai. Report which Mistral (Le Chat) account this browser is signed in as: email and name. When the browser is not signed in to Le Chat, the run fails with a signed-out error that says to sign in, so it can be used to check a session before running other Le Chat scripts.
 
 - Site: chat.mistral.ai
 - Address: `reduck/chat.mistral.ai/get_current_user`
-- Updated: 2026-10-06 (v4)
+- Updated: 2026-10-20 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -27,17 +27,17 @@ It takes no input.
 
 ## FAQ
 
-### What does "Get current user" do?
+### What does "Get current Mistral Le Chat user" do?
 
-Report which Mistral (Le Chat) account this browser is signed in as: email and name, from Mistral's own session service. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Le Chat scripts.
+Report which Mistral (Le Chat) account this browser is signed in as: email and name. When the browser is not signed in to Le Chat, the run fails with a signed-out error that says to sign in, so it can be used to check a session before running other Le Chat scripts.
 
-### How do I automatically get current user on chat.mistral.ai?
+### How do I automatically get current Mistral Le Chat user on chat.mistral.ai?
 
 Ask an AI agent connected to Reduck to run reduck/chat.mistral.ai/get_current_user, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/chat.mistral.ai/get_current_user
 
-### Is there a chat.mistral.ai API to get current user?
+### Is there a chat.mistral.ai API to get current Mistral Le Chat user?
 
-You do not need one. "Get current user" drives the real chat.mistral.ai pages in a browser, so it works whether or not chat.mistral.ai offers an API for this.
+You do not need one. "Get current Mistral Le Chat user" drives the real chat.mistral.ai pages in a browser, so it works whether or not chat.mistral.ai offers an API for this.
 
 ### What information do I need to provide?
 

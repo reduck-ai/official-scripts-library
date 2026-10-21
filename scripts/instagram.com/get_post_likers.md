@@ -4,7 +4,7 @@ Automatically get Instagram post likers on instagram.com. Fetch the accounts tha
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/get_post_likers`
-- Updated: 2026-09-03 (v2)
+- Updated: 2026-10-20 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -1,10 +1,10 @@
 # Descript whoami (signed-in account)
 
-Report which Descript account this browser is signed in as: the user id, email and name. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Descript scripts.
+Report which Descript account this browser is signed in as: the user id, email and name. When the browser is signed out, it fails with a sign-in error that says to sign in and retry.
 
 - Site: descript.com
 - Address: `reduck/descript.com/whoami`
-- Updated: 2026-09-30 (v1)
+- Updated: 2026-10-20 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -31,7 +31,7 @@ It takes no input.
 
 ### What does "Descript whoami (signed-in account)" do?
 
-Report which Descript account this browser is signed in as: the user id, email and name. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Descript scripts.
+Report which Descript account this browser is signed in as: the user id, email and name. When the browser is signed out, it fails with a sign-in error that says to sign in and retry.
 
 ### What information do I need to provide?
 

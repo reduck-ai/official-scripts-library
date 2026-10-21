@@ -1,10 +1,10 @@
-# Get current user
+# Trustpilot get current user (signed-in account)
 
-Automatically get current user on trustpilot.com. Report which Trustpilot account this browser is signed in as: email and display name from account settings. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Trustpilot scripts.
+Report which Trustpilot account this browser is signed in as: email and display name from account settings. Fails with a sign-in error when the browser is not signed in to Trustpilot.
 
 - Site: trustpilot.com
 - Address: `reduck/trustpilot.com/get_current_user`
-- Updated: 2026-10-06 (v3)
+- Updated: 2026-10-20 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -27,17 +27,9 @@ It takes no input.
 
 ## FAQ
 
-### What does "Get current user" do?
+### What does "Trustpilot get current user (signed-in account)" do?
 
-Report which Trustpilot account this browser is signed in as: email and display name from account settings. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Trustpilot scripts.
-
-### How do I automatically get current user on trustpilot.com?
-
-Ask an AI agent connected to Reduck to run reduck/trustpilot.com/get_current_user, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/trustpilot.com/get_current_user
-
-### Is there a trustpilot.com API to get current user?
-
-You do not need one. "Get current user" drives the real trustpilot.com pages in a browser, so it works whether or not trustpilot.com offers an API for this.
+Report which Trustpilot account this browser is signed in as: email and display name from account settings. Fails with a sign-in error when the browser is not signed in to Trustpilot.
 
 ### What information do I need to provide?
 

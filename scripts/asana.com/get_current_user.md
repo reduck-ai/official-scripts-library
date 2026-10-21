@@ -1,10 +1,10 @@
-# Get Current User
+# Get current Asana user
 
-Automatically get Current User on asana.com. Report which Asana account this browser is signed in as: name, email and user gid. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Asana scripts.
+Automatically get current Asana user on asana.com. Report which Asana account this browser is signed in as: name, email and user gid. When the browser is not signed in to Asana, the run fails with a signed-out error that says to sign in, so it can be used to check a session before running other Asana scripts.
 
 - Site: asana.com
 - Address: `reduck/asana.com/get_current_user`
-- Updated: 2026-10-09 (v4)
+- Updated: 2026-10-20 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -28,17 +28,17 @@ It takes no input.
 
 ## FAQ
 
-### What does "Get Current User" do?
+### What does "Get current Asana user" do?
 
-Report which Asana account this browser is signed in as: name, email and user gid. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Asana scripts.
+Report which Asana account this browser is signed in as: name, email and user gid. When the browser is not signed in to Asana, the run fails with a signed-out error that says to sign in, so it can be used to check a session before running other Asana scripts.
 
-### How do I automatically get Current User on asana.com?
+### How do I automatically get current Asana user on asana.com?
 
 Ask an AI agent connected to Reduck to run reduck/asana.com/get_current_user, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/asana.com/get_current_user
 
-### Is there a asana.com API to get Current User?
+### Is there a asana.com API to get current Asana user?
 
-You do not need one. "Get Current User" drives the real asana.com pages in a browser, so it works whether or not asana.com offers an API for this.
+You do not need one. "Get current Asana user" drives the real asana.com pages in a browser, so it works whether or not asana.com offers an API for this.
 
 ### What information do I need to provide?
 

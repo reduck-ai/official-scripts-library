@@ -1,10 +1,10 @@
 # Search Welcome to the Jungle candidates across all jobs
 
-Automatically search Welcome to the Jungle candidates across all jobs on welcomekit.co. Search all candidates of a Welcome to the Jungle ATS organization across every job at once (the dashboard's global candidate search), with an optional text query, stopping once applications go past a given date. Returns each candidate's profile fields and the direct link to their card.
+Automatically search Welcome to the Jungle candidates across all jobs on welcomekit.co. Search all candidates of a Welcome to the Jungle ATS organization across every job at once (the dashboard's global candidate search), with an optional text query. Returns one page of 20 candidates, newest first, with each candidate's profile fields and the direct link to their card, plus the total count and nextPage to pass for the next page (null on the last page). A query with no match returns an empty list. Fails with a signed-out error when the browser is not signed in.
 
 - Site: welcomekit.co
 - Address: `reduck/welcomekit.co/search_all_candidates`
-- Updated: 2026-10-02 (v3)
+- Updated: 2026-10-20 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,25 +18,24 @@ npx @reduck-ai/cli@latest run --script reduck/welcomekit.co/search_all_candidate
 ## Input
 
 - `org` (string, required): Organization reference as it appears in your dashboard URL https://www.welcomekit.co/dashboard/o/<org>/ (6-char code).
-- `sinceDate` (string, required): ISO date (e.g. 2026-08-01) or datetime. The search stops paginating once it reaches applications created before this date; candidates older than it are not returned.
+- `page` (integer, optional): Result page, starting at 0 (20 candidates per page, newest first). Pass nextPage from the previous call.
 - `query` (string, optional): Free-text search, same as typing in the dashboard's candidate search box (matches name, email, job, stage, address, comments, reviews...).
-- `maxPages` (integer, optional): Safety cap on how many result pages (20 candidates each) to fetch before stopping, in case sinceDate is never reached.
 
 ## Output
 
 - `org` (string, required)
+- `page` (integer, required)
 - `query` (string, required)
-- `sinceDate` (string, required)
+- `nextPage` (integer | null, required): Page to pass for the next results; null on the last page.
 - `candidates` (array, required)
-- `pagesFetched` (integer, required)
-- `totalMatching` (integer, required): Total candidates matching the query across the whole organization, per the search index (before the date cutoff is applied).
-- `reachedSinceDate` (boolean, required): True if pagination stopped because it reached applications older than sinceDate; false if it stopped because there were no more results or maxPages was hit first.
+- `totalPages` (integer, required)
+- `totalMatching` (integer, required): Total candidates matching the query that this account can see.
 
 ## FAQ
 
 ### What does "Search Welcome to the Jungle candidates across all jobs" do?
 
-Search all candidates of a Welcome to the Jungle ATS organization across every job at once (the dashboard's global candidate search), with an optional text query, stopping once applications go past a given date. Returns each candidate's profile fields and the direct link to their card.
+Search all candidates of a Welcome to the Jungle ATS organization across every job at once (the dashboard's global candidate search), with an optional text query. Returns one page of 20 candidates, newest first, with each candidate's profile fields and the direct link to their card, plus the total count and nextPage to pass for the next page (null on the last page). A query with no match returns an empty list. Fails with a signed-out error when the browser is not signed in.
 
 ### How do I automatically search Welcome to the Jungle candidates across all jobs on welcomekit.co?
 
@@ -48,11 +47,11 @@ You do not need one. "Search Welcome to the Jungle candidates across all jobs" d
 
 ### What information do I need to provide?
 
-Required: org, sinceDate. Optional: query, maxPages.
+Required: org. Optional: page, query.
 
 ### What does it return?
 
-It returns org, query, sinceDate, candidates, pagesFetched, totalMatching, reachedSinceDate.
+It returns org, page, query, nextPage, candidates, totalPages, totalMatching.
 
 ### Do I need to be logged in to welcomekit.co?
 

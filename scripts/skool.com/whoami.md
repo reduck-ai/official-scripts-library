@@ -1,10 +1,10 @@
 # Skool whoami
 
-Report which Skool account this browser is signed in as: email, name and profile handle, from the settings page's own data. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Skool scripts.
+Report which Skool account this browser is signed in as: email, name and profile handle. When the browser is not signed in to Skool, the run fails with a signed-out error asking you to sign in, so it can be used to check a session before running other Skool scripts.
 
 - Site: skool.com
 - Address: `reduck/skool.com/whoami`
-- Updated: 2026-09-29 (v2)
+- Updated: 2026-10-20 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -30,7 +30,7 @@ It takes no input.
 
 ### What does "Skool whoami" do?
 
-Report which Skool account this browser is signed in as: email, name and profile handle, from the settings page's own data. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Skool scripts.
+Report which Skool account this browser is signed in as: email, name and profile handle. When the browser is not signed in to Skool, the run fails with a signed-out error asking you to sign in, so it can be used to check a session before running other Skool scripts.
 
 ### What information do I need to provide?
 

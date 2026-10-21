@@ -1,10 +1,10 @@
 # Get current Amazon user
 
-Automatically get current Amazon user on amazon.com. Report whether this browser is signed in to Amazon.com and, if so, the account's first name from the header greeting (Amazon hides the full name and email behind a password re-check). Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Amazon scripts.
+Automatically get current Amazon user on amazon.com. Report the first name of the Amazon.com account this browser is signed in to, from the header greeting (Amazon hides the full name and email behind a password re-check). When the browser is signed out, the run fails with a signed-out error that says to sign in to Amazon.
 
 - Site: amazon.com
 - Address: `reduck/amazon.com/get_current_user`
-- Updated: 2026-10-08 (v5)
+- Updated: 2026-10-20 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -28,7 +28,7 @@ It takes no input.
 
 ### What does "Get current Amazon user" do?
 
-Report whether this browser is signed in to Amazon.com and, if so, the account's first name from the header greeting (Amazon hides the full name and email behind a password re-check). Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Amazon scripts.
+Report the first name of the Amazon.com account this browser is signed in to, from the header greeting (Amazon hides the full name and email behind a password re-check). When the browser is signed out, the run fails with a signed-out error that says to sign in to Amazon.
 
 ### How do I automatically get current Amazon user on amazon.com?
 

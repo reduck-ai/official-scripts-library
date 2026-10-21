@@ -4,7 +4,7 @@ Report which LinkedIn member this browser is signed in as: the vanity slug other
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/whoami`
-- Updated: 2026-10-19 (v4)
+- Updated: 2026-10-20 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

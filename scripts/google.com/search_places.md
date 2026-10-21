@@ -4,7 +4,7 @@ Automatically search Google Maps places on google.com. Search Google Maps for pl
 
 - Site: google.com
 - Address: `reduck/google.com/search_places`
-- Updated: 2026-10-13 (v5)
+- Updated: 2026-10-20 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

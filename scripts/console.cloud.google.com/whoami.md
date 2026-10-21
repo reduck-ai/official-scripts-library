@@ -1,10 +1,10 @@
 # Google Cloud console whoami (signed-in account)
 
-Report which Google account the Google Cloud console is signed in as in this browser: display name and email. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Google Cloud console scripts.
+Report which Google account the Google Cloud console is signed in as in this browser: display name and email. Fails with a sign-in error when the browser is not signed in to Google Cloud console.
 
 - Site: console.cloud.google.com
 - Address: `reduck/console.cloud.google.com/whoami`
-- Updated: 2026-10-07 (v3)
+- Updated: 2026-10-20 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -30,7 +30,7 @@ It takes no input.
 
 ### What does "Google Cloud console whoami (signed-in account)" do?
 
-Report which Google account the Google Cloud console is signed in as in this browser: display name and email. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Google Cloud console scripts.
+Report which Google account the Google Cloud console is signed in as in this browser: display name and email. Fails with a sign-in error when the browser is not signed in to Google Cloud console.
 
 ### What information do I need to provide?
 

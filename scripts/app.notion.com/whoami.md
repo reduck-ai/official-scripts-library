@@ -1,10 +1,10 @@
 # Notion whoami (signed-in account)
 
-Report which Notion account this browser is signed in as: the user id, email and name, the current workspace, and every workspace the account belongs to (id and name). Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Notion scripts.
+Report which Notion account this browser is signed in as: the user id, email and name, the current workspace, and every workspace the account belongs to (id and name). Fails with a signed-out error when no Notion account is signed in, so it can be used to check a session before running other Notion scripts.
 
 - Site: app.notion.com
 - Address: `reduck/app.notion.com/whoami`
-- Updated: 2026-09-29 (v2)
+- Updated: 2026-10-20 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -33,7 +33,7 @@ It takes no input.
 
 ### What does "Notion whoami (signed-in account)" do?
 
-Report which Notion account this browser is signed in as: the user id, email and name, the current workspace, and every workspace the account belongs to (id and name). Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Notion scripts.
+Report which Notion account this browser is signed in as: the user id, email and name, the current workspace, and every workspace the account belongs to (id and name). Fails with a signed-out error when no Notion account is signed in, so it can be used to check a session before running other Notion scripts.
 
 ### What information do I need to provide?
 

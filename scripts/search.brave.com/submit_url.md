@@ -4,7 +4,7 @@ Automatically submit URL to Brave on search.brave.com. One URL per call, no site
 
 - Site: search.brave.com
 - Address: `reduck/search.brave.com/submit_url`
-- Updated: 2026-10-19 (v4)
+- Updated: 2026-10-20 (v5)
 - Author: Reduck AI (reduck)
 
 ## About

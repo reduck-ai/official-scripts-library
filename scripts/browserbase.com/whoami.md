@@ -1,10 +1,10 @@
 # Browserbase whoami (signed-in account)
 
-Report which Browserbase account this browser is signed in as: the user id, email, name, account creation date, and every organization it belongs to with its slug (the org other Browserbase scripts take) and role. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Browserbase scripts.
+Report which Browserbase account this browser is signed in as: the user id, email, name, account creation date, and every organization it belongs to with its slug (the org other Browserbase scripts take) and role. Fails with a sign-in error when the browser is not signed in to Browserbase.
 
 - Site: browserbase.com
 - Address: `reduck/browserbase.com/whoami`
-- Updated: 2026-10-06 (v2)
+- Updated: 2026-10-20 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -33,7 +33,7 @@ It takes no input.
 
 ### What does "Browserbase whoami (signed-in account)" do?
 
-Report which Browserbase account this browser is signed in as: the user id, email, name, account creation date, and every organization it belongs to with its slug (the org other Browserbase scripts take) and role. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Browserbase scripts.
+Report which Browserbase account this browser is signed in as: the user id, email, name, account creation date, and every organization it belongs to with its slug (the org other Browserbase scripts take) and role. Fails with a sign-in error when the browser is not signed in to Browserbase.
 
 ### What information do I need to provide?
 

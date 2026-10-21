@@ -1,10 +1,10 @@
 # GitHub whoami (signed-in account)
 
-Report which GitHub account this browser is signed in as: the login (username), display name and avatar URL. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other GitHub scripts.
+Report which GitHub account this browser is signed in as: the login (username), display name and avatar URL. Fails with a sign-in error when the browser is not signed in to GitHub.
 
 - Site: github.com
 - Address: `reduck/github.com/whoami`
-- Updated: 2026-09-30 (v1)
+- Updated: 2026-10-20 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -31,7 +31,7 @@ It takes no input.
 
 ### What does "GitHub whoami (signed-in account)" do?
 
-Report which GitHub account this browser is signed in as: the login (username), display name and avatar URL. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other GitHub scripts.
+Report which GitHub account this browser is signed in as: the login (username), display name and avatar URL. Fails with a sign-in error when the browser is not signed in to GitHub.
 
 ### What information do I need to provide?
 

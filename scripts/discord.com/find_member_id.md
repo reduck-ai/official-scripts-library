@@ -4,7 +4,7 @@ Automatically find Discord member ID by name on discord.com. Get the numeric use
 
 - Site: discord.com
 - Address: `reduck/discord.com/find_member_id`
-- Updated: 2026-10-05 (v14)
+- Updated: 2026-10-20 (v15)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -21,7 +21,7 @@ npx @reduck-ai/cli@latest run --script reduck/discord.com/find_member_id
 
 ## Input
 
-- `name` (string, required): Name (or start of the name) of the member to resolve. Throws when no member matches.
+- `name` (string, required): Name (or start of the name) of the member to resolve. Discord's mention search stops at a space, so a name with spaces is searched by its first word and every member Discord offers for it is returned. When no member matches, userId is null and matches is empty.
 - `channelUrl` (string, required): URL of a channel in the server to search, e.g. https://discord.com/channels/<guildId>/<channelId>. Must be a channel the signed-in account can type in (the lookup runs through that channel's message box).
 
 ## Output

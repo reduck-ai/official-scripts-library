@@ -1,10 +1,10 @@
 # Send Gmail email
 
-Automatically send Gmail email on mail.google.com. Send an email from the signed-in Gmail account, with a plain-text body and an optional single file attachment.
+Automatically send Gmail email on mail.google.com. Send an email from the signed-in Gmail account, with a plain-text body and an optional single file attachment. Always starts a new conversation. To answer inside an existing thread, use mail.google.com/reply_to_email.
 
 - Site: mail.google.com
 - Address: `reduck/mail.google.com/send_email`
-- Updated: 2026-10-19 (v33)
+- Updated: 2026-10-20 (v36)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -26,6 +26,7 @@ npx @reduck-ai/cli@latest run --script reduck/mail.google.com/send_email
 - `account` (string, optional): Google account email to send as. Without it, Gmail uses the first signed-in account, which may not be the one you expect if several accounts share the browser.
 - `attachment` (string, optional): Optional file to attach. From an agent: files: { attachment: { relativePath: "invoice.pdf" } }, a name inside the reduck folder on the Desktop. From the CLI: file:attachment=/path/to/file. Omit it to send without an attachment.
 - `attachmentName` (string, optional): Filename the recipient sees, with its extension (e.g. 'invoice.pdf'). Defaults to the file's own name, which a file named by relativePath keeps. Pass it when sending bytes from the CLI, where the file otherwise arrives named 'attachment'.
+- `confirmSharingWarning` (boolean, optional): Optional. When the body links a Drive file a recipient cannot open (typically a recipient without a Google account), Gmail asks about the file's access before sending. True sends anyway and never changes the file's sharing: when Gmail offers to open the file to anyone with the link, the script picks sending without updating access instead. Leave it off and such a question makes the script stop with an error naming it, nothing sent. Share the file yourself first if the recipients must be able to open it.
 
 ## Output
 
@@ -44,7 +45,7 @@ npx @reduck-ai/cli@latest run --script reduck/mail.google.com/send_email
 
 ### What does "Send Gmail email" do?
 
-Send an email from the signed-in Gmail account, with a plain-text body and an optional single file attachment.
+Send an email from the signed-in Gmail account, with a plain-text body and an optional single file attachment. Always starts a new conversation. To answer inside an existing thread, use mail.google.com/reply_to_email.
 
 ### How do I automatically send Gmail email on mail.google.com?
 
@@ -56,7 +57,7 @@ You do not need one. "Send Gmail email" drives the real mail.google.com pages in
 
 ### What information do I need to provide?
 
-Required: to, subject. Optional: cc, bcc, body, sendAt, account, attachment, attachmentName.
+Required: to, subject. Optional: cc, bcc, body, sendAt, account, attachment, attachmentName, confirmSharingWarning.
 
 ### What does it return?
 

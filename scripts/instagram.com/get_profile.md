@@ -4,7 +4,7 @@ Automatically get Instagram profile on instagram.com. You get the follower, foll
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/get_profile`
-- Updated: 2026-10-19 (v11)
+- Updated: 2026-10-20 (v12)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -25,18 +25,18 @@ npx @reduck-ai/cli@latest run --script reduck/instagram.com/get_profile
 
 ## Output
 
-- `source` (string, required): api = exact data from Instagram's profile API (requires a session). og_meta = public page metadata fallback when logged out: counts are approximate (K/M/B rounded), unknown fields are null. A login-walled run is not returned as a result — it throws — so a null-filled payload can no longer be mistaken for a profile that hides its counts.
+- `source` (string, required): api = exact data from Instagram's profile API. A run that cannot read it throws rather than returning partial data.
 - `username` (string, required)
-- `posts` (number | null, optional): Public post count; null on private/restricted views.
-- `user_id` (string | null, optional): Stable numeric pk as a string; null when logged out and not embedded in the public page.
+- `posts` (number | null, optional): Post count; null when Instagram's answer does not carry it.
+- `user_id` (string | null, optional): Stable numeric pk as a string.
 - `category` (string | null, optional)
-- `biography` (string | null, optional): null in og fallback.
-- `followers` (number | null, optional): Approximate (K/M/B rounded) in og fallback.
+- `biography` (string | null, optional): null when the profile has none.
+- `followers` (number | null, optional)
 - `following` (number | null, optional)
 - `full_name` (string | null, optional)
-- `is_private` (boolean | null, optional): null when unknown (og fallback).
-- `is_business` (boolean | null, optional): null when unknown (og fallback).
-- `is_verified` (boolean | null, optional): null when unknown (og fallback).
+- `is_private` (boolean | null, optional)
+- `is_business` (boolean | null, optional): null when Instagram's answer does not say.
+- `is_verified` (boolean | null, optional)
 - `external_url` (string | null, optional)
 - `profile_pic_url` (string | null, optional)
 

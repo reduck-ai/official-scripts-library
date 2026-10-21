@@ -1,10 +1,10 @@
 # Canva whoami (signed-in account)
 
-Report which Canva account this browser is signed in as: the user id, email, display name and username. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Canva scripts.
+Report which Canva account this browser is signed in as: the user id, email, display name and username. Fails with a signed-out error when the browser is not signed in to Canva.
 
 - Site: canva.com
 - Address: `reduck/canva.com/whoami`
-- Updated: 2026-10-15 (v3)
+- Updated: 2026-10-20 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -32,7 +32,7 @@ It takes no input.
 
 ### What does "Canva whoami (signed-in account)" do?
 
-Report which Canva account this browser is signed in as: the user id, email, display name and username. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Canva scripts.
+Report which Canva account this browser is signed in as: the user id, email, display name and username. Fails with a signed-out error when the browser is not signed in to Canva.
 
 ### What information do I need to provide?
 

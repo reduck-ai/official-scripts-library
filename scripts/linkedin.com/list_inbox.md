@@ -4,7 +4,7 @@ Automatically list LinkedIn message inbox on linkedin.com. List or search the co
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/list_inbox`
-- Updated: 2026-10-13 (v9)
+- Updated: 2026-10-20 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,10 +17,13 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/list_inbox
 
 ## Input
 
+- `limit` (integer, optional): Not supported since 13 Oct 2026: the run fails with a message saying so. Each run returns one page of 20; pass nextCursor as cursor for the next.
 - `cursor` (string, optional): nextCursor from the previous page, with the same other args, to read the next 20 conversations. Omit for the first page.
 - `filter` (string, optional): One of the inbox's filter pills, applied inside the folder. Omit for no filter.
 - `folder` (string, optional): The inbox folder, as the folder menu shows it. Omit for focused, the main inbox.
 - `keywords` (string, optional): Search the whole inbox, like its search box: matches participant names, message text and conversation titles, in every folder, most relevant first. Cannot be combined with folder or filter.
+- `sinceIso` (string, optional): Not supported since 13 Oct 2026: the run fails with a message saying so. Page with cursor and stop when lastActivityAt is older than your date.
+- `unreadOnly` (boolean, optional): Not supported since 13 Oct 2026: the run fails with a message saying so. Use filter: "unread".
 
 ## Output
 
@@ -46,7 +49,7 @@ You do not need one. "List LinkedIn message inbox" drives the real linkedin.com 
 
 ### What information do I need to provide?
 
-Optional: cursor, filter, folder, keywords.
+Optional: limit, cursor, filter, folder, keywords, sinceIso, unreadOnly.
 
 ### What does it return?
 

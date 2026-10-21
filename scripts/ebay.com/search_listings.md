@@ -4,7 +4,7 @@ Automatically search eBay listings on ebay.com. One page of active listings (abo
 
 - Site: ebay.com
 - Address: `reduck/ebay.com/search_listings`
-- Updated: 2026-10-19 (v7)
+- Updated: 2026-10-20 (v9)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -22,14 +22,28 @@ npx @reduck-ai/cli@latest run --script reduck/ebay.com/search_listings
 ## Input
 
 - `query` (string, required): Search keywords, e.g. "vintage camera"
+- `page` (integer, optional): Result page, as eBay's own pager numbers it (1 = first page).
+- `sold` (boolean, optional): Only items that sold (eBay's "Sold Items").
+- `sort` (string, optional): Sort order, the options of eBay's sort menu.
+- `deals` (boolean, optional): Only eBay's "Deals & Savings" listings.
+- `perPage` (integer, optional): Listings per page; eBay offers 60, 120 or 240.
+- `maxPrice` (number, optional): Highest item price, in the site's currency.
+- `minPrice` (number, optional): Lowest item price, in the site's currency.
+- `completed` (boolean, optional): Only listings that ended (eBay's "Completed Items").
+- `condition` (array, optional): Keep only these item conditions. Omit for any condition.
+- `freeReturns` (boolean, optional): Only listings with free returns.
+- `buyingFormat` (string, optional): eBay's buying-format filter.
+- `returnsAccepted` (boolean, optional): Only listings that accept returns.
+- `authorizedSeller` (boolean, optional): Only authorized sellers.
 
 ## Output
 
 - `query` (string, required)
 - `results` (array, required): Listings eBay returned as matches for the query.
+- `emptyReason` (string | null, required): When the results are empty and eBay says why (e.g. its notice asking for more details in the query), that notice, verbatim. null when there are results or eBay gave no reason.
 - `returned` (integer, optional): How many matching listings this page yielded, excluding the loosely-related ones.
 - `relatedResults` (array, optional): Listings eBay appended when the query ran out of matches. They are not results for the query and are kept apart so they cannot be mistaken for matches; usually empty.
-- `resultCountText` (string | null, optional): eBay's own count heading, verbatim ("130,000+ results for vintage camera"). Compare it with `returned`: it is the site's total for the query, while the script reads one page.
+- `resultCountText` (string | null, optional): eBay's own count heading, verbatim ("130,000+ results for vintage camera"). It is the site's total for the query, while the script reads one page.
 
 ## Example output
 
@@ -53,6 +67,7 @@ Shape only: placeholder values generated from the output schema, not a real run.
     }
   ],
   "returned": 3,
+  "emptyReason": "…",
   "relatedResults": [
     {
       "price": 3.5,
@@ -75,7 +90,7 @@ Shape only: placeholder values generated from the output schema, not a real run.
 
 ### What does "Search eBay listings" do?
 
-Search eBay for items by keyword: item id, title, price, currency, shipping cost, location, and seller feedback. No login required.
+Search eBay (ebay.com) for items by keyword, one page at a time: item id, title, price, currency, shipping cost, the card's attribute lines and seller feedback. No login required. Filters: sort, condition (new/used/not specified), min/max price, buying format (auction, Buy It Now, accepts offers), free returns, returns accepted, authorized sellers, sold or completed items, deals. Brand and other category-specific filters and local pickup are not offered. Pass page 2, 3, ... for later pages and perPage (60/120/240) for page size; resultCountText is eBay's total. When nothing matches, results is empty and emptyReason carries eBay's own notice when it gives one (e.g. a too-short query), otherwise null. Listings eBay pads a short result with are returned apart in relatedResults.
 
 ### How do I automatically search eBay listings on ebay.com?
 
@@ -87,11 +102,11 @@ You do not need one. "Search eBay listings" drives the real ebay.com pages in a 
 
 ### What information do I need to provide?
 
-Required: query.
+Required: query. Optional: page, sold, sort, deals, perPage, maxPrice, minPrice, completed, condition, freeReturns, buyingFormat, returnsAccepted, authorizedSeller.
 
 ### What does it return?
 
-It returns query, results, returned, relatedResults, resultCountText.
+It returns query, results, returned, emptyReason, relatedResults, resultCountText.
 
 ### Do I need to be logged in to ebay.com?
 

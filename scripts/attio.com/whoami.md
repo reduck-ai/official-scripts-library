@@ -1,10 +1,10 @@
 # Attio whoami (signed-in account)
 
-Report which Attio account this browser is signed in as: the user id, email and name. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Attio scripts.
+Report which Attio account this browser is signed in as: the user id, email, name and the workspace the app opened. When the browser is signed out, the run fails with a signed-out error that says to sign in to Attio and retry.
 
 - Site: attio.com
 - Address: `reduck/attio.com/whoami`
-- Updated: 2026-10-01 (v2)
+- Updated: 2026-10-20 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -32,7 +32,7 @@ It takes no input.
 
 ### What does "Attio whoami (signed-in account)" do?
 
-Report which Attio account this browser is signed in as: the user id, email and name. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Attio scripts.
+Report which Attio account this browser is signed in as: the user id, email, name and the workspace the app opened. When the browser is signed out, the run fails with a signed-out error that says to sign in to Attio and retry.
 
 ### What information do I need to provide?
 

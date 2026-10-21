@@ -1,10 +1,10 @@
 # Pulley whoami (signed-in account)
 
-Report which Pulley account this browser is signed in as: the user id, email, name, whether two-factor auth is on, when the account was created, the companies it belongs to, and on how many cap tables it holds equity. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Pulley scripts.
+Report which Pulley account this browser is signed in as: the user id, email, name, whether two-factor auth is on, when the account was created, the companies it belongs to, and on how many cap tables it holds equity. Fails with a signed-out error when no Pulley account is signed in, so it can be used to check a session before running other Pulley scripts.
 
 - Site: pulley.com
 - Address: `reduck/pulley.com/whoami`
-- Updated: 2026-10-06 (v2)
+- Updated: 2026-10-20 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -35,7 +35,7 @@ It takes no input.
 
 ### What does "Pulley whoami (signed-in account)" do?
 
-Report which Pulley account this browser is signed in as: the user id, email, name, whether two-factor auth is on, when the account was created, the companies it belongs to, and on how many cap tables it holds equity. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Pulley scripts.
+Report which Pulley account this browser is signed in as: the user id, email, name, whether two-factor auth is on, when the account was created, the companies it belongs to, and on how many cap tables it holds equity. Fails with a signed-out error when no Pulley account is signed in, so it can be used to check a session before running other Pulley scripts.
 
 ### What information do I need to provide?
 

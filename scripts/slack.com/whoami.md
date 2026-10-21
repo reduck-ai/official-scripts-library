@@ -1,10 +1,10 @@
 # Slack whoami (signed-in account)
 
-Report which Slack account this browser is signed in as: the user's name, email, user id and the active workspace. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Slack scripts.
+Report which Slack account this browser is signed in as: the user's name, email, user id and the workspace the app opens (the one this browser last used). If the browser is not signed in to Slack, the run fails with a signed-out error that asks you to sign in to app.slack.com; loggedIn is true on every answer.
 
 - Site: slack.com
 - Address: `reduck/slack.com/whoami`
-- Updated: 2026-09-29 (v3)
+- Updated: 2026-10-20 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -34,7 +34,7 @@ It takes no input.
 
 ### What does "Slack whoami (signed-in account)" do?
 
-Report which Slack account this browser is signed in as: the user's name, email, user id and the active workspace. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Slack scripts.
+Report which Slack account this browser is signed in as: the user's name, email, user id and the workspace the app opens (the one this browser last used). If the browser is not signed in to Slack, the run fails with a signed-out error that asks you to sign in to app.slack.com; loggedIn is true on every answer.
 
 ### What information do I need to provide?
 

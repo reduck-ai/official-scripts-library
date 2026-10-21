@@ -1,10 +1,10 @@
 # ClickUp whoami (signed-in account)
 
-Report which ClickUp account this browser is signed in as: full name and email from My Settings > Profile. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other ClickUp scripts.
+Report which ClickUp account this browser is signed in as: full name and email. Fails with a sign-in error when the browser is not signed in to ClickUp.
 
 - Site: app.clickup.com
 - Address: `reduck/app.clickup.com/whoami`
-- Updated: 2026-10-05 (v2)
+- Updated: 2026-10-20 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -30,7 +30,7 @@ It takes no input.
 
 ### What does "ClickUp whoami (signed-in account)" do?
 
-Report which ClickUp account this browser is signed in as: full name and email from My Settings > Profile. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other ClickUp scripts.
+Report which ClickUp account this browser is signed in as: full name and email. Fails with a sign-in error when the browser is not signed in to ClickUp.
 
 ### What information do I need to provide?
 

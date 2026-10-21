@@ -1,10 +1,10 @@
 # Gmail whoami (signed-in account)
 
-Report which Gmail account this browser is signed in as: display name and email, from Gmail's account switcher. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Gmail scripts.
+Report which Gmail account this browser is signed in as: display name and email, from Gmail's account switcher. When the browser is signed out, the run fails with a signed-out error that asks to sign in to Gmail, so it can be used to check a session before running other Gmail scripts.
 
 - Site: mail.google.com
 - Address: `reduck/mail.google.com/whoami`
-- Updated: 2026-09-30 (v1)
+- Updated: 2026-10-20 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,7 +29,7 @@ It takes no input.
 
 ### What does "Gmail whoami (signed-in account)" do?
 
-Report which Gmail account this browser is signed in as: display name and email, from Gmail's account switcher. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Gmail scripts.
+Report which Gmail account this browser is signed in as: display name and email, from Gmail's account switcher. When the browser is signed out, the run fails with a signed-out error that asks to sign in to Gmail, so it can be used to check a session before running other Gmail scripts.
 
 ### What information do I need to provide?
 

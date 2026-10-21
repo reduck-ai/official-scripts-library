@@ -4,7 +4,7 @@ Automatically get meteoblue 14-day weather forecast on meteoblue.com. 14-day wea
 
 - Site: meteoblue.com
 - Address: `reduck/meteoblue.com/get_14day_forecast`
-- Updated: 2026-10-19 (v7)
+- Updated: 2026-10-20 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,8 @@ npx @reduck-ai/cli@latest run --script reduck/meteoblue.com/get_14day_forecast
 
 ## Input
 
-- `location` (string, required): meteoblue location url, e.g. "paris_france_2988507": get it from meteoblue.com/search_locations.
+- `url` (string, optional): Same as location, under the name meteoblue.com/search_locations returns it. Pass one of location or url.
+- `location` (string, optional): meteoblue location url, e.g. "paris_france_2988507": get it from meteoblue.com/search_locations.
 
 ## Output
 
@@ -40,7 +41,7 @@ You do not need one. "Get meteoblue 14-day weather forecast" drives the real met
 
 ### What information do I need to provide?
 
-Required: location.
+Optional: url, location.
 
 ### What does it return?
 

@@ -1,10 +1,10 @@
 # Get Slack thread replies
 
-Automatically get Slack thread replies on slack.com. Read every reply in a thread by channel (name or id) and the parent message ts (thread_ts). Returns the parent plus its replies, authors resolved to display names. Requires login.
+Automatically get Slack thread replies on slack.com. Read a Slack thread by channel id (get it from slack.com/list_channels) and the parent message ts (thread_ts). Returns the parent plus one page of its replies, with authors' display names when Slack provides them, and nextCursor to pass for the next page (null on the last page). Reading does not mark the thread as read. Fails with a signed-out error when the browser is not signed in to Slack.
 
 - Site: slack.com
 - Address: `reduck/slack.com/get_thread_replies`
-- Updated: 2026-10-12 (v2)
+- Updated: 2026-10-20 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,12 +17,12 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/get_thread_replies
 
 ## Input
 
-- `channel` (string, required): Channel name (with or without #) or id (C…).
+- `channel` (string, required): Channel id (C…, G… or D…). Get it from slack.com/list_channels.
 - `ts` (string, optional): The parent message's ts (same value as thread_ts). Pass this OR thread_ts.
-- `limit` (integer, optional): Max replies per page (default 100).
-- `cursor` (string, optional): next_cursor from a previous call.
+- `limit` (integer, optional): Max messages per page (default 100).
+- `cursor` (string, optional): nextCursor from a previous call.
 - `thread_ts` (string, optional): Alias of ts: the parent message's thread_ts. Pass this OR ts.
-- `workspaceDomain` (string, optional): Workspace host, e.g. acme.slack.com. Defaults to the active workspace.
+- `workspaceDomain` (string, optional): Workspace host, e.g. acme.slack.com. Omit to use the workspace this browser last used.
 
 ## Output
 
@@ -35,7 +35,7 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/get_thread_replies
 
 ### What does "Get Slack thread replies" do?
 
-Read every reply in a thread by channel (name or id) and the parent message ts (thread_ts). Returns the parent plus its replies, authors resolved to display names. Requires login.
+Read a Slack thread by channel id (get it from slack.com/list_channels) and the parent message ts (thread_ts). Returns the parent plus one page of its replies, with authors' display names when Slack provides them, and nextCursor to pass for the next page (null on the last page). Reading does not mark the thread as read. Fails with a signed-out error when the browser is not signed in to Slack.
 
 ### How do I automatically get Slack thread replies on slack.com?
 
@@ -59,7 +59,7 @@ Yes. It acts as you on slack.com: on your own Chrome it reuses your session, and
 
 ### Does it change anything on slack.com, or only read data?
 
-Unknown: its author has not declared whether it changes anything on slack.com, so treat it as if it could.
+It only reads. It looks things up on slack.com and changes nothing there.
 
 ### How do I run it?
 

@@ -1,10 +1,10 @@
 # Pipedrive whoami (signed-in account)
 
-Report which Pipedrive account this browser is signed in as: the user id, email, name and company. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Pipedrive scripts.
+Report which Pipedrive account this browser is signed in as: the user id, email, name and company. If the browser is not signed in to Pipedrive, the run fails with a signed-out error that asks you to sign in to app.pipedrive.com; loggedIn is true on every answer.
 
 - Site: pipedrive.com
 - Address: `reduck/pipedrive.com/whoami`
-- Updated: 2026-10-06 (v2)
+- Updated: 2026-10-20 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -32,7 +32,7 @@ It takes no input.
 
 ### What does "Pipedrive whoami (signed-in account)" do?
 
-Report which Pipedrive account this browser is signed in as: the user id, email, name and company. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Pipedrive scripts.
+Report which Pipedrive account this browser is signed in as: the user id, email, name and company. If the browser is not signed in to Pipedrive, the run fails with a signed-out error that asks you to sign in to app.pipedrive.com; loggedIn is true on every answer.
 
 ### What information do I need to provide?
 

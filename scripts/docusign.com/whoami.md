@@ -1,10 +1,10 @@
 # DocuSign whoami (signed-in account)
 
-Report which DocuSign account this browser is signed in as: the user id, email, name, admin flag and permission profile, the current account's number, id and name, its regional DocuSign server, and every account the user belongs to. Being signed out is reported as a normal answer (loggedIn false), not an error. Only a sign-in that persists in the browser ("keep me signed in") is visible to runs.
+Report which DocuSign account this browser is signed in as: the user id, email, name, admin flag and permission profile, the current account's number, id and name, its regional DocuSign server, and every account the user belongs to. When the browser is signed out, the run fails with a signed-out error that asks to sign in to DocuSign. Only a sign-in that persists in the browser ("keep me signed in") is visible to runs.
 
 - Site: docusign.com
 - Address: `reduck/docusign.com/whoami`
-- Updated: 2026-09-28 (v1)
+- Updated: 2026-10-20 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -38,7 +38,7 @@ It takes no input.
 
 ### What does "DocuSign whoami (signed-in account)" do?
 
-Report which DocuSign account this browser is signed in as: the user id, email, name, admin flag and permission profile, the current account's number, id and name, its regional DocuSign server, and every account the user belongs to. Being signed out is reported as a normal answer (loggedIn false), not an error. Only a sign-in that persists in the browser ("keep me signed in") is visible to runs.
+Report which DocuSign account this browser is signed in as: the user id, email, name, admin flag and permission profile, the current account's number, id and name, its regional DocuSign server, and every account the user belongs to. When the browser is signed out, the run fails with a signed-out error that asks to sign in to DocuSign. Only a sign-in that persists in the browser ("keep me signed in") is visible to runs.
 
 ### What information do I need to provide?
 

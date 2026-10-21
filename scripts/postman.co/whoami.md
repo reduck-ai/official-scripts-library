@@ -1,10 +1,10 @@
 # Postman whoami (signed-in account)
 
-Report which Postman account this browser is signed in as: the account email. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Postman scripts.
+Report which Postman account this browser is signed in as: the account email. When the browser is not signed in to Postman (sign-in page or account chooser), the run fails with a signed-out error asking you to sign in, so it can be used to check a session before running other Postman scripts.
 
 - Site: postman.co
 - Address: `reduck/postman.co/whoami`
-- Updated: 2026-10-01 (v2)
+- Updated: 2026-10-20 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,7 +29,7 @@ It takes no input.
 
 ### What does "Postman whoami (signed-in account)" do?
 
-Report which Postman account this browser is signed in as: the account email. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Postman scripts.
+Report which Postman account this browser is signed in as: the account email. When the browser is not signed in to Postman (sign-in page or account chooser), the run fails with a signed-out error asking you to sign in, so it can be used to check a session before running other Postman scripts.
 
 ### What information do I need to provide?
 

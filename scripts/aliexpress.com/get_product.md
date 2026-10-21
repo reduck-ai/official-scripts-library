@@ -4,7 +4,7 @@ Automatically get AliExpress product on aliexpress.com. Read an AliExpress produ
 
 - Site: aliexpress.com
 - Address: `reduck/aliexpress.com/get_product`
-- Updated: 2026-09-18 (v2)
+- Updated: 2026-10-20 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,8 @@ npx @reduck-ai/cli@latest run --script reduck/aliexpress.com/get_product
 
 ## Input
 
-- `itemId` (string | number, required): AliExpress numeric item id, e.g. 1005012250100905 — the `id` field returned by aliexpress.com/search_products, or the digits in an /item/<id>.html URL.
+- `id` (string | number, optional): Same as itemId, under the name aliexpress.com/search_products returns it. Pass one of itemId or id.
+- `itemId` (string | number, optional): AliExpress numeric item id, e.g. 1005012250100905: the id field of aliexpress.com/search_products, or the digits in an /item/<id>.html URL.
 
 ## Output
 
@@ -53,7 +54,7 @@ You do not need one. "Get AliExpress product" drives the real aliexpress.com pag
 
 ### What information do I need to provide?
 
-Required: itemId.
+Optional: id, itemId.
 
 ### What does it return?
 

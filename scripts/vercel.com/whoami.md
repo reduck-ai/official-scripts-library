@@ -1,10 +1,10 @@
 # Vercel whoami (signed-in account)
 
-Report which Vercel account this browser is signed in as: the user id, email, username, plan, default team and every team it belongs to with its role (the team slug other Vercel scripts take). Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Vercel scripts.
+Report which Vercel account this browser is signed in as: the user id, email, username, plan, default team and every team it belongs to with its role (the team slug other Vercel scripts take). When the browser is not signed in to Vercel, the run fails with a signed-out error asking you to sign in, so it can be used to check a session before running other Vercel scripts.
 
 - Site: vercel.com
 - Address: `reduck/vercel.com/whoami`
-- Updated: 2026-10-05 (v3)
+- Updated: 2026-10-20 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -35,7 +35,7 @@ It takes no input.
 
 ### What does "Vercel whoami (signed-in account)" do?
 
-Report which Vercel account this browser is signed in as: the user id, email, username, plan, default team and every team it belongs to with its role (the team slug other Vercel scripts take). Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Vercel scripts.
+Report which Vercel account this browser is signed in as: the user id, email, username, plan, default team and every team it belongs to with its role (the team slug other Vercel scripts take). When the browser is not signed in to Vercel, the run fails with a signed-out error asking you to sign in, so it can be used to check a session before running other Vercel scripts.
 
 ### What information do I need to provide?
 

@@ -1,10 +1,10 @@
 # Get LinkedIn job
 
-Automatically get LinkedIn job on linkedin.com. Fetch one LinkedIn job posting by numeric id (the jobId of linkedin.com/search_jobs). Returns its title, LinkedIn's state (LISTED while it takes applications), creation date, whether it is reposted, its place and geo id, the labels and line under the title, the full description, the apply link or Easy Apply, whether you applied, and the company with its id, name, page, industry and industry id, member count, declared size and description. A posting LinkedIn does not have fails with a clear message, as does a browser that is not signed in.
+Automatically get LinkedIn job on linkedin.com. Fetch one LinkedIn job posting by numeric id: pass the jobId of linkedin.com/search_jobs or get_company_jobs as jobId (or as id). Returns its title, LinkedIn's state of the posting (whether it still takes applications), creation date, whether it is reposted, its place and geo id, the labels and line under the title, the full description, the apply link or Easy Apply, whether you applied, and the company with its id, name, page, industry and industry id, member count, declared size and description. A posting LinkedIn does not have fails with a clear message, as does a browser that is not signed in.
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_job`
-- Updated: 2026-10-13 (v9)
+- Updated: 2026-10-20 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,8 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/get_job
 
 ## Input
 
-- `id` (string, required): LinkedIn numeric job id: the jobId of linkedin.com/search_jobs, or the digits of a /jobs/view/ URL.
+- `id` (string, optional): LinkedIn numeric job id: the jobId of linkedin.com/search_jobs, or the digits of a /jobs/view/ URL.
+- `jobId` (string, optional): Same as id, under the name linkedin.com/search_jobs and get_company_jobs return it. Pass one of id or jobId.
 
 ## Output
 
@@ -42,7 +43,7 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/get_job
 
 ### What does "Get LinkedIn job" do?
 
-Fetch one LinkedIn job posting by numeric id (the jobId of linkedin.com/search_jobs). Returns its title, LinkedIn's state (LISTED while it takes applications), creation date, whether it is reposted, its place and geo id, the labels and line under the title, the full description, the apply link or Easy Apply, whether you applied, and the company with its id, name, page, industry and industry id, member count, declared size and description. A posting LinkedIn does not have fails with a clear message, as does a browser that is not signed in.
+Fetch one LinkedIn job posting by numeric id: pass the jobId of linkedin.com/search_jobs or get_company_jobs as jobId (or as id). Returns its title, LinkedIn's state of the posting (whether it still takes applications), creation date, whether it is reposted, its place and geo id, the labels and line under the title, the full description, the apply link or Easy Apply, whether you applied, and the company with its id, name, page, industry and industry id, member count, declared size and description. A posting LinkedIn does not have fails with a clear message, as does a browser that is not signed in.
 
 ### How do I automatically get LinkedIn job on linkedin.com?
 
@@ -54,7 +55,7 @@ You do not need one. "Get LinkedIn job" drives the real linkedin.com pages in a 
 
 ### What information do I need to provide?
 
-Required: id.
+Optional: id, jobId.
 
 ### What does it return?
 

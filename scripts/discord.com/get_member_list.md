@@ -1,10 +1,10 @@
-# get_member_list
+# Get Discord server member list
 
-Member names, user ids and a bot flag from a Discord channel's sidebar, up to the limit you set.
+Automatically get Discord server member list on discord.com. Member names, user ids and a bot flag from a Discord channel's sidebar, up to the limit you set.
 
 - Site: discord.com
 - Address: `reduck/discord.com/get_member_list`
-- Updated: 2026-10-05 (v12)
+- Updated: 2026-10-20 (v13)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -52,9 +52,17 @@ Shape only: placeholder values generated from the output schema, not a real run.
 
 ## FAQ
 
-### What does "get_member_list" do?
+### What does "Get Discord server member list" do?
 
 List the members of a Discord server, as shown in the member list for a given channel. Returns each member's userId, display name, and whether Discord marks them as an app or bot. userId is null for members using a default avatar. On large servers Discord does not show every member at once, so the result may not be the full roster; complete tells you whether it was. Offline members may be left out, and role groupings are not returned.
+
+### How do I automatically get Discord server member list on discord.com?
+
+Ask an AI agent connected to Reduck to run reduck/discord.com/get_member_list, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/discord.com/get_member_list
+
+### Is there a discord.com API to get Discord server member list?
+
+You do not need one. "Get Discord server member list" drives the real discord.com pages in a browser, so it works whether or not discord.com offers an API for this.
 
 ### What information do I need to provide?
 

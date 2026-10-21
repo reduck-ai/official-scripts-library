@@ -1,10 +1,10 @@
 # Get the signed-in SNCF Connect user
 
-Automatically get the signed-in SNCF Connect user on sncf-connect.com. Report which SNCF Connect account this browser is signed in as: name and email from the account's personal-info page. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other SNCF Connect scripts.
+Automatically get the signed-in SNCF Connect user on sncf-connect.com. Report which SNCF Connect account this browser is signed in as: name and email from the account's personal space. When the browser is not signed in to SNCF Connect, the run fails with a signed-out error asking you to sign in, then retry.
 
 - Site: sncf-connect.com
 - Address: `reduck/sncf-connect.com/get_current_user`
-- Updated: 2026-10-15 (v6)
+- Updated: 2026-10-20 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,7 +29,7 @@ It takes no input.
 
 ### What does "Get the signed-in SNCF Connect user" do?
 
-Report which SNCF Connect account this browser is signed in as: name and email from the account's personal-info page. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other SNCF Connect scripts.
+Report which SNCF Connect account this browser is signed in as: name and email from the account's personal space. When the browser is not signed in to SNCF Connect, the run fails with a signed-out error asking you to sign in, then retry.
 
 ### How do I automatically get the signed-in SNCF Connect user on sncf-connect.com?
 

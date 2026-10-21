@@ -4,7 +4,7 @@ Automatically list Welcome to the Jungle recruiter notifications on welcomekit.c
 
 - Site: welcomekit.co
 - Address: `reduck/welcomekit.co/list_notifications`
-- Updated: 2026-10-06 (v2)
+- Updated: 2026-10-20 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -53,7 +53,7 @@ Yes. It acts as you on welcomekit.co: on your own Chrome it reuses your session,
 
 ### Does it change anything on welcomekit.co, or only read data?
 
-Unknown: its author has not declared whether it changes anything on welcomekit.co, so treat it as if it could.
+It only reads. It looks things up on welcomekit.co and changes nothing there.
 
 ### How do I run it?
 

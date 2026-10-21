@@ -1,10 +1,10 @@
 # Google whoami (signed-in account)
 
-Report which Google account this browser is signed in as: display name and email, read from Google's account button on myaccount.google.com. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a Google session before running other Google scripts.
+Report which Google account this browser is signed in as: display name and email. When the browser is signed out of Google, it fails with a sign-in error that says to sign in and retry.
 
 - Site: google.com
 - Address: `reduck/google.com/whoami`
-- Updated: 2026-09-30 (v1)
+- Updated: 2026-10-20 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,7 +29,7 @@ It takes no input.
 
 ### What does "Google whoami (signed-in account)" do?
 
-Report which Google account this browser is signed in as: display name and email, read from Google's account button on myaccount.google.com. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a Google session before running other Google scripts.
+Report which Google account this browser is signed in as: display name and email. When the browser is signed out of Google, it fails with a sign-in error that says to sign in and retry.
 
 ### What information do I need to provide?
 

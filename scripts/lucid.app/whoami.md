@@ -1,10 +1,10 @@
 # Lucid whoami (signed-in account)
 
-Report which Lucid (Lucidchart / Lucidspark) account this browser is signed in as: the user id, email and name. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Lucid scripts.
+Report which Lucid (Lucidchart / Lucidspark) account this browser is signed in as: the user id, email and name. When the browser is signed out of Lucid, the run fails with a message asking you to sign in to lucid.app, so it can be used to check a session before running other Lucid scripts.
 
 - Site: lucid.app
 - Address: `reduck/lucid.app/whoami`
-- Updated: 2026-10-01 (v2)
+- Updated: 2026-10-20 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -31,7 +31,7 @@ It takes no input.
 
 ### What does "Lucid whoami (signed-in account)" do?
 
-Report which Lucid (Lucidchart / Lucidspark) account this browser is signed in as: the user id, email and name. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Lucid scripts.
+Report which Lucid (Lucidchart / Lucidspark) account this browser is signed in as: the user id, email and name. When the browser is signed out of Lucid, the run fails with a message asking you to sign in to lucid.app, so it can be used to check a session before running other Lucid scripts.
 
 ### What information do I need to provide?
 

@@ -1,10 +1,10 @@
 # Google Docs whoami (signed-in account)
 
-Report which Google account Google Docs/Sheets is signed in as in this browser: display name and email, read from Google's account button. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Docs or Sheets scripts.
+Report which Google account Google Docs/Sheets is signed in as in this browser: display name and email. When the browser is signed out, the run fails with a signed-out error that says to sign in to Google Docs and retry.
 
 - Site: docs.google.com
 - Address: `reduck/docs.google.com/whoami`
-- Updated: 2026-09-30 (v1)
+- Updated: 2026-10-20 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,7 +29,7 @@ It takes no input.
 
 ### What does "Google Docs whoami (signed-in account)" do?
 
-Report which Google account Google Docs/Sheets is signed in as in this browser: display name and email, read from Google's account button. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Docs or Sheets scripts.
+Report which Google account Google Docs/Sheets is signed in as in this browser: display name and email. When the browser is signed out, the run fails with a signed-out error that says to sign in to Google Docs and retry.
 
 ### What information do I need to provide?
 

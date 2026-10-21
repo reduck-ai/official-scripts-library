@@ -1,10 +1,10 @@
 # Vercel — list invoices
 
-Automatically list invoices on vercel.com. List a Vercel team's billing invoices, newest first: billing period, status, total due, invoiced date, invoice id, a direct PDF download link, and a link to the invoice's detail page. Optionally pass a team URL slug; defaults to the account's own scope.
+Automatically list invoices on vercel.com. List a Vercel team's billing invoices, newest first: billing period, status, total and currency as Vercel gives them, invoiced date, invoice id, a direct PDF download link, and a link to the invoice's detail page. Optionally pass a team URL slug; defaults to the account's own scope. A scope with no invoices returns an empty list.
 
 - Site: vercel.com
 - Address: `reduck/vercel.com/list_invoices`
-- Updated: 2026-10-19 (v8)
+- Updated: 2026-10-20 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,7 +29,7 @@ npx @reduck-ai/cli@latest run --script reduck/vercel.com/list_invoices
 
 ### What does "Vercel — list invoices" do?
 
-List a Vercel team's billing invoices, newest first: billing period, status, total due, invoiced date, invoice id, a direct PDF download link, and a link to the invoice's detail page. Optionally pass a team URL slug; defaults to the account's own scope.
+List a Vercel team's billing invoices, newest first: billing period, status, total and currency as Vercel gives them, invoiced date, invoice id, a direct PDF download link, and a link to the invoice's detail page. Optionally pass a team URL slug; defaults to the account's own scope. A scope with no invoices returns an empty list.
 
 ### How do I automatically list invoices on vercel.com?
 

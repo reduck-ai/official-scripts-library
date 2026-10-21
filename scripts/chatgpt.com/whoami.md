@@ -1,10 +1,10 @@
 # ChatGPT whoami (signed-in account)
 
-Report which ChatGPT account this browser is signed in as: the user id, email and name. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other ChatGPT scripts.
+Report which ChatGPT account this browser is signed in as: the user id, email and name. When the browser is signed out of ChatGPT, the run fails with a message asking you to sign in to chatgpt.com, so it can be used to check a session before running other ChatGPT scripts.
 
 - Site: chatgpt.com
 - Address: `reduck/chatgpt.com/whoami`
-- Updated: 2026-10-16 (v3)
+- Updated: 2026-10-20 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -31,7 +31,7 @@ It takes no input.
 
 ### What does "ChatGPT whoami (signed-in account)" do?
 
-Report which ChatGPT account this browser is signed in as: the user id, email and name. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other ChatGPT scripts.
+Report which ChatGPT account this browser is signed in as: the user id, email and name. When the browser is signed out of ChatGPT, the run fails with a message asking you to sign in to chatgpt.com, so it can be used to check a session before running other ChatGPT scripts.
 
 ### What information do I need to provide?
 

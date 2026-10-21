@@ -1,10 +1,10 @@
 # Loom whoami (signed-in account)
 
-Report which Loom account this browser is signed in as: the user id, email and name. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Loom scripts.
+Report which Loom account this browser is signed in as: the user id, email and name. When the browser is signed out of Loom, the run fails with a signed-out error that asks to sign in, so it can be used to check a session before running other Loom scripts.
 
 - Site: loom.com
 - Address: `reduck/loom.com/whoami`
-- Updated: 2026-10-01 (v2)
+- Updated: 2026-10-20 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -31,7 +31,7 @@ It takes no input.
 
 ### What does "Loom whoami (signed-in account)" do?
 
-Report which Loom account this browser is signed in as: the user id, email and name. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Loom scripts.
+Report which Loom account this browser is signed in as: the user id, email and name. When the browser is signed out of Loom, the run fails with a signed-out error that asks to sign in, so it can be used to check a session before running other Loom scripts.
 
 ### What information do I need to provide?
 

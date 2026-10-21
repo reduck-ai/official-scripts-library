@@ -1,10 +1,10 @@
 # Hugging Face whoami (signed-in account)
 
-Report which Hugging Face account this browser is signed in as: the user id, Hub username, full name, email (and whether it is verified), Pro status, and every organization with the account's role there. Being signed out — including a stale session cookie — is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Hugging Face scripts.
+Report which Hugging Face account this browser is signed in as: the user id, Hub username, full name, email (and whether it is verified), Pro status, and every organization with the account's role there. When the browser is not signed in to Hugging Face, the run fails with a signed-out error asking you to sign in, so it can be used to check a session before running other Hugging Face scripts.
 
 - Site: huggingface.co
 - Address: `reduck/huggingface.co/whoami`
-- Updated: 2026-10-06 (v2)
+- Updated: 2026-10-20 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -35,7 +35,7 @@ It takes no input.
 
 ### What does "Hugging Face whoami (signed-in account)" do?
 
-Report which Hugging Face account this browser is signed in as: the user id, Hub username, full name, email (and whether it is verified), Pro status, and every organization with the account's role there. Being signed out — including a stale session cookie — is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Hugging Face scripts.
+Report which Hugging Face account this browser is signed in as: the user id, Hub username, full name, email (and whether it is verified), Pro status, and every organization with the account's role there. When the browser is not signed in to Hugging Face, the run fails with a signed-out error asking you to sign in, so it can be used to check a session before running other Hugging Face scripts.
 
 ### What information do I need to provide?
 

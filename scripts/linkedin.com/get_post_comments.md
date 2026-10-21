@@ -4,7 +4,7 @@ Automatically get LinkedIn post comments on linkedin.com. Get the comments of a 
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_post_comments`
-- Updated: 2026-10-02 (v14)
+- Updated: 2026-10-20 (v15)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -25,6 +25,7 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/get_post_comments
 
 - `total` (number, required): Post-level comment count (includes replies). 0 when the social bar shows none.
 - `comments` (array, required): Top-level comments in rendered order, each with its loaded replies and a hasMoreReplies flag.
+- `complete` (boolean, optional): True when every top-level comment the post offers under this sort was loaded; false when maxComments stopped loading first.
 
 ## FAQ
 
@@ -46,7 +47,7 @@ Required: postUrl. Optional: sort, maxComments.
 
 ### What does it return?
 
-It returns total, comments.
+It returns total, comments, complete.
 
 ### Do I need to be logged in to linkedin.com?
 

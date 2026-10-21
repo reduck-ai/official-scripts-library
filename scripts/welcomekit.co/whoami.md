@@ -1,10 +1,10 @@
 # Welcome Kit whoami (signed-in account)
 
-Report which Welcome Kit (Welcome to the Jungle ATS) account this browser is signed in as: the account email. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Welcome Kit scripts.
+Report which Welcome Kit (Welcome to the Jungle ATS) account this browser is signed in as: the account email. When the browser is signed out, the run fails with a signed-out error that says to sign in to Welcome Kit.
 
 - Site: welcomekit.co
 - Address: `reduck/welcomekit.co/whoami`
-- Updated: 2026-09-30 (v1)
+- Updated: 2026-10-20 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,7 +29,7 @@ It takes no input.
 
 ### What does "Welcome Kit whoami (signed-in account)" do?
 
-Report which Welcome Kit (Welcome to the Jungle ATS) account this browser is signed in as: the account email. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Welcome Kit scripts.
+Report which Welcome Kit (Welcome to the Jungle ATS) account this browser is signed in as: the account email. When the browser is signed out, the run fails with a signed-out error that says to sign in to Welcome Kit.
 
 ### What information do I need to provide?
 

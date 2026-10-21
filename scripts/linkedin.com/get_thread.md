@@ -4,12 +4,12 @@ Automatically get LinkedIn message thread on linkedin.com. You get the latest me
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_thread`
-- Updated: 2026-10-19 (v11)
+- Updated: 2026-10-20 (v11)
 - Author: Reduck AI (reduck)
 
 ## About
 
-A candidate's salary answer, a warm intro from a former colleague: on LinkedIn that stuff sits in DMs, not email. Give it the URL of one conversation and you get the messages LinkedIn loads with it, oldest first, plus sender names and the other people in the chat when it is one of your recent conversations. On a recruiter's Monday, list_inbox with unreadOnly and a sinceIso of Saturday turns up nine conversations from the weekend, get_thread reads each one, and an agent copies the salary figure into the ATS and drafts the reply for send_message. That routine has two catches. LinkedIn treats opening a conversation as reading it, so those nine lose their unread badge, and mark_conversation_unread puts the badge back on any you still owe an answer. You also get only the first batch LinkedIn loads, so a two-year back-and-forth ends wherever that batch ends. If you meant the comment thread under a post, that is get_post_comments.
+A candidate's salary answer, a warm intro from a former colleague: on LinkedIn that stuff sits in DMs, not email. Give it the URL of one conversation and you get the messages LinkedIn loads with it, oldest first, plus sender names and the other people in the chat when it is one of your recent conversations. On a recruiter's Monday, list_inbox with the unread filter turns up nine conversations from the weekend, newest first, so the agent stops paging once one is older than Saturday; get_thread reads each one, and an agent copies the salary figure into the ATS and drafts the reply for send_message. That routine has two catches. LinkedIn treats opening a conversation as reading it, so those nine lose their unread badge, and mark_conversation_unread puts the badge back on any you still owe an answer. You also get only the first batch LinkedIn loads, so a two-year back-and-forth ends wherever that batch ends. If you meant the comment thread under a post, that is get_post_comments.
 
 ## Run it
 

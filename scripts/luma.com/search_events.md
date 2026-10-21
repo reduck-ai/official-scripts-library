@@ -4,7 +4,7 @@ Automatically search Luma events on luma.com. An unofficial Luma API: search pub
 
 - Site: luma.com
 - Address: `reduck/luma.com/search_events`
-- Updated: 2026-10-19 (v7)
+- Updated: 2026-10-20 (v7)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -70,7 +70,7 @@ Shape only: placeholder values generated from the output schema, not a real run.
 
 ### What does "Search Luma events" do?
 
-Search upcoming public events on Luma by category topic (e.g. "crypto", "fitness") or by curated city (e.g. "paris", "london"), one page at a time: pass next_cursor back as cursor for the next page.
+Search upcoming public events on Luma by category topic (e.g. "crypto", "fitness") or by curated city (e.g. "paris", "london"), one page at a time: pass next_cursor back as cursor for the next page; has_more false means there is no next page. When nothing matches, events is an empty list with has_more false. Pass topic or city, not both. Some categories Luma only serves per place: asking for one of those as a topic fails with a message naming the slug, and the way to browse it is a city; latitude/longitude only change the order and do not get around this. A slug Luma does not know fails naming the slug.
 
 ### How do I automatically search Luma events on luma.com?
 

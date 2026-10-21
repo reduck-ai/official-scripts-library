@@ -1,10 +1,10 @@
 # Get Google Maps place details
 
-Automatically get Google Maps place details on google.com. Get one Google Maps place by its place id (from search_places), its Maps link, or a query that names one place. Returns name, address, phone, website, Instagram link, main category and all categories, star rating, number of reviews, price range, the opening hours of the week as numbers in the place's own time zone, plus code, time zone and coordinates. A place id or link that Google Maps does not know fails with a clear error. A query that Maps answers with a list of places fails and asks for search_places, rather than picking one of them. Fields a place does not show are empty or null.
+Automatically get Google Maps place details on google.com. Get one Google Maps place by its place id (from search_places), its Maps link, or a query that names one place. Returns name, address, phone, website, Instagram link, main category and all categories, star rating, number of reviews, price range, the opening hours of the week as numbers in the place's own time zone, plus code, time zone and coordinates. A place id or link that Google Maps does not know fails with a clear error. A query that Maps answers with a list of places fails and asks for search_places, rather than picking one of them. Fields a place does not show (phone, website, Instagram, rating, hours and others) are null.
 
 - Site: google.com
 - Address: `reduck/google.com/get_place`
-- Updated: 2026-10-16 (v9)
+- Updated: 2026-10-20 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,17 +29,17 @@ npx @reduck-ai/cli@latest run --script reduck/google.com/get_place
 - `placeId` (string, required): Google place id: the input of get_place_reviews.
 - `lat` (number | null, optional)
 - `lng` (number | null, optional)
-- `phone` (string, optional): Empty when the place has none.
+- `phone` (string | null, optional): null when the place has none.
 - `price` (string | null, optional)
 - `rating` (number | null, optional): Average star rating 1-5; null when the place has no rating.
 - `address` (string, optional)
 - `reviews` (number | null, optional): Number of reviews; null when the place has none.
-- `website` (string, optional): Empty when the place has none.
+- `website` (string | null, optional): null when the place has none.
 - `category` (string | null, optional)
 - `placeUrl` (string, optional)
 - `plusCode` (string | null, optional)
 - `timezone` (string | null, optional): IANA time zone of the place, e.g. 'Europe/Paris'.
-- `instagram` (string, optional): Instagram profile link when the place shows one; empty otherwise.
+- `instagram` (string | null, optional): Instagram profile link when the place shows one; null otherwise.
 - `categories` (array, optional)
 - `resolvedUrl` (string, optional): The Maps URL the place opened at.
 - `openingHours` (array | null, optional): The week Maps shows, in the place's own time zone: one entry per opening interval, none for a day it is closed. null when the place shows no hours.
@@ -48,7 +48,7 @@ npx @reduck-ai/cli@latest run --script reduck/google.com/get_place
 
 ### What does "Get Google Maps place details" do?
 
-Get one Google Maps place by its place id (from search_places), its Maps link, or a query that names one place. Returns name, address, phone, website, Instagram link, main category and all categories, star rating, number of reviews, price range, the opening hours of the week as numbers in the place's own time zone, plus code, time zone and coordinates. A place id or link that Google Maps does not know fails with a clear error. A query that Maps answers with a list of places fails and asks for search_places, rather than picking one of them. Fields a place does not show are empty or null.
+Get one Google Maps place by its place id (from search_places), its Maps link, or a query that names one place. Returns name, address, phone, website, Instagram link, main category and all categories, star rating, number of reviews, price range, the opening hours of the week as numbers in the place's own time zone, plus code, time zone and coordinates. A place id or link that Google Maps does not know fails with a clear error. A query that Maps answers with a list of places fails and asks for search_places, rather than picking one of them. Fields a place does not show (phone, website, Instagram, rating, hours and others) are null.
 
 ### How do I automatically get Google Maps place details on google.com?
 

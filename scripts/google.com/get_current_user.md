@@ -1,10 +1,10 @@
 # Get Current Google User
 
-Automatically get Current Google User on google.com. Report which Google account this browser is signed in as: display name and email, read from Google's account button on myaccount.google.com. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a Google session before running other Google scripts.
+Automatically get Current Google User on google.com. Report which Google account this browser is signed in as: display name and email, read from Google's account button on myaccount.google.com. When the browser is not signed in, the run fails with a signed-out error that says to sign in, so it can be used to check a Google session before running other Google scripts.
 
 - Site: google.com
 - Address: `reduck/google.com/get_current_user`
-- Updated: 2026-09-29 (v4)
+- Updated: 2026-10-20 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,7 +29,7 @@ It takes no input.
 
 ### What does "Get Current Google User" do?
 
-Report which Google account this browser is signed in as: display name and email, read from Google's account button on myaccount.google.com. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a Google session before running other Google scripts.
+Report which Google account this browser is signed in as: display name and email, read from Google's account button on myaccount.google.com. When the browser is not signed in, the run fails with a signed-out error that says to sign in, so it can be used to check a Google session before running other Google scripts.
 
 ### How do I automatically get Current Google User on google.com?
 

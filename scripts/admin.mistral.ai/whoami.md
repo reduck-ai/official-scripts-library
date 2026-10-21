@@ -1,10 +1,10 @@
 # Mistral Admin whoami (signed-in account)
 
-Report which Mistral account the Mistral admin console is signed in as in this browser: email and name. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Mistral admin scripts.
+Report which Mistral account the Mistral admin console is signed in as in this browser: account id, email and name. When the browser is signed out, it fails with a sign-in error that says to sign in and retry.
 
 - Site: admin.mistral.ai
 - Address: `reduck/admin.mistral.ai/whoami`
-- Updated: 2026-09-30 (v1)
+- Updated: 2026-10-20 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -31,7 +31,7 @@ It takes no input.
 
 ### What does "Mistral Admin whoami (signed-in account)" do?
 
-Report which Mistral account the Mistral admin console is signed in as in this browser: email and name. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Mistral admin scripts.
+Report which Mistral account the Mistral admin console is signed in as in this browser: account id, email and name. When the browser is signed out, it fails with a sign-in error that says to sign in and retry.
 
 ### What information do I need to provide?
 

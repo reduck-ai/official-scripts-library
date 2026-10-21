@@ -1,10 +1,10 @@
 # Calendly whoami (signed-in account)
 
-Report which Calendly account this browser is signed in as: the user id, email, name, timezone and organization id. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Calendly scripts.
+Report which Calendly account this browser is signed in as: the user id, email, name, timezone and organization id. Fails with a sign-in error when the browser is not signed in to Calendly.
 
 - Site: calendly.com
 - Address: `reduck/calendly.com/whoami`
-- Updated: 2026-10-06 (v3)
+- Updated: 2026-10-20 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -33,7 +33,7 @@ It takes no input.
 
 ### What does "Calendly whoami (signed-in account)" do?
 
-Report which Calendly account this browser is signed in as: the user id, email, name, timezone and organization id. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Calendly scripts.
+Report which Calendly account this browser is signed in as: the user id, email, name, timezone and organization id. Fails with a sign-in error when the browser is not signed in to Calendly.
 
 ### What information do I need to provide?
 

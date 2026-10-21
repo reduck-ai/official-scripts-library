@@ -4,7 +4,7 @@ Automatically ask Gemini on gemini.google.com. Open a new Gemini chat, send one 
 
 - Site: gemini.google.com
 - Address: `reduck/gemini.google.com/ask`
-- Updated: 2026-09-21 (v4)
+- Updated: 2026-10-20 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -53,7 +53,7 @@ Yes. It acts as you on gemini.google.com: on your own Chrome it reuses your sess
 
 ### Does it change anything on gemini.google.com, or only read data?
 
-It makes changes on gemini.google.com, like sending, posting or booking something.
+It makes changes on gemini.google.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

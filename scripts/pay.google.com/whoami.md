@@ -1,10 +1,10 @@
 # Google Pay whoami
 
-Report which Google account this browser uses on Google Pay (email and name) and whether it has a Google Pay payments profile — without one, Google Pay sends the account to its sign-up page and Google Pay scripts have nothing to read. Being signed out of Google is reported as a normal answer (loggedIn false), not an error.
+Report which Google account this browser uses on Google Pay (email and name) and whether it has a Google Pay payments profile. Without one, Google Pay sends the account to its sign-up page and Google Pay scripts have nothing to read. When the browser is signed out of Google, the run fails with a signed-out error that asks to sign in.
 
 - Site: pay.google.com
 - Address: `reduck/pay.google.com/whoami`
-- Updated: 2026-09-29 (v3)
+- Updated: 2026-10-20 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -30,7 +30,7 @@ It takes no input.
 
 ### What does "Google Pay whoami" do?
 
-Report which Google account this browser uses on Google Pay (email and name) and whether it has a Google Pay payments profile — without one, Google Pay sends the account to its sign-up page and Google Pay scripts have nothing to read. Being signed out of Google is reported as a normal answer (loggedIn false), not an error.
+Report which Google account this browser uses on Google Pay (email and name) and whether it has a Google Pay payments profile. Without one, Google Pay sends the account to its sign-up page and Google Pay scripts have nothing to read. When the browser is signed out of Google, the run fails with a signed-out error that asks to sign in.
 
 ### What information do I need to provide?
 

@@ -1,10 +1,10 @@
 # Download Dropbox invoice as PDF
 
-Automatically download Dropbox invoice as PDF on dropbox.com. Download one Dropbox invoice or receipt as a PDF, given an invoiceUrl or receiptUrl from dropbox.com/list_invoices. Returns the filename and the PDF as base64.
+Automatically download Dropbox invoice as PDF on dropbox.com. Download one Dropbox invoice or receipt as a PDF. Pass the invoiceUrl or receiptUrl from dropbox.com/list_invoices (or either one as url). Returns the file name and where the PDF was saved: a path in the browser's downloads folder, or a url to the file on a managed browser. A browser not signed in to Dropbox fails with a message saying so.
 
 - Site: dropbox.com
 - Address: `reduck/dropbox.com/download_invoice`
-- Updated: 2026-09-30 (v1)
+- Updated: 2026-10-20 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,18 +17,21 @@ npx @reduck-ai/cli@latest run --script reduck/dropbox.com/download_invoice
 
 ## Input
 
-- `url` (string, required): invoiceUrl or receiptUrl returned by dropbox.com/list_invoices
+- `url` (string, optional): invoiceUrl or receiptUrl returned by dropbox.com/list_invoices.
+- `invoiceUrl` (string, optional): An invoiceUrl from dropbox.com/list_invoices: downloads the invoice. Pass exactly one of url, invoiceUrl or receiptUrl.
+- `receiptUrl` (string, optional): A receiptUrl from dropbox.com/list_invoices: downloads the receipt. Pass exactly one of url, invoiceUrl or receiptUrl.
 
 ## Output
 
-- `filename` (string, required)
-- `contentBase64` (string, required)
+- `filename` (string, required): The saved file name, e.g. Dropbox-invoice-<billId>.pdf. A repeat download can end in (2).
+- `url` (string, optional): On a managed browser, a link to the PDF bytes.
+- `path` (string, optional): Where the PDF is saved on the machine running the browser (on a paired Chrome, its downloads folder).
 
 ## FAQ
 
 ### What does "Download Dropbox invoice as PDF" do?
 
-Download one Dropbox invoice or receipt as a PDF, given an invoiceUrl or receiptUrl from dropbox.com/list_invoices. Returns the filename and the PDF as base64.
+Download one Dropbox invoice or receipt as a PDF. Pass the invoiceUrl or receiptUrl from dropbox.com/list_invoices (or either one as url). Returns the file name and where the PDF was saved: a path in the browser's downloads folder, or a url to the file on a managed browser. A browser not signed in to Dropbox fails with a message saying so.
 
 ### How do I automatically download Dropbox invoice as PDF on dropbox.com?
 
@@ -40,11 +43,11 @@ You do not need one. "Download Dropbox invoice as PDF" drives the real dropbox.c
 
 ### What information do I need to provide?
 
-Required: url.
+Optional: url, invoiceUrl, receiptUrl.
 
 ### What does it return?
 
-It returns filename, contentBase64.
+It returns url, path, filename.
 
 ### Do I need to be logged in to dropbox.com?
 

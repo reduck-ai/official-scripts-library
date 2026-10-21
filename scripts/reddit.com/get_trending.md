@@ -1,10 +1,10 @@
 # Get trending Reddit posts
 
-Automatically get trending Reddit posts on reddit.com. List Reddit's trending threads from r/popular, with optional sort. Returns id, url, title, subreddit, author, score, comment count, date, post type and the post's text per thread. limit is a maximum: fewer come back when the feed stops serving.
+Automatically get trending Reddit posts on reddit.com. List Reddit's trending threads from r/popular, one page at a time, with optional sort. Returns id, url, title, subreddit, author, score, comment count, date, post type and the post's text per thread. Each call returns one page as Reddit serves it (the first page can be short, a few threads) and a nextCursor: pass it as cursor, with the same sort, for the next page; it is null when the feed has no more.
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/get_trending`
-- Updated: 2026-10-19 (v7)
+- Updated: 2026-10-20 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,18 +18,19 @@ npx @reduck-ai/cli@latest run --script reduck/reddit.com/get_trending
 ## Input
 
 - `sort` (string, optional): Feed sort. Omit for Reddit's default ranking.
-- `limit` (number, optional): Max threads to return (default 25). A maximum: fewer come back when the feed stops serving.
+- `cursor` (string, optional): The nextCursor of the previous answer, to read the next page. Omit for the first page. Pass the same sort as for the first page.
 
 ## Output
 
 - `count` (number, required)
 - `threads` (array, required)
+- `nextCursor` (string | null, required): Pass as cursor to read the next page; null when the feed has no next page.
 
 ## FAQ
 
 ### What does "Get trending Reddit posts" do?
 
-List Reddit's trending threads from r/popular, with optional sort. Returns id, url, title, subreddit, author, score, comment count, date, post type and the post's text per thread. limit is a maximum: fewer come back when the feed stops serving.
+List Reddit's trending threads from r/popular, one page at a time, with optional sort. Returns id, url, title, subreddit, author, score, comment count, date, post type and the post's text per thread. Each call returns one page as Reddit serves it (the first page can be short, a few threads) and a nextCursor: pass it as cursor, with the same sort, for the next page; it is null when the feed has no more.
 
 ### How do I automatically get trending Reddit posts on reddit.com?
 
@@ -41,11 +42,11 @@ You do not need one. "Get trending Reddit posts" drives the real reddit.com page
 
 ### What information do I need to provide?
 
-Optional: sort, limit.
+Optional: sort, cursor.
 
 ### What does it return?
 
-It returns count, threads.
+It returns count, threads, nextCursor.
 
 ### Do I need to be logged in to reddit.com?
 

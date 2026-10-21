@@ -4,7 +4,7 @@ Automatically search Indeed jobs on indeed.com. First page of Indeed job cards w
 
 - Site: indeed.com
 - Address: `reduck/indeed.com/search_jobs`
-- Updated: 2026-10-19 (v6)
+- Updated: 2026-10-20 (v8)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -23,16 +23,19 @@ npx @reduck-ai/cli@latest run --script reduck/indeed.com/search_jobs
 
 - `query` (string, required): Free-text job search query, same as Indeed's search box (e.g. "data engineer"). Must be non-empty — an empty query redirects Indeed to its homepage instead of a results page.
 - `page` (integer, optional): 1-based page. Only page=1 is reliably supported anonymously — Indeed shows a sign-in wall for further pages, which the script surfaces as a thrown error.
+- `radius` (integer, optional): Distance around `location`, from Indeed's distance menu: miles on www.indeed.com, kilometres on most other country sites; 0 = exact location only. Omit for Indeed's default (25).
 - `sortBy` (string, optional): Sort order. Default: relevance (Indeed's own default).
 - `country` (string, optional): Indeed country site to search, as its subdomain code (e.g. "us", "fr", "de", "uk", "ca"). Lowercased; "us" maps to www.indeed.com, others to "<country>.indeed.com".
 - `location` (string, optional): Free-text location (e.g. "Paris", "Berlin"). Must match the chosen country site or Indeed marks the result outOfCountry and returns unrelated jobs.
+- `jobTypeId` (string, optional): Indeed's id for one job type, as its own job-type filter puts it in the URL (`sc=0kf:attr(<id>);`), e.g. "CF3CP" = full-time. Omit for every job type.
+- `postedWithinDays` (integer, optional): Only jobs posted in the last 1, 3, 7 or 14 days (Indeed's date-posted menu). Omit for any date.
 
 ## Output
 
 - `jobs` (array, required)
 - `page` (integer, required)
 - `total` (integer, required): Matching job count reported by Indeed for this query/location.
-- `outOfCountry` (boolean, required): Indeed's own flag, as it sends it: true when Indeed treats this browser as visiting the country site from outside that country. Indeed judges it from the browser's network, not from the location searched: the same Denver search on indeed.com is true from a French connection and false from a US one, with the same Colorado jobs.
+- `outOfCountry` (boolean | null, required): Indeed's own flag, as it sends it: true when Indeed treats this browser as visiting the country site from outside that country. Indeed judges it from the browser's network, not from the location searched. null when this run could not read it (e.g. a search with no jobs, where Indeed sends no job-card data).
 
 ## Example output
 
@@ -66,7 +69,7 @@ Shape only: placeholder values generated from the output schema, not a real run.
 
 ### What does "Search Indeed jobs" do?
 
-Search Indeed's public job listings by keyword, optional free-text location and country site (e.g. "fr" for fr.indeed.com, default "us"). Returns total, page, outOfCountry (whether Indeed treats this browser as visiting from outside that country), and jobs (jobKey, title, company, location, salary, jobTypes, remote, sponsored, postedAgo, url). Only page 1 is available without signing in; a later page, or a search Indeed refuses to serve, fails with a message that says so.
+Search Indeed's public job listings by keyword, optional free-text location and country site (e.g. "fr" for fr.indeed.com, default "us"). Filters: distance around the location, posted within 1/3/7/14 days, and one job type by Indeed's id (e.g. "CF3CP" = full-time, the code Indeed's own job-type filter puts in its URL). Returns total, page, outOfCountry (whether Indeed treats this browser as visiting from outside that country; null when it could not be read, as on a search with no jobs), and jobs (jobKey, title, company, location, salary, jobTypes, remote, sponsored, postedAgo, url). No match returns total 0 and an empty jobs list. Only page 1 is available without signing in; a later page, or a search Indeed refuses to serve, fails with a message that says so.
 
 ### How do I automatically search Indeed jobs on indeed.com?
 
@@ -78,7 +81,7 @@ You do not need one. "Search Indeed jobs" drives the real indeed.com pages in a 
 
 ### What information do I need to provide?
 
-Required: query. Optional: page, sortBy, country, location.
+Required: query. Optional: page, radius, sortBy, country, location, jobTypeId, postedWithinDays.
 
 ### What does it return?
 

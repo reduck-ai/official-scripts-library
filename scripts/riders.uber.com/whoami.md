@@ -1,10 +1,10 @@
 # Uber whoami (signed-in rider account)
 
-Report which Uber rider account this browser is signed in as: the rider id, first and last name, email and phone number. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Uber rider scripts.
+Report which Uber rider account this browser is signed in as: the rider id, first and last name, email and phone number. If the browser is not signed in to Uber, the run fails with a signed-out error that asks you to sign in to riders.uber.com; loggedIn is true on every answer.
 
 - Site: riders.uber.com
 - Address: `reduck/riders.uber.com/whoami`
-- Updated: 2026-09-27 (v1)
+- Updated: 2026-10-20 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -33,7 +33,7 @@ It takes no input.
 
 ### What does "Uber whoami (signed-in rider account)" do?
 
-Report which Uber rider account this browser is signed in as: the rider id, first and last name, email and phone number. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Uber rider scripts.
+Report which Uber rider account this browser is signed in as: the rider id, first and last name, email and phone number. If the browser is not signed in to Uber, the run fails with a signed-out error that asks you to sign in to riders.uber.com; loggedIn is true on every answer.
 
 ### What information do I need to provide?
 

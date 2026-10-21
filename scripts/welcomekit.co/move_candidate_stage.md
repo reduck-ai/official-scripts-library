@@ -1,10 +1,10 @@
-# Move ATS candidate stage
+# Move a Welcome to the Jungle (WelcomeKit) candidate to another stage
 
-Automatically move ATS candidate stage on welcomekit.co. Move an ATS candidate to another pipeline stage by stage id or label (built-in ref, UI alias, or custom column name). Returns from/to stages, and verifies the move actually applied.
+Automatically move a Welcome to the Jungle (WelcomeKit) candidate to another stage on welcomekit.co. Move a Welcome to the Jungle ATS candidate to another stage of their job's pipeline, given the stage id from list_job_candidates. Returns the stage the candidate left and the one they are now in, read back from the site after the move. An id that is not one of the job's stages fails with the job's list of stages.
 
 - Site: welcomekit.co
 - Address: `reduck/welcomekit.co/move_candidate_stage`
-- Updated: 2026-10-06 (v3)
+- Updated: 2026-10-20 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,9 +18,8 @@ npx @reduck-ai/cli@latest run --script reduck/welcomekit.co/move_candidate_stage
 ## Input
 
 - `org` (string, required): Organization reference as it appears in your dashboard URL https://www.welcomekit.co/dashboard/o/<org>/ (6-char code).
+- `stageId` (integer, required): Target stage id: the id of one of the job's stages as list_job_candidates returns them.
 - `candidateReference` (string, required): Candidate reference from list_job_candidates, format: <orgprefix>-<24 hex chars>
-- `stage` (string, optional): Target stage as label: built-in reference (initial, to_refuse, refused, to_meet, interviewed, made_offer, hired), UI alias (New, Rejected, Awaiting Rejection, Offer) or custom column name (e.g. Test sent). Case-insensitive.
-- `stageId` (integer, optional): Target stage id (from list_jobs/list_job_candidates stages). Wins over stage when both given.
 
 ## Output
 
@@ -34,21 +33,21 @@ npx @reduck-ai/cli@latest run --script reduck/welcomekit.co/move_candidate_stage
 
 ## FAQ
 
-### What does "Move ATS candidate stage" do?
+### What does "Move a Welcome to the Jungle (WelcomeKit) candidate to another stage" do?
 
-Move an ATS candidate to another pipeline stage by stage id or label (built-in ref, UI alias, or custom column name). Returns from/to stages, and verifies the move actually applied.
+Move a Welcome to the Jungle ATS candidate to another stage of their job's pipeline, given the stage id from list_job_candidates. Returns the stage the candidate left and the one they are now in, read back from the site after the move. An id that is not one of the job's stages fails with the job's list of stages.
 
-### How do I automatically move ATS candidate stage on welcomekit.co?
+### How do I automatically move a Welcome to the Jungle (WelcomeKit) candidate to another stage on welcomekit.co?
 
 Ask an AI agent connected to Reduck to run reduck/welcomekit.co/move_candidate_stage, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/welcomekit.co/move_candidate_stage
 
-### Is there a welcomekit.co API to move ATS candidate stage?
+### Is there a welcomekit.co API to move a Welcome to the Jungle (WelcomeKit) candidate to another stage?
 
-You do not need one. "Move ATS candidate stage" drives the real welcomekit.co pages in a browser, so it works whether or not welcomekit.co offers an API for this.
+You do not need one. "Move a Welcome to the Jungle (WelcomeKit) candidate to another stage" drives the real welcomekit.co pages in a browser, so it works whether or not welcomekit.co offers an API for this.
 
 ### What information do I need to provide?
 
-Required: org, candidateReference. Optional: stage, stageId.
+Required: org, candidateReference, stageId.
 
 ### What does it return?
 

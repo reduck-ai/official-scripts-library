@@ -1,10 +1,10 @@
 # Reply to Gmail thread
 
-Automatically reply to Gmail thread on mail.google.com. Reply (or reply-all) inside an existing Gmail conversation, given its thread id or the conversation's link, so the reply stays in the same thread with the original subject and quoted history. Optionally add Cc recipients, attach one file, or schedule the reply for later. Returns whether it was sent or scheduled, the conversation id and subject, and for scheduled replies the time Gmail shows.
+Automatically reply to Gmail thread on mail.google.com. Reply (or reply-all) inside an existing Gmail conversation, given its thread id or the conversation's link, so the reply stays in the same thread with the original subject and quoted history. Optionally add Cc recipients, attach one file, or schedule the reply for later. Returns whether it was sent or scheduled, the conversation id and subject, and for scheduled replies the time Gmail shows. To start a new conversation instead, use mail.google.com/send_email.
 
 - Site: mail.google.com
 - Address: `reduck/mail.google.com/reply_to_email`
-- Updated: 2026-10-07 (v8)
+- Updated: 2026-10-20 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -43,7 +43,7 @@ npx @reduck-ai/cli@latest run --script reduck/mail.google.com/reply_to_email
 
 ### What does "Reply to Gmail thread" do?
 
-Reply (or reply-all) inside an existing Gmail conversation, given its thread id or the conversation's link, so the reply stays in the same thread with the original subject and quoted history. Optionally add Cc recipients, attach one file, or schedule the reply for later. Returns whether it was sent or scheduled, the conversation id and subject, and for scheduled replies the time Gmail shows.
+Reply (or reply-all) inside an existing Gmail conversation, given its thread id or the conversation's link, so the reply stays in the same thread with the original subject and quoted history. Optionally add Cc recipients, attach one file, or schedule the reply for later. Returns whether it was sent or scheduled, the conversation id and subject, and for scheduled replies the time Gmail shows. To start a new conversation instead, use mail.google.com/send_email.
 
 ### How do I automatically reply to Gmail thread on mail.google.com?
 

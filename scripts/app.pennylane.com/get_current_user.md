@@ -1,10 +1,10 @@
-# Get Current User
+# Get current Pennylane user
 
-Automatically get Current User on app.pennylane.com. Report which Pennylane account this browser is signed in as: email and name. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Pennylane scripts.
+Automatically get current Pennylane user on app.pennylane.com. Report which Pennylane account this browser is signed in as: email and name. When the browser is signed out, the run fails with a signed-out error that says to sign in to Pennylane.
 
 - Site: app.pennylane.com
 - Address: `reduck/app.pennylane.com/get_current_user`
-- Updated: 2026-10-09 (v2)
+- Updated: 2026-10-20 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -27,17 +27,17 @@ It takes no input.
 
 ## FAQ
 
-### What does "Get Current User" do?
+### What does "Get current Pennylane user" do?
 
-Report which Pennylane account this browser is signed in as: email and name. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Pennylane scripts.
+Report which Pennylane account this browser is signed in as: email and name. When the browser is signed out, the run fails with a signed-out error that says to sign in to Pennylane.
 
-### How do I automatically get Current User on app.pennylane.com?
+### How do I automatically get current Pennylane user on app.pennylane.com?
 
 Ask an AI agent connected to Reduck to run reduck/app.pennylane.com/get_current_user, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/app.pennylane.com/get_current_user
 
-### Is there a app.pennylane.com API to get Current User?
+### Is there a app.pennylane.com API to get current Pennylane user?
 
-You do not need one. "Get Current User" drives the real app.pennylane.com pages in a browser, so it works whether or not app.pennylane.com offers an API for this.
+You do not need one. "Get current Pennylane user" drives the real app.pennylane.com pages in a browser, so it works whether or not app.pennylane.com offers an API for this.
 
 ### What information do I need to provide?
 

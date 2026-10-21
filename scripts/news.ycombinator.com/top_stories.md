@@ -4,7 +4,7 @@ You get all 30 front-page stories ranked as on the site, with points and comment
 
 - Site: news.ycombinator.com
 - Address: `reduck/news.ycombinator.com/top_stories`
-- Updated: 2026-10-19 (v5)
+- Updated: 2026-10-20 (v6)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -21,17 +21,18 @@ npx @reduck-ai/cli@latest run --script reduck/news.ycombinator.com/top_stories
 
 ## Input
 
-- `n` (integer, optional)
+- `n` (integer, optional): How many stories to return from the page (a page holds about 30).
+- `page` (integer, optional): Front-page page number, as Hacker News' own "More" link pages it: 1 = ranks 1-30, 2 = ranks 31-60, and so on.
 
 ## FAQ
 
 ### What does "Top Hacker News stories" do?
 
-Read the top N stories from the Hacker News front page: rank, title, url, points, comments_count and a link to the discussion. The front page lists about 30 stories, so an n above that caps out rather than paginating. A story nobody has commented on yet reports 0 comments; YC job posts carry neither a score nor a discussion, so their points and comments_count are null. If Hacker News is throttling requests from your address, the script says so instead of returning a partial list.
+Read stories from the Hacker News front page, one page at a time: rank, title, url, points, comments_count and a link to the discussion. Each page holds about 30 stories; pass page 2 for ranks 31-60 and so on, and n to take only the first n of that page. A page past the end returns an empty list. A story nobody has commented on yet reports 0 comments; YC job posts carry neither a score nor a discussion, so their points and comments_count are null. If Hacker News is throttling requests from your address, the script says so instead of returning a partial list.
 
 ### What information do I need to provide?
 
-Optional: n.
+Optional: n, page.
 
 ### Do I need to be logged in to news.ycombinator.com?
 

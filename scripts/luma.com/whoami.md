@@ -1,10 +1,10 @@
 # Luma whoami (signed-in account)
 
-Report which Luma account this browser is signed in as: the account email, the Luma user id, the username and the display name. Being signed out is a normal answer (connected false), not an error, so it can check a session before other Luma scripts run, or be passed as a run's login probe.
+Report which Luma account this browser is signed in as: the account email, the Luma user id, the username and the display name. If the browser is not signed in to Luma, the run fails with a signed-out error that says to sign in, then retry.
 
 - Site: luma.com
 - Address: `reduck/luma.com/whoami`
-- Updated: 2026-10-06 (v4)
+- Updated: 2026-10-20 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -31,7 +31,7 @@ It takes no input.
 
 ### What does "Luma whoami (signed-in account)" do?
 
-Report which Luma account this browser is signed in as: the account email, the Luma user id, the username and the display name. Being signed out is a normal answer (connected false), not an error, so it can check a session before other Luma scripts run, or be passed as a run's login probe.
+Report which Luma account this browser is signed in as: the account email, the Luma user id, the username and the display name. If the browser is not signed in to Luma, the run fails with a signed-out error that says to sign in, then retry.
 
 ### What information do I need to provide?
 

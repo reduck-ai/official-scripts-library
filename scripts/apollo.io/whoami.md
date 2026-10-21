@@ -1,10 +1,10 @@
 # Apollo whoami
 
-Report which Apollo account this browser is signed in as: email and name, from the app's own session check. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Apollo scripts.
+Report which Apollo account this browser is signed in as: email and name. When the browser is not signed in to Apollo, the run fails with a signed-out error that says to sign in, so it can be used to check a session before running other Apollo scripts.
 
 - Site: apollo.io
 - Address: `reduck/apollo.io/whoami`
-- Updated: 2026-10-06 (v3)
+- Updated: 2026-10-20 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,7 +29,7 @@ It takes no input.
 
 ### What does "Apollo whoami" do?
 
-Report which Apollo account this browser is signed in as: email and name, from the app's own session check. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Apollo scripts.
+Report which Apollo account this browser is signed in as: email and name. When the browser is not signed in to Apollo, the run fails with a signed-out error that says to sign in, so it can be used to check a session before running other Apollo scripts.
 
 ### What information do I need to provide?
 

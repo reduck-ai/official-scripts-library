@@ -4,7 +4,7 @@ Automatically ask Grok on grok.com. Open a new Grok conversation, send one quest
 
 - Site: grok.com
 - Address: `reduck/grok.com/ask`
-- Updated: 2026-09-29 (v7)
+- Updated: 2026-10-20 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -1,10 +1,10 @@
 # Cursor whoami (signed-in account)
 
-Report which Cursor account this browser is signed in as: the user id, email, name, plan (membership type) and team id. Being signed out, including an expired session, is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Cursor scripts.
+Report which Cursor account this browser is signed in as: the user id, email, name, plan (membership type) and team id. Fails with a signed-out error when no Cursor account is signed in, including an expired session, so it can be used to check a session before running other Cursor scripts.
 
 - Site: cursor.com
 - Address: `reduck/cursor.com/whoami`
-- Updated: 2026-10-06 (v2)
+- Updated: 2026-10-20 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -33,7 +33,7 @@ It takes no input.
 
 ### What does "Cursor whoami (signed-in account)" do?
 
-Report which Cursor account this browser is signed in as: the user id, email, name, plan (membership type) and team id. Being signed out, including an expired session, is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Cursor scripts.
+Report which Cursor account this browser is signed in as: the user id, email, name, plan (membership type) and team id. Fails with a signed-out error when no Cursor account is signed in, including an expired session, so it can be used to check a session before running other Cursor scripts.
 
 ### What information do I need to provide?
 

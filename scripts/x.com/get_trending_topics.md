@@ -4,7 +4,7 @@ Automatically read trending topics on Explore on x.com. Read X's Explore trends 
 
 - Site: x.com
 - Address: `reduck/x.com/get_trending_topics`
-- Updated: 2026-10-19 (v5)
+- Updated: 2026-10-20 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

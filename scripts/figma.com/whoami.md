@@ -1,10 +1,10 @@
 # Figma whoami (signed-in account)
 
-Report which Figma account this browser is signed in as: the user id, email and name. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Figma scripts.
+Report which Figma account this browser is signed in as: the user id, email and name. When the browser is signed out of Figma, the run fails with a signed-out error asking you to sign in to figma.com.
 
 - Site: figma.com
 - Address: `reduck/figma.com/whoami`
-- Updated: 2026-09-30 (v1)
+- Updated: 2026-10-20 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -31,7 +31,7 @@ It takes no input.
 
 ### What does "Figma whoami (signed-in account)" do?
 
-Report which Figma account this browser is signed in as: the user id, email and name. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Figma scripts.
+Report which Figma account this browser is signed in as: the user id, email and name. When the browser is signed out of Figma, the run fails with a signed-out error asking you to sign in to figma.com.
 
 ### What information do I need to provide?
 

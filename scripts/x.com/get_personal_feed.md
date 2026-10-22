@@ -4,7 +4,7 @@ Automatically read your X (Twitter) For You timeline on x.com. Get tweets from y
 
 - Site: x.com
 - Address: `reduck/x.com/get_personal_feed`
-- Updated: 2026-10-19 (v8)
+- Updated: 2026-10-21 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it

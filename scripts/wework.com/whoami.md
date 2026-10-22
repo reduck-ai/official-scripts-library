@@ -1,10 +1,10 @@
 # WeWork whoami (signed-in account)
 
-Report which WeWork member account this browser is signed in as: the account email. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other WeWork scripts.
+Report which WeWork member account this browser is signed in as: the account email and name. When the browser is not signed in to WeWork, the run fails with a signed-out error that says to sign in, so it can be used to check a session before running other WeWork scripts.
 
 - Site: wework.com
 - Address: `reduck/wework.com/whoami`
-- Updated: 2026-09-30 (v1)
+- Updated: 2026-10-21 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -23,13 +23,14 @@ It takes no input.
 
 - `evidence` (string, required)
 - `loggedIn` (boolean, required)
+- `name` (string | null, optional)
 - `email` (string | null, optional)
 
 ## FAQ
 
 ### What does "WeWork whoami (signed-in account)" do?
 
-Report which WeWork member account this browser is signed in as: the account email. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other WeWork scripts.
+Report which WeWork member account this browser is signed in as: the account email and name. When the browser is not signed in to WeWork, the run fails with a signed-out error that says to sign in, so it can be used to check a session before running other WeWork scripts.
 
 ### What information do I need to provide?
 
@@ -37,7 +38,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns email, evidence, loggedIn.
+It returns name, email, evidence, loggedIn.
 
 ### Do I need to be logged in to wework.com?
 

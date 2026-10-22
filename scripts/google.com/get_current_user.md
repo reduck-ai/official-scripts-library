@@ -4,7 +4,7 @@ Automatically get Current Google User on google.com. Report which Google account
 
 - Site: google.com
 - Address: `reduck/google.com/get_current_user`
-- Updated: 2026-10-20 (v5)
+- Updated: 2026-10-21 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

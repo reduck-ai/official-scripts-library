@@ -4,7 +4,7 @@ Automatically list Slack channels on slack.com. List the workspace's channels (p
 
 - Site: slack.com
 - Address: `reduck/slack.com/list_channels`
-- Updated: 2026-07-10 (v1)
+- Updated: 2026-10-21 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -57,7 +57,7 @@ Yes. It acts as you on slack.com: on your own Chrome it reuses your session, and
 
 ### Does it change anything on slack.com, or only read data?
 
-Unknown: its author has not declared whether it changes anything on slack.com, so treat it as if it could.
+It only reads. It looks things up on slack.com and changes nothing there.
 
 ### How do I run it?
 

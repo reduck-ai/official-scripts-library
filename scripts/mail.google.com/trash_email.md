@@ -1,10 +1,10 @@
 # Trash Gmail thread
 
-Automatically trash Gmail thread on mail.google.com. Move a Gmail thread to the Bin by its hex threadId. Acts from the list view, scanning the first 4 All Mail pages (~200 newest threads), and confirms the row actually left All Mail rather than trusting a toast. Returns trashed, threadId, and the page it was found on.
+Automatically trash Gmail thread on mail.google.com. Move a Gmail thread to the Bin by its hex threadId. Returns trashed and threadId only once the thread is confirmed in the Bin; otherwise it fails with an error naming what happened, and nothing else is deleted.
 
 - Site: mail.google.com
 - Address: `reduck/mail.google.com/trash_email`
-- Updated: 2026-10-08 (v5)
+- Updated: 2026-10-21 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -30,7 +30,7 @@ npx @reduck-ai/cli@latest run --script reduck/mail.google.com/trash_email
 
 ### What does "Trash Gmail thread" do?
 
-Move a Gmail thread to the Bin by its hex threadId. Acts from the list view, scanning the first 4 All Mail pages (~200 newest threads), and confirms the row actually left All Mail rather than trusting a toast. Returns trashed, threadId, and the page it was found on.
+Move a Gmail thread to the Bin by its hex threadId. Returns trashed and threadId only once the thread is confirmed in the Bin; otherwise it fails with an error naming what happened, and nothing else is deleted.
 
 ### How do I automatically trash Gmail thread on mail.google.com?
 

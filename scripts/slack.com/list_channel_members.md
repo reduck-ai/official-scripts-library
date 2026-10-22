@@ -1,10 +1,10 @@
 # List Slack channel members
 
-Automatically list Slack channel members on slack.com. List the members of a channel (by name or id), each resolved to id + display name. One page per call; pass cursor to paginate. Requires login.
+Automatically list Slack channel members on slack.com. List the members of a Slack channel by channel id (get it from List Slack channels), each with their id and display name. One page per call; pass the returned cursor to read the next page. Requires login.
 
 - Site: slack.com
 - Address: `reduck/slack.com/list_channel_members`
-- Updated: 2026-07-10 (v1)
+- Updated: 2026-10-21 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/list_channel_members
 
 ## Input
 
-- `channel` (string, required): Channel name/#name or id (C…).
+- `channel` (string, required): Channel id (C… or G…). Get it from slack.com/list_channels.
 - `limit` (integer, optional): Max members per page (default 200).
 - `cursor` (string, optional): next_cursor from a previous call.
 - `workspaceDomain` (string, optional): Workspace host, e.g. acme.slack.com. Defaults to the active workspace.
@@ -32,7 +32,7 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/list_channel_members
 
 ### What does "List Slack channel members" do?
 
-List the members of a channel (by name or id), each resolved to id + display name. One page per call; pass cursor to paginate. Requires login.
+List the members of a Slack channel by channel id (get it from List Slack channels), each with their id and display name. One page per call; pass the returned cursor to read the next page. Requires login.
 
 ### How do I automatically list Slack channel members on slack.com?
 
@@ -56,7 +56,7 @@ Yes. It acts as you on slack.com: on your own Chrome it reuses your session, and
 
 ### Does it change anything on slack.com, or only read data?
 
-Unknown: its author has not declared whether it changes anything on slack.com, so treat it as if it could.
+It only reads. It looks things up on slack.com and changes nothing there.
 
 ### How do I run it?
 

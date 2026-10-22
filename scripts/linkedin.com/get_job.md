@@ -4,7 +4,7 @@ Automatically get LinkedIn job on linkedin.com. Fetch one LinkedIn job posting b
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_job`
-- Updated: 2026-10-20 (v10)
+- Updated: 2026-10-21 (v13)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -24,7 +24,7 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/get_job
 
 - `id` (string, required)
 - `url` (string, required): https://www.linkedin.com/jobs/view/<id>/
-- `state` (string, required): LinkedIn's state of the posting: LISTED while it takes applications; another value (for example CLOSED) once it does not.
+- `state` (string | null, required): LinkedIn's state of the posting: LISTED while it takes applications; another value (for example CLOSED) once it does not. null when LinkedIn gives no state.
 - `title` (string, required)
 - `description` (string, required): The full job description text.
 - `geoId` (string | null, optional): Geo id of that place, the form linkedin.com/search_jobs takes.

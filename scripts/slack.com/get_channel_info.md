@@ -1,10 +1,10 @@
 # Get Slack channel info
 
-Automatically get Slack channel info on slack.com. Get one channel's details by name or id: name, privacy, member count, topic, purpose, creator, created date, and archived/general flags. Requires login.
+Automatically get Slack channel info on slack.com. Get one Slack channel's details by channel id (get it from List Slack channels): name, privacy, member count, topic, purpose, creator, created date, and archived and general flags. A channel the account cannot see is reported as such. Requires login.
 
 - Site: slack.com
 - Address: `reduck/slack.com/get_channel_info`
-- Updated: 2026-07-10 (v1)
+- Updated: 2026-10-21 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/get_channel_info
 
 ## Input
 
-- `channel` (string, required): Channel name/#name or id (C…).
+- `channel` (string, required): Channel id (C… or G…). Get it from slack.com/list_channels.
 - `workspaceDomain` (string, optional): Workspace host, e.g. acme.slack.com. Defaults to the active workspace.
 
 ## Output
@@ -38,7 +38,7 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/get_channel_info
 
 ### What does "Get Slack channel info" do?
 
-Get one channel's details by name or id: name, privacy, member count, topic, purpose, creator, created date, and archived/general flags. Requires login.
+Get one Slack channel's details by channel id (get it from List Slack channels): name, privacy, member count, topic, purpose, creator, created date, and archived and general flags. A channel the account cannot see is reported as such. Requires login.
 
 ### How do I automatically get Slack channel info on slack.com?
 
@@ -62,7 +62,7 @@ Yes. It acts as you on slack.com: on your own Chrome it reuses your session, and
 
 ### Does it change anything on slack.com, or only read data?
 
-Unknown: its author has not declared whether it changes anything on slack.com, so treat it as if it could.
+It only reads. It looks things up on slack.com and changes nothing there.
 
 ### How do I run it?
 

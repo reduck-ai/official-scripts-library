@@ -1,10 +1,10 @@
-# Reserve Tickets
+# Reserve Ticketmaster tickets
 
-Automatically reserve Tickets on ticketmaster.com. Open a Ticketmaster event, select its cheapest listed ticket, set quantity, and click "Reserve Tickets" — holds the seats on a countdown timer, same as clicking through the site by hand. Never proceeds to payment/checkout; stops the moment the reservation lands.
+Automatically reserve Ticketmaster tickets on ticketmaster.com. Reserve tickets for a Ticketmaster event: returns the quantity held, the subtotal in USD and the link to Ticketmaster's timed hold page. Nothing is paid; the hold expires on its own if not completed. Fails with a signed-out error when the browser is not signed in to Ticketmaster, and says so when the event offers no tickets (over, sold out, not yet on sale), only code-locked presale offers, or not the quantity asked.
 
 - Site: ticketmaster.com
 - Address: `reduck/ticketmaster.com/book_tickets`
-- Updated: 2026-10-02 (v3)
+- Updated: 2026-10-21 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -30,17 +30,17 @@ npx @reduck-ai/cli@latest run --script reduck/ticketmaster.com/book_tickets
 
 ## FAQ
 
-### What does "Reserve Tickets" do?
+### What does "Reserve Ticketmaster tickets" do?
 
-Open a Ticketmaster event, select its cheapest listed ticket, set quantity, and click "Reserve Tickets" — holds the seats on a countdown timer, same as clicking through the site by hand. Never proceeds to payment/checkout; stops the moment the reservation lands.
+Reserve tickets for a Ticketmaster event: returns the quantity held, the subtotal in USD and the link to Ticketmaster's timed hold page. Nothing is paid; the hold expires on its own if not completed. Fails with a signed-out error when the browser is not signed in to Ticketmaster, and says so when the event offers no tickets (over, sold out, not yet on sale), only code-locked presale offers, or not the quantity asked.
 
-### How do I automatically reserve Tickets on ticketmaster.com?
+### How do I automatically reserve Ticketmaster tickets on ticketmaster.com?
 
 Ask an AI agent connected to Reduck to run reduck/ticketmaster.com/book_tickets, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/ticketmaster.com/book_tickets
 
-### Is there a ticketmaster.com API to reserve Tickets?
+### Is there a ticketmaster.com API to reserve Ticketmaster tickets?
 
-You do not need one. "Reserve Tickets" drives the real ticketmaster.com pages in a browser, so it works whether or not ticketmaster.com offers an API for this.
+You do not need one. "Reserve Ticketmaster tickets" drives the real ticketmaster.com pages in a browser, so it works whether or not ticketmaster.com offers an API for this.
 
 ### What information do I need to provide?
 

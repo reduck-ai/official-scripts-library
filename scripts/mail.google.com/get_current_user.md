@@ -4,7 +4,7 @@ Automatically get Current Gmail User on mail.google.com. Return the display name
 
 - Site: mail.google.com
 - Address: `reduck/mail.google.com/get_current_user`
-- Updated: 2026-10-19 (v6)
+- Updated: 2026-10-21 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/mail.google.com/get_current_user
 
 ## Input
 
-It takes no input.
+- `account` (string, optional): Optional Google account to report on, for a browser signed into several: its email address, or a bare mailbox index such as "2". Omit for the first account (u/0).
 
 ## Output
 
@@ -40,7 +40,7 @@ You do not need one. "Get Current Gmail User" drives the real mail.google.com pa
 
 ### What information do I need to provide?
 
-Nothing. It takes no input.
+Optional: account.
 
 ### What does it return?
 

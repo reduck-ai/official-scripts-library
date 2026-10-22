@@ -4,7 +4,7 @@ Report which Google account Google Calendar is signed in as in this browser: dis
 
 - Site: calendar.google.com
 - Address: `reduck/calendar.google.com/whoami`
-- Updated: 2026-10-20 (v2)
+- Updated: 2026-10-21 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

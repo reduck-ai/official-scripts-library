@@ -1,10 +1,10 @@
 # Get Slack user profile
 
-Automatically get Slack user profile on slack.com. Get one member's full profile by id (U…) or by handle/display name (resolved via the member directory). Returns handle, real/display name, title, email (when visible), timezone, status and admin/owner/bot/guest flags. Requires login.
+Automatically get Slack user profile on slack.com. Get one Slack member's full profile by member id (get it from List Slack members). Returns handle, real and display name, title, email (when visible), timezone, status and admin, owner, bot and guest flags. An id the workspace does not know is reported as such. Requires login.
 
 - Site: slack.com
 - Address: `reduck/slack.com/get_user_profile`
-- Updated: 2026-07-10 (v1)
+- Updated: 2026-10-21 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/get_user_profile
 
 ## Input
 
-- `user` (string, required): Member id (U…) or handle/display name (e.g. 'tester.account').
+- `user` (string, required): Member id (U… or W…). Get it from slack.com/list_members.
 - `workspaceDomain` (string, optional): Workspace host, e.g. acme.slack.com. Defaults to the active workspace.
 
 ## Output
@@ -45,7 +45,7 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/get_user_profile
 
 ### What does "Get Slack user profile" do?
 
-Get one member's full profile by id (U…) or by handle/display name (resolved via the member directory). Returns handle, real/display name, title, email (when visible), timezone, status and admin/owner/bot/guest flags. Requires login.
+Get one Slack member's full profile by member id (get it from List Slack members). Returns handle, real and display name, title, email (when visible), timezone, status and admin, owner, bot and guest flags. An id the workspace does not know is reported as such. Requires login.
 
 ### How do I automatically get Slack user profile on slack.com?
 
@@ -69,7 +69,7 @@ Yes. It acts as you on slack.com: on your own Chrome it reuses your session, and
 
 ### Does it change anything on slack.com, or only read data?
 
-Unknown: its author has not declared whether it changes anything on slack.com, so treat it as if it could.
+It only reads. It looks things up on slack.com and changes nothing there.
 
 ### How do I run it?
 

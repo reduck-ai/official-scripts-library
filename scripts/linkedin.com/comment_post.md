@@ -4,7 +4,7 @@ Automatically comment on LinkedIn post on linkedin.com. Post a top-level comment
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/comment_post`
-- Updated: 2026-08-24 (v10)
+- Updated: 2026-10-21 (v12)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -59,7 +59,7 @@ Yes. It acts as you on linkedin.com: on your own Chrome it reuses your session, 
 
 ### Does it change anything on linkedin.com, or only read data?
 
-It makes changes on linkedin.com, like sending, posting or booking something.
+It makes changes on linkedin.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

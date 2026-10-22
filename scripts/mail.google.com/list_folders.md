@@ -4,7 +4,7 @@ Automatically list Gmail labels / folders on mail.google.com. List the Gmail lab
 
 - Site: mail.google.com
 - Address: `reduck/mail.google.com/list_folders`
-- Updated: 2026-10-05 (v6)
+- Updated: 2026-10-21 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/mail.google.com/list_folders
 
 ## Input
 
-- `account` (string, optional): Google account email to act as (authuser=). Without it Gmail picks u/0, which is nondeterministic in a multi-account browser jar.
+- `account` (string, optional): Google account to list: its email address, or a bare mailbox index such as "2". An address not signed in to this browser is refused. Omit for the first account (u/0).
 
 ## Output
 

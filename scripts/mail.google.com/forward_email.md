@@ -1,10 +1,10 @@
 # Forward Gmail thread
 
-Automatically forward Gmail thread on mail.google.com. Forward an entire Gmail thread to one recipient, with an optional leading note. Takes the hex threadId that search_emails returns, and forwards the whole conversation inline rather than a single message. Returns forwarded, threadId and to. The thread must be on the first page of All Mail, newest-first, so older conversations cannot be reached this way.
+Automatically forward Gmail thread on mail.google.com. Forward an entire Gmail thread to one recipient, with an optional note placed above the forwarded content. Takes the hex threadId that search_emails returns and forwards the whole conversation inline rather than a single message. Returns forwarded, threadId and to once Gmail has accepted the send. A thread id Gmail cannot open is refused with nothing sent, and so is a conversation that still has a scheduled reply pending (Gmail hides its Forward control then). Forwarding a conversation that sits in the Bin works, but Gmail then keeps the sent copy out of the Sent folder.
 
 - Site: mail.google.com
 - Address: `reduck/mail.google.com/forward_email`
-- Updated: 2026-09-17 (v21)
+- Updated: 2026-10-21 (v22)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -32,7 +32,7 @@ npx @reduck-ai/cli@latest run --script reduck/mail.google.com/forward_email
 
 ### What does "Forward Gmail thread" do?
 
-Forward an entire Gmail thread to one recipient, with an optional leading note. Takes the hex threadId that search_emails returns, and forwards the whole conversation inline rather than a single message. Returns forwarded, threadId and to. The thread must be on the first page of All Mail, newest-first, so older conversations cannot be reached this way.
+Forward an entire Gmail thread to one recipient, with an optional note placed above the forwarded content. Takes the hex threadId that search_emails returns and forwards the whole conversation inline rather than a single message. Returns forwarded, threadId and to once Gmail has accepted the send. A thread id Gmail cannot open is refused with nothing sent, and so is a conversation that still has a scheduled reply pending (Gmail hides its Forward control then). Forwarding a conversation that sits in the Bin works, but Gmail then keeps the sent copy out of the Sent folder.
 
 ### How do I automatically forward Gmail thread on mail.google.com?
 
@@ -56,7 +56,7 @@ Yes. It acts as you on mail.google.com: on your own Chrome it reuses your sessio
 
 ### Does it change anything on mail.google.com, or only read data?
 
-It makes changes on mail.google.com, like sending, posting or booking something.
+It makes changes on mail.google.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

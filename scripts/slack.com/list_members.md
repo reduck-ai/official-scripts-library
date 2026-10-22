@@ -1,10 +1,10 @@
 # List Slack members
 
-Automatically list Slack members on slack.com. List the workspace's members (users) with handle, real/display name, title, email (when visible), timezone, admin/owner/bot/guest flags and status. One page per call; pass cursor to paginate and includeDeleted to include deactivated accounts. Requires login.
+Automatically list Slack members on slack.com. List a Slack workspace's members with id, handle, real and display name, title, email (when visible), timezone, status and admin, owner, bot and guest flags. Deactivated accounts are included and flagged as deleted. One page per call; pass the returned cursor to read the next page. Requires login.
 
 - Site: slack.com
 - Address: `reduck/slack.com/list_members`
-- Updated: 2026-07-10 (v1)
+- Updated: 2026-10-21 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,8 +18,7 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/list_members
 ## Input
 
 - `limit` (integer, optional): Max members per page (default 200).
-- `cursor` (string, optional): next_cursor from a previous call.
-- `includeDeleted` (boolean, optional): Include deactivated accounts. Default false.
+- `cursor` (string, optional): nextCursor from a previous call.
 - `workspaceDomain` (string, optional): Workspace host, e.g. acme.slack.com. Defaults to the active workspace.
 
 ## Output
@@ -32,7 +31,7 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/list_members
 
 ### What does "List Slack members" do?
 
-List the workspace's members (users) with handle, real/display name, title, email (when visible), timezone, admin/owner/bot/guest flags and status. One page per call; pass cursor to paginate and includeDeleted to include deactivated accounts. Requires login.
+List a Slack workspace's members with id, handle, real and display name, title, email (when visible), timezone, status and admin, owner, bot and guest flags. Deactivated accounts are included and flagged as deleted. One page per call; pass the returned cursor to read the next page. Requires login.
 
 ### How do I automatically list Slack members on slack.com?
 
@@ -44,7 +43,7 @@ You do not need one. "List Slack members" drives the real slack.com pages in a b
 
 ### What information do I need to provide?
 
-Optional: limit, cursor, includeDeleted, workspaceDomain.
+Optional: limit, cursor, workspaceDomain.
 
 ### What does it return?
 
@@ -56,7 +55,7 @@ Yes. It acts as you on slack.com: on your own Chrome it reuses your session, and
 
 ### Does it change anything on slack.com, or only read data?
 
-Unknown: its author has not declared whether it changes anything on slack.com, so treat it as if it could.
+It only reads. It looks things up on slack.com and changes nothing there.
 
 ### How do I run it?
 

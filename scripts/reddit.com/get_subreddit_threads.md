@@ -1,10 +1,10 @@
-# Get subreddit threads
+# Get Reddit subreddit threads
 
-Automatically get subreddit threads on reddit.com. List a subreddit's threads by Reddit's native sort (best/hot/new/top/rising). "new" is chronological (filter with `since`); "top" takes a `time` window (hour…all); others paginate by `limit`. Returns url, title, author, score, num_comments, created, post_type, and body — the post's full text (never truncated; null for link/image posts). `limit` is a maximum, not a guarantee: fewer matching threads returns what exists.
+Automatically get Reddit subreddit threads on reddit.com. List a subreddit's threads by Reddit's native sort (best/hot/new/top/rising). "new" is chronological (filter with `since`); "top" takes a `time` window (hour…all); others paginate by `limit`. Returns url, title, author, score, num_comments, created, post_type, and body — the post's full text (never truncated; null for link/image posts). `limit` is a maximum, not a guarantee: fewer matching threads returns what exists.
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/get_subreddit_threads`
-- Updated: 2026-10-20 (v22)
+- Updated: 2026-10-21 (v27)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -28,21 +28,22 @@ npx @reduck-ai/cli@latest run --script reduck/reddit.com/get_subreddit_threads
 
 - `count` (number, optional)
 - `threads` (any, optional)
+- `complete` (boolean, optional): true when the feed (or the `since` window) ended before `limit` was reached, so every thread it holds is here; false when `limit` stopped the read and more threads exist.
 - `subreddit` (string, optional)
 
 ## FAQ
 
-### What does "Get subreddit threads" do?
+### What does "Get Reddit subreddit threads" do?
 
 List a subreddit's threads by Reddit's native sort (best/hot/new/top/rising). "new" is chronological (filter with `since`); "top" takes a `time` window (hour…all); others paginate by `limit`. Returns url, title, author, score, num_comments, created, post_type, and body — the post's full text (never truncated; null for link/image posts). `limit` is a maximum, not a guarantee: fewer matching threads returns what exists.
 
-### How do I automatically get subreddit threads on reddit.com?
+### How do I automatically get Reddit subreddit threads on reddit.com?
 
 Ask an AI agent connected to Reduck to run reduck/reddit.com/get_subreddit_threads, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/reddit.com/get_subreddit_threads
 
-### Is there a reddit.com API to get subreddit threads?
+### Is there a reddit.com API to get Reddit subreddit threads?
 
-You do not need one. "Get subreddit threads" drives the real reddit.com pages in a browser, so it works whether or not reddit.com offers an API for this.
+You do not need one. "Get Reddit subreddit threads" drives the real reddit.com pages in a browser, so it works whether or not reddit.com offers an API for this.
 
 ### What information do I need to provide?
 
@@ -50,7 +51,7 @@ Optional: sort, time, limit, since, subreddit, subreddits.
 
 ### What does it return?
 
-It returns count, threads, subreddit.
+It returns count, threads, complete, subreddit.
 
 ### Do I need to be logged in to reddit.com?
 

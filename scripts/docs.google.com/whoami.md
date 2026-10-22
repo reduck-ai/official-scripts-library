@@ -4,7 +4,7 @@ Report which Google account Google Docs/Sheets is signed in as in this browser: 
 
 - Site: docs.google.com
 - Address: `reduck/docs.google.com/whoami`
-- Updated: 2026-10-20 (v3)
+- Updated: 2026-10-21 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

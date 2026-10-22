@@ -1,10 +1,10 @@
 # Archive Gmail thread
 
-Automatically archive Gmail thread on mail.google.com. Archive a Gmail thread by its hex threadId (removes it from the Inbox; it stays in All Mail). Returns archived, threadId, and the Inbox page it was found on.
+Automatically archive Gmail thread on mail.google.com. Archive a Gmail thread by its hex threadId: it leaves the Inbox and stays in All Mail. Returns archived and threadId, plus already_archived:true when the thread was not in the Inbox (nothing was changed). Fails with an error, rather than reporting success, when the thread cannot be found or Gmail does not confirm it left the Inbox.
 
 - Site: mail.google.com
 - Address: `reduck/mail.google.com/archive_email`
-- Updated: 2026-09-07 (v11)
+- Updated: 2026-10-21 (v12)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -31,7 +31,7 @@ npx @reduck-ai/cli@latest run --script reduck/mail.google.com/archive_email
 
 ### What does "Archive Gmail thread" do?
 
-Archive a Gmail thread by its hex threadId (removes it from the Inbox; it stays in All Mail). Returns archived, threadId, and the Inbox page it was found on.
+Archive a Gmail thread by its hex threadId: it leaves the Inbox and stays in All Mail. Returns archived and threadId, plus already_archived:true when the thread was not in the Inbox (nothing was changed). Fails with an error, rather than reporting success, when the thread cannot be found or Gmail does not confirm it left the Inbox.
 
 ### How do I automatically archive Gmail thread on mail.google.com?
 
@@ -55,7 +55,7 @@ Yes. It acts as you on mail.google.com: on your own Chrome it reuses your sessio
 
 ### Does it change anything on mail.google.com, or only read data?
 
-It makes changes on mail.google.com, like sending, posting or booking something.
+It makes changes on mail.google.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

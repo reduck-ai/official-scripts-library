@@ -1,10 +1,10 @@
 # Toggle Gmail thread read state
 
-Automatically toggle Gmail thread read state on mail.google.com. Mark a Gmail thread as read or unread by its hex threadId. Pass read:true to mark as read (default), read:false to mark as unread. Returns the final read state, threadId, the All Mail page it was found on, and already_read/already_unread flags. Acts from the All Mail list, scanning the first 4 pages (~200 newest threads). A thread already in the requested state is left alone and comes back with already_read:true or already_unread:true, so repeating the call is safe. Waits for Gmail to persist the change rather than returning on optimistic row restyling.
+Automatically toggle Gmail thread read state on mail.google.com. Mark a Gmail thread as read or unread by its hex threadId, in the chosen Google account. Pass read:true to mark as read (default), read:false to mark as unread. Returns the final read and unread state, threadId, and already_read/already_unread when the thread was already in the requested state and was left alone, so repeating the call is safe. Success is reported only once Gmail has saved the change and a fresh read confirms it. An unknown or malformed id is refused without changing anything.
 
 - Site: mail.google.com
 - Address: `reduck/mail.google.com/toggle_read_state`
-- Updated: 2026-09-18 (v2)
+- Updated: 2026-10-21 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -19,14 +19,13 @@ npx @reduck-ai/cli@latest run --script reduck/mail.google.com/toggle_read_state
 
 - `threadId` (string, required): Hex legacy thread id (as returned by search_emails).
 - `read` (boolean, optional): true to mark as read (default), false to mark as unread.
-- `account` (string, optional): Google account email to act as (authuser=). Without it Gmail picks u/0, nondeterministic in a multi-account browser jar.
+- `account` (string, optional): The Google account whose thread this is: its email address, or Gmail's account number in this browser (e.g. "2"). The run fails if that account is not signed in. Omit for the first signed-in account (u/0).
 
 ## Output
 
-- `page` (integer, required): Which All Mail page the thread was found on (1-based).
+- `read` (boolean, required): The final read state: true if thread is now read.
+- `unread` (boolean, required): The final unread state: true if thread is now unread.
 - `threadId` (string, required)
-- `read` (boolean, optional): The final read state: true if thread is now read.
-- `unread` (boolean, optional): The final unread state: true if thread is now unread.
 - `already_read` (boolean, optional): true = the thread was already read; nothing was clicked.
 - `already_unread` (boolean, optional): true = the thread was already unread; nothing was clicked.
 
@@ -34,7 +33,7 @@ npx @reduck-ai/cli@latest run --script reduck/mail.google.com/toggle_read_state
 
 ### What does "Toggle Gmail thread read state" do?
 
-Mark a Gmail thread as read or unread by its hex threadId. Pass read:true to mark as read (default), read:false to mark as unread. Returns the final read state, threadId, the All Mail page it was found on, and already_read/already_unread flags. Acts from the All Mail list, scanning the first 4 pages (~200 newest threads). A thread already in the requested state is left alone and comes back with already_read:true or already_unread:true, so repeating the call is safe. Waits for Gmail to persist the change rather than returning on optimistic row restyling.
+Mark a Gmail thread as read or unread by its hex threadId, in the chosen Google account. Pass read:true to mark as read (default), read:false to mark as unread. Returns the final read and unread state, threadId, and already_read/already_unread when the thread was already in the requested state and was left alone, so repeating the call is safe. Success is reported only once Gmail has saved the change and a fresh read confirms it. An unknown or malformed id is refused without changing anything.
 
 ### How do I automatically toggle Gmail thread read state on mail.google.com?
 
@@ -50,7 +49,7 @@ Required: threadId. Optional: read, account.
 
 ### What does it return?
 
-It returns page, read, unread, threadId, already_read, already_unread.
+It returns read, unread, threadId, already_read, already_unread.
 
 ### Do I need to be logged in to mail.google.com?
 
@@ -58,7 +57,7 @@ Yes. It acts as you on mail.google.com: on your own Chrome it reuses your sessio
 
 ### Does it change anything on mail.google.com, or only read data?
 
-It makes changes on mail.google.com, like sending, posting or booking something.
+It makes changes on mail.google.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

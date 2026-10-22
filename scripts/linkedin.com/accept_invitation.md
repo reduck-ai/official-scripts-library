@@ -1,10 +1,10 @@
 # LinkedIn — accept a received invitation
 
-Automatically accept a received invitation on linkedin.com. Accept a pending received invitation on LinkedIn, identified by the inviter's display name (person or page). Guards against homonyms - if two or more pending invitations match the name it throws rather than guess - and returns the status plus the matched name (recipientResolved) so you can confirm the right one was accepted. Only acts on invitations already loaded in the list.
+Automatically accept a received invitation on linkedin.com. Accept a pending received LinkedIn invitation, by its invitation id from get_received_invitations (preferred) or by the inviter's display name. A name that matches two invitations throws rather than guess, and a name that is only in "Suggestions for you" gets a clear error (there is nothing to accept). dryRun finds and checks the invitation without accepting it. Returns the status and the matched card text so you can confirm the right one was accepted.
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/accept_invitation`
-- Updated: 2026-07-31 (v4)
+- Updated: 2026-10-21 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,19 +17,22 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/accept_invitation
 
 ## Input
 
-- `name` (string, required): Inviter's display name exactly as shown on the invitation (e.g. "Ossama Messaoudi", or a page name like "EDH Technology"). The pending invitation matching this name is accepted; ambiguous (multiple) matches throw.
+- `name` (string, optional): Inviter's display name exactly as shown on the invitation (e.g. "Ossama Messaoudi", or a page name like "Marketer Tips"), when you have no invitationUrn. Two or more matching invitations throw.
+- `dryRun` (boolean, optional): Find and check the invitation, but do not click Accept. Returns status "dry_run".
+- `invitationUrn` (string, optional): The invitation's urn:li:invitation:<id>, as get_received_invitations returns it. Preferred: it targets one row exactly.
 
 ## Output
 
-- `name` (string, required): Echo of the requested name.
-- `status` (string, required): "accepted" when the invitation left the pending list.
+- `status` (string, required): "accepted" when the invitation left the pending list; "dry_run" when dryRun stopped before the click.
+- `name` (string | null, optional): Echo of the requested name, or null when targeted by invitationUrn.
+- `invitationUrn` (string | null, optional): urn:li:invitation:<id> of the matched row.
 - `recipientResolved` (string | null, optional): Trimmed text of the matched invitation card — cross-check the right person/page was accepted.
 
 ## FAQ
 
 ### What does "LinkedIn — accept a received invitation" do?
 
-Accept a pending received invitation on LinkedIn, identified by the inviter's display name (person or page). Guards against homonyms - if two or more pending invitations match the name it throws rather than guess - and returns the status plus the matched name (recipientResolved) so you can confirm the right one was accepted. Only acts on invitations already loaded in the list.
+Accept a pending received LinkedIn invitation, by its invitation id from get_received_invitations (preferred) or by the inviter's display name. A name that matches two invitations throws rather than guess, and a name that is only in "Suggestions for you" gets a clear error (there is nothing to accept). dryRun finds and checks the invitation without accepting it. Returns the status and the matched card text so you can confirm the right one was accepted.
 
 ### How do I automatically accept a received invitation on linkedin.com?
 
@@ -41,11 +44,11 @@ You do not need one. "LinkedIn — accept a received invitation" drives the real
 
 ### What information do I need to provide?
 
-Required: name.
+Optional: name, dryRun, invitationUrn.
 
 ### What does it return?
 
-It returns name, status, recipientResolved.
+It returns name, status, invitationUrn, recipientResolved.
 
 ### Do I need to be logged in to linkedin.com?
 
@@ -53,7 +56,7 @@ Yes. It acts as you on linkedin.com: on your own Chrome it reuses your session, 
 
 ### Does it change anything on linkedin.com, or only read data?
 
-It makes changes on linkedin.com, like sending, posting or booking something.
+It makes changes on linkedin.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

@@ -1,10 +1,10 @@
 # Mark Gmail thread as unread
 
-Automatically mark Gmail thread as unread on mail.google.com. Mark a Gmail thread as unread by its hex threadId. Returns unread, threadId, the All Mail page it was found on, and already_unread. Acts from the All Mail list, scanning the first 4 pages (~200 newest threads). Safe to repeat: a thread that is already unread returns already_unread:true without clicking anything. Waits for Gmail to persist the change rather than returning on the optimistic row restyling, so the mail really is unread once the run ends.
+Automatically mark Gmail thread as unread on mail.google.com. Mark a Gmail thread as unread by its hex threadId, in the chosen Google account, wherever the thread is filed. Returns unread, threadId and already_unread. Safe to repeat: a thread that is already unread returns already_unread:true without changing anything. Success is reported only once Gmail has saved the change and a fresh read shows the thread unread. An unknown or malformed id is refused without changing anything.
 
 - Site: mail.google.com
 - Address: `reduck/mail.google.com/mark_unread`
-- Updated: 2026-09-07 (v8)
+- Updated: 2026-10-21 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,20 +18,19 @@ npx @reduck-ai/cli@latest run --script reduck/mail.google.com/mark_unread
 ## Input
 
 - `threadId` (string, required): Hex thread id, as returned by list_inbox / search_emails.
-- `account` (string, optional): Gmail account address to act as (authuser pin). Omit for u/0.
+- `account` (string, optional): The Google account whose thread this is: its email address, or Gmail's account number in this browser (e.g. "2"). The run fails if that account is not signed in. Omit for the first signed-in account (u/0).
 
 ## Output
 
-- `page` (integer, required)
 - `unread` (boolean, required)
 - `threadId` (string, required)
-- `already_unread` (boolean, optional)
+- `already_unread` (boolean, optional): true = the thread was already unread; nothing was clicked.
 
 ## FAQ
 
 ### What does "Mark Gmail thread as unread" do?
 
-Mark a Gmail thread as unread by its hex threadId. Returns unread, threadId, the All Mail page it was found on, and already_unread. Acts from the All Mail list, scanning the first 4 pages (~200 newest threads). Safe to repeat: a thread that is already unread returns already_unread:true without clicking anything. Waits for Gmail to persist the change rather than returning on the optimistic row restyling, so the mail really is unread once the run ends.
+Mark a Gmail thread as unread by its hex threadId, in the chosen Google account, wherever the thread is filed. Returns unread, threadId and already_unread. Safe to repeat: a thread that is already unread returns already_unread:true without changing anything. Success is reported only once Gmail has saved the change and a fresh read shows the thread unread. An unknown or malformed id is refused without changing anything.
 
 ### How do I automatically mark Gmail thread as unread on mail.google.com?
 
@@ -47,7 +46,7 @@ Required: threadId. Optional: account.
 
 ### What does it return?
 
-It returns page, unread, threadId, already_unread.
+It returns unread, threadId, already_unread.
 
 ### Do I need to be logged in to mail.google.com?
 
@@ -55,7 +54,7 @@ Yes. It acts as you on mail.google.com: on your own Chrome it reuses your sessio
 
 ### Does it change anything on mail.google.com, or only read data?
 
-It makes changes on mail.google.com, like sending, posting or booking something.
+It makes changes on mail.google.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

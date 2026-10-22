@@ -4,7 +4,7 @@ Automatically list Gmail drafts on mail.google.com. List the unsent drafts in th
 
 - Site: mail.google.com
 - Address: `reduck/mail.google.com/list_drafts`
-- Updated: 2026-10-19 (v4)
+- Updated: 2026-10-21 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/mail.google.com/list_drafts
 
 ## Input
 
-It takes no input.
+- `account` (string, optional): Google account email whose drafts to list. Without it Gmail opens the first signed-in account (u/0), which may not be the one wanted when several accounts share the browser.
 
 ## Output
 
@@ -41,7 +41,7 @@ You do not need one. "List Gmail drafts" drives the real mail.google.com pages i
 
 ### What information do I need to provide?
 
-Nothing. It takes no input.
+Optional: account.
 
 ### What does it return?
 

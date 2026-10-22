@@ -4,7 +4,7 @@ Automatically create a Gmail draft on mail.google.com. Compose a Gmail message a
 
 - Site: mail.google.com
 - Address: `reduck/mail.google.com/create_draft`
-- Updated: 2026-10-19 (v30)
+- Updated: 2026-10-21 (v39)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,11 +17,11 @@ npx @reduck-ai/cli@latest run --script reduck/mail.google.com/create_draft
 
 ## Input
 
-- `to` (array, required): Recipient email address(es).
+- `to` (any, required): Recipient email address(es). A single string or an array of strings.
 - `body` (string, required): Plain-text body.
 - `subject` (string, required): Subject line.
-- `cc` (array, optional): Optional Cc addresses.
-- `bcc` (array, optional): Optional Bcc addresses.
+- `cc` (any, optional): Optional Cc address(es). A single string or an array of strings.
+- `bcc` (any, optional): Optional Bcc address(es). A single string or an array of strings.
 - `account` (string, optional): Google account email to act as (authuser=). Without it Gmail picks u/0, nondeterministic in a multi-account jar.
 - `signature` (string, optional): Name of one of the account's Gmail signatures to put under the body, as Gmail lists it in the composer's signature menu. An empty string means no signature. Omit it to keep what Gmail puts in a new message: the account's default signature for new emails, if one is set.
 

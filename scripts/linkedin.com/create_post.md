@@ -1,10 +1,10 @@
 # LinkedIn — Create post
 
-Automatically create post on linkedin.com. Publish a text post to your LinkedIn feed, visible to anyone. This creates a real, public post under your account immediately — not a draft or preview. Only plain text posts are supported; images, polls, and articles need a different flow. Requires being logged into LinkedIn. Returns the link to the published post.
+Automatically create post on linkedin.com. Publish a text post to your LinkedIn feed now, or schedule it for a later date and time. Without scheduleDate/scheduleTime it creates a real, public post under your account immediately — not a draft or preview — and returns the post's link. With scheduleDate (M/D/YYYY) and scheduleTime (a quarter-hour such as "9:45 AM") it queues the post in LinkedIn's Scheduled posts instead and returns when it will publish; an identical post already queued is reported, not duplicated. Plain text with optional @mentions and a single image (images cannot be scheduled); polls and articles need a different flow. dry_run stops before the final Post/Schedule click. Requires being logged into LinkedIn. To list or cancel scheduled posts, use get_scheduled_posts / remove_scheduled_post.
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/create_post`
-- Updated: 2026-10-05 (v55)
+- Updated: 2026-10-21 (v55)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -45,7 +45,7 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/create_post
 
 ### What does "LinkedIn — Create post" do?
 
-Publish a text post to your LinkedIn feed, visible to anyone. This creates a real, public post under your account immediately — not a draft or preview. Only plain text posts are supported; images, polls, and articles need a different flow. Requires being logged into LinkedIn. Returns the link to the published post.
+Publish a text post to your LinkedIn feed now, or schedule it for a later date and time. Without scheduleDate/scheduleTime it creates a real, public post under your account immediately — not a draft or preview — and returns the post's link. With scheduleDate (M/D/YYYY) and scheduleTime (a quarter-hour such as "9:45 AM") it queues the post in LinkedIn's Scheduled posts instead and returns when it will publish; an identical post already queued is reported, not duplicated. Plain text with optional @mentions and a single image (images cannot be scheduled); polls and articles need a different flow. dry_run stops before the final Post/Schedule click. Requires being logged into LinkedIn. To list or cancel scheduled posts, use get_scheduled_posts / remove_scheduled_post.
 
 ### How do I automatically create post on linkedin.com?
 

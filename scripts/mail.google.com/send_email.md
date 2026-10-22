@@ -4,7 +4,7 @@ Automatically send Gmail email on mail.google.com. Send an email from the signed
 
 - Site: mail.google.com
 - Address: `reduck/mail.google.com/send_email`
-- Updated: 2026-10-20 (v36)
+- Updated: 2026-10-21 (v38)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically reply to Gmail thread on mail.google.com. Reply (or reply-all) ins
 
 - Site: mail.google.com
 - Address: `reduck/mail.google.com/reply_to_email`
-- Updated: 2026-10-20 (v8)
+- Updated: 2026-10-21 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it

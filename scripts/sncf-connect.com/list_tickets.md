@@ -4,7 +4,7 @@ Automatically list booked tickets (future / past / pending options) on sncf-conn
 
 - Site: sncf-connect.com
 - Address: `reduck/sncf-connect.com/list_tickets`
-- Updated: 2026-09-18 (v4)
+- Updated: 2026-10-21 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,11 +17,11 @@ npx @reduck-ai/cli@latest run --script reduck/sncf-connect.com/list_tickets
 
 ## Input
 
-- `scope` (string, optional): Which lists to fetch. 'future' also returns pending options; 'past' skips them.
+- `scope` (string, optional): Which lists to fetch. 'future' returns upcoming trips and pending options; 'past' returns past trips only; 'all' (the default) returns everything.
 
 ## Output
 
-- `note` (string, required)
+- `note` (string, required): What these lists can and cannot contain.
 - `past` (array, required)
 - `future` (array, required)
 - `options` (array, required)

@@ -4,7 +4,7 @@ Automatically ask ChatGPT on chatgpt.com. See what ChatGPT tells a stranger abou
 
 - Site: chatgpt.com
 - Address: `reduck/chatgpt.com/ask`
-- Updated: 2026-10-20 (v54)
+- Updated: 2026-10-21 (v56)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -29,10 +29,10 @@ npx @reduck-ai/cli@latest run --script reduck/chatgpt.com/ask
 - `model` (string | null, required): Which model answered, by ChatGPT's own id (e.g. "gpt-6"). Null when the app does not say, which is always the case signed out.
 - `answer` (string, required): The last entry of `answers`.
 - `answers` (array, required): One entry per reply, usually one; ChatGPT sometimes answers twice and asks which reply you prefer, and neither entry is more official than the other: read the length before reading answers[0]. Each is the reply as markdown, each citation a markdown link to its source, widgets (images, forms) left out.
-- `sources` (array | null, required): Every page the searches put in front of the model, once each, in the order it got them: the pool the answer could draw on, as opposed to `references`, what it cited. Empty when it did not search. Null signed out, where ChatGPT does not show them.
+- `sources` (array | null, required): Every page the searches handed the model (`given`), once each, in the order it got them: the pool the answer could draw on, as opposed to `references`, what it cited, and to the results it never got. Empty when it did not search. Null signed out, where ChatGPT does not show them.
 - `activity` (array, required): The progress lines ChatGPT showed while it worked, in order and in the display language, e.g. "Searching the web", "Searched 8 websites". Signed out, the only trace of the searches it ran. Display text: its wording and its counts are ChatGPT's, not a count of `sources`. Empty when it showed none.
-- `searches` (array | null, required): One entry per round of web searches, in order: what the model typed and the results put in front of it. Empty when it did not search. Null signed out, where ChatGPT does not show them.
-- `references` (array, required): Every source the answer cited or linked, signed in or out, deduplicated by url and in the order the answer surfaced them. Not everything the searches retrieved: that is `sources`. Empty when the answer cited nothing, which is a fact about that reply: the same question searches on one run and not the next.
+- `searches` (array | null, required): One entry per round of web searches, in order: what the model typed and the results its searches returned. Empty when it did not search. Null signed out, where ChatGPT does not show them.
+- `references` (array, required): Every source the answer cited or linked, signed in or out, deduplicated by url and in the order the answer surfaced them: the pages behind the citation pills. Not everything the model got: that is `sources`. Empty when the answer cited nothing, which is a fact about that reply: the same question searches on one run and not the next.
 - `stopReason` (string | null, required): Why generation ended, as ChatGPT records it: "stop" for an answer the model finished. Null when ChatGPT records no reason, and signed out. A finished answer can still be only a sentence announcing work it never did; that is what the model returned, not a truncation.
 - `searchContext` (object, required): What the app asked for and what the server says about this turn, as sent to the page. Signed out, every field the server sends is null, and a field is null when the app did not send it.
 - `conversationId` (string | null, required): The conversation's id. Null if the app did not create one.
@@ -54,6 +54,7 @@ Shape only: placeholder values generated from the output schema, not a real run.
           "url": "https://example.com/item/123",
           "rank": 3,
           "type": "…",
+          "given": true,
           "title": "Example",
           "pubDate": "2026-01-15T09:30:00Z",
           "snippet": "…",
@@ -88,6 +89,7 @@ Shape only: placeholder values generated from the output schema, not a real run.
           "ref": "…",
           "url": "https://example.com/item/123",
           "type": "…",
+          "given": true,
           "title": "Example",
           "pubDate": "2026-01-15T09:30:00Z",
           "attribution": "…"

@@ -4,7 +4,7 @@ Automatically send a Gmail draft on mail.google.com. Send an existing Gmail draf
 
 - Site: mail.google.com
 - Address: `reduck/mail.google.com/send_draft`
-- Updated: 2026-10-19 (v7)
+- Updated: 2026-10-21 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,6 +18,7 @@ npx @reduck-ai/cli@latest run --script reduck/mail.google.com/send_draft
 ## Input
 
 - `draftId` (string, required): The draft's current id, as returned by the drafts listing: a new message or a reply saved inside a conversation. Gmail replaces a draft's id every time it is saved, so use a freshly listed one.
+- `account` (string, optional): Google account email whose draft this is. Without it Gmail opens the first signed-in account (u/0), which may not be the one holding the draft when several accounts share the browser.
 
 ## Output
 
@@ -27,7 +28,7 @@ npx @reduck-ai/cli@latest run --script reduck/mail.google.com/send_draft
 - `account_used` (string, required): The Gmail account the message was sent from, read from the session rather than assumed.
 - `verified_on_page` (boolean, required): True when the send was confirmed by server-derived evidence: Gmail accepting it, or the message appearing in a settled Sent list (for a reply, together with the draft leaving Drafts).
 - `recipientsDisplay` (string, required): The recipients as the compose window lists them: display names, which is what Gmail renders there. The addresses are in recipients.
-- `sender` (string | null, optional): The from address as the compose window shows it, read off the message itself rather than the browser session.
+- `sender` (string | null, optional): The address the message was sent from: the Gmail account whose mailbox held and sent the draft (same as account_used).
 - `isReply` (boolean, optional): True when the draft was a reply saved inside a conversation, false for a new message.
 - `attempts` (integer, optional): How many Send clicks it took before Gmail accepted. More than 1 means a click silently failed to reach the server and was retried.
 - `leftDrafts` (boolean, optional): Whether the draft had disappeared from Drafts by the time this was checked. For a new message it is informational, since it depends on the list repainting. For a reply it is this very draft id, and it backs the Sent check.
@@ -52,7 +53,7 @@ You do not need one. "Send a Gmail draft" drives the real mail.google.com pages 
 
 ### What information do I need to provide?
 
-Required: draftId.
+Required: draftId. Optional: account.
 
 ### What does it return?
 

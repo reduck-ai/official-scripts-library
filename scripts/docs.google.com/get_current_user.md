@@ -1,10 +1,10 @@
-# Get Current Docs/Sheets User
+# Get current Google Docs/Sheets user
 
-Automatically get Current Docs/Sheets User on docs.google.com. Report which Google account Google Docs/Sheets is signed in as in this browser: display name and email, read from Google's account button. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Docs or Sheets scripts.
+Automatically get current Google Docs/Sheets user on docs.google.com. Report which Google account Google Docs/Sheets is signed in as in this browser: display name and email. When the browser is not signed in to Google, the run fails with a signed-out error that says to sign in, so it can be used to check a session before running other Docs or Sheets scripts.
 
 - Site: docs.google.com
 - Address: `reduck/docs.google.com/get_current_user`
-- Updated: 2026-10-05 (v3)
+- Updated: 2026-10-21 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -27,17 +27,17 @@ It takes no input.
 
 ## FAQ
 
-### What does "Get Current Docs/Sheets User" do?
+### What does "Get current Google Docs/Sheets user" do?
 
-Report which Google account Google Docs/Sheets is signed in as in this browser: display name and email, read from Google's account button. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Docs or Sheets scripts.
+Report which Google account Google Docs/Sheets is signed in as in this browser: display name and email. When the browser is not signed in to Google, the run fails with a signed-out error that says to sign in, so it can be used to check a session before running other Docs or Sheets scripts.
 
-### How do I automatically get Current Docs/Sheets User on docs.google.com?
+### How do I automatically get current Google Docs/Sheets user on docs.google.com?
 
 Ask an AI agent connected to Reduck to run reduck/docs.google.com/get_current_user, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/docs.google.com/get_current_user
 
-### Is there a docs.google.com API to get Current Docs/Sheets User?
+### Is there a docs.google.com API to get current Google Docs/Sheets user?
 
-You do not need one. "Get Current Docs/Sheets User" drives the real docs.google.com pages in a browser, so it works whether or not docs.google.com offers an API for this.
+You do not need one. "Get current Google Docs/Sheets user" drives the real docs.google.com pages in a browser, so it works whether or not docs.google.com offers an API for this.
 
 ### What information do I need to provide?
 

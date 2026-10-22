@@ -4,7 +4,7 @@ Automatically search X (Twitter) posts on x.com. Search X (Twitter) for tweets w
 
 - Site: x.com
 - Address: `reduck/x.com/search_tweets`
-- Updated: 2026-10-20 (v9)
+- Updated: 2026-10-21 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it

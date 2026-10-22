@@ -4,7 +4,7 @@ Automatically search LinkedIn posts on linkedin.com. Search LinkedIn posts by ke
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/search_posts`
-- Updated: 2026-10-20 (v17)
+- Updated: 2026-10-21 (v18)
 - Author: Reduck AI (reduck)
 
 ## Run it

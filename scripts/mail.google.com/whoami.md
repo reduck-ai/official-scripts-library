@@ -4,7 +4,7 @@ Report which Gmail account this browser is signed in as: display name and email,
 
 - Site: mail.google.com
 - Address: `reduck/mail.google.com/whoami`
-- Updated: 2026-10-20 (v2)
+- Updated: 2026-10-21 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/mail.google.com/whoami
 
 ## Input
 
-It takes no input.
+- `account` (string, optional): Optional Google account to report on, for a browser signed into several: its email address, or a bare mailbox index such as "2". Omit for the first account (u/0).
 
 ## Output
 
@@ -33,7 +33,7 @@ Report which Gmail account this browser is signed in as: display name and email,
 
 ### What information do I need to provide?
 
-Nothing. It takes no input.
+Optional: account.
 
 ### What does it return?
 

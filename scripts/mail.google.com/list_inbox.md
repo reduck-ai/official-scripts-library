@@ -1,10 +1,10 @@
 # List Gmail inbox
 
-Automatically list Gmail inbox on mail.google.com. List the messages on the first page of the Gmail inbox. Requires an authenticated mail.google.com session. Returns folder, total (the range line as rendered, e.g. "1–50 of 240") and rows of sender, subject, snippet, date plus the unread / starred / hasAttachment flags. Covers only the first inbox page (up to ~50 rows as Gmail renders it); there is no pagination. Be aware that the output requires at least one row, so a genuinely empty inbox is not representable and will surface as a failure rather than an empty list.
+Automatically list Gmail inbox on mail.google.com. List the messages on the first page of the Gmail inbox. Requires an authenticated mail.google.com session. Returns folder, total (the range line as rendered, e.g. "1–50 of 240") and rows of sender, subject, snippet, date plus the unread / starred / hasAttachment flags. Covers only the first inbox page (up to ~50 rows as Gmail renders it); there is no pagination. An empty inbox returns an empty rows list. Pass account to list another signed-in account's inbox.
 
 - Site: mail.google.com
 - Address: `reduck/mail.google.com/list_inbox`
-- Updated: 2026-08-27 (v5)
+- Updated: 2026-10-21 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/mail.google.com/list_inbox
 
 ## Input
 
-It takes no input.
+- `account` (string, optional): Optional Google account whose inbox to list, for a browser signed into several: its email address, or a bare mailbox index such as "2". Omit for the first account (u/0).
 
 ## Output
 
@@ -29,7 +29,7 @@ It takes no input.
 
 ### What does "List Gmail inbox" do?
 
-List the messages on the first page of the Gmail inbox. Requires an authenticated mail.google.com session. Returns folder, total (the range line as rendered, e.g. "1–50 of 240") and rows of sender, subject, snippet, date plus the unread / starred / hasAttachment flags. Covers only the first inbox page (up to ~50 rows as Gmail renders it); there is no pagination. Be aware that the output requires at least one row, so a genuinely empty inbox is not representable and will surface as a failure rather than an empty list.
+List the messages on the first page of the Gmail inbox. Requires an authenticated mail.google.com session. Returns folder, total (the range line as rendered, e.g. "1–50 of 240") and rows of sender, subject, snippet, date plus the unread / starred / hasAttachment flags. Covers only the first inbox page (up to ~50 rows as Gmail renders it); there is no pagination. An empty inbox returns an empty rows list. Pass account to list another signed-in account's inbox.
 
 ### How do I automatically list Gmail inbox on mail.google.com?
 
@@ -41,7 +41,7 @@ You do not need one. "List Gmail inbox" drives the real mail.google.com pages in
 
 ### What information do I need to provide?
 
-Nothing. It takes no input.
+Optional: account.
 
 ### What does it return?
 

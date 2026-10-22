@@ -1,10 +1,10 @@
 # Report Gmail thread as spam
 
-Automatically report Gmail thread as spam on mail.google.com. Report a Gmail thread as spam by its hex threadId (moves it to Spam). Requires an authenticated mail.google.com session. Works from the All Mail list view, scanning the first 4 pages (~200 newest threads), and is locale-independent. Returns reportedSpam, threadId, and the page it was found on.
+Automatically report Gmail thread as spam on mail.google.com. Report a Gmail thread as spam by its hex threadId, as returned by search_emails, so it moves to the Spam folder. Returns reportedSpam and threadId only once the thread is confirmed in Spam. A thread already in Spam or in the Bin, or an id Gmail cannot open, is refused with nothing changed. Reporting also teaches Gmail's spam filter about that sender, which moving the thread back does not fully undo. Pass account when several Google accounts share the browser. For senders with an unsubscribe link Gmail asks whether to report or unsubscribe; the script never answers that question for you: it closes it and fails with nothing reported, so such mail must be reported by hand.
 
 - Site: mail.google.com
 - Address: `reduck/mail.google.com/report_spam`
-- Updated: 2026-09-07 (v7)
+- Updated: 2026-10-21 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,12 +17,12 @@ npx @reduck-ai/cli@latest run --script reduck/mail.google.com/report_spam
 
 ## Input
 
-- `threadId` (string, required): Hex thread id, as returned by list_inbox / search_emails.
-- `account` (string, optional): Gmail account address to act as (authuser pin). Omit for u/0.
+- `threadId` (string, required): Hex thread id, from the threadId field of mail.google.com/search_emails (list_inbox does not return thread ids).
+- `account` (string, optional): Google account to act as: its email address, or a bare mailbox index such as "2". An address not signed in to this browser is refused with nothing reported. Omit for the first account (u/0).
 
 ## Output
 
-- `page` (integer, required)
+- `page` (integer, required): Always 1: the thread is found with a search for its subject, not by paging All Mail. Kept for compatibility.
 - `threadId` (string, required)
 - `reportedSpam` (boolean, required)
 
@@ -30,7 +30,7 @@ npx @reduck-ai/cli@latest run --script reduck/mail.google.com/report_spam
 
 ### What does "Report Gmail thread as spam" do?
 
-Report a Gmail thread as spam by its hex threadId (moves it to Spam). Requires an authenticated mail.google.com session. Works from the All Mail list view, scanning the first 4 pages (~200 newest threads), and is locale-independent. Returns reportedSpam, threadId, and the page it was found on.
+Report a Gmail thread as spam by its hex threadId, as returned by search_emails, so it moves to the Spam folder. Returns reportedSpam and threadId only once the thread is confirmed in Spam. A thread already in Spam or in the Bin, or an id Gmail cannot open, is refused with nothing changed. Reporting also teaches Gmail's spam filter about that sender, which moving the thread back does not fully undo. Pass account when several Google accounts share the browser. For senders with an unsubscribe link Gmail asks whether to report or unsubscribe; the script never answers that question for you: it closes it and fails with nothing reported, so such mail must be reported by hand.
 
 ### How do I automatically report Gmail thread as spam on mail.google.com?
 
@@ -54,7 +54,7 @@ Yes. It acts as you on mail.google.com: on your own Chrome it reuses your sessio
 
 ### Does it change anything on mail.google.com, or only read data?
 
-It makes changes on mail.google.com, like sending, posting or booking something.
+It makes changes on mail.google.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

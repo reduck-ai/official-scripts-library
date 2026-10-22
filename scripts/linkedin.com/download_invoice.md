@@ -1,10 +1,10 @@
 # Download LinkedIn receipt
 
-Automatically download LinkedIn receipt on linkedin.com. Download a single LinkedIn purchase receipt PDF, matched by invoice_number (or purchase+date) from linkedin.com/list_invoices. Returns the PDF bytes as base64 plus a filename.
+Automatically download LinkedIn receipt on linkedin.com. Download the receipt PDF of one LinkedIn billing transaction, by its invoice number from linkedin.com/list_invoices. Returns the PDF base64-encoded, with a file name. Some transactions have no receipt (LinkedIn says the receipt is not available): for those, receipt_available is false and no file comes back. An invoice number the account does not have stops the run with a message that says so.
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/download_invoice`
-- Updated: 2026-09-29 (v1)
+- Updated: 2026-10-21 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,20 +17,20 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/download_invoice
 
 ## Input
 
-- `date` (string, optional): Optional, used with purchase to disambiguate rows with the same purchase description.
-- `purchase` (string, optional): Fallback matcher when invoice_number is blank: the purchase description from linkedin.com/list_invoices.
-- `invoice_number` (string, optional): invoice_number from linkedin.com/list_invoices. Preferred matcher.
+- `invoice_number` (string, required): The invoice_number of a transaction from linkedin.com/list_invoices.
 
 ## Output
 
-- `filename` (string, required)
-- `contentBase64` (string, required)
+- `filename` (string | null, required): A file name for the PDF.
+- `contentBase64` (string | null, required): The receipt PDF, base64-encoded.
+- `invoice_number` (string, required)
+- `receipt_available` (boolean, required): False when LinkedIn has no receipt for this transaction. filename and contentBase64 are then null.
 
 ## FAQ
 
 ### What does "Download LinkedIn receipt" do?
 
-Download a single LinkedIn purchase receipt PDF, matched by invoice_number (or purchase+date) from linkedin.com/list_invoices. Returns the PDF bytes as base64 plus a filename.
+Download the receipt PDF of one LinkedIn billing transaction, by its invoice number from linkedin.com/list_invoices. Returns the PDF base64-encoded, with a file name. Some transactions have no receipt (LinkedIn says the receipt is not available): for those, receipt_available is false and no file comes back. An invoice number the account does not have stops the run with a message that says so.
 
 ### How do I automatically download LinkedIn receipt on linkedin.com?
 
@@ -42,11 +42,11 @@ You do not need one. "Download LinkedIn receipt" drives the real linkedin.com pa
 
 ### What information do I need to provide?
 
-Optional: date, purchase, invoice_number.
+Required: invoice_number.
 
 ### What does it return?
 
-It returns filename, contentBase64.
+It returns filename, contentBase64, invoice_number, receipt_available.
 
 ### Do I need to be logged in to linkedin.com?
 

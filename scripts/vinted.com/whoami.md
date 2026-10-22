@@ -1,10 +1,10 @@
 # Vinted whoami
 
-Report which Vinted account this browser is signed in as on a country site (vinted.fr by default; pass `domain`, e.g. www.vinted.com): the account email from account settings. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Vinted scripts.
+Report which Vinted account this browser is signed in as on a country site (vinted.fr by default; pass `domain`, e.g. www.vinted.com): the account's email. When the browser is not signed in to that country site, the run fails with a signed-out error that says to sign in, so it can be used to check a session before running other Vinted scripts.
 
 - Site: vinted.com
 - Address: `reduck/vinted.com/whoami`
-- Updated: 2026-10-01 (v2)
+- Updated: 2026-10-21 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,7 +29,7 @@ npx @reduck-ai/cli@latest run --script reduck/vinted.com/whoami
 
 ### What does "Vinted whoami" do?
 
-Report which Vinted account this browser is signed in as on a country site (vinted.fr by default; pass `domain`, e.g. www.vinted.com): the account email from account settings. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Vinted scripts.
+Report which Vinted account this browser is signed in as on a country site (vinted.fr by default; pass `domain`, e.g. www.vinted.com): the account's email. When the browser is not signed in to that country site, the run fails with a signed-out error that says to sign in, so it can be used to check a session before running other Vinted scripts.
 
 ### What information do I need to provide?
 

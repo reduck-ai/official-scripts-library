@@ -4,7 +4,7 @@ Automatically apply or remove a label on a thread on mail.google.com. Apply a la
 
 - Site: mail.google.com
 - Address: `reduck/mail.google.com/add_label`
-- Updated: 2026-10-05 (v19)
+- Updated: 2026-10-21 (v20)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -21,7 +21,7 @@ npx @reduck-ai/cli@latest run --script reduck/mail.google.com/add_label
 - `threadId` (string, required): The thread's id, from the threadId field of mail.google.com/search_emails (list_inbox does not return thread ids). Must be a thread you received; threads you sent only to yourself are refused.
 - `create` (boolean, optional): Allow creating the label when the account does not have it. Default false, so a typo fails loudly instead of quietly making a new label. Ignored when remove is true.
 - `remove` (boolean, optional): Leave false (the default) to apply the label. Set true to take it off.
-- `account` (string, optional): Optional authuser value for a browser signed into several Google accounts. Omit for the default (u/0).
+- `account` (string, optional): Optional Google account to act as, for a browser signed into several: its email address, or a bare mailbox index such as "2". Omit for the default (u/0).
 
 ## Output
 

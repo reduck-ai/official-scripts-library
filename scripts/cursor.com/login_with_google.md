@@ -4,7 +4,7 @@ Log into Cursor via "Continue with Google", driving the account chooser and land
 
 - Site: cursor.com
 - Address: `reduck/cursor.com/login_with_google`
-- Updated: 2026-08-21 (v3)
+- Updated: 2026-10-22 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -45,7 +45,7 @@ No. It only uses pages of cursor.com that are reachable without signing in.
 
 ### Does it change anything on cursor.com, or only read data?
 
-It makes changes on cursor.com, like sending, posting or booking something.
+It makes changes on cursor.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

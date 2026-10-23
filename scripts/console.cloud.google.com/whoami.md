@@ -4,7 +4,7 @@ Report which Google account the Google Cloud console is signed in as in this bro
 
 - Site: console.cloud.google.com
 - Address: `reduck/console.cloud.google.com/whoami`
-- Updated: 2026-10-21 (v5)
+- Updated: 2026-10-22 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

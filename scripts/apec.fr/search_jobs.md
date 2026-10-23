@@ -4,7 +4,7 @@ Automatically search APEC jobs on apec.fr. Search APEC (French executive/manager
 
 - Site: apec.fr
 - Address: `reduck/apec.fr/search_jobs`
-- Updated: 2026-10-06 (v4)
+- Updated: 2026-10-22 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

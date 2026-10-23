@@ -4,7 +4,7 @@ Automatically list Shopify store orders on admin.shopify.com. Lists orders from 
 
 - Site: admin.shopify.com
 - Address: `reduck/admin.shopify.com/list_orders`
-- Updated: 2026-09-29 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

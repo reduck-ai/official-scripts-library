@@ -1,10 +1,10 @@
-# Get Current User
+# Get current Neon console user
 
-Automatically get Current User on console.neon.tech. Report which Neon console account this browser is signed in as: email, first name and last name from Account settings > Profile. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Neon console scripts.
+Automatically get current Neon console user on console.neon.tech. Report which Neon console account this browser is signed in as: email, first name and last name. When the browser is signed out of the Neon console, the run fails with a signed-out error asking you to sign in to console.neon.tech.
 
 - Site: console.neon.tech
 - Address: `reduck/console.neon.tech/get_current_user`
-- Updated: 2026-10-05 (v3)
+- Updated: 2026-10-22 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -28,17 +28,17 @@ It takes no input.
 
 ## FAQ
 
-### What does "Get Current User" do?
+### What does "Get current Neon console user" do?
 
-Report which Neon console account this browser is signed in as: email, first name and last name from Account settings > Profile. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Neon console scripts.
+Report which Neon console account this browser is signed in as: email, first name and last name. When the browser is signed out of the Neon console, the run fails with a signed-out error asking you to sign in to console.neon.tech.
 
-### How do I automatically get Current User on console.neon.tech?
+### How do I automatically get current Neon console user on console.neon.tech?
 
 Ask an AI agent connected to Reduck to run reduck/console.neon.tech/get_current_user, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/console.neon.tech/get_current_user
 
-### Is there a console.neon.tech API to get Current User?
+### Is there a console.neon.tech API to get current Neon console user?
 
-You do not need one. "Get Current User" drives the real console.neon.tech pages in a browser, so it works whether or not console.neon.tech offers an API for this.
+You do not need one. "Get current Neon console user" drives the real console.neon.tech pages in a browser, so it works whether or not console.neon.tech offers an API for this.
 
 ### What information do I need to provide?
 

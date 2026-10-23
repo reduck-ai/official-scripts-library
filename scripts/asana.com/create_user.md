@@ -4,7 +4,7 @@ Automatically invite Asana team member on asana.com. Invite a person into an Asa
 
 - Site: asana.com
 - Address: `reduck/asana.com/create_user`
-- Updated: 2026-08-20 (v13)
+- Updated: 2026-10-22 (v15)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -54,7 +54,7 @@ Yes. It acts as you on asana.com: on your own Chrome it reuses your session, and
 
 ### Does it change anything on asana.com, or only read data?
 
-It makes changes on asana.com, like sending, posting or booking something.
+It makes changes on asana.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

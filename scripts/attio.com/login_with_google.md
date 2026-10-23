@@ -4,7 +4,7 @@ Log into the Attio CRM with Sign in with Google, handling the Google account cho
 
 - Site: attio.com
 - Address: `reduck/attio.com/login_with_google`
-- Updated: 2026-09-29 (v2)
+- Updated: 2026-10-22 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -43,7 +43,7 @@ It returns url, account, already, loggedIn, workspace.
 
 ### Do I need to be logged in to attio.com?
 
-Yes. It acts as you on attio.com: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the attio.com cookies saved by the Reduck extension.
+No. It only uses pages of attio.com that are reachable without signing in.
 
 ### Does it change anything on attio.com, or only read data?
 

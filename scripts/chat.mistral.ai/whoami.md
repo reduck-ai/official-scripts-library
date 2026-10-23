@@ -1,10 +1,10 @@
 # Le Chat whoami (signed-in account)
 
-Report which Mistral (Le Chat) account this browser is signed in as: email and name, from Mistral's own session service. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Le Chat scripts.
+Report which Mistral (Le Chat) account this browser is signed in as: email and name. When the browser is signed out of Le Chat, the run fails with a signed-out error asking you to sign in to chat.mistral.ai.
 
 - Site: chat.mistral.ai
 - Address: `reduck/chat.mistral.ai/whoami`
-- Updated: 2026-09-30 (v1)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,7 +29,7 @@ It takes no input.
 
 ### What does "Le Chat whoami (signed-in account)" do?
 
-Report which Mistral (Le Chat) account this browser is signed in as: email and name, from Mistral's own session service. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Le Chat scripts.
+Report which Mistral (Le Chat) account this browser is signed in as: email and name. When the browser is signed out of Le Chat, the run fails with a signed-out error asking you to sign in to chat.mistral.ai.
 
 ### What information do I need to provide?
 

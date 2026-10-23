@@ -4,7 +4,7 @@ Automatically search Cadremploi jobs on cadremploi.fr. Search Cadremploi (French
 
 - Site: cadremploi.fr
 - Address: `reduck/cadremploi.fr/search_jobs`
-- Updated: 2026-08-17 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

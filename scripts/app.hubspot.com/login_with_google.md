@@ -4,7 +4,7 @@ Log into HubSpot (app.hubspot.com) with Google SSO: submits your email, signs in
 
 - Site: app.hubspot.com
 - Address: `reduck/app.hubspot.com/login_with_google`
-- Updated: 2026-10-07 (v11)
+- Updated: 2026-10-22 (v14)
 - Author: Reduck AI (reduck)
 
 ## Run it

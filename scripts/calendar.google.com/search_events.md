@@ -4,7 +4,7 @@ Automatically search Google Calendar events on calendar.google.com. Full-text se
 
 - Site: calendar.google.com
 - Address: `reduck/calendar.google.com/search_events`
-- Updated: 2026-07-20 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

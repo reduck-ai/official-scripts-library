@@ -4,7 +4,7 @@ Automatically download an invoice PDF or CSV on admin.google.com. An unofficial 
 
 - Site: admin.google.com
 - Address: `reduck/admin.google.com/download_invoice`
-- Updated: 2026-10-06 (v1)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

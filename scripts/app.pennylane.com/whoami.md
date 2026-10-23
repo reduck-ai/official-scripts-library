@@ -4,7 +4,7 @@ Report which Pennylane account this browser is signed in as: email and name from
 
 - Site: app.pennylane.com
 - Address: `reduck/app.pennylane.com/whoami`
-- Updated: 2026-09-30 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

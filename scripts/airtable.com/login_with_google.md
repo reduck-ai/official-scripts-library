@@ -4,7 +4,7 @@ Log into Airtable via Google SSO, picking a specific account when an email is gi
 
 - Site: airtable.com
 - Address: `reduck/airtable.com/login_with_google`
-- Updated: 2026-10-02 (v9)
+- Updated: 2026-10-22 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it

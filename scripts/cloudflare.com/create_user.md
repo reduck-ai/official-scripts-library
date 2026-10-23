@@ -4,7 +4,7 @@ Automatically invite member on cloudflare.com. Invite a new member into one Clou
 
 - Site: cloudflare.com
 - Address: `reduck/cloudflare.com/create_user`
-- Updated: 2026-07-31 (v5)
+- Updated: 2026-10-22 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -56,7 +56,7 @@ Yes. It acts as you on cloudflare.com: on your own Chrome it reuses your session
 
 ### Does it change anything on cloudflare.com, or only read data?
 
-It makes changes on cloudflare.com, like sending, posting or booking something.
+It makes changes on cloudflare.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

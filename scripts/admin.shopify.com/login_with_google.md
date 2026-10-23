@@ -4,7 +4,7 @@ Log into a Shopify store admin via Google SSO — clicks 'Continue with Google' 
 
 - Site: admin.shopify.com
 - Address: `reduck/admin.shopify.com/login_with_google`
-- Updated: 2026-10-02 (v7)
+- Updated: 2026-10-22 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it

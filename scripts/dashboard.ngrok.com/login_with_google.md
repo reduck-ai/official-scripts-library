@@ -4,7 +4,7 @@ Sign in to ngrok with a Google account and return the signed-in ngrok account. R
 
 - Site: dashboard.ngrok.com
 - Address: `reduck/dashboard.ngrok.com/login_with_google`
-- Updated: 2026-10-20 (v8)
+- Updated: 2026-10-22 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it

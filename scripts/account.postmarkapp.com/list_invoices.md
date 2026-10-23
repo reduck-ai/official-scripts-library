@@ -4,7 +4,7 @@ Automatically list Postmark receipts on account.postmarkapp.com. List the billin
 
 - Site: account.postmarkapp.com
 - Address: `reduck/account.postmarkapp.com/list_invoices`
-- Updated: 2026-10-12 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

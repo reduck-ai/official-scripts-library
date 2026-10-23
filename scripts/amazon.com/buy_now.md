@@ -4,7 +4,7 @@ Buy an Amazon.com product by ASIN with Buy Now or Pre-order now: stop at checkou
 
 - Site: amazon.com
 - Address: `reduck/amazon.com/buy_now`
-- Updated: 2026-10-08 (v7)
+- Updated: 2026-10-22 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it

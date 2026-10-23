@@ -4,7 +4,7 @@ Automatically list HubSpot invoices on app.hubspot.com. List the billing invoice
 
 - Site: app.hubspot.com
 - Address: `reduck/app.hubspot.com/list_invoices`
-- Updated: 2026-08-07 (v5)
+- Updated: 2026-10-22 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

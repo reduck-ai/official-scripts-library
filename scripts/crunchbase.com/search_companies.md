@@ -4,7 +4,7 @@ Automatically search Companies on crunchbase.com. Filtered company search on Cru
 
 - Site: crunchbase.com
 - Address: `reduck/crunchbase.com/search_companies`
-- Updated: 2026-07-27 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

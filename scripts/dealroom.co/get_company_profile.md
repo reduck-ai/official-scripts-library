@@ -4,7 +4,7 @@ Automatically get Company Profile on dealroom.co. Fetch a company's full Dealroo
 
 - Site: dealroom.co
 - Address: `reduck/dealroom.co/get_company_profile`
-- Updated: 2026-08-19 (v5)
+- Updated: 2026-10-22 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

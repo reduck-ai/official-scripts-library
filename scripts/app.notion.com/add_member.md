@@ -4,7 +4,7 @@ Automatically invite workspace member (Notion) on app.notion.com. Invite someone
 
 - Site: app.notion.com
 - Address: `reduck/app.notion.com/add_member`
-- Updated: 2026-09-08 (v25)
+- Updated: 2026-10-22 (v26)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -62,7 +62,7 @@ Yes. It acts as you on app.notion.com: on your own Chrome it reuses your session
 
 ### Does it change anything on app.notion.com, or only read data?
 
-It makes changes on app.notion.com, like sending, posting or booking something.
+It makes changes on app.notion.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

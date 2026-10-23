@@ -4,7 +4,7 @@ Report which store this browser's Shopify admin opens: the store handle, the sto
 
 - Site: admin.shopify.com
 - Address: `reduck/admin.shopify.com/whoami`
-- Updated: 2026-10-20 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

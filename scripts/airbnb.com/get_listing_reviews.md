@@ -4,7 +4,7 @@ Automatically get Airbnb listing reviews on airbnb.com. Read the guest reviews o
 
 - Site: airbnb.com
 - Address: `reduck/airbnb.com/get_listing_reviews`
-- Updated: 2026-10-16 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

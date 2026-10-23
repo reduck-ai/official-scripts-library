@@ -4,7 +4,7 @@ Automatically list connector Claude directory on claude.ai. Every connector in C
 
 - Site: claude.ai
 - Address: `reduck/claude.ai/list_connector_directory`
-- Updated: 2026-09-24 (v6)
+- Updated: 2026-10-22 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

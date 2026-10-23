@@ -4,7 +4,7 @@ Automatically download a Notion invoice PDF on app.notion.com. An unofficial Not
 
 - Site: app.notion.com
 - Address: `reduck/app.notion.com/download_invoice_pdf`
-- Updated: 2026-10-06 (v4)
+- Updated: 2026-10-22 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

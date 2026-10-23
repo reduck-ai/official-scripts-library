@@ -4,7 +4,7 @@ Automatically download invoices on calendly.com. List Calendly billing invoices 
 
 - Site: calendly.com
 - Address: `reduck/calendly.com/download_invoices`
-- Updated: 2026-10-06 (v11)
+- Updated: 2026-10-22 (v12)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically list Neon organization members and roles on console.neon.tech. Lis
 
 - Site: console.neon.tech
 - Address: `reduck/console.neon.tech/list_users_and_roles`
-- Updated: 2026-07-27 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

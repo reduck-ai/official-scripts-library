@@ -1,10 +1,10 @@
 # Asana whoami (signed-in account)
 
-Report which Asana account this browser is signed in as: name, email and user gid, from Asana's own users/me. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Asana scripts.
+Report which Asana account this browser is signed in as: name, email and user gid. When the browser is signed out of Asana, the run fails with a signed-out error asking you to sign in to app.asana.com.
 
 - Site: asana.com
 - Address: `reduck/asana.com/whoami`
-- Updated: 2026-10-01 (v2)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -30,7 +30,7 @@ It takes no input.
 
 ### What does "Asana whoami (signed-in account)" do?
 
-Report which Asana account this browser is signed in as: name, email and user gid, from Asana's own users/me. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Asana scripts.
+Report which Asana account this browser is signed in as: name, email and user gid. When the browser is signed out of Asana, the run fails with a signed-out error asking you to sign in to app.asana.com.
 
 ### What information do I need to provide?
 

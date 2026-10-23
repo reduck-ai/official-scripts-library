@@ -4,7 +4,7 @@ Automatically switch Calendly language on calendly.com. Change the display langu
 
 - Site: calendly.com
 - Address: `reduck/calendly.com/switch_language`
-- Updated: 2026-10-02 (v4)
+- Updated: 2026-10-22 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

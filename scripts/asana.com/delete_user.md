@@ -4,7 +4,7 @@ Automatically remove Asana team member on asana.com. Remove a member (by email) 
 
 - Site: asana.com
 - Address: `reduck/asana.com/delete_user`
-- Updated: 2026-08-31 (v9)
+- Updated: 2026-10-22 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -54,7 +54,7 @@ Yes. It acts as you on asana.com: on your own Chrome it reuses your session, and
 
 ### Does it change anything on asana.com, or only read data?
 
-It makes changes on asana.com, like sending, posting or booking something.
+It makes changes on asana.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

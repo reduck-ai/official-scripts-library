@@ -4,7 +4,7 @@ Automatically get Booking.com guest reviews on booking.com. Read the guest revie
 
 - Site: booking.com
 - Address: `reduck/booking.com/get_property_reviews`
-- Updated: 2026-09-18 (v3)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

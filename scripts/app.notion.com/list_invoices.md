@@ -4,7 +4,7 @@ Automatically list Notion invoices across workspaces on app.notion.com. List eve
 
 - Site: app.notion.com
 - Address: `reduck/app.notion.com/list_invoices`
-- Updated: 2026-10-19 (v11)
+- Updated: 2026-10-22 (v13)
 - Author: Reduck AI (reduck)
 
 ## Run it

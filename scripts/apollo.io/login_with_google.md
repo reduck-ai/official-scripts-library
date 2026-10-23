@@ -4,7 +4,7 @@ Log into Apollo.io with Sign in with Google, handling the Google account chooser
 
 - Site: apollo.io
 - Address: `reduck/apollo.io/login_with_google`
-- Updated: 2026-09-29 (v2)
+- Updated: 2026-10-22 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -42,7 +42,7 @@ It returns url, account, already, loggedIn.
 
 ### Do I need to be logged in to apollo.io?
 
-Yes. It acts as you on apollo.io: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the apollo.io cookies saved by the Reduck extension.
+No. It only uses pages of apollo.io that are reachable without signing in.
 
 ### Does it change anything on apollo.io, or only read data?
 

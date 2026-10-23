@@ -4,7 +4,7 @@ Automatically upload a file to CSM-Testcenter (file input) on csm-testcenter.org
 
 - Site: csm-testcenter.org
 - Address: `reduck/csm-testcenter.org/upload_via_uploadfile`
-- Updated: 2026-10-20 (v8)
+- Updated: 2026-10-22 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it

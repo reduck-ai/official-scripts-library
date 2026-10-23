@@ -4,7 +4,7 @@ Automatically invite team member (Stripe) on dashboard.stripe.com. Invite someon
 
 - Site: dashboard.stripe.com
 - Address: `reduck/dashboard.stripe.com/create_user`
-- Updated: 2026-08-14 (v5)
+- Updated: 2026-10-22 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -61,7 +61,7 @@ Yes. It acts as you on dashboard.stripe.com: on your own Chrome it reuses your s
 
 ### Does it change anything on dashboard.stripe.com, or only read data?
 
-It makes changes on dashboard.stripe.com, like sending, posting or booking something.
+It makes changes on dashboard.stripe.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

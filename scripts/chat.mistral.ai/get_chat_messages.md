@@ -4,7 +4,7 @@ Automatically get Le Chat conversation messages on chat.mistral.ai. Full message
 
 - Site: chat.mistral.ai
 - Address: `reduck/chat.mistral.ai/get_chat_messages`
-- Updated: 2026-08-26 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

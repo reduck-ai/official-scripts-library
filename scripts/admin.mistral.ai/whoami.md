@@ -4,7 +4,7 @@ Report which Mistral account the Mistral admin console is signed in as in this b
 
 - Site: admin.mistral.ai
 - Address: `reduck/admin.mistral.ai/whoami`
-- Updated: 2026-10-20 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

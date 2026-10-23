@@ -4,7 +4,7 @@ Log into Canva via Google SSO and land in the Canva app, returning the signed-in
 
 - Site: canva.com
 - Address: `reduck/canva.com/login_with_google`
-- Updated: 2026-09-30 (v16)
+- Updated: 2026-10-22 (v18)
 - Author: Reduck AI (reduck)
 
 ## Run it

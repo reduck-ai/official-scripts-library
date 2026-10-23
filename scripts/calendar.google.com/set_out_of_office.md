@@ -4,7 +4,7 @@ Automatically set Out of Office on calendar.google.com. Create an out-of-office 
 
 - Site: calendar.google.com
 - Address: `reduck/calendar.google.com/set_out_of_office`
-- Updated: 2026-10-01 (v12)
+- Updated: 2026-10-22 (v13)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Open Airbnb's confirm-and-pay page for a listing, dates and guests, signed in, a
 
 - Site: airbnb.com
 - Address: `reduck/airbnb.com/prepare_booking`
-- Updated: 2026-10-16 (v3)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

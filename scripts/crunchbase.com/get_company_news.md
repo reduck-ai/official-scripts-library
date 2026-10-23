@@ -4,7 +4,7 @@ Automatically get Company News on crunchbase.com. Recent news and press mentions
 
 - Site: crunchbase.com
 - Address: `reduck/crunchbase.com/get_company_news`
-- Updated: 2026-07-27 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically get current Amazon user on amazon.com. Report the first name of th
 
 - Site: amazon.com
 - Address: `reduck/amazon.com/get_current_user`
-- Updated: 2026-10-20 (v6)
+- Updated: 2026-10-22 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically search AliExpress products on aliexpress.com. Search AliExpress pr
 
 - Site: aliexpress.com
 - Address: `reduck/aliexpress.com/search_products`
-- Updated: 2026-09-18 (v8)
+- Updated: 2026-10-22 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it

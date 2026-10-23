@@ -4,7 +4,7 @@ Automatically get Investor Portfolio on crunchbase.com. Recent portfolio investm
 
 - Site: crunchbase.com
 - Address: `reduck/crunchbase.com/get_investor_portfolio`
-- Updated: 2026-07-27 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

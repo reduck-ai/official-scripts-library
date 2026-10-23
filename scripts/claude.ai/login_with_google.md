@@ -4,7 +4,7 @@ Log into Claude (Anthropic) via Google SSO. Drives Claude's Continue-with-Google
 
 - Site: claude.ai
 - Address: `reduck/claude.ai/login_with_google`
-- Updated: 2026-08-24 (v6)
+- Updated: 2026-10-22 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -45,7 +45,7 @@ Yes. It acts as you on claude.ai: on your own Chrome it reuses your session, and
 
 ### Does it change anything on claude.ai, or only read data?
 
-It makes changes on claude.ai, like sending, posting or booking something.
+It makes changes on claude.ai, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

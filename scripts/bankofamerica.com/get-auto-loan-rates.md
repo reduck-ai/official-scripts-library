@@ -4,7 +4,7 @@ Automatically get Bank of America published auto loan rates on bankofamerica.com
 
 - Site: bankofamerica.com
 - Address: `reduck/bankofamerica.com/get-auto-loan-rates`
-- Updated: 2026-09-13 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

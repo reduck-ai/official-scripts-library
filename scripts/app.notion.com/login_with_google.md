@@ -4,7 +4,7 @@ Log into Notion (app.notion.com) with Continue with Google, handling the Google 
 
 - Site: app.notion.com
 - Address: `reduck/app.notion.com/login_with_google`
-- Updated: 2026-10-02 (v1)
+- Updated: 2026-10-22 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

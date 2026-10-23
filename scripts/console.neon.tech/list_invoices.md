@@ -4,7 +4,7 @@ Automatically list Neon invoices on console.neon.tech. List the signed-in Neon o
 
 - Site: console.neon.tech
 - Address: `reduck/console.neon.tech/list_invoices`
-- Updated: 2026-08-19 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

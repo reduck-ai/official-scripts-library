@@ -4,7 +4,7 @@ Automatically create or update a HubSpot contact on app.hubspot.com. Create a Hu
 
 - Site: app.hubspot.com
 - Address: `reduck/app.hubspot.com/create_or_update_contact`
-- Updated: 2026-10-06 (v4)
+- Updated: 2026-10-22 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

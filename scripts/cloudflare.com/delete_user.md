@@ -4,7 +4,7 @@ Automatically remove member on cloudflare.com. Remove a member from one Cloudfla
 
 - Site: cloudflare.com
 - Address: `reduck/cloudflare.com/delete_user`
-- Updated: 2026-07-31 (v6)
+- Updated: 2026-10-22 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -54,7 +54,7 @@ Yes. It acts as you on cloudflare.com: on your own Chrome it reuses your session
 
 ### Does it change anything on cloudflare.com, or only read data?
 
-It makes changes on cloudflare.com, like sending, posting or booking something.
+It makes changes on cloudflare.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

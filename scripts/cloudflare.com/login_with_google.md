@@ -1,10 +1,10 @@
 # Cloudflare login (Google SSO)
 
-Log into the Cloudflare dashboard via the Google button. Dismisses the cookie banner, handles a remembered-account quick sign-in if one exists, drives the chooser, and lands on the dashboard. Best run on your own paired browser rather than a freshly launched one, since it relies on an existing Google session. Known limitation: if Cloudflare forces a 2FA or passkey step-up on the Google redirect, the login can't complete unattended — verify that step manually once in the same browser, then re-run. Optional `email` arg picks which Google account to use.
+Log into the Cloudflare dashboard via the Google button. Dismisses the cookie banner, handles a remembered-account quick sign-in if one exists, drives the chooser, and lands on the dashboard. Best run on your own paired browser rather than a freshly launched one, since it relies on an existing Google session. If Cloudflare or Google asks for a 2FA or passkey step on the way, the login cannot complete unattended: complete that step by hand once in the same browser, then run it again. Optional `email` arg picks which Google account to use.
 
 - Site: cloudflare.com
 - Address: `reduck/cloudflare.com/login_with_google`
-- Updated: 2026-10-02 (v6)
+- Updated: 2026-10-22 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,7 +29,7 @@ npx @reduck-ai/cli@latest run --script reduck/cloudflare.com/login_with_google
 
 ### What does "Cloudflare login (Google SSO)" do?
 
-Log into the Cloudflare dashboard via the Google button. Dismisses the cookie banner, handles a remembered-account quick sign-in if one exists, drives the chooser, and lands on the dashboard. Best run on your own paired browser rather than a freshly launched one, since it relies on an existing Google session. Known limitation: if Cloudflare forces a 2FA or passkey step-up on the Google redirect, the login can't complete unattended — verify that step manually once in the same browser, then re-run. Optional `email` arg picks which Google account to use.
+Log into the Cloudflare dashboard via the Google button. Dismisses the cookie banner, handles a remembered-account quick sign-in if one exists, drives the chooser, and lands on the dashboard. Best run on your own paired browser rather than a freshly launched one, since it relies on an existing Google session. If Cloudflare or Google asks for a 2FA or passkey step on the way, the login cannot complete unattended: complete that step by hand once in the same browser, then run it again. Optional `email` arg picks which Google account to use.
 
 ### What information do I need to provide?
 

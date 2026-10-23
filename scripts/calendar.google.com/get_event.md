@@ -4,7 +4,7 @@ Automatically get Google Calendar event on calendar.google.com. Read a Google Ca
 
 - Site: calendar.google.com
 - Address: `reduck/calendar.google.com/get_event`
-- Updated: 2026-08-27 (v3)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

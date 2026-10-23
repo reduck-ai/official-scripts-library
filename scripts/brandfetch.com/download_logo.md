@@ -4,7 +4,7 @@ Automatically download brand logo pack on brandfetch.com. Given a company domain
 
 - Site: brandfetch.com
 - Address: `reduck/brandfetch.com/download_logo`
-- Updated: 2026-09-30 (v7)
+- Updated: 2026-10-22 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it

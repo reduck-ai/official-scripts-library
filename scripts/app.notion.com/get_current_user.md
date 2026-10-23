@@ -4,7 +4,7 @@ Automatically get Current Notion User on app.notion.com. Report which Notion acc
 
 - Site: app.notion.com
 - Address: `reduck/app.notion.com/get_current_user`
-- Updated: 2026-09-28 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

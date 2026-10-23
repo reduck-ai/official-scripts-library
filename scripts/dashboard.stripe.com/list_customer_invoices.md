@@ -4,7 +4,7 @@ Automatically list Stripe customer invoices on dashboard.stripe.com. List the in
 
 - Site: dashboard.stripe.com
 - Address: `reduck/dashboard.stripe.com/list_customer_invoices`
-- Updated: 2026-09-25 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

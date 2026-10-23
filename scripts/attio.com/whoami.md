@@ -4,7 +4,7 @@ Report which Attio account this browser is signed in as: the user id, email, nam
 
 - Site: attio.com
 - Address: `reduck/attio.com/whoami`
-- Updated: 2026-10-20 (v3)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Report which Atlassian account the Atlassian admin console is signed in as in th
 
 - Site: admin.atlassian.com
 - Address: `reduck/admin.atlassian.com/whoami`
-- Updated: 2026-10-20 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

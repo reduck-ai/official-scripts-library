@@ -4,7 +4,7 @@ Automatically get usage on browserbase.com. Read a Browserbase project's usage â
 
 - Site: browserbase.com
 - Address: `reduck/browserbase.com/get_usage`
-- Updated: 2026-09-28 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

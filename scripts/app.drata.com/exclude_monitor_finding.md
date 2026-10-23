@@ -4,7 +4,7 @@ Automatically exclude a Drata monitoring finding on app.drata.com. Exclude one f
 
 - Site: app.drata.com
 - Address: `reduck/app.drata.com/exclude_monitor_finding`
-- Updated: 2026-10-08 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

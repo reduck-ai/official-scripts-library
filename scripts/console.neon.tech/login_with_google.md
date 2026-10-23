@@ -4,7 +4,7 @@ Log into the Neon console with Google: clicks Google and lands on your Neon proj
 
 - Site: console.neon.tech
 - Address: `reduck/console.neon.tech/login_with_google`
-- Updated: 2026-10-05 (v3)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

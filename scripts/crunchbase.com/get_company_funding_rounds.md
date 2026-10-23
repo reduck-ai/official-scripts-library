@@ -4,7 +4,7 @@ Automatically get Company Funding Rounds on crunchbase.com. Full funding round h
 
 - Site: crunchbase.com
 - Address: `reduck/crunchbase.com/get_company_funding_rounds`
-- Updated: 2026-07-27 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically delete a Google Calendar event on calendar.google.com. Delete an e
 
 - Site: calendar.google.com
 - Address: `reduck/calendar.google.com/delete_event`
-- Updated: 2026-08-27 (v4)
+- Updated: 2026-10-22 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -52,7 +52,7 @@ Yes. It acts as you on calendar.google.com: on your own Chrome it reuses your se
 
 ### Does it change anything on calendar.google.com, or only read data?
 
-It makes changes on calendar.google.com, like sending, posting or booking something.
+It makes changes on calendar.google.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

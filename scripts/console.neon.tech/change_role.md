@@ -4,7 +4,7 @@ Automatically change Neon organization member's role on console.neon.tech. Chang
 
 - Site: console.neon.tech
 - Address: `reduck/console.neon.tech/change_role`
-- Updated: 2026-08-27 (v5)
+- Updated: 2026-10-22 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -54,7 +54,7 @@ Yes. It acts as you on console.neon.tech: on your own Chrome it reuses your sess
 
 ### Does it change anything on console.neon.tech, or only read data?
 
-It makes changes on console.neon.tech, like sending, posting or booking something.
+It makes changes on console.neon.tech, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

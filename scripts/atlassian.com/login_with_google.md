@@ -4,7 +4,7 @@ Log into Atlassian via Google sign-in — clicks the Google option, picks the ac
 
 - Site: atlassian.com
 - Address: `reduck/atlassian.com/login_with_google`
-- Updated: 2026-08-24 (v5)
+- Updated: 2026-10-22 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -45,7 +45,7 @@ No. It only uses pages of atlassian.com that are reachable without signing in.
 
 ### Does it change anything on atlassian.com, or only read data?
 
-It makes changes on atlassian.com, like sending, posting or booking something.
+It makes changes on atlassian.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

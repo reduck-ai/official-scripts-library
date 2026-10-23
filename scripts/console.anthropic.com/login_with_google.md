@@ -4,7 +4,7 @@ Log into the Claude Console (platform.claude.com, formerly console.anthropic.com
 
 - Site: console.anthropic.com
 - Address: `reduck/console.anthropic.com/login_with_google`
-- Updated: 2026-09-30 (v4)
+- Updated: 2026-10-22 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it

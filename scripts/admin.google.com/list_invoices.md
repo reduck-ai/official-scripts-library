@@ -4,7 +4,7 @@ Automatically list your invoices by date range on admin.google.com. An unofficia
 
 - Site: admin.google.com
 - Address: `reduck/admin.google.com/list_invoices`
-- Updated: 2026-10-06 (v8)
+- Updated: 2026-10-22 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it

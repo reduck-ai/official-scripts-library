@@ -4,7 +4,7 @@ Log into Le Chat (chat.mistral.ai) with Google sign-in, handling the Google acco
 
 - Site: chat.mistral.ai
 - Address: `reduck/chat.mistral.ai/login_with_google`
-- Updated: 2026-10-02 (v1)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

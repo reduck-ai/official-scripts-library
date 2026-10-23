@@ -4,7 +4,7 @@ Automatically download Cloudflare invoice/receipt on cloudflare.com. Download a 
 
 - Site: cloudflare.com
 - Address: `reduck/cloudflare.com/download_invoice`
-- Updated: 2026-08-25 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically download Postmark receipt on account.postmarkapp.com. Download one
 
 - Site: account.postmarkapp.com
 - Address: `reduck/account.postmarkapp.com/download_invoice`
-- Updated: 2026-10-12 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

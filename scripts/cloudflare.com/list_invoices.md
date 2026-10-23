@@ -1,10 +1,10 @@
-# Cloudflare: list invoices
+# List Cloudflare invoices
 
-Automatically list invoices on cloudflare.com. List Cloudflare invoices across every account visible to the signed-in user. Returns per account name, accountId, and invoices with date, type, number, amount, status. Accounts with no invoices come back with an empty invoices array rather than an error.
+Automatically list Cloudflare invoices on cloudflare.com. List Cloudflare invoices across every account visible to the signed-in user, one page (50 entries) per account at a time. Returns per account its name, accountId, invoices (date, type, number, amount, status) and hasNextPage; pass page 2, 3… while an account has more. Accounts with no invoices come back with an empty list. A signed-out browser fails with a signed-out error asking to sign in at dash.cloudflare.com.
 
 - Site: cloudflare.com
 - Address: `reduck/cloudflare.com/list_invoices`
-- Updated: 2026-08-21 (v5)
+- Updated: 2026-10-22 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/cloudflare.com/list_invoices
 
 ## Input
 
-It takes no input.
+- `page` (integer, optional): Page of each account's billing history (50 entries per page). Ask the next page while an account says hasNextPage.
 
 ## Output
 
@@ -25,21 +25,21 @@ It takes no input.
 
 ## FAQ
 
-### What does "Cloudflare: list invoices" do?
+### What does "List Cloudflare invoices" do?
 
-List Cloudflare invoices across every account visible to the signed-in user. Returns per account name, accountId, and invoices with date, type, number, amount, status. Accounts with no invoices come back with an empty invoices array rather than an error.
+List Cloudflare invoices across every account visible to the signed-in user, one page (50 entries) per account at a time. Returns per account its name, accountId, invoices (date, type, number, amount, status) and hasNextPage; pass page 2, 3… while an account has more. Accounts with no invoices come back with an empty list. A signed-out browser fails with a signed-out error asking to sign in at dash.cloudflare.com.
 
-### How do I automatically list invoices on cloudflare.com?
+### How do I automatically list Cloudflare invoices on cloudflare.com?
 
 Ask an AI agent connected to Reduck to run reduck/cloudflare.com/list_invoices, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/cloudflare.com/list_invoices
 
-### Is there a cloudflare.com API to list invoices?
+### Is there a cloudflare.com API to list Cloudflare invoices?
 
-You do not need one. "Cloudflare: list invoices" drives the real cloudflare.com pages in a browser, so it works whether or not cloudflare.com offers an API for this.
+You do not need one. "List Cloudflare invoices" drives the real cloudflare.com pages in a browser, so it works whether or not cloudflare.com offers an API for this.
 
 ### What information do I need to provide?
 
-Nothing. It takes no input.
+Optional: page.
 
 ### What does it return?
 

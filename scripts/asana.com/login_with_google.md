@@ -4,7 +4,7 @@ Log into Asana via Google SSO. Picks the Google account (optional email arg), cl
 
 - Site: asana.com
 - Address: `reduck/asana.com/login_with_google`
-- Updated: 2026-09-30 (v9)
+- Updated: 2026-10-22 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it

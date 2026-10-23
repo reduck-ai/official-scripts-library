@@ -4,7 +4,7 @@ Automatically get ChatGPT Codex usage limits on chatgpt.com. Read the Codex usag
 
 - Site: chatgpt.com
 - Address: `reduck/chatgpt.com/get_codex_usage`
-- Updated: 2026-10-21 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

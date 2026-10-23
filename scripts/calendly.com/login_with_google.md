@@ -4,7 +4,7 @@ Log into Calendly via Google SSO (same-tab redirect). Picks the account (optiona
 
 - Site: calendly.com
 - Address: `reduck/calendly.com/login_with_google`
-- Updated: 2026-08-21 (v5)
+- Updated: 2026-10-22 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -45,7 +45,7 @@ Yes. It acts as you on calendly.com: on your own Chrome it reuses your session, 
 
 ### Does it change anything on calendly.com, or only read data?
 
-It makes changes on calendly.com, like sending, posting or booking something.
+It makes changes on calendly.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

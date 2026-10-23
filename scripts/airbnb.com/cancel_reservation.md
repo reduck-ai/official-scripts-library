@@ -4,7 +4,7 @@ Automatically cancel an Airbnb reservation on airbnb.com. Cancel one of your Air
 
 - Site: airbnb.com
 - Address: `reduck/airbnb.com/cancel_reservation`
-- Updated: 2026-10-16 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

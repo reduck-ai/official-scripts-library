@@ -4,7 +4,7 @@ Automatically add Google Meet link to a Calendar event on calendar.google.com. A
 
 - Site: calendar.google.com
 - Address: `reduck/calendar.google.com/add_conference_link`
-- Updated: 2026-09-29 (v2)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

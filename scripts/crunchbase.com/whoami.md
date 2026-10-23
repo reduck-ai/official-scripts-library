@@ -1,10 +1,10 @@
 # Crunchbase whoami (signed-in account)
 
-Report which Crunchbase account this browser is signed in as: email, first name and last name from Account Settings > Your Info. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Crunchbase scripts.
+Report which Crunchbase account this browser is signed in as: the account email, first name and last name. When the browser is signed out of Crunchbase, the run fails with a signed-out error asking you to sign in to crunchbase.com.
 
 - Site: crunchbase.com
 - Address: `reduck/crunchbase.com/whoami`
-- Updated: 2026-10-01 (v2)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -30,7 +30,7 @@ It takes no input.
 
 ### What does "Crunchbase whoami (signed-in account)" do?
 
-Report which Crunchbase account this browser is signed in as: email, first name and last name from Account Settings > Your Info. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Crunchbase scripts.
+Report which Crunchbase account this browser is signed in as: the account email, first name and last name. When the browser is signed out of Crunchbase, the run fails with a signed-out error asking you to sign in to crunchbase.com.
 
 ### What information do I need to provide?
 

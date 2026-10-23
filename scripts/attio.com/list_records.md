@@ -4,7 +4,7 @@ Automatically list Attio records on attio.com. List records from an Attio object
 
 - Site: attio.com
 - Address: `reduck/attio.com/list_records`
-- Updated: 2026-09-29 (v7)
+- Updated: 2026-10-22 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it

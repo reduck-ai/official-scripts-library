@@ -1,10 +1,10 @@
 # List ChatGPT models
 
-Automatically list ChatGPT models on chatgpt.com. List the models ChatGPT offers the signed-in account and the lanes its model picker is built from, plus the account's default model. Each model carries its slug, title and description; each lane carries its id, name, default model, the models it holds and the plan it requires. On a free account the picker itself is not shown and only the Auto and Instant lanes come back, which is what the site offers there. Requires a signed-in session.
+Automatically list ChatGPT models on chatgpt.com. List the models ChatGPT offers the signed-in account and the lanes its model picker is built from, plus the account's default model. Each model carries its slug, title and description; each lane carries its id, name, default model, the models it holds and the plan it requires. On a free account the picker itself is not shown and only the free lanes come back, which is what the site offers there. A signed-out browser fails with a signed-out error asking to sign in to chatgpt.com.
 
 - Site: chatgpt.com
 - Address: `reduck/chatgpt.com/list_models`
-- Updated: 2026-10-14 (v2)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,7 +29,7 @@ It takes no input.
 
 ### What does "List ChatGPT models" do?
 
-List the models ChatGPT offers the signed-in account and the lanes its model picker is built from, plus the account's default model. Each model carries its slug, title and description; each lane carries its id, name, default model, the models it holds and the plan it requires. On a free account the picker itself is not shown and only the Auto and Instant lanes come back, which is what the site offers there. Requires a signed-in session.
+List the models ChatGPT offers the signed-in account and the lanes its model picker is built from, plus the account's default model. Each model carries its slug, title and description; each lane carries its id, name, default model, the models it holds and the plan it requires. On a free account the picker itself is not shown and only the free lanes come back, which is what the site offers there. A signed-out browser fails with a signed-out error asking to sign in to chatgpt.com.
 
 ### How do I automatically list ChatGPT models on chatgpt.com?
 

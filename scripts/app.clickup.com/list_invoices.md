@@ -4,7 +4,7 @@ Automatically list invoices on app.clickup.com. List a ClickUp workspace's billi
 
 - Site: app.clickup.com
 - Address: `reduck/app.clickup.com/list_invoices`
-- Updated: 2026-08-21 (v6)
+- Updated: 2026-10-22 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

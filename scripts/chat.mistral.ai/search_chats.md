@@ -4,7 +4,7 @@ Automatically search Le Chat conversations on chat.mistral.ai. Full-text search 
 
 - Site: chat.mistral.ai
 - Address: `reduck/chat.mistral.ai/search_chats`
-- Updated: 2026-08-26 (v3)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

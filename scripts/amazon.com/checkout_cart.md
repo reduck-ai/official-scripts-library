@@ -4,7 +4,7 @@ Automatically check out Amazon cart on amazon.com. Check out your Amazon.com sho
 
 - Site: amazon.com
 - Address: `reduck/amazon.com/checkout_cart`
-- Updated: 2026-10-08 (v5)
+- Updated: 2026-10-22 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

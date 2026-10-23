@@ -1,10 +1,10 @@
 # List Calendly invoices
 
-Automatically list Calendly invoices on calendly.com. List Calendly billing invoices (org admin only). Per invoice returns date, title, amount, currency, status, invoiceId, chargeId and downloadUrl (a direct public Stripe PDF link — open in a browser to save). Chain calendly.com/login_with_google before this.
+Automatically list Calendly invoices on calendly.com. List Calendly billing invoices (org admin only). Per invoice returns date, title, amount, currency, status, invoiceId, chargeId and downloadUrl (a direct Stripe PDF link; open it in a browser to save). A signed-out browser fails with a signed-out error asking to sign in to calendly.com (calendly.com/login_with_google can do it); an account that is not an org admin fails asking to sign in as one. An account with no charges returns an empty list.
 
 - Site: calendly.com
 - Address: `reduck/calendly.com/list_invoices`
-- Updated: 2026-08-19 (v4)
+- Updated: 2026-10-22 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -28,7 +28,7 @@ It takes no input.
 
 ### What does "List Calendly invoices" do?
 
-List Calendly billing invoices (org admin only). Per invoice returns date, title, amount, currency, status, invoiceId, chargeId and downloadUrl (a direct public Stripe PDF link — open in a browser to save). Chain calendly.com/login_with_google before this.
+List Calendly billing invoices (org admin only). Per invoice returns date, title, amount, currency, status, invoiceId, chargeId and downloadUrl (a direct Stripe PDF link; open it in a browser to save). A signed-out browser fails with a signed-out error asking to sign in to calendly.com (calendly.com/login_with_google can do it); an account that is not an org admin fails asking to sign in as one. An account with no charges returns an empty list.
 
 ### How do I automatically list Calendly invoices on calendly.com?
 

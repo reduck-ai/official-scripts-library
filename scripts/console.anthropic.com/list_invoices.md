@@ -4,7 +4,7 @@ Automatically list Anthropic Console invoices on console.anthropic.com. List you
 
 - Site: console.anthropic.com
 - Address: `reduck/console.anthropic.com/list_invoices`
-- Updated: 2026-10-06 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

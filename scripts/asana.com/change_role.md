@@ -4,7 +4,7 @@ Automatically change Asana team member's role on asana.com. Change a team member
 
 - Site: asana.com
 - Address: `reduck/asana.com/change_role`
-- Updated: 2026-08-20 (v5)
+- Updated: 2026-10-22 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -56,7 +56,7 @@ Yes. It acts as you on asana.com: on your own Chrome it reuses your session, and
 
 ### Does it change anything on asana.com, or only read data?
 
-It makes changes on asana.com, like sending, posting or booking something.
+It makes changes on asana.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

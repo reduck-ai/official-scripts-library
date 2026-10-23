@@ -4,7 +4,7 @@ Automatically get current user on cloudflare.com. Report which Cloudflare accoun
 
 - Site: cloudflare.com
 - Address: `reduck/cloudflare.com/get_current_user`
-- Updated: 2026-10-05 (v3)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Log into OpenAI / ChatGPT via Google SSO — picks the right account when severa
 
 - Site: chatgpt.com
 - Address: `reduck/chatgpt.com/login_with_google`
-- Updated: 2026-08-21 (v5)
+- Updated: 2026-10-22 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -46,7 +46,7 @@ Yes. It acts as you on chatgpt.com: on your own Chrome it reuses your session, a
 
 ### Does it change anything on chatgpt.com, or only read data?
 
-It makes changes on chatgpt.com, like sending, posting or booking something.
+It makes changes on chatgpt.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

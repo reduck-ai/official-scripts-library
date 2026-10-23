@@ -4,7 +4,7 @@ Automatically list Notion Marketplace custom agents on app.notion.com. List the 
 
 - Site: app.notion.com
 - Address: `reduck/app.notion.com/list_marketplace_agents`
-- Updated: 2026-08-25 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

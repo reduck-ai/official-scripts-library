@@ -4,7 +4,7 @@ Respond to a Google Calendar invitation (RSVP yes / no / maybe) by its eid, as t
 
 - Site: calendar.google.com
 - Address: `reduck/calendar.google.com/respond_invitation`
-- Updated: 2026-08-27 (v5)
+- Updated: 2026-10-22 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -46,7 +46,7 @@ Yes. It acts as you on calendar.google.com: on your own Chrome it reuses your se
 
 ### Does it change anything on calendar.google.com, or only read data?
 
-It makes changes on calendar.google.com, like sending, posting or booking something.
+It makes changes on calendar.google.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

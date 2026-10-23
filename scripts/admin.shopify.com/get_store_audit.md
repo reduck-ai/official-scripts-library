@@ -4,7 +4,7 @@ Gives a health check of the signed-in Shopify store: its name, domain, plan and 
 
 - Site: admin.shopify.com
 - Address: `reduck/admin.shopify.com/get_store_audit`
-- Updated: 2026-09-29 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

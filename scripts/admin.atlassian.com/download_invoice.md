@@ -4,7 +4,7 @@ Automatically download an Atlassian invoice PDF on admin.atlassian.com. Download
 
 - Site: admin.atlassian.com
 - Address: `reduck/admin.atlassian.com/download_invoice`
-- Updated: 2026-08-26 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically list Airtable invoices on airtable.com. List Airtable workspace bi
 
 - Site: airtable.com
 - Address: `reduck/airtable.com/list_invoices`
-- Updated: 2026-10-01 (v5)
+- Updated: 2026-10-22 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

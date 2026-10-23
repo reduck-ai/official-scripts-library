@@ -4,7 +4,7 @@ Authenticate to claude.ai by email magic link, with no cookie injection: request
 
 - Site: claude.ai
 - Address: `reduck/claude.ai/login`
-- Updated: 2026-09-07 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -46,7 +46,7 @@ No. It only uses pages of claude.ai that are reachable without signing in.
 
 ### Does it change anything on claude.ai, or only read data?
 
-It makes changes on claude.ai, like sending, posting or booking something.
+It makes changes on claude.ai, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

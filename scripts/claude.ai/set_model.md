@@ -4,7 +4,7 @@ Automatically set Claude.ai model and effort on claude.ai. Change the model and/
 
 - Site: claude.ai
 - Address: `reduck/claude.ai/set_model`
-- Updated: 2026-09-18 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -53,7 +53,7 @@ Yes. It acts as you on claude.ai: on your own Chrome it reuses your session, and
 
 ### Does it change anything on claude.ai, or only read data?
 
-It makes changes on claude.ai, like sending, posting or booking something.
+It makes changes on claude.ai, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

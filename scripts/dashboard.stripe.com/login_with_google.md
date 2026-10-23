@@ -4,7 +4,7 @@ Log into the Stripe Dashboard with Continue with Google, handling the Google acc
 
 - Site: dashboard.stripe.com
 - Address: `reduck/dashboard.stripe.com/login_with_google`
-- Updated: 2026-10-01 (v2)
+- Updated: 2026-10-22 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -42,7 +42,7 @@ It returns url, account, already, loggedIn.
 
 ### Do I need to be logged in to dashboard.stripe.com?
 
-Yes. It acts as you on dashboard.stripe.com: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the dashboard.stripe.com cookies saved by the Reduck extension.
+No. It only uses pages of dashboard.stripe.com that are reachable without signing in.
 
 ### Does it change anything on dashboard.stripe.com, or only read data?
 

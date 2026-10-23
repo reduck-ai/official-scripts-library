@@ -4,7 +4,7 @@ Automatically download a Shopify invoice PDF on admin.shopify.com. Download one 
 
 - Site: admin.shopify.com
 - Address: `reduck/admin.shopify.com/download_invoice`
-- Updated: 2026-10-09 (v11)
+- Updated: 2026-10-22 (v12)
 - Author: Reduck AI (reduck)
 
 ## Run it

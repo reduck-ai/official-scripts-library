@@ -4,7 +4,7 @@ Report which Notion account this browser is signed in as: the user id, email and
 
 - Site: app.notion.com
 - Address: `reduck/app.notion.com/whoami`
-- Updated: 2026-10-20 (v3)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

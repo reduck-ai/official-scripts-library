@@ -4,7 +4,7 @@ Automatically create a Google Calendar event on calendar.google.com. Create an e
 
 - Site: calendar.google.com
 - Address: `reduck/calendar.google.com/create_event`
-- Updated: 2026-09-30 (v9)
+- Updated: 2026-10-22 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it

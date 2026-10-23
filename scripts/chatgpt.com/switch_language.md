@@ -4,7 +4,7 @@ Switch the ChatGPT web app's display language via Settings, for a signed-in acco
 
 - Site: chatgpt.com
 - Address: `reduck/chatgpt.com/switch_language`
-- Updated: 2026-08-31 (v4)
+- Updated: 2026-10-22 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -43,7 +43,7 @@ Yes. It acts as you on chatgpt.com: on your own Chrome it reuses your session, a
 
 ### Does it change anything on chatgpt.com, or only read data?
 
-It makes changes on chatgpt.com, like sending, posting or booking something.
+It makes changes on chatgpt.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

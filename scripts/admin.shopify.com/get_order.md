@@ -4,7 +4,7 @@ Automatically get a Shopify order on admin.shopify.com. Returns the full details
 
 - Site: admin.shopify.com
 - Address: `reduck/admin.shopify.com/get_order`
-- Updated: 2026-09-29 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

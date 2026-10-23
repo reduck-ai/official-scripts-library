@@ -1,10 +1,10 @@
 # Neon console whoami (signed-in account)
 
-Report which Neon console account this browser is signed in as: email, first name and last name from Account settings > Profile. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Neon console scripts.
+Report which Neon console account this browser is signed in as: email, first name and last name. When the browser is signed out of the Neon console, the run fails with a signed-out error asking you to sign in to console.neon.tech.
 
 - Site: console.neon.tech
 - Address: `reduck/console.neon.tech/whoami`
-- Updated: 2026-10-01 (v2)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -30,7 +30,7 @@ It takes no input.
 
 ### What does "Neon console whoami (signed-in account)" do?
 
-Report which Neon console account this browser is signed in as: email, first name and last name from Account settings > Profile. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Neon console scripts.
+Report which Neon console account this browser is signed in as: email, first name and last name. When the browser is signed out of the Neon console, the run fails with a signed-out error asking you to sign in to console.neon.tech.
 
 ### What information do I need to provide?
 

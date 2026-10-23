@@ -1,10 +1,10 @@
-# Get Current User
+# Get current Crunchbase user
 
-Automatically get Current User on crunchbase.com. Report which Crunchbase account this browser is signed in as: email, first name and last name from Account Settings > Your Info. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Crunchbase scripts.
+Automatically get current Crunchbase user on crunchbase.com. Report which Crunchbase account this browser is signed in as: the account email, first name and last name. When the browser is signed out of Crunchbase, the run fails with a signed-out error asking you to sign in to crunchbase.com.
 
 - Site: crunchbase.com
 - Address: `reduck/crunchbase.com/get_current_user`
-- Updated: 2026-10-05 (v3)
+- Updated: 2026-10-22 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -28,17 +28,17 @@ It takes no input.
 
 ## FAQ
 
-### What does "Get Current User" do?
+### What does "Get current Crunchbase user" do?
 
-Report which Crunchbase account this browser is signed in as: email, first name and last name from Account Settings > Your Info. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Crunchbase scripts.
+Report which Crunchbase account this browser is signed in as: the account email, first name and last name. When the browser is signed out of Crunchbase, the run fails with a signed-out error asking you to sign in to crunchbase.com.
 
-### How do I automatically get Current User on crunchbase.com?
+### How do I automatically get current Crunchbase user on crunchbase.com?
 
 Ask an AI agent connected to Reduck to run reduck/crunchbase.com/get_current_user, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/crunchbase.com/get_current_user
 
-### Is there a crunchbase.com API to get Current User?
+### Is there a crunchbase.com API to get current Crunchbase user?
 
-You do not need one. "Get Current User" drives the real crunchbase.com pages in a browser, so it works whether or not crunchbase.com offers an API for this.
+You do not need one. "Get current Crunchbase user" drives the real crunchbase.com pages in a browser, so it works whether or not crunchbase.com offers an API for this.
 
 ### What information do I need to provide?
 

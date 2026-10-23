@@ -4,7 +4,7 @@ Report which Atlassian account this browser is signed in as: the account id, ema
 
 - Site: atlassian.com
 - Address: `reduck/atlassian.com/whoami`
-- Updated: 2026-10-20 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

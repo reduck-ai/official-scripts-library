@@ -1,10 +1,10 @@
 # List Amazon category page
 
-Automatically list Amazon category page on amazon.com. List one page of an Amazon search or browse-node listing. Returns url, heading, and products (asin, position, sponsored). The url must be an Amazon /s listing page. This returns card-level ASINs only, so pass them to Get Amazon product for full detail.
+Automatically list Amazon category page on amazon.com. List one page of an Amazon search or category listing, every product card in page order. Takes the listing's link as you see it on Amazon after a search or a category click. Returns the link, the heading, and the products (ASIN, position on the page, and whether the card is sponsored). A product can appear twice, once as a sponsored card and once as a regular result. Only the ASINs are returned; pass them to Get Amazon product for the details.
 
 - Site: amazon.com
 - Address: `reduck/amazon.com/list-category`
-- Updated: 2026-10-08 (v5)
+- Updated: 2026-10-22 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -30,7 +30,7 @@ npx @reduck-ai/cli@latest run --script reduck/amazon.com/list-category
 
 ### What does "List Amazon category page" do?
 
-List one page of an Amazon search or browse-node listing. Returns url, heading, and products (asin, position, sponsored). The url must be an Amazon /s listing page. This returns card-level ASINs only, so pass them to Get Amazon product for full detail.
+List one page of an Amazon search or category listing, every product card in page order. Takes the listing's link as you see it on Amazon after a search or a category click. Returns the link, the heading, and the products (ASIN, position on the page, and whether the card is sponsored). A product can appear twice, once as a sponsored card and once as a regular result. Only the ASINs are returned; pass them to Get Amazon product for the details.
 
 ### How do I automatically list Amazon category page on amazon.com?
 

@@ -4,7 +4,7 @@ Automatically create a Shopify product on admin.shopify.com. Creates a product i
 
 - Site: admin.shopify.com
 - Address: `reduck/admin.shopify.com/create_product`
-- Updated: 2026-09-29 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

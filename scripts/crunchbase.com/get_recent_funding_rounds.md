@@ -4,7 +4,7 @@ Automatically get Recent Funding Rounds on crunchbase.com. Recent funding rounds
 
 - Site: crunchbase.com
 - Address: `reduck/crunchbase.com/get_recent_funding_rounds`
-- Updated: 2026-07-27 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

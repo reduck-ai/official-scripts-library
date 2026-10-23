@@ -4,7 +4,7 @@ Report which Amazon.com account this browser is signed in as: the account's firs
 
 - Site: amazon.com
 - Address: `reduck/amazon.com/whoami`
-- Updated: 2026-10-20 (v9)
+- Updated: 2026-10-22 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it

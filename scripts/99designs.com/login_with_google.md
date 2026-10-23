@@ -4,7 +4,7 @@ Log into 99designs (which signs in through a Vista account) with Continue with G
 
 - Site: 99designs.com
 - Address: `reduck/99designs.com/login_with_google`
-- Updated: 2026-10-05 (v2)
+- Updated: 2026-10-22 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

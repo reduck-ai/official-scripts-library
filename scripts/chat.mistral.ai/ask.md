@@ -4,7 +4,7 @@ Automatically ask Le Chat on chat.mistral.ai. Open a new Le Chat conversation, s
 
 - Site: chat.mistral.ai
 - Address: `reduck/chat.mistral.ai/ask`
-- Updated: 2026-10-01 (v4)
+- Updated: 2026-10-22 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

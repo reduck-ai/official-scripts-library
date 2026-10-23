@@ -4,7 +4,7 @@ Log into the Mistral admin console (admin.mistral.ai) with Google SSO, handling 
 
 - Site: admin.mistral.ai
 - Address: `reduck/admin.mistral.ai/login_with_google`
-- Updated: 2026-09-29 (v5)
+- Updated: 2026-10-22 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

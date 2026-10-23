@@ -4,7 +4,7 @@ Read the signed-in Claude.ai account's plan usage, as Settings > Usage shows it 
 
 - Site: claude.ai
 - Address: `reduck/claude.ai/get_usage`
-- Updated: 2026-10-21 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

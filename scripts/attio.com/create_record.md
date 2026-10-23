@@ -4,7 +4,7 @@ Automatically create Attio record on attio.com. Create a new record (e.g. a Comp
 
 - Site: attio.com
 - Address: `reduck/attio.com/create_record`
-- Updated: 2026-09-01 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -56,7 +56,7 @@ Yes. It acts as you on attio.com: on your own Chrome it reuses your session, and
 
 ### Does it change anything on attio.com, or only read data?
 
-It makes changes on attio.com, like sending, posting or booking something.
+It makes changes on attio.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

@@ -4,7 +4,7 @@ Automatically list invoices on admin.shopify.com. List a Shopify store's billing
 
 - Site: admin.shopify.com
 - Address: `reduck/admin.shopify.com/list_invoices`
-- Updated: 2026-09-30 (v11)
+- Updated: 2026-10-22 (v12)
 - Author: Reduck AI (reduck)
 
 ## Run it

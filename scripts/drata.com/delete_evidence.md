@@ -4,7 +4,7 @@ Automatically delete an evidence (Drata) on drata.com. Permanently deletes one e
 
 - Site: drata.com
 - Address: `reduck/drata.com/delete_evidence`
-- Updated: 2026-10-09 (v3)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

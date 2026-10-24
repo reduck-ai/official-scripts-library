@@ -4,7 +4,7 @@ Automatically get Dust conversation messages on dust.tt. Read a Dust conversatio
 
 - Site: dust.tt
 - Address: `reduck/dust.tt/get_conversation_messages`
-- Updated: 2026-08-27 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

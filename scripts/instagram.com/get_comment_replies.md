@@ -4,7 +4,7 @@ Automatically get Instagram comment replies on instagram.com. Fetch the threaded
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/get_comment_replies`
-- Updated: 2026-09-03 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

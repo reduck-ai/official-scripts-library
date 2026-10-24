@@ -4,7 +4,7 @@ Automatically simulate a BoursoBank personal loan on boursobank.com. Run BoursoB
 
 - Site: boursobank.com
 - Address: `reduck/boursobank.com/simulate-personal-loan`
-- Updated: 2026-10-22 (v4)
+- Updated: 2026-10-23 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically search France Travail jobs on francetravail.fr. Search France Trav
 
 - Site: francetravail.fr
 - Address: `reduck/francetravail.fr/search_jobs`
-- Updated: 2026-10-09 (v4)
+- Updated: 2026-10-22 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

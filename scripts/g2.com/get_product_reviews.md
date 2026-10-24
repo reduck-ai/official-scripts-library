@@ -4,7 +4,7 @@ Automatically get G2 product reviews on g2.com. Fetch reviews for a G2 product f
 
 - Site: g2.com
 - Address: `reduck/g2.com/get_product_reviews`
-- Updated: 2026-09-02 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically get Instagram hashtag posts on instagram.com. Fetch the top posts 
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/get_hashtag_posts`
-- Updated: 2026-09-03 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

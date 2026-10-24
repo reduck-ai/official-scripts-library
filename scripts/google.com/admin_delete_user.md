@@ -4,7 +4,7 @@ Automatically delete a Google Workspace user (Admin console) on google.com. Dele
 
 - Site: google.com
 - Address: `reduck/google.com/admin_delete_user`
-- Updated: 2026-09-30 (v9)
+- Updated: 2026-10-22 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it

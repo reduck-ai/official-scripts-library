@@ -4,7 +4,7 @@ Automatically search Dust conversations on dust.tt. Search the signed-in Dust wo
 
 - Site: dust.tt
 - Address: `reduck/dust.tt/search_conversations`
-- Updated: 2026-08-26 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

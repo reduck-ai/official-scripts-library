@@ -4,7 +4,7 @@ Automatically post an Instagram story on instagram.com. Publish a photo to the s
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/create_story`
-- Updated: 2026-09-30 (v3)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

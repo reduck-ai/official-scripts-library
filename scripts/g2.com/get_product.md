@@ -1,10 +1,10 @@
 # Get G2 product profile
 
-Automatically get G2 product profile on g2.com. Fetch a G2 product's profile by slug: vendor, star rating, review count, pricing tier names, and pros/cons themes with mention counts drawn from real user reviews.
+Automatically get G2 product profile on g2.com. Fetch a G2 product's profile by slug: vendor, star rating, review count, pricing tier names, and pros/cons themes with mention counts drawn from real user reviews. A slug G2 does not know fails with an error that points to g2.com/search_products.
 
 - Site: g2.com
 - Address: `reduck/g2.com/get_product`
-- Updated: 2026-09-18 (v2)
+- Updated: 2026-10-22 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -26,7 +26,7 @@ npx @reduck-ai/cli@latest run --script reduck/g2.com/get_product
 - `name` (string | null, optional)
 - `pros` (array, optional)
 - `slug` (string, optional)
-- `found` (boolean, optional): false when the product slug does not exist on G2 (404)
+- `found` (boolean, optional): Always true: a slug that does not exist on G2 fails with an error instead.
 - `rating` (number | null, optional)
 - `vendor` (string | null, optional)
 - `vendor_url` (string | null, optional)
@@ -37,7 +37,7 @@ npx @reduck-ai/cli@latest run --script reduck/g2.com/get_product
 
 ### What does "Get G2 product profile" do?
 
-Fetch a G2 product's profile by slug: vendor, star rating, review count, pricing tier names, and pros/cons themes with mention counts drawn from real user reviews.
+Fetch a G2 product's profile by slug: vendor, star rating, review count, pricing tier names, and pros/cons themes with mention counts drawn from real user reviews. A slug G2 does not know fails with an error that points to g2.com/search_products.
 
 ### How do I automatically get G2 product profile on g2.com?
 

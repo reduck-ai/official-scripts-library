@@ -1,10 +1,10 @@
 # Ask Gemini
 
-Automatically ask Gemini on gemini.google.com. Open a new Gemini chat, send one question, and wait for the answer to finish generating (up to 3 min), then return the answer as rendered, the conversation id, and the citation labels Gemini attached to it. Requires a signed-in Google session: gemini.google.com has no anonymous chat, and signed out it serves the marketing page and never mounts a composer. An account that has never opened Gemini also has to accept its first-run terms once in a normal browser; until then the app stays on that same page and the script fails with a descriptive error rather than hanging. The answer is always read in English, whatever language the account is set to. Citations are publisher labels, not links: Gemini renders each grounded claim as an inline chip naming the source ("FIFA", "aimagazine.com +1") and keeps the target URL behind a dialog that only opens on click, so `citations` tells you whether the answer was grounded and on whom, but is not a URL list, and an ungrounded answer returns an empty one. Treat one run as a single draw rather than a measurement: the model may search differently, or not search at all, on the next run of the same question, so repeat a question before concluding anything from it.
+Automatically ask Gemini on gemini.google.com. Open a new Gemini chat, send one question, and wait until Gemini has finished its answer (up to 3 min). Returns the answer as Gemini sends it, in Markdown (it can hold Gemini's own tags for images, steps and follow-up suggestions), the new conversation's id, and the citations Gemini attached, each with its sources' URL, title and publisher; citations is empty when the answer cites nothing. Needs a browser signed in to Google: signed out, the run fails with a signed-out error asking you to sign in to gemini.google.com. A Google account that has never opened Gemini fails with a message asking you to open gemini.google.com once and accept its terms. One run is one draw: the same question can be answered, searched or cited differently on the next run.
 
 - Site: gemini.google.com
 - Address: `reduck/gemini.google.com/ask`
-- Updated: 2026-10-20 (v5)
+- Updated: 2026-10-22 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -21,15 +21,15 @@ npx @reduck-ai/cli@latest run --script reduck/gemini.google.com/ask
 
 ## Output
 
-- `answer` (string, required): The reply as rendered (innerText of the response's message-content). Inline widget labels appear as they do on screen and KaTeX math linearizes lossily. Never empty: a response that rendered no text is breakage, not an answer.
-- `citations` (array, required): The inline citation chips as rendered, in order — a publisher label per grounded claim ("FIFA", "aimagazine.com +1"), not a URL: Gemini keeps each chip's target behind a click-only dialog. Empty when the answer cited nothing.
-- `conversationId` (string, required): Conversation id from the /app/<id> URL, which the send creates. Required: a chat that never got one did not happen.
+- `answer` (string, required): The answer as Gemini sends it, in Markdown. Never empty.
+- `citations` (array, required): The citations Gemini attached to the answer, in order, each with the sources it names. Empty when the answer cites nothing.
+- `conversationId` (string, required): The new conversation's id, as in its gemini.google.com/app/<id> address.
 
 ## FAQ
 
 ### What does "Ask Gemini" do?
 
-Open a new Gemini chat, send one question, and wait for the answer to finish generating (up to 3 min), then return the answer as rendered, the conversation id, and the citation labels Gemini attached to it. Requires a signed-in Google session: gemini.google.com has no anonymous chat, and signed out it serves the marketing page and never mounts a composer. An account that has never opened Gemini also has to accept its first-run terms once in a normal browser; until then the app stays on that same page and the script fails with a descriptive error rather than hanging. The answer is always read in English, whatever language the account is set to. Citations are publisher labels, not links: Gemini renders each grounded claim as an inline chip naming the source ("FIFA", "aimagazine.com +1") and keeps the target URL behind a dialog that only opens on click, so `citations` tells you whether the answer was grounded and on whom, but is not a URL list, and an ungrounded answer returns an empty one. Treat one run as a single draw rather than a measurement: the model may search differently, or not search at all, on the next run of the same question, so repeat a question before concluding anything from it.
+Open a new Gemini chat, send one question, and wait until Gemini has finished its answer (up to 3 min). Returns the answer as Gemini sends it, in Markdown (it can hold Gemini's own tags for images, steps and follow-up suggestions), the new conversation's id, and the citations Gemini attached, each with its sources' URL, title and publisher; citations is empty when the answer cites nothing. Needs a browser signed in to Google: signed out, the run fails with a signed-out error asking you to sign in to gemini.google.com. A Google account that has never opened Gemini fails with a message asking you to open gemini.google.com once and accept its terms. One run is one draw: the same question can be answered, searched or cited differently on the next run.
 
 ### How do I automatically ask Gemini on gemini.google.com?
 

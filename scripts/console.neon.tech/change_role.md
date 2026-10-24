@@ -1,10 +1,10 @@
 # Change Neon organization member's role
 
-Automatically change Neon organization member's role on console.neon.tech. Change a joined member's role on the current Neon organization, identified by email. Free-text role matched case-insensitively against Neon's role picker (Admin, Member). Only applies to already-Joined members -- pending invites don't expose a role-change control (their role is set at invite time; cancel and re-invite with a different role instead). If the member's role already matches the requested role, this is a no-op (Neon's own menu doesn't fire a confirm dialog or API call for a same-role click) and returns changed:false. Returns the member's email, resulting role, and whether a change occurred.
+Automatically change Neon organization member's role on console.neon.tech. Change a joined member's role on the current Neon organization, identified by email. The role (Admin or Member) is matched case-insensitively. Only applies to members who have joined: a pending invite's role is set at invite time, so cancel and re-invite to change it. If the member already has the requested role, nothing changes and changed is false. Returns the member's email, resulting role, and whether a change occurred.
 
 - Site: console.neon.tech
 - Address: `reduck/console.neon.tech/change_role`
-- Updated: 2026-10-22 (v6)
+- Updated: 2026-10-23 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -30,7 +30,7 @@ npx @reduck-ai/cli@latest run --script reduck/console.neon.tech/change_role
 
 ### What does "Change Neon organization member's role" do?
 
-Change a joined member's role on the current Neon organization, identified by email. Free-text role matched case-insensitively against Neon's role picker (Admin, Member). Only applies to already-Joined members -- pending invites don't expose a role-change control (their role is set at invite time; cancel and re-invite with a different role instead). If the member's role already matches the requested role, this is a no-op (Neon's own menu doesn't fire a confirm dialog or API call for a same-role click) and returns changed:false. Returns the member's email, resulting role, and whether a change occurred.
+Change a joined member's role on the current Neon organization, identified by email. The role (Admin or Member) is matched case-insensitively. Only applies to members who have joined: a pending invite's role is set at invite time, so cancel and re-invite to change it. If the member already has the requested role, nothing changes and changed is false. Returns the member's email, resulting role, and whether a change occurred.
 
 ### How do I automatically change Neon organization member's role on console.neon.tech?
 

@@ -4,7 +4,7 @@ Automatically list Dust agents on dust.tt. List the agents available in the sign
 
 - Site: dust.tt
 - Address: `reduck/dust.tt/list_agents`
-- Updated: 2026-08-26 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

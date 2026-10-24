@@ -1,10 +1,10 @@
 # Get Current Notion User
 
-Automatically get Current Notion User on app.notion.com. Report which Notion account this browser is signed in as: email, name, the current workspace and every workspace the account belongs to. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Notion scripts.
+Automatically get Current Notion User on app.notion.com. Report which Notion account this browser is signed in as: email, name, a current workspace and every workspace the account belongs to. When the browser is not signed in to Notion, the run fails with a sign-in error that says to sign in to app.notion.com and retry.
 
 - Site: app.notion.com
 - Address: `reduck/app.notion.com/get_current_user`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-10-23 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -31,7 +31,7 @@ It takes no input.
 
 ### What does "Get Current Notion User" do?
 
-Report which Notion account this browser is signed in as: email, name, the current workspace and every workspace the account belongs to. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Notion scripts.
+Report which Notion account this browser is signed in as: email, name, a current workspace and every workspace the account belongs to. When the browser is not signed in to Notion, the run fails with a sign-in error that says to sign in to app.notion.com and retry.
 
 ### How do I automatically get Current Notion User on app.notion.com?
 

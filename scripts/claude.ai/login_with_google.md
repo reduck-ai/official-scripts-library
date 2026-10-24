@@ -4,7 +4,7 @@ Log into Claude (Anthropic) via Google SSO. Drives Claude's Continue-with-Google
 
 - Site: claude.ai
 - Address: `reduck/claude.ai/login_with_google`
-- Updated: 2026-10-22 (v9)
+- Updated: 2026-10-23 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -41,7 +41,7 @@ It returns url, account, loggedIn.
 
 ### Do I need to be logged in to claude.ai?
 
-Yes. It acts as you on claude.ai: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the claude.ai cookies saved by the Reduck extension.
+No. It only uses pages of claude.ai that are reachable without signing in.
 
 ### Does it change anything on claude.ai, or only read data?
 

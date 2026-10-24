@@ -4,7 +4,7 @@ Automatically list Claude.ai models and effort levels on claude.ai. List the mod
 
 - Site: claude.ai
 - Address: `reduck/claude.ai/list_models`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-10-23 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically get Instagram user stories on instagram.com. Fetch a user's curren
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/get_stories`
-- Updated: 2026-09-03 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

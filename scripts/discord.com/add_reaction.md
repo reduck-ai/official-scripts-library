@@ -1,10 +1,10 @@
-# add_reaction
+# React to a Discord message
 
-React to a Discord message with a unicode emoji, or remove your own reaction with remove:true. Takes the message's url, as copied from Discord or built from discord.com/read_messages. Returns the emoji, the message and channel ids, whether your reaction was already there, and the reaction count afterwards. Reactions are visible to everyone who can see the channel. Supports a set of common emoji (thumbs up/down, heart, fire, eyes, check mark and similar), not every emoji and not custom server emoji. Does not work on a forum post's opening message; react to a reply in the post instead.
+Automatically react to a Discord message on discord.com. React to a Discord message with a unicode emoji, or remove your own reaction with remove:true. Takes the message's url, as copied from Discord or built from discord.com/read_messages. Returns the emoji, the message and channel ids, whether your reaction was already there, and the reaction count afterwards. Reactions are visible to everyone who can see the channel. Supports a set of common emoji (thumbs up/down, heart, fire, eyes, check mark and similar), not every emoji and not custom server emoji. Does not work on a forum post's opening message; react to a reply in the post instead.
 
 - Site: discord.com
 - Address: `reduck/discord.com/add_reaction`
-- Updated: 2026-10-06 (v30)
+- Updated: 2026-10-22 (v34)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -33,9 +33,17 @@ npx @reduck-ai/cli@latest run --script reduck/discord.com/add_reaction
 
 ## FAQ
 
-### What does "add_reaction" do?
+### What does "React to a Discord message" do?
 
 React to a Discord message with a unicode emoji, or remove your own reaction with remove:true. Takes the message's url, as copied from Discord or built from discord.com/read_messages. Returns the emoji, the message and channel ids, whether your reaction was already there, and the reaction count afterwards. Reactions are visible to everyone who can see the channel. Supports a set of common emoji (thumbs up/down, heart, fire, eyes, check mark and similar), not every emoji and not custom server emoji. Does not work on a forum post's opening message; react to a reply in the post instead.
+
+### How do I automatically react to a Discord message on discord.com?
+
+Ask an AI agent connected to Reduck to run reduck/discord.com/add_reaction, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/discord.com/add_reaction
+
+### Is there a discord.com API to react to a Discord message?
+
+You do not need one. "React to a Discord message" drives the real discord.com pages in a browser, so it works whether or not discord.com offers an API for this.
 
 ### What information do I need to provide?
 

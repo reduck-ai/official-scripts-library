@@ -4,7 +4,7 @@ Delete a Discord channel by its id — text, voice, announcement, stage or forum
 
 - Site: discord.com
 - Address: `reduck/discord.com/delete_channel`
-- Updated: 2026-10-06 (v9)
+- Updated: 2026-10-22 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it

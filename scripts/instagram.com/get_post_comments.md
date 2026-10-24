@@ -4,7 +4,7 @@ Automatically get Instagram post comments on instagram.com. Fetch the top-level 
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/get_post_comments`
-- Updated: 2026-10-19 (v9)
+- Updated: 2026-10-22 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically get Historical Prices on finance.yahoo.com. OHLCV price history fo
 
 - Site: finance.yahoo.com
 - Address: `reduck/finance.yahoo.com/get_historical_prices`
-- Updated: 2026-09-18 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

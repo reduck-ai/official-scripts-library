@@ -4,7 +4,7 @@ Automatically list Gemini chats on gemini.google.com. List your recent Gemini co
 
 - Site: gemini.google.com
 - Address: `reduck/gemini.google.com/list_chats`
-- Updated: 2026-08-25 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

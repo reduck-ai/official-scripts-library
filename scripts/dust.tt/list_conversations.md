@@ -4,7 +4,7 @@ Automatically list Dust conversations on dust.tt. List the signed-in Dust worksp
 
 - Site: dust.tt
 - Address: `reduck/dust.tt/list_conversations`
-- Updated: 2026-08-26 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

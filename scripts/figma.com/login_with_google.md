@@ -4,7 +4,7 @@ Log into Figma via Google SSO, driving the OAuth popup and landing in the Figma 
 
 - Site: figma.com
 - Address: `reduck/figma.com/login_with_google`
-- Updated: 2026-10-02 (v8)
+- Updated: 2026-10-22 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it

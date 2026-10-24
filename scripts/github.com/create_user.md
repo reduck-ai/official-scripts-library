@@ -4,7 +4,7 @@ Automatically invite user to GitHub org on github.com. Invite a person to a GitH
 
 - Site: github.com
 - Address: `reduck/github.com/create_user`
-- Updated: 2026-10-19 (v8)
+- Updated: 2026-10-22 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Find where signatures and dates belong across every page of a DocuSign draft's d
 
 - Site: docusign.com
 - Address: `reduck/docusign.com/place_signature_fields`
-- Updated: 2026-09-30 (v6)
+- Updated: 2026-10-22 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

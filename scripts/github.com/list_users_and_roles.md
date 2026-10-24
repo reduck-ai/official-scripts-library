@@ -1,10 +1,10 @@
 # List GitHub org members and roles
 
-Automatically list GitHub org members and roles on github.com. List a GitHub organization's members (login, org role Owner/Member, profile URL) and pending invitations (email, role). Reads the org's People and Invitations tabs. Requires org (the org login/slug).
+Automatically list GitHub org members and roles on github.com. List a GitHub organization's members (login, profile URL, and org role when the account can see it), one page of 30 at a time, with hasNextPage and totalPages for paging, plus pending invitations (email, role), which only org owners can see; otherwise the list is empty with a note saying why. Requires org (the org login). Fails with a sign-in error when the browser is not signed in to GitHub.
 
 - Site: github.com
 - Address: `reduck/github.com/list_users_and_roles`
-- Updated: 2026-09-07 (v11)
+- Updated: 2026-10-23 (v13)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,12 +18,16 @@ npx @reduck-ai/cli@latest run --script reduck/github.com/list_users_and_roles
 ## Input
 
 - `org` (string, required): GitHub organization login, e.g. "acme" (from github.com/orgs/<org>/people).
+- `page` (integer, optional): Page of the members list, 1-indexed (GitHub shows 30 people per page). Use hasNextPage to know whether to ask for the next one.
 
 ## Output
 
 - `org` (string, required)
+- `page` (integer, required)
 - `members` (array, required)
+- `hasNextPage` (boolean, required)
 - `pendingInvitations` (array, required)
+- `totalPages` (integer | null, optional)
 - `membersNote` (string, optional)
 - `pendingInvitationsNote` (string, optional)
 
@@ -31,7 +35,7 @@ npx @reduck-ai/cli@latest run --script reduck/github.com/list_users_and_roles
 
 ### What does "List GitHub org members and roles" do?
 
-List a GitHub organization's members (login, org role Owner/Member, profile URL) and pending invitations (email, role). Reads the org's People and Invitations tabs. Requires org (the org login/slug).
+List a GitHub organization's members (login, profile URL, and org role when the account can see it), one page of 30 at a time, with hasNextPage and totalPages for paging, plus pending invitations (email, role), which only org owners can see; otherwise the list is empty with a note saying why. Requires org (the org login). Fails with a sign-in error when the browser is not signed in to GitHub.
 
 ### How do I automatically list GitHub org members and roles on github.com?
 
@@ -43,11 +47,11 @@ You do not need one. "List GitHub org members and roles" drives the real github.
 
 ### What information do I need to provide?
 
-Required: org.
+Required: org. Optional: page.
 
 ### What does it return?
 
-It returns org, members, membersNote, pendingInvitations, pendingInvitationsNote.
+It returns org, page, members, totalPages, hasNextPage, membersNote, pendingInvitations, pendingInvitationsNote.
 
 ### Do I need to be logged in to github.com?
 

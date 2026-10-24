@@ -1,10 +1,10 @@
 # Delete OAuth client
 
-Automatically delete OAuth client on console.cloud.google.com. Delete an OAuth 2.0 client from the Google Cloud Console (Google Auth Platform) by its client id. Needs console.cloud.google.com cookies (loggedIn). Deletion is immediate but the client can be restored for 30 days from the console's "Restore deleted OAuth clients" page.
+Automatically delete OAuth client on console.cloud.google.com. Delete an OAuth 2.0 client from the Google Cloud Console (Google Auth Platform) by its client id. Requires being signed in to the Google Cloud Console. Deletion is immediate, but the client can be restored for 30 days from the console's "Restore deleted OAuth clients" page.
 
 - Site: console.cloud.google.com
 - Address: `reduck/console.cloud.google.com/delete_oauth_client`
-- Updated: 2026-10-22 (v5)
+- Updated: 2026-10-23 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -28,7 +28,7 @@ npx @reduck-ai/cli@latest run --script reduck/console.cloud.google.com/delete_oa
 
 ### What does "Delete OAuth client" do?
 
-Delete an OAuth 2.0 client from the Google Cloud Console (Google Auth Platform) by its client id. Needs console.cloud.google.com cookies (loggedIn). Deletion is immediate but the client can be restored for 30 days from the console's "Restore deleted OAuth clients" page.
+Delete an OAuth 2.0 client from the Google Cloud Console (Google Auth Platform) by its client id. Requires being signed in to the Google Cloud Console. Deletion is immediate, but the client can be restored for 30 days from the console's "Restore deleted OAuth clients" page.
 
 ### How do I automatically delete OAuth client on console.cloud.google.com?
 

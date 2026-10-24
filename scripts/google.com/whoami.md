@@ -4,7 +4,7 @@ Report which Google account this browser is signed in as: display name and email
 
 - Site: google.com
 - Address: `reduck/google.com/whoami`
-- Updated: 2026-10-20 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

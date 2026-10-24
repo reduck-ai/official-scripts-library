@@ -4,7 +4,7 @@ Automatically read tab values on docs.google.com. Read one tab of a Google Sprea
 
 - Site: docs.google.com
 - Address: `reduck/docs.google.com/sheets_read_tab`
-- Updated: 2026-09-27 (v2)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

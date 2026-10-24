@@ -4,7 +4,7 @@ Automatically change GitHub org member's role on github.com. Change a GitHub org
 
 - Site: github.com
 - Address: `reduck/github.com/change_role`
-- Updated: 2026-10-19 (v5)
+- Updated: 2026-10-22 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

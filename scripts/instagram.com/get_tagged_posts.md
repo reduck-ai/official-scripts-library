@@ -4,7 +4,7 @@ Automatically get Instagram tagged posts on instagram.com. Fetch posts an Instag
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/get_tagged_posts`
-- Updated: 2026-09-03 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

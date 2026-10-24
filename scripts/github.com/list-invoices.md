@@ -4,7 +4,7 @@ Automatically list GitHub invoices on github.com. List all GitHub billing invoic
 
 - Site: github.com
 - Address: `reduck/github.com/list-invoices`
-- Updated: 2026-09-08 (v10)
+- Updated: 2026-10-22 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it

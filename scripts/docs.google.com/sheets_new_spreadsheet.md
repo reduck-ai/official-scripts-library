@@ -1,10 +1,10 @@
-# Sheets: new spreadsheet
+# Create a Google Sheets spreadsheet
 
-Create a new Google Spreadsheet in My Drive, optionally with a title. Returns spreadsheetId, url, and firstGid (always 0). The file lands in Drive root (My Drive); moving it elsewhere is a Drive action, not a Sheets one.
+Automatically create a Google Sheets spreadsheet on docs.google.com. Create a new Google Spreadsheet in My Drive, optionally with a title. Returns spreadsheetId, url, and firstGid (always 0). The file lands in Drive root (My Drive); moving it elsewhere is a Drive action, not a Sheets one.
 
 - Site: docs.google.com
 - Address: `reduck/docs.google.com/sheets_new_spreadsheet`
-- Updated: 2026-09-30 (v6)
+- Updated: 2026-10-22 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,9 +29,17 @@ npx @reduck-ai/cli@latest run --script reduck/docs.google.com/sheets_new_spreads
 
 ## FAQ
 
-### What does "Sheets: new spreadsheet" do?
+### What does "Create a Google Sheets spreadsheet" do?
 
 Create a new Google Spreadsheet in My Drive, optionally with a title. Returns spreadsheetId, url, and firstGid (always 0). The file lands in Drive root (My Drive); moving it elsewhere is a Drive action, not a Sheets one.
+
+### How do I automatically create a Google Sheets spreadsheet on docs.google.com?
+
+Ask an AI agent connected to Reduck to run reduck/docs.google.com/sheets_new_spreadsheet, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/docs.google.com/sheets_new_spreadsheet
+
+### Is there a docs.google.com API to create a Google Sheets spreadsheet?
+
+You do not need one. "Create a Google Sheets spreadsheet" drives the real docs.google.com pages in a browser, so it works whether or not docs.google.com offers an API for this.
 
 ### What information do I need to provide?
 

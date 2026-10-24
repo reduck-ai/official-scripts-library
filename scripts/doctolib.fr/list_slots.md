@@ -1,10 +1,10 @@
 # List Doctolib slots
 
-Automatically list Doctolib slots on doctolib.fr. List a Doctolib practitioner's bookable appointment slots over the next N days for a given visit motive. Returns name, motive, bookable, availabilities (slots by day), total, next_slot, visit_motives, and booking_url. A practitioner can expose several motives sharing one name across practices, so pass motive_id to target one exactly; booking_url only opens the funnel, there is no per-slot deep link.
+Automatically list Doctolib slots on doctolib.fr. List a Doctolib practitioner's bookable appointment slots for one visit motive over a window of up to 15 days (Doctolib's limit); for a longer span, call again with a later start_date. Returns name, motive, bookable, availabilities (slots by day), total, next_slot (the next slot after an empty window), visit_motives, and booking_url. A motive name that matches several motives, an unknown motive id or an unknown profile fails with a message saying what to pass; pass motive_id to target one motive exactly. booking_url only opens the booking funnel; there is no per-slot link.
 
 - Site: doctolib.fr
 - Address: `reduck/doctolib.fr/list_slots`
-- Updated: 2026-08-05 (v4)
+- Updated: 2026-10-22 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,10 +18,10 @@ npx @reduck-ai/cli@latest run --script reduck/doctolib.fr/list_slots
 ## Input
 
 - `profile_path` (string, required): Relative path (with ?pid=practice-N) or full profile URL from search_practitioners.profile_path.
-- `days` (integer, optional): Number of days to scan from start_date. Default 14.
-- `motive` (string, optional): Visit-motive name substring (case-insensitive), e.g. 'première consultation', 'vidéo'. If omitted, the first motive by display position is used. Note: a practitioner can expose several motives sharing one name (different practices/agendas) — pass motive_id to disambiguate exactly.
+- `days` (integer, optional): Number of days to read from start_date, 1 to 15 (Doctolib serves at most 15 days at once). For a longer span, call again with start_date moved forward by days. Default 14.
+- `motive` (string, optional): Visit-motive name substring (case-insensitive), e.g. 'première consultation', 'vidéo'. It must match exactly one of the practitioner's motives; when it matches several, the run fails and lists their ids, so pass motive_id. If omitted (and no motive_id), the first motive in Doctolib's order is used.
 - `motive_id` (integer, optional): Exact visit-motive id (from search_practitioners.matched_visit_motive.id or this script's visit_motives). Takes precedence over motive; the deterministic way to target one of several same-named motives.
-- `start_date` (string, optional): Optional ISO date YYYY-MM-DD lower bound. Defaults to now.
+- `start_date` (string, optional): Optional ISO date YYYY-MM-DD where the window starts. Defaults to today (UTC). Use it to page through later windows.
 
 ## Output
 
@@ -39,7 +39,7 @@ npx @reduck-ai/cli@latest run --script reduck/doctolib.fr/list_slots
 
 ### What does "List Doctolib slots" do?
 
-List a Doctolib practitioner's bookable appointment slots over the next N days for a given visit motive. Returns name, motive, bookable, availabilities (slots by day), total, next_slot, visit_motives, and booking_url. A practitioner can expose several motives sharing one name across practices, so pass motive_id to target one exactly; booking_url only opens the funnel, there is no per-slot deep link.
+List a Doctolib practitioner's bookable appointment slots for one visit motive over a window of up to 15 days (Doctolib's limit); for a longer span, call again with a later start_date. Returns name, motive, bookable, availabilities (slots by day), total, next_slot (the next slot after an empty window), visit_motives, and booking_url. A motive name that matches several motives, an unknown motive id or an unknown profile fails with a message saying what to pass; pass motive_id to target one motive exactly. booking_url only opens the booking funnel; there is no per-slot link.
 
 ### How do I automatically list Doctolib slots on doctolib.fr?
 

@@ -4,7 +4,7 @@ Automatically download Dropbox invoice as PDF on dropbox.com. Download one Dropb
 
 - Site: dropbox.com
 - Address: `reduck/dropbox.com/download_invoice`
-- Updated: 2026-10-20 (v3)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

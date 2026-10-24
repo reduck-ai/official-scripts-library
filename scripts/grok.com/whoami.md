@@ -4,7 +4,7 @@ Report which Grok account this browser is signed in as: the account email and na
 
 - Site: grok.com
 - Address: `reduck/grok.com/whoami`
-- Updated: 2026-10-20 (v3)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

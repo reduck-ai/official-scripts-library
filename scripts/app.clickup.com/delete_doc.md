@@ -4,7 +4,7 @@ Automatically delete a ClickUp Doc on app.clickup.com. Moves a ClickUp Doc to th
 
 - Site: app.clickup.com
 - Address: `reduck/app.clickup.com/delete_doc`
-- Updated: 2026-10-14 (v2)
+- Updated: 2026-10-23 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

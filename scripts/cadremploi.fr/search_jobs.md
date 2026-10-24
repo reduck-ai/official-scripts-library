@@ -1,10 +1,10 @@
 # Search Cadremploi jobs
 
-Automatically search Cadremploi jobs on cadremploi.fr. Search Cadremploi (French executive/manager job board) by free-text keyword and optional free-text city location. Location text is resolved via Cadremploi's own location suggestions, picking the first city-level match — same as picking the top "Villes" suggestion in the UI; a location with no city-level match throws (department/region-only matches, e.g. a region name with no matching city, are not supported by this script). Passing raw location text through without this resolution step silently falls back to a nationwide search on Cadremploi's side, which is why resolution is mandatory here. Cadremploi itself returns three tiers per search — exact city matches, matches in the surrounding area, and an "expanded" broader-radius fallback — all rendered together as one list with no visual divider; this script preserves that distinction via each job's matchType field rather than picking one arbitrarily. total is the grand total across all three tiers (also the number returned with no location filter, i.e. nationwide). Optional radius (km) mirrors the site's own distance-around-city filter; optional page paginates in fixed batches of 50 (site's own page size), matching the site's own ?page= param. An unmatched keyword returns total:0, jobs:[] — not an error.
+Automatically search Cadremploi jobs on cadremploi.fr. Search Cadremploi (French executive and manager job board) by keyword and optional French city, with an optional radius in km and paging (50 per page). A city Cadremploi does not recognize fails with an error; regions and departments are not supported. Results mix exact city matches, nearby matches and a wider fallback; each job's matchType says which. total counts all three. An unmatched keyword returns total 0 and an empty list, not an error.
 
 - Site: cadremploi.fr
 - Address: `reduck/cadremploi.fr/search_jobs`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-10-23 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -31,7 +31,7 @@ npx @reduck-ai/cli@latest run --script reduck/cadremploi.fr/search_jobs
 
 ### What does "Search Cadremploi jobs" do?
 
-Search Cadremploi (French executive/manager job board) by free-text keyword and optional free-text city location. Location text is resolved via Cadremploi's own location suggestions, picking the first city-level match — same as picking the top "Villes" suggestion in the UI; a location with no city-level match throws (department/region-only matches, e.g. a region name with no matching city, are not supported by this script). Passing raw location text through without this resolution step silently falls back to a nationwide search on Cadremploi's side, which is why resolution is mandatory here. Cadremploi itself returns three tiers per search — exact city matches, matches in the surrounding area, and an "expanded" broader-radius fallback — all rendered together as one list with no visual divider; this script preserves that distinction via each job's matchType field rather than picking one arbitrarily. total is the grand total across all three tiers (also the number returned with no location filter, i.e. nationwide). Optional radius (km) mirrors the site's own distance-around-city filter; optional page paginates in fixed batches of 50 (site's own page size), matching the site's own ?page= param. An unmatched keyword returns total:0, jobs:[] — not an error.
+Search Cadremploi (French executive and manager job board) by keyword and optional French city, with an optional radius in km and paging (50 per page). A city Cadremploi does not recognize fails with an error; regions and departments are not supported. Results mix exact city matches, nearby matches and a wider fallback; each job's matchType says which. total counts all three. An unmatched keyword returns total 0 and an empty list, not an error.
 
 ### How do I automatically search Cadremploi jobs on cadremploi.fr?
 

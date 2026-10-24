@@ -4,7 +4,7 @@ Get everything currently failing in your Drata workspace in one call: the monito
 
 - Site: drata.com
 - Address: `reduck/drata.com/compliance_status`
-- Updated: 2026-10-09 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

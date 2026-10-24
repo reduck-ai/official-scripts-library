@@ -1,10 +1,10 @@
 # Ask Grok
 
-Automatically ask Grok on grok.com. Open a new Grok conversation, send one question, wait for the answer, and return the answer text plus any cited web sources. If the account has never confirmed Grok's one-time age gate, sending will hang and time out rather than silently confirming it on the caller's behalf.
+Automatically ask Grok on grok.com. Open a new Grok conversation, send one question, wait until Grok has finished answering, and return the conversation id, the answer as Grok wrote it (Markdown), and the web sources the answer cites (empty when it cites none). A signed-out browser fails with a signed-out error asking to sign in to grok.com. If Grok does not finish an answer (for example when the account has reached its usage limit), the run fails with an error instead of returning part of an answer.
 
 - Site: grok.com
 - Address: `reduck/grok.com/ask`
-- Updated: 2026-10-20 (v8)
+- Updated: 2026-10-22 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,7 +29,7 @@ npx @reduck-ai/cli@latest run --script reduck/grok.com/ask
 
 ### What does "Ask Grok" do?
 
-Open a new Grok conversation, send one question, wait for the answer, and return the answer text plus any cited web sources. If the account has never confirmed Grok's one-time age gate, sending will hang and time out rather than silently confirming it on the caller's behalf.
+Open a new Grok conversation, send one question, wait until Grok has finished answering, and return the conversation id, the answer as Grok wrote it (Markdown), and the web sources the answer cites (empty when it cites none). A signed-out browser fails with a signed-out error asking to sign in to grok.com. If Grok does not finish an answer (for example when the account has reached its usage limit), the run fails with an error instead of returning part of an answer.
 
 ### How do I automatically ask Grok on grok.com?
 

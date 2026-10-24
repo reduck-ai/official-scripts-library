@@ -1,10 +1,10 @@
-# Login (self-authenticating via email magic link)
+# Log in to Claude.ai by email magic link
 
 Authenticate to claude.ai by email magic link, with no cookie injection: requests the link, reads it from Gmail in the same browser, and lands signed in. Requires an active Google session for that inbox. Returns {authenticated, method: existing|magic_link, email, orgs}. Chain it before other claude.ai scripts, e.g. list_invoices.
 
 - Site: claude.ai
 - Address: `reduck/claude.ai/login`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-10-23 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -28,7 +28,7 @@ npx @reduck-ai/cli@latest run --script reduck/claude.ai/login
 
 ## FAQ
 
-### What does "Login (self-authenticating via email magic link)" do?
+### What does "Log in to Claude.ai by email magic link" do?
 
 Authenticate to claude.ai by email magic link, with no cookie injection: requests the link, reads it from Gmail in the same browser, and lands signed in. Requires an active Google session for that inbox. Returns {authenticated, method: existing|magic_link, email, orgs}. Chain it before other claude.ai scripts, e.g. list_invoices.
 

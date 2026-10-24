@@ -4,7 +4,7 @@ Log into Grok with Continue with Google, handling the Google account chooser and
 
 - Site: grok.com
 - Address: `reduck/grok.com/login_with_google`
-- Updated: 2026-09-30 (v2)
+- Updated: 2026-10-22 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -42,7 +42,7 @@ It returns url, account, already, loggedIn.
 
 ### Do I need to be logged in to grok.com?
 
-Yes. It acts as you on grok.com: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the grok.com cookies saved by the Reduck extension.
+No. It only uses pages of grok.com that are reachable without signing in.
 
 ### Does it change anything on grok.com, or only read data?
 

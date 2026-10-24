@@ -4,7 +4,7 @@ Automatically export / download on docs.google.com. Save a Google Sheet as xlsx,
 
 - Site: docs.google.com
 - Address: `reduck/docs.google.com/sheets_export`
-- Updated: 2026-10-05 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## About

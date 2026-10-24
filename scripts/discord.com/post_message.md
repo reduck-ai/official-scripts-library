@@ -4,7 +4,7 @@ Automatically post a Discord message on discord.com. Posts a text message, optio
 
 - Site: discord.com
 - Address: `reduck/discord.com/post_message`
-- Updated: 2026-10-20 (v21)
+- Updated: 2026-10-23 (v24)
 - Author: Reduck AI (reduck)
 
 ## Run it

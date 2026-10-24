@@ -4,7 +4,7 @@ Automatically list Drata platform users on drata.com. List the users of the sign
 
 - Site: drata.com
 - Address: `reduck/drata.com/verify_platform_users`
-- Updated: 2026-10-08 (v2)
+- Updated: 2026-10-22 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

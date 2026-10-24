@@ -4,7 +4,7 @@ Automatically move a Google Drive file to another folder on drive.google.com. Mo
 
 - Site: drive.google.com
 - Address: `reduck/drive.google.com/move_file`
-- Updated: 2026-10-02 (v6)
+- Updated: 2026-10-22 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

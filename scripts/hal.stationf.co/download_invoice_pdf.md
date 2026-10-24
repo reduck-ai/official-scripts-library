@@ -4,7 +4,7 @@ Automatically download a Station F (HAL) invoice as PDF on hal.stationf.co. Down
 
 - Site: hal.stationf.co
 - Address: `reduck/hal.stationf.co/download_invoice_pdf`
-- Updated: 2026-07-31 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

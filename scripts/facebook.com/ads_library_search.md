@@ -4,7 +4,7 @@ Automatically search the Meta (Facebook) Ad Library on facebook.com. Search Meta
 
 - Site: facebook.com
 - Address: `reduck/facebook.com/ads_library_search`
-- Updated: 2026-10-09 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

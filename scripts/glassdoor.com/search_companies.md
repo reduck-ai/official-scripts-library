@@ -4,7 +4,7 @@ Automatically search companies on glassdoor.com. Search Glassdoor employers by n
 
 - Site: glassdoor.com
 - Address: `reduck/glassdoor.com/search_companies`
-- Updated: 2026-08-24 (v4)
+- Updated: 2026-10-22 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

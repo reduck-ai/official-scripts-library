@@ -4,7 +4,7 @@ Automatically get Glassdoor company overview on glassdoor.com. Company overview 
 
 - Site: glassdoor.com
 - Address: `reduck/glassdoor.com/get_company`
-- Updated: 2026-08-25 (v4)
+- Updated: 2026-10-22 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

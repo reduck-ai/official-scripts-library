@@ -4,7 +4,7 @@ Automatically suggest edits (find and replace in Suggesting mode) on docs.google
 
 - Site: docs.google.com
 - Address: `reduck/docs.google.com/edit_in_suggestion_mode`
-- Updated: 2026-10-07 (v1)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

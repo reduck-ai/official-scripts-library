@@ -4,7 +4,7 @@ Automatically search Himalayas remote jobs on himalayas.app. Search Himalayas (h
 
 - Site: himalayas.app
 - Address: `reduck/himalayas.app/search_jobs`
-- Updated: 2026-10-13 (v10)
+- Updated: 2026-10-22 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it

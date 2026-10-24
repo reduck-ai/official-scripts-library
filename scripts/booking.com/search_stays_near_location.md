@@ -1,10 +1,10 @@
-# Search stays near a location
+# Search Booking.com stays near a location
 
-Automatically search stays near a location on booking.com. Search Booking.com stays (hotels, apartments...) sorted by distance from a free-text location (address, landmark, city, hotel name), returning rating, distance, price and cancellation info per result.
+Automatically search Booking.com stays near a location on booking.com. Search Booking.com stays (hotels, apartments...) sorted by distance from a free-text location (address, landmark, city, hotel name), returning rating, distance, price and cancellation info per result.
 
 - Site: booking.com
 - Address: `reduck/booking.com/search_stays_near_location`
-- Updated: 2026-10-22 (v11)
+- Updated: 2026-10-23 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -33,17 +33,17 @@ npx @reduck-ai/cli@latest run --script reduck/booking.com/search_stays_near_loca
 
 ## FAQ
 
-### What does "Search stays near a location" do?
+### What does "Search Booking.com stays near a location" do?
 
 Search Booking.com stays (hotels, apartments...) sorted by distance from a free-text location (address, landmark, city, hotel name), returning rating, distance, price and cancellation info per result.
 
-### How do I automatically search stays near a location on booking.com?
+### How do I automatically search Booking.com stays near a location on booking.com?
 
 Ask an AI agent connected to Reduck to run reduck/booking.com/search_stays_near_location, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/booking.com/search_stays_near_location
 
-### Is there a booking.com API to search stays near a location?
+### Is there a booking.com API to search Booking.com stays near a location?
 
-You do not need one. "Search stays near a location" drives the real booking.com pages in a browser, so it works whether or not booking.com offers an API for this.
+You do not need one. "Search Booking.com stays near a location" drives the real booking.com pages in a browser, so it works whether or not booking.com offers an API for this.
 
 ### What information do I need to provide?
 

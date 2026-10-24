@@ -1,10 +1,10 @@
 # Cloudflare: change member role
 
-Automatically change member role on cloudflare.com. Change one member's role within one Cloudflare account: looks up the member by email via the account's members API, opens their single account-wide permission policy, toggles off their current role(s) and toggles on the named new role (matched against the account's own role picker), then saves. Throws if the member has anything other than exactly one permission policy (ambiguous case, not handled). Returns previous and new roles.
+Automatically change member role on cloudflare.com. Change one member's role within one Cloudflare account, by the member's email and the new role's name as shown in Cloudflare. Returns the previous and new roles. Fails if the member has more than one permission policy on the account, since the change would be ambiguous.
 
 - Site: cloudflare.com
 - Address: `reduck/cloudflare.com/change_role`
-- Updated: 2026-10-22 (v6)
+- Updated: 2026-10-23 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -32,7 +32,7 @@ npx @reduck-ai/cli@latest run --script reduck/cloudflare.com/change_role
 
 ### What does "Cloudflare: change member role" do?
 
-Change one member's role within one Cloudflare account: looks up the member by email via the account's members API, opens their single account-wide permission policy, toggles off their current role(s) and toggles on the named new role (matched against the account's own role picker), then saves. Throws if the member has anything other than exactly one permission policy (ambiguous case, not handled). Returns previous and new roles.
+Change one member's role within one Cloudflare account, by the member's email and the new role's name as shown in Cloudflare. Returns the previous and new roles. Fails if the member has more than one permission policy on the account, since the change would be ambiguous.
 
 ### How do I automatically change member role on cloudflare.com?
 

@@ -4,7 +4,7 @@ Automatically create Instagram reel on instagram.com. Publish an Instagram reel 
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/create_reel`
-- Updated: 2026-09-29 (v21)
+- Updated: 2026-10-22 (v22)
 - Author: Reduck AI (reduck)
 
 ## Run it

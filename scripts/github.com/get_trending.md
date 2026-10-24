@@ -1,10 +1,10 @@
-# Get Trending
+# Get GitHub trending repositories
 
-Automatically get Trending on github.com. List GitHub's Trending repositories, a page with no official API, optionally filtered by language and period (daily/weekly/monthly). Returns repo, url, description, language, stars, forks, and stars gained over the period.
+Automatically get GitHub trending repositories on github.com. List GitHub's Trending repositories, a page with no official API, optionally filtered by language and period (daily/weekly/monthly). Returns repo, url, description, language, stars, forks, and stars gained over the period.
 
 - Site: github.com
 - Address: `reduck/github.com/get_trending`
-- Updated: 2026-08-19 (v2)
+- Updated: 2026-10-24 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,17 +29,17 @@ npx @reduck-ai/cli@latest run --script reduck/github.com/get_trending
 
 ## FAQ
 
-### What does "Get Trending" do?
+### What does "Get GitHub trending repositories" do?
 
 List GitHub's Trending repositories, a page with no official API, optionally filtered by language and period (daily/weekly/monthly). Returns repo, url, description, language, stars, forks, and stars gained over the period.
 
-### How do I automatically get Trending on github.com?
+### How do I automatically get GitHub trending repositories on github.com?
 
 Ask an AI agent connected to Reduck to run reduck/github.com/get_trending, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/github.com/get_trending
 
-### Is there a github.com API to get Trending?
+### Is there a github.com API to get GitHub trending repositories?
 
-You do not need one. "Get Trending" drives the real github.com pages in a browser, so it works whether or not github.com offers an API for this.
+You do not need one. "Get GitHub trending repositories" drives the real github.com pages in a browser, so it works whether or not github.com offers an API for this.
 
 ### What information do I need to provide?
 

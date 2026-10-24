@@ -4,7 +4,7 @@ Uploads a new file to an evidence of the Drata evidence library, making it the c
 
 - Site: drata.com
 - Address: `reduck/drata.com/renew_evidence`
-- Updated: 2026-10-09 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

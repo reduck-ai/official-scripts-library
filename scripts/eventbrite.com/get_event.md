@@ -4,7 +4,7 @@ Automatically get Eventbrite event details on eventbrite.com. Get the details of
 
 - Site: eventbrite.com
 - Address: `reduck/eventbrite.com/get_event`
-- Updated: 2026-10-02 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

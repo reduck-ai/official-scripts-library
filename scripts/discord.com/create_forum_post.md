@@ -4,7 +4,7 @@ Automatically create a Discord forum post on discord.com. Create a post in a Dis
 
 - Site: discord.com
 - Address: `reduck/discord.com/create_forum_post`
-- Updated: 2026-10-05 (v13)
+- Updated: 2026-10-22 (v14)
 - Author: Reduck AI (reduck)
 
 ## Run it

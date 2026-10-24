@@ -1,10 +1,10 @@
 # Get current GitHub user
 
-Automatically get current GitHub user on github.com. Report which GitHub account this browser is signed in as: the login, display name and avatar URL. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other GitHub scripts.
+Automatically get current GitHub user on github.com. Report which GitHub account this browser is signed in as: the login, display name and avatar URL. When the browser is signed out of GitHub, the run fails with a signed-out error asking you to sign in to github.com.
 
 - Site: github.com
 - Address: `reduck/github.com/get_current_user`
-- Updated: 2026-09-29 (v4)
+- Updated: 2026-10-22 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -30,7 +30,7 @@ It takes no input.
 
 ### What does "Get current GitHub user" do?
 
-Report which GitHub account this browser is signed in as: the login, display name and avatar URL. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other GitHub scripts.
+Report which GitHub account this browser is signed in as: the login, display name and avatar URL. When the browser is signed out of GitHub, the run fails with a signed-out error asking you to sign in to github.com.
 
 ### How do I automatically get current GitHub user on github.com?
 

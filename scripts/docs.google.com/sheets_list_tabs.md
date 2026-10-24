@@ -4,7 +4,7 @@ Automatically list tabs on docs.google.com. List the tabs of a Google Spreadshee
 
 - Site: docs.google.com
 - Address: `reduck/docs.google.com/sheets_list_tabs`
-- Updated: 2026-08-25 (v3)
+- Updated: 2026-10-23 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

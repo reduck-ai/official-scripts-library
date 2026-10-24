@@ -4,7 +4,7 @@ Automatically list envelopes on docusign.com. List the envelopes (documents sent
 
 - Site: docusign.com
 - Address: `reduck/docusign.com/list_envelopes`
-- Updated: 2026-09-30 (v1)
+- Updated: 2026-10-23 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,13 +17,14 @@ npx @reduck-ai/cli@latest run --script reduck/docusign.com/list_envelopes
 
 ## Input
 
-It takes no input.
+- `startPosition` (integer, optional): Index of the first envelope to return (DocuSign pages by 25). Pass the previous result's nextStartPosition to get the next page.
 
 ## Output
 
 - `total` (integer, required)
 - `folders` (array, required)
 - `envelopes` (array, required)
+- `nextStartPosition` (integer | null, required): startPosition of the next page; null on the last page.
 
 ## FAQ
 
@@ -41,11 +42,11 @@ You do not need one. "DocuSign — list envelopes" drives the real docusign.com 
 
 ### What information do I need to provide?
 
-Nothing. It takes no input.
+Optional: startPosition.
 
 ### What does it return?
 
-It returns total, folders, envelopes.
+It returns total, folders, envelopes, nextStartPosition.
 
 ### Do I need to be logged in to docusign.com?
 

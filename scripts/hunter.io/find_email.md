@@ -4,7 +4,7 @@ Automatically find Email (Hunter) on hunter.io. Looks up a person's professional
 
 - Site: hunter.io
 - Address: `reduck/hunter.io/find_email`
-- Updated: 2026-10-02 (v10)
+- Updated: 2026-10-23 (v12)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,6 +29,7 @@ npx @reduck-ai/cli@latest run --script reduck/hunter.io/find_email
 - `full_name` (string, required)
 - `linkedin_url` (string | null, required)
 - `confidence_score` (integer | null, required)
+- `reason` (any, optional): Why no email was returned: not_found (Hunter has none), opted_out (Hunter was asked not to process this person). null when found.
 
 ## FAQ
 
@@ -50,7 +51,7 @@ Required: fullName, domain.
 
 ### What does it return?
 
-It returns email, found, domain, company, full_name, linkedin_url, confidence_score.
+It returns email, found, domain, reason, company, full_name, linkedin_url, confidence_score.
 
 ### Do I need to be logged in to hunter.io?
 

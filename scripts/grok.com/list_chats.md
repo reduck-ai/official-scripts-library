@@ -1,10 +1,10 @@
 # List Grok Chats
 
-Automatically list Grok Chats on grok.com. List recent Grok conversations (newest first): id, title, and a human-readable last-activity label as Grok itself displays it.
+Automatically list Grok Chats on grok.com. List recent Grok conversations (newest first): id, title, and a human-readable last-activity label as Grok itself displays it. A signed-out browser fails with a signed-out error asking to sign in at grok.com.
 
 - Site: grok.com
 - Address: `reduck/grok.com/list_chats`
-- Updated: 2026-09-28 (v4)
+- Updated: 2026-10-22 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -27,7 +27,7 @@ It takes no input.
 
 ### What does "List Grok Chats" do?
 
-List recent Grok conversations (newest first): id, title, and a human-readable last-activity label as Grok itself displays it.
+List recent Grok conversations (newest first): id, title, and a human-readable last-activity label as Grok itself displays it. A signed-out browser fails with a signed-out error asking to sign in at grok.com.
 
 ### How do I automatically list Grok Chats on grok.com?
 

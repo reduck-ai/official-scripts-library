@@ -4,7 +4,7 @@ Automatically download Hostinger invoice on hostinger.com. Download a single Hos
 
 - Site: hostinger.com
 - Address: `reduck/hostinger.com/download_invoice`
-- Updated: 2026-09-29 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

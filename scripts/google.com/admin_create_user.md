@@ -4,7 +4,7 @@ Automatically create a Google Workspace user (Admin console) on google.com. Crea
 
 - Site: google.com
 - Address: `reduck/google.com/admin_create_user`
-- Updated: 2026-08-10 (v9)
+- Updated: 2026-10-23 (v13)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -58,7 +58,7 @@ Yes. It acts as you on google.com: on your own Chrome it reuses your session, an
 
 ### Does it change anything on google.com, or only read data?
 
-It makes changes on google.com, like sending, posting or booking something.
+It makes changes on google.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

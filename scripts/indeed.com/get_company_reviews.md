@@ -1,10 +1,10 @@
 # Get Indeed company reviews
 
-Automatically get Indeed company reviews on indeed.com. Get Indeed employee reviews for a company by its Indeed company slug (e.g. "Google", as it appears in indeed.com/cmp/<slug>), plus the overall rating and detailed-category ratings (work-life balance, pay and benefits, job security, management, culture). Anonymous, read-only.
+Automatically get Indeed company reviews on indeed.com. Get one page (20) of Indeed employee reviews for a company by its Indeed company slug (e.g. "Google", as in indeed.com/cmp/<slug>), with the company name, overall rating, total review count and the detailed category ratings (work-life balance, compensation and benefits, job security and advancement, management, culture). Each review has its id, link, title, text, rating, job title, location, current-employee flag and date. Fails when Indeed has no page for the slug, when the page is past the last one, or when Indeed shows its verification page instead of the reviews. Anonymous, read-only.
 
 - Site: indeed.com
 - Address: `reduck/indeed.com/get_company_reviews`
-- Updated: 2026-09-21 (v2)
+- Updated: 2026-10-23 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -22,22 +22,20 @@ npx @reduck-ai/cli@latest run --script reduck/indeed.com/get_company_reviews
 
 ## Output
 
-- `found` (boolean, required): Reports only that the slug did not return HTTP 404. Indeed is inconsistent here — measured: some unknown slugs 404 while others are served a page — so found:true is NOT proof the company exists. Treat a non-null `name` or `rating` as the real existence signal.
+- `page` (integer, required)
+- `reviews` (array, required)
 - `companySlug` (string, required)
 - `url` (string | null, optional)
-- `name` (string | null, optional): Company name as Indeed renders it; null when the page carried no company data. Together with `rating`, this is the reliable signal that the company is real.
-- `page` (integer, optional)
-- `rating` (number | null, optional)
-- `reviews` (array, optional)
-- `reviewCount` (integer | null, optional)
-- `reviewsBlocked` (boolean, optional): True when the page carried no review cards and no aggregate-rating data. Usually Indeed's 'Additional Verification Required' anti-automation interstitial, but the same reading occurs when paging past the last page or when the slug does not name a real company, so it means 'no reviews were readable here', not specifically 'we were blocked'.
-- `categoryRatings` (array, optional): Whatever detailed-category rating rows the page shows (e.g. work-life balance, pay and benefits) - the label text as Indeed renders it.
+- `name` (string | null, optional): Company name as Indeed gives it.
+- `rating` (number | null, optional): Overall company rating out of 5.
+- `reviewCount` (integer | null, optional): Total number of reviews Indeed counts for the company.
+- `categoryRatings` (array, optional): Detailed category ratings out of 5.
 
 ## FAQ
 
 ### What does "Get Indeed company reviews" do?
 
-Get Indeed employee reviews for a company by its Indeed company slug (e.g. "Google", as it appears in indeed.com/cmp/<slug>), plus the overall rating and detailed-category ratings (work-life balance, pay and benefits, job security, management, culture). Anonymous, read-only.
+Get one page (20) of Indeed employee reviews for a company by its Indeed company slug (e.g. "Google", as in indeed.com/cmp/<slug>), with the company name, overall rating, total review count and the detailed category ratings (work-life balance, compensation and benefits, job security and advancement, management, culture). Each review has its id, link, title, text, rating, job title, location, current-employee flag and date. Fails when Indeed has no page for the slug, when the page is past the last one, or when Indeed shows its verification page instead of the reviews. Anonymous, read-only.
 
 ### How do I automatically get Indeed company reviews on indeed.com?
 
@@ -53,7 +51,7 @@ Required: companySlug. Optional: page.
 
 ### What does it return?
 
-It returns url, name, page, found, rating, reviews, companySlug, reviewCount, reviewsBlocked, categoryRatings.
+It returns url, name, page, rating, reviews, companySlug, reviewCount, categoryRatings.
 
 ### Do I need to be logged in to indeed.com?
 

@@ -1,10 +1,10 @@
 # Etsy search listings
 
-Searches Etsy listings by keyword and returns title, price, availability, brand/shop and image for each result, with a total match count.
+Searches Etsy listings by keyword and returns every listing on one results page (about 60, ads included as Etsy shows them) with title, link, price, original price when on sale, currency, shop and image, plus Etsy's total match count. Use page to go further. Etsy always suggests near matches, so an empty list is rare; availability is not shown in search results and comes back null.
 
 - Site: etsy.com
 - Address: `reduck/etsy.com/search_listings`
-- Updated: 2026-09-21 (v2)
+- Updated: 2026-10-23 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,7 +18,7 @@ npx @reduck-ai/cli@latest run --script reduck/etsy.com/search_listings
 ## Input
 
 - `query` (string, required): Search keywords, e.g. "ceramic mug".
-- `page` (integer, optional): Result page, 1-based. Omit for page 1.
+- `page` (integer, optional): Result page, 1-based.
 - `digitalDownloads` (string, optional): Whether to exclude instant digital downloads from the results or return only those. Etsy offers no setting that returns both together. Defaults to exclude, which is what Etsy itself applies when the filter is left unset.
 
 ## Output
@@ -33,7 +33,7 @@ npx @reduck-ai/cli@latest run --script reduck/etsy.com/search_listings
 
 ### What does "Etsy search listings" do?
 
-Searches Etsy listings by keyword and returns title, price, availability, brand/shop and image for each result, with a total match count.
+Searches Etsy listings by keyword and returns every listing on one results page (about 60, ads included as Etsy shows them) with title, link, price, original price when on sale, currency, shop and image, plus Etsy's total match count. Use page to go further. Etsy always suggests near matches, so an empty list is rare; availability is not shown in search results and comes back null.
 
 ### What information do I need to provide?
 

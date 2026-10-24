@@ -4,7 +4,7 @@ Automatically delete a draft envelope on docusign.com. Delete a draft envelope f
 
 - Site: docusign.com
 - Address: `reduck/docusign.com/delete_draft`
-- Updated: 2026-09-30 (v6)
+- Updated: 2026-10-22 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

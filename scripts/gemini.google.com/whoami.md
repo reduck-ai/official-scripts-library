@@ -4,7 +4,7 @@ Report which Google account this browser is signed in to Gemini as: the Google a
 
 - Site: gemini.google.com
 - Address: `reduck/gemini.google.com/whoami`
-- Updated: 2026-10-20 (v3)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

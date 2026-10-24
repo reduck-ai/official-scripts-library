@@ -1,10 +1,10 @@
 # Notion unofficial API: download a Notion invoice PDF
 
-Automatically download a Notion invoice PDF on app.notion.com. An unofficial Notion API to download invoice PDFs, which Notion does not send by email. Download a Notion-hosted invoice as a PDF from its hosted_invoice_url (from app.notion.com/list_invoices). Renders the page and returns the PDF bytes as base64 (decode + write it yourself) plus a filename — the script is sandboxed and can't write to disk directly.
+Automatically download a Notion invoice PDF on app.notion.com. Download a Notion invoice as a PDF, given its hosted_invoice_url from app.notion.com/list_invoices. Notion does not email invoice PDFs. Saves the PDF and returns where it was saved: path (or url when the file is not on the computer running the browser), filename and size. Requires being signed in to the Notion account that owns the invoice.
 
 - Site: app.notion.com
 - Address: `reduck/app.notion.com/download_invoice_pdf`
-- Updated: 2026-10-22 (v5)
+- Updated: 2026-10-23 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -21,15 +21,16 @@ npx @reduck-ai/cli@latest run --script reduck/app.notion.com/download_invoice_pd
 
 ## Output
 
-- `filename` (string, required): A filename derived from the invoice id in hosted_invoice_url (e.g. Notion-in_1TgQCpCcKlYJxALV0wxPYyNd.pdf).
-- `pdf_base64` (string, required): The PDF file bytes, base64-encoded. Decode and write to a .pdf file at a location of your choosing.
+- `filename` (string, required): Name of the saved file, derived from the invoice id (e.g. Notion-in_1TgQCpCcKlYJxALV0wxPYyNd.pdf); it can carry a numbered suffix when a file of that name was already there.
 - `size_bytes` (integer, required)
+- `url` (string | null, optional): A link to the PDF, when it is not saved on the computer running the browser.
+- `path` (string | null, optional): Where the PDF was saved on the computer running the browser.
 
 ## FAQ
 
 ### What does "Notion unofficial API: download a Notion invoice PDF" do?
 
-An unofficial Notion API to download invoice PDFs, which Notion does not send by email. Download a Notion-hosted invoice as a PDF from its hosted_invoice_url (from app.notion.com/list_invoices). Renders the page and returns the PDF bytes as base64 (decode + write it yourself) plus a filename — the script is sandboxed and can't write to disk directly.
+Download a Notion invoice as a PDF, given its hosted_invoice_url from app.notion.com/list_invoices. Notion does not email invoice PDFs. Saves the PDF and returns where it was saved: path (or url when the file is not on the computer running the browser), filename and size. Requires being signed in to the Notion account that owns the invoice.
 
 ### How do I automatically download a Notion invoice PDF on app.notion.com?
 
@@ -45,7 +46,7 @@ Required: hosted_invoice_url.
 
 ### What does it return?
 
-It returns filename, pdf_base64, size_bytes.
+It returns url, path, filename, size_bytes.
 
 ### Do I need to be logged in to app.notion.com?
 

@@ -4,7 +4,7 @@ Automatically get Instagram profile on instagram.com. You get the follower, foll
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/get_profile`
-- Updated: 2026-10-20 (v12)
+- Updated: 2026-10-22 (v13)
 - Author: Reduck AI (reduck)
 
 ## About

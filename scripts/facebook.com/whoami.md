@@ -4,7 +4,7 @@ Report which Facebook account this browser is signed in as: the user id and name
 
 - Site: facebook.com
 - Address: `reduck/facebook.com/whoami`
-- Updated: 2026-09-30 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

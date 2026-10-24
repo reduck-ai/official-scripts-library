@@ -4,7 +4,7 @@ Automatically upload a document as a draft envelope on docusign.com. Upload a do
 
 - Site: docusign.com
 - Address: `reduck/docusign.com/upload_document`
-- Updated: 2026-09-30 (v11)
+- Updated: 2026-10-22 (v12)
 - Author: Reduck AI (reduck)
 
 ## Run it

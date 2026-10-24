@@ -4,7 +4,7 @@ Automatically export a Facebook group member list on facebook.com. Export the me
 
 - Site: facebook.com
 - Address: `reduck/facebook.com/list_group_members`
-- Updated: 2026-10-02 (v8)
+- Updated: 2026-10-22 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it

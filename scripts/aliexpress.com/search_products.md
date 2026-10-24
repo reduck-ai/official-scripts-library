@@ -1,10 +1,10 @@
 # Search AliExpress products
 
-Automatically search AliExpress products on aliexpress.com. Search AliExpress products by keyword and page. Returns each result's item id, title, price, rating, sold-count text, product image and url. The item id pairs with aliexpress.com/get_product, and is resolved for bundle-deal results too, which link through a different url shape. Scrolls the results so every card's image loads, and reports an image as absent rather than returning a placeholder. Anonymous, read-only. Prices and the sold-count text appear in whatever currency and locale AliExpress resolves the session to. Fails with a clear message rather than returning an empty list, since AliExpress returns results even for nonsense queries.
+Automatically search AliExpress products on aliexpress.com. Search AliExpress products by keyword and page. Returns each result's item id, title, price, rating, sold-count text, product image and url. The item id pairs with aliexpress.com/get_product, including for bundle-deal results. An image that did not load is reported as null. Anonymous, read-only. Prices and the sold-count text appear in whatever currency and locale AliExpress picks for the session. Fails with a clear message rather than returning an empty list, since AliExpress returns results even for nonsense queries.
 
 - Site: aliexpress.com
 - Address: `reduck/aliexpress.com/search_products`
-- Updated: 2026-10-22 (v9)
+- Updated: 2026-10-23 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -31,7 +31,7 @@ npx @reduck-ai/cli@latest run --script reduck/aliexpress.com/search_products
 
 ### What does "Search AliExpress products" do?
 
-Search AliExpress products by keyword and page. Returns each result's item id, title, price, rating, sold-count text, product image and url. The item id pairs with aliexpress.com/get_product, and is resolved for bundle-deal results too, which link through a different url shape. Scrolls the results so every card's image loads, and reports an image as absent rather than returning a placeholder. Anonymous, read-only. Prices and the sold-count text appear in whatever currency and locale AliExpress resolves the session to. Fails with a clear message rather than returning an empty list, since AliExpress returns results even for nonsense queries.
+Search AliExpress products by keyword and page. Returns each result's item id, title, price, rating, sold-count text, product image and url. The item id pairs with aliexpress.com/get_product, including for bundle-deal results. An image that did not load is reported as null. Anonymous, read-only. Prices and the sold-count text appear in whatever currency and locale AliExpress picks for the session. Fails with a clear message rather than returning an empty list, since AliExpress returns results even for nonsense queries.
 
 ### How do I automatically search AliExpress products on aliexpress.com?
 

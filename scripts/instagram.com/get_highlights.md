@@ -4,7 +4,7 @@ Automatically get Instagram profile highlights on instagram.com. List an Instagr
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/get_highlights`
-- Updated: 2026-10-19 (v2)
+- Updated: 2026-10-23 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Report which Hostinger (hPanel) account this browser is signed in as: the accoun
 
 - Site: hostinger.com
 - Address: `reduck/hostinger.com/whoami`
-- Updated: 2026-09-30 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

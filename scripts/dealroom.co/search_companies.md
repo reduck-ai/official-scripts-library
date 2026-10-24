@@ -4,7 +4,7 @@ Automatically search Companies on dealroom.co. Search Dealroom's company databas
 
 - Site: dealroom.co
 - Address: `reduck/dealroom.co/search_companies`
-- Updated: 2026-09-09 (v6)
+- Updated: 2026-10-22 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

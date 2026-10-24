@@ -4,7 +4,7 @@ Automatically get Gemini chat messages on gemini.google.com. Full message transc
 
 - Site: gemini.google.com
 - Address: `reduck/gemini.google.com/get_chat_messages`
-- Updated: 2026-08-25 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

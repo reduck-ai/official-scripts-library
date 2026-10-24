@@ -4,7 +4,7 @@ Log into HubSpot (app.hubspot.com) with Google SSO: submits your email, signs in
 
 - Site: app.hubspot.com
 - Address: `reduck/app.hubspot.com/login_with_google`
-- Updated: 2026-10-22 (v14)
+- Updated: 2026-10-23 (v15)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -44,7 +44,7 @@ It returns url, note, step, account, loggedIn.
 
 ### Do I need to be logged in to app.hubspot.com?
 
-Yes. It acts as you on app.hubspot.com: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the app.hubspot.com cookies saved by the Reduck extension.
+No. It only uses pages of app.hubspot.com that are reachable without signing in.
 
 ### Does it change anything on app.hubspot.com, or only read data?
 

@@ -4,7 +4,7 @@ Automatically get Instagram home feed on instagram.com. Fetch the posts from you
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/get_feed`
-- Updated: 2026-09-03 (v4)
+- Updated: 2026-10-23 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

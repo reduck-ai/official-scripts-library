@@ -4,7 +4,7 @@ Automatically create Google Drive folder on drive.google.com. Create a new folde
 
 - Site: drive.google.com
 - Address: `reduck/drive.google.com/create_folder`
-- Updated: 2026-08-24 (v3)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -54,7 +54,7 @@ Yes. It acts as you on drive.google.com: on your own Chrome it reuses your sessi
 
 ### Does it change anything on drive.google.com, or only read data?
 
-It makes changes on drive.google.com, like sending, posting or booking something.
+It makes changes on drive.google.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

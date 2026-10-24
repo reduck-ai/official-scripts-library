@@ -4,7 +4,7 @@ Log into Adobe with Google.
 
 - Site: adobe.com
 - Address: `reduck/adobe.com/login_with_google`
-- Updated: 2026-10-22 (v5)
+- Updated: 2026-10-23 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

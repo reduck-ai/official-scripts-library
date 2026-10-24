@@ -4,7 +4,7 @@ Automatically ask Dust on dust.tt. Start a new Dust conversation, send one quest
 
 - Site: dust.tt
 - Address: `reduck/dust.tt/ask`
-- Updated: 2026-08-26 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -61,7 +61,7 @@ Yes. It acts as you on dust.tt: on your own Chrome it reuses your session, and o
 
 ### Does it change anything on dust.tt, or only read data?
 
-It makes changes on dust.tt, like sending, posting or booking something.
+It makes changes on dust.tt, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

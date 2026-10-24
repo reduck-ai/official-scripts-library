@@ -4,7 +4,7 @@ Automatically delete Discord message on discord.com. Deletes a single Discord me
 
 - Site: discord.com
 - Address: `reduck/discord.com/delete_message`
-- Updated: 2026-10-01 (v8)
+- Updated: 2026-10-22 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it

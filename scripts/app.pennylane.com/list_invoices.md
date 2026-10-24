@@ -1,10 +1,10 @@
-# List supplier invoices
+# List Pennylane supplier invoices
 
-Automatically list supplier invoices on app.pennylane.com. Lists Pennylane supplier invoices from one tab (All / Inbox / To pay / Paid / To approve). Returns each invoice's id, provider (best-effort, parsed from the site-generated label), invoice number, dates, amount/currency, payment status and paid flag. Requires companyId (the number in the app URL at /companies/<id>/supplier_invoices); defaults to the Inbox tab, the invoices needing reconciliation.
+Automatically list Pennylane supplier invoices on app.pennylane.com. Lists a Pennylane company's supplier invoices, newest first, one page at a time. Returns each invoice's id, label, provider, invoice number, date, deadline, amount and currency, invoice and payment status, and paid flag, plus paging totals (use hasNextPage to ask for the next page). Requires companyId, the number in the app URL at /companies/<id>/. Fails with a sign-in error when the browser is not signed in to Pennylane.
 
 - Site: app.pennylane.com
 - Address: `reduck/app.pennylane.com/list_invoices`
-- Updated: 2026-08-31 (v6)
+- Updated: 2026-10-23 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,8 +18,8 @@ npx @reduck-ai/cli@latest run --script reduck/app.pennylane.com/list_invoices
 ## Input
 
 - `companyId` (integer | string, required): Pennylane company id, the number in the app URL at /companies/<id>/supplier_invoices.
-- `page` (integer, optional): Page number, 1-indexed. Defaults to 1.
-- `perPage` (integer, optional): Rows per page. Defaults to 50.
+- `page` (integer, optional): Page number, 1-indexed.
+- `perPage` (integer, optional): Rows per page.
 
 ## Output
 
@@ -28,17 +28,17 @@ npx @reduck-ai/cli@latest run --script reduck/app.pennylane.com/list_invoices
 
 ## FAQ
 
-### What does "List supplier invoices" do?
+### What does "List Pennylane supplier invoices" do?
 
-Lists Pennylane supplier invoices from one tab (All / Inbox / To pay / Paid / To approve). Returns each invoice's id, provider (best-effort, parsed from the site-generated label), invoice number, dates, amount/currency, payment status and paid flag. Requires companyId (the number in the app URL at /companies/<id>/supplier_invoices); defaults to the Inbox tab, the invoices needing reconciliation.
+Lists a Pennylane company's supplier invoices, newest first, one page at a time. Returns each invoice's id, label, provider, invoice number, date, deadline, amount and currency, invoice and payment status, and paid flag, plus paging totals (use hasNextPage to ask for the next page). Requires companyId, the number in the app URL at /companies/<id>/. Fails with a sign-in error when the browser is not signed in to Pennylane.
 
-### How do I automatically list supplier invoices on app.pennylane.com?
+### How do I automatically list Pennylane supplier invoices on app.pennylane.com?
 
 Ask an AI agent connected to Reduck to run reduck/app.pennylane.com/list_invoices, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/app.pennylane.com/list_invoices
 
-### Is there a app.pennylane.com API to list supplier invoices?
+### Is there a app.pennylane.com API to list Pennylane supplier invoices?
 
-You do not need one. "List supplier invoices" drives the real app.pennylane.com pages in a browser, so it works whether or not app.pennylane.com offers an API for this.
+You do not need one. "List Pennylane supplier invoices" drives the real app.pennylane.com pages in a browser, so it works whether or not app.pennylane.com offers an API for this.
 
 ### What information do I need to provide?
 

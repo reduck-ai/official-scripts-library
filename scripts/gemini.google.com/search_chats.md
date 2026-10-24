@@ -4,7 +4,7 @@ Automatically search Gemini chats on gemini.google.com. Search your Gemini conve
 
 - Site: gemini.google.com
 - Address: `reduck/gemini.google.com/search_chats`
-- Updated: 2026-08-26 (v3)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

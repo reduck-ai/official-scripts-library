@@ -1,10 +1,10 @@
 # List Neon invoices
 
-Automatically list Neon invoices on console.neon.tech. List the signed-in Neon organization's billing invoices, read directly from the console's own invoices API. Neon bills via Orb, so each invoice's pdfUrl is its Orb-hosted PDF (assets.withorb.com/invoice/...?token=, a public tokenized link). Returns org, total, and invoices (reference, issued, total, status, pdfUrl). Reads the default organization the console lands on; an account with multiple orgs sees only that one.
+Automatically list Neon invoices on console.neon.tech. List the signed-in Neon organization's billing invoices. Returns org, total, and invoices (reference, issued, total, status, pdfUrl). Each pdfUrl is a public link to the invoice PDF, so treat it as sensitive. Reads the default organization the console opens on; an account with several organizations sees only that one.
 
 - Site: console.neon.tech
 - Address: `reduck/console.neon.tech/list_invoices`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-10-23 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,7 +29,7 @@ It takes no input.
 
 ### What does "List Neon invoices" do?
 
-List the signed-in Neon organization's billing invoices, read directly from the console's own invoices API. Neon bills via Orb, so each invoice's pdfUrl is its Orb-hosted PDF (assets.withorb.com/invoice/...?token=, a public tokenized link). Returns org, total, and invoices (reference, issued, total, status, pdfUrl). Reads the default organization the console lands on; an account with multiple orgs sees only that one.
+List the signed-in Neon organization's billing invoices. Returns org, total, and invoices (reference, issued, total, status, pdfUrl). Each pdfUrl is a public link to the invoice PDF, so treat it as sensitive. Reads the default organization the console opens on; an account with several organizations sees only that one.
 
 ### How do I automatically list Neon invoices on console.neon.tech?
 

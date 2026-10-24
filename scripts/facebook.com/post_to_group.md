@@ -4,7 +4,7 @@ Automatically post to a Facebook group without the Groups API on facebook.com. P
 
 - Site: facebook.com
 - Address: `reduck/facebook.com/post_to_group`
-- Updated: 2026-10-02 (v15)
+- Updated: 2026-10-22 (v18)
 - Author: Reduck AI (reduck)
 
 ## Run it

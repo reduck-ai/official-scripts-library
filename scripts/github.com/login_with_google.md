@@ -4,7 +4,7 @@ Log into GitHub via Google sign-in. Drives the account chooser and lands on your
 
 - Site: github.com
 - Address: `reduck/github.com/login_with_google`
-- Updated: 2026-08-21 (v3)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -45,7 +45,7 @@ Yes. It acts as you on github.com: on your own Chrome it reuses your session, an
 
 ### Does it change anything on github.com, or only read data?
 
-It makes changes on github.com, like sending, posting or booking something.
+It makes changes on github.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

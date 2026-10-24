@@ -4,7 +4,7 @@ Automatically search Google on google.com. You get about ten organic results per
 
 - Site: google.com
 - Address: `reduck/google.com/search_site`
-- Updated: 2026-10-20 (v29)
+- Updated: 2026-10-23 (v31)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -22,9 +22,9 @@ npx @reduck-ai/cli@latest run --script reduck/google.com/search_site
 ## Input
 
 - `query` (string, required): Full Google query, e.g. 'site:linkedin.com/in Ex-UiPath' or any free-text search.
-- `page` (integer, optional): Result page, 0 = first (maps to Google's &start=page*10), mirroring the SERP pager. Pages are deterministic under replay and disjoint across page numbers, so callers may fetch different pages concurrently and union the results. Results are personalised and geo-located to the browser's Google session, so ordering is stable only for a given account, IP and moment.
-- `freshness` (string, optional): Canonical Google time filter (mapped to tbs=qdr:<value>). One of h (past hour), d (past 24h), w (past week), y (past year), m (past month), optionally with a multiplier: d2 = past 2 days, w3 = past 3 weeks, m6 = past 6 months, h5 = past 5 hours. Omit for all-time.
-- `sortByDate` (boolean, optional): When true, sort results by date (newest first) instead of relevance (tbs=sbd:1). Combines with freshness.
+- `page` (integer, optional): Result page, 0 = first, like Google's pager (10 results per page). Different pages do not overlap, so several can be fetched at once and combined. Results are personalised to the browser's Google account and location, so the order holds only for a given account, place and moment.
+- `freshness` (string, optional): Time filter: h (past hour), d (past 24h), w (past week), m (past month), y (past year), optionally with a multiplier: d2 = past 2 days, w3 = past 3 weeks, m6 = past 6 months, h5 = past 5 hours. Omit for all time.
+- `sortByDate` (boolean, optional): When true, sort results by date (newest first) instead of relevance. Combines with freshness.
 
 ## FAQ
 

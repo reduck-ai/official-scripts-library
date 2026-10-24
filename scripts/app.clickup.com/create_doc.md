@@ -4,7 +4,7 @@ Automatically create a ClickUp Doc on app.clickup.com. Creates a Doc in a ClickU
 
 - Site: app.clickup.com
 - Address: `reduck/app.clickup.com/create_doc`
-- Updated: 2026-10-01 (v6)
+- Updated: 2026-10-23 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

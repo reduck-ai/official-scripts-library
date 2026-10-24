@@ -4,7 +4,7 @@ Your account ends up in the server and you get its ID and name back; a dead invi
 
 - Site: discord.com
 - Address: `reduck/discord.com/join_server_via_invite`
-- Updated: 2026-10-05 (v20)
+- Updated: 2026-10-22 (v22)
 - Author: Reduck AI (reduck)
 
 ## About

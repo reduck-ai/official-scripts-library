@@ -4,7 +4,7 @@ Automatically get keyword ideas with search volume on ahrefs.com. An unofficial 
 
 - Site: ahrefs.com
 - Address: `reduck/ahrefs.com/get_keyword_ideas`
-- Updated: 2026-10-22 (v4)
+- Updated: 2026-10-23 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

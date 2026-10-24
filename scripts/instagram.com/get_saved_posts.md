@@ -4,7 +4,7 @@ Automatically list the signed-in account's saved Instagram posts on instagram.co
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/get_saved_posts`
-- Updated: 2026-10-20 (v8)
+- Updated: 2026-10-22 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it

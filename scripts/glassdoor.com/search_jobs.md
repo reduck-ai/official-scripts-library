@@ -4,7 +4,7 @@ Automatically search Glassdoor jobs on glassdoor.com. Page-one Glassdoor job car
 
 - Site: glassdoor.com
 - Address: `reduck/glassdoor.com/search_jobs`
-- Updated: 2026-10-05 (v6)
+- Updated: 2026-10-23 (v8)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -56,7 +56,7 @@ Shape only: placeholder values generated from the output schema, not a real run.
 
 ### What does "Search Glassdoor jobs" do?
 
-Search Glassdoor job listings by keyword and optional free-text location (city). Returns total and jobs (jobId, title, url, company, rating, location, salary, snippet, postedAgo) for the first results page (~30 listings — Glassdoor's pagination is a JS "load more" action, not a URL param, and was observed to break the page outright on click, so only page 1 is supported here). Location is resolved via Glassdoor's own place-autocomplete, preferring the first city-level match, because the top overall suggestion can be a broader state or region record that Glassdoor then silently fails to filter by; an unrecognized or non-filtering location throws. Glassdoor serves the UI (and some listing labels like the skills line) in whatever language/locale it geo-resolves the session to, independent of the job's own country — text fields may not be in English or in the language of the job itself. Distinct from the existing search_companies/get_company scripts, which cover company profiles and reviews, not job postings.
+Search Glassdoor job listings by keyword and optional city. Returns total and jobs (jobId, title, url, company, rating, location, salary, snippet, postedAgo) for the first results page only (about 30 listings). A city Glassdoor does not recognize, or cannot filter by, fails with an error rather than returning unrelated results. Glassdoor shows text in the language of the country it places the session in, so some fields may not be in English. For company profiles and reviews, use search_companies and get_company.
 
 ### How do I automatically search Glassdoor jobs on glassdoor.com?
 

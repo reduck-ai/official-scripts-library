@@ -4,7 +4,7 @@ Create a channel in a Discord server — text, voice, announcement, stage or for
 
 - Site: discord.com
 - Address: `reduck/discord.com/create_channel`
-- Updated: 2026-10-06 (v14)
+- Updated: 2026-10-22 (v16)
 - Author: Reduck AI (reduck)
 
 ## Run it

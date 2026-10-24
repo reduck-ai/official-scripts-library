@@ -4,7 +4,7 @@ Log into Hostinger via Google sign-in and land on hPanel, returning the signed-i
 
 - Site: hostinger.com
 - Address: `reduck/hostinger.com/login_with_google`
-- Updated: 2026-08-21 (v6)
+- Updated: 2026-10-22 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -45,7 +45,7 @@ Yes. It acts as you on hostinger.com: on your own Chrome it reuses your session,
 
 ### Does it change anything on hostinger.com, or only read data?
 
-It makes changes on hostinger.com, like sending, posting or booking something.
+It makes changes on hostinger.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

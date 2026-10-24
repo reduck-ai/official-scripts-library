@@ -4,7 +4,7 @@ Automatically list Hostinger invoices on hostinger.com. List Hostinger (hPanel) 
 
 - Site: hostinger.com
 - Address: `reduck/hostinger.com/list_invoices`
-- Updated: 2026-09-29 (v7)
+- Updated: 2026-10-22 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it

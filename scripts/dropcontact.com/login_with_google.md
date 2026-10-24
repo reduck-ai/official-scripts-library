@@ -4,7 +4,7 @@ Log into Dropcontact with Log In with Google, handling the Google account choose
 
 - Site: dropcontact.com
 - Address: `reduck/dropcontact.com/login_with_google`
-- Updated: 2026-10-05 (v2)
+- Updated: 2026-10-22 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

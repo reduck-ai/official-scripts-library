@@ -4,7 +4,7 @@ Automatically send Facebook friend request on facebook.com. Send a friend reques
 
 - Site: facebook.com
 - Address: `reduck/facebook.com/add_friend`
-- Updated: 2026-10-02 (v10)
+- Updated: 2026-10-22 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it

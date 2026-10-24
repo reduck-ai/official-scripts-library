@@ -4,7 +4,7 @@ Automatically get Google Maps place details on google.com. Get one Google Maps p
 
 - Site: google.com
 - Address: `reduck/google.com/get_place`
-- Updated: 2026-10-20 (v10)
+- Updated: 2026-10-22 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it

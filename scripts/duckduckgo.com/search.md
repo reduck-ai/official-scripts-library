@@ -4,7 +4,7 @@ Search DuckDuckGo for a query and return up to `count` web results, optionally s
 
 - Site: duckduckgo.com
 - Address: `reduck/duckduckgo.com/search`
-- Updated: 2026-10-20 (v11)
+- Updated: 2026-10-22 (v12)
 - Author: Reduck AI (reduck)
 
 ## Run it

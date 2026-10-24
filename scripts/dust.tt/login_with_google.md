@@ -4,7 +4,7 @@ Log into Dust with Continue with Google, handling the Google account chooser and
 
 - Site: dust.tt
 - Address: `reduck/dust.tt/login_with_google`
-- Updated: 2026-10-01 (v2)
+- Updated: 2026-10-22 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -43,7 +43,7 @@ It returns url, account, already, loggedIn, workspace.
 
 ### Do I need to be logged in to dust.tt?
 
-Yes. It acts as you on dust.tt: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the dust.tt cookies saved by the Reduck extension.
+No. It only uses pages of dust.tt that are reachable without signing in.
 
 ### Does it change anything on dust.tt, or only read data?
 

@@ -4,7 +4,7 @@ Automatically delete Gemini chat on gemini.google.com. Permanently delete one Ge
 
 - Site: gemini.google.com
 - Address: `reduck/gemini.google.com/delete_chat`
-- Updated: 2026-08-25 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -52,7 +52,7 @@ Yes. It acts as you on gemini.google.com: on your own Chrome it reuses your sess
 
 ### Does it change anything on gemini.google.com, or only read data?
 
-It makes changes on gemini.google.com, like sending, posting or booking something.
+It makes changes on gemini.google.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

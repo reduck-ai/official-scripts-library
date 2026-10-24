@@ -4,7 +4,7 @@ Automatically clear range on docs.google.com. Clear the values of an A1 range in
 
 - Site: docs.google.com
 - Address: `reduck/docs.google.com/sheets_clear_range`
-- Updated: 2026-09-27 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -54,7 +54,7 @@ Yes. It acts as you on docs.google.com: on your own Chrome it reuses your sessio
 
 ### Does it change anything on docs.google.com, or only read data?
 
-It makes changes on docs.google.com, like sending, posting or booking something.
+It makes changes on docs.google.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

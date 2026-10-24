@@ -4,7 +4,7 @@ Automatically edit Discord message on discord.com. Correct one of your own serve
 
 - Site: discord.com
 - Address: `reduck/discord.com/edit_message`
-- Updated: 2026-10-20 (v14)
+- Updated: 2026-10-22 (v15)
 - Author: Reduck AI (reduck)
 
 ## About

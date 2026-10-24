@@ -4,7 +4,7 @@ Automatically search HelloWork jobs on hellowork.com. Pull 30 French job offers 
 
 - Site: hellowork.com
 - Address: `reduck/hellowork.com/search_jobs`
-- Updated: 2026-10-05 (v4)
+- Updated: 2026-10-22 (v8)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -60,7 +60,7 @@ Shape only: placeholder values generated from the output schema, not a real run.
 
 ### What does "Search HelloWork jobs" do?
 
-Search HelloWork's French job listings by keyword, optional free-text location, and page (30 offers/page). Returns total and jobs (jobId, title, company, url, location, contract, remoteTag, salary, superRecruiter, postedAgo). Salary and remote-work tags are only present when the listing/employer chose to show them, so they're frequently null.
+Search HelloWork's French job listings by keyword, optional free-text location, and page (30 offers per page). Returns the total offer count and the page's jobs (jobId, title, company, url, location, contract, remoteTag, salary, superRecruiter, postedAgo as displayed). Salary and remote-work tags appear only when the employer shows them, so they are often null. HelloWork's other filters are not applied. No match returns total 0 and an empty list; a page past the last one returns an empty list. A query HelloWork refuses (for example one containing HTML) fails with an error that says so.
 
 ### How do I automatically search HelloWork jobs on hellowork.com?
 

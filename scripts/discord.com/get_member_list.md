@@ -4,7 +4,7 @@ Automatically get Discord server member list on discord.com. Member names, user 
 
 - Site: discord.com
 - Address: `reduck/discord.com/get_member_list`
-- Updated: 2026-10-20 (v13)
+- Updated: 2026-10-22 (v14)
 - Author: Reduck AI (reduck)
 
 ## About

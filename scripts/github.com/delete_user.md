@@ -4,7 +4,7 @@ Automatically remove user from GitHub org on github.com. Remove a person from a 
 
 - Site: github.com
 - Address: `reduck/github.com/delete_user`
-- Updated: 2026-10-05 (v9)
+- Updated: 2026-10-22 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it

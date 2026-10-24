@@ -1,10 +1,10 @@
 # Download an Atlassian invoice PDF
 
-Automatically download an Atlassian invoice PDF on admin.atlassian.com. Download one Atlassian (admin.atlassian.com) billing invoice, given the downloadUrl — or the id plus transaction_account — that admin.atlassian.com/list_invoices returns. Returns the real filename plus the PDF bytes as base64 (decode and write it yourself). The bytes come back with the run, so it does not depend on the browser's own download folder, and it still works when Atlassian serves the PDF from a signed storage location. Only an org billing admin can download invoices.
+Automatically download an Atlassian invoice PDF on admin.atlassian.com. Download one Atlassian (admin.atlassian.com) billing invoice, given the downloadUrl, or the id plus transaction_account, that admin.atlassian.com/list_invoices returns. Returns the filename plus the PDF as base64, for you to decode and save. Only an organization billing admin can download invoices.
 
 - Site: admin.atlassian.com
 - Address: `reduck/admin.atlassian.com/download_invoice`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-10-23 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -34,7 +34,7 @@ npx @reduck-ai/cli@latest run --script reduck/admin.atlassian.com/download_invoi
 
 ### What does "Download an Atlassian invoice PDF" do?
 
-Download one Atlassian (admin.atlassian.com) billing invoice, given the downloadUrl — or the id plus transaction_account — that admin.atlassian.com/list_invoices returns. Returns the real filename plus the PDF bytes as base64 (decode and write it yourself). The bytes come back with the run, so it does not depend on the browser's own download folder, and it still works when Atlassian serves the PDF from a signed storage location. Only an org billing admin can download invoices.
+Download one Atlassian (admin.atlassian.com) billing invoice, given the downloadUrl, or the id plus transaction_account, that admin.atlassian.com/list_invoices returns. Returns the filename plus the PDF as base64, for you to decode and save. Only an organization billing admin can download invoices.
 
 ### How do I automatically download an Atlassian invoice PDF on admin.atlassian.com?
 

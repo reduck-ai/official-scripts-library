@@ -4,7 +4,7 @@ Automatically create Instagram post on instagram.com. Publish an Instagram feed 
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/create_post`
-- Updated: 2026-09-29 (v22)
+- Updated: 2026-10-22 (v23)
 - Author: Reduck AI (reduck)
 
 ## Run it

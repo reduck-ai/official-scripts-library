@@ -4,7 +4,7 @@ Automatically list Dropcontact billing invoices on dropcontact.com. List the bil
 
 - Site: dropcontact.com
 - Address: `reduck/dropcontact.com/list_invoices`
-- Updated: 2026-10-09 (v8)
+- Updated: 2026-10-22 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically search Eventbrite events on eventbrite.com. Search Eventbrite for 
 
 - Site: eventbrite.com
 - Address: `reduck/eventbrite.com/search_events`
-- Updated: 2026-10-02 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

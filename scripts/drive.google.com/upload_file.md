@@ -4,7 +4,7 @@ Automatically upload a file to Google Drive on drive.google.com. Upload one file
 
 - Site: drive.google.com
 - Address: `reduck/drive.google.com/upload_file`
-- Updated: 2026-10-13 (v14)
+- Updated: 2026-10-22 (v15)
 - Author: Reduck AI (reduck)
 
 ## Run it

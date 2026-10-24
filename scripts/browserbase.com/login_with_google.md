@@ -4,7 +4,7 @@ Log into Browserbase with Continue with Google, picking the given Google account
 
 - Site: browserbase.com
 - Address: `reduck/browserbase.com/login_with_google`
-- Updated: 2026-10-22 (v4)
+- Updated: 2026-10-23 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

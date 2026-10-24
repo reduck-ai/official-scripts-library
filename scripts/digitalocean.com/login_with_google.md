@@ -4,7 +4,7 @@ Log into DigitalOcean via 'Sign In with Google'. Auto-selects the sole signed-in
 
 - Site: digitalocean.com
 - Address: `reduck/digitalocean.com/login_with_google`
-- Updated: 2026-10-02 (v3)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

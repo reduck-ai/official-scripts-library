@@ -4,7 +4,7 @@ Automatically list failing Drata monitoring tests on drata.com. List the Drata m
 
 - Site: drata.com
 - Address: `reduck/drata.com/check_failing_monitors`
-- Updated: 2026-10-08 (v4)
+- Updated: 2026-10-22 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically get Luma event attendees on luma.com. An unofficial Luma API: get 
 
 - Site: luma.com
 - Address: `reduck/luma.com/get_event_attendees`
-- Updated: 2026-09-30 (v4)
+- Updated: 2026-10-22 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

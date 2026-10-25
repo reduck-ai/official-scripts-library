@@ -4,7 +4,7 @@ Automatically search remaining MAX JEUNE seats per train on SNCF Max Planner on 
 
 - Site: maxjeune-tgvinoui.sncf
 - Address: `reduck/maxjeune-tgvinoui.sncf/search_max_seats`
-- Updated: 2026-10-21 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

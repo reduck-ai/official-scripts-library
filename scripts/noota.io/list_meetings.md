@@ -4,7 +4,7 @@ Automatically list Noota meetings on noota.io. List the meetings recorded in the
 
 - Site: noota.io
 - Address: `reduck/noota.io/list_meetings`
-- Updated: 2026-09-28 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

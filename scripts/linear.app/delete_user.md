@@ -4,7 +4,7 @@ Remove a member's access to a Linear workspace, identified by email. Uses whiche
 
 - Site: linear.app
 - Address: `reduck/linear.app/delete_user`
-- Updated: 2026-08-28 (v5)
+- Updated: 2026-10-22 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -48,7 +48,7 @@ Yes. It acts as you on linear.app: on your own Chrome it reuses your session, an
 
 ### Does it change anything on linear.app, or only read data?
 
-It makes changes on linear.app, like sending, posting or booking something.
+It makes changes on linear.app, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

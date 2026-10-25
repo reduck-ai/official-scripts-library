@@ -4,7 +4,7 @@ Log into Malt with Google sign-in, handling Google's account chooser and consent
 
 - Site: malt.com
 - Address: `reduck/malt.com/login_with_google`
-- Updated: 2026-10-02 (v2)
+- Updated: 2026-10-22 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

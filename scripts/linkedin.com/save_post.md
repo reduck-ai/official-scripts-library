@@ -4,7 +4,7 @@ Automatically save LinkedIn post on linkedin.com. Save a LinkedIn post to your s
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/save_post`
-- Updated: 2026-10-01 (v5)
+- Updated: 2026-10-22 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

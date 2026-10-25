@@ -4,7 +4,7 @@ Automatically list Gmail drafts on mail.google.com. List the unsent drafts in th
 
 - Site: mail.google.com
 - Address: `reduck/mail.google.com/list_drafts`
-- Updated: 2026-10-21 (v5)
+- Updated: 2026-10-22 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

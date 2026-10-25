@@ -1,10 +1,10 @@
 # Mark LinkedIn conversation as read
 
-Automatically mark LinkedIn conversation as read on linkedin.com. Mark a classic LinkedIn messaging conversation (NOT Sales Navigator) as read, by thread URL from list_inbox. Counterpart to mark_conversation_unread. Opening the thread is itself what marks it read, so this always returns status "read" — it can't tell you whether the conversation was already read beforehand; check list_inbox's unreadCount first if you need that.
+Automatically mark LinkedIn conversation as read on linkedin.com. Mark a classic LinkedIn messaging conversation (not Sales Navigator) as read, by thread URL from list_inbox. Counterpart to mark_conversation_unread. Opening the thread is itself what marks it read, so this always returns status "read". It can't tell you whether the conversation was already read beforehand; check list_inbox's unreadCount first if you need that.
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/mark_conversation_read`
-- Updated: 2026-10-05 (v2)
+- Updated: 2026-10-23 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,7 +29,7 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/mark_conversation_rea
 
 ### What does "Mark LinkedIn conversation as read" do?
 
-Mark a classic LinkedIn messaging conversation (NOT Sales Navigator) as read, by thread URL from list_inbox. Counterpart to mark_conversation_unread. Opening the thread is itself what marks it read, so this always returns status "read" — it can't tell you whether the conversation was already read beforehand; check list_inbox's unreadCount first if you need that.
+Mark a classic LinkedIn messaging conversation (not Sales Navigator) as read, by thread URL from list_inbox. Counterpart to mark_conversation_unread. Opening the thread is itself what marks it read, so this always returns status "read". It can't tell you whether the conversation was already read beforehand; check list_inbox's unreadCount first if you need that.
 
 ### How do I automatically mark LinkedIn conversation as read on linkedin.com?
 

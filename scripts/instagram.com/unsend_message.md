@@ -4,7 +4,7 @@ Automatically unsend an Instagram DM on instagram.com. Remove a message you sent
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/unsend_message`
-- Updated: 2026-10-19 (v7)
+- Updated: 2026-10-22 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically send a Gmail draft on mail.google.com. Send an existing Gmail draf
 
 - Site: mail.google.com
 - Address: `reduck/mail.google.com/send_draft`
-- Updated: 2026-10-21 (v10)
+- Updated: 2026-10-22 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically mute an Instagram DM thread on instagram.com. Mute or unmute notif
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/mute_dm_thread`
-- Updated: 2026-10-14 (v5)
+- Updated: 2026-10-22 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

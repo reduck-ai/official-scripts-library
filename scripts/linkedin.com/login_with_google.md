@@ -4,7 +4,7 @@ Log into LinkedIn via Google SSO. Drives LinkedIn's Continue-with-Google flow, p
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/login_with_google`
-- Updated: 2026-10-05 (v11)
+- Updated: 2026-10-22 (v13)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -1,10 +1,10 @@
 # Search Jooble jobs
 
-Automatically search Jooble jobs on jooble.org. Searches job listings on jooble.org (global/US, English UI) by driving the site's own search form (keyword + city) and reading the results it returns. Dismisses the cookie-consent banner if present. Pagination beyond the first page is loaded via progressive scroll, matching the site's own infinite-scroll behavior. One thing to be aware of: Jooble is sensitive to request rate and can temporarily block rapid repeated searches within a short window; if a search fails, space out retries rather than repeating it immediately.
+Automatically search Jooble jobs on jooble.org. Search job listings on jooble.org by keyword and optional city or region, with paging (about 20 results per page). Returns the matching count, the site's total count, and each job's title, company, location, salary, tags, posting date, remote flag and description. Jooble can temporarily block rapid repeated searches; if a search fails, wait before retrying.
 
 - Site: jooble.org
 - Address: `reduck/jooble.org/search_jobs`
-- Updated: 2026-08-14 (v8)
+- Updated: 2026-10-23 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -33,7 +33,7 @@ npx @reduck-ai/cli@latest run --script reduck/jooble.org/search_jobs
 
 ### What does "Search Jooble jobs" do?
 
-Searches job listings on jooble.org (global/US, English UI) by driving the site's own search form (keyword + city) and reading the results it returns. Dismisses the cookie-consent banner if present. Pagination beyond the first page is loaded via progressive scroll, matching the site's own infinite-scroll behavior. One thing to be aware of: Jooble is sensitive to request rate and can temporarily block rapid repeated searches within a short window; if a search fails, space out retries rather than repeating it immediately.
+Search job listings on jooble.org by keyword and optional city or region, with paging (about 20 results per page). Returns the matching count, the site's total count, and each job's title, company, location, salary, tags, posting date, remote flag and description. Jooble can temporarily block rapid repeated searches; if a search fails, wait before retrying.
 
 ### How do I automatically search Jooble jobs on jooble.org?
 

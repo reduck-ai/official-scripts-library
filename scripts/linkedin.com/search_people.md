@@ -4,7 +4,7 @@ Automatically search LinkedIn people on linkedin.com. Search LinkedIn people by 
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/search_people`
-- Updated: 2026-10-16 (v31)
+- Updated: 2026-10-22 (v34)
 - Author: Reduck AI (reduck)
 
 ## Run it

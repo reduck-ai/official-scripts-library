@@ -1,10 +1,10 @@
 # List my Luma events (upcoming or past)
 
-Automatically list my Luma events (upcoming or past) on luma.com. List the events on the signed-in Luma account's own Events page: the upcoming ones, or the past ones. Each event says whether you are a guest, a host or a manager, your registration status (e.g. approved, pending), when and where it is, who hosts it, its guest count, and whether its guest list is visible.
+Automatically list my Luma events (upcoming or past) on luma.com. List the events on the signed-in Luma account's own Events page: the upcoming ones, or the past ones, one page at a time. Each event says whether you are a guest, a host or a manager, your registration status (e.g. approved, pending), when and where it is, who hosts it, its guest count, and whether its guest list is visible. When has_more is true, pass next_cursor as cursor to get the next page.
 
 - Site: luma.com
 - Address: `reduck/luma.com/list_my_events`
-- Updated: 2026-10-07 (v1)
+- Updated: 2026-10-23 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,8 @@ npx @reduck-ai/cli@latest run --script reduck/luma.com/list_my_events
 
 ## Input
 
-- `limit` (integer, optional): Max events to return. Default 25. When has_more is true, raise it to see more.
+- `limit` (integer, optional): Max events to return per page. Default 25.
+- `cursor` (string, optional): next_cursor from a previous run with the same period, to get the next page.
 - `period` (string, optional): Which tab of your Events page: "future" (Upcoming, the default) or "past".
 
 ## Output
@@ -25,13 +26,14 @@ npx @reduck-ai/cli@latest run --script reduck/luma.com/list_my_events
 - `events` (array, required)
 - `period` (string, required)
 - `account` (string, required): The signed-in Luma account's email: whose events these are.
-- `has_more` (boolean, required): True when the account has more events in this period than `limit`.
+- `has_more` (boolean, required): True when the account has more events in this period after this page.
+- `next_cursor` (string | null, required): Pass as cursor to get the next page; null on the last page.
 
 ## FAQ
 
 ### What does "List my Luma events (upcoming or past)" do?
 
-List the events on the signed-in Luma account's own Events page: the upcoming ones, or the past ones. Each event says whether you are a guest, a host or a manager, your registration status (e.g. approved, pending), when and where it is, who hosts it, its guest count, and whether its guest list is visible.
+List the events on the signed-in Luma account's own Events page: the upcoming ones, or the past ones, one page at a time. Each event says whether you are a guest, a host or a manager, your registration status (e.g. approved, pending), when and where it is, who hosts it, its guest count, and whether its guest list is visible. When has_more is true, pass next_cursor as cursor to get the next page.
 
 ### How do I automatically list my Luma events (upcoming or past) on luma.com?
 
@@ -43,11 +45,11 @@ You do not need one. "List my Luma events (upcoming or past)" drives the real lu
 
 ### What information do I need to provide?
 
-Optional: limit, period.
+Optional: limit, cursor, period.
 
 ### What does it return?
 
-It returns events, period, account, has_more.
+It returns events, period, account, has_more, next_cursor.
 
 ### Do I need to be logged in to luma.com?
 

@@ -4,7 +4,7 @@ Automatically get LinkedIn newsletter edition comments on linkedin.com. Get the 
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_edition_comments`
-- Updated: 2026-09-08 (v8)
+- Updated: 2026-10-22 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it

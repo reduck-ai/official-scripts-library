@@ -4,7 +4,7 @@ Sign in to Lovable with Google and land on the dashboard, ready for the scripts 
 
 - Site: lovable.dev
 - Address: `reduck/lovable.dev/login_with_google`
-- Updated: 2026-10-05 (v7)
+- Updated: 2026-10-23 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -41,7 +41,7 @@ It returns url, account, loggedIn.
 
 ### Do I need to be logged in to lovable.dev?
 
-Yes. It acts as you on lovable.dev: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the lovable.dev cookies saved by the Reduck extension.
+No. It only uses pages of lovable.dev that are reachable without signing in.
 
 ### Does it change anything on lovable.dev, or only read data?
 

@@ -4,7 +4,7 @@ Automatically get sent LinkedIn connection invitations on linkedin.com. Lists th
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_sent_invitations`
-- Updated: 2026-09-03 (v1)
+- Updated: 2026-10-23 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -22,6 +22,7 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/get_sent_invitations
 ## Output
 
 - `total` (number, required): Number of sent invitations returned. 0 when there are none pending.
+- `complete` (boolean, required): true when the whole list was loaded; false when limit stopped the loading first, so more invitations may exist.
 - `invitations` (array, required)
 
 ## FAQ
@@ -44,7 +45,7 @@ Optional: limit.
 
 ### What does it return?
 
-It returns total, invitations.
+It returns total, complete, invitations.
 
 ### Do I need to be logged in to linkedin.com?
 

@@ -4,7 +4,7 @@ Report which Gmail account this browser is signed in as: display name and email,
 
 - Site: mail.google.com
 - Address: `reduck/mail.google.com/whoami`
-- Updated: 2026-10-21 (v3)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

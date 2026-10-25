@@ -1,10 +1,10 @@
 # Get current Lovable user
 
-Automatically get current Lovable user on lovable.dev. Report which Lovable account this browser is signed in as: user id, email, display name, photo and whether the email is verified, from the app's own account lookup. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Lovable scripts.
+Automatically get current Lovable user on lovable.dev. Report which Lovable account this browser is signed in as: user id, email, display name, photo and whether the email is verified. When the browser is signed out of Lovable, the run fails with a signed-out error asking you to sign in to lovable.dev.
 
 - Site: lovable.dev
 - Address: `reduck/lovable.dev/get_current_user`
-- Updated: 2026-10-05 (v3)
+- Updated: 2026-10-22 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -32,7 +32,7 @@ It takes no input.
 
 ### What does "Get current Lovable user" do?
 
-Report which Lovable account this browser is signed in as: user id, email, display name, photo and whether the email is verified, from the app's own account lookup. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Lovable scripts.
+Report which Lovable account this browser is signed in as: user id, email, display name, photo and whether the email is verified. When the browser is signed out of Lovable, the run fails with a signed-out error asking you to sign in to lovable.dev.
 
 ### How do I automatically get current Lovable user on lovable.dev?
 

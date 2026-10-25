@@ -1,10 +1,10 @@
 # Linear whoami (signed-in account)
 
-Report which Linear account this browser is signed in as: name, email and the workspace slug, from Personal Profile settings. Optionally pass `workspaceUrl` to read a specific workspace. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Linear scripts.
+Report which Linear account this browser is signed in as: name, email and the workspace slug. Optionally pass `workspaceUrl` to read a specific workspace; a workspace this account does not belong to fails with an error that says so. When the browser is signed out of Linear, the run fails with a signed-out error asking you to sign in to linear.app.
 
 - Site: linear.app
 - Address: `reduck/linear.app/whoami`
-- Updated: 2026-09-30 (v1)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -30,7 +30,7 @@ npx @reduck-ai/cli@latest run --script reduck/linear.app/whoami
 
 ### What does "Linear whoami (signed-in account)" do?
 
-Report which Linear account this browser is signed in as: name, email and the workspace slug, from Personal Profile settings. Optionally pass `workspaceUrl` to read a specific workspace. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Linear scripts.
+Report which Linear account this browser is signed in as: name, email and the workspace slug. Optionally pass `workspaceUrl` to read a specific workspace; a workspace this account does not belong to fails with an error that says so. When the browser is signed out of Linear, the run fails with a signed-out error asking you to sign in to linear.app.
 
 ### What information do I need to provide?
 

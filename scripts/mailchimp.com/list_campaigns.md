@@ -4,7 +4,7 @@ Automatically list campaigns on mailchimp.com. List the email campaigns in the s
 
 - Site: mailchimp.com
 - Address: `reduck/mailchimp.com/list_campaigns`
-- Updated: 2026-09-28 (v1)
+- Updated: 2026-10-23 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

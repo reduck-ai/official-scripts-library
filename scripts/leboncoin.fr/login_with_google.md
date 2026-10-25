@@ -4,7 +4,7 @@ Log into Leboncoin with Continuer avec Google, handling the Google account choos
 
 - Site: leboncoin.fr
 - Address: `reduck/leboncoin.fr/login_with_google`
-- Updated: 2026-09-30 (v3)
+- Updated: 2026-10-22 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -42,7 +42,7 @@ It returns url, account, already, loggedIn.
 
 ### Do I need to be logged in to leboncoin.fr?
 
-Yes. It acts as you on leboncoin.fr: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the leboncoin.fr cookies saved by the Reduck extension.
+No. It only uses pages of leboncoin.fr that are reachable without signing in.
 
 ### Does it change anything on leboncoin.fr, or only read data?
 

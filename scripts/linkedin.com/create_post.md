@@ -4,7 +4,7 @@ Automatically create post on linkedin.com. Publish a text post to your LinkedIn 
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/create_post`
-- Updated: 2026-10-21 (v55)
+- Updated: 2026-10-22 (v56)
 - Author: Reduck AI (reduck)
 
 ## Run it

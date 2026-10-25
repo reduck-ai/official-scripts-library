@@ -4,7 +4,7 @@ Automatically search Malt freelancers on malt.com. Search Malt freelancers by ke
 
 - Site: malt.com
 - Address: `reduck/malt.com/search_freelancers`
-- Updated: 2026-10-06 (v12)
+- Updated: 2026-10-22 (v13)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -1,10 +1,10 @@
 # React to a LinkedIn message
 
-Automatically react to a LinkedIn message on linkedin.com. Add an emoji reaction to a message in a classic LinkedIn messaging thread (NOT Sales Navigator). Targets the last message in the thread by default, or the most recent one containing given text.
+Automatically react to a LinkedIn message on linkedin.com. Add an emoji reaction to a message in a classic LinkedIn messaging thread (not Sales Navigator). Targets the last message in the thread by default, or the most recent one containing given text.
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/react_to_message`
-- Updated: 2026-10-05 (v4)
+- Updated: 2026-10-23 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -34,7 +34,7 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/react_to_message
 
 ### What does "React to a LinkedIn message" do?
 
-Add an emoji reaction to a message in a classic LinkedIn messaging thread (NOT Sales Navigator). Targets the last message in the thread by default, or the most recent one containing given text.
+Add an emoji reaction to a message in a classic LinkedIn messaging thread (not Sales Navigator). Targets the last message in the thread by default, or the most recent one containing given text.
 
 ### How do I automatically react to a LinkedIn message on linkedin.com?
 

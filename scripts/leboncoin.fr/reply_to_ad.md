@@ -4,7 +4,7 @@ Automatically reply to an ad on leboncoin.fr. Send a message to the seller of a 
 
 - Site: leboncoin.fr
 - Address: `reduck/leboncoin.fr/reply_to_ad`
-- Updated: 2026-09-18 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -54,7 +54,7 @@ Yes. It acts as you on leboncoin.fr: on your own Chrome it reuses your session, 
 
 ### Does it change anything on leboncoin.fr, or only read data?
 
-It makes changes on leboncoin.fr, like sending, posting or booking something.
+It makes changes on leboncoin.fr, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

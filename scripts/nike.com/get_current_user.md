@@ -1,10 +1,10 @@
-# Get current user
+# Get current Nike member
 
-Automatically get current user on nike.com. Report which Nike Member account this browser is signed in as: the account email from Account settings. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Nike scripts.
+Automatically get current Nike member on nike.com. Report which Nike Member account this browser is signed in as: the account email. When the browser is signed out of Nike, the run fails with a signed-out error asking you to sign in to nike.com.
 
 - Site: nike.com
 - Address: `reduck/nike.com/get_current_user`
-- Updated: 2026-10-13 (v5)
+- Updated: 2026-10-22 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -26,17 +26,17 @@ It takes no input.
 
 ## FAQ
 
-### What does "Get current user" do?
+### What does "Get current Nike member" do?
 
-Report which Nike Member account this browser is signed in as: the account email from Account settings. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Nike scripts.
+Report which Nike Member account this browser is signed in as: the account email. When the browser is signed out of Nike, the run fails with a signed-out error asking you to sign in to nike.com.
 
-### How do I automatically get current user on nike.com?
+### How do I automatically get current Nike member on nike.com?
 
 Ask an AI agent connected to Reduck to run reduck/nike.com/get_current_user, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/nike.com/get_current_user
 
-### Is there a nike.com API to get current user?
+### Is there a nike.com API to get current Nike member?
 
-You do not need one. "Get current user" drives the real nike.com pages in a browser, so it works whether or not nike.com offers an API for this.
+You do not need one. "Get current Nike member" drives the real nike.com pages in a browser, so it works whether or not nike.com offers an API for this.
 
 ### What information do I need to provide?
 

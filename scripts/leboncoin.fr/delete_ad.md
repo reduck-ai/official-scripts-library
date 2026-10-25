@@ -4,7 +4,7 @@ Automatically delete a leboncoin classified ad on leboncoin.fr. Delete one of yo
 
 - Site: leboncoin.fr
 - Address: `reduck/leboncoin.fr/delete_ad`
-- Updated: 2026-09-29 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

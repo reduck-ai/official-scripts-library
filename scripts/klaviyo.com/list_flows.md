@@ -4,7 +4,7 @@ Automatically list Klaviyo flows on klaviyo.com. List the email and SMS flows in
 
 - Site: klaviyo.com
 - Address: `reduck/klaviyo.com/list_flows`
-- Updated: 2026-10-12 (v3)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

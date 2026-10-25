@@ -4,7 +4,7 @@ Automatically get meeting transcript on noota.io. Opens one of your Noota meetin
 
 - Site: noota.io
 - Address: `reduck/noota.io/get_meeting_transcript`
-- Updated: 2026-10-21 (v4)
+- Updated: 2026-10-23 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

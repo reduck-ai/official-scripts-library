@@ -4,7 +4,7 @@ Automatically invite user(s) to Linear workspace on linear.app. Invite one or mo
 
 - Site: linear.app
 - Address: `reduck/linear.app/create_user`
-- Updated: 2026-09-18 (v4)
+- Updated: 2026-10-22 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

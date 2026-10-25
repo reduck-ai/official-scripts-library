@@ -1,10 +1,10 @@
 # LinkedIn re-login
 
-Re-establish a LinkedIn session on a browser that has signed in before, by letting LinkedIn resume a remembered session — then prove who that session belongs to by reading the member back from voyager /me, never inferring it from the argument. Optionally asserts the expected member and fails by name if the browser holds someone else's session. It never submits credentials: it takes no password, never types into the sign-in form and never reads a field's contents, so if LinkedIn asks for credentials it stops and names the human step instead.
+Restore a LinkedIn session on a browser that has signed in before, by letting LinkedIn resume its remembered session, then report which member the session belongs to. Optionally checks it against an expected member and fails by name if the browser holds someone else's session. It never enters a password: if LinkedIn asks for credentials, it stops and says a person needs to sign in.
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/relogin`
-- Updated: 2026-09-21 (v2)
+- Updated: 2026-10-23 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -31,7 +31,7 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/relogin
 
 ### What does "LinkedIn re-login" do?
 
-Re-establish a LinkedIn session on a browser that has signed in before, by letting LinkedIn resume a remembered session — then prove who that session belongs to by reading the member back from voyager /me, never inferring it from the argument. Optionally asserts the expected member and fails by name if the browser holds someone else's session. It never submits credentials: it takes no password, never types into the sign-in form and never reads a field's contents, so if LinkedIn asks for credentials it stops and names the human step instead.
+Restore a LinkedIn session on a browser that has signed in before, by letting LinkedIn resume its remembered session, then report which member the session belongs to. Optionally checks it against an expected member and fails by name if the browser holds someone else's session. It never enters a password: if LinkedIn asks for credentials, it stops and says a person needs to sign in.
 
 ### What information do I need to provide?
 
@@ -47,7 +47,7 @@ No. It only uses pages of linkedin.com that are reachable without signing in.
 
 ### Does it change anything on linkedin.com, or only read data?
 
-It makes changes on linkedin.com, like sending, posting or booking something.
+It makes changes on linkedin.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

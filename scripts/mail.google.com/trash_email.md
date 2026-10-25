@@ -4,7 +4,7 @@ Automatically trash Gmail thread on mail.google.com. Move a Gmail thread to the 
 
 - Site: mail.google.com
 - Address: `reduck/mail.google.com/trash_email`
-- Updated: 2026-10-21 (v7)
+- Updated: 2026-10-22 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it

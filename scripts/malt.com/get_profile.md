@@ -4,7 +4,7 @@ Automatically get Malt freelancer profile on malt.com. Fetches a Malt freelancer
 
 - Site: malt.com
 - Address: `reduck/malt.com/get_profile`
-- Updated: 2026-09-25 (v7)
+- Updated: 2026-10-22 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it

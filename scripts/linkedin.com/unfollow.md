@@ -1,10 +1,10 @@
 # Unfollow LinkedIn profile
 
-Automatically unfollow LinkedIn profile on linkedin.com. Unfollow a LinkedIn member by profile URL. Handles the primary "Following" toggle (pro/creator profiles) and the three-dot "Unfollow" item (normal profiles); confirms the "Unfollow <name>?" dialog. Safe to repeat: it returns not_following if you don't follow them. Statuses: unfollowed/not_following.
+Automatically unfollow LinkedIn profile on linkedin.com. Unfollow a LinkedIn member by profile URL. Works on both creator and regular profiles. Safe to repeat: returns not_following if you don't follow them, and no_follow_cta if the profile offers no follow option. Statuses: unfollowed, not_following, no_follow_cta.
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/unfollow`
-- Updated: 2026-08-26 (v4)
+- Updated: 2026-10-23 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -32,7 +32,7 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/unfollow
 
 ### What does "Unfollow LinkedIn profile" do?
 
-Unfollow a LinkedIn member by profile URL. Handles the primary "Following" toggle (pro/creator profiles) and the three-dot "Unfollow" item (normal profiles); confirms the "Unfollow <name>?" dialog. Safe to repeat: it returns not_following if you don't follow them. Statuses: unfollowed/not_following.
+Unfollow a LinkedIn member by profile URL. Works on both creator and regular profiles. Safe to repeat: returns not_following if you don't follow them, and no_follow_cta if the profile offers no follow option. Statuses: unfollowed, not_following, no_follow_cta.
 
 ### How do I automatically unfollow LinkedIn profile on linkedin.com?
 
@@ -56,7 +56,7 @@ Yes. It acts as you on linkedin.com: on your own Chrome it reuses your session, 
 
 ### Does it change anything on linkedin.com, or only read data?
 
-It makes changes on linkedin.com, like sending, posting or booking something.
+It makes changes on linkedin.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

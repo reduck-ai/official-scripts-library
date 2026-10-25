@@ -4,7 +4,7 @@ Automatically list scheduled posts on linkedin.com. List the logged-in member's 
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_scheduled_posts`
-- Updated: 2026-09-15 (v7)
+- Updated: 2026-10-22 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it

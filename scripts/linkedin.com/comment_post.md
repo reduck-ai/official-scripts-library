@@ -4,7 +4,7 @@ Automatically comment on LinkedIn post on linkedin.com. Post a top-level comment
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/comment_post`
-- Updated: 2026-10-21 (v12)
+- Updated: 2026-10-22 (v14)
 - Author: Reduck AI (reduck)
 
 ## Run it

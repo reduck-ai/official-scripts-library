@@ -4,7 +4,7 @@ Automatically get LinkedIn conversation attendees on linkedin.com. List the part
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_chat_attendees`
-- Updated: 2026-10-05 (v4)
+- Updated: 2026-10-22 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

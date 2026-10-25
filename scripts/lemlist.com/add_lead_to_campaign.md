@@ -4,7 +4,7 @@ Automatically add a lead to a lemlist campaign on lemlist.com. Add a lead to one
 
 - Site: lemlist.com
 - Address: `reduck/lemlist.com/add_lead_to_campaign`
-- Updated: 2026-09-28 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

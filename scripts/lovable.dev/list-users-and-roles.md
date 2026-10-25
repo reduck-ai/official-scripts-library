@@ -4,7 +4,7 @@ Automatically list Lovable workspace members and roles on lovable.dev. List memb
 
 - Site: lovable.dev
 - Address: `reduck/lovable.dev/list-users-and-roles`
-- Updated: 2026-08-19 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

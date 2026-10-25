@@ -4,7 +4,7 @@ Automatically get account on linkedin.com. Fetch a LinkedIn Sales Navigator comp
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/sales_navigator_get_account`
-- Updated: 2026-09-03 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically get meeting AI report on noota.io. Opens one of your Noota meeting
 
 - Site: noota.io
 - Address: `reduck/noota.io/get_meeting_summary`
-- Updated: 2026-10-21 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

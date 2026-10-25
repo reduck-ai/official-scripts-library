@@ -4,7 +4,7 @@ Automatically cancel scheduled post on linkedin.com. Cancel one of the logged-in
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/remove_scheduled_post`
-- Updated: 2026-10-01 (v7)
+- Updated: 2026-10-22 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it

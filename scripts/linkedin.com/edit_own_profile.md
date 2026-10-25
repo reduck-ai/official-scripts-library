@@ -4,7 +4,7 @@ Automatically edit own profile on linkedin.com. Update the logged-in member's ow
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/edit_own_profile`
-- Updated: 2026-09-18 (v7)
+- Updated: 2026-10-22 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -55,7 +55,7 @@ Yes. It acts as you on linkedin.com: on your own Chrome it reuses your session, 
 
 ### Does it change anything on linkedin.com, or only read data?
 
-It makes changes on linkedin.com, like sending, posting or booking something.
+It makes changes on linkedin.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

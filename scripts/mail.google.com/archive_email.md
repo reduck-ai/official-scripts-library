@@ -4,7 +4,7 @@ Automatically archive Gmail thread on mail.google.com. Archive a Gmail thread by
 
 - Site: mail.google.com
 - Address: `reduck/mail.google.com/archive_email`
-- Updated: 2026-10-21 (v12)
+- Updated: 2026-10-22 (v14)
 - Author: Reduck AI (reduck)
 
 ## Run it

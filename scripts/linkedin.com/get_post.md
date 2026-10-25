@@ -4,7 +4,7 @@ Automatically get LinkedIn post on linkedin.com. Fetch a single LinkedIn post by
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_post`
-- Updated: 2026-10-20 (v35)
+- Updated: 2026-10-22 (v36)
 - Author: Reduck AI (reduck)
 
 ## Run it

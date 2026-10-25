@@ -4,7 +4,7 @@ Automatically send LinkedIn connection request on linkedin.com. Send a LinkedIn 
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/connect_with_note`
-- Updated: 2026-10-15 (v10)
+- Updated: 2026-10-22 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it

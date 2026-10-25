@@ -4,7 +4,7 @@ Automatically update a Gmail draft on mail.google.com. Change the subject and/or
 
 - Site: mail.google.com
 - Address: `reduck/mail.google.com/update_draft`
-- Updated: 2026-10-21 (v15)
+- Updated: 2026-10-22 (v16)
 - Author: Reduck AI (reduck)
 
 ## Run it

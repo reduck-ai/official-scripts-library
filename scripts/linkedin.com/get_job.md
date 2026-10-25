@@ -4,7 +4,7 @@ Automatically get LinkedIn job on linkedin.com. Fetch one LinkedIn job posting b
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_job`
-- Updated: 2026-10-21 (v13)
+- Updated: 2026-10-22 (v14)
 - Author: Reduck AI (reduck)
 
 ## Run it

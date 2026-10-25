@@ -4,7 +4,7 @@ Automatically get conversation thread on linkedin.com. Fetch a full LinkedIn Sal
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/sales_navigator_get_thread`
-- Updated: 2026-09-03 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

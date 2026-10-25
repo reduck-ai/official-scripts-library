@@ -4,7 +4,7 @@ Change the display language of the Miro sign-in page (and the account-level lang
 
 - Site: miro.com
 - Address: `reduck/miro.com/switch_language`
-- Updated: 2026-08-31 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -44,7 +44,7 @@ No. It only uses pages of miro.com that are reachable without signing in.
 
 ### Does it change anything on miro.com, or only read data?
 
-It makes changes on miro.com, like sending, posting or booking something.
+It makes changes on miro.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

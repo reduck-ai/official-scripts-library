@@ -4,7 +4,7 @@ Automatically create LinkedIn poll post on linkedin.com. Publish a poll to the L
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/create_poll_post`
-- Updated: 2026-09-03 (v6)
+- Updated: 2026-10-22 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -62,7 +62,7 @@ Yes. It acts as you on linkedin.com: on your own Chrome it reuses your session, 
 
 ### Does it change anything on linkedin.com, or only read data?
 
-It makes changes on linkedin.com, like sending, posting or booking something.
+It makes changes on linkedin.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

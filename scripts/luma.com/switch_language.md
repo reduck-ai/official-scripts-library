@@ -4,7 +4,7 @@ Automatically switch Luma account language on luma.com. Change the signed-in Lum
 
 - Site: luma.com
 - Address: `reduck/luma.com/switch_language`
-- Updated: 2026-09-30 (v4)
+- Updated: 2026-10-22 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

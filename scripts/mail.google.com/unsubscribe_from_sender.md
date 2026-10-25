@@ -4,7 +4,7 @@ Automatically unsubscribe from a sender in Gmail on mail.google.com. Unsubscribe
 
 - Site: mail.google.com
 - Address: `reduck/mail.google.com/unsubscribe_from_sender`
-- Updated: 2026-10-21 (v9)
+- Updated: 2026-10-22 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it

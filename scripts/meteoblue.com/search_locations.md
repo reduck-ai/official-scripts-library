@@ -4,7 +4,7 @@ Automatically search meteoblue locations on meteoblue.com. Search meteoblue's lo
 
 - Site: meteoblue.com
 - Address: `reduck/meteoblue.com/search_locations`
-- Updated: 2026-10-19 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

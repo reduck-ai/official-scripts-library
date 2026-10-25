@@ -4,7 +4,7 @@ Automatically report Gmail thread as spam on mail.google.com. Report a Gmail thr
 
 - Site: mail.google.com
 - Address: `reduck/mail.google.com/report_spam`
-- Updated: 2026-10-21 (v11)
+- Updated: 2026-10-22 (v13)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically get Current Gmail User on mail.google.com. Return the display name
 
 - Site: mail.google.com
 - Address: `reduck/mail.google.com/get_current_user`
-- Updated: 2026-10-21 (v7)
+- Updated: 2026-10-22 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it

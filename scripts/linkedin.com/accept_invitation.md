@@ -4,7 +4,7 @@ Automatically accept a received invitation on linkedin.com. Accept a pending rec
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/accept_invitation`
-- Updated: 2026-10-21 (v6)
+- Updated: 2026-10-22 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically get LinkedIn profile on linkedin.com. Get one LinkedIn profile by 
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_profile`
-- Updated: 2026-10-19 (v28)
+- Updated: 2026-10-22 (v29)
 - Author: Reduck AI (reduck)
 
 ## Run it

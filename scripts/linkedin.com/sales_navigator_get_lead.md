@@ -4,7 +4,7 @@ Automatically get lead on linkedin.com. Fetch a full LinkedIn Sales Navigator le
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/sales_navigator_get_lead`
-- Updated: 2026-09-03 (v5)
+- Updated: 2026-10-22 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

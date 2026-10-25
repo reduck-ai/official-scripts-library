@@ -4,7 +4,7 @@ Automatically get LinkedIn dashboard analytics on linkedin.com. Read the logged-
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_dashboard`
-- Updated: 2026-09-03 (v4)
+- Updated: 2026-10-22 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

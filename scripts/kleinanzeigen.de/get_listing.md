@@ -4,7 +4,7 @@ Automatically get Kleinanzeigen listing details on kleinanzeigen.de. Get the ful
 
 - Site: kleinanzeigen.de
 - Address: `reduck/kleinanzeigen.de/get_listing`
-- Updated: 2026-10-06 (v4)
+- Updated: 2026-10-22 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

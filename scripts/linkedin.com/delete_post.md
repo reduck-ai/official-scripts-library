@@ -4,7 +4,7 @@ Automatically delete post on linkedin.com. Permanently delete one of the logged-
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/delete_post`
-- Updated: 2026-09-29 (v14)
+- Updated: 2026-10-22 (v15)
 - Author: Reduck AI (reduck)
 
 ## Run it

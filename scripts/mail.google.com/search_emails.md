@@ -4,7 +4,7 @@ Automatically search Gmail on mail.google.com. Takes any Gmail search query and 
 
 - Site: mail.google.com
 - Address: `reduck/mail.google.com/search_emails`
-- Updated: 2026-10-21 (v16)
+- Updated: 2026-10-22 (v17)
 - Author: Reduck AI (reduck)
 
 ## About

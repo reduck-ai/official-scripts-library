@@ -4,7 +4,7 @@ Automatically search LinkedIn companies on linkedin.com. Search LinkedIn compani
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/search_companies`
-- Updated: 2026-10-13 (v6)
+- Updated: 2026-10-22 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it

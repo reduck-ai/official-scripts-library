@@ -4,7 +4,7 @@ Automatically list followers on linkedin.com. List the people who follow the sig
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/list_followers`
-- Updated: 2026-09-28 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

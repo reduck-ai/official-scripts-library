@@ -1,10 +1,10 @@
 # Instagram whoami (signed-in account)
 
-Report which Instagram account this browser is signed in as: the user id, @username and name. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Instagram scripts.
+Report which Instagram account this browser is signed in as: the user id, @username and name. When the browser is signed out of Instagram, the run fails with a signed-out error asking you to sign in to instagram.com.
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/whoami`
-- Updated: 2026-10-01 (v3)
+- Updated: 2026-10-22 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -31,7 +31,7 @@ It takes no input.
 
 ### What does "Instagram whoami (signed-in account)" do?
 
-Report which Instagram account this browser is signed in as: the user id, @username and name. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Instagram scripts.
+Report which Instagram account this browser is signed in as: the user id, @username and name. When the browser is signed out of Instagram, the run fails with a signed-out error asking you to sign in to instagram.com.
 
 ### What information do I need to provide?
 

@@ -4,7 +4,7 @@ Automatically get profile viewers on linkedin.com. List who viewed your LinkedIn
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_profile_viewers`
-- Updated: 2026-09-03 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

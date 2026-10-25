@@ -1,10 +1,10 @@
 # Get events from a Luma calendar
 
-Automatically get events from a Luma calendar on luma.com. List the past or future events published under a specific Luma calendar/organizer (e.g. "AITinkerers"), paginated.
+Automatically get events from a Luma calendar on luma.com. List the past or future events published under a Luma calendar (e.g. "AITinkerers"), one page at a time: pass next_cursor back as cursor while has_more is true. A calendar with no events in that period returns an empty list; a handle that is not a Luma calendar fails with an error.
 
 - Site: luma.com
 - Address: `reduck/luma.com/get_calendar_events`
-- Updated: 2026-10-01 (v3)
+- Updated: 2026-10-22 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -33,7 +33,7 @@ npx @reduck-ai/cli@latest run --script reduck/luma.com/get_calendar_events
 
 ### What does "Get events from a Luma calendar" do?
 
-List the past or future events published under a specific Luma calendar/organizer (e.g. "AITinkerers"), paginated.
+List the past or future events published under a Luma calendar (e.g. "AITinkerers"), one page at a time: pass next_cursor back as cursor while has_more is true. A calendar with no events in that period returns an empty list; a handle that is not a Luma calendar fails with an error.
 
 ### How do I automatically get events from a Luma calendar on luma.com?
 

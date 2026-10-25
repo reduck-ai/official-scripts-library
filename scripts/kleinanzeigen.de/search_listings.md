@@ -4,7 +4,7 @@ Automatically search Kleinanzeigen listings on kleinanzeigen.de. Search Kleinanz
 
 - Site: kleinanzeigen.de
 - Address: `reduck/kleinanzeigen.de/search_listings`
-- Updated: 2026-10-06 (v3)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

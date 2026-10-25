@@ -4,7 +4,7 @@ Log into Miro with your Google account and land on the boards dashboard. Returns
 
 - Site: miro.com
 - Address: `reduck/miro.com/login_with_google`
-- Updated: 2026-09-30 (v12)
+- Updated: 2026-10-22 (v14)
 - Author: Reduck AI (reduck)
 
 ## Run it

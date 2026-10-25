@@ -4,7 +4,7 @@ Automatically endorse a skill on linkedin.com. Endorse one of a LinkedIn profile
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/endorse_skill`
-- Updated: 2026-09-18 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -54,7 +54,7 @@ Yes. It acts as you on linkedin.com: on your own Chrome it reuses your session, 
 
 ### Does it change anything on linkedin.com, or only read data?
 
-It makes changes on linkedin.com, like sending, posting or booking something.
+It makes changes on linkedin.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

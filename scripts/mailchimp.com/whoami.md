@@ -4,7 +4,7 @@ Report which Mailchimp account this browser is signed in as: the user id, login 
 
 - Site: mailchimp.com
 - Address: `reduck/mailchimp.com/whoami`
-- Updated: 2026-09-28 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

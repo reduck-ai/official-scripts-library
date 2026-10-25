@@ -4,7 +4,7 @@ Automatically list Google accounts signed in on this browser (Gmail) on mail.goo
 
 - Site: mail.google.com
 - Address: `reduck/mail.google.com/list_accounts`
-- Updated: 2026-10-21 (v9)
+- Updated: 2026-10-22 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it

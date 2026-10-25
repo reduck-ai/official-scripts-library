@@ -4,7 +4,7 @@ Automatically send LinkedIn message on linkedin.com. Send a message on LinkedIn 
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/send_message`
-- Updated: 2026-10-19 (v28)
+- Updated: 2026-10-22 (v30)
 - Author: Reduck AI (reduck)
 
 ## Run it

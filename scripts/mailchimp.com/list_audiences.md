@@ -4,7 +4,7 @@ Automatically list audiences on mailchimp.com. List the audiences (lists) in the
 
 - Site: mailchimp.com
 - Address: `reduck/mailchimp.com/list_audiences`
-- Updated: 2026-09-28 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

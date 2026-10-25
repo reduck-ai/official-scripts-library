@@ -4,7 +4,7 @@ Automatically unblock Instagram user on instagram.com. Lets that account see you
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/unblock_user`
-- Updated: 2026-10-05 (v3)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## About

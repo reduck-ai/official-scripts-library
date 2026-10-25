@@ -4,7 +4,7 @@ Automatically list Lucid (Lucidchart) invoices on lucid.app. List Lucid (Lucidch
 
 - Site: lucid.app
 - Address: `reduck/lucid.app/list_invoices`
-- Updated: 2026-08-21 (v7)
+- Updated: 2026-10-22 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it

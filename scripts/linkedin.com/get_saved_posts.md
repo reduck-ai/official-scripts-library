@@ -4,7 +4,7 @@ Automatically get LinkedIn saved posts on linkedin.com. Get the logged-in member
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_saved_posts`
-- Updated: 2026-09-03 (v5)
+- Updated: 2026-10-22 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

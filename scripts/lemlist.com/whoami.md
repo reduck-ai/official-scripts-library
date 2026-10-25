@@ -4,7 +4,7 @@ Report which lemlist account this browser is signed in as: the user id and email
 
 - Site: lemlist.com
 - Address: `reduck/lemlist.com/whoami`
-- Updated: 2026-10-20 (v7)
+- Updated: 2026-10-22 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically delete sent LinkedIn message on linkedin.com. Permanently delete o
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/delete_message`
-- Updated: 2026-10-06 (v4)
+- Updated: 2026-10-22 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically list following on linkedin.com. List the people and pages the sign
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/list_following`
-- Updated: 2026-09-28 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

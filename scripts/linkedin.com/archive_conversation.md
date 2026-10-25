@@ -4,7 +4,7 @@ Archive or restore a classic LinkedIn messaging conversation (NOT Sales Navigato
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/archive_conversation`
-- Updated: 2026-10-05 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically react to an Instagram DM message on instagram.com. Add an emoji re
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/react_to_message`
-- Updated: 2026-10-14 (v21)
+- Updated: 2026-10-22 (v22)
 - Author: Reduck AI (reduck)
 
 ## Run it

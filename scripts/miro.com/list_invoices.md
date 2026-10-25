@@ -4,7 +4,7 @@ Automatically list Miro invoices on miro.com. List Miro company billing invoices
 
 - Site: miro.com
 - Address: `reduck/miro.com/list_invoices`
-- Updated: 2026-08-21 (v8)
+- Updated: 2026-10-23 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it

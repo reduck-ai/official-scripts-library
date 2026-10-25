@@ -1,10 +1,10 @@
 # Mark LinkedIn conversation as unread
 
-Automatically mark LinkedIn conversation as unread on linkedin.com. Mark a classic LinkedIn messaging conversation (NOT Sales Navigator) as unread, by thread URL from list_inbox. On group conversations (3+ participants), this occasionally times out on a rare page-loading delay on LinkedIn's side — retry the call if that happens.
+Automatically mark LinkedIn conversation as unread on linkedin.com. Mark a classic LinkedIn messaging conversation (not Sales Navigator) as unread, by thread URL from list_inbox. On group conversations (3+ participants), this occasionally times out on a rare page-loading delay on LinkedIn's side; retry the call if that happens.
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/mark_conversation_unread`
-- Updated: 2026-10-05 (v3)
+- Updated: 2026-10-23 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -28,7 +28,7 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/mark_conversation_unr
 
 ### What does "Mark LinkedIn conversation as unread" do?
 
-Mark a classic LinkedIn messaging conversation (NOT Sales Navigator) as unread, by thread URL from list_inbox. On group conversations (3+ participants), this occasionally times out on a rare page-loading delay on LinkedIn's side — retry the call if that happens.
+Mark a classic LinkedIn messaging conversation (not Sales Navigator) as unread, by thread URL from list_inbox. On group conversations (3+ participants), this occasionally times out on a rare page-loading delay on LinkedIn's side; retry the call if that happens.
 
 ### How do I automatically mark LinkedIn conversation as unread on linkedin.com?
 

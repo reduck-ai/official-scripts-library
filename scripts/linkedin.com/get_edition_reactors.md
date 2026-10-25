@@ -4,7 +4,7 @@ Automatically get LinkedIn newsletter edition reactors on linkedin.com. Get who 
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_edition_reactors`
-- Updated: 2026-09-08 (v3)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

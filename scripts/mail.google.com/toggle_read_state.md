@@ -4,7 +4,7 @@ Automatically toggle Gmail thread read state on mail.google.com. Mark a Gmail th
 
 - Site: mail.google.com
 - Address: `reduck/mail.google.com/toggle_read_state`
-- Updated: 2026-10-21 (v3)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

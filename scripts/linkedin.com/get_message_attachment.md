@@ -4,7 +4,7 @@ Automatically download a LinkedIn message attachment on linkedin.com. Download t
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_message_attachment`
-- Updated: 2026-10-05 (v5)
+- Updated: 2026-10-22 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

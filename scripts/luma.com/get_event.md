@@ -1,10 +1,10 @@
 # Get Luma event details
 
-Automatically get Luma event details on luma.com. Get the full public details of a Luma event by its slug: description, categories, hosts (with social handles), venue, and guest/ticket counts.
+Automatically get Luma event details on luma.com. Get the full public details of a Luma event by its slug: description, categories, hosts (with social handles), venue, guest/ticket counts and the registration questions. An unknown slug, or the slug of a Luma page that is not an event (a city or a calendar), fails with an error that says so.
 
 - Site: luma.com
 - Address: `reduck/luma.com/get_event`
-- Updated: 2026-09-27 (v3)
+- Updated: 2026-10-22 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -50,7 +50,7 @@ npx @reduck-ai/cli@latest run --script reduck/luma.com/get_event
 
 ### What does "Get Luma event details" do?
 
-Get the full public details of a Luma event by its slug: description, categories, hosts (with social handles), venue, and guest/ticket counts.
+Get the full public details of a Luma event by its slug: description, categories, hosts (with social handles), venue, guest/ticket counts and the registration questions. An unknown slug, or the slug of a Luma page that is not an event (a city or a calendar), fails with an error that says so.
 
 ### How do I automatically get Luma event details on luma.com?
 

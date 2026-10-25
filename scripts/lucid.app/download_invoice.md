@@ -4,7 +4,7 @@ Automatically download a Lucid invoice PDF on lucid.app. Download one Lucid (Luc
 
 - Site: lucid.app
 - Address: `reduck/lucid.app/download_invoice`
-- Updated: 2026-09-30 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

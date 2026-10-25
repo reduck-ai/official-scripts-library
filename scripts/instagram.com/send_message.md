@@ -4,7 +4,7 @@ Automatically send Instagram DM on instagram.com. Send a DM to an Instagram user
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/send_message`
-- Updated: 2026-09-28 (v32)
+- Updated: 2026-10-22 (v33)
 - Author: Reduck AI (reduck)
 
 ## Run it

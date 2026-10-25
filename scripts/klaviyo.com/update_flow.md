@@ -4,7 +4,7 @@ Automatically rename Klaviyo flow on klaviyo.com. Rename a Klaviyo flow by its f
 
 - Site: klaviyo.com
 - Address: `reduck/klaviyo.com/update_flow`
-- Updated: 2026-10-12 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

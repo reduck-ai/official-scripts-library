@@ -1,10 +1,10 @@
-# Get Current User
+# Get current Linear user
 
-Automatically get Current User on linear.app. Report which Linear account this browser is signed in as: name, email and the workspace slug, from Personal Profile settings. Optionally pass `workspaceUrl` to read a specific workspace. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Linear scripts.
+Automatically get current Linear user on linear.app. Report which Linear account this browser is signed in as: name, email and the workspace slug. Optionally pass `workspaceUrl` to read a specific workspace; a workspace this account does not belong to fails with an error that says so. When the browser is signed out of Linear, the run fails with a signed-out error asking you to sign in to linear.app.
 
 - Site: linear.app
 - Address: `reduck/linear.app/get_current_user`
-- Updated: 2026-10-05 (v3)
+- Updated: 2026-10-22 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -28,17 +28,17 @@ npx @reduck-ai/cli@latest run --script reduck/linear.app/get_current_user
 
 ## FAQ
 
-### What does "Get Current User" do?
+### What does "Get current Linear user" do?
 
-Report which Linear account this browser is signed in as: name, email and the workspace slug, from Personal Profile settings. Optionally pass `workspaceUrl` to read a specific workspace. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Linear scripts.
+Report which Linear account this browser is signed in as: name, email and the workspace slug. Optionally pass `workspaceUrl` to read a specific workspace; a workspace this account does not belong to fails with an error that says so. When the browser is signed out of Linear, the run fails with a signed-out error asking you to sign in to linear.app.
 
-### How do I automatically get Current User on linear.app?
+### How do I automatically get current Linear user on linear.app?
 
 Ask an AI agent connected to Reduck to run reduck/linear.app/get_current_user, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/linear.app/get_current_user
 
-### Is there a linear.app API to get Current User?
+### Is there a linear.app API to get current Linear user?
 
-You do not need one. "Get Current User" drives the real linear.app pages in a browser, so it works whether or not linear.app offers an API for this.
+You do not need one. "Get current Linear user" drives the real linear.app pages in a browser, so it works whether or not linear.app offers an API for this.
 
 ### What information do I need to provide?
 

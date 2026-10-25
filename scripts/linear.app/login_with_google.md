@@ -4,7 +4,7 @@ Log into Linear via "Continue with Google", using your browser's own signed-in G
 
 - Site: linear.app
 - Address: `reduck/linear.app/login_with_google`
-- Updated: 2026-10-02 (v11)
+- Updated: 2026-10-22 (v13)
 - Author: Reduck AI (reduck)
 
 ## Run it

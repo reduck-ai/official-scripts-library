@@ -4,7 +4,7 @@ Automatically get LinkedIn profile posts on linkedin.com. Pull someone's latest 
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_profile_posts`
-- Updated: 2026-10-05 (v13)
+- Updated: 2026-10-22 (v14)
 - Author: Reduck AI (reduck)
 
 ## About

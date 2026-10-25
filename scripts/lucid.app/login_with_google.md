@@ -4,7 +4,7 @@ Log into Lucid (Lucidchart) using your connected Google account. Lands on the Lu
 
 - Site: lucid.app
 - Address: `reduck/lucid.app/login_with_google`
-- Updated: 2026-10-05 (v5)
+- Updated: 2026-10-22 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically suggest Kiwi places on kiwi.com. Look up places on Kiwi.com by nam
 
 - Site: kiwi.com
 - Address: `reduck/kiwi.com/suggest_places`
-- Updated: 2026-10-12 (v2)
+- Updated: 2026-10-23 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

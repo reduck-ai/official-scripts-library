@@ -4,7 +4,7 @@ Automatically get inbox on linkedin.com. List the latest LinkedIn Sales Navigato
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/sales_navigator_get_inbox`
-- Updated: 2026-09-03 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically search Instagram hashtags on instagram.com. Search Instagram hasht
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/search_hashtag`
-- Updated: 2026-10-14 (v5)
+- Updated: 2026-10-22 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

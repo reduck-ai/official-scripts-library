@@ -4,7 +4,7 @@ Automatically follow LinkedIn company on linkedin.com. Follow a LinkedIn company
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/follow_company`
-- Updated: 2026-10-05 (v8)
+- Updated: 2026-10-22 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically mark an Instagram DM thread as read on instagram.com. Mark an Inst
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/mark_dm_read`
-- Updated: 2026-10-14 (v3)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically search La French Tech jobs on la-french-tech.welcomekit.co. Search
 
 - Site: la-french-tech.welcomekit.co
 - Address: `reduck/la-french-tech.welcomekit.co/search_jobs`
-- Updated: 2026-10-12 (v8)
+- Updated: 2026-10-22 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,7 +18,7 @@ npx @reduck-ai/cli@latest run --script reduck/la-french-tech.welcomekit.co/searc
 ## Input
 
 - `city` (string, optional): Exact city facet label as shown on the site, e.g. "Paris", "Lyon", "Barcelona"
-- `page` (integer, optional): 1-based page number. Must be within the visible pagination window for the current query/filters (throws otherwise).
+- `page` (integer, optional): 1-based page number. Must be within the result set's page count (throws otherwise).
 - `query` (string, optional): Free-text keyword, e.g. "developpeur", "product manager"
 - `department` (string, optional): Exact department facet label as shown on the site, e.g. "Tech", "Sales", "Business", "Tech & Product"
 - `contractType` (string, optional): Exact contract-type facet label as shown on the site (French), e.g. "CDI", "Stage", "Alternance", "CDD / Temporaire"

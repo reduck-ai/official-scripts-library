@@ -4,7 +4,7 @@ Automatically send message (regular, by recipient name) on linkedin.com. Send a 
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/sales_navigator_send_message`
-- Updated: 2026-10-06 (v9)
+- Updated: 2026-10-22 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it

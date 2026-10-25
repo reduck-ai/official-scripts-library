@@ -1,10 +1,10 @@
 # Lovable whoami (signed-in account)
 
-Report which Lovable account this browser is signed in as: user id, email, display name, photo and whether the email is verified, from the app's own account lookup. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Lovable scripts.
+Report which Lovable account this browser is signed in as: user id, email, display name, photo and whether the email is verified. When the browser is signed out of Lovable, the run fails with a signed-out error asking you to sign in to lovable.dev.
 
 - Site: lovable.dev
 - Address: `reduck/lovable.dev/whoami`
-- Updated: 2026-09-30 (v1)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -32,7 +32,7 @@ It takes no input.
 
 ### What does "Lovable whoami (signed-in account)" do?
 
-Report which Lovable account this browser is signed in as: user id, email, display name, photo and whether the email is verified, from the app's own account lookup. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Lovable scripts.
+Report which Lovable account this browser is signed in as: user id, email, display name, photo and whether the email is verified. When the browser is signed out of Lovable, the run fails with a signed-out error asking you to sign in to lovable.dev.
 
 ### What information do I need to provide?
 

@@ -4,7 +4,7 @@ Automatically get Klaviyo flow on klaviyo.com. Read one Klaviyo flow by its flow
 
 - Site: klaviyo.com
 - Address: `reduck/klaviyo.com/get_flow`
-- Updated: 2026-10-12 (v3)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

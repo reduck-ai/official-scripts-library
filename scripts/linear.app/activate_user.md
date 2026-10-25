@@ -1,10 +1,10 @@
 # Reactivate a suspended Linear workspace member
 
-Automatically reactivate a suspended Linear workspace member on linear.app. Reactivate a member whose Linear workspace access was suspended, identified by email, via the Members settings row menu's 'Activate user…' action. Companion to delete_user: undoes a suspend (not a revoked invite — those have no activate path, only re-invite). Defaults to the currently active workspace; pass workspaceUrl to target another. Requires login.
+Automatically reactivate a suspended Linear workspace member on linear.app. Reactivate a suspended member of a Linear workspace, identified by email. Undoes a suspension made with delete_user; a revoked invite cannot be reactivated and needs a new invite instead. Uses the currently active workspace unless workspaceUrl is given. Requires being signed in to Linear as a workspace admin.
 
 - Site: linear.app
 - Address: `reduck/linear.app/activate_user`
-- Updated: 2026-08-28 (v3)
+- Updated: 2026-10-23 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -32,7 +32,7 @@ npx @reduck-ai/cli@latest run --script reduck/linear.app/activate_user
 
 ### What does "Reactivate a suspended Linear workspace member" do?
 
-Reactivate a member whose Linear workspace access was suspended, identified by email, via the Members settings row menu's 'Activate user…' action. Companion to delete_user: undoes a suspend (not a revoked invite — those have no activate path, only re-invite). Defaults to the currently active workspace; pass workspaceUrl to target another. Requires login.
+Reactivate a suspended member of a Linear workspace, identified by email. Undoes a suspension made with delete_user; a revoked invite cannot be reactivated and needs a new invite instead. Uses the currently active workspace unless workspaceUrl is given. Requires being signed in to Linear as a workspace admin.
 
 ### How do I automatically reactivate a suspended Linear workspace member on linear.app?
 
@@ -56,7 +56,7 @@ Yes. It acts as you on linear.app: on your own Chrome it reuses your session, an
 
 ### Does it change anything on linear.app, or only read data?
 
-It makes changes on linear.app, like sending, posting or booking something.
+It makes changes on linear.app, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

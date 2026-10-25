@@ -4,7 +4,7 @@ Log into Surfshark (my.surfshark.com) via Google SSO: dismisses the cookie banne
 
 - Site: my.surfshark.com
 - Address: `reduck/my.surfshark.com/login_with_google`
-- Updated: 2026-09-30 (v5)
+- Updated: 2026-10-22 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

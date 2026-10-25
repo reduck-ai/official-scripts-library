@@ -4,7 +4,7 @@ Automatically get meteoblue 14-day weather forecast on meteoblue.com. 14-day wea
 
 - Site: meteoblue.com
 - Address: `reduck/meteoblue.com/get_14day_forecast`
-- Updated: 2026-10-20 (v8)
+- Updated: 2026-10-22 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it

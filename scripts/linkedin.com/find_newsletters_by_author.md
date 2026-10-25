@@ -4,7 +4,7 @@ Automatically find LinkedIn newsletters by author on linkedin.com. List the Link
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/find_newsletters_by_author`
-- Updated: 2026-09-08 (v7)
+- Updated: 2026-10-22 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it

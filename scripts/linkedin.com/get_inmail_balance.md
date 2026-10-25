@@ -4,7 +4,7 @@ Automatically get LinkedIn InMail credit balance on linkedin.com. Read the accou
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_inmail_balance`
-- Updated: 2026-09-03 (v3)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

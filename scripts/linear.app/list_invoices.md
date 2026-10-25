@@ -4,7 +4,7 @@ Automatically list Linear invoices on linear.app. List the invoices on a Linear 
 
 - Site: linear.app
 - Address: `reduck/linear.app/list_invoices`
-- Updated: 2026-10-19 (v10)
+- Updated: 2026-10-22 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it

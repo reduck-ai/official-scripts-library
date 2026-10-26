@@ -4,7 +4,7 @@ Automatically list calendars (Outlook) on outlook.live.com. List the calendars i
 
 - Site: outlook.live.com
 - Address: `reduck/outlook.live.com/list_calendars`
-- Updated: 2026-09-16 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

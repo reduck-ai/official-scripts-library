@@ -4,7 +4,7 @@ Log into a Slack workspace using Sign in with Google, then open that workspace. 
 
 - Site: slack.com
 - Address: `reduck/slack.com/login_with_google`
-- Updated: 2026-09-28 (v8)
+- Updated: 2026-10-22 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it

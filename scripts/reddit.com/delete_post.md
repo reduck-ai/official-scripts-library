@@ -4,7 +4,7 @@ Automatically delete Reddit post on reddit.com. Delete your own Reddit post by i
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/delete_post`
-- Updated: 2026-08-20 (v6)
+- Updated: 2026-10-22 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -55,7 +55,7 @@ Yes. It acts as you on reddit.com: on your own Chrome it reuses your session, an
 
 ### Does it change anything on reddit.com, or only read data?
 
-It makes changes on reddit.com, like sending, posting or booking something.
+It makes changes on reddit.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

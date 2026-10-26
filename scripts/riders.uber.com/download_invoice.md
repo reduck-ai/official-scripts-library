@@ -4,7 +4,7 @@ Automatically download Uber trip invoice PDF on riders.uber.com. Download one Ub
 
 - Site: riders.uber.com
 - Address: `reduck/riders.uber.com/download_invoice`
-- Updated: 2026-09-27 (v4)
+- Updated: 2026-10-22 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it

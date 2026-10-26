@@ -4,7 +4,7 @@ Automatically create a Spotify playlist on open.spotify.com. Create a playlist o
 
 - Site: open.spotify.com
 - Address: `reduck/open.spotify.com/create_playlist`
-- Updated: 2026-10-21 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

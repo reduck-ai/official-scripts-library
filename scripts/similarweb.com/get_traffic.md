@@ -4,7 +4,7 @@ Automatically get Similarweb website traffic overview on similarweb.com. Fetch a
 
 - Site: similarweb.com
 - Address: `reduck/similarweb.com/get_traffic`
-- Updated: 2026-09-21 (v7)
+- Updated: 2026-10-23 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it

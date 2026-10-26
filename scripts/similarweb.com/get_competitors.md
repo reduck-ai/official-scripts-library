@@ -4,7 +4,7 @@ Automatically get Similarweb competitors and similar sites on similarweb.com. Re
 
 - Site: similarweb.com
 - Address: `reduck/similarweb.com/get_competitors`
-- Updated: 2026-09-21 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

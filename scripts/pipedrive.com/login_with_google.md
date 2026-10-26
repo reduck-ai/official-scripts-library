@@ -4,7 +4,7 @@ Log into Pipedrive with the Google button, handling the Google account chooser a
 
 - Site: pipedrive.com
 - Address: `reduck/pipedrive.com/login_with_google`
-- Updated: 2026-10-02 (v2)
+- Updated: 2026-10-22 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -43,7 +43,7 @@ It returns url, account, already, loggedIn, workspace.
 
 ### Do I need to be logged in to pipedrive.com?
 
-Yes. It acts as you on pipedrive.com: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the pipedrive.com cookies saved by the Reduck extension.
+No. It only uses pages of pipedrive.com that are reachable without signing in.
 
 ### Does it change anything on pipedrive.com, or only read data?
 

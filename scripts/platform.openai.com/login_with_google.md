@@ -1,10 +1,10 @@
 # OpenAI Platform login (Google SSO)
 
-Log into the OpenAI API Platform (platform.openai.com) with Continue with Google, handling the Google account chooser and consent screen, and wait for OpenAI to finish the sign-in. Returns straight away if you are already signed in, and reports the account email and default organization. A Cloudflare check is waited out (never clicked) and named if it does not clear. Optionally pass which Google account to use. Needs a browser already signed in to Google and a Google account that already has an OpenAI account.
+Log into the OpenAI API Platform (platform.openai.com) with Continue with Google, handling the Google account chooser and consent screen, and wait for OpenAI to finish the sign-in. Returns straight away if you are already signed in, and reports the account email and default organization. If the site asks you to verify you are human, the run stops and says so. Optionally pass which Google account to use. Needs a browser already signed in to Google and a Google account that already has an OpenAI account.
 
 - Site: platform.openai.com
 - Address: `reduck/platform.openai.com/login_with_google`
-- Updated: 2026-09-30 (v2)
+- Updated: 2026-10-23 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -31,7 +31,7 @@ npx @reduck-ai/cli@latest run --script reduck/platform.openai.com/login_with_goo
 
 ### What does "OpenAI Platform login (Google SSO)" do?
 
-Log into the OpenAI API Platform (platform.openai.com) with Continue with Google, handling the Google account chooser and consent screen, and wait for OpenAI to finish the sign-in. Returns straight away if you are already signed in, and reports the account email and default organization. A Cloudflare check is waited out (never clicked) and named if it does not clear. Optionally pass which Google account to use. Needs a browser already signed in to Google and a Google account that already has an OpenAI account.
+Log into the OpenAI API Platform (platform.openai.com) with Continue with Google, handling the Google account chooser and consent screen, and wait for OpenAI to finish the sign-in. Returns straight away if you are already signed in, and reports the account email and default organization. If the site asks you to verify you are human, the run stops and says so. Optionally pass which Google account to use. Needs a browser already signed in to Google and a Google account that already has an OpenAI account.
 
 ### What information do I need to provide?
 
@@ -43,7 +43,7 @@ It returns url, account, already, loggedIn, organization.
 
 ### Do I need to be logged in to platform.openai.com?
 
-Yes. It acts as you on platform.openai.com: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the platform.openai.com cookies saved by the Reduck extension.
+No. It only uses pages of platform.openai.com that are reachable without signing in.
 
 ### Does it change anything on platform.openai.com, or only read data?
 

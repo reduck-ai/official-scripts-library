@@ -4,7 +4,7 @@ Automatically mark an Outlook.com email read or unread on outlook.live.com. Mark
 
 - Site: outlook.live.com
 - Address: `reduck/outlook.live.com/set_read_state`
-- Updated: 2026-09-16 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -59,7 +59,7 @@ Yes. It acts as you on outlook.live.com: on your own Chrome it reuses your sessi
 
 ### Does it change anything on outlook.live.com, or only read data?
 
-It makes changes on outlook.live.com, like sending, posting or booking something.
+It makes changes on outlook.live.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

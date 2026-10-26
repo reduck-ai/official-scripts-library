@@ -4,7 +4,7 @@ Automatically get Slack workspace info on slack.com. Get the current workspace's
 
 - Site: slack.com
 - Address: `reduck/slack.com/team_info`
-- Updated: 2026-07-10 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

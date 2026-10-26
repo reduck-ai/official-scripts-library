@@ -4,7 +4,7 @@ Automatically search Pinterest pins on pinterest.com. Searches Pinterest pins by
 
 - Site: pinterest.com
 - Address: `reduck/pinterest.com/search_pins`
-- Updated: 2026-09-03 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

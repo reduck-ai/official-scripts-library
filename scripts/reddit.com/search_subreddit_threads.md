@@ -4,7 +4,7 @@ Automatically search Reddit threads in a subreddit, with post text on reddit.com
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/search_subreddit_threads`
-- Updated: 2026-10-19 (v5)
+- Updated: 2026-10-22 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically get Pinterest user profile on pinterest.com. Fetches a Pinterest u
 
 - Site: pinterest.com
 - Address: `reduck/pinterest.com/get_user_profile`
-- Updated: 2026-09-03 (v4)
+- Updated: 2026-10-22 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

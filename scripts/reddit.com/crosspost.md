@@ -4,7 +4,7 @@ Automatically crosspost a Reddit post on reddit.com. Crosspost (Reddit's "Repost
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/crosspost`
-- Updated: 2026-08-20 (v11)
+- Updated: 2026-10-22 (v12)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -60,7 +60,7 @@ Yes. It acts as you on reddit.com: on your own Chrome it reuses your session, an
 
 ### Does it change anything on reddit.com, or only read data?
 
-It makes changes on reddit.com, like sending, posting or booking something.
+It makes changes on reddit.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

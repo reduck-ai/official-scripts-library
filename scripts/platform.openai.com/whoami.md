@@ -4,7 +4,7 @@ Report which OpenAI API Platform account this browser is signed in as: the accou
 
 - Site: platform.openai.com
 - Address: `reduck/platform.openai.com/whoami`
-- Updated: 2026-10-20 (v3)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

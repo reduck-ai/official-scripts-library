@@ -4,7 +4,7 @@ Automatically get Reddit user comments on reddit.com. Fetch a Reddit user's rece
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/get_user_comments`
-- Updated: 2026-10-20 (v8)
+- Updated: 2026-10-22 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it

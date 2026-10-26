@@ -4,7 +4,7 @@ Automatically list OpenAI platform invoices on platform.openai.com. List the inv
 
 - Site: platform.openai.com
 - Address: `reduck/platform.openai.com/list_invoices`
-- Updated: 2026-10-19 (v5)
+- Updated: 2026-10-22 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

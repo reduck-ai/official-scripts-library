@@ -4,7 +4,7 @@ Automatically send an Outlook.com email on outlook.live.com. Send an email from 
 
 - Site: outlook.live.com
 - Address: `reduck/outlook.live.com/send_email`
-- Updated: 2026-09-16 (v4)
+- Updated: 2026-10-23 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -20,7 +20,7 @@ npx @reduck-ai/cli@latest run --script reduck/outlook.live.com/send_email
 - `to` (string, required): Recipient email address, e.g. someone@example.com
 - `body` (string, optional): Plain text body of the message. Give a subject, a body, or both — a message with neither cannot be identified in Sent Items afterwards, so the send could not be confirmed.
 - `subject` (string, optional): Subject line. Give a subject, a body, or both — a message with neither cannot be identified in Sent Items afterwards, so the send could not be confirmed.
-- `sentFolder` (string, optional): Name of the sent-mail folder as shown in your folder list, used to confirm the message left. Override this if your mailbox is not in English.
+- `sentFolder` (string, optional): Name of a folder, as shown in your folder list, to confirm the message in instead of the mailbox's own sent-mail folder. Omit it to use the sent-mail folder, in any language.
 
 ## Output
 
@@ -61,7 +61,7 @@ Yes. It acts as you on outlook.live.com: on your own Chrome it reuses your sessi
 
 ### Does it change anything on outlook.live.com, or only read data?
 
-It makes changes on outlook.live.com, like sending, posting or booking something.
+It makes changes on outlook.live.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

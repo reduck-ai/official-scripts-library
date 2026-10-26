@@ -4,7 +4,7 @@ Automatically get Slack channel messages on slack.com. Read a channel's message 
 
 - Site: slack.com
 - Address: `reduck/slack.com/get_channel_messages`
-- Updated: 2026-07-29 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

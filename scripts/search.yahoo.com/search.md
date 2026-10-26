@@ -4,7 +4,7 @@ Search the web with Yahoo Search and get one page of organic results: each resul
 
 - Site: search.yahoo.com
 - Address: `reduck/search.yahoo.com/search`
-- Updated: 2026-10-19 (v6)
+- Updated: 2026-10-22 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

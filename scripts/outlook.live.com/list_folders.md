@@ -4,7 +4,7 @@ Automatically list Outlook.com mail folders on outlook.live.com. List the signed
 
 - Site: outlook.live.com
 - Address: `reduck/outlook.live.com/list_folders`
-- Updated: 2026-09-18 (v3)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

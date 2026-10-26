@@ -4,7 +4,7 @@ Automatically get Reddit subreddit info on reddit.com. Fetch a subreddit's metad
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/get_subreddit_info`
-- Updated: 2026-10-16 (v14)
+- Updated: 2026-10-22 (v15)
 - Author: Reduck AI (reduck)
 
 ## Run it

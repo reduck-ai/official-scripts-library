@@ -4,7 +4,7 @@ Automatically list Slack channels on slack.com. List the workspace's channels (p
 
 - Site: slack.com
 - Address: `reduck/slack.com/list_channels`
-- Updated: 2026-10-21 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

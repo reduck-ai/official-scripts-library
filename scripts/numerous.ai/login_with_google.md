@@ -4,7 +4,7 @@ Log into Numerous.ai using your connected Google account. Signs in via Google's 
 
 - Site: numerous.ai
 - Address: `reduck/numerous.ai/login_with_google`
-- Updated: 2026-10-02 (v6)
+- Updated: 2026-10-22 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

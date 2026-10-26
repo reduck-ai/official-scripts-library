@@ -4,7 +4,7 @@ Automatically get Slack Do-Not-Disturb on slack.com. Get your (or another user's
 
 - Site: slack.com
 - Address: `reduck/slack.com/get_dnd`
-- Updated: 2026-07-10 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

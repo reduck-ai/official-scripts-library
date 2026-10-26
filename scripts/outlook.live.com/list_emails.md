@@ -4,7 +4,7 @@ Automatically list Outlook.com emails in a folder on outlook.live.com. List mess
 
 - Site: outlook.live.com
 - Address: `reduck/outlook.live.com/list_emails`
-- Updated: 2026-09-26 (v8)
+- Updated: 2026-10-22 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it

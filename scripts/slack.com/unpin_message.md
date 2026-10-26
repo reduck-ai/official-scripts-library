@@ -4,7 +4,7 @@ Automatically unpin a message on slack.com. An unofficial Slack API: unpin a Sla
 
 - Site: slack.com
 - Address: `reduck/slack.com/unpin_message`
-- Updated: 2026-10-06 (v4)
+- Updated: 2026-10-22 (v5)
 - Author: Reduck AI (reduck)
 
 ## About

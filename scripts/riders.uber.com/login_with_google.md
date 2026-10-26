@@ -4,7 +4,7 @@ Log into Uber (riders.uber.com) with Continue with Google, handling the Google a
 
 - Site: riders.uber.com
 - Address: `reduck/riders.uber.com/login_with_google`
-- Updated: 2026-09-28 (v1)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -43,7 +43,7 @@ It returns url, name, account, already, loggedIn.
 
 ### Do I need to be logged in to riders.uber.com?
 
-Yes. It acts as you on riders.uber.com: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the riders.uber.com cookies saved by the Reduck extension.
+No. It only uses pages of riders.uber.com that are reachable without signing in.
 
 ### Does it change anything on riders.uber.com, or only read data?
 

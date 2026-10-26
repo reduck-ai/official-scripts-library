@@ -4,7 +4,7 @@ Automatically search Noota transcripts on noota.io. Find who said what across yo
 
 - Site: noota.io
 - Address: `reduck/noota.io/search_transcripts`
-- Updated: 2026-09-28 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

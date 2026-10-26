@@ -1,10 +1,10 @@
 # List Google Search Console properties
 
-Automatically list Google Search Console properties on search.google.com. Lists every Google Search Console property the signed-in Google account can open, both website (URL prefix) and Domain properties, with the account they were read from. Returns an empty list for an account with no properties. Pass a property's siteUrl to the other Search Console scripts.
+Automatically list Google Search Console properties on search.google.com. Lists every Google Search Console property the signed-in Google account can open, both website (URL prefix) and Domain properties, with the account they were read from. Returns an empty list for an account with no properties. Pass a property's siteUrl to the other Search Console scripts. A signed-out browser fails with a signed-out error asking to sign in to Google.
 
 - Site: search.google.com
 - Address: `reduck/search.google.com/list_properties`
-- Updated: 2026-10-07 (v2)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -28,7 +28,7 @@ It takes no input.
 
 ### What does "List Google Search Console properties" do?
 
-Lists every Google Search Console property the signed-in Google account can open, both website (URL prefix) and Domain properties, with the account they were read from. Returns an empty list for an account with no properties. Pass a property's siteUrl to the other Search Console scripts.
+Lists every Google Search Console property the signed-in Google account can open, both website (URL prefix) and Domain properties, with the account they were read from. Returns an empty list for an account with no properties. Pass a property's siteUrl to the other Search Console scripts. A signed-out browser fails with a signed-out error asking to sign in to Google.
 
 ### How do I automatically list Google Search Console properties on search.google.com?
 

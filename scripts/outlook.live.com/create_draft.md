@@ -4,7 +4,7 @@ Automatically create an Outlook.com email draft on outlook.live.com. Create a sa
 
 - Site: outlook.live.com
 - Address: `reduck/outlook.live.com/create_draft`
-- Updated: 2026-10-01 (v2)
+- Updated: 2026-10-23 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

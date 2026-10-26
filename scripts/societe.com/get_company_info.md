@@ -4,7 +4,7 @@ Automatically get company info on societe.com. Fetch a French company's public p
 
 - Site: societe.com
 - Address: `reduck/societe.com/get_company_info`
-- Updated: 2026-08-26 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

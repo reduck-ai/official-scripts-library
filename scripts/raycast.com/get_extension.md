@@ -4,7 +4,7 @@ Automatically get Store extension on raycast.com. Get one Raycast Store extensio
 
 - Site: raycast.com
 - Address: `reduck/raycast.com/get_extension`
-- Updated: 2026-09-28 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

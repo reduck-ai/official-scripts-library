@@ -4,7 +4,7 @@ Log into Product Hunt with its Google sign-in option, handling the Google accoun
 
 - Site: producthunt.com
 - Address: `reduck/producthunt.com/login_with_google`
-- Updated: 2026-10-02 (v2)
+- Updated: 2026-10-22 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -44,7 +44,7 @@ It returns url, name, userId, already, loggedIn, username.
 
 ### Do I need to be logged in to producthunt.com?
 
-Yes. It acts as you on producthunt.com: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the producthunt.com cookies saved by the Reduck extension.
+No. It only uses pages of producthunt.com that are reachable without signing in.
 
 ### Does it change anything on producthunt.com, or only read data?
 

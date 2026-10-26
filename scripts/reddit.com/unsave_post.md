@@ -4,7 +4,7 @@ Automatically unsave Reddit post on reddit.com. Remove a Reddit post from your s
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/unsave_post`
-- Updated: 2026-09-03 (v3)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -53,7 +53,7 @@ Yes. It acts as you on reddit.com: on your own Chrome it reuses your session, an
 
 ### Does it change anything on reddit.com, or only read data?
 
-It makes changes on reddit.com, like sending, posting or booking something.
+It makes changes on reddit.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

@@ -4,7 +4,7 @@ Automatically list Slack direct messages on slack.com. List direct-message and g
 
 - Site: slack.com
 - Address: `reduck/slack.com/list_dms`
-- Updated: 2026-07-10 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

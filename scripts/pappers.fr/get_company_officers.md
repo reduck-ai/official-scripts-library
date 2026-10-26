@@ -4,7 +4,7 @@ Automatically get Pappers company officer history on pappers.fr. Fetches a Frenc
 
 - Site: pappers.fr
 - Address: `reduck/pappers.fr/get_company_officers`
-- Updated: 2026-09-18 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

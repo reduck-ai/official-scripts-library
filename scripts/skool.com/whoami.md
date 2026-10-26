@@ -4,7 +4,7 @@ Report which Skool account this browser is signed in as: email, name and profile
 
 - Site: skool.com
 - Address: `reduck/skool.com/whoami`
-- Updated: 2026-10-20 (v3)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

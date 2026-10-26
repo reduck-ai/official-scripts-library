@@ -4,7 +4,7 @@ Automatically send Slack message on slack.com. Post a message to a channel or DM
 
 - Site: slack.com
 - Address: `reduck/slack.com/send_message`
-- Updated: 2026-08-27 (v1)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -58,7 +58,7 @@ Yes. It acts as you on slack.com: on your own Chrome it reuses your session, and
 
 ### Does it change anything on slack.com, or only read data?
 
-It makes changes on slack.com, like sending, posting or booking something.
+It makes changes on slack.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

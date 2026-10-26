@@ -4,7 +4,7 @@ Automatically search Polymarket markets on polymarket.com. Search Polymarket eve
 
 - Site: polymarket.com
 - Address: `reduck/polymarket.com/search_markets`
-- Updated: 2026-07-31 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

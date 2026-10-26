@@ -4,7 +4,7 @@ Automatically get Google Play app reviews on play.google.com. Fetch reviews for 
 
 - Site: play.google.com
 - Address: `reduck/play.google.com/get_app_reviews`
-- Updated: 2026-09-08 (v4)
+- Updated: 2026-10-23 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

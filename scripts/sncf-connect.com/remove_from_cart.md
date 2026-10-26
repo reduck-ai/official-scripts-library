@@ -4,7 +4,7 @@ Automatically remove train ticket from SNCF Connect cart on sncf-connect.com. Re
 
 - Site: sncf-connect.com
 - Address: `reduck/sncf-connect.com/remove_from_cart`
-- Updated: 2026-09-08 (v7)
+- Updated: 2026-10-22 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -56,7 +56,7 @@ Yes. It acts as you on sncf-connect.com: on your own Chrome it reuses your sessi
 
 ### Does it change anything on sncf-connect.com, or only read data?
 
-It makes changes on sncf-connect.com, like sending, posting or booking something.
+It makes changes on sncf-connect.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

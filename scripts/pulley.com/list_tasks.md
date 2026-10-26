@@ -4,7 +4,7 @@ Automatically list my tasks on pulley.com. List the signed-in Pulley user's pend
 
 - Site: pulley.com
 - Address: `reduck/pulley.com/list_tasks`
-- Updated: 2026-09-28 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

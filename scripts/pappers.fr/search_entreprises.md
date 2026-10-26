@@ -4,7 +4,7 @@ Automatically search Pappers companies on pappers.fr. Search French companies on
 
 - Site: pappers.fr
 - Address: `reduck/pappers.fr/search_entreprises`
-- Updated: 2026-10-17 (v7)
+- Updated: 2026-10-22 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it

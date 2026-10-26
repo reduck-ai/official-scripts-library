@@ -1,10 +1,10 @@
 # Product Hunt whoami (signed-in account)
 
-Report which Product Hunt account this browser is signed in as: the @username, display name, numeric user id and profile URL. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Product Hunt scripts.
+Report which Product Hunt account this browser is signed in as: the @username, display name, numeric user id and profile URL. When the browser is signed out of Product Hunt, the run fails with a signed-out error asking you to sign in to producthunt.com.
 
 - Site: producthunt.com
 - Address: `reduck/producthunt.com/whoami`
-- Updated: 2026-10-01 (v2)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -31,7 +31,7 @@ It takes no input.
 
 ### What does "Product Hunt whoami (signed-in account)" do?
 
-Report which Product Hunt account this browser is signed in as: the @username, display name, numeric user id and profile URL. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Product Hunt scripts.
+Report which Product Hunt account this browser is signed in as: the @username, display name, numeric user id and profile URL. When the browser is signed out of Product Hunt, the run fails with a signed-out error asking you to sign in to producthunt.com.
 
 ### What information do I need to provide?
 

@@ -4,7 +4,7 @@ Automatically unfollow Reddit user on reddit.com. Unfollow a Reddit user by user
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/unfollow_user`
-- Updated: 2026-07-31 (v5)
+- Updated: 2026-10-22 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -53,7 +53,7 @@ Yes. It acts as you on reddit.com: on your own Chrome it reuses your session, an
 
 ### Does it change anything on reddit.com, or only read data?
 
-It makes changes on reddit.com, like sending, posting or booking something.
+It makes changes on reddit.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

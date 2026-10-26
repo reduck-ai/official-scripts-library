@@ -4,7 +4,7 @@ Automatically upvote a Product Hunt launch on producthunt.com. Casts one vote on
 
 - Site: producthunt.com
 - Address: `reduck/producthunt.com/upvote_launch`
-- Updated: 2026-10-05 (v1)
+- Updated: 2026-10-23 (v2)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -55,7 +55,7 @@ Shape only: placeholder values generated from the output schema, not a real run.
 
 ### What does "Upvote a Product Hunt launch" do?
 
-Upvote a launch on Product Hunt as the signed-in account. Product Hunt's vote control is a toggle, so this script checks whether the account has already upvoted the launch and leaves it alone if so, rather than pressing the control and silently removing an existing vote. The result reports the account that voted, whether the vote was already there, the launch's score afterwards, and confirmation read back from Product Hunt's own response rather than from the button. Accepts a full launch URL or a "product/launch" slug pair. Pair it with the remove-upvote script to undo. Note that Product Hunt votes on a launch, not on a product as a whole: a product with several launches is upvoted one launch at a time.
+Upvote a launch on Product Hunt as the signed-in account. If the account has already upvoted it, nothing changes and already_present is true. Returns the account that voted, the score afterwards, and whether Product Hunt confirmed the vote. Accepts a full launch URL or a "product/launch" slug pair. Votes apply to one launch, not to a product as a whole. Undo with remove_launch_upvote.
 
 ### How do I automatically upvote a Product Hunt launch on producthunt.com?
 

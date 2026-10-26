@@ -4,7 +4,7 @@ Automatically get the signed-in SNCF Connect user on sncf-connect.com. Report wh
 
 - Site: sncf-connect.com
 - Address: `reduck/sncf-connect.com/get_current_user`
-- Updated: 2026-10-20 (v7)
+- Updated: 2026-10-22 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Sign in to Reddit without a password: requests Reddit's emailed one-time login l
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/login`
-- Updated: 2026-09-30 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

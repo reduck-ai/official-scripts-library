@@ -4,7 +4,7 @@ Automatically get Slack message permalink on slack.com. Get the shareable permal
 
 - Site: slack.com
 - Address: `reduck/slack.com/get_permalink`
-- Updated: 2026-07-10 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

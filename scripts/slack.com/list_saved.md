@@ -4,7 +4,7 @@ Automatically list Slack saved items on slack.com. List your Saved items (starre
 
 - Site: slack.com
 - Address: `reduck/slack.com/list_saved`
-- Updated: 2026-07-10 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

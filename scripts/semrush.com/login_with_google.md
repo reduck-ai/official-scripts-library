@@ -4,7 +4,7 @@ Log into Semrush with Sign in with Google, handling the Google account chooser a
 
 - Site: semrush.com
 - Address: `reduck/semrush.com/login_with_google`
-- Updated: 2026-10-06 (v1)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -43,7 +43,7 @@ It returns url, userId, account, already, loggedIn.
 
 ### Do I need to be logged in to semrush.com?
 
-Yes. It acts as you on semrush.com: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the semrush.com cookies saved by the Reduck extension.
+No. It only uses pages of semrush.com that are reachable without signing in.
 
 ### Does it change anything on semrush.com, or only read data?
 

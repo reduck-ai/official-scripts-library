@@ -4,7 +4,7 @@ Automatically search Google Play apps on play.google.com. Search the Google Play
 
 - Site: play.google.com
 - Address: `reduck/play.google.com/search_apps`
-- Updated: 2026-09-02 (v4)
+- Updated: 2026-10-23 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically delete your own Skool comment on skool.com. Remove a comment you w
 
 - Site: skool.com
 - Address: `reduck/skool.com/delete_comment`
-- Updated: 2026-09-18 (v4)
+- Updated: 2026-10-22 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -55,7 +55,7 @@ Yes. It acts as you on skool.com: on your own Chrome it reuses your session, and
 
 ### Does it change anything on skool.com, or only read data?
 
-It makes changes on skool.com, like sending, posting or booking something.
+It makes changes on skool.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

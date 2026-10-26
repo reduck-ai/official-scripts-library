@@ -4,7 +4,7 @@ Automatically delete calendar event (Outlook) on outlook.live.com. Delete a sing
 
 - Site: outlook.live.com
 - Address: `reduck/outlook.live.com/delete_event`
-- Updated: 2026-09-16 (v2)
+- Updated: 2026-10-23 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -58,7 +58,7 @@ Yes. It acts as you on outlook.live.com: on your own Chrome it reuses your sessi
 
 ### Does it change anything on outlook.live.com, or only read data?
 
-It makes changes on outlook.live.com, like sending, posting or booking something.
+It makes changes on outlook.live.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

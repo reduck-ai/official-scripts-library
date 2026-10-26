@@ -4,7 +4,7 @@ Automatically suggest Paris flight destinations on parisaeroport.fr. Resolve a f
 
 - Site: parisaeroport.fr
 - Address: `reduck/parisaeroport.fr/suggest_destinations`
-- Updated: 2026-09-14 (v9)
+- Updated: 2026-10-22 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it

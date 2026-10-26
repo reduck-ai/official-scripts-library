@@ -4,7 +4,7 @@ Automatically capture a page as a PNG on reddit.com. Screenshot any URL (not lim
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/capture_page_png`
-- Updated: 2026-09-18 (v3)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

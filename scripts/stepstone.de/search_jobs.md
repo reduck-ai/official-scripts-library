@@ -4,7 +4,7 @@ Automatically search StepStone (Germany) jobs on stepstone.de. Search StepStone.
 
 - Site: stepstone.de
 - Address: `reduck/stepstone.de/search_jobs`
-- Updated: 2026-08-14 (v3)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

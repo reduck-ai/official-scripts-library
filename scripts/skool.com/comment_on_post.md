@@ -4,7 +4,7 @@ Automatically comment on a Skool post on skool.com. Add a comment to a Skool com
 
 - Site: skool.com
 - Address: `reduck/skool.com/comment_on_post`
-- Updated: 2026-09-18 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -56,7 +56,7 @@ Yes. It acts as you on skool.com: on your own Chrome it reuses your session, and
 
 ### Does it change anything on skool.com, or only read data?
 
-It makes changes on skool.com, like sending, posting or booking something.
+It makes changes on skool.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

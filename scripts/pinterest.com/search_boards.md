@@ -4,7 +4,7 @@ Automatically search Pinterest boards on pinterest.com. Searches Pinterest board
 
 - Site: pinterest.com
 - Address: `reduck/pinterest.com/search_boards`
-- Updated: 2026-09-03 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

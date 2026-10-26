@@ -4,7 +4,7 @@ Automatically get calendar event (Outlook) on outlook.live.com. Read the full de
 
 - Site: outlook.live.com
 - Address: `reduck/outlook.live.com/get_event`
-- Updated: 2026-09-16 (v1)
+- Updated: 2026-10-23 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/outlook.live.com/get_event
 
 ## Input
 
-- `eventId` (string, required): The event's data-calitemid, as returned by list_events.
+- `eventId` (string, required): The event's id, as returned by list_events or create_event.
 
 ## Output
 

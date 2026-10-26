@@ -4,7 +4,7 @@ Automatically get Slack file info on slack.com. Get metadata for a file by its i
 
 - Site: slack.com
 - Address: `reduck/slack.com/get_file_info`
-- Updated: 2026-07-10 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

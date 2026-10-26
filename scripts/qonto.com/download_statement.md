@@ -4,7 +4,7 @@ Automatically download a Qonto bank statement on qonto.com. Download a monthly a
 
 - Site: qonto.com
 - Address: `reduck/qonto.com/download_statement`
-- Updated: 2026-09-29 (v3)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

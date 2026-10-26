@@ -4,7 +4,7 @@ Automatically send Reddit DM on reddit.com. Send a Reddit direct message to a us
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/send_dm`
-- Updated: 2026-07-31 (v3)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -54,7 +54,7 @@ Yes. It acts as you on reddit.com: on your own Chrome it reuses your session, an
 
 ### Does it change anything on reddit.com, or only read data?
 
-It makes changes on reddit.com, like sending, posting or booking something.
+It makes changes on reddit.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

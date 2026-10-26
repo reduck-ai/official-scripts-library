@@ -4,7 +4,7 @@ Automatically get current Semrush user on semrush.com. Returns the Semrush accou
 
 - Site: semrush.com
 - Address: `reduck/semrush.com/get_current_user`
-- Updated: 2026-10-06 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

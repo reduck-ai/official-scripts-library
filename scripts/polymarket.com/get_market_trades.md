@@ -4,7 +4,7 @@ Automatically get Polymarket market trades on polymarket.com. Latest trades for 
 
 - Site: polymarket.com
 - Address: `reduck/polymarket.com/get_market_trades`
-- Updated: 2026-08-26 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

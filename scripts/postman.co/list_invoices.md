@@ -4,7 +4,7 @@ Automatically list invoices on postman.co. List Postman billing invoices. Return
 
 - Site: postman.co
 - Address: `reduck/postman.co/list_invoices`
-- Updated: 2026-08-26 (v4)
+- Updated: 2026-10-22 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

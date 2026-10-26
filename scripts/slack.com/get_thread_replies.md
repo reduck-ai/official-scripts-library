@@ -4,7 +4,7 @@ Automatically get Slack thread replies on slack.com. Read a Slack thread by chan
 
 - Site: slack.com
 - Address: `reduck/slack.com/get_thread_replies`
-- Updated: 2026-10-20 (v3)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

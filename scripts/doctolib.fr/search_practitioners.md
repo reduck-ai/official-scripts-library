@@ -4,7 +4,7 @@ Automatically search Doctolib practitioners on doctolib.fr. Search Doctolib prac
 
 - Site: doctolib.fr
 - Address: `reduck/doctolib.fr/search_practitioners`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-10-25 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

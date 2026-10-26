@@ -4,7 +4,7 @@ Automatically get Slack mentions on slack.com. Read the Activity feed's Mentions
 
 - Site: slack.com
 - Address: `reduck/slack.com/get_mentions`
-- Updated: 2026-07-10 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

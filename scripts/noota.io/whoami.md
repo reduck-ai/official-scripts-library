@@ -1,10 +1,10 @@
 # Noota whoami
 
-Report which Noota account this browser is signed in as: the account email (and name when set), from Noota's own users/me. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Noota scripts.
+Report which Noota account this browser is signed in as: the account email, and the name when set. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Noota scripts.
 
 - Site: noota.io
 - Address: `reduck/noota.io/whoami`
-- Updated: 2026-09-29 (v2)
+- Updated: 2026-10-23 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,7 +29,7 @@ It takes no input.
 
 ### What does "Noota whoami" do?
 
-Report which Noota account this browser is signed in as: the account email (and name when set), from Noota's own users/me. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Noota scripts.
+Report which Noota account this browser is signed in as: the account email, and the name when set. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Noota scripts.
 
 ### What information do I need to provide?
 

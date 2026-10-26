@@ -4,7 +4,7 @@ Automatically get Slack user presence on slack.com. Get a user's presence (activ
 
 - Site: slack.com
 - Address: `reduck/slack.com/get_user_presence`
-- Updated: 2026-07-10 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically get Google Scholar author's papers on scholar.google.com. Fetch a 
 
 - Site: scholar.google.com
 - Address: `reduck/scholar.google.com/get_author_papers`
-- Updated: 2026-09-13 (v3)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

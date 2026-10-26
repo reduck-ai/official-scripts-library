@@ -4,7 +4,7 @@ Automatically create Slack channel on slack.com. Create a new channel. The name 
 
 - Site: slack.com
 - Address: `reduck/slack.com/create_channel`
-- Updated: 2026-07-31 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -56,7 +56,7 @@ Yes. It acts as you on slack.com: on your own Chrome it reuses your session, and
 
 ### Does it change anything on slack.com, or only read data?
 
-It makes changes on slack.com, like sending, posting or booking something.
+It makes changes on slack.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

@@ -4,7 +4,7 @@ Automatically set Slack channel topic on slack.com. Set a channel's topic (the s
 
 - Site: slack.com
 - Address: `reduck/slack.com/set_channel_topic`
-- Updated: 2026-08-10 (v3)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -55,7 +55,7 @@ Yes. It acts as you on slack.com: on your own Chrome it reuses your session, and
 
 ### Does it change anything on slack.com, or only read data?
 
-It makes changes on slack.com, like sending, posting or booking something.
+It makes changes on slack.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

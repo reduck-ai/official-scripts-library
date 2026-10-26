@@ -4,7 +4,7 @@ Automatically search Store extensions on raycast.com. Search the Raycast Store f
 
 - Site: raycast.com
 - Address: `reduck/raycast.com/search_extensions`
-- Updated: 2026-09-28 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

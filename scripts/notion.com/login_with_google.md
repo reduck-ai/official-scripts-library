@@ -4,7 +4,7 @@ Log into Notion via Google SSO, signing out first so the flow always runs fresh.
 
 - Site: notion.com
 - Address: `reduck/notion.com/login_with_google`
-- Updated: 2026-08-07 (v7)
+- Updated: 2026-10-22 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -45,7 +45,7 @@ Yes. It acts as you on notion.com: on your own Chrome it reuses your session, an
 
 ### Does it change anything on notion.com, or only read data?
 
-It makes changes on notion.com, like sending, posting or booking something.
+It makes changes on notion.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

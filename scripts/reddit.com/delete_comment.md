@@ -4,7 +4,7 @@ Automatically delete Reddit comment on reddit.com. Delete your own Reddit commen
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/delete_comment`
-- Updated: 2026-10-06 (v9)
+- Updated: 2026-10-22 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it

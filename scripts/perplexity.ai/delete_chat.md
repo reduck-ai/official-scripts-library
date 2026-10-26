@@ -4,7 +4,7 @@ Automatically delete Perplexity chat on perplexity.ai. Permanently delete one Pe
 
 - Site: perplexity.ai
 - Address: `reduck/perplexity.ai/delete_chat`
-- Updated: 2026-08-26 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -52,7 +52,7 @@ Yes. It acts as you on perplexity.ai: on your own Chrome it reuses your session,
 
 ### Does it change anything on perplexity.ai, or only read data?
 
-It makes changes on perplexity.ai, like sending, posting or booking something.
+It makes changes on perplexity.ai, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

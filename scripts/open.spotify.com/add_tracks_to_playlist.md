@@ -4,7 +4,7 @@ Automatically add tracks to a Spotify playlist on open.spotify.com. Add one or m
 
 - Site: open.spotify.com
 - Address: `reduck/open.spotify.com/add_tracks_to_playlist`
-- Updated: 2026-10-21 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

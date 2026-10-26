@@ -4,7 +4,7 @@ Automatically ask Perplexity on perplexity.ai. Ask a question, get the answer pl
 
 - Site: perplexity.ai
 - Address: `reduck/perplexity.ai/ask`
-- Updated: 2026-10-05 (v14)
+- Updated: 2026-10-22 (v16)
 - Author: Reduck AI (reduck)
 
 ## About

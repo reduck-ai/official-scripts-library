@@ -4,7 +4,7 @@ Automatically cancel a pending SNCF Connect train option (pre-reservation) on sn
 
 - Site: sncf-connect.com
 - Address: `reduck/sncf-connect.com/cancel_option`
-- Updated: 2026-09-08 (v8)
+- Updated: 2026-10-22 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -56,7 +56,7 @@ Yes. It acts as you on sncf-connect.com: on your own Chrome it reuses your sessi
 
 ### Does it change anything on sncf-connect.com, or only read data?
 
-It makes changes on sncf-connect.com, like sending, posting or booking something.
+It makes changes on sncf-connect.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

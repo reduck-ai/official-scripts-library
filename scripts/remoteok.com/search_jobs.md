@@ -4,7 +4,7 @@ Automatically search RemoteOK jobs on remoteok.com. Search RemoteOK's full live 
 
 - Site: remoteok.com
 - Address: `reduck/remoteok.com/search_jobs`
-- Updated: 2026-09-13 (v3)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

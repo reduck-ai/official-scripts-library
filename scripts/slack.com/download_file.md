@@ -1,10 +1,10 @@
 # Download a file from Slack
 
-Automatically download a file from Slack on slack.com. Downloads a file stored in Slack to the machine running the browser, taking the file's ID or its Slack link, and reports where it was saved along with the file's name, type and size.
+Automatically download a file from Slack on slack.com. Downloads a file stored in Slack to the machine running the browser, taking the file's ID or its Slack link, and reports where it was saved, the file's name, type and size, and the signed-in account (id and handle). Fails when the file does not exist or is not visible to the account, when it is only a link to an external service, or with a sign-in error when the browser is not signed in to the workspace.
 
 - Site: slack.com
 - Address: `reduck/slack.com/download_file`
-- Updated: 2026-09-23 (v1)
+- Updated: 2026-10-23 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -19,7 +19,7 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/download_file
 
 - `file` (string, required): The file's Slack ID (for example F01234ABCDE) or its Slack file link. A link must belong to the same workspace as workspaceDomain.
 - `workspaceDomain` (string, required): Workspace hostname, for example acme.slack.com.
-- `expectedUser` (string, optional): Optional guard. Your Slack handle, display name, or user ID. When given, it is checked against the signed-in account and the download is refused on a mismatch.
+- `expectedUser` (string, optional): Optional guard. Your Slack handle or user ID. When given, it is checked against the signed-in account and the download is refused on a mismatch.
 
 ## Output
 
@@ -32,7 +32,7 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/download_file
 
 ### What does "Download a file from Slack" do?
 
-Downloads a file stored in Slack to the machine running the browser, taking the file's ID or its Slack link, and reports where it was saved along with the file's name, type and size.
+Downloads a file stored in Slack to the machine running the browser, taking the file's ID or its Slack link, and reports where it was saved, the file's name, type and size, and the signed-in account (id and handle). Fails when the file does not exist or is not visible to the account, when it is only a link to an external service, or with a sign-in error when the browser is not signed in to the workspace.
 
 ### How do I automatically download a file from Slack on slack.com?
 

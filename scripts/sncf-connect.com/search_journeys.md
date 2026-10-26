@@ -1,10 +1,10 @@
 # SNCF Connect unofficial API: search train journeys and fares
 
-Automatically search train journeys and fares on sncf-connect.com. An unofficial SNCF Connect API for train search: SNCF Connect has no public API for journeys and fares, and this returns them as JSON, programmatically. Search trains between two cities or stations on a given date via SNCF Connect. Returns each journey (times, duration, operator, best price) with all of its fare offers (class, fare name, price, flexibility, full conditions) and whether the fare can be cancelled free of charge. No journeys means no tickets are on sale for that date. Runs only via the local browser extension, not the hosted cloud browser.
+Automatically search train journeys and fares on sncf-connect.com. An unofficial SNCF Connect API for train search: SNCF Connect has no public API for journeys and fares, and this returns them as JSON, programmatically. Search trains between two cities or stations on a given date via SNCF Connect. Returns each journey (times, duration, operator, best price) with all of its fare offers (class, fare name, price, flexibility label, and the exchange and refund conditions as SNCF writes them). No journeys means no tickets are on sale for that date. An unknown station fails with an error asking you to check its spelling.
 
 - Site: sncf-connect.com
 - Address: `reduck/sncf-connect.com/search_journeys`
-- Updated: 2026-10-20 (v13)
+- Updated: 2026-10-22 (v15)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -32,7 +32,7 @@ npx @reduck-ai/cli@latest run --script reduck/sncf-connect.com/search_journeys
 
 ### What does "SNCF Connect unofficial API: search train journeys and fares" do?
 
-An unofficial SNCF Connect API for train search: SNCF Connect has no public API for journeys and fares, and this returns them as JSON, programmatically. Search trains between two cities or stations on a given date via SNCF Connect. Returns each journey (times, duration, operator, best price) with all of its fare offers (class, fare name, price, flexibility, full conditions) and whether the fare can be cancelled free of charge. No journeys means no tickets are on sale for that date. Runs only via the local browser extension, not the hosted cloud browser.
+An unofficial SNCF Connect API for train search: SNCF Connect has no public API for journeys and fares, and this returns them as JSON, programmatically. Search trains between two cities or stations on a given date via SNCF Connect. Returns each journey (times, duration, operator, best price) with all of its fare offers (class, fare name, price, flexibility label, and the exchange and refund conditions as SNCF writes them). No journeys means no tickets are on sale for that date. An unknown station fails with an error asking you to check its spelling.
 
 ### How do I automatically search train journeys and fares on sncf-connect.com?
 

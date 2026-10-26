@@ -4,7 +4,7 @@ Automatically download a Google Payments invoice (Google One, YouTube, Google Pl
 
 - Site: pay.google.com
 - Address: `reduck/pay.google.com/download_tax_invoice`
-- Updated: 2026-10-21 (v19)
+- Updated: 2026-10-22 (v20)
 - Author: Reduck AI (reduck)
 
 ## Run it

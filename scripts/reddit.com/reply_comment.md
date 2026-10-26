@@ -4,7 +4,7 @@ Automatically reply to Reddit comment on reddit.com. Reply to a Reddit comment a
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/reply_comment`
-- Updated: 2026-08-19 (v7)
+- Updated: 2026-10-22 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -59,7 +59,7 @@ Yes. It acts as you on reddit.com: on your own Chrome it reuses your session, an
 
 ### Does it change anything on reddit.com, or only read data?
 
-It makes changes on reddit.com, like sending, posting or booking something.
+It makes changes on reddit.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

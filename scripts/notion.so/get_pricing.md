@@ -4,7 +4,7 @@ Automatically get Notion pricing plans on notion.so. Read Notion's public pricin
 
 - Site: notion.so
 - Address: `reduck/notion.so/get_pricing`
-- Updated: 2026-09-18 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Switch the display language for the current Notion account, via Settings > Prefe
 
 - Site: notion.com
 - Address: `reduck/notion.com/switch_language`
-- Updated: 2026-10-02 (v6)
+- Updated: 2026-10-22 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

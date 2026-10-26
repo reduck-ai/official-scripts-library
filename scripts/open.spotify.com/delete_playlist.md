@@ -4,7 +4,7 @@ Automatically delete a Spotify playlist on open.spotify.com. Delete a playlist t
 
 - Site: open.spotify.com
 - Address: `reduck/open.spotify.com/delete_playlist`
-- Updated: 2026-10-21 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

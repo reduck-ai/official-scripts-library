@@ -4,7 +4,7 @@ Automatically read Reddit subreddit moderators on reddit.com. An unofficial Redd
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/read_moderators`
-- Updated: 2026-10-19 (v6)
+- Updated: 2026-10-22 (v7)
 - Author: Reduck AI (reduck)
 
 ## About

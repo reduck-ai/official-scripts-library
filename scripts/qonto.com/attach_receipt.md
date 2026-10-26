@@ -4,7 +4,7 @@ Automatically attach a receipt to a transaction on qonto.com. Attach a receipt f
 
 - Site: qonto.com
 - Address: `reduck/qonto.com/attach_receipt`
-- Updated: 2026-10-07 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

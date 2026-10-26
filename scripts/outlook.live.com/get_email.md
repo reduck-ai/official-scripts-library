@@ -1,10 +1,10 @@
 # Read an Outlook.com email
 
-Automatically read an Outlook.com email on outlook.live.com. Read one Outlook.com (outlook.live.com) message's details by its id (as returned by list_emails): subject, sender, recipient, date shown on the message, and body text. Opens the message in the current folder's reading pane.
+Automatically read an Outlook.com email on outlook.live.com. Read one Outlook.com (outlook.live.com) message's details by its id (as returned by list_emails): subject, sender, recipient, date shown on the message, and body text. Opens the message in the given folder's reading pane, so an unread message becomes read. An unknown folder or an id that is not in the folder fails with an error saying so. A signed-out browser fails with a signed-out error asking to sign in to outlook.live.com.
 
 - Site: outlook.live.com
 - Address: `reduck/outlook.live.com/get_email`
-- Updated: 2026-09-25 (v6)
+- Updated: 2026-10-22 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -33,7 +33,7 @@ npx @reduck-ai/cli@latest run --script reduck/outlook.live.com/get_email
 
 ### What does "Read an Outlook.com email" do?
 
-Read one Outlook.com (outlook.live.com) message's details by its id (as returned by list_emails): subject, sender, recipient, date shown on the message, and body text. Opens the message in the current folder's reading pane.
+Read one Outlook.com (outlook.live.com) message's details by its id (as returned by list_emails): subject, sender, recipient, date shown on the message, and body text. Opens the message in the given folder's reading pane, so an unread message becomes read. An unknown folder or an id that is not in the folder fails with an error saying so. A signed-out browser fails with a signed-out error asking to sign in to outlook.live.com.
 
 ### How do I automatically read an Outlook.com email on outlook.live.com?
 

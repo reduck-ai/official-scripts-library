@@ -4,7 +4,7 @@ Automatically list Qonto transactions on qonto.com. List the most recent transac
 
 - Site: qonto.com
 - Address: `reduck/qonto.com/list_transactions`
-- Updated: 2026-09-28 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Log into your Raycast account on raycast.com with Google sign-in, handling Googl
 
 - Site: raycast.com
 - Address: `reduck/raycast.com/login_with_google`
-- Updated: 2026-10-02 (v1)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

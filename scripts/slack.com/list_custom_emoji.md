@@ -4,7 +4,7 @@ Automatically list Slack custom emoji on slack.com. List the workspace's custom 
 
 - Site: slack.com
 - Address: `reduck/slack.com/list_custom_emoji`
-- Updated: 2026-07-29 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

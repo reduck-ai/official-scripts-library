@@ -4,7 +4,7 @@ Log into Perplexity with Continue with Google, handling the Google account choos
 
 - Site: perplexity.ai
 - Address: `reduck/perplexity.ai/login_with_google`
-- Updated: 2026-09-28 (v1)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -42,7 +42,7 @@ It returns url, account, already, loggedIn.
 
 ### Do I need to be logged in to perplexity.ai?
 
-Yes. It acts as you on perplexity.ai: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the perplexity.ai cookies saved by the Reduck extension.
+No. It only uses pages of perplexity.ai that are reachable without signing in.
 
 ### Does it change anything on perplexity.ai, or only read data?
 

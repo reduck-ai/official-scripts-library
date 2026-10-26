@@ -4,7 +4,7 @@ Automatically create calendar event (Outlook) on outlook.live.com. Create an eve
 
 - Site: outlook.live.com
 - Address: `reduck/outlook.live.com/create_event`
-- Updated: 2026-09-16 (v1)
+- Updated: 2026-10-23 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -28,8 +28,9 @@ npx @reduck-ai/cli@latest run --script reduck/outlook.live.com/create_event
 - `end` (string, required)
 - `start` (string, required)
 - `created` (boolean, required)
+- `eventId` (string, required): The new event's id, as Outlook returned it when saving.
 - `subject` (string, required)
-- `verified` (boolean, required)
+- `verified` (boolean, required): True when Outlook confirmed the save with the new event's id.
 - `locationSet` (boolean, optional)
 - `renderedWhen` (string, optional): The composer's own rendering of the date range, as confirmation the ISO input was understood.
 - `unverifiedReason` (string, optional)
@@ -54,7 +55,7 @@ Required: subject, start, end. Optional: body, location.
 
 ### What does it return?
 
-It returns end, start, created, subject, verified, locationSet, renderedWhen, unverifiedReason.
+It returns end, start, created, eventId, subject, verified, locationSet, renderedWhen, unverifiedReason.
 
 ### Do I need to be logged in to outlook.live.com?
 
@@ -62,7 +63,7 @@ Yes. It acts as you on outlook.live.com: on your own Chrome it reuses your sessi
 
 ### Does it change anything on outlook.live.com, or only read data?
 
-It makes changes on outlook.live.com, like sending, posting or booking something.
+It makes changes on outlook.live.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

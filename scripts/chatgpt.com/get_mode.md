@@ -4,7 +4,7 @@ Automatically get ChatGPT mode (Chat or Work) on chatgpt.com. Report whether Cha
 
 - Site: chatgpt.com
 - Address: `reduck/chatgpt.com/get_mode`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-10-25 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

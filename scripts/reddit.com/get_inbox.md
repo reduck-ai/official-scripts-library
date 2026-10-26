@@ -4,7 +4,7 @@ Automatically get Reddit chat inbox on reddit.com. List the conversations in you
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/get_inbox`
-- Updated: 2026-10-19 (v5)
+- Updated: 2026-10-22 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

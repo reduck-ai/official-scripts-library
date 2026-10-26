@@ -1,10 +1,10 @@
 # Remove a Product Hunt launch upvote
 
-Automatically remove a Product Hunt launch upvote on producthunt.com. Withdraw the signed-in account's upvote from a Product Hunt launch. This is the inverse of upvoting one, and it is written the same careful way: because Product Hunt's vote control is a toggle, the script first checks whether an upvote actually exists and does nothing if it does not, instead of pressing the control and accidentally adding one. The result reports the account used, whether there was no vote to remove, the score afterwards, and confirmation read back from Product Hunt's own response rather than from the button. Accepts a full launch URL or a "product/launch" slug pair.
+Automatically remove a Product Hunt launch upvote on producthunt.com. Withdraw the signed-in account's upvote from a Product Hunt launch. If the account has not upvoted the launch, nothing changes and already_absent is true. Returns the account used, the score afterwards, and whether Product Hunt confirmed the change. Accepts a full launch URL or a "product/launch" slug pair. Inverse of upvote_launch.
 
 - Site: producthunt.com
 - Address: `reduck/producthunt.com/remove_launch_upvote`
-- Updated: 2026-08-25 (v1)
+- Updated: 2026-10-23 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -34,7 +34,7 @@ npx @reduck-ai/cli@latest run --script reduck/producthunt.com/remove_launch_upvo
 
 ### What does "Remove a Product Hunt launch upvote" do?
 
-Withdraw the signed-in account's upvote from a Product Hunt launch. This is the inverse of upvoting one, and it is written the same careful way: because Product Hunt's vote control is a toggle, the script first checks whether an upvote actually exists and does nothing if it does not, instead of pressing the control and accidentally adding one. The result reports the account used, whether there was no vote to remove, the score afterwards, and confirmation read back from Product Hunt's own response rather than from the button. Accepts a full launch URL or a "product/launch" slug pair.
+Withdraw the signed-in account's upvote from a Product Hunt launch. If the account has not upvoted the launch, nothing changes and already_absent is true. Returns the account used, the score afterwards, and whether Product Hunt confirmed the change. Accepts a full launch URL or a "product/launch" slug pair. Inverse of upvote_launch.
 
 ### How do I automatically remove a Product Hunt launch upvote on producthunt.com?
 
@@ -58,7 +58,7 @@ Yes. It acts as you on producthunt.com: on your own Chrome it reuses your sessio
 
 ### Does it change anything on producthunt.com, or only read data?
 
-It makes changes on producthunt.com, like sending, posting or booking something.
+It makes changes on producthunt.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

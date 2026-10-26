@@ -4,7 +4,7 @@ Automatically edit Reddit post on reddit.com. Edit the body of your own Reddit t
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/edit_post`
-- Updated: 2026-09-14 (v8)
+- Updated: 2026-10-22 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -57,7 +57,7 @@ Yes. It acts as you on reddit.com: on your own Chrome it reuses your session, an
 
 ### Does it change anything on reddit.com, or only read data?
 
-It makes changes on reddit.com, like sending, posting or booking something.
+It makes changes on reddit.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

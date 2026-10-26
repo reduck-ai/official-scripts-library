@@ -4,7 +4,7 @@ Automatically remove tracks from a Spotify playlist on open.spotify.com. Remove 
 
 - Site: open.spotify.com
 - Address: `reduck/open.spotify.com/remove_tracks_from_playlist`
-- Updated: 2026-10-21 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

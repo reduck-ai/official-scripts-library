@@ -4,7 +4,7 @@ Automatically list Google Search Console sitemaps on search.google.com. Lists th
 
 - Site: search.google.com
 - Address: `reduck/search.google.com/list_sitemaps`
-- Updated: 2026-10-07 (v3)
+- Updated: 2026-10-22 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

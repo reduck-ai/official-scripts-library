@@ -4,7 +4,7 @@ Log into Postman with Sign In with Google, handling the Google account chooser a
 
 - Site: postman.co
 - Address: `reduck/postman.co/login_with_google`
-- Updated: 2026-10-01 (v2)
+- Updated: 2026-10-22 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -42,7 +42,7 @@ It returns url, account, already, loggedIn.
 
 ### Do I need to be logged in to postman.co?
 
-Yes. It acts as you on postman.co: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the postman.co cookies saved by the Reduck extension.
+No. It only uses pages of postman.co that are reachable without signing in.
 
 ### Does it change anything on postman.co, or only read data?
 

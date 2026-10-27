@@ -4,7 +4,7 @@ Automatically create Threads post on threads.com. Publish a new text post (threa
 
 - Site: threads.com
 - Address: `reduck/threads.com/create_post`
-- Updated: 2026-09-04 (v6)
+- Updated: 2026-10-22 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -56,7 +56,7 @@ Yes. It acts as you on threads.com: on your own Chrome it reuses your session, a
 
 ### Does it change anything on threads.com, or only read data?
 
-It makes changes on threads.com, like sending, posting or booking something.
+It makes changes on threads.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

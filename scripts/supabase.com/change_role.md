@@ -4,7 +4,7 @@ Automatically change Team Member Role on supabase.com. Changes an existing activ
 
 - Site: supabase.com
 - Address: `reduck/supabase.com/change_role`
-- Updated: 2026-07-31 (v5)
+- Updated: 2026-10-22 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -56,7 +56,7 @@ Yes. It acts as you on supabase.com: on your own Chrome it reuses your session, 
 
 ### Does it change anything on supabase.com, or only read data?
 
-It makes changes on supabase.com, like sending, posting or booking something.
+It makes changes on supabase.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

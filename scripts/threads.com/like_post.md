@@ -4,7 +4,7 @@ Automatically like a Threads post on threads.com. Like a post on Threads by its 
 
 - Site: threads.com
 - Address: `reduck/threads.com/like_post`
-- Updated: 2026-09-21 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -55,7 +55,7 @@ Yes. It acts as you on threads.com: on your own Chrome it reuses your session, a
 
 ### Does it change anything on threads.com, or only read data?
 
-It makes changes on threads.com, like sending, posting or booking something.
+It makes changes on threads.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

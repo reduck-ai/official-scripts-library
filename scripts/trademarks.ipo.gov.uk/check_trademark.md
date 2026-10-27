@@ -4,7 +4,7 @@ Automatically check a word against the UK trade mark register on trademarks.ipo.
 
 - Site: trademarks.ipo.gov.uk
 - Address: `reduck/trademarks.ipo.gov.uk/check_trademark`
-- Updated: 2026-10-16 (v2)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

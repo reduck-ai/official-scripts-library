@@ -4,7 +4,7 @@ Automatically get Trustpilot similar companies on trustpilot.com. Get the compan
 
 - Site: trustpilot.com
 - Address: `reduck/trustpilot.com/get_similar_companies`
-- Updated: 2026-08-15 (v3)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically search Events (FR) on ticketmaster.fr. Search Ticketmaster France 
 
 - Site: ticketmaster.fr
 - Address: `reduck/ticketmaster.fr/search_events`
-- Updated: 2026-09-21 (v4)
+- Updated: 2026-10-23 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

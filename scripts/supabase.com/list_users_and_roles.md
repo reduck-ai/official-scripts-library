@@ -4,7 +4,7 @@ Automatically list Team Members and Roles on supabase.com. Lists every organizat
 
 - Site: supabase.com
 - Address: `reduck/supabase.com/list_users_and_roles`
-- Updated: 2026-07-27 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

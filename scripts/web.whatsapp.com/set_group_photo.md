@@ -1,10 +1,10 @@
 # WhatsApp — Set group photo
 
-Automatically set group photo on web.whatsapp.com. Set/replace a WhatsApp group's photo (icon) by exact group name. Pass the image as base64 (imageBase64) — it is applied through the group-info photo editor, including the crop/adjust step. Verifies the group photo actually changed before reporting success, and returns the new photoUrl plus replacedExisting. Admin-only; notifies the group. Keep imageBase64 well under ~96KB (MCP payload cap); for larger images serve the file over localhost instead.
+Automatically set group photo on web.whatsapp.com. Set or replace a WhatsApp group's photo, by exact group name. Pass the image as the attachment file input (preferred) or as a small base64 string. Confirms the photo actually changed before reporting success, and returns the new photoUrl plus whether an existing photo was replaced. Admin-only; the group is notified. dry_run checks everything without changing the photo.
 
 - Site: web.whatsapp.com
 - Address: `reduck/web.whatsapp.com/set_group_photo`
-- Updated: 2026-09-22 (v9)
+- Updated: 2026-10-23 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -36,7 +36,7 @@ npx @reduck-ai/cli@latest run --script reduck/web.whatsapp.com/set_group_photo
 
 ### What does "WhatsApp — Set group photo" do?
 
-Set/replace a WhatsApp group's photo (icon) by exact group name. Pass the image as base64 (imageBase64) — it is applied through the group-info photo editor, including the crop/adjust step. Verifies the group photo actually changed before reporting success, and returns the new photoUrl plus replacedExisting. Admin-only; notifies the group. Keep imageBase64 well under ~96KB (MCP payload cap); for larger images serve the file over localhost instead.
+Set or replace a WhatsApp group's photo, by exact group name. Pass the image as the attachment file input (preferred) or as a small base64 string. Confirms the photo actually changed before reporting success, and returns the new photoUrl plus whether an existing photo was replaced. Admin-only; the group is notified. dry_run checks everything without changing the photo.
 
 ### How do I automatically set group photo on web.whatsapp.com?
 
@@ -60,7 +60,7 @@ Yes. It acts as you on web.whatsapp.com: on your own Chrome it reuses your sessi
 
 ### Does it change anything on web.whatsapp.com, or only read data?
 
-It makes changes on web.whatsapp.com, like sending, posting or booking something.
+It makes changes on web.whatsapp.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

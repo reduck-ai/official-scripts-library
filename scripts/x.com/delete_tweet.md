@@ -4,7 +4,7 @@ Automatically delete a tweet on X (Twitter) from an AI agent on x.com. Delete on
 
 - Site: x.com
 - Address: `reduck/x.com/delete_tweet`
-- Updated: 2026-09-29 (v6)
+- Updated: 2026-10-22 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

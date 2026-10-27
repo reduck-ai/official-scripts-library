@@ -4,7 +4,7 @@ Automatically remove group member on web.whatsapp.com. Remove a member from a Wh
 
 - Site: web.whatsapp.com
 - Address: `reduck/web.whatsapp.com/remove_group_member`
-- Updated: 2026-08-27 (v11)
+- Updated: 2026-10-22 (v12)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -54,7 +54,7 @@ Yes. It acts as you on web.whatsapp.com: on your own Chrome it reuses your sessi
 
 ### Does it change anything on web.whatsapp.com, or only read data?
 
-It makes changes on web.whatsapp.com, like sending, posting or booking something.
+It makes changes on web.whatsapp.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

@@ -4,7 +4,7 @@ Automatically get poll results on web.whatsapp.com. Read the current results of 
 
 - Site: web.whatsapp.com
 - Address: `reduck/web.whatsapp.com/get_poll_results`
-- Updated: 2026-09-03 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

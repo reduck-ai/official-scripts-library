@@ -4,7 +4,7 @@ Automatically delete chat on web.whatsapp.com. Delete a WhatsApp chat by exact n
 
 - Site: web.whatsapp.com
 - Address: `reduck/web.whatsapp.com/delete_chat`
-- Updated: 2026-09-30 (v9)
+- Updated: 2026-10-22 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it

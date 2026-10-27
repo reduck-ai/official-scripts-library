@@ -4,7 +4,7 @@ Automatically get current Mistral Le Chat user on chat.mistral.ai. Report which 
 
 - Site: chat.mistral.ai
 - Address: `reduck/chat.mistral.ai/get_current_user`
-- Updated: 2026-10-22 (v6)
+- Updated: 2026-10-26 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

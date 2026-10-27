@@ -4,7 +4,7 @@ Automatically get Welcome to the Jungle candidate CV text on welcomekit.co. Read
 
 - Site: welcomekit.co
 - Address: `reduck/welcomekit.co/get_candidate_resume_text`
-- Updated: 2026-10-20 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

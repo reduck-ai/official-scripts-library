@@ -4,7 +4,7 @@ Automatically get TikTok direct message inbox on tiktok.com. List the signed-in 
 
 - Site: tiktok.com
 - Address: `reduck/tiktok.com/get_inbox`
-- Updated: 2026-10-01 (v5)
+- Updated: 2026-10-23 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -22,6 +22,7 @@ npx @reduck-ai/cli@latest run --script reduck/tiktok.com/get_inbox
 ## Output
 
 - `hasMore` (boolean, required): True when the inbox still had conversations beyond the ones returned.
+- `complete` (boolean, required): True only when the whole inbox was read (the list sent no more rows); false when count stopped it first.
 - `account_used` (string, required): Handle whose inbox was read, from the signed-in session.
 - `conversations` (array, required)
 
@@ -45,7 +46,7 @@ Optional: count.
 
 ### What does it return?
 
-It returns hasMore, account_used, conversations.
+It returns hasMore, complete, account_used, conversations.
 
 ### Do I need to be logged in to tiktok.com?
 

@@ -4,7 +4,7 @@ Log into your Surfshark account with Google sign-in, handling the cookie banner,
 
 - Site: surfshark.com
 - Address: `reduck/surfshark.com/login_with_google`
-- Updated: 2026-10-02 (v1)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

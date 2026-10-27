@@ -4,7 +4,7 @@ Log into Vercel using Sign in with Google, ending on your Vercel dashboard. Retu
 
 - Site: vercel.com
 - Address: `reduck/vercel.com/login_with_google`
-- Updated: 2026-09-30 (v4)
+- Updated: 2026-10-22 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

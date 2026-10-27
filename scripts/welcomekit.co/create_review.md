@@ -4,7 +4,7 @@ Automatically create candidate review on welcomekit.co. Add a review (evaluation
 
 - Site: welcomekit.co
 - Address: `reduck/welcomekit.co/create_review`
-- Updated: 2026-10-06 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

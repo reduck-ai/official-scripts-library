@@ -4,7 +4,7 @@ Automatically send WhatsApp message or attachment on web.whatsapp.com. Send a Wh
 
 - Site: web.whatsapp.com
 - Address: `reduck/web.whatsapp.com/send_message`
-- Updated: 2026-10-13 (v18)
+- Updated: 2026-10-22 (v20)
 - Author: Reduck AI (reduck)
 
 ## Run it

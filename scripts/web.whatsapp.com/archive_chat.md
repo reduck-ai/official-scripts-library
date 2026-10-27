@@ -4,7 +4,7 @@ Automatically archive chat on web.whatsapp.com. Archive or unarchive a chat by e
 
 - Site: web.whatsapp.com
 - Address: `reduck/web.whatsapp.com/archive_chat`
-- Updated: 2026-08-27 (v6)
+- Updated: 2026-10-22 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -54,7 +54,7 @@ Yes. It acts as you on web.whatsapp.com: on your own Chrome it reuses your sessi
 
 ### Does it change anything on web.whatsapp.com, or only read data?
 
-It makes changes on web.whatsapp.com, like sending, posting or booking something.
+It makes changes on web.whatsapp.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

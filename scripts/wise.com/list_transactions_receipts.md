@@ -4,7 +4,7 @@ Automatically list Wise transactions + receipt status on wise.com. List a Wise p
 
 - Site: wise.com
 - Address: `reduck/wise.com/list_transactions_receipts`
-- Updated: 2026-09-28 (v3)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

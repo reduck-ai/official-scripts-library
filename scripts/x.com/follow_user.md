@@ -4,7 +4,7 @@ Automatically follow an account on X (Twitter) from an AI agent on x.com. Follow
 
 - Site: x.com
 - Address: `reduck/x.com/follow_user`
-- Updated: 2026-09-29 (v13)
+- Updated: 2026-10-22 (v14)
 - Author: Reduck AI (reduck)
 
 ## Run it

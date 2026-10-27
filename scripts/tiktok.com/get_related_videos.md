@@ -4,7 +4,7 @@ Automatically get TikTok related videos on tiktok.com. Get the â€œyou may likeâ€
 
 - Site: tiktok.com
 - Address: `reduck/tiktok.com/get_related_videos`
-- Updated: 2026-09-08 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

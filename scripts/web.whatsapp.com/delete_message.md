@@ -4,7 +4,7 @@ Automatically delete a message on web.whatsapp.com. Delete one WhatsApp message 
 
 - Site: web.whatsapp.com
 - Address: `reduck/web.whatsapp.com/delete_message`
-- Updated: 2026-10-13 (v24)
+- Updated: 2026-10-22 (v26)
 - Author: Reduck AI (reduck)
 
 ## About

@@ -4,7 +4,7 @@ Automatically search Trustpilot companies on trustpilot.com. Search Trustpilot b
 
 - Site: trustpilot.com
 - Address: `reduck/trustpilot.com/search_company`
-- Updated: 2026-08-14 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

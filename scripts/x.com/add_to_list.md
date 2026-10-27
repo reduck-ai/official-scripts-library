@@ -4,7 +4,7 @@ Automatically add an account to an X (Twitter) List on x.com. Add an account to 
 
 - Site: x.com
 - Address: `reduck/x.com/add_to_list`
-- Updated: 2026-09-29 (v15)
+- Updated: 2026-10-22 (v16)
 - Author: Reduck AI (reduck)
 
 ## Run it

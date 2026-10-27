@@ -4,7 +4,7 @@ Log into Vinted with Continue with Google on the country site where your account
 
 - Site: vinted.com
 - Address: `reduck/vinted.com/login_with_google`
-- Updated: 2026-10-08 (v4)
+- Updated: 2026-10-22 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -44,7 +44,7 @@ It returns url, domain, account, already, loggedIn.
 
 ### Do I need to be logged in to vinted.com?
 
-Yes. It acts as you on vinted.com: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the vinted.com cookies saved by the Reduck extension.
+No. It only uses pages of vinted.com that are reachable without signing in.
 
 ### Does it change anything on vinted.com, or only read data?
 

@@ -4,7 +4,7 @@ Automatically block a TikTok user on tiktok.com. Block a TikTok account by @user
 
 - Site: tiktok.com
 - Address: `reduck/tiktok.com/block_user`
-- Updated: 2026-09-03 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -58,7 +58,7 @@ Yes. It acts as you on tiktok.com: on your own Chrome it reuses your session, an
 
 ### Does it change anything on tiktok.com, or only read data?
 
-It makes changes on tiktok.com, like sending, posting or booking something.
+It makes changes on tiktok.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

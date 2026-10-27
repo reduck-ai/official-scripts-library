@@ -4,7 +4,7 @@ Automatically get WhatsApp conversation on web.whatsapp.com. Read the most recen
 
 - Site: web.whatsapp.com
 - Address: `reduck/web.whatsapp.com/get_conversation`
-- Updated: 2026-10-13 (v24)
+- Updated: 2026-10-22 (v26)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -1,10 +1,10 @@
-# Trustpilot whoami (signed-in account)
+# Get the signed-in Trustpilot account
 
-Report which Trustpilot account this browser is signed in as: email and display name from account settings. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Trustpilot scripts.
+Automatically get the signed-in Trustpilot account on trustpilot.com. Report which Trustpilot account this browser is signed in as: the email and display name from the account settings. loggedIn is always true. A signed-out browser fails with a signed-out error asking to sign in to trustpilot.com, so it can be used to check a session before running other Trustpilot scripts.
 
 - Site: trustpilot.com
 - Address: `reduck/trustpilot.com/whoami`
-- Updated: 2026-09-30 (v1)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -27,9 +27,17 @@ It takes no input.
 
 ## FAQ
 
-### What does "Trustpilot whoami (signed-in account)" do?
+### What does "Get the signed-in Trustpilot account" do?
 
-Report which Trustpilot account this browser is signed in as: email and display name from account settings. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Trustpilot scripts.
+Report which Trustpilot account this browser is signed in as: the email and display name from the account settings. loggedIn is always true. A signed-out browser fails with a signed-out error asking to sign in to trustpilot.com, so it can be used to check a session before running other Trustpilot scripts.
+
+### How do I automatically get the signed-in Trustpilot account on trustpilot.com?
+
+Ask an AI agent connected to Reduck to run reduck/trustpilot.com/whoami, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/trustpilot.com/whoami
+
+### Is there a trustpilot.com API to get the signed-in Trustpilot account?
+
+You do not need one. "Get the signed-in Trustpilot account" drives the real trustpilot.com pages in a browser, so it works whether or not trustpilot.com offers an API for this.
 
 ### What information do I need to provide?
 

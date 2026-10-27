@@ -1,10 +1,10 @@
-# Get Chat Messages
+# Get Microsoft Teams chat messages
 
-Automatically get Chat Messages on teams.microsoft.com. Read messages from a 1:1 Teams chat by contact name. Finds the person, opens their chat, and returns every currently-loaded message with sender, ISO timestamp and text. Needs no admin or export permission.
+Automatically get Microsoft Teams chat messages on teams.microsoft.com. Read messages from a 1:1 Teams chat by contact name. Finds the person, opens their chat, and returns every currently-loaded message with sender, ISO timestamp and text. Needs no admin or export permission.
 
 - Site: teams.microsoft.com
 - Address: `reduck/teams.microsoft.com/get_chat_messages`
-- Updated: 2026-09-25 (v8)
+- Updated: 2026-10-22 (v12)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -26,17 +26,17 @@ npx @reduck-ai/cli@latest run --script reduck/teams.microsoft.com/get_chat_messa
 
 ## FAQ
 
-### What does "Get Chat Messages" do?
+### What does "Get Microsoft Teams chat messages" do?
 
 Read messages from a 1:1 Teams chat by contact name. Finds the person, opens their chat, and returns every currently-loaded message with sender, ISO timestamp and text. Needs no admin or export permission.
 
-### How do I automatically get Chat Messages on teams.microsoft.com?
+### How do I automatically get Microsoft Teams chat messages on teams.microsoft.com?
 
 Ask an AI agent connected to Reduck to run reduck/teams.microsoft.com/get_chat_messages, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/teams.microsoft.com/get_chat_messages
 
-### Is there a teams.microsoft.com API to get Chat Messages?
+### Is there a teams.microsoft.com API to get Microsoft Teams chat messages?
 
-You do not need one. "Get Chat Messages" drives the real teams.microsoft.com pages in a browser, so it works whether or not teams.microsoft.com offers an API for this.
+You do not need one. "Get Microsoft Teams chat messages" drives the real teams.microsoft.com pages in a browser, so it works whether or not teams.microsoft.com offers an API for this.
 
 ### What information do I need to provide?
 

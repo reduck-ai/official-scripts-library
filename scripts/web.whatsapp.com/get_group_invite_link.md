@@ -4,7 +4,7 @@ Automatically get group invite link on web.whatsapp.com. Get the shareable invit
 
 - Site: web.whatsapp.com
 - Address: `reduck/web.whatsapp.com/get_group_invite_link`
-- Updated: 2026-09-03 (v4)
+- Updated: 2026-10-22 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

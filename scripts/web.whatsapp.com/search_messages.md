@@ -4,7 +4,7 @@ Automatically search WhatsApp messages on web.whatsapp.com. Search WhatsApp mess
 
 - Site: web.whatsapp.com
 - Address: `reduck/web.whatsapp.com/search_messages`
-- Updated: 2026-10-13 (v5)
+- Updated: 2026-10-22 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

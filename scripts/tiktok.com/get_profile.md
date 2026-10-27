@@ -4,7 +4,7 @@ Automatically get TikTok profile on tiktok.com. Get a TikTok user's profile (bio
 
 - Site: tiktok.com
 - Address: `reduck/tiktok.com/get_profile`
-- Updated: 2026-09-08 (v2)
+- Updated: 2026-10-23 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -22,7 +22,7 @@ npx @reduck-ai/cli@latest run --script reduck/tiktok.com/get_profile
 ## Output
 
 - `id` (string, required)
-- `stats` (object, required): Exact counts from statsV2 (numbers).
+- `stats` (object, required): Exact counts from statsV2 (numbers); null when TikTok did not send that count.
 - `secUid` (string, required): Stable opaque id; join key for video/feed APIs.
 - `nickname` (string, required)
 - `uniqueId` (string, required)

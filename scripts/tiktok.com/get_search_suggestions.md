@@ -4,7 +4,7 @@ Automatically get TikTok search suggestions on tiktok.com. Get TikTok's search a
 
 - Site: tiktok.com
 - Address: `reduck/tiktok.com/get_search_suggestions`
-- Updated: 2026-09-03 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

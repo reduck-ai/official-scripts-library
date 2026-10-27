@@ -4,7 +4,7 @@ Automatically get Threads user posts on threads.com. Fetch the posts on a Thread
 
 - Site: threads.com
 - Address: `reduck/threads.com/get_user_posts`
-- Updated: 2026-09-03 (v3)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

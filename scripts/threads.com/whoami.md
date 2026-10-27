@@ -4,7 +4,7 @@ Report which Threads account this browser is signed in as: the user id and @user
 
 - Site: threads.com
 - Address: `reduck/threads.com/whoami`
-- Updated: 2026-10-20 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Sign out of the Welcome to the Jungle recruiting dashboard (welcomekit.co) in th
 
 - Site: welcomekit.co
 - Address: `reduck/welcomekit.co/logout`
-- Updated: 2026-10-06 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

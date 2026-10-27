@@ -4,7 +4,7 @@ Automatically clear chat on web.whatsapp.com. Clear all messages from a WhatsApp
 
 - Site: web.whatsapp.com
 - Address: `reduck/web.whatsapp.com/clear_chat`
-- Updated: 2026-08-26 (v7)
+- Updated: 2026-10-22 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -55,7 +55,7 @@ Yes. It acts as you on web.whatsapp.com: on your own Chrome it reuses your sessi
 
 ### Does it change anything on web.whatsapp.com, or only read data?
 
-It makes changes on web.whatsapp.com, like sending, posting or booking something.
+It makes changes on web.whatsapp.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

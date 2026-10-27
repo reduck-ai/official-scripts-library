@@ -4,7 +4,7 @@ Automatically save (Favourite) TikTok Video on tiktok.com. Adds a public TikTok 
 
 - Site: tiktok.com
 - Address: `reduck/tiktok.com/save_video`
-- Updated: 2026-10-01 (v7)
+- Updated: 2026-10-22 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it

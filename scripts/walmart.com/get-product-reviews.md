@@ -4,7 +4,7 @@ Automatically get Walmart product reviews on walmart.com. Fetch one page of cust
 
 - Site: walmart.com
 - Address: `reduck/walmart.com/get-product-reviews`
-- Updated: 2026-09-16 (v3)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

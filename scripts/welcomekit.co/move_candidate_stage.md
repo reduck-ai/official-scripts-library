@@ -4,7 +4,7 @@ Automatically move a Welcome to the Jungle (WelcomeKit) candidate to another sta
 
 - Site: welcomekit.co
 - Address: `reduck/welcomekit.co/move_candidate_stage`
-- Updated: 2026-10-20 (v6)
+- Updated: 2026-10-22 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

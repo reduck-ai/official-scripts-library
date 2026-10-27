@@ -4,7 +4,7 @@ Automatically download candidate resume on welcomekit.co. Download a candidate's
 
 - Site: welcomekit.co
 - Address: `reduck/welcomekit.co/download_resume`
-- Updated: 2026-10-06 (v5)
+- Updated: 2026-10-22 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

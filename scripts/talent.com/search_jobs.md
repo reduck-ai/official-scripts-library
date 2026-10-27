@@ -1,10 +1,10 @@
 # Search talent.com jobs
 
-Automatically search talent.com jobs on talent.com. Search talent.com's aggregated job listings by free-text keyword and optional free-text location (city/region; omit for a broad/geo-default search). Returns richer job data (salary, company, remote flag, job type, description) than what's shown on the page, read directly from the page's own underlying data rather than scraped visually — more stable against markup changes. Paginates via the site's own page param (page=1 default, ~18-20 results/page); no total-count field is exposed anywhere, so callers must page until an empty array comes back. Location text is matched loosely against talent.com's own place index (e.g. "paris" can resolve to Paris, TX, US rather than Paris, France) — this mirrors the site's own search box behavior, not an added restriction. A query with no matches returns jobs:[] — not an error.
+Automatically search talent.com jobs on talent.com. Search talent.com's aggregated job listings by keyword and optional city or region. Returns each job's title, company, location, salary range, remote flag, job type, posting date and description, about 18 to 20 per page. There is no total count, so page until an empty list comes back. Location text is matched loosely, the same as the site's own search box (for example "paris" can resolve to Paris, Texas). A query with no matches returns an empty list, not an error.
 
 - Site: talent.com
 - Address: `reduck/talent.com/search_jobs`
-- Updated: 2026-08-14 (v4)
+- Updated: 2026-10-23 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,7 +29,7 @@ npx @reduck-ai/cli@latest run --script reduck/talent.com/search_jobs
 
 ### What does "Search talent.com jobs" do?
 
-Search talent.com's aggregated job listings by free-text keyword and optional free-text location (city/region; omit for a broad/geo-default search). Returns richer job data (salary, company, remote flag, job type, description) than what's shown on the page, read directly from the page's own underlying data rather than scraped visually — more stable against markup changes. Paginates via the site's own page param (page=1 default, ~18-20 results/page); no total-count field is exposed anywhere, so callers must page until an empty array comes back. Location text is matched loosely against talent.com's own place index (e.g. "paris" can resolve to Paris, TX, US rather than Paris, France) — this mirrors the site's own search box behavior, not an added restriction. A query with no matches returns jobs:[] — not an error.
+Search talent.com's aggregated job listings by keyword and optional city or region. Returns each job's title, company, location, salary range, remote flag, job type, posting date and description, about 18 to 20 per page. There is no total count, so page until an empty list comes back. Location text is matched loosely, the same as the site's own search box (for example "paris" can resolve to Paris, Texas). A query with no matches returns an empty list, not an error.
 
 ### How do I automatically search talent.com jobs on talent.com?
 

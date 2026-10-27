@@ -4,7 +4,7 @@ Automatically get Welcome to the Jungle email templates (with body) on welcomeki
 
 - Site: welcomekit.co
 - Address: `reduck/welcomekit.co/get_email_template`
-- Updated: 2026-10-09 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

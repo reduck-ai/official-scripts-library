@@ -4,7 +4,7 @@ Automatically invite Team Member on supabase.com. Invites a new member to a Supa
 
 - Site: supabase.com
 - Address: `reduck/supabase.com/create_user`
-- Updated: 2026-07-31 (v6)
+- Updated: 2026-10-22 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -57,7 +57,7 @@ Yes. It acts as you on supabase.com: on your own Chrome it reuses your session, 
 
 ### Does it change anything on supabase.com, or only read data?
 
-It makes changes on supabase.com, like sending, posting or booking something.
+It makes changes on supabase.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

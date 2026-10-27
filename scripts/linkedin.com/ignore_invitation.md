@@ -1,10 +1,10 @@
 # LinkedIn — ignore a received invitation
 
-Automatically ignore a received invitation on linkedin.com. Ignore (decline) a pending received invitation on LinkedIn, identified by the inviter's display name (person or page). Guards against homonyms - two or more pending matches throw rather than guess - and returns the status plus the matched name (recipientResolved). Only acts on invitations already loaded, and is not easily reversible.
+Automatically ignore a received invitation on linkedin.com. Ignore (decline) a pending received invitation on LinkedIn, identified by the inviter's display name (person or page). Loads the whole received list (it lazy-loads ~10 at a time) before matching. Guards against homonyms - two or more pending matches throw rather than guess - and returns the status plus the matched name (recipientResolved). Not easily reversible.
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/ignore_invitation`
-- Updated: 2026-10-22 (v5)
+- Updated: 2026-10-26 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,7 +29,7 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/ignore_invitation
 
 ### What does "LinkedIn — ignore a received invitation" do?
 
-Ignore (decline) a pending received invitation on LinkedIn, identified by the inviter's display name (person or page). Guards against homonyms - two or more pending matches throw rather than guess - and returns the status plus the matched name (recipientResolved). Only acts on invitations already loaded, and is not easily reversible.
+Ignore (decline) a pending received invitation on LinkedIn, identified by the inviter's display name (person or page). Loads the whole received list (it lazy-loads ~10 at a time) before matching. Guards against homonyms - two or more pending matches throw rather than guess - and returns the status plus the matched name (recipientResolved). Not easily reversible.
 
 ### How do I automatically ignore a received invitation on linkedin.com?
 

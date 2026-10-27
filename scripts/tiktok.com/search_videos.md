@@ -4,7 +4,7 @@ Automatically search TikTok videos on tiktok.com. Up to 300 videos per keyword, 
 
 - Site: tiktok.com
 - Address: `reduck/tiktok.com/search_videos`
-- Updated: 2026-10-05 (v1)
+- Updated: 2026-10-23 (v3)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -28,7 +28,8 @@ npx @reduck-ai/cli@latest run --script reduck/tiktok.com/search_videos
 
 - `query` (string, required)
 - `videos` (array, required)
-- `hasMore` (boolean, required)
+- `hasMore` (boolean, required): TikTok says more results exist after the last one returned.
+- `complete` (boolean, required): true only when TikTok sent its last page of results; false when count stopped the list first.
 
 ## Example output
 
@@ -62,7 +63,8 @@ Shape only: placeholder values generated from the output schema, not a real run.
       "createTime": 3
     }
   ],
-  "hasMore": true
+  "hasMore": true,
+  "complete": true
 }
 ```
 
@@ -70,7 +72,7 @@ Shape only: placeholder values generated from the output schema, not a real run.
 
 ### What does "Search TikTok videos" do?
 
-Search TikTok videos by keyword, newest-relevance order, up to `count`.
+Search TikTok videos by keyword, as the Videos tab of TikTok search lists them, up to `count`. Returns the videos with author and stats, hasMore when TikTok has more after the last one, and complete: true only when TikTok sent its last page of results (false when count stopped the list first). Needs a browser signed in to TikTok; a signed-out browser fails with a sign-in error.
 
 ### How do I automatically search TikTok videos on tiktok.com?
 
@@ -86,7 +88,7 @@ Required: query. Optional: count.
 
 ### What does it return?
 
-It returns query, videos, hasMore.
+It returns query, videos, hasMore, complete.
 
 ### Do I need to be logged in to tiktok.com?
 
@@ -94,7 +96,7 @@ Yes. It acts as you on tiktok.com: on your own Chrome it reuses your session, an
 
 ### Does it change anything on tiktok.com, or only read data?
 
-Unknown: its author has not declared whether it changes anything on tiktok.com, so treat it as if it could.
+It only reads. It looks things up on tiktok.com and changes nothing there.
 
 ### How do I run it?
 

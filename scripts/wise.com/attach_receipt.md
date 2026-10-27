@@ -4,7 +4,7 @@ Automatically attach a receipt to a Wise transaction on wise.com. Attach a recei
 
 - Site: wise.com
 - Address: `reduck/wise.com/attach_receipt`
-- Updated: 2026-09-28 (v6)
+- Updated: 2026-10-22 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

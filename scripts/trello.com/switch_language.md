@@ -4,7 +4,7 @@ Automatically switch Trello account language on trello.com. Choose English, Fren
 
 - Site: trello.com
 - Address: `reduck/trello.com/switch_language`
-- Updated: 2026-10-05 (v3)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## About

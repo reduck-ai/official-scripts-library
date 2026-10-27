@@ -4,7 +4,7 @@ Automatically list favourited items on vinted.com. List the items the signed-in 
 
 - Site: vinted.com
 - Address: `reduck/vinted.com/list_favourites`
-- Updated: 2026-08-14 (v2)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

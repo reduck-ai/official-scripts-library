@@ -4,7 +4,7 @@ Automatically search Wise transactions on wise.com. Search a Wise profile's tran
 
 - Site: wise.com
 - Address: `reduck/wise.com/search_transactions`
-- Updated: 2026-08-07 (v5)
+- Updated: 2026-10-22 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Log into WeWork Account Central using Sign in with Google, ending on the Account
 
 - Site: wework.com
 - Address: `reduck/wework.com/login_with_google`
-- Updated: 2026-10-08 (v9)
+- Updated: 2026-10-22 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it

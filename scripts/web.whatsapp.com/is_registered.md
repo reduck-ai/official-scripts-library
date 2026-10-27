@@ -4,7 +4,7 @@ Automatically check if a phone number is on WhatsApp on web.whatsapp.com. Check 
 
 - Site: web.whatsapp.com
 - Address: `reduck/web.whatsapp.com/is_registered`
-- Updated: 2026-09-18 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

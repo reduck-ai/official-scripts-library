@@ -4,7 +4,7 @@ Automatically create an X (Twitter) List on x.com. Create an X (Twitter) List wi
 
 - Site: x.com
 - Address: `reduck/x.com/create_list`
-- Updated: 2026-09-29 (v6)
+- Updated: 2026-10-22 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

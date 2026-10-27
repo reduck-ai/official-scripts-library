@@ -4,7 +4,7 @@ Automatically send templated email to candidate on welcomekit.co. Send an email 
 
 - Site: welcomekit.co
 - Address: `reduck/welcomekit.co/send_template_email`
-- Updated: 2026-10-06 (v3)
+- Updated: 2026-10-22 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

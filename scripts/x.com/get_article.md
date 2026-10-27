@@ -4,7 +4,7 @@ Automatically read an X (Twitter) Article on x.com. Read a long-form X (Twitter)
 
 - Site: x.com
 - Address: `reduck/x.com/get_article`
-- Updated: 2026-10-06 (v1)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

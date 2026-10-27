@@ -4,7 +4,7 @@ Automatically read a TikTok direct message conversation on tiktok.com. Read the 
 
 - Site: tiktok.com
 - Address: `reduck/tiktok.com/get_conversation`
-- Updated: 2026-10-01 (v3)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

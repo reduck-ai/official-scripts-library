@@ -4,7 +4,7 @@ Automatically list Welcome to the Jungle email templates on welcomekit.co. List 
 
 - Site: welcomekit.co
 - Address: `reduck/welcomekit.co/list_email_templates`
-- Updated: 2026-10-06 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

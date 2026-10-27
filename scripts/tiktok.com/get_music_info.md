@@ -4,7 +4,7 @@ Automatically get TikTok music info on tiktok.com. Get a TikTok sound's metadata
 
 - Site: tiktok.com
 - Address: `reduck/tiktok.com/get_music_info`
-- Updated: 2026-09-03 (v3)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

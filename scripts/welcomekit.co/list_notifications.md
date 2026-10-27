@@ -4,7 +4,7 @@ Automatically list Welcome to the Jungle recruiter notifications on welcomekit.c
 
 - Site: welcomekit.co
 - Address: `reduck/welcomekit.co/list_notifications`
-- Updated: 2026-10-20 (v3)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

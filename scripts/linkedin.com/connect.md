@@ -1,10 +1,10 @@
 # Send LinkedIn connection request without note
 
-Automatically send LinkedIn connection request without note on linkedin.com. Send a LinkedIn connection request without a note, by profile URL. Clicks the top-card Connect then "Send without a note". Only the top-card Connect is handled: profiles that show Follow as the primary action and bury Connect under the "More" overflow (influencers/public figures) return no_connect_cta. Idempotent-ish: returns status sent/pending/already_connected/no_connect_cta.
+Automatically send LinkedIn connection request without note on linkedin.com. Send a LinkedIn connection request without a note to a profile, by its profile URL. Returns one status: sent (the invitation went out), pending (an invitation was already waiting), already_connected (1st-degree or open profile), no_connect_cta (LinkedIn offers no way to connect to this member) or email_required (LinkedIn asks for the member's email, so a request without a note is not possible). Running it again on the same profile returns pending instead of sending twice. A profile that does not exist fails with a clear message.
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/connect`
-- Updated: 2026-10-22 (v12)
+- Updated: 2026-10-26 (v15)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -30,7 +30,7 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/connect
 
 ### What does "Send LinkedIn connection request without note" do?
 
-Send a LinkedIn connection request without a note, by profile URL. Clicks the top-card Connect then "Send without a note". Only the top-card Connect is handled: profiles that show Follow as the primary action and bury Connect under the "More" overflow (influencers/public figures) return no_connect_cta. Idempotent-ish: returns status sent/pending/already_connected/no_connect_cta.
+Send a LinkedIn connection request without a note to a profile, by its profile URL. Returns one status: sent (the invitation went out), pending (an invitation was already waiting), already_connected (1st-degree or open profile), no_connect_cta (LinkedIn offers no way to connect to this member) or email_required (LinkedIn asks for the member's email, so a request without a note is not possible). Running it again on the same profile returns pending instead of sending twice. A profile that does not exist fails with a clear message.
 
 ### How do I automatically send LinkedIn connection request without note on linkedin.com?
 

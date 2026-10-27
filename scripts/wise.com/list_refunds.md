@@ -4,7 +4,7 @@ Automatically list Wise refunded transactions on wise.com. Scans a Wise account'
 
 - Site: wise.com
 - Address: `reduck/wise.com/list_refunds`
-- Updated: 2026-09-28 (v3)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

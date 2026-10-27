@@ -1,10 +1,10 @@
 # List your X (Twitter) DM inbox
 
-Automatically list your X (Twitter) DM inbox on x.com. List the state of every DM conversation in your X inbox. Returns per conversation: conversation_id, name, handle, last_message, time, sent_by_me, unread. If X shows the Enter Passcode screen, pass the 4-digit E2E pin.
+Automatically list your X (Twitter) DM inbox on x.com. List the conversations in your X chat inbox, in the order X shows them. Returns per conversation: conversation_id, name, handle, last_message, time, sent_by_me (null in a group conversation) and unread. An empty inbox returns an empty list. If X asks for your chat passcode on this browser, pass the 4-digit passcode as pin; without it the run fails with an error asking for it. When the browser is signed out of X, the run fails with a signed-out error asking you to sign in to x.com.
 
 - Site: x.com
 - Address: `reduck/x.com/get_inbox`
-- Updated: 2026-09-29 (v8)
+- Updated: 2026-10-22 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -27,7 +27,7 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/get_inbox
 
 ### What does "List your X (Twitter) DM inbox" do?
 
-List the state of every DM conversation in your X inbox. Returns per conversation: conversation_id, name, handle, last_message, time, sent_by_me, unread. If X shows the Enter Passcode screen, pass the 4-digit E2E pin.
+List the conversations in your X chat inbox, in the order X shows them. Returns per conversation: conversation_id, name, handle, last_message, time, sent_by_me (null in a group conversation) and unread. An empty inbox returns an empty list. If X asks for your chat passcode on this browser, pass the 4-digit passcode as pin; without it the run fails with an error asking for it. When the browser is signed out of X, the run fails with a signed-out error asking you to sign in to x.com.
 
 ### How do I automatically list your X (Twitter) DM inbox on x.com?
 

@@ -4,7 +4,7 @@ Log into Uber Eats with Continue with Google through Uber's sign-in, handling th
 
 - Site: ubereats.com
 - Address: `reduck/ubereats.com/login_with_google`
-- Updated: 2026-09-30 (v2)
+- Updated: 2026-10-22 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -43,7 +43,7 @@ It returns url, name, account, already, loggedIn.
 
 ### Do I need to be logged in to ubereats.com?
 
-Yes. It acts as you on ubereats.com: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the ubereats.com cookies saved by the Reduck extension.
+No. It only uses pages of ubereats.com that are reachable without signing in.
 
 ### Does it change anything on ubereats.com, or only read data?
 

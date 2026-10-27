@@ -4,7 +4,7 @@ Automatically send a TikTok direct message on tiktok.com. Send a direct message 
 
 - Site: tiktok.com
 - Address: `reduck/tiktok.com/send_message`
-- Updated: 2026-10-05 (v7)
+- Updated: 2026-10-22 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically delete Threads post on threads.com. Delete a post or reply owned b
 
 - Site: threads.com
 - Address: `reduck/threads.com/delete_post`
-- Updated: 2026-08-27 (v4)
+- Updated: 2026-10-22 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -53,7 +53,7 @@ Yes. It acts as you on threads.com: on your own Chrome it reuses your session, a
 
 ### Does it change anything on threads.com, or only read data?
 
-It makes changes on threads.com, like sending, posting or booking something.
+It makes changes on threads.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

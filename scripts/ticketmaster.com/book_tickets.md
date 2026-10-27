@@ -4,7 +4,7 @@ Automatically reserve Ticketmaster tickets on ticketmaster.com. Reserve tickets 
 
 - Site: ticketmaster.com
 - Address: `reduck/ticketmaster.com/book_tickets`
-- Updated: 2026-10-21 (v7)
+- Updated: 2026-10-22 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it

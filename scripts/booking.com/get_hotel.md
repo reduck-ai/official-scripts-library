@@ -4,7 +4,7 @@ Automatically get Booking.com hotel details on booking.com. Fetch a hotel's Book
 
 - Site: booking.com
 - Address: `reduck/booking.com/get_hotel`
-- Updated: 2026-09-02 (v1)
+- Updated: 2026-10-26 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

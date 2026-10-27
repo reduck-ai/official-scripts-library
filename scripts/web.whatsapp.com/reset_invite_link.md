@@ -4,7 +4,7 @@ Automatically reset group invite link on web.whatsapp.com. Revokes a group's cur
 
 - Site: web.whatsapp.com
 - Address: `reduck/web.whatsapp.com/reset_invite_link`
-- Updated: 2026-10-05 (v6)
+- Updated: 2026-10-22 (v7)
 - Author: Reduck AI (reduck)
 
 ## About

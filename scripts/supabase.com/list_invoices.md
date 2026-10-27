@@ -4,7 +4,7 @@ Automatically list Supabase invoices on supabase.com. List invoices for a Supaba
 
 - Site: supabase.com
 - Address: `reduck/supabase.com/list_invoices`
-- Updated: 2026-07-31 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

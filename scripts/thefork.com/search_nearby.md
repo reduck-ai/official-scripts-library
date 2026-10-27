@@ -1,10 +1,10 @@
-# Search restaurants near a coordinate
+# Search TheFork restaurants near a coordinate
 
-Automatically search restaurants near a coordinate on thefork.com. Search TheFork restaurants near a lat/lng, one page (site paginates 25/page). Returns pagination (totalCount/totalPage/hasNext) and per-restaurant: name, address, coords, distanceM from the input point, theforkRating (/10) plus reviews, avgPriceEur, priceRangeLevel, cuisine, promoPct (max %% discount in deals) and raw deals, url. Results come back in the site's default quality order, not by distance, so filter by distanceM caller-side and loop `page` to totalPage.
+Automatically search TheFork restaurants near a coordinate on thefork.com. Search TheFork restaurants near a lat/lng, one page (site paginates 25/page). Returns pagination (totalCount/totalPage/hasNext) and per-restaurant: name, address, coords, distanceM from the input point, theforkRating (/10) plus reviews, avgPriceEur, priceRangeLevel, cuisine, promoPct (max %% discount in deals) and raw deals, url. Results come back in the site's default quality order, not by distance, so filter by distanceM caller-side and loop `page` to totalPage.
 
 - Site: thefork.com
 - Address: `reduck/thefork.com/search_nearby`
-- Updated: 2026-08-26 (v2)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -32,17 +32,17 @@ npx @reduck-ai/cli@latest run --script reduck/thefork.com/search_nearby
 
 ## FAQ
 
-### What does "Search restaurants near a coordinate" do?
+### What does "Search TheFork restaurants near a coordinate" do?
 
 Search TheFork restaurants near a lat/lng, one page (site paginates 25/page). Returns pagination (totalCount/totalPage/hasNext) and per-restaurant: name, address, coords, distanceM from the input point, theforkRating (/10) plus reviews, avgPriceEur, priceRangeLevel, cuisine, promoPct (max %% discount in deals) and raw deals, url. Results come back in the site's default quality order, not by distance, so filter by distanceM caller-side and loop `page` to totalPage.
 
-### How do I automatically search restaurants near a coordinate on thefork.com?
+### How do I automatically search TheFork restaurants near a coordinate on thefork.com?
 
 Ask an AI agent connected to Reduck to run reduck/thefork.com/search_nearby, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/thefork.com/search_nearby
 
-### Is there a thefork.com API to search restaurants near a coordinate?
+### Is there a thefork.com API to search TheFork restaurants near a coordinate?
 
-You do not need one. "Search restaurants near a coordinate" drives the real thefork.com pages in a browser, so it works whether or not thefork.com offers an API for this.
+You do not need one. "Search TheFork restaurants near a coordinate" drives the real thefork.com pages in a browser, so it works whether or not thefork.com offers an API for this.
 
 ### What information do I need to provide?
 

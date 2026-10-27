@@ -4,7 +4,7 @@ Automatically get Telegram inbox on web.telegram.org. List the conversations in 
 
 - Site: web.telegram.org
 - Address: `reduck/web.telegram.org/get_inbox`
-- Updated: 2026-09-17 (v5)
+- Updated: 2026-10-22 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

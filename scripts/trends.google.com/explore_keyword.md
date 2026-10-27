@@ -4,7 +4,7 @@ Automatically compare keywords on Google Trends on trends.google.com. See which 
 
 - Site: trends.google.com
 - Address: `reduck/trends.google.com/explore_keyword`
-- Updated: 2026-10-19 (v4)
+- Updated: 2026-10-22 (v5)
 - Author: Reduck AI (reduck)
 
 ## About

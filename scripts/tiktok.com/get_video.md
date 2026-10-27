@@ -4,7 +4,7 @@ Automatically get TikTok video on tiktok.com. Get a TikTok video's caption, stat
 
 - Site: tiktok.com
 - Address: `reduck/tiktok.com/get_video`
-- Updated: 2026-09-08 (v4)
+- Updated: 2026-10-23 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically send a message to an item's seller on vinted.com. Send a message t
 
 - Site: vinted.com
 - Address: `reduck/vinted.com/send_message_to_seller`
-- Updated: 2026-09-18 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -53,7 +53,7 @@ Yes. It acts as you on vinted.com: on your own Chrome it reuses your session, an
 
 ### Does it change anything on vinted.com, or only read data?
 
-It makes changes on vinted.com, like sending, posting or booking something.
+It makes changes on vinted.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

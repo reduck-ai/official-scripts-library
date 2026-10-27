@@ -4,7 +4,7 @@ Automatically search Threads posts on threads.com. Search Threads for posts matc
 
 - Site: threads.com
 - Address: `reduck/threads.com/search_posts`
-- Updated: 2026-09-03 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

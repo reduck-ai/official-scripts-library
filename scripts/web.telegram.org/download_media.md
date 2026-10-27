@@ -1,10 +1,10 @@
 # Telegram — Download a message's media
 
-Automatically download a message's media on web.telegram.org. Pull the bytes of a document, photo or video attached to a Telegram message, given its conversation peer id and message id, returned as base64 plus the filename Telegram stores it under. Drives the message's own Download action and reads the file out of the app rather than relying on a browser download, and refuses a message that carries no media. Two side effects worth knowing: opening the conversation marks it read, and Telegram also saves the file to the browser's download folder. Note that photos are Telegram's re-encoded JPEG, not the original upload; documents come back byte-for-byte.
+Automatically download a message's media on web.telegram.org. Download the document, photo or video attached to a Telegram message, given its conversation peer id and message id. Returns the file as base64 plus the filename Telegram stores it under, and refuses a message that carries no media. Opening the conversation marks it read, and Telegram also saves the file to the browser's download folder. Photos come back as Telegram's re-encoded JPEG, not the original upload; documents come back byte-for-byte.
 
 - Site: web.telegram.org
 - Address: `reduck/web.telegram.org/download_media`
-- Updated: 2026-08-26 (v1)
+- Updated: 2026-10-23 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -36,7 +36,7 @@ npx @reduck-ai/cli@latest run --script reduck/web.telegram.org/download_media
 
 ### What does "Telegram — Download a message's media" do?
 
-Pull the bytes of a document, photo or video attached to a Telegram message, given its conversation peer id and message id, returned as base64 plus the filename Telegram stores it under. Drives the message's own Download action and reads the file out of the app rather than relying on a browser download, and refuses a message that carries no media. Two side effects worth knowing: opening the conversation marks it read, and Telegram also saves the file to the browser's download folder. Note that photos are Telegram's re-encoded JPEG, not the original upload; documents come back byte-for-byte.
+Download the document, photo or video attached to a Telegram message, given its conversation peer id and message id. Returns the file as base64 plus the filename Telegram stores it under, and refuses a message that carries no media. Opening the conversation marks it read, and Telegram also saves the file to the browser's download folder. Photos come back as Telegram's re-encoded JPEG, not the original upload; documents come back byte-for-byte.
 
 ### How do I automatically download a message's media on web.telegram.org?
 

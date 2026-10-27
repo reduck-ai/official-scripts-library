@@ -1,10 +1,10 @@
 # Search Walmart products
 
-Automatically search Walmart products on walmart.com. Search Walmart.com by free-text query and return one page of results. Returns query, page, sort, url, total_count, max_page, corrected_query, items and related_items (each item: us_item_id, name, url, price, was_price, unit_price, rating, review_count, image_url, seller_name, availability, badges, sponsored). Items holds the query's actual matches; when a query matches little or nothing Walmart fills the page with an "other options to consider" block, and those products are returned separately as related_items so they are never mistaken for results — a query that matches nothing comes back with empty items and a populated related_items. Sort by best_match, price_low, price_high, best_seller, rating_high or new. Prices and availability follow the store Walmart assigns to the browser's location. Walmart's bot wall is keyed on the IP and triggered by bursts of navigations, so pace fan-outs.
+Automatically search Walmart products on walmart.com. Search Walmart.com by free-text query and return one page of results. Returns query, page, sort, url, total_count, max_page, corrected_query, items and related_items (each item: us_item_id, name, url, price, was_price, unit_price, rating, review_count, image_url, seller_name, availability, badges, sponsored). Items holds the query's actual matches; when a query matches little or nothing Walmart fills the page with an "other options to consider" block, and those products are returned separately as related_items so they are never mistaken for results. A query that matches nothing comes back with empty items and a populated related_items. Sort by best_match, price_low, price_high, best_seller, rating_high or new. Prices and availability follow the store Walmart assigns to the browser's location. Walmart can refuse many searches sent close together: pace fan-outs, and retry later when it does.
 
 - Site: walmart.com
 - Address: `reduck/walmart.com/search-products`
-- Updated: 2026-09-16 (v3)
+- Updated: 2026-10-22 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -38,7 +38,7 @@ npx @reduck-ai/cli@latest run --script reduck/walmart.com/search-products
 
 ### What does "Search Walmart products" do?
 
-Search Walmart.com by free-text query and return one page of results. Returns query, page, sort, url, total_count, max_page, corrected_query, items and related_items (each item: us_item_id, name, url, price, was_price, unit_price, rating, review_count, image_url, seller_name, availability, badges, sponsored). Items holds the query's actual matches; when a query matches little or nothing Walmart fills the page with an "other options to consider" block, and those products are returned separately as related_items so they are never mistaken for results — a query that matches nothing comes back with empty items and a populated related_items. Sort by best_match, price_low, price_high, best_seller, rating_high or new. Prices and availability follow the store Walmart assigns to the browser's location. Walmart's bot wall is keyed on the IP and triggered by bursts of navigations, so pace fan-outs.
+Search Walmart.com by free-text query and return one page of results. Returns query, page, sort, url, total_count, max_page, corrected_query, items and related_items (each item: us_item_id, name, url, price, was_price, unit_price, rating, review_count, image_url, seller_name, availability, badges, sponsored). Items holds the query's actual matches; when a query matches little or nothing Walmart fills the page with an "other options to consider" block, and those products are returned separately as related_items so they are never mistaken for results. A query that matches nothing comes back with empty items and a populated related_items. Sort by best_match, price_low, price_high, best_seller, rating_high or new. Prices and availability follow the store Walmart assigns to the browser's location. Walmart can refuse many searches sent close together: pace fan-outs, and retry later when it does.
 
 ### How do I automatically search Walmart products on walmart.com?
 

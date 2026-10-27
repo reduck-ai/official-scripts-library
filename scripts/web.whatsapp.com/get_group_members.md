@@ -4,7 +4,7 @@ Automatically get group members on web.whatsapp.com. Open a group by its exact n
 
 - Site: web.whatsapp.com
 - Address: `reduck/web.whatsapp.com/get_group_members`
-- Updated: 2026-09-03 (v11)
+- Updated: 2026-10-22 (v12)
 - Author: Reduck AI (reduck)
 
 ## Run it

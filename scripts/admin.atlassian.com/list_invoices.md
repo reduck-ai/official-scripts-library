@@ -4,7 +4,7 @@ Automatically list Atlassian invoices on admin.atlassian.com. List Atlassian (ad
 
 - Site: admin.atlassian.com
 - Address: `reduck/admin.atlassian.com/list_invoices`
-- Updated: 2026-10-22 (v8)
+- Updated: 2026-10-26 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it

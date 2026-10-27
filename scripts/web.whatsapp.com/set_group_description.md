@@ -4,7 +4,7 @@ Automatically set group description on web.whatsapp.com. Set/replace a WhatsApp 
 
 - Site: web.whatsapp.com
 - Address: `reduck/web.whatsapp.com/set_group_description`
-- Updated: 2026-08-27 (v10)
+- Updated: 2026-10-22 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -54,7 +54,7 @@ Yes. It acts as you on web.whatsapp.com: on your own Chrome it reuses your sessi
 
 ### Does it change anything on web.whatsapp.com, or only read data?
 
-It makes changes on web.whatsapp.com, like sending, posting or booking something.
+It makes changes on web.whatsapp.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

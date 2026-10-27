@@ -4,7 +4,7 @@ Automatically unblock contact on web.whatsapp.com. Unblock a previously-blocked 
 
 - Site: web.whatsapp.com
 - Address: `reduck/web.whatsapp.com/unblock_contact`
-- Updated: 2026-08-27 (v6)
+- Updated: 2026-10-22 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -53,7 +53,7 @@ Yes. It acts as you on web.whatsapp.com: on your own Chrome it reuses your sessi
 
 ### Does it change anything on web.whatsapp.com, or only read data?
 
-It makes changes on web.whatsapp.com, like sending, posting or booking something.
+It makes changes on web.whatsapp.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

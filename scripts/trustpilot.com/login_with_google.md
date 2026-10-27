@@ -4,7 +4,7 @@ Log into Trustpilot (consumer account) with Google sign-in, handling Google's ac
 
 - Site: trustpilot.com
 - Address: `reduck/trustpilot.com/login_with_google`
-- Updated: 2026-10-05 (v2)
+- Updated: 2026-10-22 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

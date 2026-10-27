@@ -4,7 +4,7 @@ Automatically bookmark a tweet on X (Twitter) on x.com. Bookmark a tweet given i
 
 - Site: x.com
 - Address: `reduck/x.com/bookmark_tweet`
-- Updated: 2026-09-29 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

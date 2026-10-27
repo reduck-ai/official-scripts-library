@@ -1,10 +1,10 @@
 # Search Wellfound jobs
 
-Automatically search Wellfound jobs on wellfound.com. Search Wellfound (AngelList Talent) startup job listings by role keyword, with optional city location (omit for remote-only). Returns total, page, totalPages, and jobs (jobId, title, url, company, companyUrl, jobType, compensation, location, experience, postedAgo). Unrecognized roles or locations raise an error rather than returning unrelated results. The reported total can exceed the number of job rows actually returned on a page.
+Automatically search Wellfound jobs on wellfound.com. Search Wellfound (AngelList Talent) startup job listings by role keyword, with optional city location (omit for remote-only). Returns total, page, totalPages, and jobs (jobId, title, url, company, companyUrl, jobType, compensation, locations, remote, remoteKind, acceptedRemoteLocations, yearsExperienceMin/Max, postedAt). Unrecognized roles or locations, and pages past the last one, raise an error rather than returning unrelated results. The total can exceed the jobs returned on a page, because Wellfound shows only a few jobs per company.
 
 - Site: wellfound.com
 - Address: `reduck/wellfound.com/search_jobs`
-- Updated: 2026-09-01 (v5)
+- Updated: 2026-10-23 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -25,14 +25,14 @@ npx @reduck-ai/cli@latest run --script reduck/wellfound.com/search_jobs
 
 - `jobs` (array, required)
 - `page` (integer, required)
-- `total` (integer, required): Wellfound's own reported matching-job count, read from the page's Next.js hydration blob (totalJobCount) — locale-proof, not parsed from rendered text.
+- `total` (integer, required): Wellfound's own count of matching jobs. It can exceed the jobs listed, because the page shows only a few highlighted jobs per company.
 - `totalPages` (integer, required)
 
 ## FAQ
 
 ### What does "Search Wellfound jobs" do?
 
-Search Wellfound (AngelList Talent) startup job listings by role keyword, with optional city location (omit for remote-only). Returns total, page, totalPages, and jobs (jobId, title, url, company, companyUrl, jobType, compensation, location, experience, postedAgo). Unrecognized roles or locations raise an error rather than returning unrelated results. The reported total can exceed the number of job rows actually returned on a page.
+Search Wellfound (AngelList Talent) startup job listings by role keyword, with optional city location (omit for remote-only). Returns total, page, totalPages, and jobs (jobId, title, url, company, companyUrl, jobType, compensation, locations, remote, remoteKind, acceptedRemoteLocations, yearsExperienceMin/Max, postedAt). Unrecognized roles or locations, and pages past the last one, raise an error rather than returning unrelated results. The total can exceed the jobs returned on a page, because Wellfound shows only a few jobs per company.
 
 ### How do I automatically search Wellfound jobs on wellfound.com?
 

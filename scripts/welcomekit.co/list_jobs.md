@@ -4,7 +4,7 @@ Automatically list ATS jobs on welcomekit.co. List jobs in the Welcome to the Ju
 
 - Site: welcomekit.co
 - Address: `reduck/welcomekit.co/list_jobs`
-- Updated: 2026-10-06 (v3)
+- Updated: 2026-10-22 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

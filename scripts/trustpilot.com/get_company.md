@@ -4,7 +4,7 @@ Automatically get Trustpilot company profile on trustpilot.com. Get a Trustpilot
 
 - Site: trustpilot.com
 - Address: `reduck/trustpilot.com/get_company`
-- Updated: 2026-08-14 (v3)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

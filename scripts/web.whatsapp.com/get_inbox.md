@@ -4,7 +4,7 @@ Automatically get WhatsApp inbox on web.whatsapp.com. List the chats of the What
 
 - Site: web.whatsapp.com
 - Address: `reduck/web.whatsapp.com/get_inbox`
-- Updated: 2026-10-13 (v12)
+- Updated: 2026-10-22 (v13)
 - Author: Reduck AI (reduck)
 
 ## Run it

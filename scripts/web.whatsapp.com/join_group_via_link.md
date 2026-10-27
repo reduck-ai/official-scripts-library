@@ -4,7 +4,7 @@ Join a WhatsApp group from an invite link (https://chat.whatsapp.com/<code>) or 
 
 - Site: web.whatsapp.com
 - Address: `reduck/web.whatsapp.com/join_group_via_link`
-- Updated: 2026-08-27 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -44,7 +44,7 @@ Yes. It acts as you on web.whatsapp.com: on your own Chrome it reuses your sessi
 
 ### Does it change anything on web.whatsapp.com, or only read data?
 
-It makes changes on web.whatsapp.com, like sending, posting or booking something.
+It makes changes on web.whatsapp.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

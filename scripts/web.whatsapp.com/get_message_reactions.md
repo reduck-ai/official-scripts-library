@@ -4,7 +4,7 @@ Automatically get WhatsApp message reactions on web.whatsapp.com. Get the emoji 
 
 - Site: web.whatsapp.com
 - Address: `reduck/web.whatsapp.com/get_message_reactions`
-- Updated: 2026-09-16 (v4)
+- Updated: 2026-10-22 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

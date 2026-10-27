@@ -4,7 +4,7 @@ Automatically get Wise card transaction detail on wise.com. Fetch the full detai
 
 - Site: wise.com
 - Address: `reduck/wise.com/get_transaction`
-- Updated: 2026-09-28 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

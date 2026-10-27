@@ -4,7 +4,7 @@ Automatically list a chat's media, documents or links on web.whatsapp.com. List 
 
 - Site: web.whatsapp.com
 - Address: `reduck/web.whatsapp.com/get_chat_media`
-- Updated: 2026-09-03 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

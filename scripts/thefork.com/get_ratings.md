@@ -4,7 +4,7 @@ Open a TheFork restaurant page (by slug + legacyId) and read both ratings it car
 
 - Site: thefork.com
 - Address: `reduck/thefork.com/get_ratings`
-- Updated: 2026-08-26 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

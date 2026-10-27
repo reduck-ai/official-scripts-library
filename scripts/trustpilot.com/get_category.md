@@ -4,7 +4,7 @@ Automatically get Trustpilot category companies on trustpilot.com. List one page
 
 - Site: trustpilot.com
 - Address: `reduck/trustpilot.com/get_category`
-- Updated: 2026-08-14 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

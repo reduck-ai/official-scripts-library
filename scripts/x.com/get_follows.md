@@ -4,7 +4,7 @@ Automatically export an X (Twitter) account's followers or following on x.com. L
 
 - Site: x.com
 - Address: `reduck/x.com/get_follows`
-- Updated: 2026-10-19 (v11)
+- Updated: 2026-10-22 (v12)
 - Author: Reduck AI (reduck)
 
 ## Run it

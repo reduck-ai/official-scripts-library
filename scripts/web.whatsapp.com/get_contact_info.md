@@ -4,7 +4,7 @@ Automatically get contact info on web.whatsapp.com. Open a chat by exact name an
 
 - Site: web.whatsapp.com
 - Address: `reduck/web.whatsapp.com/get_contact_info`
-- Updated: 2026-09-03 (v9)
+- Updated: 2026-10-23 (v12)
 - Author: Reduck AI (reduck)
 
 ## Run it

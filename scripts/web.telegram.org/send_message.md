@@ -1,10 +1,10 @@
 # Send Telegram message or document
 
-Automatically send Telegram message or document on web.telegram.org. Send a text message, a document, or a document with a caption to a Telegram conversation identified by its peer id (the id get_inbox returns), optionally as a reply. Confirms the send by finding the outgoing bubble in the conversation afterwards rather than trusting the click, reading back the document's filename and size and requiring the quoted-message embed when a reply was asked for, and reports whether the same message or file was already there plus which account sent it. Refuses conversations with no composer, such as broadcast channels you do not administer.
+Automatically send Telegram message or document on web.telegram.org. Send a text message, a document, or a document with a caption to a Telegram conversation identified by its peer id (the id get_inbox returns), optionally as a reply. Confirms the message appeared in the conversation, including the document's filename and size and the reply quote when one was asked for, and reports whether the same message or file was already there plus which account sent it. Refuses conversations you cannot post in, such as broadcast channels you do not administer.
 
 - Site: web.telegram.org
 - Address: `reduck/web.telegram.org/send_message`
-- Updated: 2026-09-22 (v4)
+- Updated: 2026-10-23 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -43,7 +43,7 @@ npx @reduck-ai/cli@latest run --script reduck/web.telegram.org/send_message
 
 ### What does "Send Telegram message or document" do?
 
-Send a text message, a document, or a document with a caption to a Telegram conversation identified by its peer id (the id get_inbox returns), optionally as a reply. Confirms the send by finding the outgoing bubble in the conversation afterwards rather than trusting the click, reading back the document's filename and size and requiring the quoted-message embed when a reply was asked for, and reports whether the same message or file was already there plus which account sent it. Refuses conversations with no composer, such as broadcast channels you do not administer.
+Send a text message, a document, or a document with a caption to a Telegram conversation identified by its peer id (the id get_inbox returns), optionally as a reply. Confirms the message appeared in the conversation, including the document's filename and size and the reply quote when one was asked for, and reports whether the same message or file was already there plus which account sent it. Refuses conversations you cannot post in, such as broadcast channels you do not administer.
 
 ### How do I automatically send Telegram message or document on web.telegram.org?
 
@@ -67,7 +67,7 @@ Yes. It acts as you on web.telegram.org: on your own Chrome it reuses your sessi
 
 ### Does it change anything on web.telegram.org, or only read data?
 
-It makes changes on web.telegram.org, like sending, posting or booking something.
+It makes changes on web.telegram.org, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

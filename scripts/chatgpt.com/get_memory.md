@@ -4,7 +4,7 @@ Automatically get ChatGPT memory setting on chatgpt.com. Report whether memory i
 
 - Site: chatgpt.com
 - Address: `reduck/chatgpt.com/get_memory`
-- Updated: 2026-10-21 (v2)
+- Updated: 2026-10-26 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

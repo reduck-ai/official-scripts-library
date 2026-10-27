@@ -4,7 +4,7 @@ Automatically like a TikTok video on tiktok.com. Like a TikTok video (as the log
 
 - Site: tiktok.com
 - Address: `reduck/tiktok.com/like_video`
-- Updated: 2026-10-05 (v6)
+- Updated: 2026-10-22 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

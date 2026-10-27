@@ -1,10 +1,10 @@
 # WhatsApp — Download media
 
-Automatically download media on web.whatsapp.com. Download the media of a WhatsApp message (image, document, audio/voice) by chat name + message id (the `id` from get_conversation / search_messages), returned as base64 plus filename, mimeType and size. Documents come back byte-for-byte under the filename WhatsApp saves them as. Images are WhatsApp's displayed rendition, which may be smaller than a large original, so imageWidth/Height are reported. Video, sticker, GIF and location messages are not supported and are refused with their actual kind named; check a message's `media` field from get_conversation if unsure.
+Automatically download media on web.whatsapp.com. Download the file of one WhatsApp message (image, video, document, audio, voice note or sticker) to the computer running the browser, and return where it was saved: path (or url when the file is not on that computer), file name, type, size and, for images and videos, the width and height WhatsApp states. Give the message by its id from get_conversation; a bare key id also works with the chat's name. The file is checked byte for byte against WhatsApp's own fingerprint before it is saved. The chat is not opened, so nothing is marked as read. A message deleted for everyone, or one with no file (text, location), is refused with its kind named. If the browser is not linked to WhatsApp, or WhatsApp Web is open in another tab of the same browser, the run stops and says so.
 
 - Site: web.whatsapp.com
 - Address: `reduck/web.whatsapp.com/download_media`
-- Updated: 2026-10-09 (v13)
+- Updated: 2026-10-23 (v15)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,24 +17,27 @@ npx @reduck-ai/cli@latest run --script reduck/web.whatsapp.com/download_media
 
 ## Input
 
-- `id` (string, required): WhatsApp message id - the data-id from send_media's messageId, or from get_conversation/search_messages. The message must be an image or a document/audio (voice note) message: video, sticker, GIF and location messages carry no supported file and are refused with their actual kind named. Check the message's `media` field from get_conversation first if you are unsure.
-- `name` (string, required): Exact chat/contact/group name containing the message (the name field from get_inbox).
+- `id` (string, required): The message id, as get_conversation returns it in `id` (false_<chat>_<key> or true_<chat>_<key>). A bare key id (the last part alone) also works when `name` is given.
+- `name` (string, optional): The chat's name as get_inbox returns it. Needed only when `id` is a bare key id.
 
 ## Output
 
-- `size` (integer, required): Byte size of the returned media.
-- `base64` (string, required)
-- `filename` (string, required)
+- `kind` (string, required): WhatsApp's message type: image, video, document, audio, ptt (voice note) or sticker.
+- `size` (integer, required): Size of the saved file in bytes.
+- `chatId` (string, required): The chat the message belongs to, as get_inbox returns it in `chatId`.
+- `filename` (string, required): Name of the saved file. A document keeps the name it was sent with; it can carry a numbered suffix when a file of that name was already there.
 - `mimeType` (string, required)
-- `kind` (string, optional)
-- `imageWidth` (integer | null, optional): Natural width of the rendition returned. For a large photo WhatsApp's inline blob can be smaller than the original upload.
+- `messageId` (string, required)
+- `url` (string | null, optional): A link to the file, when it is not saved on the computer running the browser.
+- `path` (string | null, optional): Where the file was saved on the computer running the browser.
+- `imageWidth` (integer | null, optional): Width WhatsApp states for an image, video or sticker; null otherwise.
 - `imageHeight` (integer | null, optional)
 
 ## FAQ
 
 ### What does "WhatsApp — Download media" do?
 
-Download the media of a WhatsApp message (image, document, audio/voice) by chat name + message id (the `id` from get_conversation / search_messages), returned as base64 plus filename, mimeType and size. Documents come back byte-for-byte under the filename WhatsApp saves them as. Images are WhatsApp's displayed rendition, which may be smaller than a large original, so imageWidth/Height are reported. Video, sticker, GIF and location messages are not supported and are refused with their actual kind named; check a message's `media` field from get_conversation if unsure.
+Download the file of one WhatsApp message (image, video, document, audio, voice note or sticker) to the computer running the browser, and return where it was saved: path (or url when the file is not on that computer), file name, type, size and, for images and videos, the width and height WhatsApp states. Give the message by its id from get_conversation; a bare key id also works with the chat's name. The file is checked byte for byte against WhatsApp's own fingerprint before it is saved. The chat is not opened, so nothing is marked as read. A message deleted for everyone, or one with no file (text, location), is refused with its kind named. If the browser is not linked to WhatsApp, or WhatsApp Web is open in another tab of the same browser, the run stops and says so.
 
 ### How do I automatically download media on web.whatsapp.com?
 
@@ -46,11 +49,11 @@ You do not need one. "WhatsApp — Download media" drives the real web.whatsapp.
 
 ### What information do I need to provide?
 
-Required: name, id.
+Required: id. Optional: name.
 
 ### What does it return?
 
-It returns kind, size, base64, filename, mimeType, imageWidth, imageHeight.
+It returns url, kind, path, size, chatId, filename, mimeType, messageId, imageWidth, imageHeight.
 
 ### Do I need to be logged in to web.whatsapp.com?
 

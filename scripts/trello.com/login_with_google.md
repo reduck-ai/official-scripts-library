@@ -4,7 +4,7 @@ Log into Trello via Google SSO (through Atlassian identity). Drives the sign-in 
 
 - Site: trello.com
 - Address: `reduck/trello.com/login_with_google`
-- Updated: 2026-08-21 (v6)
+- Updated: 2026-10-22 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -46,7 +46,7 @@ Yes. It acts as you on trello.com: on your own Chrome it reuses your session, an
 
 ### Does it change anything on trello.com, or only read data?
 
-It makes changes on trello.com, like sending, posting or booking something.
+It makes changes on trello.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

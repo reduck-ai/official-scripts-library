@@ -4,7 +4,7 @@ Automatically list Surfshark invoices/receipts on surfshark.com. List Surfshark 
 
 - Site: surfshark.com
 - Address: `reduck/surfshark.com/list_invoices`
-- Updated: 2026-09-29 (v9)
+- Updated: 2026-10-22 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it

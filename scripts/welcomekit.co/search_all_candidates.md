@@ -4,7 +4,7 @@ Automatically search Welcome to the Jungle candidates across all jobs on welcome
 
 - Site: welcomekit.co
 - Address: `reduck/welcomekit.co/search_all_candidates`
-- Updated: 2026-10-20 (v6)
+- Updated: 2026-10-22 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically get TikTok trending videos on tiktok.com. Get a sample of TikTok's
 
 - Site: tiktok.com
 - Address: `reduck/tiktok.com/get_trending_videos`
-- Updated: 2026-09-03 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

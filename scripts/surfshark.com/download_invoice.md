@@ -4,7 +4,7 @@ Automatically download Surfshark receipt on surfshark.com. Download a single Sur
 
 - Site: surfshark.com
 - Address: `reduck/surfshark.com/download_invoice`
-- Updated: 2026-09-29 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

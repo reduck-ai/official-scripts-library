@@ -1,10 +1,10 @@
 # Surfshark whoami (signed-in account)
 
-Report which Surfshark account this browser is signed in as: the account email. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Surfshark scripts.
+Report which Surfshark account this browser is signed in as: the account email. When the browser is signed out of Surfshark, the run fails with a signed-out error asking you to sign in to my.surfshark.com.
 
 - Site: surfshark.com
 - Address: `reduck/surfshark.com/whoami`
-- Updated: 2026-09-30 (v1)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,7 +29,7 @@ It takes no input.
 
 ### What does "Surfshark whoami (signed-in account)" do?
 
-Report which Surfshark account this browser is signed in as: the account email. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Surfshark scripts.
+Report which Surfshark account this browser is signed in as: the account email. When the browser is signed out of Surfshark, the run fails with a signed-out error asking you to sign in to my.surfshark.com.
 
 ### What information do I need to provide?
 

@@ -4,7 +4,7 @@ Automatically get Substack post on substack.com. Fetch a single Substack post by
 
 - Site: substack.com
 - Address: `reduck/substack.com/get_post`
-- Updated: 2026-08-14 (v2)
+- Updated: 2026-10-23 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

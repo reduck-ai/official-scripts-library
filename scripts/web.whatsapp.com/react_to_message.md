@@ -4,7 +4,7 @@ Automatically react to a WhatsApp message on web.whatsapp.com. React to one What
 
 - Site: web.whatsapp.com
 - Address: `reduck/web.whatsapp.com/react_to_message`
-- Updated: 2026-10-13 (v18)
+- Updated: 2026-10-22 (v19)
 - Author: Reduck AI (reduck)
 
 ## Run it

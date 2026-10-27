@@ -4,7 +4,7 @@ Report which Welcome Kit (Welcome to the Jungle ATS) account this browser is sig
 
 - Site: welcomekit.co
 - Address: `reduck/welcomekit.co/whoami`
-- Updated: 2026-10-20 (v3)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

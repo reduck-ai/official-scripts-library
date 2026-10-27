@@ -4,7 +4,7 @@ Automatically search Telegram messages in a conversation on web.telegram.org. Se
 
 - Site: web.telegram.org
 - Address: `reduck/web.telegram.org/search_messages`
-- Updated: 2026-09-16 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

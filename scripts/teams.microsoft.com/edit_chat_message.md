@@ -4,7 +4,7 @@ Automatically edit Chat Message on teams.microsoft.com. Edit one of your own pre
 
 - Site: teams.microsoft.com
 - Address: `reduck/teams.microsoft.com/edit_chat_message`
-- Updated: 2026-09-29 (v13)
+- Updated: 2026-10-22 (v14)
 - Author: Reduck AI (reduck)
 
 ## Run it

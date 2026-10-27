@@ -4,7 +4,7 @@ Automatically reply to a WhatsApp message on web.whatsapp.com. Reply to one What
 
 - Site: web.whatsapp.com
 - Address: `reduck/web.whatsapp.com/reply_to_message`
-- Updated: 2026-10-13 (v12)
+- Updated: 2026-10-22 (v13)
 - Author: Reduck AI (reduck)
 
 ## Run it

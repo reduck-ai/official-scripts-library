@@ -4,7 +4,7 @@ Automatically list a group's members on web.telegram.org. List the members of a 
 
 - Site: web.telegram.org
 - Address: `reduck/web.telegram.org/get_group_members`
-- Updated: 2026-09-03 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

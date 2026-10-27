@@ -4,7 +4,7 @@ Automatically get Trustpilot categories on trustpilot.com. List Trustpilot's ful
 
 - Site: trustpilot.com
 - Address: `reduck/trustpilot.com/get_categories`
-- Updated: 2026-08-14 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -1,10 +1,10 @@
 # React to a Telegram message
 
-Automatically react to a Telegram message on web.telegram.org. Add your reaction to a Telegram message, or take it back with remove:true, given the conversation's peer id, the message id and the emoji. Scope: the emoji must already be one of the reactions on that message — Telegram's reaction picker renders each choice as an animated canvas with no machine-readable identity, so a brand-new reaction type cannot be selected reliably, and this reports which emojis are available rather than clicking a guess. Resolves the emoji through Telegram's own reactions table instead of any translated label, confirms the change by the reaction pill's chosen state, and refuses Saved Messages, where the same-looking picker applies tags rather than reactions.
+Automatically react to a Telegram message on web.telegram.org. Add your reaction to a Telegram message, or take it back with remove:true, given the conversation's peer id, the message id and the emoji. The emoji must already be one of the reactions on that message; when it is not, this reports which emojis are available. Works in any interface language. Saved Messages is refused, since reactions there act as tags.
 
 - Site: web.telegram.org
 - Address: `reduck/web.telegram.org/react_to_message`
-- Updated: 2026-09-16 (v2)
+- Updated: 2026-10-23 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -43,7 +43,7 @@ npx @reduck-ai/cli@latest run --script reduck/web.telegram.org/react_to_message
 
 ### What does "React to a Telegram message" do?
 
-Add your reaction to a Telegram message, or take it back with remove:true, given the conversation's peer id, the message id and the emoji. Scope: the emoji must already be one of the reactions on that message — Telegram's reaction picker renders each choice as an animated canvas with no machine-readable identity, so a brand-new reaction type cannot be selected reliably, and this reports which emojis are available rather than clicking a guess. Resolves the emoji through Telegram's own reactions table instead of any translated label, confirms the change by the reaction pill's chosen state, and refuses Saved Messages, where the same-looking picker applies tags rather than reactions.
+Add your reaction to a Telegram message, or take it back with remove:true, given the conversation's peer id, the message id and the emoji. The emoji must already be one of the reactions on that message; when it is not, this reports which emojis are available. Works in any interface language. Saved Messages is refused, since reactions there act as tags.
 
 ### How do I automatically react to a Telegram message on web.telegram.org?
 
@@ -67,7 +67,7 @@ Yes. It acts as you on web.telegram.org: on your own Chrome it reuses your sessi
 
 ### Does it change anything on web.telegram.org, or only read data?
 
-It makes changes on web.telegram.org, like sending, posting or booking something.
+It makes changes on web.telegram.org, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

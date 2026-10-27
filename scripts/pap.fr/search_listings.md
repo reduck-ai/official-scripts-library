@@ -4,7 +4,7 @@ Automatically search PAP.fr property listings on pap.fr. Search PAP.fr, the Fren
 
 - Site: pap.fr
 - Address: `reduck/pap.fr/search_listings`
-- Updated: 2026-10-22 (v11)
+- Updated: 2026-10-26 (v12)
 - Author: Reduck AI (reduck)
 
 ## Run it

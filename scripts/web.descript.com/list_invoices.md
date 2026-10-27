@@ -4,7 +4,7 @@ Automatically list Descript invoices on web.descript.com. List Descript billing 
 
 - Site: web.descript.com
 - Address: `reduck/web.descript.com/list_invoices`
-- Updated: 2026-08-20 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Sign in to the Welcome to the Jungle recruiting dashboard (welcomekit.co) with a
 
 - Site: welcomekit.co
 - Address: `reduck/welcomekit.co/login_with_google`
-- Updated: 2026-10-06 (v8)
+- Updated: 2026-10-22 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it

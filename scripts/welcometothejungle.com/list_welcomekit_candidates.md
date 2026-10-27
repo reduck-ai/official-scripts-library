@@ -4,7 +4,7 @@ Automatically list job candidates (SSO) on welcometothejungle.com. List all cand
 
 - Site: welcometothejungle.com
 - Address: `reduck/welcometothejungle.com/list_welcomekit_candidates`
-- Updated: 2026-09-03 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

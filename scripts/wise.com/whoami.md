@@ -4,7 +4,7 @@ Report which Wise account this browser is signed in as: the account email. Being
 
 - Site: wise.com
 - Address: `reduck/wise.com/whoami`
-- Updated: 2026-09-30 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

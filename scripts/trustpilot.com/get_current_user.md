@@ -4,7 +4,7 @@ Report which Trustpilot account this browser is signed in as: email and display 
 
 - Site: trustpilot.com
 - Address: `reduck/trustpilot.com/get_current_user`
-- Updated: 2026-10-20 (v4)
+- Updated: 2026-10-22 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

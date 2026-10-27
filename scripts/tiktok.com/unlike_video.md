@@ -4,7 +4,7 @@ Automatically unlike a TikTok video on tiktok.com. Remove your like from a TikTo
 
 - Site: tiktok.com
 - Address: `reduck/tiktok.com/unlike_video`
-- Updated: 2026-10-05 (v3)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

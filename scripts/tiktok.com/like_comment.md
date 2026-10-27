@@ -4,7 +4,7 @@ Automatically like TikTok Comment on tiktok.com. Pass the text of one top-level 
 
 - Site: tiktok.com
 - Address: `reduck/tiktok.com/like_comment`
-- Updated: 2026-10-19 (v6)
+- Updated: 2026-10-22 (v7)
 - Author: Reduck AI (reduck)
 
 ## About

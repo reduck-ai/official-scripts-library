@@ -4,7 +4,7 @@ Automatically search WeWorkRemotely jobs on weworkremotely.com. Search We Work R
 
 - Site: weworkremotely.com
 - Address: `reduck/weworkremotely.com/search_jobs`
-- Updated: 2026-09-13 (v3)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

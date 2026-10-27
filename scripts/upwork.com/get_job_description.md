@@ -1,10 +1,10 @@
-# Get job description
+# Get Upwork job description
 
-Automatically get job description on upwork.com. Fetch a single Upwork job posting's full details by its ciphertext (the ~0… token in the job URL, returned by search_jobs). Covers title, full description, category, occupation, skills, budget or hourly range, workload and duration, experience level, screening questions and attachments. Also covers client activity (applicants, interviews, invites, hires) and the client: country, city, payment verified, member since, score and spend. No Upwork account needed. A job that does not exist or was removed fails with a clear error. Read-only.
+Automatically get Upwork job description on upwork.com. Fetch a single Upwork job posting's full details by its ciphertext (the ~0… token in the job URL, returned by search_jobs). Covers title, full description, category, occupation, skills, budget or hourly range, workload and duration, experience level, screening questions and attachments. Also covers client activity (applicants, interviews, invites, hires) and the client: country, city, payment verified, member since, score and spend. No Upwork account needed. A job that does not exist or was removed fails with a clear error. Read-only.
 
 - Site: upwork.com
 - Address: `reduck/upwork.com/get_job_description`
-- Updated: 2026-09-30 (v2)
+- Updated: 2026-10-23 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -49,17 +49,17 @@ npx @reduck-ai/cli@latest run --script reduck/upwork.com/get_job_description
 
 ## FAQ
 
-### What does "Get job description" do?
+### What does "Get Upwork job description" do?
 
 Fetch a single Upwork job posting's full details by its ciphertext (the ~0… token in the job URL, returned by search_jobs). Covers title, full description, category, occupation, skills, budget or hourly range, workload and duration, experience level, screening questions and attachments. Also covers client activity (applicants, interviews, invites, hires) and the client: country, city, payment verified, member since, score and spend. No Upwork account needed. A job that does not exist or was removed fails with a clear error. Read-only.
 
-### How do I automatically get job description on upwork.com?
+### How do I automatically get Upwork job description on upwork.com?
 
 Ask an AI agent connected to Reduck to run reduck/upwork.com/get_job_description, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/upwork.com/get_job_description
 
-### Is there a upwork.com API to get job description?
+### Is there a upwork.com API to get Upwork job description?
 
-You do not need one. "Get job description" drives the real upwork.com pages in a browser, so it works whether or not upwork.com offers an API for this.
+You do not need one. "Get Upwork job description" drives the real upwork.com pages in a browser, so it works whether or not upwork.com offers an API for this.
 
 ### What information do I need to provide?
 

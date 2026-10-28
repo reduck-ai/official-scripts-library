@@ -4,7 +4,7 @@ Report which Zapier account this browser is signed in as: email and name. Being 
 
 - Site: zapier.com
 - Address: `reduck/zapier.com/whoami`
-- Updated: 2026-10-09 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

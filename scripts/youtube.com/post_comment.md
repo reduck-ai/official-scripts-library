@@ -4,7 +4,7 @@ Automatically post YouTube comment on youtube.com. Post a top-level comment on a
 
 - Site: youtube.com
 - Address: `reduck/youtube.com/post_comment`
-- Updated: 2026-08-19 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -57,7 +57,7 @@ Yes. It acts as you on youtube.com: on your own Chrome it reuses your session, a
 
 ### Does it change anything on youtube.com, or only read data?
 
-It makes changes on youtube.com, like sending, posting or booking something.
+It makes changes on youtube.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

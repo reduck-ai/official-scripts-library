@@ -1,10 +1,10 @@
 # Archive/restore LinkedIn conversation
 
-Archive or restore a classic LinkedIn messaging conversation (NOT Sales Navigator), by thread URL from list_inbox. LinkedIn exposes this as a single toggle: archiving a conversation removes it from the main inbox, and running this again on an already-archived conversation restores it back to the inbox. Returns which direction was applied (archived/restored).
+Archive or restore one conversation in classic LinkedIn messaging (not Sales Navigator), by its thread URL from linkedin.com/list_inbox. Running it on a conversation in the inbox archives it; running it on an archived conversation brings it back to the inbox. Returns which one happened (archived or restored). It opens the conversation, which marks it as read. To archive several conversations at once, without opening them, use linkedin.com/bulk_conversations instead. A conversation the account cannot open fails with a clear message.
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/archive_conversation`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-10-27 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -28,7 +28,7 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/archive_conversation
 
 ### What does "Archive/restore LinkedIn conversation" do?
 
-Archive or restore a classic LinkedIn messaging conversation (NOT Sales Navigator), by thread URL from list_inbox. LinkedIn exposes this as a single toggle: archiving a conversation removes it from the main inbox, and running this again on an already-archived conversation restores it back to the inbox. Returns which direction was applied (archived/restored).
+Archive or restore one conversation in classic LinkedIn messaging (not Sales Navigator), by its thread URL from linkedin.com/list_inbox. Running it on a conversation in the inbox archives it; running it on an archived conversation brings it back to the inbox. Returns which one happened (archived or restored). It opens the conversation, which marks it as read. To archive several conversations at once, without opening them, use linkedin.com/bulk_conversations instead. A conversation the account cannot open fails with a clear message.
 
 ### What information do I need to provide?
 

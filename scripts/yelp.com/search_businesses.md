@@ -4,7 +4,7 @@ Automatically search Yelp businesses on yelp.com. Search Yelp businesses by free
 
 - Site: yelp.com
 - Address: `reduck/yelp.com/search_businesses`
-- Updated: 2026-10-01 (v4)
+- Updated: 2026-10-23 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

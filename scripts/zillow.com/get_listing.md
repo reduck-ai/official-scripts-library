@@ -4,7 +4,7 @@ Automatically get Zillow listing on zillow.com. Pass the ID from a home's Zillow
 
 - Site: zillow.com
 - Address: `reduck/zillow.com/get_listing`
-- Updated: 2026-10-05 (v6)
+- Updated: 2026-10-22 (v7)
 - Author: Reduck AI (reduck)
 
 ## About

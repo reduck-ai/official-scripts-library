@@ -4,7 +4,7 @@ Automatically export an X (Twitter) user's replies on x.com. Get a user's Replie
 
 - Site: x.com
 - Address: `reduck/x.com/get_user_replies`
-- Updated: 2026-10-19 (v11)
+- Updated: 2026-10-22 (v12)
 - Author: Reduck AI (reduck)
 
 ## Run it

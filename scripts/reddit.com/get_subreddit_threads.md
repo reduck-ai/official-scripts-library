@@ -4,7 +4,7 @@ Automatically get Reddit subreddit threads on reddit.com. List a subreddit's thr
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/get_subreddit_threads`
-- Updated: 2026-10-22 (v28)
+- Updated: 2026-10-27 (v29)
 - Author: Reduck AI (reduck)
 
 ## Run it

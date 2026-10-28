@@ -4,7 +4,7 @@ Automatically get the quote tweets of a post on X (Twitter) on x.com. Each quote
 
 - Site: x.com
 - Address: `reduck/x.com/get_quote_tweets`
-- Updated: 2026-10-19 (v9)
+- Updated: 2026-10-22 (v10)
 - Author: Reduck AI (reduck)
 
 ## About

@@ -4,7 +4,7 @@ Automatically unpin a tweet from your X (Twitter) profile on x.com. Unpin your o
 
 - Site: x.com
 - Address: `reduck/x.com/unpin_tweet`
-- Updated: 2026-09-29 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically export your post analytics on x.com. An unofficial X (Twitter) ana
 
 - Site: x.com
 - Address: `reduck/x.com/get_post_analytics`
-- Updated: 2026-10-19 (v12)
+- Updated: 2026-10-22 (v14)
 - Author: Reduck AI (reduck)
 
 ## Run it

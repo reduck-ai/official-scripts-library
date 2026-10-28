@@ -4,7 +4,7 @@ Automatically browse Yelp businesses by category on yelp.com. Browse Yelp busine
 
 - Site: yelp.com
 - Address: `reduck/yelp.com/search_by_category`
-- Updated: 2026-08-28 (v2)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically read tweets that mention you on x.com. List recent tweets mentioni
 
 - Site: x.com
 - Address: `reduck/x.com/get_mentions`
-- Updated: 2026-10-12 (v5)
+- Updated: 2026-10-22 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

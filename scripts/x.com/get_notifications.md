@@ -4,7 +4,7 @@ Automatically read your X (Twitter) notifications on x.com. List the logged-in a
 
 - Site: x.com
 - Address: `reduck/x.com/get_notifications`
-- Updated: 2026-09-29 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

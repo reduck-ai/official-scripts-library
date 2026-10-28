@@ -4,7 +4,7 @@ Log into Zoom (zoom.us) with Sign in with Google, picking the given Google accou
 
 - Site: zoom.us
 - Address: `reduck/zoom.us/login_with_google`
-- Updated: 2026-09-28 (v1)
+- Updated: 2026-10-23 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

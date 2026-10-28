@@ -4,7 +4,7 @@ Automatically search Zillow listings on zillow.com. One page of up to 41 homes f
 
 - Site: zillow.com
 - Address: `reduck/zillow.com/search`
-- Updated: 2026-10-06 (v17)
+- Updated: 2026-10-22 (v18)
 - Author: Reduck AI (reduck)
 
 ## About

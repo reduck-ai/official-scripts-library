@@ -4,7 +4,7 @@ Automatically unlike YouTube video on youtube.com. Remove your like from a YouTu
 
 - Site: youtube.com
 - Address: `reduck/youtube.com/unlike_video`
-- Updated: 2026-08-14 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -53,7 +53,7 @@ Yes. It acts as you on youtube.com: on your own Chrome it reuses your session, a
 
 ### Does it change anything on youtube.com, or only read data?
 
-It makes changes on youtube.com, like sending, posting or booking something.
+It makes changes on youtube.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

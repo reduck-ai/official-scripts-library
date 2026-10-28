@@ -4,7 +4,7 @@ Automatically get Yelp business profile on yelp.com. Fetch a Yelp business's ful
 
 - Site: yelp.com
 - Address: `reduck/yelp.com/get_business`
-- Updated: 2026-08-14 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

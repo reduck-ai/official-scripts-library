@@ -4,7 +4,7 @@ Automatically schedule a tweet on X (Twitter) from an AI agent on x.com. Schedul
 
 - Site: x.com
 - Address: `reduck/x.com/schedule_tweet`
-- Updated: 2026-09-29 (v4)
+- Updated: 2026-10-22 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

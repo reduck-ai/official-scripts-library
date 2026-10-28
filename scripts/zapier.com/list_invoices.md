@@ -4,7 +4,7 @@ Automatically list Zapier invoices on zapier.com. List Zapier billing invoices f
 
 - Site: zapier.com
 - Address: `reduck/zapier.com/list_invoices`
-- Updated: 2026-09-29 (v10)
+- Updated: 2026-10-22 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it

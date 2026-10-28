@@ -4,7 +4,7 @@ Automatically reply to YouTube comment on youtube.com. Reply to a YouTube commen
 
 - Site: youtube.com
 - Address: `reduck/youtube.com/reply_to_comment`
-- Updated: 2026-08-19 (v3)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -58,7 +58,7 @@ Yes. It acts as you on youtube.com: on your own Chrome it reuses your session, a
 
 ### Does it change anything on youtube.com, or only read data?
 
-It makes changes on youtube.com, like sending, posting or booking something.
+It makes changes on youtube.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

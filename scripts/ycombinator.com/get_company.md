@@ -4,7 +4,7 @@ Automatically get YC company profile on ycombinator.com. Get one YC company's fu
 
 - Site: ycombinator.com
 - Address: `reduck/ycombinator.com/get_company`
-- Updated: 2026-10-01 (v2)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -75,7 +75,7 @@ No. It only uses pages of ycombinator.com that are reachable without signing in.
 
 ### Does it change anything on ycombinator.com, or only read data?
 
-Unknown: its author has not declared whether it changes anything on ycombinator.com, so treat it as if it could.
+It only reads. It looks things up on ycombinator.com and changes nothing there.
 
 ### How do I run it?
 

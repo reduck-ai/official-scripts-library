@@ -4,7 +4,7 @@ Automatically get YouTube comments on youtube.com. List a YouTube video's top-le
 
 - Site: youtube.com
 - Address: `reduck/youtube.com/get_comments`
-- Updated: 2026-08-19 (v3)
+- Updated: 2026-10-23 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

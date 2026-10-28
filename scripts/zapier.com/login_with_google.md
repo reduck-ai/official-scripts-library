@@ -4,7 +4,7 @@ Log into Zapier using Sign in with Google, ending on the Zapier app home. Handle
 
 - Site: zapier.com
 - Address: `reduck/zapier.com/login_with_google`
-- Updated: 2026-10-08 (v8)
+- Updated: 2026-10-22 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it

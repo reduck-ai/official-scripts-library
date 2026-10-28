@@ -4,7 +4,7 @@ Automatically search Zocdoc appointments on zocdoc.com. Search Zocdoc providers 
 
 - Site: zocdoc.com
 - Address: `reduck/zocdoc.com/search_appointments`
-- Updated: 2026-08-28 (v11)
+- Updated: 2026-10-22 (v12)
 - Author: Reduck AI (reduck)
 
 ## Run it

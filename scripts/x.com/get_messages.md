@@ -4,7 +4,7 @@ Automatically read your X (Twitter) DMs on x.com. Fetch all messages in a DM con
 
 - Site: x.com
 - Address: `reduck/x.com/get_messages`
-- Updated: 2026-09-29 (v6)
+- Updated: 2026-10-23 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it

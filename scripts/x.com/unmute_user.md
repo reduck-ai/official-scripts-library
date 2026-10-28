@@ -4,7 +4,7 @@ Automatically unmute an account on X (Twitter) on x.com. Unmute an X user by han
 
 - Site: x.com
 - Address: `reduck/x.com/unmute_user`
-- Updated: 2026-09-29 (v5)
+- Updated: 2026-10-22 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Report which Zoom account this browser is signed in as: the user id, account id,
 
 - Site: zoom.us
 - Address: `reduck/zoom.us/whoami`
-- Updated: 2026-09-28 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

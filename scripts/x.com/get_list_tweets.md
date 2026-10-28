@@ -4,7 +4,7 @@ Automatically read an X (Twitter) List's timeline on x.com. Read the timeline of
 
 - Site: x.com
 - Address: `reduck/x.com/get_list_tweets`
-- Updated: 2026-10-12 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

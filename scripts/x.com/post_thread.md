@@ -4,7 +4,7 @@ Automatically post an X (Twitter) thread from an AI agent on x.com. Post a threa
 
 - Site: x.com
 - Address: `reduck/x.com/post_thread`
-- Updated: 2026-09-29 (v18)
+- Updated: 2026-10-22 (v19)
 - Author: Reduck AI (reduck)
 
 ## Run it

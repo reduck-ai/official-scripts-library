@@ -4,7 +4,7 @@ Automatically get X (Twitter) user profile on x.com. Look up an X (Twitter) user
 
 - Site: x.com
 - Address: `reduck/x.com/get_user_info`
-- Updated: 2026-10-19 (v14)
+- Updated: 2026-10-22 (v15)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically change your X (Twitter) display language on x.com. Change the disp
 
 - Site: x.com
 - Address: `reduck/x.com/switch_language`
-- Updated: 2026-09-29 (v3)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

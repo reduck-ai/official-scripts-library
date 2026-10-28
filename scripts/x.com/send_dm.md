@@ -1,10 +1,10 @@
 # Send an X (Twitter) DM from an AI agent
 
-Automatically send an X (Twitter) DM from an AI agent on x.com. Send a direct message to an X user, addressed by handle. Returns the recipient, a sent flag and conversation_id. Delivery is confirmed by X's own send mutation returning HTTP 200, not by reading the DOM. conversation_id is null for a brand-new DM and for a DM to your own account (the compose dialog renders no existing-conversation cell to read the recipient id from) — a null there does not mean the send failed. A fresh session with no stored encryption keys may need the 4-digit E2E pin.
+Automatically send an X (Twitter) DM from an AI agent on x.com. Send a direct message to an X user, addressed by handle. Returns the recipient, a sent flag confirmed by X, and conversation_id. conversation_id is null for a brand-new conversation and for a message to your own account; null there does not mean the send failed. A fresh session may need the account's 4-digit encrypted-messages passcode.
 
 - Site: x.com
 - Address: `reduck/x.com/send_dm`
-- Updated: 2026-09-29 (v5)
+- Updated: 2026-10-23 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -31,7 +31,7 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/send_dm
 
 ### What does "Send an X (Twitter) DM from an AI agent" do?
 
-Send a direct message to an X user, addressed by handle. Returns the recipient, a sent flag and conversation_id. Delivery is confirmed by X's own send mutation returning HTTP 200, not by reading the DOM. conversation_id is null for a brand-new DM and for a DM to your own account (the compose dialog renders no existing-conversation cell to read the recipient id from) — a null there does not mean the send failed. A fresh session with no stored encryption keys may need the 4-digit E2E pin.
+Send a direct message to an X user, addressed by handle. Returns the recipient, a sent flag confirmed by X, and conversation_id. conversation_id is null for a brand-new conversation and for a message to your own account; null there does not mean the send failed. A fresh session may need the account's 4-digit encrypted-messages passcode.
 
 ### How do I automatically send an X (Twitter) DM from an AI agent on x.com?
 

@@ -4,7 +4,7 @@ Automatically get current Neon console user on console.neon.tech. Report which N
 
 - Site: console.neon.tech
 - Address: `reduck/console.neon.tech/get_current_user`
-- Updated: 2026-10-22 (v5)
+- Updated: 2026-10-27 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

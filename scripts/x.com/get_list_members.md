@@ -4,7 +4,7 @@ Automatically get the members of an X (Twitter) List on x.com. List the accounts
 
 - Site: x.com
 - Address: `reduck/x.com/get_list_members`
-- Updated: 2026-09-29 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

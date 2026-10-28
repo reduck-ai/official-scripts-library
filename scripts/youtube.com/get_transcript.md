@@ -4,7 +4,7 @@ Automatically get YouTube video transcript on youtube.com. Fetch a YouTube video
 
 - Site: youtube.com
 - Address: `reduck/youtube.com/get_transcript`
-- Updated: 2026-10-05 (v22)
+- Updated: 2026-10-22 (v23)
 - Author: Reduck AI (reduck)
 
 ## Run it

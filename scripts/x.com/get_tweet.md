@@ -4,7 +4,7 @@ Automatically get a tweet and its replies on X (Twitter) on x.com. Get a tweet o
 
 - Site: x.com
 - Address: `reduck/x.com/get_tweet`
-- Updated: 2026-10-19 (v17)
+- Updated: 2026-10-22 (v18)
 - Author: Reduck AI (reduck)
 
 ## Run it

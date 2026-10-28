@@ -4,7 +4,7 @@ Log into X (Twitter) with Continue with Google, picking the given Google account
 
 - Site: x.com
 - Address: `reduck/x.com/login_with_google`
-- Updated: 2026-09-29 (v1)
+- Updated: 2026-10-22 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

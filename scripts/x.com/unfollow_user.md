@@ -4,7 +4,7 @@ Automatically unfollow an account on X (Twitter) from an AI agent on x.com. Unfo
 
 - Site: x.com
 - Address: `reduck/x.com/unfollow_user`
-- Updated: 2026-09-29 (v9)
+- Updated: 2026-10-22 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it

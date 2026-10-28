@@ -4,7 +4,7 @@ Automatically retweet (repost) a tweet on X (Twitter) from an AI agent on x.com.
 
 - Site: x.com
 - Address: `reduck/x.com/retweet`
-- Updated: 2026-09-29 (v2)
+- Updated: 2026-10-22 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

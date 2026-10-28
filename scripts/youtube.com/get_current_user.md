@@ -1,10 +1,10 @@
-# Get current user
+# Get current YouTube user
 
-Automatically get current user on youtube.com. Report which Google/YouTube account this browser is signed in as: the account email from YouTube's Account settings page. Being signed out is reported as a normal answer (loggedIn false), not an error — including when YouTube shows its EU cookie-consent page to a visitor with no signed-in account, which is flagged in `note`.
+Automatically get current YouTube user on youtube.com. Report which Google/YouTube account this browser is signed in as: the account email. When the browser is signed out of YouTube, including when YouTube shows its cookie-consent page to a visitor with no signed-in account, the run fails with a signed-out error asking you to sign in to youtube.com.
 
 - Site: youtube.com
 - Address: `reduck/youtube.com/get_current_user`
-- Updated: 2026-10-07 (v4)
+- Updated: 2026-10-22 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -22,22 +22,22 @@ It takes no input.
 ## Output
 
 - `loggedIn` (boolean, required)
-- `note` (string | null, optional): Why loggedIn is false when it is inferred from YouTube's consent page rather than a sign-in redirect
+- `note` (string | null, optional): Always null: a signed-out browser, including one YouTube sends to its cookie-consent page, fails with a signed-out error.
 - `email` (string | null, optional)
 
 ## FAQ
 
-### What does "Get current user" do?
+### What does "Get current YouTube user" do?
 
-Report which Google/YouTube account this browser is signed in as: the account email from YouTube's Account settings page. Being signed out is reported as a normal answer (loggedIn false), not an error — including when YouTube shows its EU cookie-consent page to a visitor with no signed-in account, which is flagged in `note`.
+Report which Google/YouTube account this browser is signed in as: the account email. When the browser is signed out of YouTube, including when YouTube shows its cookie-consent page to a visitor with no signed-in account, the run fails with a signed-out error asking you to sign in to youtube.com.
 
-### How do I automatically get current user on youtube.com?
+### How do I automatically get current YouTube user on youtube.com?
 
 Ask an AI agent connected to Reduck to run reduck/youtube.com/get_current_user, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/youtube.com/get_current_user
 
-### Is there a youtube.com API to get current user?
+### Is there a youtube.com API to get current YouTube user?
 
-You do not need one. "Get current user" drives the real youtube.com pages in a browser, so it works whether or not youtube.com offers an API for this.
+You do not need one. "Get current YouTube user" drives the real youtube.com pages in a browser, so it works whether or not youtube.com offers an API for this.
 
 ### What information do I need to provide?
 

@@ -1,10 +1,10 @@
 # YouTube whoami (signed-in account)
 
-Report which Google/YouTube account this browser is signed in as: the account email from YouTube's Account settings page. Being signed out is reported as a normal answer (loggedIn false), not an error — including when YouTube shows its EU cookie-consent page to a visitor with no signed-in account, which is flagged in `note`.
+Report which Google/YouTube account this browser is signed in as: the account email. When the browser is signed out of YouTube, including when YouTube shows its cookie-consent page to a visitor with no signed-in account, the run fails with a signed-out error asking you to sign in to youtube.com.
 
 - Site: youtube.com
 - Address: `reduck/youtube.com/whoami`
-- Updated: 2026-09-30 (v2)
+- Updated: 2026-10-22 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -22,14 +22,14 @@ It takes no input.
 ## Output
 
 - `loggedIn` (boolean, required)
-- `note` (string | null, optional)
+- `note` (string | null, optional): Always null: a signed-out browser, including one YouTube sends to its cookie-consent page, fails with a signed-out error.
 - `email` (string | null, optional)
 
 ## FAQ
 
 ### What does "YouTube whoami (signed-in account)" do?
 
-Report which Google/YouTube account this browser is signed in as: the account email from YouTube's Account settings page. Being signed out is reported as a normal answer (loggedIn false), not an error — including when YouTube shows its EU cookie-consent page to a visitor with no signed-in account, which is flagged in `note`.
+Report which Google/YouTube account this browser is signed in as: the account email. When the browser is signed out of YouTube, including when YouTube shows its cookie-consent page to a visitor with no signed-in account, the run fails with a signed-out error asking you to sign in to youtube.com.
 
 ### What information do I need to provide?
 

@@ -4,7 +4,7 @@ Automatically unblock an account on X (Twitter) on x.com. Unblock an X user by h
 
 - Site: x.com
 - Address: `reduck/x.com/unblock_user`
-- Updated: 2026-09-29 (v4)
+- Updated: 2026-10-22 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

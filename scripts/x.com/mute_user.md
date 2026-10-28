@@ -4,7 +4,7 @@ Automatically mute an account on X (Twitter) on x.com. Mute an X user by handle 
 
 - Site: x.com
 - Address: `reduck/x.com/mute_user`
-- Updated: 2026-09-29 (v5)
+- Updated: 2026-10-22 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically get GitHub trending repositories on github.com. List GitHub's Tren
 
 - Site: github.com
 - Address: `reduck/github.com/get_trending`
-- Updated: 2026-10-24 (v2)
+- Updated: 2026-10-28 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

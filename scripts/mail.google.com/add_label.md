@@ -4,7 +4,7 @@ Automatically apply or remove a label on a thread on mail.google.com. Apply a la
 
 - Site: mail.google.com
 - Address: `reduck/mail.google.com/add_label`
-- Updated: 2026-10-22 (v22)
+- Updated: 2026-10-28 (v23)
 - Author: Reduck AI (reduck)
 
 ## Run it

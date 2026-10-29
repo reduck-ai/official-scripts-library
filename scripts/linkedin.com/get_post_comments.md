@@ -4,7 +4,7 @@ Automatically get LinkedIn post comments on linkedin.com. Get the comments of a 
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_post_comments`
-- Updated: 2026-10-26 (v20)
+- Updated: 2026-10-28 (v22)
 - Author: Reduck AI (reduck)
 
 ## Run it

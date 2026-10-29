@@ -4,7 +4,7 @@ Automatically delete calendar event (Outlook) on outlook.live.com. Delete a sing
 
 - Site: outlook.live.com
 - Address: `reduck/outlook.live.com/delete_event`
-- Updated: 2026-10-23 (v4)
+- Updated: 2026-10-28 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,7 +18,7 @@ npx @reduck-ai/cli@latest run --script reduck/outlook.live.com/delete_event
 ## Input
 
 - `date` (string, required): The event's date (YYYY-MM-DD), used to navigate to its week.
-- `eventId` (string, required): The event's data-calitemid, as returned by list_events.
+- `eventId` (string, required): The event's id, as returned by list_events.
 - `expectedSubject` (string, required): The subject you expect this event to have. Safety interlock: if the event on the page does not match, nothing is deleted.
 
 ## Output

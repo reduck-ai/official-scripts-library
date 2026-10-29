@@ -4,7 +4,7 @@ Automatically get Google Calendar event on calendar.google.com. Read a Google Ca
 
 - Site: calendar.google.com
 - Address: `reduck/calendar.google.com/get_event`
-- Updated: 2026-10-23 (v5)
+- Updated: 2026-10-28 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/calendar.google.com/get_event
 
 ## Input
 
-- `eventid` (string, required): Opaque event id (the eid field from list_events, NOT its id field — passing the raw id makes the edit page serve an HTTP 500).
+- `eventid` (string, required): The event's eid, as returned by list_events (use the eid field, not the id field).
 - `account` (string, optional)
 
 ## Output

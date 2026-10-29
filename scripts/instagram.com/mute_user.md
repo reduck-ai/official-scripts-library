@@ -1,10 +1,10 @@
-# Mute a followed account
+# Mute a followed Instagram account
 
-Automatically mute a followed account on instagram.com. Mute an Instagram account's posts and/or stories from your feed (requires following them). Instagram does not notify the muted account.
+Automatically mute a followed Instagram account on instagram.com. Mute an Instagram account's posts and/or stories from your feed (requires following them). Instagram does not notify the muted account.
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/mute_user`
-- Updated: 2026-09-22 (v3)
+- Updated: 2026-10-28 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,17 +29,17 @@ npx @reduck-ai/cli@latest run --script reduck/instagram.com/mute_user
 
 ## FAQ
 
-### What does "Mute a followed account" do?
+### What does "Mute a followed Instagram account" do?
 
 Mute an Instagram account's posts and/or stories from your feed (requires following them). Instagram does not notify the muted account.
 
-### How do I automatically mute a followed account on instagram.com?
+### How do I automatically mute a followed Instagram account on instagram.com?
 
 Ask an AI agent connected to Reduck to run reduck/instagram.com/mute_user, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/instagram.com/mute_user
 
-### Is there a instagram.com API to mute a followed account?
+### Is there a instagram.com API to mute a followed Instagram account?
 
-You do not need one. "Mute a followed account" drives the real instagram.com pages in a browser, so it works whether or not instagram.com offers an API for this.
+You do not need one. "Mute a followed Instagram account" drives the real instagram.com pages in a browser, so it works whether or not instagram.com offers an API for this.
 
 ### What information do I need to provide?
 
@@ -55,7 +55,7 @@ Yes. It acts as you on instagram.com: on your own Chrome it reuses your session,
 
 ### Does it change anything on instagram.com, or only read data?
 
-It makes changes on instagram.com, like sending, posting or booking something.
+It makes changes on instagram.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

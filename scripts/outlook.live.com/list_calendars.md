@@ -1,10 +1,10 @@
-# List calendars (Outlook)
+# List Outlook.com calendars
 
-Automatically list calendars (Outlook) on outlook.live.com. List the calendars in the signed-in Outlook consumer mailbox, with their shown/hidden state. Covers a single-calendar lookup by filtering on name.
+Automatically list Outlook.com calendars on outlook.live.com. List every calendar in the signed-in Outlook.com mailbox, ticked on or not, with whether each is shown in the calendar view and its colour (empty when set to automatic).
 
 - Site: outlook.live.com
 - Address: `reduck/outlook.live.com/list_calendars`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-10-28 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,31 +17,31 @@ npx @reduck-ai/cli@latest run --script reduck/outlook.live.com/list_calendars
 
 ## Input
 
-- `name` (string, optional): Optional. Return only the calendar whose name matches this exactly (case-insensitive). This is how a single-calendar 'get' is served — there is no separate get script.
+It takes no input.
 
 ## Output
 
 - `count` (integer, required)
 - `calendars` (array, required)
-- `expandedRail` (boolean, required): Whether the rail's show-all expander was clicked. False means every calendar was already visible OR the expander could not be found — in the latter case the list may be limited to ticked calendars.
+- `expandedRail` (boolean, required): Always false: every calendar is listed, ticked or not. Kept for existing callers.
 
 ## FAQ
 
-### What does "List calendars (Outlook)" do?
+### What does "List Outlook.com calendars" do?
 
-List the calendars in the signed-in Outlook consumer mailbox, with their shown/hidden state. Covers a single-calendar lookup by filtering on name.
+List every calendar in the signed-in Outlook.com mailbox, ticked on or not, with whether each is shown in the calendar view and its colour (empty when set to automatic).
 
-### How do I automatically list calendars (Outlook) on outlook.live.com?
+### How do I automatically list Outlook.com calendars on outlook.live.com?
 
 Ask an AI agent connected to Reduck to run reduck/outlook.live.com/list_calendars, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/outlook.live.com/list_calendars
 
-### Is there a outlook.live.com API to list calendars (Outlook)?
+### Is there a outlook.live.com API to list Outlook.com calendars?
 
-You do not need one. "List calendars (Outlook)" drives the real outlook.live.com pages in a browser, so it works whether or not outlook.live.com offers an API for this.
+You do not need one. "List Outlook.com calendars" drives the real outlook.live.com pages in a browser, so it works whether or not outlook.live.com offers an API for this.
 
 ### What information do I need to provide?
 
-Optional: name.
+Nothing. It takes no input.
 
 ### What does it return?
 

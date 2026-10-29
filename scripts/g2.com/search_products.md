@@ -1,10 +1,10 @@
 # Search G2 software products
 
-Automatically search G2 software products on g2.com. Search G2's software directory by free-text query. Returns matching products with slug, name, star rating, review count and description, deduplicated. The slug feeds g2.com/get_product. Whitespace in the query is normalised. No login required. Fails loudly rather than returning an empty list: G2 always degrades to fuzzy matches, so zero results means the page did not render.
+Automatically search G2 software products on g2.com. Search G2's software directory by free-text query, one result page at a time (page arg). Returns the products G2 lists for the query with slug, name, star rating, review count and description, deduplicated. The slug feeds g2.com/get_product. Whitespace in the query is normalised. No login required. A query G2 has no product for returns an empty list.
 
 - Site: g2.com
 - Address: `reduck/g2.com/search_products`
-- Updated: 2026-09-18 (v3)
+- Updated: 2026-10-28 (v8)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -22,18 +22,20 @@ npx @reduck-ai/cli@latest run --script reduck/g2.com/search_products
 ## Input
 
 - `query` (string, required): Free-text search query, e.g. 'email marketing' or 'notion'. Surrounding whitespace is normalised.
+- `page` (integer, optional): Result page, as G2's own pager numbers it.
 
 ## Output
 
 - `count` (integer, required)
 - `query` (string, required): The normalised query actually searched.
-- `products` (array, required)
+- `products` (array, required): Empty when G2 lists no product for the query.
+- `page` (integer, optional)
 
 ## FAQ
 
 ### What does "Search G2 software products" do?
 
-Search G2's software directory by free-text query. Returns matching products with slug, name, star rating, review count and description, deduplicated. The slug feeds g2.com/get_product. Whitespace in the query is normalised. No login required. Fails loudly rather than returning an empty list: G2 always degrades to fuzzy matches, so zero results means the page did not render.
+Search G2's software directory by free-text query, one result page at a time (page arg). Returns the products G2 lists for the query with slug, name, star rating, review count and description, deduplicated. The slug feeds g2.com/get_product. Whitespace in the query is normalised. No login required. A query G2 has no product for returns an empty list.
 
 ### How do I automatically search G2 software products on g2.com?
 
@@ -45,11 +47,11 @@ You do not need one. "Search G2 software products" drives the real g2.com pages 
 
 ### What information do I need to provide?
 
-Required: query.
+Required: query. Optional: page.
 
 ### What does it return?
 
-It returns count, query, products.
+It returns page, count, query, products.
 
 ### Do I need to be logged in to g2.com?
 

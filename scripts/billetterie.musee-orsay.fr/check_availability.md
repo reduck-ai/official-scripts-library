@@ -1,10 +1,10 @@
 # Check Musée d'Orsay timed-entry availability
 
-Automatically check Musée d'Orsay timed-entry availability on billetterie.musee-orsay.fr. For one visit date on the official Musée d'Orsay ticket shop, list the timed-entry slots of one ticket offer (the standard timed admission by default) and whether each slot can still be booked, plus the rates with their prices in euros and the most one order can hold, read from the first slot that can be booked. The shop does not show how many places a slot has left, only whether it is bookable. A day with no slot on sale (for example a Monday, when the museum is closed) returns no slots and a reason.
+Automatically check Musée d'Orsay timed-entry availability on billetterie.musee-orsay.fr. For one visit date on the official Musée d'Orsay ticket shop, list the timed-entry slots of one ticket offer (the standard timed admission by default) and whether each slot can still be booked, plus the rates with their prices in euros and the most one order can hold, read from the first slot that can be booked. The shop does not show how many places a slot has left, only whether it is bookable. A day with no slot on sale (for example a Monday, when the museum is closed) returns no slots and a reason. Pass time (HH:MM) to get only that slot, with available and, when it cannot be booked, the reason (full, closed, not on sale, or no entry at that time) instead of an error; the rates are then those of that slot.
 
 - Site: billetterie.musee-orsay.fr
 - Address: `reduck/billetterie.musee-orsay.fr/check_availability`
-- Updated: 2026-10-27 (v1)
+- Updated: 2026-10-28 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,6 +18,7 @@ npx @reduck-ai/cli@latest run --script reduck/billetterie.musee-orsay.fr/check_a
 ## Input
 
 - `date` (string, required): Visit date, YYYY-MM-DD.
+- `time` (string, optional): Entry time, HH:MM (24-hour). When given, only that slot is returned, with available and, when it cannot be booked, unavailableReason and reason instead of an error; the rates are then those of that slot.
 - `eventId` (integer, optional): Ticket offer id in the shop: 1100509 is the standard timed admission to the museum.
 - `language` (string, optional): Language of the rate labels.
 
@@ -29,13 +30,15 @@ npx @reduck-ai/cli@latest run --script reduck/billetterie.musee-orsay.fr/check_a
 - `event` (string | null, optional)
 - `reason` (string | null, optional)
 - `eventId` (integer, optional)
+- `available` (boolean | null, optional): With time: whether that slot can be booked. Null without time.
 - `pricesFromSlotId` (string | null, optional)
+- `unavailableReason` (string | null, optional): With time, when the slot cannot be booked: full, closed (the shop marks the whole day unavailable), not_on_sale (the shop lists no slot for the date) or no_slot_at_time. Null otherwise.
 
 ## FAQ
 
 ### What does "Check Musée d'Orsay timed-entry availability" do?
 
-For one visit date on the official Musée d'Orsay ticket shop, list the timed-entry slots of one ticket offer (the standard timed admission by default) and whether each slot can still be booked, plus the rates with their prices in euros and the most one order can hold, read from the first slot that can be booked. The shop does not show how many places a slot has left, only whether it is bookable. A day with no slot on sale (for example a Monday, when the museum is closed) returns no slots and a reason.
+For one visit date on the official Musée d'Orsay ticket shop, list the timed-entry slots of one ticket offer (the standard timed admission by default) and whether each slot can still be booked, plus the rates with their prices in euros and the most one order can hold, read from the first slot that can be booked. The shop does not show how many places a slot has left, only whether it is bookable. A day with no slot on sale (for example a Monday, when the museum is closed) returns no slots and a reason. Pass time (HH:MM) to get only that slot, with available and, when it cannot be booked, the reason (full, closed, not on sale, or no entry at that time) instead of an error; the rates are then those of that slot.
 
 ### How do I automatically check Musée d'Orsay timed-entry availability on billetterie.musee-orsay.fr?
 
@@ -47,11 +50,11 @@ You do not need one. "Check Musée d'Orsay timed-entry availability" drives the 
 
 ### What information do I need to provide?
 
-Required: date. Optional: eventId, language.
+Required: date. Optional: time, eventId, language.
 
 ### What does it return?
 
-It returns date, event, slots, prices, reason, eventId, pricesFromSlotId.
+It returns date, event, slots, prices, reason, eventId, available, pricesFromSlotId, unavailableReason.
 
 ### Do I need to be logged in to billetterie.musee-orsay.fr?
 

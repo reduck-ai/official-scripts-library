@@ -4,7 +4,7 @@ Automatically search Events (FR) on ticketmaster.fr. Search Ticketmaster France 
 
 - Site: ticketmaster.fr
 - Address: `reduck/ticketmaster.fr/search_events`
-- Updated: 2026-10-23 (v6)
+- Updated: 2026-10-28 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/ticketmaster.fr/search_events
 
 ## Input
 
-- `query` (string, required): Search keyword — an artist, event name, or venue (e.g. "concert", "angele").
+- `query` (string, required): Search keyword: an artist, event name, or venue (e.g. "concert", "angele").
 - `count` (integer, optional): How many results to return (page 1 of Ticketmaster's own relevance-ordered results).
 
 ## Output

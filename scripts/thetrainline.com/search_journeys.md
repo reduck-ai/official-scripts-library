@@ -4,7 +4,7 @@ Automatically search train journeys (+ all stops) on thetrainline.com. Search tr
 
 - Site: thetrainline.com
 - Address: `reduck/thetrainline.com/search_journeys`
-- Updated: 2026-08-25 (v2)
+- Updated: 2026-10-28 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,10 +18,10 @@ npx @reduck-ai/cli@latest run --script reduck/thetrainline.com/search_journeys
 ## Input
 
 - `to` (string, required): Destination city or station, free text
-- `date` (string, required): Outbound date 'YYYY-MM-DD' (defaults to 08:00) or 'YYYY-MM-DDTHH:mm' — journeys departing after this time
+- `date` (string, required): Outbound date 'YYYY-MM-DD' (defaults to 08:00) or 'YYYY-MM-DDTHH:mm': journeys departing after this time
 - `from` (string, required): Origin city or station, free text (e.g. 'Paris', 'Lyon Part-Dieu', 'London')
-- `max` (integer, optional): Max journeys returned (no pagination fan-out; the site returns ~8 per search). Default 10.
-- `includeStops` (boolean, optional): If true, fetch all calling points (every stop of the full train route, incl. before/after the searched segment) for each leg. Default false.
+- `max` (integer, optional): Max journeys returned (no pagination fan-out; the site returns ~8 per search).
+- `includeStops` (boolean, optional): If true, also return all calling points (every stop of the full train route, incl. before/after the searched segment) for each leg.
 
 ## Output
 

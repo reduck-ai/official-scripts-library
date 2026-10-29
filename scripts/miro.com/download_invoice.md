@@ -1,10 +1,10 @@
 # Download a Miro invoice PDF
 
-Automatically download a Miro invoice PDF on miro.com. Download one Miro company billing invoice PDF, given the pdfUrl that miro.com/list_invoices returns. Saves the file to the device and returns its real filename plus the path it was saved to. Unlike the other download_invoice scripts it hands back a file on disk rather than the bytes inline, because Miro only releases these PDFs through a real browser download — so read the file from the returned path. Requires access to Miro company billing.
+Automatically download a Miro invoice PDF on miro.com. Download one Miro billing invoice PDF, given the pdfUrl that miro.com/list_invoices returns (listing invoices needs a Miro sign-in; the download itself does not). Returns the saved filename plus where to get the file: a path in the Downloads folder on your own Chrome, or a url on a managed browser. The filename can end in " (2)" when the same invoice was saved before. Invoice links expire: an expired one fails with a message to fetch a fresh pdfUrl from list_invoices.
 
 - Site: miro.com
 - Address: `reduck/miro.com/download_invoice`
-- Updated: 2026-10-22 (v5)
+- Updated: 2026-10-28 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -22,14 +22,15 @@ npx @reduck-ai/cli@latest run --script reduck/miro.com/download_invoice
 
 ## Output
 
-- `path` (string, required): Path on the device the PDF was saved to. Miro's PDFs go through the device download bridge rather than coming back as base64 — see the description.
-- `filename` (string, required): The invoice's real filename, taken from the basename of the saved file. Neither the bridge's own filename field nor Miro's suggested name is usable: both are content-addressed hashes.
+- `url` (string | null, required): Where to fetch the PDF when the run used a managed browser. Null on the user's own Chrome, which returns path instead.
+- `path` (string | null, required): Where the PDF was saved in the Downloads folder of the user's own Chrome. Null on a managed browser, which returns url instead.
+- `filename` (string, required): The invoice's file name, as saved (e.g. Invoice-EB7Y9VN8-0001.pdf).
 
 ## FAQ
 
 ### What does "Download a Miro invoice PDF" do?
 
-Download one Miro company billing invoice PDF, given the pdfUrl that miro.com/list_invoices returns. Saves the file to the device and returns its real filename plus the path it was saved to. Unlike the other download_invoice scripts it hands back a file on disk rather than the bytes inline, because Miro only releases these PDFs through a real browser download — so read the file from the returned path. Requires access to Miro company billing.
+Download one Miro billing invoice PDF, given the pdfUrl that miro.com/list_invoices returns (listing invoices needs a Miro sign-in; the download itself does not). Returns the saved filename plus where to get the file: a path in the Downloads folder on your own Chrome, or a url on a managed browser. The filename can end in " (2)" when the same invoice was saved before. Invoice links expire: an expired one fails with a message to fetch a fresh pdfUrl from list_invoices.
 
 ### How do I automatically download a Miro invoice PDF on miro.com?
 
@@ -45,11 +46,11 @@ Required: pdfUrl. Optional: id.
 
 ### What does it return?
 
-It returns path, filename.
+It returns url, path, filename.
 
 ### Do I need to be logged in to miro.com?
 
-Yes. It acts as you on miro.com: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the miro.com cookies saved by the Reduck extension.
+No. It only uses pages of miro.com that are reachable without signing in.
 
 ### Does it change anything on miro.com, or only read data?
 

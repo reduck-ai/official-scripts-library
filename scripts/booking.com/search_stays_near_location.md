@@ -4,7 +4,7 @@ Automatically search Booking.com stays near a location on booking.com. Search Bo
 
 - Site: booking.com
 - Address: `reduck/booking.com/search_stays_near_location`
-- Updated: 2026-10-23 (v11)
+- Updated: 2026-10-28 (v12)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -22,14 +22,16 @@ npx @reduck-ai/cli@latest run --script reduck/booking.com/search_stays_near_loca
 - `location` (string, required): Free-text place to search near: address, landmark, city or hotel name (e.g. "124 Rue Réaumur, Paris" or "Tour Eiffel"). It must name a place Booking.com can actually find. When several places share the name (e.g. "Paris"), the search is refused and the candidates are listed: add the country or region after a comma ("Paris, France"). Booking never answers "no match" — it quietly falls back to the nearest thing it can geocode anywhere in the world — so when the place it settles on shares nothing with what was asked, the search is refused instead of returning hotels somewhere else entirely. The place used is returned as resolvedLocation.
 - `rooms` (integer, optional): Number of rooms.
 - `adults` (integer, optional): Number of adults.
+- `offset` (integer, optional): Index of the first result to return, for paging: 0 for the first page, then add resultsPerPage from the previous answer until offset reaches totalPropertiesFound.
 - `children` (integer, optional): Number of children.
-- `minRating` (number, optional): Only keep results with a review score at or above this threshold (0-10 scale). Properties with no reviews yet are excluded. Set to 0 to disable filtering.
 
 ## Output
 
 - `results` (array, required)
+- `offset` (integer, optional): The offset this page starts at.
+- `resultsPerPage` (integer | null, optional): How many results Booking.com puts on one page.
 - `resolvedLocation` (object, optional)
-- `totalPropertiesFound` (integer | null, optional)
+- `totalPropertiesFound` (integer | null, optional): Total number of properties Booking.com found for the search, across all pages.
 
 ## FAQ
 
@@ -47,11 +49,11 @@ You do not need one. "Search Booking.com stays near a location" drives the real 
 
 ### What information do I need to provide?
 
-Required: location, checkin, checkout. Optional: rooms, adults, children, minRating.
+Required: location, checkin, checkout. Optional: rooms, adults, offset, children.
 
 ### What does it return?
 
-It returns results, resolvedLocation, totalPropertiesFound.
+It returns offset, results, resultsPerPage, resolvedLocation, totalPropertiesFound.
 
 ### Do I need to be logged in to booking.com?
 

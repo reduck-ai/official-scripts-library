@@ -4,7 +4,7 @@ Automatically get G2 product reviews on g2.com. Fetch reviews for a G2 product f
 
 - Site: g2.com
 - Address: `reduck/g2.com/get_product_reviews`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-10-28 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,6 +18,7 @@ npx @reduck-ai/cli@latest run --script reduck/g2.com/get_product_reviews
 ## Input
 
 - `product_slug` (string, required): G2 product URL slug, e.g. "slack" (from g2.com/products/<slug>/reviews)
+- `page` (integer, optional): Page of the Reviews list, as G2 pages it (1 is the newest page shown first).
 
 ## Output
 
@@ -40,7 +41,7 @@ You do not need one. "Get G2 product reviews" drives the real g2.com pages in a 
 
 ### What information do I need to provide?
 
-Required: product_slug.
+Required: product_slug. Optional: page.
 
 ### What does it return?
 

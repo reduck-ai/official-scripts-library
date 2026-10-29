@@ -1,10 +1,10 @@
 # Get Claude Code session
 
-Automatically get Claude Code session on claude.ai. Full transcript of one Claude Code web session by id, oldest→newest. The transcript is virtualized — only the messages near the viewport exist in the DOM — so this walks it from the top and stops on the count the list itself declares (aria-setsize), rather than guessing when it has seen everything; a read it cannot complete throws instead of returning a partial transcript that would look whole. Each message carries its own id, who sent it (human, assistant, or neither for a system card like "Context cleared"), and the readable text of what the page shows for that turn — prose plus the tool cards' own summaries, in reading order. No timestamp: the page only holds an absolute one in a per-message hover tooltip.
+Automatically get Claude Code session on claude.ai. Read the transcript of one of your Claude Code sessions on claude.ai, one batch at a time, newest batch first. Each batch lists your prompts and Claude's replies in reading order, with the tools Claude called by name; tool results, thinking and system events are left out. Pass the returned nextCursor with the same session_id to get the older batch; it is null once the batch reaches the start of the session. A session the account does not have fails with a message to check the id with claude.ai/list_code_sessions.
 
 - Site: claude.ai
 - Address: `reduck/claude.ai/get_code_session`
-- Updated: 2026-09-15 (v6)
+- Updated: 2026-10-28 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,20 +17,21 @@ npx @reduck-ai/cli@latest run --script reduck/claude.ai/get_code_session
 
 ## Input
 
-- `session_id` (string, required): The session id as returned by list_code_sessions (also the /code/<id> URL segment), e.g. "session_01ESfPiAadbkS23eBAtynZTL".
+- `session_id` (string, required): The session id from the session URL or from claude.ai/list_code_sessions, e.g. session_01PsJP8rAX1Ab7K36GbqH9kJ.
+- `cursor` (string, optional): nextCursor from a previous run on the same session, to get the older batch. Omit for the newest batch.
 
 ## Output
 
 - `id` (string, required)
-- `title` (string | null, required): The session's title as shown in the title bar.
-- `messages` (array, required)
-- `message_count` (integer, required): How many messages the transcript declares (aria-setsize). Always equals messages.length: a read that could not complete throws rather than returning.
+- `title` (string | null, required): The session's title. Null when the session has none.
+- `messages` (array, required): This batch's messages in reading order, oldest first. A batch can be empty when it holds only tool results or system events.
+- `nextCursor` (string | null, required): Pass as cursor (with the same session_id) for the older batch of messages. Null when this batch reaches the start of the session.
 
 ## FAQ
 
 ### What does "Get Claude Code session" do?
 
-Full transcript of one Claude Code web session by id, oldest→newest. The transcript is virtualized — only the messages near the viewport exist in the DOM — so this walks it from the top and stops on the count the list itself declares (aria-setsize), rather than guessing when it has seen everything; a read it cannot complete throws instead of returning a partial transcript that would look whole. Each message carries its own id, who sent it (human, assistant, or neither for a system card like "Context cleared"), and the readable text of what the page shows for that turn — prose plus the tool cards' own summaries, in reading order. No timestamp: the page only holds an absolute one in a per-message hover tooltip.
+Read the transcript of one of your Claude Code sessions on claude.ai, one batch at a time, newest batch first. Each batch lists your prompts and Claude's replies in reading order, with the tools Claude called by name; tool results, thinking and system events are left out. Pass the returned nextCursor with the same session_id to get the older batch; it is null once the batch reaches the start of the session. A session the account does not have fails with a message to check the id with claude.ai/list_code_sessions.
 
 ### How do I automatically get Claude Code session on claude.ai?
 
@@ -42,11 +43,11 @@ You do not need one. "Get Claude Code session" drives the real claude.ai pages i
 
 ### What information do I need to provide?
 
-Required: session_id.
+Required: session_id. Optional: cursor.
 
 ### What does it return?
 
-It returns id, title, messages, message_count.
+It returns id, title, messages, nextCursor.
 
 ### Do I need to be logged in to claude.ai?
 

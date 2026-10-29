@@ -1,10 +1,10 @@
-# Download brand logo pack
+# Download Brandfetch brand logo pack
 
-Automatically download brand logo pack on brandfetch.com. Given a company domain, download its full Brandfetch logo pack (logos, icons and banners as SVG/PNG/WebP) as a zip. Returns the brand name and the file; found is false when Brandfetch has no page for the domain.
+Automatically download Brandfetch brand logo pack on brandfetch.com. Given a company domain, download its full Brandfetch logo pack (logos, icons and banners as SVG/PNG/WebP) as a zip. Returns the brand name and the file; found is false when Brandfetch has no page for the domain.
 
 - Site: brandfetch.com
 - Address: `reduck/brandfetch.com/download_logo`
-- Updated: 2026-10-22 (v8)
+- Updated: 2026-10-28 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -30,17 +30,17 @@ npx @reduck-ai/cli@latest run --script reduck/brandfetch.com/download_logo
 
 ## FAQ
 
-### What does "Download brand logo pack" do?
+### What does "Download Brandfetch brand logo pack" do?
 
 Given a company domain, download its full Brandfetch logo pack (logos, icons and banners as SVG/PNG/WebP) as a zip. Returns the brand name and the file; found is false when Brandfetch has no page for the domain.
 
-### How do I automatically download brand logo pack on brandfetch.com?
+### How do I automatically download Brandfetch brand logo pack on brandfetch.com?
 
 Ask an AI agent connected to Reduck to run reduck/brandfetch.com/download_logo, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/brandfetch.com/download_logo
 
-### Is there a brandfetch.com API to download brand logo pack?
+### Is there a brandfetch.com API to download Brandfetch brand logo pack?
 
-You do not need one. "Download brand logo pack" drives the real brandfetch.com pages in a browser, so it works whether or not brandfetch.com offers an API for this.
+You do not need one. "Download Brandfetch brand logo pack" drives the real brandfetch.com pages in a browser, so it works whether or not brandfetch.com offers an API for this.
 
 ### What information do I need to provide?
 

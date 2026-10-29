@@ -1,10 +1,10 @@
 # Check Château de Versailles ticket availability
 
-Automatically check Château de Versailles ticket availability on billetterie.chateauversailles.fr. For one visit date on the official Château de Versailles ticket shop, list the entry time slots of one ticket type (Passport by default) with the places left in each slot and every rate the slot offers (full, reduced, youth, child, free) with its price in euros. Also lists every ticket type sold that day, so a caller can pick another one by name or id. A day with no entry tickets on sale (for example a Monday, when the palace is closed) returns no slots and a reason. A date in the past or not yet on sale fails with an error. visitors only sets enoughForVisitors on each slot; it reserves nothing.
+Automatically check Château de Versailles ticket availability on billetterie.chateauversailles.fr. For one visit date on the official Château de Versailles ticket shop, list the entry time slots of one ticket type (Passport by default) with the places left in each slot and every rate the slot offers (full, reduced, youth, child, free) with its price in euros. Also lists every ticket type sold that day, so a caller can pick another one by name or id. A day with no entry tickets on sale (for example a Monday, when the palace is closed) returns no slots and a reason. A date in the past or not yet on sale fails with an error, unless time is given. Pass time (HH:MM) to get only that slot, with available and, when it cannot be booked, the reason (full, closed, not on sale, or no entry at that time) instead of an error. visitors only sets enoughForVisitors on each slot; it reserves nothing.
 
 - Site: billetterie.chateauversailles.fr
 - Address: `reduck/billetterie.chateauversailles.fr/check_availability`
-- Updated: 2026-10-27 (v2)
+- Updated: 2026-10-28 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,6 +18,7 @@ npx @reduck-ai/cli@latest run --script reduck/billetterie.chateauversailles.fr/c
 ## Input
 
 - `date` (string, required): Visit date, YYYY-MM-DD.
+- `time` (string, optional): Entry time, HH:MM (24-hour). When given, only that slot is returned, with available and, when it cannot be booked, unavailableReason and reason instead of an error.
 - `language` (string, optional): Language of the names and rate labels the site returns.
 - `visitors` (integer, optional): Number of visitors, used only to set enoughForVisitors on each slot.
 - `ticketType` (string, optional): Ticket type: its id or its name, or part of the name, as listed in ticketTypes (552471 is the Passport ticket). A name that matches several types fails with the list of names.
@@ -28,13 +29,15 @@ npx @reduck-ai/cli@latest run --script reduck/billetterie.chateauversailles.fr/c
 - `slots` (array, required)
 - `ticketTypes` (array, required)
 - `reason` (string | null, optional)
+- `available` (boolean | null, optional): With time: whether that slot can be booked. Null without time.
 - `ticketType` (object | null, optional)
+- `unavailableReason` (string | null, optional): With time, when the slot cannot be booked: full, closed (no entry ticket sold that day), not_on_sale (date in the past or not on sale yet) or no_slot_at_time. Null otherwise.
 
 ## FAQ
 
 ### What does "Check Château de Versailles ticket availability" do?
 
-For one visit date on the official Château de Versailles ticket shop, list the entry time slots of one ticket type (Passport by default) with the places left in each slot and every rate the slot offers (full, reduced, youth, child, free) with its price in euros. Also lists every ticket type sold that day, so a caller can pick another one by name or id. A day with no entry tickets on sale (for example a Monday, when the palace is closed) returns no slots and a reason. A date in the past or not yet on sale fails with an error. visitors only sets enoughForVisitors on each slot; it reserves nothing.
+For one visit date on the official Château de Versailles ticket shop, list the entry time slots of one ticket type (Passport by default) with the places left in each slot and every rate the slot offers (full, reduced, youth, child, free) with its price in euros. Also lists every ticket type sold that day, so a caller can pick another one by name or id. A day with no entry tickets on sale (for example a Monday, when the palace is closed) returns no slots and a reason. A date in the past or not yet on sale fails with an error, unless time is given. Pass time (HH:MM) to get only that slot, with available and, when it cannot be booked, the reason (full, closed, not on sale, or no entry at that time) instead of an error. visitors only sets enoughForVisitors on each slot; it reserves nothing.
 
 ### How do I automatically check Château de Versailles ticket availability on billetterie.chateauversailles.fr?
 
@@ -46,11 +49,11 @@ You do not need one. "Check Château de Versailles ticket availability" drives t
 
 ### What information do I need to provide?
 
-Required: date. Optional: language, visitors, ticketType.
+Required: date. Optional: time, language, visitors, ticketType.
 
 ### What does it return?
 
-It returns date, slots, reason, ticketType, ticketTypes.
+It returns date, slots, reason, available, ticketType, ticketTypes, unavailableReason.
 
 ### Do I need to be logged in to billetterie.chateauversailles.fr?
 

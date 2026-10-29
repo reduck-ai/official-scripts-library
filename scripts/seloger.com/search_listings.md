@@ -1,10 +1,10 @@
 # Search SeLoger listings
 
-Automatically search SeLoger listings on seloger.com. Search SeLoger listings by location and deal type. Returns page, count, total, and listings, each with id, url, title, propertyType, price, pricePerSqm, surface, rooms, bedrooms, floor, location, postalCode, and agency. location must be a 'city-dept' slug (e.g. paris-75, lyon-69); results are paginated, so fetch successive pages for the full set. For areas with few local listings, SeLoger widens the search radius and appends nearby recommendations in the same listing format, so count/listings.length can exceed total (the exact-match count for the searched location).
+Automatically search SeLoger listings on seloger.com. Search SeLoger listings by location and deal type (buy or rent), one results page at a time. Returns page, count, total, and listings, each with id, url, title, propertyType, price, pricePerSqm, surface, rooms, bedrooms, floor, location, postalCode, and agency. location is a 'city-dept' slug (e.g. paris-75, lyon-69). Some listings link to SeLoger's sister sites (new builds, offices, luxury homes). Pass a listing url to seloger get_listing for its details.
 
 - Site: seloger.com
 - Address: `reduck/seloger.com/search_listings`
-- Updated: 2026-08-14 (v4)
+- Updated: 2026-10-28 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -33,7 +33,7 @@ npx @reduck-ai/cli@latest run --script reduck/seloger.com/search_listings
 
 ### What does "Search SeLoger listings" do?
 
-Search SeLoger listings by location and deal type. Returns page, count, total, and listings, each with id, url, title, propertyType, price, pricePerSqm, surface, rooms, bedrooms, floor, location, postalCode, and agency. location must be a 'city-dept' slug (e.g. paris-75, lyon-69); results are paginated, so fetch successive pages for the full set. For areas with few local listings, SeLoger widens the search radius and appends nearby recommendations in the same listing format, so count/listings.length can exceed total (the exact-match count for the searched location).
+Search SeLoger listings by location and deal type (buy or rent), one results page at a time. Returns page, count, total, and listings, each with id, url, title, propertyType, price, pricePerSqm, surface, rooms, bedrooms, floor, location, postalCode, and agency. location is a 'city-dept' slug (e.g. paris-75, lyon-69). Some listings link to SeLoger's sister sites (new builds, offices, luxury homes). Pass a listing url to seloger get_listing for its details.
 
 ### How do I automatically search SeLoger listings on seloger.com?
 

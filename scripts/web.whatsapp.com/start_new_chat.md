@@ -4,7 +4,7 @@ Automatically start new chat on web.whatsapp.com. Open a chat with a contact by 
 
 - Site: web.whatsapp.com
 - Address: `reduck/web.whatsapp.com/start_new_chat`
-- Updated: 2026-10-22 (v12)
+- Updated: 2026-10-28 (v13)
 - Author: Reduck AI (reduck)
 
 ## Run it

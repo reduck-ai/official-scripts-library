@@ -4,7 +4,7 @@ Automatically download Twilio receipt on console.twilio.com. Download one month'
 
 - Site: console.twilio.com
 - Address: `reduck/console.twilio.com/download_invoice`
-- Updated: 2026-10-22 (v8)
+- Updated: 2026-10-28 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it

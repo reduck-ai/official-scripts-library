@@ -4,7 +4,7 @@ Automatically search SimplyHired jobs on simplyhired.com. Search SimplyHired (In
 
 - Site: simplyhired.com
 - Address: `reduck/simplyhired.com/search_jobs`
-- Updated: 2026-08-14 (v3)
+- Updated: 2026-10-28 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,9 +17,9 @@ npx @reduck-ai/cli@latest run --script reduck/simplyhired.com/search_jobs
 
 ## Input
 
-- `query` (string, required): Keyword to search (job title, skill, company). Required, non-empty — an empty/whitespace query redirects the site to its marketing homepage instead of search results.
-- `cursor` (string, optional): Opaque pagination token for a page beyond the first, taken from a previous call's pageCursors (e.g. pageCursors["2"]). Omit for page 1. Note: an invalid/garbage cursor is not rejected by the site — it silently falls back to page 1.
-- `location` (string, optional): Free-text location: city/state, ZIP, or "remote". Omit for a nationwide default search. Loosely matched by the site — e.g. "México" can resolve to a US town literally named Mexico rather than being rejected.
+- `query` (string, required): Keyword to search (job title, skill, company). Required, non-empty: an empty or whitespace query sends the site to its marketing homepage instead of search results.
+- `cursor` (string, optional): Opaque pagination token for a page beyond the first, taken from a previous call's pageCursors (e.g. pageCursors["2"]). Omit for page 1. An invalid cursor is not rejected by the site: it falls back to page 1.
+- `location` (string, optional): Free-text location: city/state, ZIP, or "remote". Omit for a nationwide default search. Loosely matched by the site, e.g. "México" can resolve to a US town named Mexico rather than being rejected.
 
 ## Output
 
@@ -58,7 +58,7 @@ No. It only uses pages of simplyhired.com that are reachable without signing in.
 
 ### Does it change anything on simplyhired.com, or only read data?
 
-Unknown: its author has not declared whether it changes anything on simplyhired.com, so treat it as if it could.
+It only reads. It looks things up on simplyhired.com and changes nothing there.
 
 ### How do I run it?
 

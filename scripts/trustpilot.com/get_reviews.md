@@ -4,7 +4,7 @@ Automatically get Trustpilot company reviews on trustpilot.com. Get one page (20
 
 - Site: trustpilot.com
 - Address: `reduck/trustpilot.com/get_reviews`
-- Updated: 2026-10-22 (v4)
+- Updated: 2026-10-28 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

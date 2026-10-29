@@ -4,7 +4,7 @@ Automatically search Zocdoc appointments on zocdoc.com. Search Zocdoc providers 
 
 - Site: zocdoc.com
 - Address: `reduck/zocdoc.com/search_appointments`
-- Updated: 2026-10-22 (v12)
+- Updated: 2026-10-28 (v13)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -30,7 +30,7 @@ npx @reduck-ai/cli@latest run --script reduck/zocdoc.com/search_appointments
 
 - `providers` (array, required)
 - `resolved_query` (string, required): The autocomplete suggestion the query resolved to (e.g. 'Dentist'). This is what actually filtered the results - compare it against your query.
-- `total_providers` (integer | null, required): Read from window.__REDUX_STATE__.searchResults.search.searchResponse.totalCount — locale-proof, not parsed from rendered 'X providers' text.
+- `total_providers` (integer | null, required): Total providers matching the search, as Zocdoc counts them (not just this page). Null when Zocdoc does not report a count (seen after its eye-care questions).
 
 ## FAQ
 

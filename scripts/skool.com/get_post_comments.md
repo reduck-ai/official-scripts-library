@@ -4,7 +4,7 @@ Automatically get comments on a Skool post on skool.com. Read the comments on a 
 
 - Site: skool.com
 - Address: `reduck/skool.com/get_post_comments`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-10-28 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

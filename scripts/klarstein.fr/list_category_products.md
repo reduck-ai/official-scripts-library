@@ -4,7 +4,7 @@ Automatically list Klarstein category products on klarstein.fr. List products in
 
 - Site: klarstein.fr
 - Address: `reduck/klarstein.fr/list_category_products`
-- Updated: 2026-10-14 (v4)
+- Updated: 2026-10-28 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,14 +17,14 @@ npx @reduck-ai/cli@latest run --script reduck/klarstein.fr/list_category_product
 
 ## Input
 
-- `category` (string, required): Category path segment as it appears in Klarstein's own nav/URL, e.g. 'Chauffage', 'Climatisation', 'Qualite-de-l-air'. Case as shown in the URL.
-- `page` (integer, optional): 1-based page number, mirroring the site's own pagination. 20 products per page.
+- `category` (string, required): Category path segment as it appears in Klarstein's own nav/URL, e.g. 'Chauffage', 'Climatisation'. Case does not matter. A landing page that only groups sub-categories (e.g. 'Qualite-de-l-air') is refused: pass one of its sub-categories.
+- `cursor` (string, optional): nextCursor from a previous run on the same category, to get the next 20 products. Omit for the first 20. Klarstein's list is forward-only, so there is no jumping to page N.
 
 ## Output
 
-- `page` (integer, required)
-- `products` (array, required)
-- `totalArticles` (integer, required): Total products in this category, as shown by the site's own result-count element — not just this page's count.
+- `products` (array, required): Up to 20 products, in Klarstein's own top-seller order.
+- `nextCursor` (string | null, required): Pass as cursor (with the same category) for the next 20 products. Null when this was the last batch.
+- `totalArticles` (integer, required): Total products in this category, as shown by the site's own result-count element, not just this batch's count.
 
 ## FAQ
 
@@ -42,11 +42,11 @@ You do not need one. "List Klarstein category products" drives the real klarstei
 
 ### What information do I need to provide?
 
-Required: category. Optional: page.
+Required: category. Optional: cursor.
 
 ### What does it return?
 
-It returns page, products, totalArticles.
+It returns products, nextCursor, totalArticles.
 
 ### Do I need to be logged in to klarstein.fr?
 

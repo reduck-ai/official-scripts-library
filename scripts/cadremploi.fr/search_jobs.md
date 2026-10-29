@@ -1,10 +1,10 @@
 # Search Cadremploi jobs
 
-Automatically search Cadremploi jobs on cadremploi.fr. Search Cadremploi (French executive and manager job board) by keyword and optional French city, with an optional radius in km and paging (50 per page). A city Cadremploi does not recognize fails with an error; regions and departments are not supported. Results mix exact city matches, nearby matches and a wider fallback; each job's matchType says which. total counts all three. An unmatched keyword returns total 0 and an empty list, not an error.
+Automatically search Cadremploi jobs on cadremploi.fr. Search Cadremploi (French executive and manager job board) by keyword and optional French city, with an optional radius in km and paging (30 per page). A city Cadremploi does not recognize fails with an error; regions and departments are not supported. Results come in Cadremploi's groups: exact matches, matches around the city, a wider fallback and related offers; each job's matchType says which. total counts all of them. An unmatched keyword returns total 0 and an empty list, not an error.
 
 - Site: cadremploi.fr
 - Address: `reduck/cadremploi.fr/search_jobs`
-- Updated: 2026-10-23 (v3)
+- Updated: 2026-10-28 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -31,7 +31,7 @@ npx @reduck-ai/cli@latest run --script reduck/cadremploi.fr/search_jobs
 
 ### What does "Search Cadremploi jobs" do?
 
-Search Cadremploi (French executive and manager job board) by keyword and optional French city, with an optional radius in km and paging (50 per page). A city Cadremploi does not recognize fails with an error; regions and departments are not supported. Results mix exact city matches, nearby matches and a wider fallback; each job's matchType says which. total counts all three. An unmatched keyword returns total 0 and an empty list, not an error.
+Search Cadremploi (French executive and manager job board) by keyword and optional French city, with an optional radius in km and paging (30 per page). A city Cadremploi does not recognize fails with an error; regions and departments are not supported. Results come in Cadremploi's groups: exact matches, matches around the city, a wider fallback and related offers; each job's matchType says which. total counts all of them. An unmatched keyword returns total 0 and an empty list, not an error.
 
 ### How do I automatically search Cadremploi jobs on cadremploi.fr?
 

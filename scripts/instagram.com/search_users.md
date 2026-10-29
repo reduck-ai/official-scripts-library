@@ -4,7 +4,7 @@ Automatically search Instagram users on instagram.com. Search Instagram accounts
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/search_users`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-10-28 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

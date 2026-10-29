@@ -1,10 +1,10 @@
 # Station F HAL whoami (signed-in account)
 
-Report which Station F HAL account this browser is signed in as: the account email. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other HAL scripts.
+Report which Station F HAL account this browser is signed in as: the account email. When the browser is signed out of HAL, the run fails with a signed-out error asking you to sign in to hal.stationf.co.
 
 - Site: hal.stationf.co
 - Address: `reduck/hal.stationf.co/whoami`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-10-28 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,7 +29,7 @@ It takes no input.
 
 ### What does "Station F HAL whoami (signed-in account)" do?
 
-Report which Station F HAL account this browser is signed in as: the account email. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other HAL scripts.
+Report which Station F HAL account this browser is signed in as: the account email. When the browser is signed out of HAL, the run fails with a signed-out error asking you to sign in to hal.stationf.co.
 
 ### What information do I need to provide?
 

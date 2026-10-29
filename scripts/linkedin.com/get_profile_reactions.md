@@ -4,7 +4,7 @@ Automatically get LinkedIn profile reactions on linkedin.com. Get the posts a Li
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_profile_reactions`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-10-28 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

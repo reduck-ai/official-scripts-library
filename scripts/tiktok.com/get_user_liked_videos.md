@@ -4,7 +4,7 @@ Automatically get TikTok user liked videos on tiktok.com. List the videos a TikT
 
 - Site: tiktok.com
 - Address: `reduck/tiktok.com/get_user_liked_videos`
-- Updated: 2026-09-03 (v2)
+- Updated: 2026-10-28 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -54,7 +54,7 @@ Yes. It acts as you on tiktok.com: on your own Chrome it reuses your session, an
 
 ### Does it change anything on tiktok.com, or only read data?
 
-Unknown: its author has not declared whether it changes anything on tiktok.com, so treat it as if it could.
+It only reads. It looks things up on tiktok.com and changes nothing there.
 
 ### How do I run it?
 

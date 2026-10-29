@@ -1,10 +1,10 @@
 # Get Instagram user reels
 
-Automatically get Instagram user reels on instagram.com. Fetch an Instagram user's reels by their username; count=0 returns all. Returns pk, code, url, taken_at, caption, thumbnail, video_url, like_count, play_count, comment_count, and video_duration. Results follow the profile feed order, not strictly newest-first.
+Automatically get Instagram user reels on instagram.com. Fetch an Instagram user's reels from their profile's Reels tab, in the order the tab shows them. Returns count, complete and reels; each reel has pk, code, url, thumbnail, like_count (null when the owner hides likes), play_count, comment_count and product_type. count=0 returns every reel. complete is true only when the end of the tab was reached, false when count stopped it first. An account with no reels returns an empty list; a username that does not exist fails with an error that says so. Posting date, caption, video link and duration are not in the Reels tab; open a reel to get them.
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/get_user_reels`
-- Updated: 2026-10-22 (v8)
+- Updated: 2026-10-28 (v13)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,13 +18,19 @@ npx @reduck-ai/cli@latest run --script reduck/instagram.com/get_user_reels
 ## Input
 
 - `username` (string, required): Instagram username without the @, e.g. "nasa"
-- `count` (integer, optional): Maximum number of reels to return. 0 returns all reels found by paginating the profile feed.
+- `count` (integer, optional): Maximum number of reels to return, in the order the Reels tab shows them. 0 returns all of them.
+
+## Output
+
+- `count` (integer, required): Number of reels returned. 0 when the account has no reels.
+- `reels` (array, required)
+- `complete` (boolean, required): True when the Reels tab showed its end and every reel is returned. False when count stopped it first.
 
 ## FAQ
 
 ### What does "Get Instagram user reels" do?
 
-Fetch an Instagram user's reels by their username; count=0 returns all. Returns pk, code, url, taken_at, caption, thumbnail, video_url, like_count, play_count, comment_count, and video_duration. Results follow the profile feed order, not strictly newest-first.
+Fetch an Instagram user's reels from their profile's Reels tab, in the order the tab shows them. Returns count, complete and reels; each reel has pk, code, url, thumbnail, like_count (null when the owner hides likes), play_count, comment_count and product_type. count=0 returns every reel. complete is true only when the end of the tab was reached, false when count stopped it first. An account with no reels returns an empty list; a username that does not exist fails with an error that says so. Posting date, caption, video link and duration are not in the Reels tab; open a reel to get them.
 
 ### How do I automatically get Instagram user reels on instagram.com?
 
@@ -37,6 +43,10 @@ You do not need one. "Get Instagram user reels" drives the real instagram.com pa
 ### What information do I need to provide?
 
 Required: username. Optional: count.
+
+### What does it return?
+
+It returns count, reels, complete.
 
 ### Do I need to be logged in to instagram.com?
 

@@ -4,7 +4,7 @@ Automatically get Indeed company reviews on indeed.com. Get one page (20) of Ind
 
 - Site: indeed.com
 - Address: `reduck/indeed.com/get_company_reviews`
-- Updated: 2026-10-23 (v4)
+- Updated: 2026-10-28 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,7 +18,7 @@ npx @reduck-ai/cli@latest run --script reduck/indeed.com/get_company_reviews
 ## Input
 
 - `companySlug` (string, required): Indeed company slug from the /cmp/<slug> URL, e.g. "Google" — the slug only, not a full URL.
-- `page` (integer, optional): Reviews page number. Indeed paginates with a client-side Next button, so the script steps forward page-1 times; a high number costs a step per page. Paging past the last page yields no review cards.
+- `page` (integer, optional): Reviews page number, 20 reviews per page. A page past the last one fails.
 
 ## Output
 

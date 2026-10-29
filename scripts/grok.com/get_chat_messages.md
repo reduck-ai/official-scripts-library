@@ -4,7 +4,7 @@ Automatically get Grok Chat Messages on grok.com. Full message transcript of one
 
 - Site: grok.com
 - Address: `reduck/grok.com/get_chat_messages`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-10-28 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

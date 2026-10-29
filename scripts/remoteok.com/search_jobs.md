@@ -1,10 +1,10 @@
 # Search RemoteOK jobs
 
-Automatically search RemoteOK jobs on remoteok.com. Search RemoteOK's full live listings database — a fuzzy, ordered full-text match across every posting, the same as the site's own search box, not just the most recent ones. Omit query for the unfiltered recent feed. Paginates via offset, in pages of about 50. Salary is reconciled against RemoteOK's own published listing data, because the salary attached to a search result is frequently a generic 90000-150000 placeholder unrelated to the actual role.
+Automatically search RemoteOK jobs on remoteok.com. Search all live RemoteOK job postings with the same fuzzy full-text match as the site's search box, or omit the query for the most recent postings. Returns up to 50 jobs per page with title, company, tags, location, date and salary; page with offset. Salary is null when the employer gave none.
 
 - Site: remoteok.com
 - Address: `reduck/remoteok.com/search_jobs`
-- Updated: 2026-10-22 (v4)
+- Updated: 2026-10-28 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,8 +17,8 @@ npx @reduck-ai/cli@latest run --script reduck/remoteok.com/search_jobs
 
 ## Input
 
-- `query` (string, optional): Full-text search against RemoteOK's own search index (same fuzzy, ordered-match behavior as the site's search box), run across its entire live listings database — not just the most recent postings. Omit for the unfiltered recent-postings feed.
-- `offset` (integer, optional): Row offset for pagination; the site returns pages of up to 50 jobs. Loop increasing by 50 until a call returns fewer than 50 jobs. This is a live, moving feed — dedupe by `id` when merging pages fetched at different times.
+- `query` (string, optional): Full-text search, the same fuzzy match as the site's search box, across all live RemoteOK postings. Omit for the unfiltered recent-postings feed.
+- `offset` (integer, optional): Number of jobs to skip; pages hold up to 50 jobs. Increase by 50 until a page returns fewer than 50. The feed moves, so dedupe by id when merging pages fetched at different times.
 
 ## Output
 
@@ -28,7 +28,7 @@ npx @reduck-ai/cli@latest run --script reduck/remoteok.com/search_jobs
 
 ### What does "Search RemoteOK jobs" do?
 
-Search RemoteOK's full live listings database — a fuzzy, ordered full-text match across every posting, the same as the site's own search box, not just the most recent ones. Omit query for the unfiltered recent feed. Paginates via offset, in pages of about 50. Salary is reconciled against RemoteOK's own published listing data, because the salary attached to a search result is frequently a generic 90000-150000 placeholder unrelated to the actual role.
+Search all live RemoteOK job postings with the same fuzzy full-text match as the site's search box, or omit the query for the most recent postings. Returns up to 50 jobs per page with title, company, tags, location, date and salary; page with offset. Salary is null when the employer gave none.
 
 ### How do I automatically search RemoteOK jobs on remoteok.com?
 

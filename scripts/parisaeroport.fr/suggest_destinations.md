@@ -1,10 +1,10 @@
 # Suggest Paris flight destinations
 
-Automatically suggest Paris flight destinations on parisaeroport.fr. Resolve a free-text destination to Paris Aéroport's ranked airport suggestions [{iataCode, name, city, ...}] ([0] = best). Disambiguates multi-airport cities; pass a returned name to search_departures. Airport names are listed in French, so an English city name resolves through the closest matching form, and matchedTerm reports which wording the suggestions came from.
+Automatically suggest Paris flight destinations on parisaeroport.fr. Resolve a free-text destination to Paris Aéroport's ranked airport suggestions [{iataCode, name, city, ...}] ([0] = best), as the site's own typeahead answers it. Disambiguates multi-airport cities; pass a returned name to search_departures. Airport names are in French and the site matches their start, so an English city name may return nothing: pass the French form (e.g. "Londres") or its first letters. An empty list means the site has no destination for that text.
 
 - Site: parisaeroport.fr
 - Address: `reduck/parisaeroport.fr/suggest_destinations`
-- Updated: 2026-10-22 (v10)
+- Updated: 2026-10-28 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -30,7 +30,7 @@ npx @reduck-ai/cli@latest run --script reduck/parisaeroport.fr/suggest_destinati
 
 ### What does "Suggest Paris flight destinations" do?
 
-Resolve a free-text destination to Paris Aéroport's ranked airport suggestions [{iataCode, name, city, ...}] ([0] = best). Disambiguates multi-airport cities; pass a returned name to search_departures. Airport names are listed in French, so an English city name resolves through the closest matching form, and matchedTerm reports which wording the suggestions came from.
+Resolve a free-text destination to Paris Aéroport's ranked airport suggestions [{iataCode, name, city, ...}] ([0] = best), as the site's own typeahead answers it. Disambiguates multi-airport cities; pass a returned name to search_departures. Airport names are in French and the site matches their start, so an English city name may return nothing: pass the French form (e.g. "Londres") or its first letters. An empty list means the site has no destination for that text.
 
 ### How do I automatically suggest Paris flight destinations on parisaeroport.fr?
 

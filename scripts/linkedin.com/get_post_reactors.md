@@ -4,7 +4,7 @@ Automatically get LinkedIn post reactors on linkedin.com. Total reaction count p
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_post_reactors`
-- Updated: 2026-10-27 (v22)
+- Updated: 2026-10-28 (v23)
 - Author: Reduck AI (reduck)
 
 ## About

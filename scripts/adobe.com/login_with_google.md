@@ -1,10 +1,10 @@
 # Adobe login (Google SSO)
 
-Log into Adobe with Google.
+Sign in to Adobe with Continue with Google, picking the given Google account (or the first one listed). Returns the Adobe account email as Adobe's profile shows it, and returns straight away when already signed in. Needs a browser already signed in to Google. Never creates an account: a Google account with no Adobe account, a Google identity check, or Adobe signed in as another account stop the run with what to do.
 
 - Site: adobe.com
 - Address: `reduck/adobe.com/login_with_google`
-- Updated: 2026-10-23 (v6)
+- Updated: 2026-10-28 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,7 +29,7 @@ npx @reduck-ai/cli@latest run --script reduck/adobe.com/login_with_google
 
 ### What does "Adobe login (Google SSO)" do?
 
-Log into Adobe with Google.
+Sign in to Adobe with Continue with Google, picking the given Google account (or the first one listed). Returns the Adobe account email as Adobe's profile shows it, and returns straight away when already signed in. Needs a browser already signed in to Google. Never creates an account: a Google account with no Adobe account, a Google identity check, or Adobe signed in as another account stop the run with what to do.
 
 ### What information do I need to provide?
 

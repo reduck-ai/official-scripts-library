@@ -4,7 +4,7 @@ Automatically search Companies on dealroom.co. Search Dealroom's company databas
 
 - Site: dealroom.co
 - Address: `reduck/dealroom.co/search_companies`
-- Updated: 2026-10-22 (v7)
+- Updated: 2026-10-28 (v13)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,10 +17,10 @@ npx @reduck-ai/cli@latest run --script reduck/dealroom.co/search_companies
 
 ## Input
 
-- `limit` (integer, optional): Max companies to return (default 10; Dealroom returns only a handful of raw results per search regardless of this value on free/registered accounts, observed cap: 6).
+- `limit` (integer, optional): Max companies to return. Dealroom returns only a handful of raw results per search regardless of this value on free/registered accounts (observed cap: 6).
 - `industry` (string, optional): Industry keyword to filter by, matched against Dealroom's own industry tags, e.g. "fintech", "health" (not "healthtech" — Dealroom's tag for that space is "health").
 - `technology` (string, optional): Technology keyword to filter by, e.g. "artificial intelligence", "blockchain" (matched against Dealroom's technology tags).
-- `locationSlug` (string, optional): Dealroom HQ location slug, e.g. "france", "united_states", "berlin", "san_francisco". Must be Dealroom's own slug format (lowercase, underscores for spaces), not a free-text place name.
+- `locationSlug` (string, optional): Dealroom HQ location slug: lowercase, underscores for spaces, e.g. "france", "germany", "united_states", "united_kingdom", "san_francisco". A slug Dealroom does not know returns total 0 and no items; not every city name is a Dealroom slug ("london" and "berlin" return none).
 - `launchYearMax` (integer, optional): Only include companies founded in or before this year.
 - `launchYearMin` (integer, optional): Only include companies founded in or after this year.
 
@@ -28,6 +28,7 @@ npx @reduck-ai/cli@latest run --script reduck/dealroom.co/search_companies
 
 - `items` (array, required)
 - `total` (integer | null, optional): Total matching companies reported by Dealroom for this filter combination.
+- `complete` (boolean, optional): False when limit stopped the list before the end of what Dealroom returned for this search.
 
 ## FAQ
 
@@ -49,7 +50,7 @@ Optional: limit, industry, technology, locationSlug, launchYearMax, launchYearMi
 
 ### What does it return?
 
-It returns items, total.
+It returns items, total, complete.
 
 ### Do I need to be logged in to dealroom.co?
 

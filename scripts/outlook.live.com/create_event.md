@@ -4,7 +4,7 @@ Automatically create calendar event (Outlook) on outlook.live.com. Create an eve
 
 - Site: outlook.live.com
 - Address: `reduck/outlook.live.com/create_event`
-- Updated: 2026-10-23 (v3)
+- Updated: 2026-10-28 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,10 +18,10 @@ npx @reduck-ai/cli@latest run --script reduck/outlook.live.com/create_event
 ## Input
 
 - `end` (string, required): End as local ISO, e.g. 2026-09-17T10:30:00.
-- `start` (string, required): Start as local ISO, e.g. 2026-09-17T10:00:00. Passed to the deeplink verbatim; the site renders it in the mailbox locale.
-- `subject` (string, required): Event title. Required — it is also the read-back oracle.
+- `start` (string, required): Start as local ISO date-time in the mailbox's time zone, e.g. 2026-09-17T10:00:00.
+- `subject` (string, required): Event title.
 - `body` (string, optional): Optional event body text.
-- `location` (string, optional): Optional location. Typed into the picker — the deeplink's location param is ignored by the site.
+- `location` (string, optional): Optional location.
 
 ## Output
 

@@ -4,7 +4,7 @@ Automatically list plans on adobe.com. List the plans on the signed-in Adobe acc
 
 - Site: adobe.com
 - Address: `reduck/adobe.com/list_plans`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-10-29 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

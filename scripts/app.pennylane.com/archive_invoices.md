@@ -1,10 +1,10 @@
 # Archive Pennylane supplier invoices
 
-Automatically archive Pennylane supplier invoices on app.pennylane.com. Archive one or more supplier invoices from the Pennylane Inbox by id. With dryRun (default true) each invoice is only previewed — selected, its archive confirmation opened and the warning read, then cancelled — so nothing is archived; dryRun:false confirms the archive. Returns, per invoice, whether it was found, its label, its amount and the warning that was shown.
+Automatically archive Pennylane supplier invoices on app.pennylane.com. Archive one or more Pennylane supplier invoices by id, from any tab. With dryRun (default true) each invoice is only previewed: its archive confirmation is opened, then cancelled, so nothing is archived; dryRun false confirms and reads the invoice back to check it is archived. Returns, per invoice, whether it was found, its label and amount, whether it was archived, and a warning when it is matched to a bank transaction (archiving removes that match), already archived, or shares its number or amount with too many invoices to be singled out. Fails with a sign-in error when the browser is not signed in to Pennylane.
 
 - Site: app.pennylane.com
 - Address: `reduck/app.pennylane.com/archive_invoices`
-- Updated: 2026-09-29 (v11)
+- Updated: 2026-10-29 (v16)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -31,7 +31,7 @@ npx @reduck-ai/cli@latest run --script reduck/app.pennylane.com/archive_invoices
 
 ### What does "Archive Pennylane supplier invoices" do?
 
-Archive one or more supplier invoices from the Pennylane Inbox by id. With dryRun (default true) each invoice is only previewed — selected, its archive confirmation opened and the warning read, then cancelled — so nothing is archived; dryRun:false confirms the archive. Returns, per invoice, whether it was found, its label, its amount and the warning that was shown.
+Archive one or more Pennylane supplier invoices by id, from any tab. With dryRun (default true) each invoice is only previewed: its archive confirmation is opened, then cancelled, so nothing is archived; dryRun false confirms and reads the invoice back to check it is archived. Returns, per invoice, whether it was found, its label and amount, whether it was archived, and a warning when it is matched to a bank transaction (archiving removes that match), already archived, or shares its number or amount with too many invoices to be singled out. Fails with a sign-in error when the browser is not signed in to Pennylane.
 
 ### How do I automatically archive Pennylane supplier invoices on app.pennylane.com?
 

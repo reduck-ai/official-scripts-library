@@ -4,7 +4,7 @@ Automatically like LinkedIn post on linkedin.com. Like a LinkedIn post by its pe
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/react_post`
-- Updated: 2026-10-22 (v17)
+- Updated: 2026-10-29 (v20)
 - Author: Reduck AI (reduck)
 
 ## Run it

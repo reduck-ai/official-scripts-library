@@ -4,7 +4,7 @@ Automatically get Amazon Bestsellers by Category on amazon.com. Reads Amazon's B
 
 - Site: amazon.com
 - Address: `reduck/amazon.com/get_bestsellers_category`
-- Updated: 2026-08-27 (v6)
+- Updated: 2026-10-29 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it

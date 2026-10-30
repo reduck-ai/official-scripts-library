@@ -4,7 +4,7 @@ Automatically search talent.com jobs on talent.com. Search talent.com's aggregat
 
 - Site: talent.com
 - Address: `reduck/talent.com/search_jobs`
-- Updated: 2026-10-23 (v5)
+- Updated: 2026-10-29 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,7 +18,7 @@ npx @reduck-ai/cli@latest run --script reduck/talent.com/search_jobs
 ## Input
 
 - `query` (string, required): Free-text keyword, e.g. "python developer"
-- `page` (integer, optional): 1-based page number. Default 1.
+- `page` (integer, optional): 1-based page number.
 - `location` (string, optional): Free-text city/region, e.g. "new york". Omit for talent.com's default (geo-resolved) scope.
 
 ## Output

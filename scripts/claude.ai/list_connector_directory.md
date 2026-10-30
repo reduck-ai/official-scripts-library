@@ -1,10 +1,10 @@
 # List connector Claude directory
 
-Automatically list connector Claude directory on claude.ai. Every connector in Claude's Directory (Settings → Connectors → Add → Browse connectors) — the whole catalogue the page loads, not one page. Each entry carries id, slug, name, one-liner, verified tier (anthropic/partner/community), categories, author, its claude.ai/directory link and the MCP endpoint URL. The Directory's Plugins tab (local extensions) is a different affordance and is not returned.
+Automatically list connector Claude directory on claude.ai. One page of the connectors in Claude's Directory (Settings → Connectors → All connectors), 48 at a time in the order the grid shows them. Each entry carries id, slug, name, one-liner, full description, verified tier (anthropic/partner/community), categories, publisher, icon, the MCP endpoint URL and the date it joined. Pass the returned next_cursor to read the next page; it is null on the last page. A cursor the Directory refuses is reported as such. The Plugins tab and your own custom connectors are not returned.
 
 - Site: claude.ai
 - Address: `reduck/claude.ai/list_connector_directory`
-- Updated: 2026-10-22 (v7)
+- Updated: 2026-10-29 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,18 +17,18 @@ npx @reduck-ai/cli@latest run --script reduck/claude.ai/list_connector_directory
 
 ## Input
 
-It takes no input.
+- `cursor` (string, optional): next_cursor from a previous call, to read the next page. Omit for the first page.
 
 ## Output
 
-- `total` (integer, required): How many connectors the Directory lists — equals connectors.length.
-- `connectors` (array, required): Every connector in the Directory's Connectors tab, in the order the feed returns them (the order the grid renders). Never empty: an empty Directory is a broken read, not a state the site has.
+- `connectors` (array, required): One page of the Directory's All connectors view, in the order the grid shows them (48 per page; the last page can hold fewer). Never empty: an empty page is a broken read.
+- `next_cursor` (string | null, required): Pass as cursor to read the next page; null on the last page.
 
 ## FAQ
 
 ### What does "List connector Claude directory" do?
 
-Every connector in Claude's Directory (Settings → Connectors → Add → Browse connectors) — the whole catalogue the page loads, not one page. Each entry carries id, slug, name, one-liner, verified tier (anthropic/partner/community), categories, author, its claude.ai/directory link and the MCP endpoint URL. The Directory's Plugins tab (local extensions) is a different affordance and is not returned.
+One page of the connectors in Claude's Directory (Settings → Connectors → All connectors), 48 at a time in the order the grid shows them. Each entry carries id, slug, name, one-liner, full description, verified tier (anthropic/partner/community), categories, publisher, icon, the MCP endpoint URL and the date it joined. Pass the returned next_cursor to read the next page; it is null on the last page. A cursor the Directory refuses is reported as such. The Plugins tab and your own custom connectors are not returned.
 
 ### How do I automatically list connector Claude directory on claude.ai?
 
@@ -40,11 +40,11 @@ You do not need one. "List connector Claude directory" drives the real claude.ai
 
 ### What information do I need to provide?
 
-Nothing. It takes no input.
+Optional: cursor.
 
 ### What does it return?
 
-It returns total, connectors.
+It returns connectors, next_cursor.
 
 ### Do I need to be logged in to claude.ai?
 

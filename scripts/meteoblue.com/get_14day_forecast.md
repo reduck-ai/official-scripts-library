@@ -4,7 +4,7 @@ Automatically get meteoblue 14-day weather forecast on meteoblue.com. 14-day wea
 
 - Site: meteoblue.com
 - Address: `reduck/meteoblue.com/get_14day_forecast`
-- Updated: 2026-10-28 (v10)
+- Updated: 2026-10-29 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -53,7 +53,7 @@ No. It only uses pages of meteoblue.com that are reachable without signing in.
 
 ### Does it change anything on meteoblue.com, or only read data?
 
-Unknown: its author has not declared whether it changes anything on meteoblue.com, so treat it as if it could.
+It only reads. It looks things up on meteoblue.com and changes nothing there.
 
 ### How do I run it?
 

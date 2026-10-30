@@ -1,10 +1,10 @@
 # DuckDuckGo search
 
-Search DuckDuckGo for a query and return up to `count` web results, optionally scoped to a region via `kl`. Returns total, noResults and results (rank, title, url, snippet). `total` counts the distinct results collected before truncation to `count`, so it can exceed results.length. The operators site:, "quotes" and OR are honoured as a hard AND, so an over-constrained query legitimately comes back empty with noResults true.
+Search DuckDuckGo for a query and return up to `count` web results, optionally scoped to a region via `kl`. Returns total, noResults and results (rank, title, url, snippet). `total` counts the distinct results collected before truncation to `count`, so it can exceed results.length. site: and "quotes" are honoured as hard filters, so an over-constrained query legitimately comes back empty with noResults true. OR binds looser than site:: `site:github.com a OR b` reads as (site:github.com a) OR b and can return other sites; write `site:github.com (a OR b)` to keep the filter on both.
 
 - Site: duckduckgo.com
 - Address: `reduck/duckduckgo.com/search`
-- Updated: 2026-10-22 (v12)
+- Updated: 2026-10-29 (v14)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -32,7 +32,7 @@ npx @reduck-ai/cli@latest run --script reduck/duckduckgo.com/search
 
 ### What does "DuckDuckGo search" do?
 
-Search DuckDuckGo for a query and return up to `count` web results, optionally scoped to a region via `kl`. Returns total, noResults and results (rank, title, url, snippet). `total` counts the distinct results collected before truncation to `count`, so it can exceed results.length. The operators site:, "quotes" and OR are honoured as a hard AND, so an over-constrained query legitimately comes back empty with noResults true.
+Search DuckDuckGo for a query and return up to `count` web results, optionally scoped to a region via `kl`. Returns total, noResults and results (rank, title, url, snippet). `total` counts the distinct results collected before truncation to `count`, so it can exceed results.length. site: and "quotes" are honoured as hard filters, so an over-constrained query legitimately comes back empty with noResults true. OR binds looser than site:: `site:github.com a OR b` reads as (site:github.com a) OR b and can return other sites; write `site:github.com (a OR b)` to keep the filter on both.
 
 ### What information do I need to provide?
 

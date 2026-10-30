@@ -4,7 +4,7 @@ Automatically list Lovable projects on lovable.dev. List all your Lovable projec
 
 - Site: lovable.dev
 - Address: `reduck/lovable.dev/list-projects`
-- Updated: 2026-10-22 (v5)
+- Updated: 2026-10-29 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

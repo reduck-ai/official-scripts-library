@@ -1,5 +1,5 @@
 {
-	"count": 1250,
+	"count": 1266,
 	"scripts": [
 		{
 			"address": "@reduck/99designs.com/login_with_google",
@@ -83,7 +83,7 @@
 			"address": "@reduck/admin.shopify.com/download_invoice",
 			"path": "scripts/admin.shopify.com/download_invoice.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/admin.shopify.com/download_invoice",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/admin.shopify.com/get_order",
@@ -125,7 +125,7 @@
 			"address": "@reduck/admin.shopify.com/update_product_price",
 			"path": "scripts/admin.shopify.com/update_product_price.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/admin.shopify.com/update_product_price",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/admin.shopify.com/update_product",
@@ -143,13 +143,13 @@
 			"address": "@reduck/adobe.com/list_orders",
 			"path": "scripts/adobe.com/list_orders.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/adobe.com/list_orders",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/adobe.com/list_plans",
 			"path": "scripts/adobe.com/list_plans.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/adobe.com/list_plans",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/adobe.com/login_with_google",
@@ -197,7 +197,7 @@
 			"address": "@reduck/airbnb.com/prepare_booking",
 			"path": "scripts/airbnb.com/prepare_booking.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/airbnb.com/prepare_booking",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/airbnb.com/search_listings",
@@ -209,7 +209,7 @@
 			"address": "@reduck/airtable.com/list_invoices",
 			"path": "scripts/airtable.com/list_invoices.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/airtable.com/list_invoices",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/airtable.com/login_with_google",
@@ -263,7 +263,7 @@
 			"address": "@reduck/amazon.com/get_bestsellers_category",
 			"path": "scripts/amazon.com/get_bestsellers_category.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/amazon.com/get_bestsellers_category",
-			"lastmod": "2026-08-27"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/amazon.com/get_checkout_information",
@@ -425,7 +425,7 @@
 			"address": "@reduck/app.clickup.com/list_invoices",
 			"path": "scripts/app.clickup.com/list_invoices.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/app.clickup.com/list_invoices",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/app.clickup.com/list_my_tasks",
@@ -437,7 +437,7 @@
 			"address": "@reduck/app.clickup.com/list_tasks",
 			"path": "scripts/app.clickup.com/list_tasks.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/app.clickup.com/list_tasks",
-			"lastmod": "2026-09-23"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/app.clickup.com/login_with_google",
@@ -545,7 +545,7 @@
 			"address": "@reduck/app.notion.com/get_marketplace_agent",
 			"path": "scripts/app.notion.com/get_marketplace_agent.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/app.notion.com/get_marketplace_agent",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/app.notion.com/list_invoices",
@@ -578,10 +578,40 @@
 			"lastmod": "2026-10-22"
 		},
 		{
+			"address": "@reduck/app.pennylane.com/add_invoice_comment",
+			"path": "scripts/app.pennylane.com/add_invoice_comment.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/app.pennylane.com/add_invoice_comment",
+			"lastmod": "2026-10-29"
+		},
+		{
+			"address": "@reduck/app.pennylane.com/approve_invoices",
+			"path": "scripts/app.pennylane.com/approve_invoices.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/app.pennylane.com/approve_invoices",
+			"lastmod": "2026-10-29"
+		},
+		{
 			"address": "@reduck/app.pennylane.com/archive_invoices",
 			"path": "scripts/app.pennylane.com/archive_invoices.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/app.pennylane.com/archive_invoices",
-			"lastmod": "2026-09-29"
+			"lastmod": "2026-10-29"
+		},
+		{
+			"address": "@reduck/app.pennylane.com/attach_transaction_proof",
+			"path": "scripts/app.pennylane.com/attach_transaction_proof.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/app.pennylane.com/attach_transaction_proof",
+			"lastmod": "2026-10-29"
+		},
+		{
+			"address": "@reduck/app.pennylane.com/create_supplier",
+			"path": "scripts/app.pennylane.com/create_supplier.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/app.pennylane.com/create_supplier",
+			"lastmod": "2026-10-29"
+		},
+		{
+			"address": "@reduck/app.pennylane.com/find_transactions_for_invoice",
+			"path": "scripts/app.pennylane.com/find_transactions_for_invoice.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/app.pennylane.com/find_transactions_for_invoice",
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/app.pennylane.com/get_current_user",
@@ -590,10 +620,52 @@
 			"lastmod": "2026-10-22"
 		},
 		{
+			"address": "@reduck/app.pennylane.com/get_transactions",
+			"path": "scripts/app.pennylane.com/get_transactions.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/app.pennylane.com/get_transactions",
+			"lastmod": "2026-10-29"
+		},
+		{
 			"address": "@reduck/app.pennylane.com/list_invoices",
 			"path": "scripts/app.pennylane.com/list_invoices.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/app.pennylane.com/list_invoices",
-			"lastmod": "2026-10-23"
+			"lastmod": "2026-10-29"
+		},
+		{
+			"address": "@reduck/app.pennylane.com/mark_paid_and_match",
+			"path": "scripts/app.pennylane.com/mark_paid_and_match.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/app.pennylane.com/mark_paid_and_match",
+			"lastmod": "2026-10-29"
+		},
+		{
+			"address": "@reduck/app.pennylane.com/mark_transactions_lost_bulk",
+			"path": "scripts/app.pennylane.com/mark_transactions_lost_bulk.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/app.pennylane.com/mark_transactions_lost_bulk",
+			"lastmod": "2026-10-29"
+		},
+		{
+			"address": "@reduck/app.pennylane.com/mark_transactions_lost",
+			"path": "scripts/app.pennylane.com/mark_transactions_lost.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/app.pennylane.com/mark_transactions_lost",
+			"lastmod": "2026-10-29"
+		},
+		{
+			"address": "@reduck/app.pennylane.com/search_suppliers",
+			"path": "scripts/app.pennylane.com/search_suppliers.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/app.pennylane.com/search_suppliers",
+			"lastmod": "2026-10-29"
+		},
+		{
+			"address": "@reduck/app.pennylane.com/set_invoice_supplier",
+			"path": "scripts/app.pennylane.com/set_invoice_supplier.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/app.pennylane.com/set_invoice_supplier",
+			"lastmod": "2026-10-29"
+		},
+		{
+			"address": "@reduck/app.pennylane.com/unarchive_invoices",
+			"path": "scripts/app.pennylane.com/unarchive_invoices.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/app.pennylane.com/unarchive_invoices",
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/app.pennylane.com/whoami",
@@ -605,7 +677,7 @@
 			"address": "@reduck/apps.apple.com/get_app_reviews",
 			"path": "scripts/apps.apple.com/get_app_reviews.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/apps.apple.com/get_app_reviews",
-			"lastmod": "2026-09-18"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/asana.com/change_role",
@@ -713,7 +785,7 @@
 			"address": "@reduck/barreaunantes.fr/list_cabinets",
 			"path": "scripts/barreaunantes.fr/list_cabinets.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/barreaunantes.fr/list_cabinets",
-			"lastmod": "2026-09-21"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/barreaunantes.fr/list_lawyers",
@@ -839,13 +911,13 @@
 			"address": "@reduck/browserbase.com/get_usage",
 			"path": "scripts/browserbase.com/get_usage.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/browserbase.com/get_usage",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/browserbase.com/list_projects",
 			"path": "scripts/browserbase.com/list_projects.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/browserbase.com/list_projects",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/browserbase.com/login_with_google",
@@ -887,7 +959,7 @@
 			"address": "@reduck/calendar.google.com/delete_event",
 			"path": "scripts/calendar.google.com/delete_event.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/calendar.google.com/delete_event",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/calendar.google.com/get_current_user",
@@ -923,7 +995,7 @@
 			"address": "@reduck/calendar.google.com/search_events",
 			"path": "scripts/calendar.google.com/search_events.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/calendar.google.com/search_events",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/calendar.google.com/set_out_of_office",
@@ -1055,7 +1127,7 @@
 			"address": "@reduck/chatgpt.com/ask",
 			"path": "scripts/chatgpt.com/ask.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/chatgpt.com/ask",
-			"lastmod": "2026-10-28"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/chatgpt.com/get_codex_usage",
@@ -1175,7 +1247,7 @@
 			"address": "@reduck/claude.ai/list_connector_directory",
 			"path": "scripts/claude.ai/list_connector_directory.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/claude.ai/list_connector_directory",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/claude.ai/list_invoices",
@@ -1211,7 +1283,7 @@
 			"address": "@reduck/claude.ai/set_model",
 			"path": "scripts/claude.ai/set_model.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/claude.ai/set_model",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/claude.ai/whoami",
@@ -1337,7 +1409,7 @@
 			"address": "@reduck/console.anthropic.com/list_workspaces",
 			"path": "scripts/console.anthropic.com/list_workspaces.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/console.anthropic.com/list_workspaces",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/console.anthropic.com/login_with_google",
@@ -1397,7 +1469,7 @@
 			"address": "@reduck/console.neon.tech/list_invoices",
 			"path": "scripts/console.neon.tech/list_invoices.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/console.neon.tech/list_invoices",
-			"lastmod": "2026-10-23"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/console.neon.tech/list_users_and_roles",
@@ -1427,7 +1499,7 @@
 			"address": "@reduck/console.twilio.com/list_invoices",
 			"path": "scripts/console.twilio.com/list_invoices.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/console.twilio.com/list_invoices",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/craigslist.org/get_housing_listing",
@@ -1589,7 +1661,7 @@
 			"address": "@reduck/dealroom.co/get_company_profile",
 			"path": "scripts/dealroom.co/get_company_profile.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/dealroom.co/get_company_profile",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/dealroom.co/search_companies",
@@ -1769,7 +1841,7 @@
 			"address": "@reduck/docs.google.com/sheets_add_tab",
 			"path": "scripts/docs.google.com/sheets_add_tab.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/docs.google.com/sheets_add_tab",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/docs.google.com/sheets_clear_range",
@@ -1883,7 +1955,7 @@
 			"address": "@reduck/docusign.com/upload_document",
 			"path": "scripts/docusign.com/upload_document.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/docusign.com/upload_document",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/docusign.com/whoami",
@@ -2069,7 +2141,7 @@
 			"address": "@reduck/duckduckgo.com/search",
 			"path": "scripts/duckduckgo.com/search.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/duckduckgo.com/search",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/dust.tt/ask",
@@ -2444,6 +2516,18 @@
 			"lastmod": "2026-10-22"
 		},
 		{
+			"address": "@reduck/google.com/ask_ai_mode",
+			"path": "scripts/google.com/ask_ai_mode.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/google.com/ask_ai_mode",
+			"lastmod": "2026-10-29"
+		},
+		{
+			"address": "@reduck/google.com/get_ai_overview",
+			"path": "scripts/google.com/get_ai_overview.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/google.com/get_ai_overview",
+			"lastmod": "2026-10-29"
+		},
+		{
 			"address": "@reduck/google.com/get_current_user",
 			"path": "scripts/google.com/get_current_user.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/google.com/get_current_user",
@@ -2477,7 +2561,7 @@
 			"address": "@reduck/google.com/search_flights_roundtrip",
 			"path": "scripts/google.com/search_flights_roundtrip.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/google.com/search_flights_roundtrip",
-			"lastmod": "2026-10-23"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/google.com/search_flights",
@@ -2495,7 +2579,7 @@
 			"address": "@reduck/google.com/search_site",
 			"path": "scripts/google.com/search_site.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/google.com/search_site",
-			"lastmod": "2026-10-27"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/google.com/search_suggestions",
@@ -2621,7 +2705,7 @@
 			"address": "@reduck/huggingface.co/list_invoices",
 			"path": "scripts/huggingface.co/list_invoices.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/huggingface.co/list_invoices",
-			"lastmod": "2026-08-19"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/huggingface.co/list_user_repos",
@@ -2807,7 +2891,7 @@
 			"address": "@reduck/instagram.com/get_post_likers",
 			"path": "scripts/instagram.com/get_post_likers.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/instagram.com/get_post_likers",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/instagram.com/get_profile",
@@ -2849,7 +2933,7 @@
 			"address": "@reduck/instagram.com/get_user_reels",
 			"path": "scripts/instagram.com/get_user_reels.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/instagram.com/get_user_reels",
-			"lastmod": "2026-10-28"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/instagram.com/like_comment",
@@ -3341,13 +3425,13 @@
 			"address": "@reduck/linkedin.com/get_company_info",
 			"path": "scripts/linkedin.com/get_company_info.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/linkedin.com/get_company_info",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/linkedin.com/get_company_jobs",
 			"path": "scripts/linkedin.com/get_company_jobs.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/linkedin.com/get_company_jobs",
-			"lastmod": "2026-10-13"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/linkedin.com/get_company_posts",
@@ -3509,7 +3593,7 @@
 			"address": "@reduck/linkedin.com/get_profile",
 			"path": "scripts/linkedin.com/get_profile.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/linkedin.com/get_profile",
-			"lastmod": "2026-10-27"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/linkedin.com/get_received_invitations",
@@ -3575,7 +3659,7 @@
 			"address": "@reduck/linkedin.com/list_job_filters",
 			"path": "scripts/linkedin.com/list_job_filters.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/linkedin.com/list_job_filters",
-			"lastmod": "2026-10-28"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/linkedin.com/login_with_google",
@@ -3599,7 +3683,7 @@
 			"address": "@reduck/linkedin.com/react_post",
 			"path": "scripts/linkedin.com/react_post.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/linkedin.com/react_post",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/linkedin.com/react_to_message",
@@ -3737,7 +3821,7 @@
 			"address": "@reduck/linkedin.com/search_jobs",
 			"path": "scripts/linkedin.com/search_jobs.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/linkedin.com/search_jobs",
-			"lastmod": "2026-10-21"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/linkedin.com/search_people",
@@ -3767,7 +3851,7 @@
 			"address": "@reduck/linkedin.com/suggest_locations",
 			"path": "scripts/linkedin.com/suggest_locations.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/linkedin.com/suggest_locations",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/linkedin.com/unarchive_conversation",
@@ -3839,7 +3923,7 @@
 			"address": "@reduck/lovable.dev/list-projects",
 			"path": "scripts/lovable.dev/list-projects.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/lovable.dev/list-projects",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/lovable.dev/list-users-and-roles",
@@ -4109,7 +4193,7 @@
 			"address": "@reduck/make.com/search_templates",
 			"path": "scripts/make.com/search_templates.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/make.com/search_templates",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/make.com/whoami",
@@ -4169,13 +4253,13 @@
 			"address": "@reduck/meteoblue.com/get_14day_forecast",
 			"path": "scripts/meteoblue.com/get_14day_forecast.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/meteoblue.com/get_14day_forecast",
-			"lastmod": "2026-10-28"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/meteoblue.com/search_locations",
 			"path": "scripts/meteoblue.com/search_locations.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/meteoblue.com/search_locations",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/meteojob.com/search_jobs",
@@ -4463,7 +4547,7 @@
 			"address": "@reduck/outlook.live.com/move_email",
 			"path": "scripts/outlook.live.com/move_email.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/outlook.live.com/move_email",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/outlook.live.com/reply_email",
@@ -4475,7 +4559,7 @@
 			"address": "@reduck/outlook.live.com/send_email",
 			"path": "scripts/outlook.live.com/send_email.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/outlook.live.com/send_email",
-			"lastmod": "2026-10-23"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/outlook.live.com/set_read_state",
@@ -4601,7 +4685,7 @@
 			"address": "@reduck/perplexity.ai/whoami",
 			"path": "scripts/perplexity.ai/whoami.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/perplexity.ai/whoami",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/pinterest.com/get_pin",
@@ -4655,7 +4739,7 @@
 			"address": "@reduck/platform.openai.com/download_invoice_pdf",
 			"path": "scripts/platform.openai.com/download_invoice_pdf.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/platform.openai.com/download_invoice_pdf",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/platform.openai.com/list_invoices",
@@ -4709,7 +4793,7 @@
 			"address": "@reduck/postman.co/list_invoices",
 			"path": "scripts/postman.co/list_invoices.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/postman.co/list_invoices",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/postman.co/login_with_google",
@@ -4901,13 +4985,13 @@
 			"address": "@reduck/reddit.com/get_subreddit_threads",
 			"path": "scripts/reddit.com/get_subreddit_threads.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/reddit.com/get_subreddit_threads",
-			"lastmod": "2026-10-27"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/reddit.com/get_thread",
 			"path": "scripts/reddit.com/get_thread.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/reddit.com/get_thread",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/reddit.com/get_trending",
@@ -4973,7 +5057,7 @@
 			"address": "@reduck/reddit.com/search_reddit",
 			"path": "scripts/reddit.com/search_reddit.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/reddit.com/search_reddit",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/reddit.com/search_subreddit_threads",
@@ -5102,16 +5186,28 @@
 			"lastmod": "2026-10-22"
 		},
 		{
+			"address": "@reduck/search.google.com/inspect_url",
+			"path": "scripts/search.google.com/inspect_url.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/search.google.com/inspect_url",
+			"lastmod": "2026-10-29"
+		},
+		{
 			"address": "@reduck/search.google.com/list_properties",
 			"path": "scripts/search.google.com/list_properties.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/search.google.com/list_properties",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/search.google.com/list_sitemaps",
 			"path": "scripts/search.google.com/list_sitemaps.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/search.google.com/list_sitemaps",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-10-29"
+		},
+		{
+			"address": "@reduck/search.google.com/submit_url",
+			"path": "scripts/search.google.com/submit_url.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/search.google.com/submit_url",
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/search.yahoo.com/search",
@@ -5141,7 +5237,7 @@
 			"address": "@reduck/semrush.com/get_site_audit_issues",
 			"path": "scripts/semrush.com/get_site_audit_issues.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/semrush.com/get_site_audit_issues",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/semrush.com/login_with_google",
@@ -5609,7 +5705,7 @@
 			"address": "@reduck/sncf-connect.com/list_tickets",
 			"path": "scripts/sncf-connect.com/list_tickets.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/sncf-connect.com/list_tickets",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/sncf-connect.com/remove_from_cart",
@@ -5795,7 +5891,7 @@
 			"address": "@reduck/talent.com/search_jobs",
 			"path": "scripts/talent.com/search_jobs.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/talent.com/search_jobs",
-			"lastmod": "2026-10-23"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/teams.microsoft.com/edit_chat_message",
@@ -5903,13 +5999,13 @@
 			"address": "@reduck/ticketmaster.com/get_lowest_price",
 			"path": "scripts/ticketmaster.com/get_lowest_price.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/ticketmaster.com/get_lowest_price",
-			"lastmod": "2026-10-01"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/ticketmaster.com/search_events",
 			"path": "scripts/ticketmaster.com/search_events.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/ticketmaster.com/search_events",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/ticketmaster.fr/search_events",
@@ -5975,7 +6071,7 @@
 			"address": "@reduck/tiktok.com/download_video",
 			"path": "scripts/tiktok.com/download_video.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/tiktok.com/download_video",
-			"lastmod": "2026-09-08"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/tiktok.com/edit_own_profile",
@@ -6059,7 +6155,7 @@
 			"address": "@reduck/tiktok.com/get_related_videos",
 			"path": "scripts/tiktok.com/get_related_videos.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/tiktok.com/get_related_videos",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/tiktok.com/get_search_suggestions",
@@ -6227,7 +6323,7 @@
 			"address": "@reduck/tradingview.com/get_ticker_overview",
 			"path": "scripts/tradingview.com/get_ticker_overview.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/tradingview.com/get_ticker_overview",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/trello.com/login_with_google",
@@ -6245,7 +6341,7 @@
 			"address": "@reduck/trello.com/whoami",
 			"path": "scripts/trello.com/whoami.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/trello.com/whoami",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/trends.google.com/explore_keyword",
@@ -6533,7 +6629,7 @@
 			"address": "@reduck/web.telegram.org/get_inbox",
 			"path": "scripts/web.telegram.org/get_inbox.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/web.telegram.org/get_inbox",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/web.telegram.org/get_own_profile",
@@ -6731,7 +6827,7 @@
 			"address": "@reduck/web.whatsapp.com/list_communities",
 			"path": "scripts/web.whatsapp.com/list_communities.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/web.whatsapp.com/list_communities",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/web.whatsapp.com/mark_read",
@@ -7091,7 +7187,7 @@
 			"address": "@reduck/x.com/get_follows",
 			"path": "scripts/x.com/get_follows.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/x.com/get_follows",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/x.com/get_inbox",
@@ -7145,13 +7241,13 @@
 			"address": "@reduck/x.com/get_quote_tweets",
 			"path": "scripts/x.com/get_quote_tweets.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/x.com/get_quote_tweets",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/x.com/get_reposters",
 			"path": "scripts/x.com/get_reposters.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/x.com/get_reposters",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/x.com/get_trending_topics",
@@ -7163,7 +7259,7 @@
 			"address": "@reduck/x.com/get_tweet",
 			"path": "scripts/x.com/get_tweet.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/x.com/get_tweet",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/x.com/get_user_info",
@@ -7175,7 +7271,7 @@
 			"address": "@reduck/x.com/get_user_posts",
 			"path": "scripts/x.com/get_user_posts.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/x.com/get_user_posts",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/x.com/get_user_replies",
@@ -7319,7 +7415,7 @@
 			"address": "@reduck/x.com/whoami",
 			"path": "scripts/x.com/whoami.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/x.com/whoami",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/xing.com/search_jobs",
@@ -7331,13 +7427,13 @@
 			"address": "@reduck/ycombinator.com/get_company",
 			"path": "scripts/ycombinator.com/get_company.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/ycombinator.com/get_company",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/ycombinator.com/search_companies",
 			"path": "scripts/ycombinator.com/search_companies.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/ycombinator.com/search_companies",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/yelp.com/get_business_photos",
@@ -7355,7 +7451,7 @@
 			"address": "@reduck/yelp.com/get_reviews",
 			"path": "scripts/yelp.com/get_reviews.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/yelp.com/get_reviews",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-10-29"
 		},
 		{
 			"address": "@reduck/yelp.com/search_businesses",
@@ -7499,7 +7595,7 @@
 			"address": "@reduck/zoom.us/whoami",
 			"path": "scripts/zoom.us/whoami.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/zoom.us/whoami",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-10-29"
 		}
 	]
 }

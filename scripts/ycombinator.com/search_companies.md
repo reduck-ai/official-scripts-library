@@ -4,7 +4,7 @@ Automatically search YC startup directory on ycombinator.com. Pull YC companies 
 
 - Site: ycombinator.com
 - Address: `reduck/ycombinator.com/search_companies`
-- Updated: 2026-10-22 (v5)
+- Updated: 2026-10-29 (v7)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -21,14 +21,14 @@ npx @reduck-ai/cli@latest run --script reduck/ycombinator.com/search_companies
 
 ## Input
 
-- `tag` (array, optional): Tags, e.g. ["Artificial Intelligence","SaaS","Developer Tools"]. OR within the list.
+- `tag` (array, optional): Tags, e.g. ["AI","SaaS","Developer Tools"]. OR within the list.
 - `page` (integer, optional): Zero-based page index. Loop it up to nbPages-1 to fetch everything.
-- `batch` (array, optional): Filter to these YC batches, e.g. ["Summer 2023","Winter 2024"]. OR within the list.
-- `count` (integer, optional): Alias for hitsPerPage — results per page. Takes precedence over hitsPerPage when both are set.
+- `batch` (array, optional): YC batches as the directory names them: season and year, e.g. ["Winter 2009","Summer 2024"]. Short forms such as "W24" are refused. OR within the list.
+- `count` (integer, optional): Alias for hitsPerPage. Takes precedence over hitsPerPage when both are set.
 - `query` (string, optional): Free-text search (company name, description, tags). Empty = browse the whole directory.
 - `region` (array, optional): HQ regions, e.g. ["United States of America","Europe","Remote"]. OR within the list.
 - `status` (array, optional): Company status. OR within the list.
-- `industry` (array, optional): Top-level industry categories, e.g. ["Fintech","B2B","Healthcare"]. OR within the list.
+- `industry` (array, optional): Industries or sub-industries, e.g. ["Fintech","Healthcare","Productivity"]. OR within the list.
 - `isHiring` (boolean, optional): Only companies currently hiring (true filters; false/omitted = no filter).
 - `nonprofit` (boolean, optional): Only nonprofits (true filters; false/omitted = no filter).
 - `topCompany` (boolean, optional): Only YC top companies (true filters; false/omitted = no filter).
@@ -91,7 +91,7 @@ Shape only: placeholder values generated from the output schema, not a real run.
 
 ### What does "Search YC startup directory" do?
 
-Search the YC startup directory (ycombinator.com/companies) by free-text query plus filters such as batch, industry, tag, region, status, and top/hiring/nonprofit; each multi-value filter is OR'd within itself. Zero-based pagination.
+Search the YC startup directory (ycombinator.com/companies) by free-text query plus filters: batch, industry or sub-industry, tag, region, status, and top company, hiring or nonprofit. The values of one filter are OR'd, and the filters are AND'd. Zero-based pagination. A search with no match returns an empty list. A filter value the directory does not know (for example "W24" in place of "Winter 2024") is refused with the valid values. The directory returns only the first 1000 results of one search, so a page past them is refused: narrow the search to get the rest.
 
 ### How do I automatically search YC startup directory on ycombinator.com?
 
@@ -115,7 +115,7 @@ No. It only uses pages of ycombinator.com that are reachable without signing in.
 
 ### Does it change anything on ycombinator.com, or only read data?
 
-Unknown: its author has not declared whether it changes anything on ycombinator.com, so treat it as if it could.
+It only reads. It looks things up on ycombinator.com and changes nothing there.
 
 ### How do I run it?
 

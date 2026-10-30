@@ -4,7 +4,7 @@ Automatically get the quote tweets of a post on X (Twitter) on x.com. Each quote
 
 - Site: x.com
 - Address: `reduck/x.com/get_quote_tweets`
-- Updated: 2026-10-22 (v10)
+- Updated: 2026-10-29 (v13)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -29,8 +29,9 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/get_quote_tweets
 
 - `url` (string, optional)
 - `count` (integer, optional): Number of quotes returned. 0 is a valid answer.
+- `total` (integer | null, optional): The number of quotes X states for the post. It can be larger than what X lists, as X hides some quotes. null when no quote is returned.
 - `tweets` (any, optional)
-- `complete` (boolean, optional): True when X showed the end of the quotes and every one it sent is returned. False when there may be more: count was reached, X stopped loading, or no count was given and the first page is not the end.
+- `complete` (boolean, optional): True when X showed the end of the quotes, every one it sent is returned, and their number reaches the total X states. False when there may be more: count was reached, X stopped loading, no count was given and the first page is not the end, or X ended its list below its stated total.
 
 ## Example output
 
@@ -40,6 +41,7 @@ Shape only: placeholder values generated from the output schema, not a real run.
 {
   "url": "https://example.com/item/123",
   "count": 3,
+  "total": 3,
   "tweets": "…",
   "complete": true
 }
@@ -65,7 +67,7 @@ Optional: url, urls, count.
 
 ### What does it return?
 
-It returns url, count, tweets, complete.
+It returns url, count, total, tweets, complete.
 
 ### Do I need to be logged in to x.com?
 

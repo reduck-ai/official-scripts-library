@@ -1,10 +1,10 @@
-# Get Event Lowest Ticket Price
+# Get Ticketmaster event lowest ticket price
 
-Automatically get Event Lowest Ticket Price on ticketmaster.com. Open a Ticketmaster event page and return the lowest listed ticket price (Ticketmaster's own default "lowest price first" ticket list ordering) plus currency.
+Automatically get Ticketmaster event lowest ticket price on ticketmaster.com. Open a Ticketmaster event page and return the lowest listed ticket price (Ticketmaster's own default "lowest price first" ticket list ordering) plus currency. Fails with a signed-out error when the browser is not signed in to Ticketmaster, and with an error when the event shows no ticket list (cancelled, sold out or off sale).
 
 - Site: ticketmaster.com
 - Address: `reduck/ticketmaster.com/get_lowest_price`
-- Updated: 2026-10-01 (v5)
+- Updated: 2026-10-29 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -27,17 +27,17 @@ npx @reduck-ai/cli@latest run --script reduck/ticketmaster.com/get_lowest_price
 
 ## FAQ
 
-### What does "Get Event Lowest Ticket Price" do?
+### What does "Get Ticketmaster event lowest ticket price" do?
 
-Open a Ticketmaster event page and return the lowest listed ticket price (Ticketmaster's own default "lowest price first" ticket list ordering) plus currency.
+Open a Ticketmaster event page and return the lowest listed ticket price (Ticketmaster's own default "lowest price first" ticket list ordering) plus currency. Fails with a signed-out error when the browser is not signed in to Ticketmaster, and with an error when the event shows no ticket list (cancelled, sold out or off sale).
 
-### How do I automatically get Event Lowest Ticket Price on ticketmaster.com?
+### How do I automatically get Ticketmaster event lowest ticket price on ticketmaster.com?
 
 Ask an AI agent connected to Reduck to run reduck/ticketmaster.com/get_lowest_price, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/ticketmaster.com/get_lowest_price
 
-### Is there a ticketmaster.com API to get Event Lowest Ticket Price?
+### Is there a ticketmaster.com API to get Ticketmaster event lowest ticket price?
 
-You do not need one. "Get Event Lowest Ticket Price" drives the real ticketmaster.com pages in a browser, so it works whether or not ticketmaster.com offers an API for this.
+You do not need one. "Get Ticketmaster event lowest ticket price" drives the real ticketmaster.com pages in a browser, so it works whether or not ticketmaster.com offers an API for this.
 
 ### What information do I need to provide?
 

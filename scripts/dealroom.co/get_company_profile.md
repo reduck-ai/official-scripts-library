@@ -4,7 +4,7 @@ Automatically get Company Profile on dealroom.co. Fetch a company's full Dealroo
 
 - Site: dealroom.co
 - Address: `reduck/dealroom.co/get_company_profile`
-- Updated: 2026-10-22 (v6)
+- Updated: 2026-10-29 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/dealroom.co/get_company_profile
 
 ## Input
 
-- `path` (string, required): Dealroom company path/slug, e.g. "revolut" (from a Dealroom company URL like dealroom.co/companies/revolut, or from Search Companies results).
+- `path` (string, required): Dealroom company path/slug, e.g. "revolut" (from Search Companies results), or the company's Dealroom URL, e.g. https://app.dealroom.co/companies/revolut.
 
 ## Output
 

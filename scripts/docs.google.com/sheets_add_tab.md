@@ -4,7 +4,7 @@ Automatically add tab on docs.google.com. Add a tab to a Google Spreadsheet, opt
 
 - Site: docs.google.com
 - Address: `reduck/docs.google.com/sheets_add_tab`
-- Updated: 2026-10-22 (v8)
+- Updated: 2026-10-29 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it

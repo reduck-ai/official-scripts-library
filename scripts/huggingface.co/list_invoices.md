@@ -1,10 +1,10 @@
 # Hugging Face — list invoices
 
-Automatically list invoices on huggingface.co. List Hugging Face billing invoices from /settings/billing/invoices (newest first). Each row carries period, status and amount; rows with a finalized Stripe invoice also expose hostedInvoiceUrl (https://invoice.stripe.com/i/...), which is null when HF doesn't render a downloadable invoice for that period. For org billing, set the active org's billing via the org URL first (this reads the personal/default billing scope).
+Automatically list invoices on huggingface.co. List the signed-in Hugging Face account's billing invoices, newest first. Each row has the period, status and amount; hostedInvoiceUrl links to the downloadable invoice, or is null when Hugging Face shows none for that period. Reads the personal billing scope, not an organization's. Fails with a sign-in error when the browser is signed out of Hugging Face.
 
 - Site: huggingface.co
 - Address: `reduck/huggingface.co/list_invoices`
-- Updated: 2026-08-19 (v2)
+- Updated: 2026-10-29 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -28,7 +28,7 @@ It takes no input.
 
 ### What does "Hugging Face — list invoices" do?
 
-List Hugging Face billing invoices from /settings/billing/invoices (newest first). Each row carries period, status and amount; rows with a finalized Stripe invoice also expose hostedInvoiceUrl (https://invoice.stripe.com/i/...), which is null when HF doesn't render a downloadable invoice for that period. For org billing, set the active org's billing via the org URL first (this reads the personal/default billing scope).
+List the signed-in Hugging Face account's billing invoices, newest first. Each row has the period, status and amount; hostedInvoiceUrl links to the downloadable invoice, or is null when Hugging Face shows none for that period. Reads the personal billing scope, not an organization's. Fails with a sign-in error when the browser is signed out of Hugging Face.
 
 ### How do I automatically list invoices on huggingface.co?
 

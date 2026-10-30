@@ -4,7 +4,7 @@ Automatically get Notion Marketplace custom agent on app.notion.com. Fetch one N
 
 - Site: app.notion.com
 - Address: `reduck/app.notion.com/get_marketplace_agent`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-10-29 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

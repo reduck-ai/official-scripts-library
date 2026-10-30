@@ -1,10 +1,10 @@
 # Get Yelp business reviews
 
-Automatically get Yelp business reviews on yelp.com. List a Yelp business's reviews by slug, paginated. Returns author, rating, date, review text, and reaction counts (helpful/thanks/love this/oh no) per review.
+Automatically get Yelp business reviews on yelp.com. List a Yelp business's reviews by slug, 10 per page from start (0, 10, 20...). Returns author, rating, ISO date, review text and reaction counts (helpful/thanks/love this/oh no) per review, plus the business's total review count and has_more. A page past the last review returns an empty list; an unknown slug fails with a message to check the slug.
 
 - Site: yelp.com
 - Address: `reduck/yelp.com/get_reviews`
-- Updated: 2026-10-22 (v10)
+- Updated: 2026-10-29 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -25,13 +25,15 @@ npx @reduck-ai/cli@latest run --script reduck/yelp.com/get_reviews
 - `slug` (string, optional)
 - `count` (integer, optional)
 - `start` (integer, optional)
+- `total` (integer | null, optional): Total reviews Yelp lists for the business.
 - `reviews` (array, optional)
+- `has_more` (boolean, optional): True when Yelp has a next page (call again with start + 10).
 
 ## FAQ
 
 ### What does "Get Yelp business reviews" do?
 
-List a Yelp business's reviews by slug, paginated. Returns author, rating, date, review text, and reaction counts (helpful/thanks/love this/oh no) per review.
+List a Yelp business's reviews by slug, 10 per page from start (0, 10, 20...). Returns author, rating, ISO date, review text and reaction counts (helpful/thanks/love this/oh no) per review, plus the business's total review count and has_more. A page past the last review returns an empty list; an unknown slug fails with a message to check the slug.
 
 ### How do I automatically get Yelp business reviews on yelp.com?
 
@@ -47,7 +49,7 @@ Required: slug. Optional: start.
 
 ### What does it return?
 
-It returns slug, count, start, reviews.
+It returns slug, count, start, total, reviews, has_more.
 
 ### Do I need to be logged in to yelp.com?
 

@@ -4,7 +4,7 @@ Automatically list workspaces on console.anthropic.com. List the workspaces of a
 
 - Site: console.anthropic.com
 - Address: `reduck/console.anthropic.com/list_workspaces`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-10-29 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

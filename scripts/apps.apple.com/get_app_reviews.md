@@ -4,7 +4,7 @@ Automatically get App Store app reviews on apps.apple.com. Read an App Store app
 
 - Site: apps.apple.com
 - Address: `reduck/apps.apple.com/get_app_reviews`
-- Updated: 2026-09-18 (v2)
+- Updated: 2026-10-29 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

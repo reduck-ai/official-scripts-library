@@ -4,7 +4,7 @@ Automatically get TradingView ticker overview on tradingview.com. Read a Trading
 
 - Site: tradingview.com
 - Address: `reduck/tradingview.com/get_ticker_overview`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-10-29 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/tradingview.com/get_ticker_overvie
 
 ## Input
 
-- `symbol` (string, required): Ticker, either bare ("AAPL") or exchange-qualified ("NASDAQ:AAPL", "LSE:BARC"). A bare ticker is resolved by TradingView's own redirect to whichever listing it treats as primary — the listing actually returned is reported as resolvedSymbol. Either ":" or "-" is accepted as the exchange separator.
+- `symbol` (string, required): Ticker, either bare ("AAPL") or exchange-qualified ("NASDAQ:AAPL", "LSE:BARC"), or a TradingView symbol page URL (https://www.tradingview.com/symbols/NASDAQ-AAPL/). A bare ticker is resolved by TradingView's own redirect to whichever listing it treats as primary — the listing actually returned is reported as resolvedSymbol. Either ":" or "-" is accepted as the exchange separator.
 
 ## Output
 

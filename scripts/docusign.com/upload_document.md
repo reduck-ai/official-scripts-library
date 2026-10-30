@@ -4,7 +4,7 @@ Automatically upload a document as a draft envelope on docusign.com. Upload a do
 
 - Site: docusign.com
 - Address: `reduck/docusign.com/upload_document`
-- Updated: 2026-10-22 (v12)
+- Updated: 2026-10-29 (v21)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,8 +17,9 @@ npx @reduck-ai/cli@latest run --script reduck/docusign.com/upload_document
 
 ## Input
 
-- `document` (string, required): The file to upload: PDF, Word, Excel, PowerPoint, image, text, etc.
 - `documentName` (string, required): File name shown in DocuSign, with extension (e.g. "contract.pdf"). The extension tells DocuSign the file type.
+- `document` (string, optional): The file to upload: PDF, Word, Excel, PowerPoint, image, text, etc. Pass this or documentUrl.
+- `documentUrl` (string, optional): A direct link to the file to upload, read by the browser itself (for a file already online). Pass this or document.
 
 ## Output
 
@@ -44,7 +45,7 @@ You do not need one. "DocuSign — upload a document as a draft envelope" drives
 
 ### What information do I need to provide?
 
-Required: document, documentName.
+Required: documentName. Optional: document, documentUrl.
 
 ### What does it return?
 

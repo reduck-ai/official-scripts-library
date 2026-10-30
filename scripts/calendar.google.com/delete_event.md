@@ -4,7 +4,7 @@ Automatically delete a Google Calendar event on calendar.google.com. Delete an e
 
 - Site: calendar.google.com
 - Address: `reduck/calendar.google.com/delete_event`
-- Updated: 2026-10-22 (v5)
+- Updated: 2026-10-29 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/calendar.google.com/delete_event
 
 ## Input
 
-- `eid` (string, required)
+- `eid` (string, required): The event's eid (from list_events, search_events or create_event), or a Google Calendar event link that carries it (…/eventedit/<eid> or …?eid=<eid>).
 
 ## Output
 

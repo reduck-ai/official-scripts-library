@@ -1,10 +1,10 @@
 # Download TikTok video (mp4)
 
-Automatically download TikTok video (mp4) on tiktok.com. Download a TikTok video's mp4 bytes by URL or id, returned as base64 (caller decodes to a file). Pick a quality to control size.
+Automatically download TikTok video (mp4) on tiktok.com. Download a TikTok video as an mp4 file by URL or id. Returns the saved file's name, its path on your own Chrome (or a link on a managed browser) and its size. Pick a quality to control size. An unknown, deleted or private video fails with a message to check the URL or id.
 
 - Site: tiktok.com
 - Address: `reduck/tiktok.com/download_video`
-- Updated: 2026-09-08 (v3)
+- Updated: 2026-10-29 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -23,17 +23,19 @@ npx @reduck-ai/cli@latest run --script reduck/tiktok.com/download_video
 ## Output
 
 - `mime` (string, required)
-- `base64` (string, required): Base64-encoded mp4 bytes. Decode and write to a .mp4 file.
 - `videoId` (string, required)
-- `sizeBytes` (integer, required): Decoded mp4 size in bytes.
+- `filename` (string, required): Saved file name (can end in " (2)").
+- `sizeBytes` (integer, required): Size of the mp4 in bytes.
+- `url` (string | null, optional): Link to the saved mp4 (managed browser).
+- `path` (string | null, optional): Where the mp4 was saved on the machine running the browser (your own Chrome).
 - `quality` (string, optional)
-- `gearName` (string | null, optional): TikTok's internal rendition label for the chosen quality.
+- `gearName` (string | null, optional): TikTok's own label for the chosen rendition.
 
 ## FAQ
 
 ### What does "Download TikTok video (mp4)" do?
 
-Download a TikTok video's mp4 bytes by URL or id, returned as base64 (caller decodes to a file). Pick a quality to control size.
+Download a TikTok video as an mp4 file by URL or id. Returns the saved file's name, its path on your own Chrome (or a link on a managed browser) and its size. Pick a quality to control size. An unknown, deleted or private video fails with a message to check the URL or id.
 
 ### How do I automatically download TikTok video (mp4) on tiktok.com?
 
@@ -49,7 +51,7 @@ Required: video. Optional: quality.
 
 ### What does it return?
 
-It returns mime, base64, quality, videoId, gearName, sizeBytes.
+It returns url, mime, path, quality, videoId, filename, gearName, sizeBytes.
 
 ### Do I need to be logged in to tiktok.com?
 

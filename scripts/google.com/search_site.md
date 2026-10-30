@@ -4,7 +4,7 @@ Automatically search Google on google.com. You get about ten organic results per
 
 - Site: google.com
 - Address: `reduck/google.com/search_site`
-- Updated: 2026-10-27 (v33)
+- Updated: 2026-10-29 (v35)
 - Author: Reduck AI (reduck)
 
 ## About

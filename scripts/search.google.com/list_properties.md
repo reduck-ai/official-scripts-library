@@ -4,7 +4,7 @@ Automatically list Google Search Console properties on search.google.com. Lists 
 
 - Site: search.google.com
 - Address: `reduck/search.google.com/list_properties`
-- Updated: 2026-10-22 (v4)
+- Updated: 2026-10-29 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/search.google.com/list_properties
 
 ## Input
 
-It takes no input.
+- `account` (integer, optional): Which of the browser's signed-in Google accounts to list the properties of, by its number from mail.google.com/list_accounts. Default 0, the browser's first account.
 
 ## Output
 
@@ -40,7 +40,7 @@ You do not need one. "List Google Search Console properties" drives the real sea
 
 ### What information do I need to provide?
 
-Nothing. It takes no input.
+Optional: account.
 
 ### What does it return?
 

@@ -4,7 +4,7 @@ Automatically get Semrush Site Audit errors and warnings on semrush.com. List ev
 
 - Site: semrush.com
 - Address: `reduck/semrush.com/get_site_audit_issues`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-10-29 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

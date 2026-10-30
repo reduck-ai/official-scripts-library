@@ -1,10 +1,10 @@
 # Zoom whoami (signed-in account)
 
-Report which Zoom account this browser is signed in as: the user id, account id, sign-in email and the account's web domain (e.g. us05web.zoom.us). Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Zoom scripts. Works in any Zoom interface language.
+Report which Zoom account this browser is signed in as: the user id, account id, sign-in email and the account's web domain (e.g. us05web.zoom.us). When the browser is not signed in to Zoom, the run fails with a sign-in error that says to sign in and retry. Works in any Zoom interface language.
 
 - Site: zoom.us
 - Address: `reduck/zoom.us/whoami`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-10-29 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -32,7 +32,7 @@ It takes no input.
 
 ### What does "Zoom whoami (signed-in account)" do?
 
-Report which Zoom account this browser is signed in as: the user id, account id, sign-in email and the account's web domain (e.g. us05web.zoom.us). Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Zoom scripts. Works in any Zoom interface language.
+Report which Zoom account this browser is signed in as: the user id, account id, sign-in email and the account's web domain (e.g. us05web.zoom.us). When the browser is not signed in to Zoom, the run fails with a sign-in error that says to sign in and retry. Works in any Zoom interface language.
 
 ### What information do I need to provide?
 

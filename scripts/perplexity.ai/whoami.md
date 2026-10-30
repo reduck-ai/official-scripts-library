@@ -1,10 +1,10 @@
 # Perplexity whoami
 
-Report which Perplexity account this browser is signed in as: the account email and user id. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Perplexity scripts.
+Report which Perplexity account this browser is signed in as: the account email and user id. When the browser is not signed in to Perplexity, the run fails with a sign-in error that says to sign in and retry.
 
 - Site: perplexity.ai
 - Address: `reduck/perplexity.ai/whoami`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-10-29 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,7 +29,7 @@ It takes no input.
 
 ### What does "Perplexity whoami" do?
 
-Report which Perplexity account this browser is signed in as: the account email and user id. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Perplexity scripts.
+Report which Perplexity account this browser is signed in as: the account email and user id. When the browser is not signed in to Perplexity, the run fails with a sign-in error that says to sign in and retry.
 
 ### What information do I need to provide?
 

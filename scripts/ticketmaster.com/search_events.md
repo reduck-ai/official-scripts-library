@@ -1,10 +1,10 @@
-# Search Events
+# Search Ticketmaster events
 
-Automatically search Events on ticketmaster.com. Search Ticketmaster for events by keyword and return the top results: title, id, url, venue/city/state, start date, and cancelled/soldOut flags.
+Automatically search Ticketmaster events on ticketmaster.com. Search Ticketmaster for events by keyword and return the top results: title, id, url, venue/city/state, start date, and cancelled/soldOut flags.
 
 - Site: ticketmaster.com
 - Address: `reduck/ticketmaster.com/search_events`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-10-29 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -28,17 +28,17 @@ npx @reduck-ai/cli@latest run --script reduck/ticketmaster.com/search_events
 
 ## FAQ
 
-### What does "Search Events" do?
+### What does "Search Ticketmaster events" do?
 
 Search Ticketmaster for events by keyword and return the top results: title, id, url, venue/city/state, start date, and cancelled/soldOut flags.
 
-### How do I automatically search Events on ticketmaster.com?
+### How do I automatically search Ticketmaster events on ticketmaster.com?
 
 Ask an AI agent connected to Reduck to run reduck/ticketmaster.com/search_events, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/ticketmaster.com/search_events
 
-### Is there a ticketmaster.com API to search Events?
+### Is there a ticketmaster.com API to search Ticketmaster events?
 
-You do not need one. "Search Events" drives the real ticketmaster.com pages in a browser, so it works whether or not ticketmaster.com offers an API for this.
+You do not need one. "Search Ticketmaster events" drives the real ticketmaster.com pages in a browser, so it works whether or not ticketmaster.com offers an API for this.
 
 ### What information do I need to provide?
 

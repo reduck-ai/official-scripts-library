@@ -4,7 +4,7 @@ Automatically get LinkedIn company info on linkedin.com. Get a LinkedIn company'
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_company_info`
-- Updated: 2026-10-22 (v20)
+- Updated: 2026-10-29 (v22)
 - Author: Reduck AI (reduck)
 
 ## Run it

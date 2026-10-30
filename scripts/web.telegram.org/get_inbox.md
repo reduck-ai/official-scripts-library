@@ -4,7 +4,7 @@ Automatically get Telegram inbox on web.telegram.org. List the conversations in 
 
 - Site: web.telegram.org
 - Address: `reduck/web.telegram.org/get_inbox`
-- Updated: 2026-10-22 (v6)
+- Updated: 2026-10-29 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,13 +18,13 @@ npx @reduck-ai/cli@latest run --script reduck/web.telegram.org/get_inbox
 ## Input
 
 - `count` (integer, optional): Maximum conversations to return, scrolling the chat list to load older ones.
-- `since` (string, optional): Optional ISO datetime. Return only conversations whose last activity is at or after this instant, which is how a caller polls for new messages. Conversations whose timestamp could not be resolved are always returned, never silently dropped.
 
 ## Output
 
-- `chats` (array, required): Conversations in the order the chat list shows them (most recent activity first). Empty when the account has none.
-- `count` (integer, required): How many conversations were returned.
-- `state` (string, required): "ready" when the chat list rendered rows. "empty" when the app shell mounted and the chat list then STAYED empty for a hold period (4s with the list container mounted, 12s without), which is how an account with no conversations looks - reported rather than treated as a failure. The hold is what distinguishes it from an account still syncing, whose list fills during the hold; a run that never settles either way throws instead, as does being signed out, so neither can be confused with "empty". Renamed from "empty-or-syncing" in v2: that hedge existed only because v1 could not tell the two states apart.
+- `chats` (array, required)
+- `count` (integer, required)
+- `state` (string, required)
+- `complete` (boolean, required): True when every conversation of the chat list was returned; false when count stopped the list first.
 
 ## FAQ
 
@@ -42,11 +42,11 @@ You do not need one. "Get Telegram inbox" drives the real web.telegram.org pages
 
 ### What information do I need to provide?
 
-Optional: count, since.
+Optional: count.
 
 ### What does it return?
 
-It returns chats, count, state.
+It returns chats, count, state, complete.
 
 ### Do I need to be logged in to web.telegram.org?
 

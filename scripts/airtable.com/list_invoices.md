@@ -1,10 +1,10 @@
 # List Airtable invoices
 
-Automatically list Airtable invoices on airtable.com. List Airtable workspace billing invoices across every workspace you have billing access to. Each invoice resolves to its Stripe hosted invoice URL (download via invoice.stripe.com/download_invoice_pdf). Returns total plus invoices (workspace, date, amount, status, hosted_invoice_url). Billing is per-workspace and only the workspace billing owner sees the Billing tab; workspaces without paid history return no invoices.
+Automatically list Airtable invoices on airtable.com. List Airtable workspace billing invoices across every workspace you have billing access to. Returns total plus invoices (workspace, date, amount, status, hosted_invoice_url: the invoice's hosted page, where it can be downloaded). Billing is per workspace and only the workspace billing owner sees it; workspaces without paid history return no invoices. Requires a signed-in Airtable account; fails with a sign-in error otherwise.
 
 - Site: airtable.com
 - Address: `reduck/airtable.com/list_invoices`
-- Updated: 2026-10-22 (v6)
+- Updated: 2026-10-29 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -28,7 +28,7 @@ It takes no input.
 
 ### What does "List Airtable invoices" do?
 
-List Airtable workspace billing invoices across every workspace you have billing access to. Each invoice resolves to its Stripe hosted invoice URL (download via invoice.stripe.com/download_invoice_pdf). Returns total plus invoices (workspace, date, amount, status, hosted_invoice_url). Billing is per-workspace and only the workspace billing owner sees the Billing tab; workspaces without paid history return no invoices.
+List Airtable workspace billing invoices across every workspace you have billing access to. Returns total plus invoices (workspace, date, amount, status, hosted_invoice_url: the invoice's hosted page, where it can be downloaded). Billing is per workspace and only the workspace billing owner sees it; workspaces without paid history return no invoices. Requires a signed-in Airtable account; fails with a sign-in error otherwise.
 
 ### How do I automatically list Airtable invoices on airtable.com?
 

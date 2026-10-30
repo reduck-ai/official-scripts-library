@@ -4,7 +4,7 @@ Automatically download an OpenAI platform invoice PDF on platform.openai.com. An
 
 - Site: platform.openai.com
 - Address: `reduck/platform.openai.com/download_invoice_pdf`
-- Updated: 2026-10-22 (v6)
+- Updated: 2026-10-29 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

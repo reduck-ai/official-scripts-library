@@ -1,10 +1,10 @@
 # Twilio Console: list invoices
 
-Automatically list invoices on console.twilio.com. List the signed-in Twilio account's monthly payment receipts (payments, totals, invoiceId for download_invoice) and usage statements.
+Automatically list invoices on console.twilio.com. List the signed-in Twilio account's monthly payment receipts, newest first: for each month with payments, its total, currency, each payment (date, amount, tax, status, masked card) and the receipt id to pass to download_invoice. Reads maxMonths calendar months (12 by default) starting with the current month, or with the month given; monthsRead lists every month read, with or without payments. A signed-out browser is reported as such.
 
 - Site: console.twilio.com
 - Address: `reduck/console.twilio.com/list_invoices`
-- Updated: 2026-10-22 (v7)
+- Updated: 2026-10-29 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,21 +17,20 @@ npx @reduck-ai/cli@latest run --script reduck/console.twilio.com/list_invoices
 
 ## Input
 
-- `maxMonths` (integer, optional): How many months with payment activity to include, newest first.
+- `month` (string, optional): The newest month to read, YYYY-MM; earlier months follow. Omit to start with the current month.
+- `maxMonths` (integer, optional): How many calendar months to read, newest first.
 
 ## Output
 
-- `receipts` (array, required)
-- `statements` (array, required)
+- `receipts` (array, required): One receipt per month that holds payments, newest first.
+- `monthsRead` (array, required): Every month read, YYYY-MM, newest first, with or without payments.
 - `receiptCount` (integer, required)
-- `statementCount` (integer, required)
-- `monthsWithActivity` (array, optional)
 
 ## FAQ
 
 ### What does "Twilio Console: list invoices" do?
 
-List the signed-in Twilio account's monthly payment receipts (payments, totals, invoiceId for download_invoice) and usage statements.
+List the signed-in Twilio account's monthly payment receipts, newest first: for each month with payments, its total, currency, each payment (date, amount, tax, status, masked card) and the receipt id to pass to download_invoice. Reads maxMonths calendar months (12 by default) starting with the current month, or with the month given; monthsRead lists every month read, with or without payments. A signed-out browser is reported as such.
 
 ### How do I automatically list invoices on console.twilio.com?
 
@@ -43,11 +42,11 @@ You do not need one. "Twilio Console: list invoices" drives the real console.twi
 
 ### What information do I need to provide?
 
-Optional: maxMonths.
+Optional: month, maxMonths.
 
 ### What does it return?
 
-It returns receipts, statements, receiptCount, statementCount, monthsWithActivity.
+It returns receipts, monthsRead, receiptCount.
 
 ### Do I need to be logged in to console.twilio.com?
 

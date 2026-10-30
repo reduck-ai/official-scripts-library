@@ -4,7 +4,7 @@ Automatically get Instagram user reels on instagram.com. Fetch an Instagram user
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/get_user_reels`
-- Updated: 2026-10-28 (v13)
+- Updated: 2026-10-29 (v14)
 - Author: Reduck AI (reduck)
 
 ## Run it

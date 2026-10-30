@@ -4,7 +4,7 @@ Automatically list Google Search Console sitemaps on search.google.com. Lists th
 
 - Site: search.google.com
 - Address: `reduck/search.google.com/list_sitemaps`
-- Updated: 2026-10-22 (v5)
+- Updated: 2026-10-29 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,6 +18,7 @@ npx @reduck-ai/cli@latest run --script reduck/search.google.com/list_sitemaps
 ## Input
 
 - `siteUrl` (string, required): The property, exactly as search.google.com/list_properties returns it: a URL prefix such as https://example.com/ or sc-domain:example.com.
+- `account` (integer, optional): Which of the browser's signed-in Google accounts to act as, by its number from mail.google.com/list_accounts. Default 0, the browser's first account.
 
 ## Output
 
@@ -40,7 +41,7 @@ You do not need one. "List Google Search Console sitemaps" drives the real searc
 
 ### What information do I need to provide?
 
-Required: siteUrl.
+Required: siteUrl. Optional: account.
 
 ### What does it return?
 

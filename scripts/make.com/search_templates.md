@@ -4,7 +4,7 @@ Automatically search Make.com public templates on make.com. Search Make's public
 
 - Site: make.com
 - Address: `reduck/make.com/search_templates`
-- Updated: 2026-10-22 (v5)
+- Updated: 2026-10-29 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

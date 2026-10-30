@@ -4,7 +4,7 @@ Automatically get X (Twitter) user posts on x.com. Get an X (Twitter) user's lat
 
 - Site: x.com
 - Address: `reduck/x.com/get_user_posts`
-- Updated: 2026-10-22 (v27)
+- Updated: 2026-10-29 (v28)
 - Author: Reduck AI (reduck)
 
 ## Run it

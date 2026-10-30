@@ -4,7 +4,7 @@ Automatically get Instagram post likers on instagram.com. Fetch the accounts tha
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/get_post_likers`
-- Updated: 2026-10-22 (v7)
+- Updated: 2026-10-29 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -25,6 +25,7 @@ npx @reduck-ai/cli@latest run --script reduck/instagram.com/get_post_likers
 - `code` (string, required)
 - `likers` (array, required)
 - `url` (string, optional)
+- `complete` (boolean, optional): False when count cut the list or Instagram listed fewer likers than like_count
 - `like_count` (integer | null, optional)
 - `available_count` (integer, optional): How many liker entries Instagram exposed in this preview response — its own cap, not the same as like_count
 
@@ -48,7 +49,7 @@ Required: code. Optional: count.
 
 ### What does it return?
 
-It returns url, code, likers, like_count, available_count.
+It returns url, code, likers, complete, like_count, available_count.
 
 ### Do I need to be logged in to instagram.com?
 

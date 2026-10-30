@@ -4,7 +4,7 @@ Automatically list the tasks in a ClickUp list on app.clickup.com. Reads the tas
 
 - Site: app.clickup.com
 - Address: `reduck/app.clickup.com/list_tasks`
-- Updated: 2026-09-23 (v2)
+- Updated: 2026-10-29 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -1,10 +1,10 @@
-# List booked tickets (future / past / pending options)
+# List SNCF Connect booked tickets (future / past / pending options)
 
-Automatically list booked tickets (future / past / pending options) on sncf-connect.com. List the account's booked tickets from SNCF Connect "Billets > Vos voyages": upcoming trips, past trips, and pending free options (pre-reservations). SNCF Connect exposes no "cancelled tickets" list — a cancelled trip simply disappears; this is a site limitation, not a filter. Requires login. Runs only via the local browser extension, not the hosted cloud browser.
+Automatically list SNCF Connect booked tickets (future / past / pending options) on sncf-connect.com. List the account's booked SNCF Connect tickets: upcoming trips, past trips, and pending free options (pre-reservations), with price paid, fare and its conditions, and insurance. SNCF Connect keeps no list of cancelled tickets: a cancelled trip disappears from these lists. Requires a signed-in SNCF Connect account; fails with a sign-in error otherwise.
 
 - Site: sncf-connect.com
 - Address: `reduck/sncf-connect.com/list_tickets`
-- Updated: 2026-10-22 (v6)
+- Updated: 2026-10-29 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -47,17 +47,17 @@ Shape only: placeholder values generated from the output schema, not a real run.
 
 ## FAQ
 
-### What does "List booked tickets (future / past / pending options)" do?
+### What does "List SNCF Connect booked tickets (future / past / pending options)" do?
 
-List the account's booked tickets from SNCF Connect "Billets > Vos voyages": upcoming trips, past trips, and pending free options (pre-reservations). SNCF Connect exposes no "cancelled tickets" list — a cancelled trip simply disappears; this is a site limitation, not a filter. Requires login. Runs only via the local browser extension, not the hosted cloud browser.
+List the account's booked SNCF Connect tickets: upcoming trips, past trips, and pending free options (pre-reservations), with price paid, fare and its conditions, and insurance. SNCF Connect keeps no list of cancelled tickets: a cancelled trip disappears from these lists. Requires a signed-in SNCF Connect account; fails with a sign-in error otherwise.
 
-### How do I automatically list booked tickets (future / past / pending options) on sncf-connect.com?
+### How do I automatically list SNCF Connect booked tickets (future / past / pending options) on sncf-connect.com?
 
 Ask an AI agent connected to Reduck to run reduck/sncf-connect.com/list_tickets, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/sncf-connect.com/list_tickets
 
-### Is there a sncf-connect.com API to list booked tickets (future / past / pending options)?
+### Is there a sncf-connect.com API to list SNCF Connect booked tickets (future / past / pending options)?
 
-You do not need one. "List booked tickets (future / past / pending options)" drives the real sncf-connect.com pages in a browser, so it works whether or not sncf-connect.com offers an API for this.
+You do not need one. "List SNCF Connect booked tickets (future / past / pending options)" drives the real sncf-connect.com pages in a browser, so it works whether or not sncf-connect.com offers an API for this.
 
 ### What information do I need to provide?
 

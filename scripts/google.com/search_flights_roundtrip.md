@@ -4,7 +4,7 @@ Search round-trip flights on Google Flights from an explicit origin and destinat
 
 - Site: google.com
 - Address: `reduck/google.com/search_flights_roundtrip`
-- Updated: 2026-10-23 (v7)
+- Updated: 2026-10-29 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it

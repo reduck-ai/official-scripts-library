@@ -1,10 +1,10 @@
 # Trello whoami (signed-in account)
 
-Report which Trello account this browser is signed in as: the member id, username, full name and email. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Trello scripts.
+Report which Trello account this browser is signed in as: the member id, username, full name and email. When the browser is not signed in to Trello, the run fails with a sign-in error that says to sign in and retry.
 
 - Site: trello.com
 - Address: `reduck/trello.com/whoami`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-10-29 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -32,7 +32,7 @@ It takes no input.
 
 ### What does "Trello whoami (signed-in account)" do?
 
-Report which Trello account this browser is signed in as: the member id, username, full name and email. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Trello scripts.
+Report which Trello account this browser is signed in as: the member id, username, full name and email. When the browser is not signed in to Trello, the run fails with a sign-in error that says to sign in and retry.
 
 ### What information do I need to provide?
 

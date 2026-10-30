@@ -4,7 +4,7 @@ Automatically update a Shopify product's price on admin.shopify.com. Changes the
 
 - Site: admin.shopify.com
 - Address: `reduck/admin.shopify.com/update_product_price`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-10-29 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

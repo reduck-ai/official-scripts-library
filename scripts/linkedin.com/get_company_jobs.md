@@ -4,7 +4,7 @@ Automatically get LinkedIn company jobs on linkedin.com. Get a LinkedIn company'
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_company_jobs`
-- Updated: 2026-10-13 (v9)
+- Updated: 2026-10-29 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it

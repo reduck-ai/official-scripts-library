@@ -1,10 +1,10 @@
 # Send an Outlook.com email
 
-Automatically send an Outlook.com email on outlook.live.com. Send an email from Outlook.com (outlook.live.com) to a recipient, with a subject and body. Confirms the message actually left by finding it in Sent Items, rather than assuming the Send click worked.
+Automatically send an Outlook.com email on outlook.live.com. Send an email from Outlook.com (outlook.live.com) to a recipient, with a subject and body and an optional single file attachment. Confirms the message actually left by finding it in Sent Items, rather than assuming the Send click worked. With a file, Send is pressed only once Outlook has accepted the attachment; a file Outlook refuses stops the run with nothing sent.
 
 - Site: outlook.live.com
 - Address: `reduck/outlook.live.com/send_email`
-- Updated: 2026-10-23 (v6)
+- Updated: 2026-10-29 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -20,7 +20,9 @@ npx @reduck-ai/cli@latest run --script reduck/outlook.live.com/send_email
 - `to` (string, required): Recipient email address, e.g. someone@example.com
 - `body` (string, optional): Plain text body of the message. Give a subject, a body, or both — a message with neither cannot be identified in Sent Items afterwards, so the send could not be confirmed.
 - `subject` (string, optional): Subject line. Give a subject, a body, or both — a message with neither cannot be identified in Sent Items afterwards, so the send could not be confirmed.
+- `attachment` (string, optional): Optional file to attach. From an agent: files: { attachment: { relativePath: "invoice.pdf" } }, a name inside the reduck folder on the Desktop. From the CLI: file:attachment=/path/to/file. Omit it to send without an attachment.
 - `sentFolder` (string, optional): Name of a folder, as shown in your folder list, to confirm the message in instead of the mailbox's own sent-mail folder. Omit it to use the sent-mail folder, in any language.
+- `attachmentName` (string, optional): Filename the recipient sees, with its extension (e.g. 'invoice.pdf'). Defaults to the file's own name, which a file named by relativePath keeps. Pass it when sending bytes from the CLI, where the file otherwise arrives named 'attachment'.
 
 ## Output
 
@@ -30,14 +32,15 @@ npx @reduck-ai/cli@latest run --script reduck/outlook.live.com/send_email
 - `body` (string | null, optional)
 - `sentId` (string | null, optional): Row id of the message in Sent Items.
 - `composed` (object | null, optional): What the composer held just before sending. Separates a fill failure from a send failure.
+- `attachment` (string | null, optional): The filename the attachment was sent under, when one was attached; null otherwise.
 - `unsentReason` (string | null, optional)
-- `confirmationDialog` (boolean, optional): Whether Outlook asked for confirmation before sending, which it does when the message has no subject. It is confirmed automatically; the message is sent either way.
+- `confirmationDialog` (boolean, optional): Whether Outlook asked for confirmation before sending, as it does for a message with no subject, or for one whose text mentions an attachment that is not attached. It is confirmed automatically; the message is sent either way.
 
 ## FAQ
 
 ### What does "Send an Outlook.com email" do?
 
-Send an email from Outlook.com (outlook.live.com) to a recipient, with a subject and body. Confirms the message actually left by finding it in Sent Items, rather than assuming the Send click worked.
+Send an email from Outlook.com (outlook.live.com) to a recipient, with a subject and body and an optional single file attachment. Confirms the message actually left by finding it in Sent Items, rather than assuming the Send click worked. With a file, Send is pressed only once Outlook has accepted the attachment; a file Outlook refuses stops the run with nothing sent.
 
 ### How do I automatically send an Outlook.com email on outlook.live.com?
 
@@ -49,11 +52,11 @@ You do not need one. "Send an Outlook.com email" drives the real outlook.live.co
 
 ### What information do I need to provide?
 
-Required: to. Optional: body, subject, sentFolder.
+Required: to. Optional: body, subject, attachment, sentFolder, attachmentName.
 
 ### What does it return?
 
-It returns to, body, sent, sentId, subject, composed, unsentReason, confirmationDialog.
+It returns to, body, sent, sentId, subject, composed, attachment, unsentReason, confirmationDialog.
 
 ### Do I need to be logged in to outlook.live.com?
 

@@ -1,10 +1,10 @@
-# List all cabinets
+# List Barreau de Nantes law firms
 
-Automatically list all cabinets on barreaunantes.fr. All law firms (cabinets) in the Barreau de Nantes directory — read straight from the directory form's cabinet dropdown.
+Automatically list Barreau de Nantes law firms on barreaunantes.fr. All law firms (cabinets) listed in the Barreau de Nantes online directory, as their names, with the count.
 
 - Site: barreaunantes.fr
 - Address: `reduck/barreaunantes.fr/list_cabinets`
-- Updated: 2026-09-21 (v2)
+- Updated: 2026-10-29 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -26,17 +26,17 @@ It takes no input.
 
 ## FAQ
 
-### What does "List all cabinets" do?
+### What does "List Barreau de Nantes law firms" do?
 
-All law firms (cabinets) in the Barreau de Nantes directory — read straight from the directory form's cabinet dropdown.
+All law firms (cabinets) listed in the Barreau de Nantes online directory, as their names, with the count.
 
-### How do I automatically list all cabinets on barreaunantes.fr?
+### How do I automatically list Barreau de Nantes law firms on barreaunantes.fr?
 
 Ask an AI agent connected to Reduck to run reduck/barreaunantes.fr/list_cabinets, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/barreaunantes.fr/list_cabinets
 
-### Is there a barreaunantes.fr API to list all cabinets?
+### Is there a barreaunantes.fr API to list Barreau de Nantes law firms?
 
-You do not need one. "List all cabinets" drives the real barreaunantes.fr pages in a browser, so it works whether or not barreaunantes.fr offers an API for this.
+You do not need one. "List Barreau de Nantes law firms" drives the real barreaunantes.fr pages in a browser, so it works whether or not barreaunantes.fr offers an API for this.
 
 ### What information do I need to provide?
 
@@ -52,7 +52,7 @@ No. It only uses pages of barreaunantes.fr that are reachable without signing in
 
 ### Does it change anything on barreaunantes.fr, or only read data?
 
-Unknown: its author has not declared whether it changes anything on barreaunantes.fr, so treat it as if it could.
+It only reads. It looks things up on barreaunantes.fr and changes nothing there.
 
 ### How do I run it?
 

@@ -4,7 +4,7 @@ Automatically list orders and invoices on adobe.com. List the orders / invoices 
 
 - Site: adobe.com
 - Address: `reduck/adobe.com/list_orders`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-10-29 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

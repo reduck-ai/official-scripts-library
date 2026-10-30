@@ -4,7 +4,7 @@ Automatically set Claude.ai model and effort on claude.ai. Change the model and/
 
 - Site: claude.ai
 - Address: `reduck/claude.ai/set_model`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-10-29 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

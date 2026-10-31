@@ -4,7 +4,7 @@ Automatically get YouTube video on youtube.com. Get a single YouTube video's met
 
 - Site: youtube.com
 - Address: `reduck/youtube.com/get_video`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-10-30 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -69,7 +69,7 @@ No. It only uses pages of youtube.com that are reachable without signing in.
 
 ### Does it change anything on youtube.com, or only read data?
 
-Unknown: its author has not declared whether it changes anything on youtube.com, so treat it as if it could.
+It only reads. It looks things up on youtube.com and changes nothing there.
 
 ### How do I run it?
 

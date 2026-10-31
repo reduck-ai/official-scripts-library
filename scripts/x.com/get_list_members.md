@@ -4,7 +4,7 @@ Automatically get the members of an X (Twitter) List on x.com. List the accounts
 
 - Site: x.com
 - Address: `reduck/x.com/get_list_members`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-10-30 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -25,6 +25,7 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/get_list_members
 - `count` (integer, required): Number of members returned. 0 is a first-class outcome (empty list).
 - `list_id` (string, required)
 - `members` (array, required)
+- `complete` (boolean, required): True only when X marked the end of the list and every member fits in count.
 
 ## FAQ
 
@@ -46,7 +47,7 @@ Required: list. Optional: count.
 
 ### What does it return?
 
-It returns count, list_id, members.
+It returns count, list_id, members, complete.
 
 ### Do I need to be logged in to x.com?
 

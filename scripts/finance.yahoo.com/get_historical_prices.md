@@ -1,10 +1,10 @@
-# Get Historical Prices
+# Get Yahoo Finance historical prices
 
-Automatically get Historical Prices on finance.yahoo.com. OHLCV price history for a single Yahoo Finance symbol (stock, crypto, index, future) over a range/interval, matching the site's own chart affordance.
+Automatically get Yahoo Finance historical prices on finance.yahoo.com. OHLCV price history for a single Yahoo Finance symbol (stock, crypto, index, future) over a range/interval, matching the site's own chart affordance.
 
 - Site: finance.yahoo.com
 - Address: `reduck/finance.yahoo.com/get_historical_prices`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-10-30 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -35,17 +35,17 @@ npx @reduck-ai/cli@latest run --script reduck/finance.yahoo.com/get_historical_p
 
 ## FAQ
 
-### What does "Get Historical Prices" do?
+### What does "Get Yahoo Finance historical prices" do?
 
 OHLCV price history for a single Yahoo Finance symbol (stock, crypto, index, future) over a range/interval, matching the site's own chart affordance.
 
-### How do I automatically get Historical Prices on finance.yahoo.com?
+### How do I automatically get Yahoo Finance historical prices on finance.yahoo.com?
 
 Ask an AI agent connected to Reduck to run reduck/finance.yahoo.com/get_historical_prices, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/finance.yahoo.com/get_historical_prices
 
-### Is there a finance.yahoo.com API to get Historical Prices?
+### Is there a finance.yahoo.com API to get Yahoo Finance historical prices?
 
-You do not need one. "Get Historical Prices" drives the real finance.yahoo.com pages in a browser, so it works whether or not finance.yahoo.com offers an API for this.
+You do not need one. "Get Yahoo Finance historical prices" drives the real finance.yahoo.com pages in a browser, so it works whether or not finance.yahoo.com offers an API for this.
 
 ### What information do I need to provide?
 

@@ -4,7 +4,7 @@ Automatically list Asana invoices on asana.com. List all Asana invoices from the
 
 - Site: asana.com
 - Address: `reduck/asana.com/list_invoices`
-- Updated: 2026-10-22 (v12)
+- Updated: 2026-10-30 (v14)
 - Author: Reduck AI (reduck)
 
 ## Run it

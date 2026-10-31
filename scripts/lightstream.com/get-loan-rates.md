@@ -4,7 +4,7 @@ Automatically get LightStream loan rates for a purpose, amount and term on light
 
 - Site: lightstream.com
 - Address: `reduck/lightstream.com/get-loan-rates`
-- Updated: 2026-10-22 (v5)
+- Updated: 2026-10-30 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

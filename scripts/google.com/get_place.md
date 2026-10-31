@@ -1,10 +1,10 @@
 # Get Google Maps place details
 
-Automatically get Google Maps place details on google.com. Get one Google Maps place by its place id (from search_places), its Maps link, or a query that names one place. Returns name, address, phone, website, Instagram link, main category and all categories, star rating, number of reviews, price range, the opening hours of the week as numbers in the place's own time zone, plus code, time zone and coordinates. A place id or link that Google Maps does not know fails with a clear error. A query that Maps answers with a list of places fails and asks for search_places, rather than picking one of them. Fields a place does not show (phone, website, Instagram, rating, hours and others) are null.
+Automatically get Google Maps place details on google.com. Get one Google Maps place by its place id (from search_places or get_directions), its Maps link, or a query that names one place. Returns name, address, phone, website, Instagram link, main category and all categories, star rating, number of reviews, price range, the opening hours of the week as numbers in the place's own time zone, plus code, time zone and coordinates (the input of get_directions). A place id or link that Google Maps does not know fails with a clear error. A query that Maps answers with a list of places fails and asks for search_places, rather than picking one of them. Fields a place does not show (phone, website, Instagram, rating, hours and others) are null.
 
 - Site: google.com
 - Address: `reduck/google.com/get_place`
-- Updated: 2026-10-22 (v11)
+- Updated: 2026-10-30 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -48,7 +48,7 @@ npx @reduck-ai/cli@latest run --script reduck/google.com/get_place
 
 ### What does "Get Google Maps place details" do?
 
-Get one Google Maps place by its place id (from search_places), its Maps link, or a query that names one place. Returns name, address, phone, website, Instagram link, main category and all categories, star rating, number of reviews, price range, the opening hours of the week as numbers in the place's own time zone, plus code, time zone and coordinates. A place id or link that Google Maps does not know fails with a clear error. A query that Maps answers with a list of places fails and asks for search_places, rather than picking one of them. Fields a place does not show (phone, website, Instagram, rating, hours and others) are null.
+Get one Google Maps place by its place id (from search_places or get_directions), its Maps link, or a query that names one place. Returns name, address, phone, website, Instagram link, main category and all categories, star rating, number of reviews, price range, the opening hours of the week as numbers in the place's own time zone, plus code, time zone and coordinates (the input of get_directions). A place id or link that Google Maps does not know fails with a clear error. A query that Maps answers with a list of places fails and asks for search_places, rather than picking one of them. Fields a place does not show (phone, website, Instagram, rating, hours and others) are null.
 
 ### How do I automatically get Google Maps place details on google.com?
 

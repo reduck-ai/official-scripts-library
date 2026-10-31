@@ -1,10 +1,10 @@
-# List community posts
+# List Skool community posts
 
-Automatically list community posts on skool.com. List the posts in a Skool community feed, newest first. Returns per post the title, body text, author name and handle, creation time, comment and upvote counts, whether it is pinned, the channel it was posted in, and a direct url. Takes the community slug as it appears in the URL (case-insensitive) and a limit, paging through the feed as needed. Reads the community's server-rendered data, so it makes no extra API calls. Fails with a clear message when the slug does not exist or the community is private to this account, rather than returning an empty list.
+Automatically list Skool community posts on skool.com. List one page of the posts in a Skool community feed, in the order Skool shows them, pinned posts first on page 1. Returns per post the title, body text, author name and handle, creation time, comment and upvote counts, whether it is pinned, the channel it was posted in, and a direct url, plus the community's total post count. Takes the community slug as it appears in the URL (case-insensitive) and a page number; ask for the next page until one returns no posts. Fails with a clear message when the slug does not exist, the community is private to this account, or the browser is not signed in to Skool.
 
 - Site: skool.com
 - Address: `reduck/skool.com/list_community_posts`
-- Updated: 2026-09-17 (v8)
+- Updated: 2026-10-30 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,38 +17,38 @@ npx @reduck-ai/cli@latest run --script reduck/skool.com/list_community_posts
 
 ## Input
 
-- `group` (string, required): Community slug as it appears in the URL, e.g. "cliefnotes" for https://www.skool.com/cliefnotes. Case-insensitive: Skool slugs are lowercase and the value is normalised.
-- `limit` (integer, optional): How many posts to return, newest first.
+- `group` (string, required): Community slug as it appears in the URL, e.g. "cliefnotes" for https://www.skool.com/cliefnotes. Case-insensitive.
+- `page` (integer, optional): Feed page, as Skool pages it (about 30 posts each). Ask for the next page until a page returns no posts.
 
 ## Output
 
+- `page` (integer, required)
 - `count` (integer, required)
 - `group` (string, required)
 - `posts` (array, required)
-- `complete` (boolean, required): True when every post in the community was returned (not truncated by limit).
-- `totalInCommunity` (integer | null, required): Total posts Skool reports for this community, independent of limit.
+- `totalInCommunity` (integer | null, required): Total posts Skool reports for this community.
 
 ## FAQ
 
-### What does "List community posts" do?
+### What does "List Skool community posts" do?
 
-List the posts in a Skool community feed, newest first. Returns per post the title, body text, author name and handle, creation time, comment and upvote counts, whether it is pinned, the channel it was posted in, and a direct url. Takes the community slug as it appears in the URL (case-insensitive) and a limit, paging through the feed as needed. Reads the community's server-rendered data, so it makes no extra API calls. Fails with a clear message when the slug does not exist or the community is private to this account, rather than returning an empty list.
+List one page of the posts in a Skool community feed, in the order Skool shows them, pinned posts first on page 1. Returns per post the title, body text, author name and handle, creation time, comment and upvote counts, whether it is pinned, the channel it was posted in, and a direct url, plus the community's total post count. Takes the community slug as it appears in the URL (case-insensitive) and a page number; ask for the next page until one returns no posts. Fails with a clear message when the slug does not exist, the community is private to this account, or the browser is not signed in to Skool.
 
-### How do I automatically list community posts on skool.com?
+### How do I automatically list Skool community posts on skool.com?
 
 Ask an AI agent connected to Reduck to run reduck/skool.com/list_community_posts, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/skool.com/list_community_posts
 
-### Is there a skool.com API to list community posts?
+### Is there a skool.com API to list Skool community posts?
 
-You do not need one. "List community posts" drives the real skool.com pages in a browser, so it works whether or not skool.com offers an API for this.
+You do not need one. "List Skool community posts" drives the real skool.com pages in a browser, so it works whether or not skool.com offers an API for this.
 
 ### What information do I need to provide?
 
-Required: group. Optional: limit.
+Required: group. Optional: page.
 
 ### What does it return?
 
-It returns count, group, posts, complete, totalInCommunity.
+It returns page, count, group, posts, totalInCommunity.
 
 ### Do I need to be logged in to skool.com?
 

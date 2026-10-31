@@ -1,10 +1,10 @@
 # Search Google Maps places
 
-Automatically search Google Maps places on google.com. Search Google Maps for places, optionally near a location, and get the list Maps shows, in its order: name, address, phone, website, main category and all categories, star rating, number of reviews, price range, coordinates and the Google place id. Use the place id with get_place for the opening hours and with get_place_reviews for the reviews. Google Maps lists at most 120 places for one search; complete is true when that list ended, false when cap stopped it first. A precise query that Maps opens as one place returns that one place. Category names follow hl, or the browser's language when hl is empty.
+Automatically search Google Maps places on google.com. Search Google Maps for places, optionally near a location, and get the list Maps shows, in its order: name, address, phone, website, main category and all categories, star rating, number of reviews, price range, coordinates and the Google place id. Use the place id with get_place for the opening hours and with get_place_reviews for the reviews, and the coordinates with get_directions for the routes to or from a place. Google Maps lists at most 120 places for one search; complete is true when that list ended, false when cap stopped it first. A precise query that Maps opens as one place returns that one place. Category names follow hl, or the browser's language when hl is empty.
 
 - Site: google.com
 - Address: `reduck/google.com/search_places`
-- Updated: 2026-10-22 (v9)
+- Updated: 2026-10-30 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -33,7 +33,7 @@ npx @reduck-ai/cli@latest run --script reduck/google.com/search_places
 
 ### What does "Search Google Maps places" do?
 
-Search Google Maps for places, optionally near a location, and get the list Maps shows, in its order: name, address, phone, website, main category and all categories, star rating, number of reviews, price range, coordinates and the Google place id. Use the place id with get_place for the opening hours and with get_place_reviews for the reviews. Google Maps lists at most 120 places for one search; complete is true when that list ended, false when cap stopped it first. A precise query that Maps opens as one place returns that one place. Category names follow hl, or the browser's language when hl is empty.
+Search Google Maps for places, optionally near a location, and get the list Maps shows, in its order: name, address, phone, website, main category and all categories, star rating, number of reviews, price range, coordinates and the Google place id. Use the place id with get_place for the opening hours and with get_place_reviews for the reviews, and the coordinates with get_directions for the routes to or from a place. Google Maps lists at most 120 places for one search; complete is true when that list ended, false when cap stopped it first. A precise query that Maps opens as one place returns that one place. Category names follow hl, or the browser's language when hl is empty.
 
 ### How do I automatically search Google Maps places on google.com?
 

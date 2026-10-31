@@ -4,7 +4,7 @@ Automatically search Airbnb listings on airbnb.com. Each stay comes back as a ro
 
 - Site: airbnb.com
 - Address: `reduck/airbnb.com/search_listings`
-- Updated: 2026-10-16 (v10)
+- Updated: 2026-10-30 (v11)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -26,6 +26,7 @@ npx @reduck-ai/cli@latest run --script reduck/airbnb.com/search_listings
 - `page` (integer, optional): Result page, 18 listings each. Airbnb stops at about 15 pages: maxPage says how many this search has.
 - `pets` (integer, optional): Number of pets; 1 or more keeps only listings that allow pets.
 - `adults` (integer, optional): Number of adults. Default 2.
+- `bounds` (object, optional): Search only inside this rectangle of the map, as moving Airbnb's map does: its north-east and south-west corners. location still names the city. Useful to stay near one address: take its coordinates (for example from google.com/get_place) and add a margin.
 - `checkin` (string, optional): Check-in date, YYYY-MM-DD. With checkout, prices are for those dates.
 - `infants` (integer, optional)
 - `checkout` (string, optional): Check-out date, YYYY-MM-DD.
@@ -124,7 +125,7 @@ Shape only: placeholder values generated from the output schema, not a real run.
 
 ### What does "Search Airbnb listings" do?
 
-Search Airbnb stays in a location, with or without dates, with the filters Airbnb offers: guests, price range, room type, bedrooms, beds, bathrooms, Instant Book, guest favorites, amenities, property type, tags, host language and neighborhood (List Airbnb search filters gives their values). Returns one page of up to 18 listings (room id, name, price line, rating and review count, coordinates, badges, room details or next free dates, photos), the total count of matching listings, the number of pages (Airbnb stops at about 15) and the place Airbnb searched. A filter nothing matches returns an empty list. A location Airbnb cannot place fails with an error instead of returning its worldwide default list. Prices are in the currency you ask for (USD by default).
+Search Airbnb stays in a location, with or without dates, with the filters Airbnb offers: guests, price range, room type, bedrooms, beds, bathrooms, Instant Book, guest favorites, amenities, property type, tags, host language and neighborhood (List Airbnb search filters gives their values). A map area (the north-east and south-west corners of a rectangle) limits the search to the listings inside it, as moving Airbnb's map does, for example around an office whose coordinates google.com/get_place gives. Returns one page of up to 18 listings (room id, name, price line, rating and review count, coordinates, badges, room details or next free dates, photos), the total count of matching listings, the number of pages (Airbnb stops at about 15) and the place Airbnb searched. A listing's coordinates feed google.com/get_directions for the trip to a place; Airbnb blurs them by a few hundred meters. A filter or a map area nothing matches returns an empty list. A location Airbnb cannot place fails with an error instead of returning its worldwide default list. Prices are in the currency you ask for (USD by default).
 
 ### How do I automatically search Airbnb listings on airbnb.com?
 
@@ -136,7 +137,7 @@ You do not need one. "Search Airbnb listings" drives the real airbnb.com pages i
 
 ### What information do I need to provide?
 
-Required: location. Optional: ib, page, pets, adults, checkin, infants, checkout, children, currency, min_beds, tier_ids, amenities, price_max, price_min, room_types, kg_and_tags, min_bedrooms, min_bathrooms, guest_favorite, host_languages, bathroom_privacy, neighborhood_ids, l2_property_type_ids.
+Required: location. Optional: ib, page, pets, adults, bounds, checkin, infants, checkout, children, currency, min_beds, tier_ids, amenities, price_max, price_min, room_types, kg_and_tags, min_bedrooms, min_bathrooms, guest_favorite, host_languages, bathroom_privacy, neighborhood_ids, l2_property_type_ids.
 
 ### What does it return?
 

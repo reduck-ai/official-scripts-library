@@ -1,10 +1,10 @@
 # Get current Amazon user
 
-Automatically get current Amazon user on amazon.com. Report the first name of the Amazon.com account this browser is signed in to, from the header greeting (Amazon hides the full name and email behind a password re-check). When the browser is signed out, the run fails with a signed-out error that says to sign in to Amazon.
+Automatically get current Amazon user on amazon.com. Report the first name of the Amazon.com account this browser is signed in to, as the site shows it in its header (Amazon hides the full name and email behind a password re-check). When the browser is signed out, the run fails with a signed-out error that says to sign in to Amazon. Same answer as Amazon whoami, without its name field.
 
 - Site: amazon.com
 - Address: `reduck/amazon.com/get_current_user`
-- Updated: 2026-10-22 (v7)
+- Updated: 2026-10-31 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -28,7 +28,7 @@ It takes no input.
 
 ### What does "Get current Amazon user" do?
 
-Report the first name of the Amazon.com account this browser is signed in to, from the header greeting (Amazon hides the full name and email behind a password re-check). When the browser is signed out, the run fails with a signed-out error that says to sign in to Amazon.
+Report the first name of the Amazon.com account this browser is signed in to, as the site shows it in its header (Amazon hides the full name and email behind a password re-check). When the browser is signed out, the run fails with a signed-out error that says to sign in to Amazon. Same answer as Amazon whoami, without its name field.
 
 ### How do I automatically get current Amazon user on amazon.com?
 

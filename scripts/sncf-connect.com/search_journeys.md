@@ -1,10 +1,10 @@
 # SNCF Connect unofficial API: search train journeys and fares
 
-Automatically search train journeys and fares on sncf-connect.com. An unofficial SNCF Connect API for train search: SNCF Connect has no public API for journeys and fares, and this returns them as JSON, programmatically. Search trains between two cities or stations on a given date via SNCF Connect. Returns each journey (times, duration, operator, best price) with all of its fare offers (class, fare name, price, flexibility label, and the exchange and refund conditions as SNCF writes them). No journeys means no tickets are on sale for that date. An unknown station fails with an error asking you to check its spelling.
+Automatically search train journeys and fares on sncf-connect.com. An unofficial SNCF Connect API for train search: SNCF Connect has no public API for journeys and fares, and this returns them as JSON, programmatically. Search trains between two places on a date or a number of days after today (for searches that run on a schedule), from a time of day, Paris time. Give each place as sncf-connect.com/suggest_places returns it, or by its name: a name is used only when SNCF has exactly one city (else one place) with that exact label, and otherwise fails with the candidates. Returns SNCF's status for the search and each journey it lists from about that time (a page of about 5 to 10): times, duration, operator, best price, and all of its fare offers (class, fare name, price, flexibility label, and the exchange and refund conditions as SNCF writes them). A train not yet on sale has no offers. For later trains, search again from a later time. No journeys, with a status other than RESULTS, means no tickets are on sale for that date. International routes are on sale for a shorter time ahead than domestic ones.
 
 - Site: sncf-connect.com
 - Address: `reduck/sncf-connect.com/search_journeys`
-- Updated: 2026-10-27 (v16)
+- Updated: 2026-10-31 (v19)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,22 +17,24 @@ npx @reduck-ai/cli@latest run --script reduck/sncf-connect.com/search_journeys
 
 ## Input
 
-- `date` (string, required): Outward date YYYY-MM-DD
-- `origin` (string, required): Departure city or station, e.g. 'Turin' or 'Paris Gare de Lyon'
-- `destination` (string, required): Arrival city or station, e.g. 'Paris'
+- `origin` (any, required): The departure place: a place from sncf-connect.com/suggest_places ({ id, label }), passed unchanged, or a name, used only when SNCF has exactly one city (else one place) with that exact label.
+- `destination` (any, required): The arrival place: a place from sncf-connect.com/suggest_places ({ id, label }), passed unchanged, or a name, used only when SNCF has exactly one city (else one place) with that exact label.
+- `date` (string, optional): Outward date, YYYY-MM-DD. Give date or daysAhead, not both.
+- `time` (string, optional): Search from this time, HH:mm, Paris time. For later trains, search again from a later time.
+- `daysAhead` (integer, optional): Outward date as a number of days after today (UTC), for searches that run on a schedule. Give date or daysAhead, not both.
 
 ## Output
 
-- `date` (string, required)
-- `origin` (string, required)
-- `journeys` (array, required)
-- `destination` (string, required)
+- `date` (string, required): The outward date searched.
+- `time` (string, required): The time searched from, Paris time.
+- `status` (string | null, required): SNCF's status for the search, e.g. RESULTS. Another value says why there are no journeys.
+- `journeys` (array, required): The journeys SNCF lists from about the time searched, in its order (a page of about 5 to 10). Empty when no tickets are on sale for that date.
 
 ## FAQ
 
 ### What does "SNCF Connect unofficial API: search train journeys and fares" do?
 
-An unofficial SNCF Connect API for train search: SNCF Connect has no public API for journeys and fares, and this returns them as JSON, programmatically. Search trains between two cities or stations on a given date via SNCF Connect. Returns each journey (times, duration, operator, best price) with all of its fare offers (class, fare name, price, flexibility label, and the exchange and refund conditions as SNCF writes them). No journeys means no tickets are on sale for that date. An unknown station fails with an error asking you to check its spelling.
+An unofficial SNCF Connect API for train search: SNCF Connect has no public API for journeys and fares, and this returns them as JSON, programmatically. Search trains between two places on a date or a number of days after today (for searches that run on a schedule), from a time of day, Paris time. Give each place as sncf-connect.com/suggest_places returns it, or by its name: a name is used only when SNCF has exactly one city (else one place) with that exact label, and otherwise fails with the candidates. Returns SNCF's status for the search and each journey it lists from about that time (a page of about 5 to 10): times, duration, operator, best price, and all of its fare offers (class, fare name, price, flexibility label, and the exchange and refund conditions as SNCF writes them). A train not yet on sale has no offers. For later trains, search again from a later time. No journeys, with a status other than RESULTS, means no tickets are on sale for that date. International routes are on sale for a shorter time ahead than domestic ones.
 
 ### How do I automatically search train journeys and fares on sncf-connect.com?
 
@@ -44,11 +46,11 @@ You do not need one. "SNCF Connect unofficial API: search train journeys and far
 
 ### What information do I need to provide?
 
-Required: origin, destination, date.
+Required: origin, destination. Optional: date, time, daysAhead.
 
 ### What does it return?
 
-It returns date, origin, journeys, destination.
+It returns date, time, status, journeys.
 
 ### Do I need to be logged in to sncf-connect.com?
 

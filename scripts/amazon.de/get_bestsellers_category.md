@@ -1,0 +1,66 @@
+# Get Amazon.de Bestsellers by Category
+
+Automatically get Amazon.de Bestsellers by Category on amazon.de. Reads Amazon.de's Best Sellers list for a top-level category (rank, title, price, rating, review count).
+
+- Site: amazon.de
+- Address: `reduck/amazon.de/get_bestsellers_category`
+- Updated: 2026-10-31 (v1)
+- Author: Reduck AI (reduck)
+
+## Run it
+
+Ask an AI agent connected to Reduck over MCP (`https://mcp.reduck.ai/mcp`) to run `reduck/amazon.de/get_bestsellers_category`, or run it from a terminal:
+
+```bash
+npx @reduck-ai/cli@latest run --script reduck/amazon.de/get_bestsellers_category
+```
+
+## Input
+
+- `category` (string, required): The category's URL slug, e.g. "books" or "toys". Read it off the URL of a category tab at amazon.de/gp/bestsellers: slugs are this store's own, so one from another Amazon store may not exist here.
+- `limit` (integer, optional): Max products to return, in Amazon's own rank order. The list page renders 30 without scrolling; asking for more than that returns what the page holds.
+
+## Output
+
+- `category` (string, required)
+- `products` (array, required)
+
+## FAQ
+
+### What does "Get Amazon.de Bestsellers by Category" do?
+
+Reads Amazon.de's Best Sellers list for a top-level category (rank, title, price, rating, review count).
+
+### How do I automatically get Amazon.de Bestsellers by Category on amazon.de?
+
+Ask an AI agent connected to Reduck to run reduck/amazon.de/get_bestsellers_category, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/amazon.de/get_bestsellers_category
+
+### Is there a amazon.de API to get Amazon.de Bestsellers by Category?
+
+You do not need one. "Get Amazon.de Bestsellers by Category" drives the real amazon.de pages in a browser, so it works whether or not amazon.de offers an API for this.
+
+### What information do I need to provide?
+
+Required: category. Optional: limit.
+
+### What does it return?
+
+It returns category, products.
+
+### Do I need to be logged in to amazon.de?
+
+No. It only uses pages of amazon.de that are reachable without signing in.
+
+### Does it change anything on amazon.de, or only read data?
+
+It only reads. It looks things up on amazon.de and changes nothing there.
+
+### How do I run it?
+
+Ask an AI agent connected to Reduck to run reduck/amazon.de/get_bestsellers_category, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/amazon.de/get_bestsellers_category
+
+### Who maintains it?
+
+It is part of Reduck's official curated catalogue.
+
+Source: https://reduck.ai/explore/scripts/reduck/amazon.de/get_bestsellers_category

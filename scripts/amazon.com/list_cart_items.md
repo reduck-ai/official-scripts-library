@@ -4,7 +4,7 @@ Automatically list Amazon cart items on amazon.com. List the items in your Amazo
 
 - Site: amazon.com
 - Address: `reduck/amazon.com/list_cart_items`
-- Updated: 2026-10-22 (v7)
+- Updated: 2026-10-31 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it

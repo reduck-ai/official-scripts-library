@@ -1,0 +1,73 @@
+# Get Amazon.fr product offers from all sellers
+
+Automatically get Amazon.fr product offers from all sellers on amazon.fr. See every seller offering an Amazon.fr product, not just the one that won the buy box. Returns one page of Amazon's offer list (10 offers a page; page 1 also carries the buy-box offer), the total number of offers Amazon counts, and whether there is a next page. For each offer you get the price, item condition, seller name and id, seller rating and rating count, where the item ships from, and the delivery estimate. Prices, availability and delivery dates are pinned to a French postcode you choose. A seller can appear more than once when they list the same item under different conditions. A page past the last one returns no offers.
+
+- Site: amazon.fr
+- Address: `reduck/amazon.fr/get-product-offers`
+- Updated: 2026-10-31 (v1)
+- Author: Reduck AI (reduck)
+
+## Run it
+
+Ask an AI agent connected to Reduck over MCP (`https://mcp.reduck.ai/mcp`) to run `reduck/amazon.fr/get-product-offers`, or run it from a terminal:
+
+```bash
+npx @reduck-ai/cli@latest run --script reduck/amazon.fr/get-product-offers
+```
+
+## Input
+
+- `asin` (string, required): Amazon ASIN (or ISBN-10 for books), as it appears in /dp/<ASIN>.
+- `page` (integer, optional): Page of the offer list, 10 offers each. Page 1 also carries the buy-box offer. has_next_page says when to stop.
+- `zipCode` (string, optional): French postcode used to pin the store location, which fixes prices, availability and delivery dates. Default 75001 (Paris 1er).
+
+## Output
+
+- `url` (string, required)
+- `asin` (string, required)
+- `page` (integer, required)
+- `offers` (array, required): This page's offers. On page 1 the buy-box offer comes first (position 0, is_buy_box true).
+- `total_offers` (integer, required): Offers in Amazon's list for this product, all pages together, as Amazon counts them. The buy-box offer is shown apart from them.
+- `has_next_page` (boolean, required)
+- `zip` (string, optional)
+- `title` (string | null, optional)
+
+## FAQ
+
+### What does "Get Amazon.fr product offers from all sellers" do?
+
+See every seller offering an Amazon.fr product, not just the one that won the buy box. Returns one page of Amazon's offer list (10 offers a page; page 1 also carries the buy-box offer), the total number of offers Amazon counts, and whether there is a next page. For each offer you get the price, item condition, seller name and id, seller rating and rating count, where the item ships from, and the delivery estimate. Prices, availability and delivery dates are pinned to a French postcode you choose. A seller can appear more than once when they list the same item under different conditions. A page past the last one returns no offers.
+
+### How do I automatically get Amazon.fr product offers from all sellers on amazon.fr?
+
+Ask an AI agent connected to Reduck to run reduck/amazon.fr/get-product-offers, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/amazon.fr/get-product-offers
+
+### Is there a amazon.fr API to get Amazon.fr product offers from all sellers?
+
+You do not need one. "Get Amazon.fr product offers from all sellers" drives the real amazon.fr pages in a browser, so it works whether or not amazon.fr offers an API for this.
+
+### What information do I need to provide?
+
+Required: asin. Optional: page, zipCode.
+
+### What does it return?
+
+It returns url, zip, asin, page, title, offers, total_offers, has_next_page.
+
+### Do I need to be logged in to amazon.fr?
+
+No. It only uses pages of amazon.fr that are reachable without signing in.
+
+### Does it change anything on amazon.fr, or only read data?
+
+It only reads. It looks things up on amazon.fr and changes nothing there.
+
+### How do I run it?
+
+Ask an AI agent connected to Reduck to run reduck/amazon.fr/get-product-offers, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/amazon.fr/get-product-offers
+
+### Who maintains it?
+
+It is part of Reduck's official curated catalogue.
+
+Source: https://reduck.ai/explore/scripts/reduck/amazon.fr/get-product-offers

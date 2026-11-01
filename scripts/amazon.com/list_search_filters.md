@@ -4,7 +4,7 @@ Automatically list Amazon search filters on amazon.com. List the filters Amazon 
 
 - Site: amazon.com
 - Address: `reduck/amazon.com/list_search_filters`
-- Updated: 2026-10-28 (v6)
+- Updated: 2026-10-31 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

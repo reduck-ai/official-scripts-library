@@ -4,7 +4,7 @@ Place the order on an open Amazon.com checkout and get its order number(s), to t
 
 - Site: amazon.com
 - Address: `reduck/amazon.com/place_order`
-- Updated: 2026-10-08 (v6)
+- Updated: 2026-10-31 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically get Amazon checkout information on amazon.com. Review an Amazon.co
 
 - Site: amazon.com
 - Address: `reduck/amazon.com/get_checkout_information`
-- Updated: 2026-10-08 (v4)
+- Updated: 2026-10-31 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

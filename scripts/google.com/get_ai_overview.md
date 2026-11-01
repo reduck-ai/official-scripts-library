@@ -1,10 +1,10 @@
 # Get Google AI Overview
 
-Automatically get Google AI Overview on google.com. Run a Google search and return the AI Overview Google shows for it: whether there is one, its answer as Markdown (headings, lists, tables and links kept), and the pages it cites, in the order the answer first cites them, each with url, title, site, byline and snippet. Google shows an AI Overview for some searches only: for the others shown is false and sources is empty. The overview follows the browser's Google account, location and moment, so the same search can get a different overview, or none, on another run. When Google shows its anti-bot check and it cannot be cleared, the run fails and says so.
+Automatically get Google AI Overview on google.com. Run a Google search and return the AI Overview Google shows for it: whether there is one, its answer as Markdown (headings, lists, tables and links kept), and the pages it cites, in the order the answer first cites them, each with url, title, site, byline and snippet. Google shows an AI Overview for some searches only: for the others shown is false and sources is empty. The overview changes with the country the browser is in: from two countries, the same search can cite mostly different pages. Recommended: run from the country of the people you measure for, and keep the same browser and country for every run you compare. On a managed browser, choose that country (in the US, region us-east-1); on your own browser, the country is where you are. From one place, the cited pages also change a little from run to run, so compare several runs, not one. When Google shows its anti-bot check and it cannot be cleared, the run fails and says so; this happens more often on managed browsers outside the US.
 
 - Site: google.com
 - Address: `reduck/google.com/get_ai_overview`
-- Updated: 2026-10-29 (v2)
+- Updated: 2026-10-31 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,7 +29,7 @@ npx @reduck-ai/cli@latest run --script reduck/google.com/get_ai_overview
 
 ### What does "Get Google AI Overview" do?
 
-Run a Google search and return the AI Overview Google shows for it: whether there is one, its answer as Markdown (headings, lists, tables and links kept), and the pages it cites, in the order the answer first cites them, each with url, title, site, byline and snippet. Google shows an AI Overview for some searches only: for the others shown is false and sources is empty. The overview follows the browser's Google account, location and moment, so the same search can get a different overview, or none, on another run. When Google shows its anti-bot check and it cannot be cleared, the run fails and says so.
+Run a Google search and return the AI Overview Google shows for it: whether there is one, its answer as Markdown (headings, lists, tables and links kept), and the pages it cites, in the order the answer first cites them, each with url, title, site, byline and snippet. Google shows an AI Overview for some searches only: for the others shown is false and sources is empty. The overview changes with the country the browser is in: from two countries, the same search can cite mostly different pages. Recommended: run from the country of the people you measure for, and keep the same browser and country for every run you compare. On a managed browser, choose that country (in the US, region us-east-1); on your own browser, the country is where you are. From one place, the cited pages also change a little from run to run, so compare several runs, not one. When Google shows its anti-bot check and it cannot be cleared, the run fails and says so; this happens more often on managed browsers outside the US.
 
 ### How do I automatically get Google AI Overview on google.com?
 

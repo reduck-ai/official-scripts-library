@@ -4,7 +4,7 @@ Automatically create post on linkedin.com. Publish a text post to your LinkedIn 
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/create_post`
-- Updated: 2026-10-22 (v56)
+- Updated: 2026-11-01 (v60)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,29 +17,29 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/create_post
 
 ## Input
 
-- `text` (string, required): The post body. Plain text; newlines preserved. Any bare URL in the text auto-unfurls into LinkedIn's own link-preview card. Posted publicly ("Anyone") under the logged-in member. Confirm the exact text with the user before running this -- it creates a real, public, immediate post under their account.
-- `dry_run` (boolean, optional): When true, everything runs -- the composer opens, the body is typed, mentions are resolved and any image is attached and confirmed -- and then the run stops before clicking Post. Nothing is published: posted comes back false, url and shareUrn null, and dry_run true. Use it to verify text, mentions and an image are accepted without creating a real public post.
-- `mentions` (array, optional): Person or organization names to @mention, appended in order at the end of text (each as ' @Name'). Confirm each name with the user before running. If a name is ambiguous (multiple people share it exactly), the run throws listing candidates by headline -- re-run with the name plus enough of their headline/company/org for LinkedIn's own typeahead to narrow to exactly one match.
-- `attachment` (string, optional): A single image to attach, bound through the platform's own file channel and handed to the media editor's own file input. Preferred over imageBase64: it carries the bytes outside the argument payload, so there is no payload ceiling. Pass this or imageBase64, not both. Cannot be combined with scheduleDate/scheduleTime, for the same reason imageBase64 cannot.
-- `imageBase64` (string, optional): A single image to attach, base64-encoded (no data: prefix). Optional; prefer the `attachment` input, which has no payload ceiling. Cannot be combined with scheduleDate/scheduleTime -- LinkedIn's Schedule modal wipes the composer, which would discard the staged image. Multi-image carousels are not yet supported by this script.
-- `scheduleDate` (string, optional): Schedule the post instead of publishing immediately: the date to publish, as M/D/YYYY (e.g. "8/14/2026"). Must be a future date, and requires scheduleTime.
-- `scheduleTime` (string, optional): Time of day to publish when scheduling, as one of LinkedIn's own quarter-hour options (e.g. "9:15 AM"). Requires scheduleDate.
-- `imageFilename` (string, optional): Filename for the imageBase64 attachment, e.g. chart.png. Required when imageBase64 is set. Not used by the `attachment` input, which carries its own name.
-- `imageMimeType` (string, optional): MIME type of the imageBase64 attachment; inferred from imageFilename when omitted. Not used by the `attachment` input.
+- `text` (string, required): The post body. Plain text; newlines preserved. Any bare URL in the text auto-unfurls into LinkedIn's own link-preview card. Posted publicly ("Anyone") under the logged-in member. Confirm the exact text with the user before running this: it creates a real, public, immediate post under their account.
+- `dry_run` (boolean, optional): When true, everything runs (the composer opens, the body is typed, mentions are resolved and any image is attached and confirmed) and then the run stops before clicking Post. Nothing is published: posted comes back false, url and shareUrn null, and dry_run true. Use it to verify text, mentions and an image are accepted without creating a real public post.
+- `mentions` (array, optional): Names of members or pages to @mention, added in order at the end of text. A name that matches several of LinkedIn's suggestions fails and lists them: add words from the headline or company to the name until one is left.
+- `attachment` (string, optional): A single image to attach. Preferred over imageBase64: it carries the bytes outside the argument payload, so there is no payload ceiling. Pass this or imageBase64, not both. Cannot be combined with scheduleDate/scheduleTime.
+- `imageBase64` (string, optional): A single image to attach, base64-encoded (no data: prefix). Prefer the attachment input, which has no payload ceiling. Cannot be combined with scheduleDate/scheduleTime. Requires imageFilename.
+- `scheduleDate` (string, optional): Schedule the post instead of publishing it now: the date to publish, as M/D/YYYY (e.g. "8/14/2026"), from today to 90 days ahead. Requires scheduleTime.
+- `scheduleTime` (string, optional): Time of day to publish when scheduling, as one of LinkedIn's quarter-hour options in the browser's time zone (e.g. "9:15 AM"). Requires scheduleDate.
+- `imageFilename` (string, optional): Filename for the imageBase64 attachment, e.g. chart.png. Required when imageBase64 is set. Not used by the attachment input, which carries its own name.
+- `imageMimeType` (string, optional): MIME type of the imageBase64 attachment; inferred from imageFilename when omitted.
 
 ## Output
 
-- `url` (string | null, required): Post permalink (resolves to the post); feed it to delete_post or get_post. Null when scheduled (no permalink exists until the post actually goes live), and null on a dry run, where nothing was published.
-- `posted` (boolean, required): True once this run's write immediately published a new post. False when scheduled (see `scheduled`), or when an identical post/schedule already existed and nothing new was created (see already_present / alreadyScheduled). Always false on a dry run.
-- `shareUrn` (string | null, required): The post's share urn, e.g. urn:li:share:7475847938603192320. On an already_present hit this is the existing post's activity urn instead. Null when scheduled, and null on a dry run.
-- `scheduled` (boolean, required): True if this run scheduled a post (new or already-existing) instead of publishing immediately.
-- `account_used` (object, required): The real account the post was published/scheduled under, echoed from the session/UI.
-- `scheduledFor` (string | null, required): When scheduled is true, the scheduled-posts panel's own confirmation string, e.g. "Preview of the scheduled post that will be published on Mon August 17, 2026 at 1:00 PM, click to see detail view". Null otherwise.
-- `already_present` (boolean, required): True if an immediate post with this exact text was already found on the account's own activity before attempting to publish -- the run stopped there instead of creating a duplicate; url/shareUrn point at that pre-existing post. Never true on a scheduling run (see alreadyScheduled for that case).
-- `alreadyScheduled` (boolean, required): True if a scheduled post with this exact text already existed in the account's Scheduled posts queue before this run -- nothing new was scheduled; scheduledFor describes the existing entry. Only meaningful when scheduleDate/scheduleTime were passed.
-- `verified_on_page` (boolean, required): True if the script independently reloaded and confirmed the write: for an immediate post, the permalink actually renders the text; for a scheduled post, the Scheduled posts management panel actually lists an entry matching this body; for an already_present/alreadyScheduled hit, this is always true (the existing entry was what was matched). Always false on a dry run, where nothing was published to re-read.
-- `dry_run` (boolean, optional): True when this run stopped before clicking Post and published nothing. The body was still typed, the mentions still resolved and any image still attached and confirmed — only the publish was skipped.
-- `mediaAttached` (boolean | null, optional): True when an image was provided (via the `attachment` input or imageBase64) and confirmed staged -- a remove-media control appeared -- before publishing. Null when no image was requested. Meaningful on a dry run too: it reports whether the image really staged, which is the half of this script most likely to break.
+- `url` (string | null, required): The post's permalink; pass it to get_post or delete_post. Null when shareUrn is null.
+- `posted` (boolean, required): True once this run published a new post. False when scheduled (see scheduled), or when an identical post or schedule already existed and nothing new was created (see already_present / alreadyScheduled). Always false on a dry run.
+- `shareUrn` (string | null, required): The post's urn, e.g. urn:li:activity:7522571491226374144. Null when scheduled, on a dry run, and on an already_present hit whose card does not show its urn yet.
+- `scheduled` (boolean, required): True if this run scheduled a post (new or already queued) instead of publishing it now.
+- `account_used` (object, required): The account the post was published or scheduled under, read from the session.
+- `scheduledFor` (string | null, required): When scheduled is true, the scheduled-posts panel's own text for the entry, e.g. "Preview of the scheduled post that will be published on Mon August 17, 2026 at 1:00 PM, click to see detail view". Null otherwise.
+- `already_present` (boolean, required): True when a post with this text is among the account's most recent posts: nothing new was posted, and shareUrn and url point at that post. Never true when scheduling.
+- `alreadyScheduled` (boolean, required): True if a scheduled post with this text was already in the account's Scheduled posts queue: nothing new was scheduled, and scheduledFor describes that entry.
+- `verified_on_page` (boolean, required): True if the script read the write back: for a post, its permalink renders the text; for a scheduled post, the Scheduled posts panel lists it; for an already_present or alreadyScheduled hit, always true. Always false on a dry run.
+- `dry_run` (boolean, optional): True when this run stopped before clicking Post and published nothing. The body was still typed, the mentions still resolved and any image still attached and confirmed.
+- `mediaAttached` (boolean | null, optional): True when an image was requested and its preview came back into the composer before publishing. Null when no image was requested.
 
 ## FAQ
 

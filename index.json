@@ -3365,7 +3365,7 @@
 			"address": "@reduck/kleinanzeigen.de/get_listing",
 			"path": "scripts/kleinanzeigen.de/get_listing.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/kleinanzeigen.de/get_listing",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-11-01"
 		},
 		{
 			"address": "@reduck/kleinanzeigen.de/search_listings",
@@ -3515,7 +3515,7 @@
 			"address": "@reduck/linkedin.com/accept_invitation",
 			"path": "scripts/linkedin.com/accept_invitation.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/linkedin.com/accept_invitation",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-11-01"
 		},
 		{
 			"address": "@reduck/linkedin.com/ad_library_search",
@@ -3563,7 +3563,7 @@
 			"address": "@reduck/linkedin.com/create_post",
 			"path": "scripts/linkedin.com/create_post.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/linkedin.com/create_post",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-11-01"
 		},
 		{
 			"address": "@reduck/linkedin.com/delete_comment",
@@ -3581,7 +3581,7 @@
 			"address": "@reduck/linkedin.com/delete_post",
 			"path": "scripts/linkedin.com/delete_post.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/linkedin.com/delete_post",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-11-01"
 		},
 		{
 			"address": "@reduck/linkedin.com/download_invoice",

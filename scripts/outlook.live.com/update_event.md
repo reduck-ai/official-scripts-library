@@ -4,7 +4,7 @@ Automatically update calendar event (Outlook) on outlook.live.com. Edit an exist
 
 - Site: outlook.live.com
 - Address: `reduck/outlook.live.com/update_event`
-- Updated: 2026-10-22 (v4)
+- Updated: 2026-11-02 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,11 +17,11 @@ npx @reduck-ai/cli@latest run --script reduck/outlook.live.com/update_event
 
 ## Input
 
-- `eventId` (string, required): The event's data-calitemid, as returned by list_events.
+- `eventId` (string, required): The event id, as returned by list_events.
 - `expectedSubject` (string, required): The subject the event currently has. Safety interlock: if the event on the page does not match, nothing is edited.
 - `body` (string, optional): New body text, replacing what is there. Omit to leave unchanged.
 - `subject` (string, optional): New subject. Omit to leave unchanged.
-- `location` (string, optional): New location. Only settable on an event that has none: Outlook's location box adds a second entry rather than replacing the first, and the existing chip cannot be cleared from here, so replacing one is refused rather than leaving the event carrying two. Omit to leave unchanged.
+- `location` (string, optional): New location. Only settable on an event that has no location yet: replacing an existing location is refused rather than leaving the event with two. Omit to leave unchanged.
 
 ## Output
 

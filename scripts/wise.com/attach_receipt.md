@@ -1,10 +1,10 @@
 # Attach a receipt to a Wise transaction
 
-Automatically attach a receipt to a Wise transaction on wise.com. Attach a receipt or invoice (PDF, JPG, PNG…, under 10MB) to a Wise card transaction, given its card transaction id (from search_transactions). The file is passed as base64 with an optional filename and MIME type (default receipt.pdf, application/pdf). The attachment is confirmed from Wise's own upload response. This is a write: the file stays on the transaction.
+Automatically attach a receipt to a Wise transaction on wise.com. Attach a receipt or invoice (PDF, JPG, PNG..., under 10MB) to a Wise card transaction, given its card transaction id (from search_transactions). The file is passed as base64 with an optional filename and MIME type (default receipt.pdf, application/pdf). Confirms that Wise accepted the upload. This is a write: the file stays on the transaction.
 
 - Site: wise.com
 - Address: `reduck/wise.com/attach_receipt`
-- Updated: 2026-10-22 (v7)
+- Updated: 2026-11-02 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,10 +17,10 @@ npx @reduck-ai/cli@latest run --script reduck/wise.com/attach_receipt
 
 ## Input
 
-- `b64` (string, required): Contenu du fichier encodé en base64.
-- `txid` (string, required): L'id CARD_TRANSACTION Wise (ex: 2980039980).
-- `mime` (string, optional): Type MIME (défaut application/pdf).
-- `filename` (string, optional): Nom du fichier (défaut receipt.pdf).
+- `b64` (string, required): The file content, base64-encoded.
+- `txid` (string, required): The Wise card transaction id, as returned by search_transactions (e.g. 2980039980).
+- `mime` (string, optional): MIME type of the file (default application/pdf).
+- `filename` (string, optional): File name shown on Wise (default receipt.pdf).
 
 ## Output
 
@@ -32,7 +32,7 @@ npx @reduck-ai/cli@latest run --script reduck/wise.com/attach_receipt
 
 ### What does "Attach a receipt to a Wise transaction" do?
 
-Attach a receipt or invoice (PDF, JPG, PNG…, under 10MB) to a Wise card transaction, given its card transaction id (from search_transactions). The file is passed as base64 with an optional filename and MIME type (default receipt.pdf, application/pdf). The attachment is confirmed from Wise's own upload response. This is a write: the file stays on the transaction.
+Attach a receipt or invoice (PDF, JPG, PNG..., under 10MB) to a Wise card transaction, given its card transaction id (from search_transactions). The file is passed as base64 with an optional filename and MIME type (default receipt.pdf, application/pdf). Confirms that Wise accepted the upload. This is a write: the file stays on the transaction.
 
 ### How do I automatically attach a receipt to a Wise transaction on wise.com?
 

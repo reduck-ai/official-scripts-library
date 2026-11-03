@@ -4,7 +4,7 @@ Automatically set group photo on web.whatsapp.com. Set or replace a WhatsApp gro
 
 - Site: web.whatsapp.com
 - Address: `reduck/web.whatsapp.com/set_group_photo`
-- Updated: 2026-10-23 (v10)
+- Updated: 2026-11-02 (v12)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -19,10 +19,10 @@ npx @reduck-ai/cli@latest run --script reduck/web.whatsapp.com/set_group_photo
 
 - `group` (string, required): Exact group name, as shown in the chat list
 - `mime` (string, optional): Optional MIME type for the imageBase64 route. Default inferred from filename (image/png, image/gif, else image/jpeg).
-- `dry_run` (boolean, optional): When true, everything runs — the group opens, the image is staged and WhatsApp's crop dialog accepts it — and then the run stops before the crop is submitted. The photo is not changed and the group is not notified: set comes back false and dry_run true. Reaching that point proves both that the image was accepted and that this account may edit the group, since the dialog opens for neither otherwise.
+- `dry_run` (boolean, optional): When true, the group is opened and WhatsApp accepts the image, then the run stops before saving: the photo is not changed and the group is not notified, and the result has set false and dry_run true. A successful dry run also proves that this account may edit the group.
 - `filename` (string, optional): Optional filename to present to WhatsApp for the imageBase64 route. Default group.png
-- `attachment` (string, optional): The group photo, bound through the platform's own file channel and handed straight to the group drawer's file input. Preferred over imageBase64: it carries the bytes outside the argument payload, so it is not subject to the ~96KB cap and a normal-sized photo needs no shrinking or localhost server. Provide this or imageBase64. WhatsApp requires at least 192x192 pixels.
-- `imageBase64` (string, optional): The image bytes, base64-encoded (jpg/png/gif), as an alternative to the `attachment` input. Keep it well under ~96KB of base64 — the MCP transport caps the payload. Provide this or attachment. WhatsApp requires at least 192x192 pixels.
+- `attachment` (string, optional): The group photo as a file (jpg, png or gif). Preferred over imageBase64: it is not subject to the ~96KB cap, so a normal-sized photo needs no shrinking. Provide this or imageBase64. WhatsApp requires at least 192x192 pixels.
+- `imageBase64` (string, optional): The image bytes, base64-encoded (jpg/png/gif), as an alternative to the `attachment` input. Keep it under about 96KB of base64; use `attachment` for anything larger. Provide this or attachment. WhatsApp requires at least 192x192 pixels.
 
 ## Output
 

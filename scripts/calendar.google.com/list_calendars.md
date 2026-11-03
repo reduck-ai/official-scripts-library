@@ -1,10 +1,10 @@
 # List Google Calendars
 
-Automatically list Google Calendars on calendar.google.com. List the signed-in Google Calendar account's calendars (primary + subscribed/secondary). Returns count and calendars (id, name, primary, timezone). The id is the join key you pass as calendarId to list_events/create_event to target a specific calendar; name for the primary calendar is the account's display name (Google leaves the primary's own name blank). Auto-generated helpers like Birthdays/Tasks are not returned.
+Automatically list Google Calendars on calendar.google.com. List the signed-in Google Calendar account's calendars (primary, secondary and subscribed). Returns count and calendars (id, name, primary, timezone). Pass an id as calendarId to list_events to list one calendar. The primary calendar's name is the account's display name. Birthdays and Tasks are not returned.
 
 - Site: calendar.google.com
 - Address: `reduck/calendar.google.com/list_calendars`
-- Updated: 2026-08-27 (v4)
+- Updated: 2026-11-02 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,18 +17,19 @@ npx @reduck-ai/cli@latest run --script reduck/calendar.google.com/list_calendars
 
 ## Input
 
-It takes no input.
+- `account` (string, optional): The Google account whose calendars to list, when this browser is signed in to several: its email, or its number in this browser ("1"), as mail.google.com/list_accounts lists them. The run fails if that account is not signed in. Omit for the first signed-in account.
 
 ## Output
 
 - `count` (integer, required)
 - `calendars` (array, required)
+- `account` (string | null, optional): Email of the Google account listed.
 
 ## FAQ
 
 ### What does "List Google Calendars" do?
 
-List the signed-in Google Calendar account's calendars (primary + subscribed/secondary). Returns count and calendars (id, name, primary, timezone). The id is the join key you pass as calendarId to list_events/create_event to target a specific calendar; name for the primary calendar is the account's display name (Google leaves the primary's own name blank). Auto-generated helpers like Birthdays/Tasks are not returned.
+List the signed-in Google Calendar account's calendars (primary, secondary and subscribed). Returns count and calendars (id, name, primary, timezone). Pass an id as calendarId to list_events to list one calendar. The primary calendar's name is the account's display name. Birthdays and Tasks are not returned.
 
 ### How do I automatically list Google Calendars on calendar.google.com?
 
@@ -40,11 +41,11 @@ You do not need one. "List Google Calendars" drives the real calendar.google.com
 
 ### What information do I need to provide?
 
-Nothing. It takes no input.
+Optional: account.
 
 ### What does it return?
 
-It returns count, calendars.
+It returns count, account, calendars.
 
 ### Do I need to be logged in to calendar.google.com?
 

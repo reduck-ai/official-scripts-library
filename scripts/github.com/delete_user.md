@@ -4,7 +4,7 @@ Automatically remove user from GitHub org on github.com. Remove a person from a 
 
 - Site: github.com
 - Address: `reduck/github.com/delete_user`
-- Updated: 2026-10-22 (v11)
+- Updated: 2026-11-02 (v13)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/github.com/delete_user
 
 ## Input
 
-- `org` (string, required): GitHub organization login/slug, e.g. "testeraccount-pointandclick-org".
+- `org` (string, required): GitHub organization login/slug, e.g. "acme-corp".
 - `identifier` (string, required): The member's GitHub username (for accepted members) or the email/identifier they were invited with (for pending invitations).
 
 ## Output

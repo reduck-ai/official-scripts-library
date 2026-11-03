@@ -1,10 +1,10 @@
 # Doctolib whoami (signed-in account)
 
-Report which Doctolib patient account this browser is signed in as: email and name from the account page. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Doctolib scripts.
+Report which Doctolib patient account this browser is signed in as: the account holder's name and email. When the browser is signed out, the run fails with a signed-out error that says to sign in to Doctolib, so it can be used to check a session before running other Doctolib scripts.
 
 - Site: doctolib.fr
 - Address: `reduck/doctolib.fr/whoami`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-02 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -21,15 +21,15 @@ It takes no input.
 
 ## Output
 
-- `loggedIn` (boolean, required)
-- `name` (string | null, optional)
-- `email` (string | null, optional)
+- `name` (string | null, required): The account holder's name.
+- `email` (string | null, required): The account's email.
+- `loggedIn` (boolean, required): Always true: a signed-out browser fails with a signed-out error.
 
 ## FAQ
 
 ### What does "Doctolib whoami (signed-in account)" do?
 
-Report which Doctolib patient account this browser is signed in as: email and name from the account page. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Doctolib scripts.
+Report which Doctolib patient account this browser is signed in as: the account holder's name and email. When the browser is signed out, the run fails with a signed-out error that says to sign in to Doctolib, so it can be used to check a session before running other Doctolib scripts.
 
 ### What information do I need to provide?
 

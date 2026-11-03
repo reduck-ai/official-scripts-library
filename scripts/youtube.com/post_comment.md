@@ -4,7 +4,7 @@ Automatically post YouTube comment on youtube.com. Post a top-level comment on a
 
 - Site: youtube.com
 - Address: `reduck/youtube.com/post_comment`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-11-02 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -19,7 +19,7 @@ npx @reduck-ai/cli@latest run --script reduck/youtube.com/post_comment
 
 - `text` (string, required): The comment body to post.
 - `video` (string, required): A YouTube video URL (watch?v=, youtu.be/, /shorts/, /embed/) or a bare 11-char video id.
-- `account` (string, optional): Email (or a distinctive part of it) of the signed-in Google account to post as, e.g. "tester.account@pointandtest.com". Omit to use the browser's default account. Posting is public and immediate, so when several accounts are signed in, name the intended one rather than relying on the default.
+- `account` (string, optional): Email (or a distinctive part of it) of the signed-in Google account to post as, e.g. "you@example.com". Omit to use the browser's default account. Posting is public and immediate, so when several accounts are signed in, name the intended one rather than relying on the default.
 
 ## Output
 

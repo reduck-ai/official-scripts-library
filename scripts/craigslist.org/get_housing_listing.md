@@ -4,7 +4,7 @@ Automatically get a Craigslist apartment listing on craigslist.org. An unofficia
 
 - Site: craigslist.org
 - Address: `reduck/craigslist.org/get_housing_listing`
-- Updated: 2026-10-06 (v1)
+- Updated: 2026-11-02 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Report which Discord account this browser is signed in as: the user id, username
 
 - Site: discord.com
 - Address: `reduck/discord.com/whoami`
-- Updated: 2026-10-19 (v7)
+- Updated: 2026-11-02 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -21,10 +21,11 @@ It takes no input.
 
 ## Output
 
+- `name` (string | null, required): The display name Discord shows.
 - `email` (string | null, required)
 - `userId` (string, required)
+- `loggedIn` (boolean, required): Always true: signed out is a SignedOutError.
 - `username` (string | null, required)
-- `displayName` (string | null, required)
 
 ## FAQ
 
@@ -38,7 +39,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns email, userId, username, displayName.
+It returns name, email, userId, loggedIn, username.
 
 ### Do I need to be logged in to discord.com?
 

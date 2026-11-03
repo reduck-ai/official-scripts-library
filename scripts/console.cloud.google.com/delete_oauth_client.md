@@ -4,7 +4,7 @@ Automatically delete OAuth client on console.cloud.google.com. Delete an OAuth 2
 
 - Site: console.cloud.google.com
 - Address: `reduck/console.cloud.google.com/delete_oauth_client`
-- Updated: 2026-10-23 (v5)
+- Updated: 2026-11-02 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,8 +17,8 @@ npx @reduck-ai/cli@latest run --script reduck/console.cloud.google.com/delete_oa
 
 ## Input
 
-- `clientId` (string, required): Full OAuth client id, e.g. 69462188880-abc123.apps.googleusercontent.com — as returned by create_oauth_client or shown on the client's own console page
-- `projectId` (string, required): GCP project id that owns the OAuth client, e.g. testing-e2e-483713
+- `clientId` (string, required): Full OAuth client id, e.g. 123456789012-abc123.apps.googleusercontent.com — as returned by create_oauth_client or shown on the client's own console page
+- `projectId` (string, required): GCP project id that owns the OAuth client, e.g. my-project-123456
 
 ## Output
 

@@ -4,7 +4,7 @@ Automatically remove team member (Claude.ai) on claude.ai. Remove a member from 
 
 - Site: claude.ai
 - Address: `reduck/claude.ai/delete_user`
-- Updated: 2026-10-22 (v5)
+- Updated: 2026-11-02 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

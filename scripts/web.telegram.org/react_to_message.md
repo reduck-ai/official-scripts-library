@@ -4,7 +4,7 @@ Automatically react to a Telegram message on web.telegram.org. Add your reaction
 
 - Site: web.telegram.org
 - Address: `reduck/web.telegram.org/react_to_message`
-- Updated: 2026-10-23 (v3)
+- Updated: 2026-11-02 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,10 +17,10 @@ npx @reduck-ai/cli@latest run --script reduck/web.telegram.org/react_to_message
 
 ## Input
 
-- `emoji` (string, required): The reaction emoji as a character, e.g. "❤", "🔥", "😭". It must already appear as a reaction on the target message; the script tells you which emojis qualify when it does not. Resolved through Telegram's own reactions table, so it is matched by identity rather than by any translated emoji name.
+- `emoji` (string, required): The reaction emoji as a character, e.g. "❤", "🔥", "😭". It must already appear as a reaction on the target message; when it does not, the run reports which emojis qualify. Works whatever the Telegram interface language.
 - `peerId` (string, required): The conversation's peer id, as returned by get_inbox (negative ids are channels and groups). Saved Messages is refused — see the description.
 - `messageId` (string, required): The message to react to, as returned by get_conversation. Must be in the recently loaded window of that conversation.
-- `remove` (boolean, optional): Leave false (the default) to add your reaction. Set true to take your own reaction back. Both are the same toggle in Telegram, which is why this is a flag rather than a second script.
+- `remove` (boolean, optional): Leave false (the default) to add your reaction. Set true to take your own reaction back.
 
 ## Output
 

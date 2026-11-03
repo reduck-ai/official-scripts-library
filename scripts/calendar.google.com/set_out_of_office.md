@@ -1,10 +1,10 @@
-# Set Out of Office
+# Set Google Calendar out of office
 
-Automatically set Out of Office on calendar.google.com. Create an out-of-office entry on the signed-in Google Calendar's primary calendar for a date range, with an optional custom decline message. New and existing meetings in that range are declined automatically unless declineMeetings is set false. A rehearsal mode fills the entry in and stops before saving.
+Automatically set Google Calendar out of office on calendar.google.com. Create an out-of-office entry on the signed-in Google Calendar's primary calendar for a date range, with an optional custom decline message. New and existing meetings in that range are declined automatically unless declineMeetings is set false. Google offers out of office only on work or school (Google Workspace) accounts: on a personal account the run fails with a message that says so. A rehearsal mode (dry_run) fills the entry in and stops before saving.
 
 - Site: calendar.google.com
 - Address: `reduck/calendar.google.com/set_out_of_office`
-- Updated: 2026-10-22 (v13)
+- Updated: 2026-11-02 (v16)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -19,7 +19,8 @@ npx @reduck-ai/cli@latest run --script reduck/calendar.google.com/set_out_of_off
 
 - `endDate` (string, required): End date, YYYY-MM-DD (inclusive)
 - `startDate` (string, required): Start date, YYYY-MM-DD (inclusive)
-- `dry_run` (boolean, optional): When true the entry is filled in — dates, decline setting and message — and the run stops on the step before the one that saves it. Nothing is written, and saved comes back false.
+- `account` (string, optional): The Google account to set it on, when this browser is signed in to several: its email, or its number in this browser ("1"), as mail.google.com/list_accounts lists them. It must be a work or school account. The run fails, writing nothing, if that account is not signed in. Omit for the first signed-in account.
+- `dry_run` (boolean, optional): When true the entry is filled in (dates, decline setting and message) and the run stops on the step before the one that saves it. Nothing is written, and saved comes back false.
 - `message` (string, optional): Custom decline message. Omit to keep Google's own default wording.
 - `declineMeetings` (boolean, optional): Automatically decline new and existing meetings during this time. Defaults to true, matching Google Calendar's own default. Declining notifies the people who invited you.
 
@@ -29,6 +30,7 @@ npx @reduck-ai/cli@latest run --script reduck/calendar.google.com/set_out_of_off
 - `endDate` (string, required)
 - `startDate` (string, required)
 - `dryRun` (boolean, optional)
+- `account` (string | null, optional): Email of the Google account used.
 - `message` (string | null, optional): The custom decline message this run was asked to set, or null when Google's default wording was kept.
 - `composerReady` (boolean, optional)
 - `messageApplied` (boolean, optional): Whether the message was read back from the field and matched just before saving. Google does not show the decline message anywhere after saving, so this is the furthest it can be checked; it does not prove the server kept it.
@@ -36,25 +38,25 @@ npx @reduck-ai/cli@latest run --script reduck/calendar.google.com/set_out_of_off
 
 ## FAQ
 
-### What does "Set Out of Office" do?
+### What does "Set Google Calendar out of office" do?
 
-Create an out-of-office entry on the signed-in Google Calendar's primary calendar for a date range, with an optional custom decline message. New and existing meetings in that range are declined automatically unless declineMeetings is set false. A rehearsal mode fills the entry in and stops before saving.
+Create an out-of-office entry on the signed-in Google Calendar's primary calendar for a date range, with an optional custom decline message. New and existing meetings in that range are declined automatically unless declineMeetings is set false. Google offers out of office only on work or school (Google Workspace) accounts: on a personal account the run fails with a message that says so. A rehearsal mode (dry_run) fills the entry in and stops before saving.
 
-### How do I automatically set Out of Office on calendar.google.com?
+### How do I automatically set Google Calendar out of office on calendar.google.com?
 
 Ask an AI agent connected to Reduck to run reduck/calendar.google.com/set_out_of_office, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/calendar.google.com/set_out_of_office
 
-### Is there a calendar.google.com API to set Out of Office?
+### Is there a calendar.google.com API to set Google Calendar out of office?
 
-You do not need one. "Set Out of Office" drives the real calendar.google.com pages in a browser, so it works whether or not calendar.google.com offers an API for this.
+You do not need one. "Set Google Calendar out of office" drives the real calendar.google.com pages in a browser, so it works whether or not calendar.google.com offers an API for this.
 
 ### What information do I need to provide?
 
-Required: startDate, endDate. Optional: dry_run, message, declineMeetings.
+Required: startDate, endDate. Optional: account, dry_run, message, declineMeetings.
 
 ### What does it return?
 
-It returns saved, dryRun, endDate, message, startDate, composerReady, messageApplied, declineMeetings.
+It returns saved, dryRun, account, endDate, message, startDate, composerReady, messageApplied, declineMeetings.
 
 ### Do I need to be logged in to calendar.google.com?
 

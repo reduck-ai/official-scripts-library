@@ -4,7 +4,7 @@ Re-runs one Drata monitoring test right away (the "Test now" button) instead of 
 
 - Site: drata.com
 - Address: `reduck/drata.com/retest_monitor`
-- Updated: 2026-10-09 (v3)
+- Updated: 2026-11-02 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -19,7 +19,7 @@ npx @reduck-ai/cli@latest run --script reduck/drata.com/retest_monitor
 
 - `testId` (integer, required): Test number as shown in the Drata UI (monitoring/production/<testId>/...), e.g. 7.
 - `waitSeconds` (integer, optional): How long to wait for the retest to finish before returning (0 = trigger only).
-- `workspaceId` (integer, optional): Drata workspace id. Defaults to the one the app opens (Conception AI = 1).
+- `workspaceId` (integer, optional): Drata workspace id. Defaults to the workspace Drata opens when you sign in.
 
 ## Output
 

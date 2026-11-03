@@ -4,7 +4,7 @@ Automatically check which X (Twitter) account is signed in on x.com. Report whic
 
 - Site: x.com
 - Address: `reduck/x.com/whoami`
-- Updated: 2026-10-29 (v7)
+- Updated: 2026-11-02 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -24,8 +24,8 @@ It takes no input.
 - `evidence` (string, required)
 - `loggedIn` (boolean, required)
 - `name` (string | null, optional)
-- `handle` (string | null, optional)
 - `userId` (string | null, optional)
+- `username` (string | null, optional): The @handle, without the @.
 
 ## FAQ
 
@@ -47,7 +47,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns name, handle, userId, evidence, loggedIn.
+It returns name, userId, evidence, loggedIn, username.
 
 ### Do I need to be logged in to x.com?
 

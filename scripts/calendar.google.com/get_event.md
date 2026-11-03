@@ -1,10 +1,10 @@
 # Get Google Calendar event
 
-Automatically get Google Calendar event on calendar.google.com. Read a Google Calendar event's details by its opaque eventid (as returned by list_events): title, start, end, location, guests (deduped email addresses) and meetLink. Start and end are returned as the date/time strings Calendar displays, not as ISO timestamps.
+Automatically get Google Calendar event on calendar.google.com. Read one Google Calendar event by its eid (from list_events, search_events or create_event): title, all_day, timezone, start, end, location, description, guests (email addresses) and meetLink. Start and end are wall-clock ISO times in the event's own timezone, or dates for an all-day event. An eid that this account cannot open fails with a message that says so.
 
 - Site: calendar.google.com
 - Address: `reduck/calendar.google.com/get_event`
-- Updated: 2026-10-28 (v7)
+- Updated: 2026-11-02 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,24 +17,30 @@ npx @reduck-ai/cli@latest run --script reduck/calendar.google.com/get_event
 
 ## Input
 
-- `eventid` (string, required): The event's eid, as returned by list_events (use the eid field, not the id field).
-- `account` (string, optional)
+- `eid` (string, optional): The event's eid, from list_events, search_events or create_event.
+- `account` (string, optional): The Google account to read as, when this browser is signed in to several: its email, or its number in this browser ("1"), as mail.google.com/list_accounts lists them. The run fails if that account is not signed in. Omit for the first signed-in account.
+- `eventid` (string, optional): Same as eid. Kept for callers that use this name.
 
 ## Output
 
+- `eid` (string, required)
 - `guests` (array, required)
-- `eventid` (string, required)
-- `end` (string | null, optional)
-- `start` (string | null, optional)
+- `end` (string | null, optional): Wall-clock ISO in `timezone` (no offset), or YYYY-MM-DD for all day (inclusive, as Calendar shows it).
+- `start` (string | null, optional): Wall-clock ISO in `timezone` (no offset), or YYYY-MM-DD for all day.
 - `title` (string | null, optional)
+- `account` (string | null, optional): Email of the Google account read as.
+- `all_day` (boolean | null, optional)
+- `eventid` (string, optional)
 - `location` (string | null, optional)
 - `meetLink` (string | null, optional)
+- `timezone` (string | null, optional): IANA timezone that start and end are in (null for all day).
+- `description` (string | null, optional)
 
 ## FAQ
 
 ### What does "Get Google Calendar event" do?
 
-Read a Google Calendar event's details by its opaque eventid (as returned by list_events): title, start, end, location, guests (deduped email addresses) and meetLink. Start and end are returned as the date/time strings Calendar displays, not as ISO timestamps.
+Read one Google Calendar event by its eid (from list_events, search_events or create_event): title, all_day, timezone, start, end, location, description, guests (email addresses) and meetLink. Start and end are wall-clock ISO times in the event's own timezone, or dates for an all-day event. An eid that this account cannot open fails with a message that says so.
 
 ### How do I automatically get Google Calendar event on calendar.google.com?
 
@@ -46,11 +52,11 @@ You do not need one. "Get Google Calendar event" drives the real calendar.google
 
 ### What information do I need to provide?
 
-Required: eventid. Optional: account.
+Optional: eid, account, eventid.
 
 ### What does it return?
 
-It returns end, start, title, guests, eventid, location, meetLink.
+It returns eid, end, start, title, guests, account, all_day, eventid, location, meetLink, timezone, description.
 
 ### Do I need to be logged in to calendar.google.com?
 

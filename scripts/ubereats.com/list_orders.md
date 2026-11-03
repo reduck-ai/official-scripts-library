@@ -4,7 +4,7 @@ Automatically list Uber Eats orders on ubereats.com. List past Uber Eats orders 
 
 - Site: ubereats.com
 - Address: `reduck/ubereats.com/list_orders`
-- Updated: 2026-10-23 (v5)
+- Updated: 2026-11-02 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

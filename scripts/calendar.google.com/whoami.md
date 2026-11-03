@@ -4,7 +4,7 @@ Report which Google account Google Calendar is signed in as in this browser: dis
 
 - Site: calendar.google.com
 - Address: `reduck/calendar.google.com/whoami`
-- Updated: 2026-10-22 (v4)
+- Updated: 2026-11-02 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,13 +17,14 @@ npx @reduck-ai/cli@latest run --script reduck/calendar.google.com/whoami
 
 ## Input
 
-It takes no input.
+- `account` (string, optional): Which signed-in Google account to report: its email, or its number in this browser ("1"), as mail.google.com/list_accounts lists them. The run fails if that account is not signed in. Omit for the first signed-in account.
 
 ## Output
 
 - `loggedIn` (boolean, required)
 - `name` (string | null, optional)
 - `email` (string | null, optional)
+- `authuser` (integer | null, optional): The account's number in this browser (/calendar/u/<n>/).
 
 ## FAQ
 
@@ -33,11 +34,11 @@ Report which Google account Google Calendar is signed in as in this browser: dis
 
 ### What information do I need to provide?
 
-Nothing. It takes no input.
+Optional: account.
 
 ### What does it return?
 
-It returns name, email, loggedIn.
+It returns name, email, authuser, loggedIn.
 
 ### Do I need to be logged in to calendar.google.com?
 

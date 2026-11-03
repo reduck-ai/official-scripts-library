@@ -1,10 +1,10 @@
 # Remove/suspend a Linear workspace member
 
-Remove a member's access to a Linear workspace, identified by email. Uses whichever of Linear's own row-menu affordances applies: 'Revoke invite' for a still-pending invite, or 'Suspend user' for an active member (both are Linear's actual removal mechanisms — there is no hard delete). Defaults to the currently active workspace; pass workspaceUrl to target another. Requires login.
+Remove a member's access to a Linear workspace, identified by email. A pending invite is revoked and an active member is suspended, since Linear has no hard delete; a member who is already suspended is reported as such, and activate_user undoes a suspension. Defaults to the currently active workspace; pass workspaceUrl to target another. Requires being signed in to Linear.
 
 - Site: linear.app
 - Address: `reduck/linear.app/delete_user`
-- Updated: 2026-10-22 (v6)
+- Updated: 2026-11-02 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,7 +18,7 @@ npx @reduck-ai/cli@latest run --script reduck/linear.app/delete_user
 ## Input
 
 - `email` (string, required): Email of the member to remove.
-- `workspaceUrl` (string, optional): Workspace URL slug (e.g. 'pointandtest'). Defaults to the active workspace.
+- `workspaceUrl` (string, optional): Workspace URL slug (e.g. 'acme'). Defaults to the active workspace.
 
 ## Output
 
@@ -32,7 +32,7 @@ npx @reduck-ai/cli@latest run --script reduck/linear.app/delete_user
 
 ### What does "Remove/suspend a Linear workspace member" do?
 
-Remove a member's access to a Linear workspace, identified by email. Uses whichever of Linear's own row-menu affordances applies: 'Revoke invite' for a still-pending invite, or 'Suspend user' for an active member (both are Linear's actual removal mechanisms — there is no hard delete). Defaults to the currently active workspace; pass workspaceUrl to target another. Requires login.
+Remove a member's access to a Linear workspace, identified by email. A pending invite is revoked and an active member is suspended, since Linear has no hard delete; a member who is already suspended is reported as such, and activate_user undoes a suspension. Defaults to the currently active workspace; pass workspaceUrl to target another. Requires being signed in to Linear.
 
 ### What information do I need to provide?
 

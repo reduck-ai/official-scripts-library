@@ -1,10 +1,10 @@
 # Cloudflare: list members and roles
 
-Automatically list members and roles on cloudflare.com. List members and their roles across every Cloudflare account visible to the signed-in user (matches the existing list_invoices convention: no account scoping arg). Reads the dashboard's own accounts and members JSON APIs rather than scraping the DOM. Returns per account id/name and its members (email, status, roles).
+Automatically list members and roles on cloudflare.com. List members and their roles across every Cloudflare account visible to the signed-in user. Takes no arguments: all accounts are covered. Returns, per account, its id, name and members (email, status, roles).
 
 - Site: cloudflare.com
 - Address: `reduck/cloudflare.com/list_users_and_roles`
-- Updated: 2026-07-27 (v2)
+- Updated: 2026-11-02 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -27,7 +27,7 @@ It takes no input.
 
 ### What does "Cloudflare: list members and roles" do?
 
-List members and their roles across every Cloudflare account visible to the signed-in user (matches the existing list_invoices convention: no account scoping arg). Reads the dashboard's own accounts and members JSON APIs rather than scraping the DOM. Returns per account id/name and its members (email, status, roles).
+List members and their roles across every Cloudflare account visible to the signed-in user. Takes no arguments: all accounts are covered. Returns, per account, its id, name and members (email, status, roles).
 
 ### How do I automatically list members and roles on cloudflare.com?
 

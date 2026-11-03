@@ -4,7 +4,7 @@ Automatically list Gmail inbox on mail.google.com. List the messages on the firs
 
 - Site: mail.google.com
 - Address: `reduck/mail.google.com/list_inbox`
-- Updated: 2026-10-22 (v8)
+- Updated: 2026-11-02 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -1,10 +1,10 @@
 # Check if a phone number is on WhatsApp
 
-Automatically check if a phone number is on WhatsApp on web.whatsapp.com. Check whether a phone number is registered on WhatsApp, by opening WhatsApp Web's own "message this number" deep link and seeing whether it opens a chat or shows the "not on WhatsApp" dialog. Read-only: never sends anything.
+Automatically check if a phone number is on WhatsApp on web.whatsapp.com. Check whether a phone number is registered on WhatsApp. Returns registered true with the chat title WhatsApp shows for that number, or registered false when WhatsApp reports that the number has no account. Read-only: never sends anything.
 
 - Site: web.whatsapp.com
 - Address: `reduck/web.whatsapp.com/is_registered`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-11-02 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/web.whatsapp.com/is_registered
 
 ## Input
 
-- `phone` (string, required): Phone number in international format, digits only, no leading + (e.g. "33766765184").
+- `phone` (string, required): Phone number in international format, digits only, no leading + (e.g. "33612345678").
 
 ## Output
 
@@ -29,7 +29,7 @@ npx @reduck-ai/cli@latest run --script reduck/web.whatsapp.com/is_registered
 
 ### What does "Check if a phone number is on WhatsApp" do?
 
-Check whether a phone number is registered on WhatsApp, by opening WhatsApp Web's own "message this number" deep link and seeing whether it opens a chat or shows the "not on WhatsApp" dialog. Read-only: never sends anything.
+Check whether a phone number is registered on WhatsApp. Returns registered true with the chat title WhatsApp shows for that number, or registered false when WhatsApp reports that the number has no account. Read-only: never sends anything.
 
 ### How do I automatically check if a phone number is on WhatsApp on web.whatsapp.com?
 

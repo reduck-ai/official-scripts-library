@@ -4,7 +4,7 @@ Automatically reply to YouTube comment on youtube.com. Reply to a YouTube commen
 
 - Site: youtube.com
 - Address: `reduck/youtube.com/reply_to_comment`
-- Updated: 2026-10-22 (v4)
+- Updated: 2026-11-02 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -20,7 +20,7 @@ npx @reduck-ai/cli@latest run --script reduck/youtube.com/reply_to_comment
 - `text` (string, required): The reply body to post.
 - `video` (string, required): A YouTube video URL (watch?v=, youtu.be/, /shorts/, /embed/) or a bare 11-char video id.
 - `commentId` (string, required): The id of the comment to reply to.
-- `account` (string, optional): Email (or a distinctive part of it) of the signed-in Google account to reply as, e.g. "tester.account@pointandtest.com". Omit to use the browser's default account. Replying is public and immediate, so when several accounts are signed in, name the intended one rather than relying on the default.
+- `account` (string, optional): Email (or a distinctive part of it) of the signed-in Google account to reply as, e.g. "you@example.com". Omit to use the browser's default account. Replying is public and immediate, so when several accounts are signed in, name the intended one rather than relying on the default.
 
 ## Output
 

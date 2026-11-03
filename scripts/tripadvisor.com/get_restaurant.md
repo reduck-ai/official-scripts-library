@@ -4,7 +4,7 @@ Automatically get Tripadvisor restaurant details on tripadvisor.com. Fetch a res
 
 - Site: tripadvisor.com
 - Address: `reduck/tripadvisor.com/get_restaurant`
-- Updated: 2026-09-02 (v1)
+- Updated: 2026-11-02 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

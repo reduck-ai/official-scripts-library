@@ -1,10 +1,10 @@
 # Search Google Calendar events
 
-Automatically search Google Calendar events on calendar.google.com. Full-text search the signed-in Google Calendar across all its calendars, the same as the Calendar search box. Returns count and events (id, calendar, eid, title, all_day, start, end, location). start/end are the event's local wall-clock (ISO, no zone); eid is the base64 join key for delete_event. The query matches event content (title/description/location), not calendar names; supports whatever the Calendar search box supports.
+Automatically search Google Calendar events on calendar.google.com. Search the signed-in Google Calendar across all its calendars, as the Calendar search box does. The query matches event content (title, description, location), not calendar names. Returns count, complete, timezone and events (id, calendar, eid, title, all_day, start, end, location), with start and end as wall-clock times in that timezone. Calendar returns 200 events at most, the nearest to today: complete is false when more matched, and there is no next page, so narrow the query or use list_events for a date range. Pass eid to get_event, update_event or delete_event.
 
 - Site: calendar.google.com
 - Address: `reduck/calendar.google.com/search_events`
-- Updated: 2026-10-29 (v3)
+- Updated: 2026-11-02 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,18 +18,22 @@ npx @reduck-ai/cli@latest run --script reduck/calendar.google.com/search_events
 ## Input
 
 - `query` (string, required): Search text (same syntax as the Calendar search box)
+- `account` (string, optional): The Google account to search, when this browser is signed in to several: its email, or its number in this browser ("1"), as mail.google.com/list_accounts lists them. The run fails if that account is not signed in. Omit for the first signed-in account.
 
 ## Output
 
 - `count` (integer, required)
 - `query` (string, required)
 - `events` (array, required)
+- `complete` (boolean, required): false when Calendar matched more events than it returns (200 at most, the nearest to today). Narrow the query, or use list_events for a date range.
+- `account` (string | null, optional): Email of the Google account searched.
+- `timezone` (string | null, optional): IANA timezone that start and end are in.
 
 ## FAQ
 
 ### What does "Search Google Calendar events" do?
 
-Full-text search the signed-in Google Calendar across all its calendars, the same as the Calendar search box. Returns count and events (id, calendar, eid, title, all_day, start, end, location). start/end are the event's local wall-clock (ISO, no zone); eid is the base64 join key for delete_event. The query matches event content (title/description/location), not calendar names; supports whatever the Calendar search box supports.
+Search the signed-in Google Calendar across all its calendars, as the Calendar search box does. The query matches event content (title, description, location), not calendar names. Returns count, complete, timezone and events (id, calendar, eid, title, all_day, start, end, location), with start and end as wall-clock times in that timezone. Calendar returns 200 events at most, the nearest to today: complete is false when more matched, and there is no next page, so narrow the query or use list_events for a date range. Pass eid to get_event, update_event or delete_event.
 
 ### How do I automatically search Google Calendar events on calendar.google.com?
 
@@ -41,11 +45,11 @@ You do not need one. "Search Google Calendar events" drives the real calendar.go
 
 ### What information do I need to provide?
 
-Required: query.
+Required: query. Optional: account.
 
 ### What does it return?
 
-It returns count, query, events.
+It returns count, query, events, account, complete, timezone.
 
 ### Do I need to be logged in to calendar.google.com?
 
@@ -53,7 +57,7 @@ Yes. It acts as you on calendar.google.com: on your own Chrome it reuses your se
 
 ### Does it change anything on calendar.google.com, or only read data?
 
-Unknown: its author has not declared whether it changes anything on calendar.google.com, so treat it as if it could.
+It only reads. It looks things up on calendar.google.com and changes nothing there.
 
 ### How do I run it?
 

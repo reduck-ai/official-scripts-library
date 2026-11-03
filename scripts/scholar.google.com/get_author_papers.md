@@ -4,7 +4,7 @@ Automatically get Google Scholar author's papers on scholar.google.com. Fetch a 
 
 - Site: scholar.google.com
 - Address: `reduck/scholar.google.com/get_author_papers`
-- Updated: 2026-10-22 (v4)
+- Updated: 2026-11-02 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -24,6 +24,7 @@ npx @reduck-ai/cli@latest run --script reduck/scholar.google.com/get_author_pape
 
 - `author` (object, required)
 - `papers` (array, required)
+- `complete` (boolean, required): True when the list holds every paper of the profile; false when count stopped it first.
 
 ## FAQ
 
@@ -45,7 +46,7 @@ Required: authorId. Optional: count.
 
 ### What does it return?
 
-It returns author, papers.
+It returns author, papers, complete.
 
 ### Do I need to be logged in to scholar.google.com?
 

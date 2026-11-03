@@ -4,7 +4,7 @@ Automatically search Jooble jobs on jooble.org. Search job listings on jooble.or
 
 - Site: jooble.org
 - Address: `reduck/jooble.org/search_jobs`
-- Updated: 2026-10-23 (v9)
+- Updated: 2026-11-02 (v14)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,8 +18,8 @@ npx @reduck-ai/cli@latest run --script reduck/jooble.org/search_jobs
 ## Input
 
 - `query` (string, required): Search keyword (job, skill, job title), e.g. "accountant", "python developer".
-- `page` (integer, optional): Page number, 1-based. Defaults to 1 (first 20 results). Later pages are loaded via progressive scroll, as on the site.
-- `location` (string, optional): Free-text city or region, e.g. "Lyon", "Paris". Optional — defaults to searching all of France.
+- `page` (integer, optional): Page number, 1-based. Defaults to 1 (first 20 results).
+- `location` (string, optional): Optional free-text city or region, e.g. "Lyon", "Paris". Omit to search without a location filter.
 
 ## Output
 

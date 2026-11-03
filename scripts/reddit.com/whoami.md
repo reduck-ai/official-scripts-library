@@ -4,7 +4,7 @@ Report which Reddit account the browser is signed in as: the username (the u/ ha
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/whoami`
-- Updated: 2026-10-22 (v8)
+- Updated: 2026-11-02 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -21,8 +21,9 @@ It takes no input.
 
 ## Output
 
-- `username` (string, required): The account's username without the u/ prefix, read off the URL /user/me resolved to — the identity every other script takes as an argument.
-- `display_name` (string | null, required): The name shown on the profile header, which a redditor can set to something other than their username; equal to username when unset.
+- `name` (string | null, required): The name shown on the profile header, which a redditor can set to something other than their username; equal to username when unset.
+- `loggedIn` (boolean, required): Always true: signed out throws.
+- `username` (string, required): The account's username without the u/ prefix, read off the URL /user/me resolved to: the identity every other script takes as an argument.
 
 ## FAQ
 
@@ -36,7 +37,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns username, display_name.
+It returns name, loggedIn, username.
 
 ### Do I need to be logged in to reddit.com?
 

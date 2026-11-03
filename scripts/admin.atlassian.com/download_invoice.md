@@ -4,7 +4,7 @@ Automatically download an Atlassian invoice PDF on admin.atlassian.com. Download
 
 - Site: admin.atlassian.com
 - Address: `reduck/admin.atlassian.com/download_invoice`
-- Updated: 2026-10-23 (v2)
+- Updated: 2026-11-02 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,7 +18,7 @@ npx @reduck-ai/cli@latest run --script reduck/admin.atlassian.com/download_invoi
 ## Input
 
 - `id` (string, optional): Atlassian invoice id from admin.atlassian.com/list_invoices. Used only when downloadUrl is not given, and then transaction_account is required too.
-- `number` (string, optional): The invoice's number from the list row (e.g. IN-EU-002-392-813). Optional, and only used to name the file: Atlassian's download endpoint sends no Content-Disposition, so without this the filename falls back to the opaque invoice id.
+- `number` (string, optional): The invoice's number from the list row (e.g. IN-EU-000-000-000). Optional, only used to name the file; without it the file is named after the invoice id.
 - `downloadUrl` (string, optional): The invoice's downloadUrl exactly as returned by admin.atlassian.com/list_invoices. Preferred over id/transaction_account.
 - `sourceSystem` (string, optional): Which billing system issued the invoice, from the list row. Only used when building the URL from id.
 - `transaction_account` (string, optional): The invoice's transaction_account from the list row. Required when using id instead of downloadUrl.

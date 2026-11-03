@@ -4,7 +4,7 @@ Automatically download TikTok video (mp4) on tiktok.com. Download a TikTok video
 
 - Site: tiktok.com
 - Address: `reduck/tiktok.com/download_video`
-- Updated: 2026-10-29 (v5)
+- Updated: 2026-11-02 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,7 +18,7 @@ npx @reduck-ai/cli@latest run --script reduck/tiktok.com/download_video
 ## Input
 
 - `video` (string, required): Full TikTok video URL or a bare numeric video id.
-- `quality` (string, optional): Which encoded rendition to fetch, by ascending bitrate. base64 inflates size ~33%, so prefer lower for large/long videos (see sizeBytes in the output).
+- `quality` (string, optional): Which encoded rendition to fetch, by ascending bitrate. Prefer a lower quality for large or long videos (see sizeBytes in the output).
 
 ## Output
 

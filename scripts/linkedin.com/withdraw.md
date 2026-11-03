@@ -1,10 +1,10 @@
 # Withdraw LinkedIn connection invitation
 
-Automatically withdraw LinkedIn connection invitation on linkedin.com. Withdraw a pending sent connection invitation by profile URL. Finds the "Pending" control (primary top-card action or three-dot menu item) and confirms the "Withdraw invitation?" dialog. Safe to repeat: it returns not_pending if there's no outstanding invite. After withdrawing, LinkedIn blocks resending to that person for about three weeks; it also does not unfollow them, since connecting auto-follows. Statuses: withdrawn/not_pending.
+Automatically withdraw LinkedIn connection invitation on linkedin.com. Withdraw a pending sent connection invitation by profile URL. Safe to repeat: it returns not_pending if there is no outstanding invite. After withdrawing, LinkedIn blocks sending a new invitation to that person for about three weeks. Withdrawing does not unfollow them, since connecting auto-follows (use `unfollow` for that). To end an accepted connection, use `remove_connection` instead. Statuses: withdrawn, not_pending.
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/withdraw`
-- Updated: 2026-10-22 (v16)
+- Updated: 2026-11-02 (v16)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -31,7 +31,7 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/withdraw
 
 ### What does "Withdraw LinkedIn connection invitation" do?
 
-Withdraw a pending sent connection invitation by profile URL. Finds the "Pending" control (primary top-card action or three-dot menu item) and confirms the "Withdraw invitation?" dialog. Safe to repeat: it returns not_pending if there's no outstanding invite. After withdrawing, LinkedIn blocks resending to that person for about three weeks; it also does not unfollow them, since connecting auto-follows. Statuses: withdrawn/not_pending.
+Withdraw a pending sent connection invitation by profile URL. Safe to repeat: it returns not_pending if there is no outstanding invite. After withdrawing, LinkedIn blocks sending a new invitation to that person for about three weeks. Withdrawing does not unfollow them, since connecting auto-follows (use `unfollow` for that). To end an accepted connection, use `remove_connection` instead. Statuses: withdrawn, not_pending.
 
 ### How do I automatically withdraw LinkedIn connection invitation on linkedin.com?
 

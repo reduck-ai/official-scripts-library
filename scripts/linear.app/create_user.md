@@ -1,10 +1,10 @@
 # Invite user(s) to Linear workspace
 
-Automatically invite user(s) to Linear workspace on linear.app. Invite one or more teammates to a Linear workspace by email via the Members settings 'Invite' dialog. Linear memberships are invite-based (not instant-create); everyone lands with the workspace's single default role since per-member role assignment is a Business-plan feature not exposed on Free-plan workspaces. Confirms the 'external domain' warning automatically when it appears. Defaults to the currently active workspace; pass workspaceUrl to target another. Requires login.
+Automatically invite user(s) to Linear workspace on linear.app. Invite one or more teammates to a Linear workspace by email. Linear memberships are invitation-based, so this sends invitations rather than creating accounts. Everyone joins with the workspace's default role; per-member roles are a Business-plan feature and are not set here. If Linear warns that an address is outside the workspace's domain, the invitation is confirmed anyway. Defaults to the currently active workspace; pass workspaceUrl to target another. Requires being signed in to Linear.
 
 - Site: linear.app
 - Address: `reduck/linear.app/create_user`
-- Updated: 2026-10-22 (v5)
+- Updated: 2026-11-02 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,7 +18,7 @@ npx @reduck-ai/cli@latest run --script reduck/linear.app/create_user
 ## Input
 
 - `emails` (array, required): Email addresses to invite.
-- `workspaceUrl` (string, optional): Workspace URL slug (e.g. 'pointandtest'). Defaults to the active workspace.
+- `workspaceUrl` (string, optional): Workspace URL slug (e.g. 'acme'). Defaults to the active workspace.
 
 ## Output
 
@@ -42,7 +42,7 @@ Shape only: placeholder values generated from the output schema, not a real run.
 
 ### What does "Invite user(s) to Linear workspace" do?
 
-Invite one or more teammates to a Linear workspace by email via the Members settings 'Invite' dialog. Linear memberships are invite-based (not instant-create); everyone lands with the workspace's single default role since per-member role assignment is a Business-plan feature not exposed on Free-plan workspaces. Confirms the 'external domain' warning automatically when it appears. Defaults to the currently active workspace; pass workspaceUrl to target another. Requires login.
+Invite one or more teammates to a Linear workspace by email. Linear memberships are invitation-based, so this sends invitations rather than creating accounts. Everyone joins with the workspace's default role; per-member roles are a Business-plan feature and are not set here. If Linear warns that an address is outside the workspace's domain, the invitation is confirmed anyway. Defaults to the currently active workspace; pass workspaceUrl to target another. Requires being signed in to Linear.
 
 ### How do I automatically invite user(s) to Linear workspace on linear.app?
 

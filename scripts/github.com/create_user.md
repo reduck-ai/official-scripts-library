@@ -4,7 +4,7 @@ Automatically invite user to GitHub org on github.com. Invite a person to a GitH
 
 - Site: github.com
 - Address: `reduck/github.com/create_user`
-- Updated: 2026-10-22 (v9)
+- Updated: 2026-11-02 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/github.com/create_user
 
 ## Input
 
-- `org` (string, required): GitHub organization login/slug, e.g. "testeraccount-pointandclick-org".
+- `org` (string, required): GitHub organization login/slug, e.g. "acme-corp".
 - `identifier` (string, required)
 - `role` (string, optional)
 

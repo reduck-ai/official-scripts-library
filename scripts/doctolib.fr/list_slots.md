@@ -4,7 +4,7 @@ Automatically list Doctolib slots on doctolib.fr. List a Doctolib practitioner's
 
 - Site: doctolib.fr
 - Address: `reduck/doctolib.fr/list_slots`
-- Updated: 2026-10-25 (v8)
+- Updated: 2026-11-02 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -63,7 +63,7 @@ No. It only uses pages of doctolib.fr that are reachable without signing in.
 
 ### Does it change anything on doctolib.fr, or only read data?
 
-Unknown: its author has not declared whether it changes anything on doctolib.fr, so treat it as if it could.
+It only reads. It looks things up on doctolib.fr and changes nothing there.
 
 ### How do I run it?
 

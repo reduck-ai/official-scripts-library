@@ -4,7 +4,7 @@ Automatically create a Google Calendar event on calendar.google.com. Create an e
 
 - Site: calendar.google.com
 - Address: `reduck/calendar.google.com/create_event`
-- Updated: 2026-10-22 (v11)
+- Updated: 2026-11-02 (v13)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -21,6 +21,7 @@ npx @reduck-ai/cli@latest run --script reduck/calendar.google.com/create_event
 - `start` (string, required): Start: ISO datetime (2026-07-10T09:00:00) for timed, or YYYY-MM-DD for all_day
 - `title` (string, required): Event title
 - `guests` (array, optional): Guest email addresses to invite; an invitation email is sent to each (external guests auto-confirmed)
+- `account` (string, optional): The Google account to create the event as, when this browser is signed in to several: its email, or its number in this browser ("1"), as mail.google.com/list_accounts lists them. The event goes on that account's primary calendar. The run fails, creating nothing, if that account is not signed in. Omit for the first signed-in account.
 - `all_day` (boolean, optional)
 - `location` (string, optional)
 - `timezone` (string, optional): IANA timezone for timed events
@@ -33,8 +34,9 @@ npx @reduck-ai/cli@latest run --script reduck/calendar.google.com/create_event
 - `title` (string, required)
 - `all_day` (boolean, required)
 - `created` (boolean, required)
-- `eid` (string | null, optional): Base64 event handle for delete_event; null if the post-save read-back missed it across all retries
+- `eid` (string | null, optional): Event handle for get_event, update_event and delete_event (with the same account); null if Calendar's answer to the save did not carry it.
 - `guests` (array, optional)
+- `account` (string | null, optional): Email of the Google account the event was created as.
 - `html_link` (string | null, optional)
 
 ## FAQ
@@ -53,11 +55,11 @@ You do not need one. "Create a Google Calendar event" drives the real calendar.g
 
 ### What information do I need to provide?
 
-Required: title, start, end. Optional: guests, all_day, location, timezone, description.
+Required: title, start, end. Optional: guests, account, all_day, location, timezone, description.
 
 ### What does it return?
 
-It returns eid, end, start, title, guests, all_day, created, html_link.
+It returns eid, end, start, title, guests, account, all_day, created, html_link.
 
 ### Do I need to be logged in to calendar.google.com?
 

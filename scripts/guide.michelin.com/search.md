@@ -4,7 +4,7 @@ Automatically search MICHELIN Guide restaurants on guide.michelin.com. Search th
 
 - Site: guide.michelin.com
 - Address: `reduck/guide.michelin.com/search`
-- Updated: 2026-10-22 (v4)
+- Updated: 2026-11-02 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/guide.michelin.com/search
 
 ## Input
 
-- `location` (string, required): City / locality name as a caller would type it, e.g. "Lyon", "Paris", "Nice". Resolved to the Guide's city slug via a faceted lookup (the most frequent matching city wins).
+- `location` (string, required): City name as you would type it, e.g. "Lyon", "Paris", "Nice". If several cities match, the one with the most Guide restaurants is used (reported back as resolvedCity).
 - `page` (integer, optional): Zero-based page index. Loop 0..nbPages-1 to fetch everything.
 - `award` (string, optional): Optional MICHELIN distinction to filter on. Friendly keys: "1-star", "2-stars", "3-stars", "bib-gourmand", "plate". Raw distinction slugs are also accepted (1-etoile-michelin, 2-etoiles-michelin, 3-etoiles-michelin, bib-gourmand, assiette-michelin). Omit to return all listed restaurants in the locality regardless of distinction.
 - `hitsPerPage` (integer, optional): Results per page (max 100).

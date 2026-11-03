@@ -4,7 +4,7 @@ Automatically reactivate a suspended Linear workspace member on linear.app. Reac
 
 - Site: linear.app
 - Address: `reduck/linear.app/activate_user`
-- Updated: 2026-10-23 (v4)
+- Updated: 2026-11-02 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,7 +18,7 @@ npx @reduck-ai/cli@latest run --script reduck/linear.app/activate_user
 ## Input
 
 - `email` (string, required): Email of the suspended member to reactivate.
-- `workspaceUrl` (string, optional): Workspace URL slug (e.g. 'pointandtest'). Defaults to the active workspace.
+- `workspaceUrl` (string, optional): Workspace URL slug (e.g. 'acme'). Defaults to the active workspace.
 
 ## Output
 

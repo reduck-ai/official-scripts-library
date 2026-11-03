@@ -4,7 +4,7 @@ Respond to a Google Calendar invitation (RSVP yes / no / maybe) by its eid, as t
 
 - Site: calendar.google.com
 - Address: `reduck/calendar.google.com/respond_invitation`
-- Updated: 2026-10-22 (v6)
+- Updated: 2026-11-02 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,14 +17,16 @@ npx @reduck-ai/cli@latest run --script reduck/calendar.google.com/respond_invita
 
 ## Input
 
-- `eid` (string, required): Base64 event handle from list_events/search_events
+- `eid` (string, required): Event handle from list_events or search_events
 - `response` (string, required): RSVP response
+- `account` (string, optional): The Google account to answer as, when this browser is signed in to several: its email, or its number in this browser ("1"), as mail.google.com/list_accounts lists them. Use the account the eid came from. The run fails, answering nothing, if that account is not signed in. Omit for the first signed-in account.
 
 ## Output
 
 - `eid` (string, required)
 - `response` (string, required)
 - `responded` (boolean, required)
+- `account` (string | null, optional): Email of the Google account that answered.
 
 ## FAQ
 
@@ -34,11 +36,11 @@ Respond to a Google Calendar invitation (RSVP yes / no / maybe) by its eid, as t
 
 ### What information do I need to provide?
 
-Required: eid, response.
+Required: eid, response. Optional: account.
 
 ### What does it return?
 
-It returns eid, response, responded.
+It returns eid, account, response, responded.
 
 ### Do I need to be logged in to calendar.google.com?
 

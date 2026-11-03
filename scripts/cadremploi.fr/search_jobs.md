@@ -4,7 +4,7 @@ Automatically search Cadremploi jobs on cadremploi.fr. Search Cadremploi (French
 
 - Site: cadremploi.fr
 - Address: `reduck/cadremploi.fr/search_jobs`
-- Updated: 2026-10-28 (v3)
+- Updated: 2026-11-02 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -19,7 +19,7 @@ npx @reduck-ai/cli@latest run --script reduck/cadremploi.fr/search_jobs
 
 - `page` (integer, optional): 1-based page number, 50 results per page. Defaults to 1.
 - `query` (string, optional): Free-text keyword, e.g. "developpeur". Omit to browse all listings (optionally filtered by location).
-- `where` (string, optional): Free-text French city, e.g. "Paris" or "Lyon". Resolved via Cadremploi's own location-suggestions API; throws if no city-level match exists. Omit for a nationwide search.
+- `where` (string, optional): Free-text French city, e.g. "Paris" or "Lyon". Must be a city Cadremploi recognizes, otherwise the run fails with an error; departments and regions are not supported. Omit for a nationwide search.
 - `radius` (integer, optional): Search radius in km around the resolved city. Site default is 20 when a city is given.
 
 ## Output

@@ -4,7 +4,7 @@ Automatically accept a received invitation on linkedin.com. Accept a pending rec
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/accept_invitation`
-- Updated: 2026-11-01 (v10)
+- Updated: 2026-11-02 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/accept_invitation
 
 ## Input
 
-- `name` (string, optional): Inviter's display name exactly as shown on the invitation (e.g. "Ossama Messaoudi", or a page name like "Marketer Tips"), when you have no invitationUrn. Two or more matching invitations throw.
+- `name` (string, optional): Inviter's display name exactly as shown on the invitation (e.g. "Jane Doe", or a page name like "Marketer Tips"), when you have no invitationUrn. Two or more matching invitations throw.
 - `dryRun` (boolean, optional): Find and check the invitation, but do not click Accept. Returns status "dry_run".
 - `invitationUrn` (string, optional): The invitation's urn:li:invitation:<id>, as get_received_invitations returns it. Preferred: it targets one row exactly.
 

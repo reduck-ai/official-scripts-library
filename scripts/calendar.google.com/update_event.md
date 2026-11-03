@@ -4,7 +4,7 @@ Automatically update a Google Calendar event on calendar.google.com. Edit an exi
 
 - Site: calendar.google.com
 - Address: `reduck/calendar.google.com/update_event`
-- Updated: 2026-10-22 (v7)
+- Updated: 2026-11-02 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,10 +17,11 @@ npx @reduck-ai/cli@latest run --script reduck/calendar.google.com/update_event
 
 ## Input
 
-- `eid` (string, required): Base64 event handle from list_events/search_events/create_event
+- `eid` (string, required): Event handle from list_events, search_events or create_event
 - `end` (string, optional): New end: ISO datetime, or YYYY-MM-DD (exclusive) when all_day
 - `start` (string, optional): New start: ISO datetime, or YYYY-MM-DD when all_day
 - `title` (string, optional)
+- `account` (string, optional): The Google account to edit as, when this browser is signed in to several: its email, or its number in this browser ("1"), as mail.google.com/list_accounts lists them. Use the account the eid came from. The run fails, changing nothing, if that account is not signed in. Omit for the first signed-in account.
 - `all_day` (boolean, optional): Convert to/from all-day
 - `location` (string, optional)
 - `add_guests` (array, optional): Guest emails to add (an invitation is emailed to each)
@@ -31,6 +32,7 @@ npx @reduck-ai/cli@latest run --script reduck/calendar.google.com/update_event
 - `eid` (string, required)
 - `changed` (array, required)
 - `updated` (boolean, required)
+- `account` (string | null, optional): Email of the Google account the event was edited as.
 
 ## FAQ
 
@@ -48,11 +50,11 @@ You do not need one. "Update a Google Calendar event" drives the real calendar.g
 
 ### What information do I need to provide?
 
-Required: eid. Optional: end, start, title, all_day, location, add_guests, description.
+Required: eid. Optional: end, start, title, account, all_day, location, add_guests, description.
 
 ### What does it return?
 
-It returns eid, changed, updated.
+It returns eid, account, changed, updated.
 
 ### Do I need to be logged in to calendar.google.com?
 

@@ -1,10 +1,10 @@
 # Search SimplyHired jobs
 
-Automatically search SimplyHired jobs on simplyhired.com. Search SimplyHired (Indeed-owned aggregator) job listings, returning richer detail than the page cards show: title, company, location, salary, benefits, requirements, snippet, remote flag, sponsored flag, dateOnIndeed. Pagination is cursor-based (not page numbers) — pass the cursor token returned in a previous call's pageCursors to get subsequent pages. Invalid/unresolvable locations return 0 results (site's own behavior), not an error.
+Automatically search SimplyHired jobs on simplyhired.com. Search SimplyHired (Indeed-owned aggregator) job listings, returning richer detail than the page cards show: title, company, location, salary, benefits, requirements, snippet, remote flag, sponsored flag, datePosted. Pagination is cursor-based (not page numbers): pass a cursor from a previous call's pageCursors to get later pages. Invalid or unresolvable locations return 0 results (the site's own behavior), not an error.
 
 - Site: simplyhired.com
 - Address: `reduck/simplyhired.com/search_jobs`
-- Updated: 2026-10-28 (v4)
+- Updated: 2026-11-02 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -34,7 +34,7 @@ npx @reduck-ai/cli@latest run --script reduck/simplyhired.com/search_jobs
 
 ### What does "Search SimplyHired jobs" do?
 
-Search SimplyHired (Indeed-owned aggregator) job listings, returning richer detail than the page cards show: title, company, location, salary, benefits, requirements, snippet, remote flag, sponsored flag, dateOnIndeed. Pagination is cursor-based (not page numbers) — pass the cursor token returned in a previous call's pageCursors to get subsequent pages. Invalid/unresolvable locations return 0 results (site's own behavior), not an error.
+Search SimplyHired (Indeed-owned aggregator) job listings, returning richer detail than the page cards show: title, company, location, salary, benefits, requirements, snippet, remote flag, sponsored flag, datePosted. Pagination is cursor-based (not page numbers): pass a cursor from a previous call's pageCursors to get later pages. Invalid or unresolvable locations return 0 results (the site's own behavior), not an error.
 
 ### How do I automatically search SimplyHired jobs on simplyhired.com?
 

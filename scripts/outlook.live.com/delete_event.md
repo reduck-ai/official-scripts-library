@@ -4,7 +4,7 @@ Automatically delete calendar event (Outlook) on outlook.live.com. Delete a sing
 
 - Site: outlook.live.com
 - Address: `reduck/outlook.live.com/delete_event`
-- Updated: 2026-10-28 (v5)
+- Updated: 2026-11-02 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -1,10 +1,10 @@
 # Delete a Google Calendar event
 
-Automatically delete a Google Calendar event on calendar.google.com. Delete an event from the signed-in Google Calendar by its eid (the base64 handle returned by list_events / create_event). Opens the event in the composer, uses More actions > Delete, sends a cancellation notice to any guests, and confirms by leaving the composer route. Single (non-recurring) events only — a recurring instance pops a this/all scope dialog this v1 doesn't handle. Irreversible.
+Automatically delete a Google Calendar event on calendar.google.com. Delete an event from the signed-in Google Calendar by its eid (the handle returned by list_events / create_event) or an event link. Guests are sent a cancellation notice. Single (non-recurring) events only; a recurring event is not supported. Irreversible.
 
 - Site: calendar.google.com
 - Address: `reduck/calendar.google.com/delete_event`
-- Updated: 2026-10-29 (v8)
+- Updated: 2026-11-02 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,17 +18,19 @@ npx @reduck-ai/cli@latest run --script reduck/calendar.google.com/delete_event
 ## Input
 
 - `eid` (string, required): The event's eid (from list_events, search_events or create_event), or a Google Calendar event link that carries it (…/eventedit/<eid> or …?eid=<eid>).
+- `account` (string, optional): The Google account to delete as, when this browser is signed in to several: its email, or its number in this browser ("1"), as mail.google.com/list_accounts lists them. Use the account the eid came from. The run fails, deleting nothing, if that account is not signed in. Omit for the first signed-in account.
 
 ## Output
 
 - `eid` (string, required)
 - `deleted` (boolean, required)
+- `account` (string | null, optional): Email of the Google account the event was deleted as.
 
 ## FAQ
 
 ### What does "Delete a Google Calendar event" do?
 
-Delete an event from the signed-in Google Calendar by its eid (the base64 handle returned by list_events / create_event). Opens the event in the composer, uses More actions > Delete, sends a cancellation notice to any guests, and confirms by leaving the composer route. Single (non-recurring) events only — a recurring instance pops a this/all scope dialog this v1 doesn't handle. Irreversible.
+Delete an event from the signed-in Google Calendar by its eid (the handle returned by list_events / create_event) or an event link. Guests are sent a cancellation notice. Single (non-recurring) events only; a recurring event is not supported. Irreversible.
 
 ### How do I automatically delete a Google Calendar event on calendar.google.com?
 
@@ -40,11 +42,11 @@ You do not need one. "Delete a Google Calendar event" drives the real calendar.g
 
 ### What information do I need to provide?
 
-Required: eid.
+Required: eid. Optional: account.
 
 ### What does it return?
 
-It returns eid, deleted.
+It returns eid, account, deleted.
 
 ### Do I need to be logged in to calendar.google.com?
 

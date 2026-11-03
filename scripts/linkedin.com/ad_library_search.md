@@ -4,7 +4,7 @@ Automatically search the LinkedIn Ad Library on linkedin.com. Search LinkedIn's 
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/ad_library_search`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-11-02 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

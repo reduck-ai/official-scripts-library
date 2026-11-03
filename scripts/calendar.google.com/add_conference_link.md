@@ -4,7 +4,7 @@ Automatically add Google Meet link to a Calendar event on calendar.google.com. A
 
 - Site: calendar.google.com
 - Address: `reduck/calendar.google.com/add_conference_link`
-- Updated: 2026-10-22 (v4)
+- Updated: 2026-11-02 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,13 +17,15 @@ npx @reduck-ai/cli@latest run --script reduck/calendar.google.com/add_conference
 
 ## Input
 
-- `eid` (string, required): Base64 event handle from list_events/search_events/create_event
+- `eid` (string, required): Event handle from list_events, search_events or create_event
+- `account` (string, optional): The Google account to edit as, when this browser is signed in to several: its email, or its number in this browser ("1"), as mail.google.com/list_accounts lists them. Use the account the eid came from. The run fails, changing nothing, if that account is not signed in. Omit for the first signed-in account.
 
 ## Output
 
 - `eid` (string, required)
 - `added` (boolean, required): true if a new link was added; false if the event already had one
 - `meetLink` (string, required)
+- `account` (string | null, optional): Email of the Google account the link was added as.
 
 ## FAQ
 
@@ -41,11 +43,11 @@ You do not need one. "Add Google Meet link to a Calendar event" drives the real 
 
 ### What information do I need to provide?
 
-Required: eid.
+Required: eid. Optional: account.
 
 ### What does it return?
 
-It returns eid, added, meetLink.
+It returns eid, added, account, meetLink.
 
 ### Do I need to be logged in to calendar.google.com?
 

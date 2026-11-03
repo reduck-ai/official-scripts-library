@@ -1,10 +1,10 @@
 # Remove LinkedIn connection
 
-Automatically remove LinkedIn connection on linkedin.com. Permanently remove an existing 1st-degree LinkedIn connection by profile URL, via the profile's overflow menu -> Remove connection -> confirm. This ends a real connection, not a pending invite (use `withdraw` to cancel one of those instead) — the other person is not notified, but reconnecting afterward means sending a brand-new invitation and having them accept it again. Safe to repeat: it returns not_connected if the profile isn't currently a 1st-degree connection, instead of guessing.
+Automatically remove LinkedIn connection on linkedin.com. Permanently remove an existing 1st-degree LinkedIn connection by profile URL. This ends a real connection, not a pending invite (use `withdraw` to cancel one of those instead). The other person is not notified, but reconnecting afterward means sending a brand-new invitation and having them accept it again. Safe to repeat: it returns not_connected if the profile isn't currently a 1st-degree connection, instead of guessing.
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/remove_connection`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-11-02 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/remove_connection
 
 ## Input
 
-- `profileUrl` (string, required): LinkedIn profile URL, e.g. https://www.linkedin.com/in/jolz/
+- `profileUrl` (string, required): LinkedIn profile URL, e.g. https://www.linkedin.com/in/some-public-id/
 
 ## Output
 
@@ -30,7 +30,7 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/remove_connection
 
 ### What does "Remove LinkedIn connection" do?
 
-Permanently remove an existing 1st-degree LinkedIn connection by profile URL, via the profile's overflow menu -> Remove connection -> confirm. This ends a real connection, not a pending invite (use `withdraw` to cancel one of those instead) — the other person is not notified, but reconnecting afterward means sending a brand-new invitation and having them accept it again. Safe to repeat: it returns not_connected if the profile isn't currently a 1st-degree connection, instead of guessing.
+Permanently remove an existing 1st-degree LinkedIn connection by profile URL. This ends a real connection, not a pending invite (use `withdraw` to cancel one of those instead). The other person is not notified, but reconnecting afterward means sending a brand-new invitation and having them accept it again. Safe to repeat: it returns not_connected if the profile isn't currently a 1st-degree connection, instead of guessing.
 
 ### How do I automatically remove LinkedIn connection on linkedin.com?
 

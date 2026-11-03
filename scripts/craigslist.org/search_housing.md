@@ -4,7 +4,7 @@ Automatically search Craigslist apartments for rent on craigslist.org. An unoffi
 
 - Site: craigslist.org
 - Address: `reduck/craigslist.org/search_housing`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-02 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

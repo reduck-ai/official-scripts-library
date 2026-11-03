@@ -4,7 +4,7 @@ Automatically download a message's media on web.telegram.org. Download the docum
 
 - Site: web.telegram.org
 - Address: `reduck/web.telegram.org/download_media`
-- Updated: 2026-10-23 (v2)
+- Updated: 2026-11-02 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/web.telegram.org/download_media
 
 ## Input
 
-- `peerId` (string, required): The conversation's peer id, as returned by get_inbox (e.g. "8591421602" for Saved Messages; negative ids are channels and groups).
+- `peerId` (string, required): The conversation's peer id, as returned by get_inbox (e.g. "123456789"; your own user id opens Saved Messages, negative ids are channels and groups).
 - `messageId` (string, required): The message carrying the media, as returned by get_conversation or send_message. Must be one of the recently loaded messages in that conversation — get_conversation only loads a recent window, so raise its count until the target is present.
 
 ## Output

@@ -1,10 +1,10 @@
 # List Google Calendar events
 
-Automatically list Google Calendar events on calendar.google.com. List the signed-in Google Calendar account's events between two dates (across all visible calendars). Returns n and events (id, eid, title, all_day, start, end, timezone, location, description, calendar, organizer, attendees with response status, created, html_link). eid is the join key for delete_event. Date filtering is done on UTC boundaries; one call covers up to ~11 months from `from` (loop with a later `from` for more). Calendar events only — Google Tasks and reminders are not included.
+Automatically list Google Calendar events on calendar.google.com. List the signed-in Google Calendar account's events between two dates, across every calendar shown in the sidebar, or one calendar with calendarId (from list_calendars). Each occurrence of a repeating event is its own row, with recurring_event_id set to its series. Returns n and events (id, eid, title, all_day, start, end, timezone, location, description, calendar, organizer, attendees with response status, created, html_link). Times are UTC; all-day events use dates, with an exclusive end. One call covers up to one year. Pass eid to get_event, update_event, delete_event, add_conference_link or respond_invitation. Google Tasks and birthdays are not included.
 
 - Site: calendar.google.com
 - Address: `reduck/calendar.google.com/list_events`
-- Updated: 2026-10-22 (v6)
+- Updated: 2026-11-02 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -19,6 +19,8 @@ npx @reduck-ai/cli@latest run --script reduck/calendar.google.com/list_events
 
 - `to` (string, required): End date (inclusive), YYYY-MM-DD
 - `from` (string, required): Start date (inclusive), YYYY-MM-DD
+- `account` (string, optional): The Google account to read, when this browser is signed in to several: its email, or its number in this browser ("1"), as mail.google.com/list_accounts lists them. The run fails if that account is not signed in. Omit for the first signed-in account.
+- `calendarId` (string, optional): List one calendar only, by its id from calendar.google.com/list_calendars. Omit to list every calendar shown in the Calendar sidebar.
 
 ## Output
 
@@ -26,13 +28,14 @@ npx @reduck-ai/cli@latest run --script reduck/calendar.google.com/list_events
 - `to` (string, required)
 - `from` (string, required)
 - `events` (array, required)
-- `calendars` (array, optional): Calendar ids actually queried for this window. An empty `events` with a populated `calendars` really means an empty range.
+- `account` (string | null, optional): Email of the Google account read.
+- `calendars` (array, optional): Calendar ids queried for this range.
 
 ## FAQ
 
 ### What does "List Google Calendar events" do?
 
-List the signed-in Google Calendar account's events between two dates (across all visible calendars). Returns n and events (id, eid, title, all_day, start, end, timezone, location, description, calendar, organizer, attendees with response status, created, html_link). eid is the join key for delete_event. Date filtering is done on UTC boundaries; one call covers up to ~11 months from `from` (loop with a later `from` for more). Calendar events only — Google Tasks and reminders are not included.
+List the signed-in Google Calendar account's events between two dates, across every calendar shown in the sidebar, or one calendar with calendarId (from list_calendars). Each occurrence of a repeating event is its own row, with recurring_event_id set to its series. Returns n and events (id, eid, title, all_day, start, end, timezone, location, description, calendar, organizer, attendees with response status, created, html_link). Times are UTC; all-day events use dates, with an exclusive end. One call covers up to one year. Pass eid to get_event, update_event, delete_event, add_conference_link or respond_invitation. Google Tasks and birthdays are not included.
 
 ### How do I automatically list Google Calendar events on calendar.google.com?
 
@@ -44,11 +47,11 @@ You do not need one. "List Google Calendar events" drives the real calendar.goog
 
 ### What information do I need to provide?
 
-Required: from, to.
+Required: from, to. Optional: account, calendarId.
 
 ### What does it return?
 
-It returns n, to, from, events, calendars.
+It returns n, to, from, events, account, calendars.
 
 ### Do I need to be logged in to calendar.google.com?
 
@@ -56,7 +59,7 @@ Yes. It acts as you on calendar.google.com: on your own Chrome it reuses your se
 
 ### Does it change anything on calendar.google.com, or only read data?
 
-Unknown: its author has not declared whether it changes anything on calendar.google.com, so treat it as if it could.
+It only reads. It looks things up on calendar.google.com and changes nothing there.
 
 ### How do I run it?
 

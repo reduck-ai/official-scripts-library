@@ -1,10 +1,10 @@
 # Search Barreau de Nantes lawyers
 
-Automatically search Barreau de Nantes lawyers on barreaunantes.fr. Search the Nantes bar association's public lawyer directory by SURNAME (the site's own "Nom" field). Matching is substring and accent-insensitive on the surname only — a given name ("gaetane") or a cabinet name ("FIDAL") returns no rows, verified. Returns each match's slug (the join key for get_lawyer), surname, given name, cabinet and city. No login required. The directory renders its whole result set on one page, so a one-letter query can return hundreds of rows; an empty list means no surname matches.
+Automatically search Barreau de Nantes lawyers on barreaunantes.fr. Search the Nantes bar association's public lawyer directory by surname (the site's own "Nom" field). Matching is substring and accent-insensitive on the surname only — a given name ("gaetane") or a cabinet name ("FIDAL") returns no rows, verified. Returns each match's slug (the join key for get_lawyer), surname, given name, cabinet and city. No login required. The directory renders its whole result set on one page, so a one-letter query can return hundreds of rows; an empty list means no surname matches.
 
 - Site: barreaunantes.fr
 - Address: `reduck/barreaunantes.fr/list_lawyers`
-- Updated: 2026-09-21 (v2)
+- Updated: 2026-11-03 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,7 +29,7 @@ npx @reduck-ai/cli@latest run --script reduck/barreaunantes.fr/list_lawyers
 
 ### What does "Search Barreau de Nantes lawyers" do?
 
-Search the Nantes bar association's public lawyer directory by SURNAME (the site's own "Nom" field). Matching is substring and accent-insensitive on the surname only — a given name ("gaetane") or a cabinet name ("FIDAL") returns no rows, verified. Returns each match's slug (the join key for get_lawyer), surname, given name, cabinet and city. No login required. The directory renders its whole result set on one page, so a one-letter query can return hundreds of rows; an empty list means no surname matches.
+Search the Nantes bar association's public lawyer directory by surname (the site's own "Nom" field). Matching is substring and accent-insensitive on the surname only — a given name ("gaetane") or a cabinet name ("FIDAL") returns no rows, verified. Returns each match's slug (the join key for get_lawyer), surname, given name, cabinet and city. No login required. The directory renders its whole result set on one page, so a one-letter query can return hundreds of rows; an empty list means no surname matches.
 
 ### How do I automatically search Barreau de Nantes lawyers on barreaunantes.fr?
 

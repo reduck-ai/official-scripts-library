@@ -4,7 +4,7 @@ Automatically remove LinkedIn connection on linkedin.com. Permanently remove an 
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/remove_connection`
-- Updated: 2026-11-02 (v5)
+- Updated: 2026-11-03 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,10 +18,11 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/remove_connection
 ## Input
 
 - `profileUrl` (string, required): LinkedIn profile URL, e.g. https://www.linkedin.com/in/some-public-id/
+- `dryRun` (boolean, optional): true opens the confirmation and cancels it: nothing is removed, and the run proves the connection could be removed.
 
 ## Output
 
-- `status` (string, required): removed = the connection was just ended; not_connected = this profile wasn't a 1st-degree connection to begin with.
+- `status` (string, required): removed = the connection was just ended; not_connected = this profile wasn't a 1st-degree connection to begin with; dry_run_ok = dryRun reached the confirmation, cancelled it, and the connection is still there.
 - `publicId` (string, required): vanity id parsed from the URL (decoded)
 - `profileUrl` (string, required)
 - `name` (string | null, optional)
@@ -42,7 +43,7 @@ You do not need one. "Remove LinkedIn connection" drives the real linkedin.com p
 
 ### What information do I need to provide?
 
-Required: profileUrl.
+Required: profileUrl. Optional: dryRun.
 
 ### What does it return?
 

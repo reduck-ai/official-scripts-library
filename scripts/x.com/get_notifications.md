@@ -1,10 +1,10 @@
 # Read your X (Twitter) notifications
 
-Automatically read your X (Twitter) notifications on x.com. List the logged-in account's Notifications > All tab (not just mentions) — follows, likes, retweets, replies and other notification types X surfaces there. Returns per notification: id, type (a stable X-internal event key, e.g. users_followed_you), icon, text (the rendered notification sentence), url (the notification's target link, if any), timestamp_ms, and users (the accounts referenced in the notification text, with id/handle/name). Scrolls until count is met or the feed dries up.
+Automatically read your X (Twitter) notifications on x.com. Lists the signed-in X account's notifications from the All tab: follows, likes, reposts, replies and other kinds. Each has an id, type, icon, the notification sentence, its link, time and the accounts it names. Returns up to count notifications, with complete true when the feed had no more.
 
 - Site: x.com
 - Address: `reduck/x.com/get_notifications`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-11-03 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -22,13 +22,14 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/get_notifications
 ## Output
 
 - `count` (integer, required): Number of notifications returned. 0 is a first-class outcome (no notifications).
+- `complete` (boolean, required): True when the feed had no more notifications; false when count stopped the list first.
 - `notifications` (array, required)
 
 ## FAQ
 
 ### What does "Read your X (Twitter) notifications" do?
 
-List the logged-in account's Notifications > All tab (not just mentions) — follows, likes, retweets, replies and other notification types X surfaces there. Returns per notification: id, type (a stable X-internal event key, e.g. users_followed_you), icon, text (the rendered notification sentence), url (the notification's target link, if any), timestamp_ms, and users (the accounts referenced in the notification text, with id/handle/name). Scrolls until count is met or the feed dries up.
+Lists the signed-in X account's notifications from the All tab: follows, likes, reposts, replies and other kinds. Each has an id, type, icon, the notification sentence, its link, time and the accounts it names. Returns up to count notifications, with complete true when the feed had no more.
 
 ### How do I automatically read your X (Twitter) notifications on x.com?
 
@@ -44,7 +45,7 @@ Optional: count.
 
 ### What does it return?
 
-It returns count, notifications.
+It returns count, complete, notifications.
 
 ### Do I need to be logged in to x.com?
 

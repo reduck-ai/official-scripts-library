@@ -1,10 +1,10 @@
 # Greenhouse: get company jobs
 
-Automatically get company jobs on greenhouse.io. Fetch a company's live job postings from Greenhouse's public board API by board slug (boards.greenhouse.io/<slug>). Anonymous, no auth. Returns id, title, location, department(s), url, updatedAt, firstPublished. Throws (job board not found) if the slug isn't a Greenhouse customer.
+Automatically get company jobs on greenhouse.io. Lists a company's open Greenhouse job postings by its board slug (the name in boards.greenhouse.io/<slug>). Returns each job's id, title, location, departments, link and dates. Fails as a user error if the slug is not a Greenhouse board.
 
 - Site: greenhouse.io
 - Address: `reduck/greenhouse.io/get_company_jobs`
-- Updated: 2026-08-17 (v1)
+- Updated: 2026-11-03 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,7 +29,7 @@ npx @reduck-ai/cli@latest run --script reduck/greenhouse.io/get_company_jobs
 
 ### What does "Greenhouse: get company jobs" do?
 
-Fetch a company's live job postings from Greenhouse's public board API by board slug (boards.greenhouse.io/<slug>). Anonymous, no auth. Returns id, title, location, department(s), url, updatedAt, firstPublished. Throws (job board not found) if the slug isn't a Greenhouse customer.
+Lists a company's open Greenhouse job postings by its board slug (the name in boards.greenhouse.io/<slug>). Returns each job's id, title, location, departments, link and dates. Fails as a user error if the slug is not a Greenhouse board.
 
 ### How do I automatically get company jobs on greenhouse.io?
 
@@ -53,7 +53,7 @@ No. It only uses pages of greenhouse.io that are reachable without signing in.
 
 ### Does it change anything on greenhouse.io, or only read data?
 
-Unknown: its author has not declared whether it changes anything on greenhouse.io, so treat it as if it could.
+It only reads. It looks things up on greenhouse.io and changes nothing there.
 
 ### How do I run it?
 

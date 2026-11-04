@@ -4,7 +4,7 @@ Automatically list job board postings on jobs.ashbyhq.com. List every open posit
 
 - Site: jobs.ashbyhq.com
 - Address: `reduck/jobs.ashbyhq.com/list_jobs`
-- Updated: 2026-08-02 (v4)
+- Updated: 2026-11-03 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -52,7 +52,7 @@ No. It only uses pages of jobs.ashbyhq.com that are reachable without signing in
 
 ### Does it change anything on jobs.ashbyhq.com, or only read data?
 
-Unknown: its author has not declared whether it changes anything on jobs.ashbyhq.com, so treat it as if it could.
+It only reads. It looks things up on jobs.ashbyhq.com and changes nothing there.
 
 ### How do I run it?
 

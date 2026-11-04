@@ -4,7 +4,7 @@ Automatically browse Yelp businesses by category on yelp.com. Browse Yelp busine
 
 - Site: yelp.com
 - Address: `reduck/yelp.com/search_by_category`
-- Updated: 2026-10-22 (v4)
+- Updated: 2026-11-03 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -19,13 +19,17 @@ npx @reduck-ai/cli@latest run --script reduck/yelp.com/search_by_category
 
 - `category` (string, required): Yelp category alias, e.g. 'pizza', 'plumbing', 'coffee'
 - `location` (string, required): Location, e.g. 'New York, NY'
+- `start` (integer, optional): Offset of the first result, in steps of 10 (Yelp shows 10 per page). Use nextStart from a previous run.
 
 ## Output
 
-- `count` (integer, optional)
-- `category` (string, optional)
-- `location` (string, optional)
-- `businesses` (array, optional)
+- `count` (integer, required)
+- `category` (string, required)
+- `location` (string, required)
+- `businesses` (array, required)
+- `start` (integer, optional)
+- `nextStart` (integer | null, optional): Pass as start for the next page; null on the last page.
+- `totalResults` (integer | null, optional)
 
 ## FAQ
 
@@ -43,11 +47,11 @@ You do not need one. "Browse Yelp businesses by category" drives the real yelp.c
 
 ### What information do I need to provide?
 
-Required: category, location.
+Required: category, location. Optional: start.
 
 ### What does it return?
 
-It returns count, category, location, businesses.
+It returns count, start, category, location, nextStart, businesses, totalResults.
 
 ### Do I need to be logged in to yelp.com?
 

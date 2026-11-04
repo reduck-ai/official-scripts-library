@@ -4,7 +4,7 @@ Report which ChatGPT account the browser is signed into: id, name, email, pictur
 
 - Site: chatgpt.com
 - Address: `reduck/chatgpt.com/who_am_i`
-- Updated: 2026-10-22 (v6)
+- Updated: 2026-11-03 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it

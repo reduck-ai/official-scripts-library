@@ -4,7 +4,7 @@ Returns the registry record for a French company from its SIREN: registered name
 
 - Site: infogreffe.fr
 - Address: `reduck/infogreffe.fr/get_company`
-- Updated: 2026-09-24 (v1)
+- Updated: 2026-11-03 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

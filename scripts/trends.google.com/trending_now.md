@@ -1,10 +1,10 @@
-# Trending Now searches
+# Google Trends trending now searches
 
 Google Trends "Trending Now": every trending search for a country over the last 4h/24h/48h/7d — title, search volume, growth %, start/end time, active flag, breakdown terms.
 
 - Site: trends.google.com
 - Address: `reduck/trends.google.com/trending_now`
-- Updated: 2026-07-13 (v2)
+- Updated: 2026-11-03 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,7 +29,7 @@ npx @reduck-ai/cli@latest run --script reduck/trends.google.com/trending_now
 
 ## FAQ
 
-### What does "Trending Now searches" do?
+### What does "Google Trends trending now searches" do?
 
 Google Trends "Trending Now": every trending search for a country over the last 4h/24h/48h/7d — title, search volume, growth %, start/end time, active flag, breakdown terms.
 

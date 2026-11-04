@@ -4,7 +4,7 @@ Automatically search Sifted News on sifted.eu. Search Sifted's European tech new
 
 - Site: sifted.eu
 - Address: `reduck/sifted.eu/search_news`
-- Updated: 2026-07-27 (v2)
+- Updated: 2026-11-03 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

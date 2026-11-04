@@ -1,10 +1,10 @@
-# Get a lawyer's detail
+# Get a lawyer's details from the Barreau de Nantes
 
-Automatically get a lawyer's detail on barreaunantes.fr. One lawyer's public detail sheet from the Barreau de Nantes directory, by slug (from list_lawyers or list_lawyers_by_cabinet): name, phone, email, photo, plus the page's own labelled fields (cabinet, address, languages, dominant activities, case palais, oath date, fax). Which labelled fields appear varies per lawyer. No login required. An unknown slug throws a clear not-found error rather than returning the directory's error page as a person.
+Automatically get a lawyer's details from the Barreau de Nantes on barreaunantes.fr. One lawyer's public detail sheet from the Barreau de Nantes directory, by slug (from list_lawyers or list_lawyers_by_cabinet): name, phone, email, photo, plus the page's own labelled fields (cabinet, address, languages, dominant activities, case palais, oath date, fax). Which labelled fields appear varies per lawyer. No login required. An unknown slug throws a clear not-found error rather than returning the directory's error page as a person.
 
 - Site: barreaunantes.fr
 - Address: `reduck/barreaunantes.fr/get_lawyer`
-- Updated: 2026-09-21 (v3)
+- Updated: 2026-11-03 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -34,17 +34,17 @@ npx @reduck-ai/cli@latest run --script reduck/barreaunantes.fr/get_lawyer
 
 ## FAQ
 
-### What does "Get a lawyer's detail" do?
+### What does "Get a lawyer's details from the Barreau de Nantes" do?
 
 One lawyer's public detail sheet from the Barreau de Nantes directory, by slug (from list_lawyers or list_lawyers_by_cabinet): name, phone, email, photo, plus the page's own labelled fields (cabinet, address, languages, dominant activities, case palais, oath date, fax). Which labelled fields appear varies per lawyer. No login required. An unknown slug throws a clear not-found error rather than returning the directory's error page as a person.
 
-### How do I automatically get a lawyer's detail on barreaunantes.fr?
+### How do I automatically get a lawyer's details from the Barreau de Nantes on barreaunantes.fr?
 
 Ask an AI agent connected to Reduck to run reduck/barreaunantes.fr/get_lawyer, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/barreaunantes.fr/get_lawyer
 
-### Is there a barreaunantes.fr API to get a lawyer's detail?
+### Is there a barreaunantes.fr API to get a lawyer's details from the Barreau de Nantes?
 
-You do not need one. "Get a lawyer's detail" drives the real barreaunantes.fr pages in a browser, so it works whether or not barreaunantes.fr offers an API for this.
+You do not need one. "Get a lawyer's details from the Barreau de Nantes" drives the real barreaunantes.fr pages in a browser, so it works whether or not barreaunantes.fr offers an API for this.
 
 ### What information do I need to provide?
 

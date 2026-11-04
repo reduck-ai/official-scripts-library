@@ -1,10 +1,10 @@
 # Get Trustpilot reviewer profile
 
-Automatically get Trustpilot reviewer profile on trustpilot.com. Get a Trustpilot reviewer's public profile by user id: display name, country, review count, lifetime stats, and their service reviews (each carries the company it's about via businessUnit). Paginated. The user id is the reviews[].consumer.id field returned by get_reviews.
+Automatically get Trustpilot reviewer profile on trustpilot.com. Get a Trustpilot reviewer's public profile by user id (as returned by trustpilot.com/get_reviews): display name, country, review count, stats, and one page of their reviews with the company each one is about. An unknown id or a page past the last one is refused.
 
 - Site: trustpilot.com
 - Address: `reduck/trustpilot.com/get_reviewer`
-- Updated: 2026-10-22 (v6)
+- Updated: 2026-11-03 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -36,7 +36,7 @@ npx @reduck-ai/cli@latest run --script reduck/trustpilot.com/get_reviewer
 
 ### What does "Get Trustpilot reviewer profile" do?
 
-Get a Trustpilot reviewer's public profile by user id: display name, country, review count, lifetime stats, and their service reviews (each carries the company it's about via businessUnit). Paginated. The user id is the reviews[].consumer.id field returned by get_reviews.
+Get a Trustpilot reviewer's public profile by user id (as returned by trustpilot.com/get_reviews): display name, country, review count, stats, and one page of their reviews with the company each one is about. An unknown id or a page past the last one is refused.
 
 ### How do I automatically get Trustpilot reviewer profile on trustpilot.com?
 

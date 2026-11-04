@@ -1,10 +1,10 @@
 # Search Free-Work jobs
 
-Automatically search Free-Work jobs on free-work.com. Searches job listings on free-work.com (IT/freelance), usable without logging in. `query` is a free-text keyword; `location` is a free-text city, resolved to the closest match — unresolved locations throw explicitly rather than silently searching everywhere. Defaults to searching all of France when no location is given. Returns title, full description, company, contract types, experience level, remote work, salaries (daily/annual), currency, skills, publish date, and URL. 1-based pagination, 16 results per page. One thing to check: requesting a page beyond the real number of pages doesn't return an empty result — it silently repeats the first page — so verify against `totalItems` before trusting a high page number.
+Automatically search Free-Work jobs on free-work.com. Search IT and freelance job listings on Free-Work, with no sign-in. Filter by keyword and by city (all of France when none is given). Returns each job's title, description, company, contract types, experience level, remote policy, daily and annual salary ranges, skills, publish date and link, plus the total number of matches. 16 jobs per page; asking for a page past the last one is refused.
 
 - Site: free-work.com
 - Address: `reduck/free-work.com/search_jobs`
-- Updated: 2026-08-14 (v3)
+- Updated: 2026-11-03 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -31,7 +31,7 @@ npx @reduck-ai/cli@latest run --script reduck/free-work.com/search_jobs
 
 ### What does "Search Free-Work jobs" do?
 
-Searches job listings on free-work.com (IT/freelance), usable without logging in. `query` is a free-text keyword; `location` is a free-text city, resolved to the closest match — unresolved locations throw explicitly rather than silently searching everywhere. Defaults to searching all of France when no location is given. Returns title, full description, company, contract types, experience level, remote work, salaries (daily/annual), currency, skills, publish date, and URL. 1-based pagination, 16 results per page. One thing to check: requesting a page beyond the real number of pages doesn't return an empty result — it silently repeats the first page — so verify against `totalItems` before trusting a high page number.
+Search IT and freelance job listings on Free-Work, with no sign-in. Filter by keyword and by city (all of France when none is given). Returns each job's title, description, company, contract types, experience level, remote policy, daily and annual salary ranges, skills, publish date and link, plus the total number of matches. 16 jobs per page; asking for a page past the last one is refused.
 
 ### How do I automatically search Free-Work jobs on free-work.com?
 

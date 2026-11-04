@@ -1,10 +1,10 @@
 # Get Yelp business photos
 
-Automatically get Yelp business photos on yelp.com. List photos for a Yelp business by slug, with captions and category counts (Food/Inside/Outside/Menu/Drink/Videos). Returns the first batch of photos as loaded by Yelp's photo page.
+Automatically get Yelp business photos on yelp.com. Lists photos for a Yelp business by slug, with captions, the total photo count and counts per category, keyed by Yelp's category id (food, interior, outside, menu, drink, videos). Returns the first batch of photos the page loads.
 
 - Site: yelp.com
 - Address: `reduck/yelp.com/get_business_photos`
-- Updated: 2026-08-28 (v1)
+- Updated: 2026-11-03 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -31,7 +31,7 @@ npx @reduck-ai/cli@latest run --script reduck/yelp.com/get_business_photos
 
 ### What does "Get Yelp business photos" do?
 
-List photos for a Yelp business by slug, with captions and category counts (Food/Inside/Outside/Menu/Drink/Videos). Returns the first batch of photos as loaded by Yelp's photo page.
+Lists photos for a Yelp business by slug, with captions, the total photo count and counts per category, keyed by Yelp's category id (food, interior, outside, menu, drink, videos). Returns the first batch of photos the page loads.
 
 ### How do I automatically get Yelp business photos on yelp.com?
 

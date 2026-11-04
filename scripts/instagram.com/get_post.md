@@ -4,7 +4,7 @@ Automatically get an Instagram post on instagram.com. Read one Instagram post or
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/get_post`
-- Updated: 2026-11-02 (v1)
+- Updated: 2026-11-03 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/instagram.com/get_post
 
 ## Input
 
-- `code` (string, required): The post's shortcode, the X in instagram.com/p/X/ or instagram.com/reel/X/. instagram.com/get_user_posts returns it as code.
+- `code` (string, required): The post's shortcode, the X in instagram.com/p/X/ or instagram.com/reel/X/, or that whole link. instagram.com/get_user_posts returns it as code.
 
 ## Output
 

@@ -4,7 +4,7 @@ Automatically create Notion page integration on app.notion.com. Create an intern
 
 - Site: app.notion.com
 - Address: `reduck/app.notion.com/create_page_integration`
-- Updated: 2026-10-22 (v24)
+- Updated: 2026-11-03 (v26)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically vote on Reddit post or comment on reddit.com. Up, down, or clear y
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/vote`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-03 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

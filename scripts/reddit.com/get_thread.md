@@ -4,7 +4,7 @@ Automatically get Reddit thread on reddit.com. Fetch a Reddit thread by its id o
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/get_thread`
-- Updated: 2026-10-29 (v25)
+- Updated: 2026-11-03 (v28)
 - Author: Reduck AI (reduck)
 
 ## Run it

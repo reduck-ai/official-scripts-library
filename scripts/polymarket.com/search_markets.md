@@ -4,7 +4,7 @@ Automatically search Polymarket markets on polymarket.com. Search Polymarket eve
 
 - Site: polymarket.com
 - Address: `reduck/polymarket.com/search_markets`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-03 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -54,7 +54,7 @@ No. It only uses pages of polymarket.com that are reachable without signing in.
 
 ### Does it change anything on polymarket.com, or only read data?
 
-Unknown: its author has not declared whether it changes anything on polymarket.com, so treat it as if it could.
+It only reads. It looks things up on polymarket.com and changes nothing there.
 
 ### How do I run it?
 

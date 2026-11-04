@@ -4,7 +4,7 @@ Automatically search leboncoin jobs on leboncoin.fr. Search leboncoin's "Offres 
 
 - Site: leboncoin.fr
 - Address: `reduck/leboncoin.fr/search_jobs`
-- Updated: 2026-08-14 (v5)
+- Updated: 2026-11-03 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -54,7 +54,7 @@ No. It only uses pages of leboncoin.fr that are reachable without signing in.
 
 ### Does it change anything on leboncoin.fr, or only read data?
 
-Unknown: its author has not declared whether it changes anything on leboncoin.fr, so treat it as if it could.
+It only reads. It looks things up on leboncoin.fr and changes nothing there.
 
 ### How do I run it?
 

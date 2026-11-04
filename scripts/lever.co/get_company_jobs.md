@@ -4,7 +4,7 @@ Automatically get company jobs on lever.co. Fetch a company's live job postings 
 
 - Site: lever.co
 - Address: `reduck/lever.co/get_company_jobs`
-- Updated: 2026-08-18 (v2)
+- Updated: 2026-11-03 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

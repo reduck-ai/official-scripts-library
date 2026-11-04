@@ -4,7 +4,7 @@ Automatically search Crunchbase News on news.crunchbase.com. Get the newest fund
 
 - Site: news.crunchbase.com
 - Address: `reduck/news.crunchbase.com/search_news`
-- Updated: 2026-10-05 (v4)
+- Updated: 2026-11-03 (v5)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -29,7 +29,7 @@ npx @reduck-ai/cli@latest run --script reduck/news.crunchbase.com/search_news
 
 ### What does "Search Crunchbase News" do?
 
-List recent Crunchbase News articles, either by topic section or by a search query, with pagination.
+List recent Crunchbase News articles for a topic section or a search query, one page per call. A page past the last one returns an empty list; an unknown section is reported as such.
 
 ### How do I automatically search Crunchbase News on news.crunchbase.com?
 
@@ -49,7 +49,7 @@ No. It only uses pages of news.crunchbase.com that are reachable without signing
 
 ### Does it change anything on news.crunchbase.com, or only read data?
 
-Unknown: its author has not declared whether it changes anything on news.crunchbase.com, so treat it as if it could.
+It only reads. It looks things up on news.crunchbase.com and changes nothing there.
 
 ### How do I run it?
 

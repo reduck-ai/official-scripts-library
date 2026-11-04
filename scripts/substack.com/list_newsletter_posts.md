@@ -4,7 +4,7 @@ Automatically list Substack newsletter posts on substack.com. List a Substack pu
 
 - Site: substack.com
 - Address: `reduck/substack.com/list_newsletter_posts`
-- Updated: 2026-08-25 (v3)
+- Updated: 2026-11-03 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

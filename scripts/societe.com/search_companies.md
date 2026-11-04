@@ -1,10 +1,10 @@
-# Search companies
+# Search societe.com companies
 
-Automatically search companies on societe.com. Search societe.com for French companies by name or keyword. Returns query, url, count, and companies (each with siren, name, url, activity, address).
+Automatically search societe.com companies on societe.com. Search societe.com for French companies by name or keyword. Returns query, url, count, and companies (each with siren, name, url, activity, address).
 
 - Site: societe.com
 - Address: `reduck/societe.com/search_companies`
-- Updated: 2026-09-11 (v3)
+- Updated: 2026-11-03 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,17 +29,17 @@ npx @reduck-ai/cli@latest run --script reduck/societe.com/search_companies
 
 ## FAQ
 
-### What does "Search companies" do?
+### What does "Search societe.com companies" do?
 
 Search societe.com for French companies by name or keyword. Returns query, url, count, and companies (each with siren, name, url, activity, address).
 
-### How do I automatically search companies on societe.com?
+### How do I automatically search societe.com companies on societe.com?
 
 Ask an AI agent connected to Reduck to run reduck/societe.com/search_companies, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/societe.com/search_companies
 
-### Is there a societe.com API to search companies?
+### Is there a societe.com API to search societe.com companies?
 
-You do not need one. "Search companies" drives the real societe.com pages in a browser, so it works whether or not societe.com offers an API for this.
+You do not need one. "Search societe.com companies" drives the real societe.com pages in a browser, so it works whether or not societe.com offers an API for this.
 
 ### What information do I need to provide?
 

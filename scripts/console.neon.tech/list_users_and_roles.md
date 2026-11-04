@@ -1,10 +1,10 @@
 # List Neon organization members and roles
 
-Automatically list Neon organization members and roles on console.neon.tech. List the signed-in Neon organization's joined members and pending invites with role and status. No scoping arg — reads the default organization the console lands on, matching list_invoices' convention for this host.
+Automatically list Neon organization members and roles on console.neon.tech. Lists the members and pending invites of the Neon organization the console opens for the signed-in account, with role, status, join or invite date and whether MFA is on.
 
 - Site: console.neon.tech
 - Address: `reduck/console.neon.tech/list_users_and_roles`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-03 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,7 +29,7 @@ It takes no input.
 
 ### What does "List Neon organization members and roles" do?
 
-List the signed-in Neon organization's joined members and pending invites with role and status. No scoping arg — reads the default organization the console lands on, matching list_invoices' convention for this host.
+Lists the members and pending invites of the Neon organization the console opens for the signed-in account, with role, status, join or invite date and whether MFA is on.
 
 ### How do I automatically list Neon organization members and roles on console.neon.tech?
 
@@ -53,7 +53,7 @@ Yes. It acts as you on console.neon.tech: on your own Chrome it reuses your sess
 
 ### Does it change anything on console.neon.tech, or only read data?
 
-Unknown: its author has not declared whether it changes anything on console.neon.tech, so treat it as if it could.
+It only reads. It looks things up on console.neon.tech and changes nothing there.
 
 ### How do I run it?
 

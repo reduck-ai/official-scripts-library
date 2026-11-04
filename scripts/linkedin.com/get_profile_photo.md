@@ -4,7 +4,7 @@ Automatically get LinkedIn profile photo on linkedin.com. Get a LinkedIn profile
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_profile_photo`
-- Updated: 2026-10-22 (v11)
+- Updated: 2026-11-03 (v14)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically search item listings on vinted.com. Up to 96 US listings a page, w
 
 - Site: vinted.com
 - Address: `reduck/vinted.com/search_items`
-- Updated: 2026-10-05 (v6)
+- Updated: 2026-11-03 (v7)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -24,8 +24,9 @@ npx @reduck-ai/cli@latest run --script reduck/vinted.com/search_items
 - `query` (string, required): Free-text search, e.g. "levis 501" or "nike air max".
 - `page` (integer, optional): Result page, 96 items per page. Pages are near-disjoint but not a frozen snapshot: newly listed items shift the window, so consecutive pages fetched minutes apart can repeat a couple of items.
 - `order` (string, optional): Sort order. Omit for the site default (relevance).
-- `price_to` (number, optional): Maximum item price, in the currency the run's session resolves to.
-- `price_from` (number, optional): Minimum item price, in the currency the run's session resolves to.
+- `domain` (string, optional): Vinted country site to search, e.g. "www.vinted.fr", "www.vinted.de" or "www.vinted.co.uk". Each site has its own listings and currency. Default: www.vinted.com (United States).
+- `price_to` (number, optional): Maximum item price, in the currency of the site searched (domain).
+- `price_from` (number, optional): Minimum item price, in the currency of the site searched (domain).
 
 ## Output
 
@@ -62,7 +63,7 @@ Shape only: placeholder values generated from the output schema, not a real run.
 
 ### What does "Vinted — search item listings" do?
 
-Search Vinted listings by keyword and return one page of results with each item's title, brand, size, condition, price, total price with Buyer Protection, favourite count, photo and link. Supports sorting, a price range and paging.
+Search Vinted listings by keyword on one Vinted country site (vinted.com by default; pass domain, e.g. www.vinted.fr or www.vinted.co.uk) and return one page of results with each item's title, brand, size, condition, price, total price with Buyer Protection, favourite count, photo and link. Each country site has its own listings and currency, and prices come in that currency. Supports sorting, a price range and paging. A search with no match returns an empty list.
 
 ### How do I automatically search item listings on vinted.com?
 
@@ -74,7 +75,7 @@ You do not need one. "Vinted — search item listings" drives the real vinted.co
 
 ### What information do I need to provide?
 
-Required: query. Optional: page, order, price_to, price_from.
+Required: query. Optional: page, order, domain, price_to, price_from.
 
 ### What does it return?
 

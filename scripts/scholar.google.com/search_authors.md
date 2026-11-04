@@ -4,7 +4,7 @@ Automatically search authors on scholar.google.com. Search Google Scholar's auth
 
 - Site: scholar.google.com
 - Address: `reduck/scholar.google.com/search_authors`
-- Updated: 2026-10-06 (v4)
+- Updated: 2026-11-03 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

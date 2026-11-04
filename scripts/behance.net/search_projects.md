@@ -4,7 +4,7 @@ Automatically search Behance projects on behance.net. Search Behance projects by
 
 - Site: behance.net
 - Address: `reduck/behance.net/search_projects`
-- Updated: 2026-08-26 (v4)
+- Updated: 2026-11-03 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

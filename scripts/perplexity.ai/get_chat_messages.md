@@ -4,7 +4,7 @@ Automatically get Perplexity chat messages on perplexity.ai. Full message transc
 
 - Site: perplexity.ai
 - Address: `reduck/perplexity.ai/get_chat_messages`
-- Updated: 2026-10-22 (v4)
+- Updated: 2026-11-03 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

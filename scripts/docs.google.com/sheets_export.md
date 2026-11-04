@@ -1,10 +1,10 @@
-# Sheets: export / download
+# Export a Google Sheets spreadsheet
 
-Automatically export / download on docs.google.com. Save a Google Sheet as xlsx, ods or PDF, or one tab as CSV or TSV, and get back the file path.
+Automatically export a Google Sheets spreadsheet on docs.google.com. Save a Google Sheet as xlsx, ods or PDF, or one tab as CSV or TSV, and get back the file path.
 
 - Site: docs.google.com
 - Address: `reduck/docs.google.com/sheets_export`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-11-03 (v4)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -45,17 +45,17 @@ Shape only: placeholder values generated from the output schema, not a real run.
 
 ## FAQ
 
-### What does "Sheets: export / download" do?
+### What does "Export a Google Sheets spreadsheet" do?
 
-Download a Google Spreadsheet to a local file in your chosen format. Returns path (or url on cloud browsers) and filename. xlsx/ods/pdf/zip export the whole doc; csv/tsv export a single tab (pass gid).
+Download a Google Sheets spreadsheet as a file in the format you choose. Returns the file name and where it was saved: a local path on your own Chrome, or a link on a cloud browser. xlsx, ods, pdf and zip hold the whole spreadsheet; csv and tsv hold one tab, chosen by its tab id.
 
-### How do I automatically export / download on docs.google.com?
+### How do I automatically export a Google Sheets spreadsheet on docs.google.com?
 
 Ask an AI agent connected to Reduck to run reduck/docs.google.com/sheets_export, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/docs.google.com/sheets_export
 
-### Is there a docs.google.com API to export / download?
+### Is there a docs.google.com API to export a Google Sheets spreadsheet?
 
-You do not need one. "Sheets: export / download" drives the real docs.google.com pages in a browser, so it works whether or not docs.google.com offers an API for this.
+You do not need one. "Export a Google Sheets spreadsheet" drives the real docs.google.com pages in a browser, so it works whether or not docs.google.com offers an API for this.
 
 ### What information do I need to provide?
 

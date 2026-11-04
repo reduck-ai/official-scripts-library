@@ -4,7 +4,7 @@ Automatically get Threads profile on threads.com. Fetch a Threads user's profile
 
 - Site: threads.com
 - Address: `reduck/threads.com/get_profile`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-11-03 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -21,7 +21,7 @@ npx @reduck-ai/cli@latest run --script reduck/threads.com/get_profile
 
 ## Output
 
-- `found` (boolean, required): false if the username doesn't resolve to a viewable profile
+- `found` (boolean, required): Always true: a username with no viewable profile throws a UserError instead. Kept so existing callers keep working.
 - `username` (string, required)
 - `bio` (string | null, optional)
 - `tags` (array, optional)

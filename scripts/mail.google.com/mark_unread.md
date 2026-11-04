@@ -4,7 +4,7 @@ Automatically mark Gmail thread as unread on mail.google.com. Mark a Gmail threa
 
 - Site: mail.google.com
 - Address: `reduck/mail.google.com/mark_unread`
-- Updated: 2026-10-22 (v10)
+- Updated: 2026-11-03 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it

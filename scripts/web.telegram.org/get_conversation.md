@@ -4,7 +4,7 @@ Automatically get Telegram conversation on web.telegram.org. Open one Telegram c
 
 - Site: web.telegram.org
 - Address: `reduck/web.telegram.org/get_conversation`
-- Updated: 2026-10-22 (v5)
+- Updated: 2026-11-03 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

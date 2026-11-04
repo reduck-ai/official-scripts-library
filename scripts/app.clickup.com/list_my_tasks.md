@@ -4,7 +4,7 @@ Automatically list my assigned ClickUp tasks on app.clickup.com. Returns the tas
 
 - Site: app.clickup.com
 - Address: `reduck/app.clickup.com/list_my_tasks`
-- Updated: 2026-10-23 (v3)
+- Updated: 2026-11-03 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

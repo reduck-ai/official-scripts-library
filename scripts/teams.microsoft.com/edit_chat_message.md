@@ -1,10 +1,10 @@
-# Edit Chat Message
+# Edit Microsoft Teams chat message
 
-Automatically edit Chat Message on teams.microsoft.com. Edit one of your own previously-sent messages in a 1:1 Teams chat, identified by its message id (mid), replacing its text.
+Automatically edit Microsoft Teams chat message on teams.microsoft.com. Edit one of your own previously-sent messages in a 1:1 Teams chat, identified by its message id (mid), replacing its text.
 
 - Site: teams.microsoft.com
 - Address: `reduck/teams.microsoft.com/edit_chat_message`
-- Updated: 2026-10-22 (v14)
+- Updated: 2026-11-03 (v16)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,17 +29,17 @@ npx @reduck-ai/cli@latest run --script reduck/teams.microsoft.com/edit_chat_mess
 
 ## FAQ
 
-### What does "Edit Chat Message" do?
+### What does "Edit Microsoft Teams chat message" do?
 
 Edit one of your own previously-sent messages in a 1:1 Teams chat, identified by its message id (mid), replacing its text.
 
-### How do I automatically edit Chat Message on teams.microsoft.com?
+### How do I automatically edit Microsoft Teams chat message on teams.microsoft.com?
 
 Ask an AI agent connected to Reduck to run reduck/teams.microsoft.com/edit_chat_message, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/teams.microsoft.com/edit_chat_message
 
-### Is there a teams.microsoft.com API to edit Chat Message?
+### Is there a teams.microsoft.com API to edit Microsoft Teams chat message?
 
-You do not need one. "Edit Chat Message" drives the real teams.microsoft.com pages in a browser, so it works whether or not teams.microsoft.com offers an API for this.
+You do not need one. "Edit Microsoft Teams chat message" drives the real teams.microsoft.com pages in a browser, so it works whether or not teams.microsoft.com offers an API for this.
 
 ### What information do I need to provide?
 

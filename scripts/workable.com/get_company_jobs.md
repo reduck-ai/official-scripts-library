@@ -1,10 +1,10 @@
 # Workable: Get company jobs
 
-Automatically get company jobs on workable.com. Fetch a company's live job postings from Workable's public per-account jobs API by board slug (apply.workable.com/<slug>). Anonymous, no auth. Returns id, shortcode, title, department, location, remote, workplace, type, published, url. Paginates via an opaque nextToken cursor (Workable's own "token" param) — pass the previous call's nextToken back in as args.token to get the next page; nextToken is null on the last page. Throws (404) if the slug isn't a Workable customer. A valid slug with zero current openings returns total:0, jobs:[] — not an error. Some companies (e.g. Treatwell) fully white-label their board on a custom domain that the apply.workable.com account page redirects to; the constructed url still resolves through that redirect.
+Automatically get company jobs on workable.com. Lists a company's open job postings on its Workable job board (apply.workable.com/<slug>): id, shortcode, title, department, location, remote, workplace, type, published date and link. Pass nextToken from the previous call as token to get the next page; nextToken is null on the last page. A board with no openings returns total 0 and an empty list; an unknown slug fails with an error.
 
 - Site: workable.com
 - Address: `reduck/workable.com/get_company_jobs`
-- Updated: 2026-08-17 (v2)
+- Updated: 2026-11-03 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -30,7 +30,7 @@ npx @reduck-ai/cli@latest run --script reduck/workable.com/get_company_jobs
 
 ### What does "Workable: Get company jobs" do?
 
-Fetch a company's live job postings from Workable's public per-account jobs API by board slug (apply.workable.com/<slug>). Anonymous, no auth. Returns id, shortcode, title, department, location, remote, workplace, type, published, url. Paginates via an opaque nextToken cursor (Workable's own "token" param) — pass the previous call's nextToken back in as args.token to get the next page; nextToken is null on the last page. Throws (404) if the slug isn't a Workable customer. A valid slug with zero current openings returns total:0, jobs:[] — not an error. Some companies (e.g. Treatwell) fully white-label their board on a custom domain that the apply.workable.com account page redirects to; the constructed url still resolves through that redirect.
+Lists a company's open job postings on its Workable job board (apply.workable.com/<slug>): id, shortcode, title, department, location, remote, workplace, type, published date and link. Pass nextToken from the previous call as token to get the next page; nextToken is null on the last page. A board with no openings returns total 0 and an empty list; an unknown slug fails with an error.
 
 ### How do I automatically get company jobs on workable.com?
 

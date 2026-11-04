@@ -1,10 +1,10 @@
 # Get Glassdoor salary estimates
 
-Automatically get Glassdoor salary estimates on glassdoor.com. Get Glassdoor's salary distribution for a job title (base pay, by percentile: 10th/25th/median/75th/90th) and country. Reads the page's own schema.org/Occupation structured data, so no login is needed and the figures are real (not the visually-blurred placeholder numbers shown to signed-out visitors).
+Automatically get Glassdoor salary estimates on glassdoor.com. Get Glassdoor's base-pay distribution (10th, 25th, median, 75th and 90th percentile) for a job title in a chosen country, with no sign-in. A title Glassdoor has no figures for is refused. Glassdoor serves a country's figures only to a browser on a network in that country; otherwise the request is refused.
 
 - Site: glassdoor.com
 - Address: `reduck/glassdoor.com/get_salaries`
-- Updated: 2026-09-02 (v3)
+- Updated: 2026-11-03 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -22,12 +22,11 @@ npx @reduck-ai/cli@latest run --script reduck/glassdoor.com/get_salaries
 
 ## Output
 
-- `available` (boolean, required)
+- `available` (boolean, required): Always true: a title with no salary data is refused.
 - `job_title` (string, required)
 - `median` (number | null, optional)
 - `currency` (string | null, optional)
 - `location` (string | null, optional)
-- `sampleSize` (integer | null, optional)
 - `percentile10` (number | null, optional)
 - `percentile25` (number | null, optional)
 - `percentile75` (number | null, optional)
@@ -37,7 +36,7 @@ npx @reduck-ai/cli@latest run --script reduck/glassdoor.com/get_salaries
 
 ### What does "Get Glassdoor salary estimates" do?
 
-Get Glassdoor's salary distribution for a job title (base pay, by percentile: 10th/25th/median/75th/90th) and country. Reads the page's own schema.org/Occupation structured data, so no login is needed and the figures are real (not the visually-blurred placeholder numbers shown to signed-out visitors).
+Get Glassdoor's base-pay distribution (10th, 25th, median, 75th and 90th percentile) for a job title in a chosen country, with no sign-in. A title Glassdoor has no figures for is refused. Glassdoor serves a country's figures only to a browser on a network in that country; otherwise the request is refused.
 
 ### How do I automatically get Glassdoor salary estimates on glassdoor.com?
 
@@ -53,7 +52,7 @@ Required: job_title. Optional: country.
 
 ### What does it return?
 
-It returns median, currency, location, available, job_title, sampleSize, percentile10, percentile25, percentile75, percentile90.
+It returns median, currency, location, available, job_title, percentile10, percentile25, percentile75, percentile90.
 
 ### Do I need to be logged in to glassdoor.com?
 

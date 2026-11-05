@@ -4,7 +4,7 @@ Automatically get usage on cursor.com. Read the signed-in Cursor account's usage
 
 - Site: cursor.com
 - Address: `reduck/cursor.com/get_usage`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-04 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

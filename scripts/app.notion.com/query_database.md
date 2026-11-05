@@ -4,7 +4,7 @@ Read the rows of a Notion database the signed-in account can open, in the order 
 
 - Site: app.notion.com
 - Address: `reduck/app.notion.com/query_database`
-- Updated: 2026-11-03 (v2)
+- Updated: 2026-11-04 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

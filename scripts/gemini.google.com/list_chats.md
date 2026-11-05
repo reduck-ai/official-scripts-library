@@ -1,10 +1,10 @@
 # List Gemini chats
 
-Automatically list Gemini chats on gemini.google.com. List your recent Gemini conversations (the sidebar's "Recents" list), newest first.
+Automatically list Gemini chats on gemini.google.com. List your recent Gemini conversations (the sidebar's recent chats), newest first. Pass authuser to choose which Google account of this browser to read; it defaults to the first signed-in account. Signed out, the run fails and asks you to sign in.
 
 - Site: gemini.google.com
 - Address: `reduck/gemini.google.com/list_chats`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-04 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,13 +17,13 @@ npx @reduck-ai/cli@latest run --script reduck/gemini.google.com/list_chats
 
 ## Input
 
-It takes no input.
+- `authuser` (integer, optional): Which Google account of this browser to use: 0 = first signed-in account (the default), 1 = second, and so on.
 
 ## FAQ
 
 ### What does "List Gemini chats" do?
 
-List your recent Gemini conversations (the sidebar's "Recents" list), newest first.
+List your recent Gemini conversations (the sidebar's recent chats), newest first. Pass authuser to choose which Google account of this browser to read; it defaults to the first signed-in account. Signed out, the run fails and asks you to sign in.
 
 ### How do I automatically list Gemini chats on gemini.google.com?
 
@@ -35,7 +35,7 @@ You do not need one. "List Gemini chats" drives the real gemini.google.com pages
 
 ### What information do I need to provide?
 
-Nothing. It takes no input.
+Optional: authuser.
 
 ### Do I need to be logged in to gemini.google.com?
 

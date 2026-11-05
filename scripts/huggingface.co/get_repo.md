@@ -4,7 +4,7 @@ Automatically get a model, dataset or Space on huggingface.co. Get one Hugging F
 
 - Site: huggingface.co
 - Address: `reduck/huggingface.co/get_repo`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-04 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

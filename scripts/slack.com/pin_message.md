@@ -1,10 +1,10 @@
 # Pin Slack message
 
-Automatically pin Slack message on slack.com. Pin a message to its Slack channel, given the channel (name or id) and the message ts. Safe to repeat: if the message is already pinned it reports success and tells you nothing changed. Confirms the pin afterwards and reports which workspace it acted on. Pinning is not possible in an archived channel, or in a channel the signed-in account has not joined — both are reported as such. Requires login.
+Automatically pin Slack message on slack.com. Pin a message in a Slack channel, given the channel id and the message ts. Safe to repeat: an already pinned message reports already_present. Fails with a clear message for an archived channel or one the account has not joined.
 
 - Site: slack.com
 - Address: `reduck/slack.com/pin_message`
-- Updated: 2026-10-22 (v4)
+- Updated: 2026-11-04 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,7 +18,7 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/pin_message
 ## Input
 
 - `ts` (string, required): The message's ts.
-- `channel` (string, required): Channel name/#name or id (C…).
+- `channel` (string, required): Channel id (C… or G…), e.g. from the channel's link.
 - `workspaceDomain` (string, optional): Workspace host, e.g. acme.slack.com. Defaults to the active workspace.
 
 ## Output
@@ -35,7 +35,7 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/pin_message
 
 ### What does "Pin Slack message" do?
 
-Pin a message to its Slack channel, given the channel (name or id) and the message ts. Safe to repeat: if the message is already pinned it reports success and tells you nothing changed. Confirms the pin afterwards and reports which workspace it acted on. Pinning is not possible in an archived channel, or in a channel the signed-in account has not joined — both are reported as such. Requires login.
+Pin a message in a Slack channel, given the channel id and the message ts. Safe to repeat: an already pinned message reports already_present. Fails with a clear message for an archived channel or one the account has not joined.
 
 ### How do I automatically pin Slack message on slack.com?
 

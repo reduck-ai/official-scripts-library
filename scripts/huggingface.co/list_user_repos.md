@@ -4,7 +4,7 @@ Automatically list a user's or org's repos on huggingface.co. List the models, d
 
 - Site: huggingface.co
 - Address: `reduck/huggingface.co/list_user_repos`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-04 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

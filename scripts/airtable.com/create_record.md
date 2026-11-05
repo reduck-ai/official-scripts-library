@@ -4,7 +4,7 @@ Automatically create an Airtable record on airtable.com. Add a record to a table
 
 - Site: airtable.com
 - Address: `reduck/airtable.com/create_record`
-- Updated: 2026-11-03 (v1)
+- Updated: 2026-11-04 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,7 +18,7 @@ npx @reduck-ai/cli@latest run --script reduck/airtable.com/create_record
 ## Input
 
 - `baseId` (string, required): Base id (app...), from list_bases or the base's URL.
-- `fields` (object, required): Values by field name (or field id). Text, long text, email, URL and phone take a string; number, currency and percent a number; checkbox true or false; date an ISO date (2026-11-03) or date-time; single select an option name; multiple select a list of option names.
+- `fields` (object, required): Values by field name (or field id). Text, long text, email, URL and phone take a string; number, currency and percent a number; checkbox true or false; date an ISO date (2026-11-03) or date-time; single select an option name; multiple select a list of option names; collaborator the email or user id of someone the base is shared with; linked record a list of record ids (rec...) or primary field values of the linked table; attachment a list of public file links (or {url, filename}), which Airtable downloads and stores.
 - `table` (string, optional): Table name or id (tbl...). Leave it out for the base's first table.
 
 ## Output

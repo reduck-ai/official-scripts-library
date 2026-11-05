@@ -1,10 +1,10 @@
 # Search TopTex products
 
-Automatically search TopTex products on toptex.fr. Search toptex.fr for products by free-text query. Returns one page of products (reference, name, brand, color, from-price, image, PDP url); page is 0-based. Catalogue prices are public, so no login is required.
+Automatically search TopTex products on toptex.fr. Search toptex.fr for products by free-text query. Returns one page of products (reference, name, brand, color, from-price, image, product page url) with the total count; page is 0-based. A query with no match returns an empty list. Catalogue prices are public, so no login is required.
 
 - Site: toptex.fr
 - Address: `reduck/toptex.fr/search-products`
-- Updated: 2026-07-20 (v2)
+- Updated: 2026-11-04 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,7 +18,7 @@ npx @reduck-ai/cli@latest run --script reduck/toptex.fr/search-products
 ## Input
 
 - `query` (string, required): Free-text query (product name, brand, or reference, e.g. "t-shirt bio", "IB297").
-- `page` (integer, optional): 0-based result page (Algolia pagination; deterministic — same page re-fetched returns the same set).
+- `page` (integer, optional): 0-based result page (same page re-fetched returns the same set).
 - `hitsPerPage` (integer, optional): Products per page (site default 24).
 
 ## Output
@@ -34,7 +34,7 @@ npx @reduck-ai/cli@latest run --script reduck/toptex.fr/search-products
 
 ### What does "Search TopTex products" do?
 
-Search toptex.fr for products by free-text query. Returns one page of products (reference, name, brand, color, from-price, image, PDP url); page is 0-based. Catalogue prices are public, so no login is required.
+Search toptex.fr for products by free-text query. Returns one page of products (reference, name, brand, color, from-price, image, product page url) with the total count; page is 0-based. A query with no match returns an empty list. Catalogue prices are public, so no login is required.
 
 ### How do I automatically search TopTex products on toptex.fr?
 
@@ -58,7 +58,7 @@ No. It only uses pages of toptex.fr that are reachable without signing in.
 
 ### Does it change anything on toptex.fr, or only read data?
 
-Unknown: its author has not declared whether it changes anything on toptex.fr, so treat it as if it could.
+It only reads. It looks things up on toptex.fr and changes nothing there.
 
 ### How do I run it?
 

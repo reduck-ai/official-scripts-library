@@ -4,7 +4,7 @@ Automatically get Product Hunt launch comments on producthunt.com. Read the comm
 
 - Site: producthunt.com
 - Address: `reduck/producthunt.com/get_launch_comments`
-- Updated: 2026-10-22 (v6)
+- Updated: 2026-11-04 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -53,7 +53,7 @@ It returns comments, returned, launchUrl, launchSlug, productSlug, sortApplied, 
 
 ### Do I need to be logged in to producthunt.com?
 
-Yes. It acts as you on producthunt.com: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the producthunt.com cookies saved by the Reduck extension.
+No. It only uses pages of producthunt.com that are reachable without signing in.
 
 ### Does it change anything on producthunt.com, or only read data?
 

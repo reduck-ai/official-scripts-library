@@ -1,10 +1,10 @@
 # Search Cadremploi jobs
 
-Automatically search Cadremploi jobs on cadremploi.fr. Search Cadremploi (French executive and manager job board) by keyword and optional French city, with an optional radius in km and paging (30 per page). A city Cadremploi does not recognize fails with an error; regions and departments are not supported. Results come in Cadremploi's groups: exact matches, matches around the city, a wider fallback and related offers; each job's matchType says which. total counts all of them. An unmatched keyword returns total 0 and an empty list, not an error.
+Automatically search Cadremploi jobs on cadremploi.fr. Search Cadremploi (French executive and manager job board) by keyword, optionally in one French city, department or region given by its id from cadremploi.fr/suggest_locations, with a radius in km around a city and paging (30 per page). Results come in Cadremploi's groups: exact matches, matches around the city, a wider fallback and related offers; each job's matchType says which. total counts all of them. An unmatched keyword returns total 0 and an empty list; an unknown region code fails with an error.
 
 - Site: cadremploi.fr
 - Address: `reduck/cadremploi.fr/search_jobs`
-- Updated: 2026-11-02 (v7)
+- Updated: 2026-11-04 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,10 +17,12 @@ npx @reduck-ai/cli@latest run --script reduck/cadremploi.fr/search_jobs
 
 ## Input
 
-- `page` (integer, optional): 1-based page number, 50 results per page. Defaults to 1.
+- `city` (string, optional): City slug from cadremploi.fr/suggest_locations, e.g. "lyon-69000". Omit for no city filter.
+- `page` (integer, optional): 1-based page number, 30 results per page. Defaults to 1.
 - `query` (string, optional): Free-text keyword, e.g. "developpeur". Omit to browse all listings (optionally filtered by location).
-- `where` (string, optional): Free-text French city, e.g. "Paris" or "Lyon". Must be a city Cadremploi recognizes, otherwise the run fails with an error; departments and regions are not supported. Omit for a nationwide search.
-- `radius` (integer, optional): Search radius in km around the resolved city. Site default is 20 when a city is given.
+- `radius` (integer, optional): Search radius in km around the city (city only). Site default is 20.
+- `region` (string, optional): Region code from cadremploi.fr/suggest_locations, e.g. "FR-BRE". Use instead of city.
+- `department` (string, optional): Department code from cadremploi.fr/suggest_locations, e.g. "69". Use instead of city.
 
 ## Output
 
@@ -31,7 +33,7 @@ npx @reduck-ai/cli@latest run --script reduck/cadremploi.fr/search_jobs
 
 ### What does "Search Cadremploi jobs" do?
 
-Search Cadremploi (French executive and manager job board) by keyword and optional French city, with an optional radius in km and paging (30 per page). A city Cadremploi does not recognize fails with an error; regions and departments are not supported. Results come in Cadremploi's groups: exact matches, matches around the city, a wider fallback and related offers; each job's matchType says which. total counts all of them. An unmatched keyword returns total 0 and an empty list, not an error.
+Search Cadremploi (French executive and manager job board) by keyword, optionally in one French city, department or region given by its id from cadremploi.fr/suggest_locations, with a radius in km around a city and paging (30 per page). Results come in Cadremploi's groups: exact matches, matches around the city, a wider fallback and related offers; each job's matchType says which. total counts all of them. An unmatched keyword returns total 0 and an empty list; an unknown region code fails with an error.
 
 ### How do I automatically search Cadremploi jobs on cadremploi.fr?
 
@@ -43,7 +45,7 @@ You do not need one. "Search Cadremploi jobs" drives the real cadremploi.fr page
 
 ### What information do I need to provide?
 
-Optional: page, query, where, radius.
+Optional: city, page, query, radius, region, department.
 
 ### What does it return?
 

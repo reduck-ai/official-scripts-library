@@ -1,10 +1,10 @@
-# Invite Team Member
+# Invite Supabase Team Member
 
-Automatically invite Team Member on supabase.com. Invites a new member to a Supabase organization by email with a given role (matched against the org's own role picker, e.g. Owner/Administrator/Developer). Supabase org membership is invite-based, so this sends an invitation rather than creating an active member directly. Returns the invited email, matched role, and pending status.
+Automatically invite Supabase Team Member on supabase.com. Invites a new member to a Supabase organization by email with a given role (matched against the org's own role picker, e.g. Owner/Administrator/Developer). Supabase org membership is invite-based, so this sends an invitation rather than creating an active member directly. Returns the invited email, matched role, and pending status.
 
 - Site: supabase.com
 - Address: `reduck/supabase.com/create_user`
-- Updated: 2026-10-22 (v7)
+- Updated: 2026-11-04 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -31,17 +31,17 @@ npx @reduck-ai/cli@latest run --script reduck/supabase.com/create_user
 
 ## FAQ
 
-### What does "Invite Team Member" do?
+### What does "Invite Supabase Team Member" do?
 
 Invites a new member to a Supabase organization by email with a given role (matched against the org's own role picker, e.g. Owner/Administrator/Developer). Supabase org membership is invite-based, so this sends an invitation rather than creating an active member directly. Returns the invited email, matched role, and pending status.
 
-### How do I automatically invite Team Member on supabase.com?
+### How do I automatically invite Supabase Team Member on supabase.com?
 
 Ask an AI agent connected to Reduck to run reduck/supabase.com/create_user, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/supabase.com/create_user
 
-### Is there a supabase.com API to invite Team Member?
+### Is there a supabase.com API to invite Supabase Team Member?
 
-You do not need one. "Invite Team Member" drives the real supabase.com pages in a browser, so it works whether or not supabase.com offers an API for this.
+You do not need one. "Invite Supabase Team Member" drives the real supabase.com pages in a browser, so it works whether or not supabase.com offers an API for this.
 
 ### What information do I need to provide?
 

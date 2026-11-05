@@ -4,7 +4,7 @@ Automatically search Meteojob jobs on meteojob.com. Search Meteojob's French job
 
 - Site: meteojob.com
 - Address: `reduck/meteojob.com/search_jobs`
-- Updated: 2026-08-14 (v1)
+- Updated: 2026-11-04 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/meteojob.com/search_jobs
 
 ## Input
 
-- `page` (integer, optional): 1-based page number, 20 results per page. Defaults to 1.
+- `page` (integer, optional): 1-based page number, 20 results per page.
 - `query` (string, optional): Free-text keyword, e.g. 'developpeur'
 - `location` (string, optional): Free-text city name, e.g. 'Lyon'. Omit for nationwide search.
 

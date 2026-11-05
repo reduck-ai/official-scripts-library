@@ -4,7 +4,7 @@ Automatically list designs on canva.com. List the designs on the signed-in Canva
 
 - Site: canva.com
 - Address: `reduck/canva.com/list_designs`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-04 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

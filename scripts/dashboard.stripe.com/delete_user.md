@@ -1,10 +1,10 @@
 # Remove team member (Stripe)
 
-Automatically remove team member (Stripe) on dashboard.stripe.com. Remove a member from a Stripe team by email, or cancel an invitation they never accepted — both cases are handled. It records the member list before and after, returning removed / verified / collateralLoss: proof the right person disappeared and nobody else moved. As a safety guard, the destructive click only fires when the confirmation dialog names the target email. It also reports the person's role and their last sign-in date, which is what reveals access still being used after someone left. dryRun (default true) reaches the confirmation step then backs out. Requires being signed into Stripe with team permissions.
+Automatically remove team member (Stripe) on dashboard.stripe.com. Remove a member from a Stripe team by email, or cancel an invitation they never accepted. It reads the team list before and after, so it reports whether the person is gone and whether anyone else changed, along with their role and last sign-in. It only removes the person the confirmation names. By default it stops at the confirmation without removing; set dryRun to false to remove. The account owner cannot be removed. Requires being signed into Stripe with team permissions.
 
 - Site: dashboard.stripe.com
 - Address: `reduck/dashboard.stripe.com/delete_user`
-- Updated: 2026-10-22 (v5)
+- Updated: 2026-11-04 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,7 +18,7 @@ npx @reduck-ai/cli@latest run --script reduck/dashboard.stripe.com/delete_user
 ## Input
 
 - `email` (string, required): Email address of the team member or pending invite to remove.
-- `dryRun` (boolean, optional): When true (the default) the confirmation modal is opened, checked against the target email, then dismissed without removing. Set false to actually remove.
+- `dryRun` (boolean, optional): When true (the default) the confirmation dialog is opened, checked against the target email, then dismissed without removing. Set false to actually remove.
 
 ## Output
 
@@ -38,7 +38,7 @@ npx @reduck-ai/cli@latest run --script reduck/dashboard.stripe.com/delete_user
 
 ### What does "Remove team member (Stripe)" do?
 
-Remove a member from a Stripe team by email, or cancel an invitation they never accepted — both cases are handled. It records the member list before and after, returning removed / verified / collateralLoss: proof the right person disappeared and nobody else moved. As a safety guard, the destructive click only fires when the confirmation dialog names the target email. It also reports the person's role and their last sign-in date, which is what reveals access still being used after someone left. dryRun (default true) reaches the confirmation step then backs out. Requires being signed into Stripe with team permissions.
+Remove a member from a Stripe team by email, or cancel an invitation they never accepted. It reads the team list before and after, so it reports whether the person is gone and whether anyone else changed, along with their role and last sign-in. It only removes the person the confirmation names. By default it stops at the confirmation without removing; set dryRun to false to remove. The account owner cannot be removed. Requires being signed into Stripe with team permissions.
 
 ### How do I automatically remove team member (Stripe) on dashboard.stripe.com?
 

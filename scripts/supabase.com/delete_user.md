@@ -1,10 +1,10 @@
-# Remove Team Member
+# Remove Supabase Team Member
 
-Automatically remove Team Member on supabase.com. Removes a member from a Supabase organization by email — revokes membership for an active member, or cancels their invite if they're only a pending invitee. Returns their prior status and confirmation of removal.
+Automatically remove Supabase Team Member on supabase.com. Removes a member from a Supabase organization by email — revokes membership for an active member, or cancels their invite if they're only a pending invitee. Returns their prior status and confirmation of removal.
 
 - Site: supabase.com
 - Address: `reduck/supabase.com/delete_user`
-- Updated: 2026-10-22 (v5)
+- Updated: 2026-11-04 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,17 +29,17 @@ npx @reduck-ai/cli@latest run --script reduck/supabase.com/delete_user
 
 ## FAQ
 
-### What does "Remove Team Member" do?
+### What does "Remove Supabase Team Member" do?
 
 Removes a member from a Supabase organization by email — revokes membership for an active member, or cancels their invite if they're only a pending invitee. Returns their prior status and confirmation of removal.
 
-### How do I automatically remove Team Member on supabase.com?
+### How do I automatically remove Supabase Team Member on supabase.com?
 
 Ask an AI agent connected to Reduck to run reduck/supabase.com/delete_user, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/supabase.com/delete_user
 
-### Is there a supabase.com API to remove Team Member?
+### Is there a supabase.com API to remove Supabase Team Member?
 
-You do not need one. "Remove Team Member" drives the real supabase.com pages in a browser, so it works whether or not supabase.com offers an API for this.
+You do not need one. "Remove Supabase Team Member" drives the real supabase.com pages in a browser, so it works whether or not supabase.com offers an API for this.
 
 ### What information do I need to provide?
 

@@ -1,10 +1,10 @@
-# List category
+# List Toptex products in a category
 
-Automatically list category on toptex.fr. List one page of products from a toptex.fr category page (e.g. /produits/vetements/categories/t-shirts.html). Returns products (reference, name, brand, from-price, image, PDP url) with deterministic pagination; page is 0-based. No login required.
+Automatically list Toptex products in a category on toptex.fr. List one page of products from a toptex.fr category page (e.g. /produits/vetements/categories/t-shirts.html). Returns products (reference, name, brand, from-price, image, PDP url) with deterministic pagination; page is 0-based. No login required.
 
 - Site: toptex.fr
 - Address: `reduck/toptex.fr/list-category`
-- Updated: 2026-08-24 (v3)
+- Updated: 2026-11-04 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -33,17 +33,17 @@ npx @reduck-ai/cli@latest run --script reduck/toptex.fr/list-category
 
 ## FAQ
 
-### What does "List category" do?
+### What does "List Toptex products in a category" do?
 
 List one page of products from a toptex.fr category page (e.g. /produits/vetements/categories/t-shirts.html). Returns products (reference, name, brand, from-price, image, PDP url) with deterministic pagination; page is 0-based. No login required.
 
-### How do I automatically list category on toptex.fr?
+### How do I automatically list Toptex products in a category on toptex.fr?
 
 Ask an AI agent connected to Reduck to run reduck/toptex.fr/list-category, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/toptex.fr/list-category
 
-### Is there a toptex.fr API to list category?
+### Is there a toptex.fr API to list Toptex products in a category?
 
-You do not need one. "List category" drives the real toptex.fr pages in a browser, so it works whether or not toptex.fr offers an API for this.
+You do not need one. "List Toptex products in a category" drives the real toptex.fr pages in a browser, so it works whether or not toptex.fr offers an API for this.
 
 ### What information do I need to provide?
 

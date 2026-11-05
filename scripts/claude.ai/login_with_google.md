@@ -1,10 +1,10 @@
-# Claude (Anthropic) login
+# Log in to Claude.ai with Google
 
-Log into Claude (Anthropic) via Google SSO. Drives Claude's Continue-with-Google popup, picks the account (optional email arg), clears the consent screen, and lands in the Claude app. Runs on your local extension-paired browser only — it relies on the browser's own signed-in Google session, so it won't work on a cloud/managed browser without one.
+Sign in to claude.ai with a Google account already signed in on this browser: picks the account (optional email argument), accepts the consent screen and lands in the app. Returns the signed-in account and the page reached; if the browser is already signed in to claude.ai it reports that account and changes nothing. Stops with a clear message when Google first asks for the account's password or a 2-step check, or when the account is not signed in to Google here. Needs the browser extension, since it relies on the browser's own Google session.
 
 - Site: claude.ai
 - Address: `reduck/claude.ai/login_with_google`
-- Updated: 2026-10-23 (v11)
+- Updated: 2026-11-04 (v14)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -27,9 +27,9 @@ npx @reduck-ai/cli@latest run --script reduck/claude.ai/login_with_google
 
 ## FAQ
 
-### What does "Claude (Anthropic) login" do?
+### What does "Log in to Claude.ai with Google" do?
 
-Log into Claude (Anthropic) via Google SSO. Drives Claude's Continue-with-Google popup, picks the account (optional email arg), clears the consent screen, and lands in the Claude app. Runs on your local extension-paired browser only — it relies on the browser's own signed-in Google session, so it won't work on a cloud/managed browser without one.
+Sign in to claude.ai with a Google account already signed in on this browser: picks the account (optional email argument), accepts the consent screen and lands in the app. Returns the signed-in account and the page reached; if the browser is already signed in to claude.ai it reports that account and changes nothing. Stops with a clear message when Google first asks for the account's password or a 2-step check, or when the account is not signed in to Google here. Needs the browser extension, since it relies on the browser's own Google session.
 
 ### What information do I need to provide?
 

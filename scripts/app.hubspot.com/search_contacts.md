@@ -4,7 +4,7 @@ Automatically search HubSpot contacts on app.hubspot.com. Search the contacts in
 
 - Site: app.hubspot.com
 - Address: `reduck/app.hubspot.com/search_contacts`
-- Updated: 2026-09-24 (v5)
+- Updated: 2026-11-04 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -1,10 +1,10 @@
 # Search Jooble jobs
 
-Automatically search Jooble jobs on jooble.org. Search job listings on jooble.org by keyword and optional city or region, with paging (about 20 results per page). Returns the matching count, the site's total count, and each job's title, company, location, salary, tags, posting date, remote flag and description. Jooble can temporarily block rapid repeated searches; if a search fails, wait before retrying.
+Automatically search Jooble jobs on jooble.org. Search job listings on Jooble France by keyword and optional French city or region, with paging (about 20 results per page). Returns the matching count, the site's total count, and each job's title, company, location, salary, tags, posting date, remote flag and description. A page past the last one returns an empty list. Jooble answers only a limited number of searches in a short time; if a search fails, wait before retrying.
 
 - Site: jooble.org
 - Address: `reduck/jooble.org/search_jobs`
-- Updated: 2026-11-03 (v15)
+- Updated: 2026-11-04 (v16)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -33,7 +33,7 @@ npx @reduck-ai/cli@latest run --script reduck/jooble.org/search_jobs
 
 ### What does "Search Jooble jobs" do?
 
-Search job listings on jooble.org by keyword and optional city or region, with paging (about 20 results per page). Returns the matching count, the site's total count, and each job's title, company, location, salary, tags, posting date, remote flag and description. Jooble can temporarily block rapid repeated searches; if a search fails, wait before retrying.
+Search job listings on Jooble France by keyword and optional French city or region, with paging (about 20 results per page). Returns the matching count, the site's total count, and each job's title, company, location, salary, tags, posting date, remote flag and description. A page past the last one returns an empty list. Jooble answers only a limited number of searches in a short time; if a search fails, wait before retrying.
 
 ### How do I automatically search Jooble jobs on jooble.org?
 

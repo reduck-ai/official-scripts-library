@@ -1,10 +1,10 @@
 # Get TikTok comment replies
 
-Automatically get TikTok comment replies on tiktok.com. List the replies to a TikTok comment, given the parent comment id and the video id.
+Automatically get TikTok comment replies on tiktok.com. List one page of replies to a TikTok comment, given the parent comment id and the video. Returns TikTok's total reply count, hasMore, and a nextCursor to pass back as cursor for the next page.
 
 - Site: tiktok.com
 - Address: `reduck/tiktok.com/get_comment_replies`
-- Updated: 2026-09-08 (v4)
+- Updated: 2026-11-04 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -19,7 +19,8 @@ npx @reduck-ai/cli@latest run --script reduck/tiktok.com/get_comment_replies
 
 - `video` (string, required): Full TikTok video URL or bare video id (the item the comment belongs to).
 - `commentId` (string, required): Parent comment id (the `id` field returned by get_comments).
-- `count` (integer, optional): Target number of replies to collect.
+- `count` (integer, optional): How many replies to ask TikTok for in this page.
+- `cursor` (integer, optional): Where to start: 0 for the first page, then the nextCursor of the previous call.
 
 ## Output
 
@@ -28,12 +29,13 @@ npx @reduck-ai/cli@latest run --script reduck/tiktok.com/get_comment_replies
 - `replies` (array, required)
 - `videoId` (string, required)
 - `commentId` (string, required)
+- `nextCursor` (integer | null, optional): Pass as cursor to get the next page; null when there is none.
 
 ## FAQ
 
 ### What does "Get TikTok comment replies" do?
 
-List the replies to a TikTok comment, given the parent comment id and the video id.
+List one page of replies to a TikTok comment, given the parent comment id and the video. Returns TikTok's total reply count, hasMore, and a nextCursor to pass back as cursor for the next page.
 
 ### How do I automatically get TikTok comment replies on tiktok.com?
 
@@ -45,11 +47,11 @@ You do not need one. "Get TikTok comment replies" drives the real tiktok.com pag
 
 ### What information do I need to provide?
 
-Required: video, commentId. Optional: count.
+Required: video, commentId. Optional: count, cursor.
 
 ### What does it return?
 
-It returns total, hasMore, replies, videoId, commentId.
+It returns total, hasMore, replies, videoId, commentId, nextCursor.
 
 ### Do I need to be logged in to tiktok.com?
 

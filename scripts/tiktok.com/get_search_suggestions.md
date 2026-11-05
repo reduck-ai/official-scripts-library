@@ -1,10 +1,10 @@
 # Get TikTok search suggestions
 
-Automatically get TikTok search suggestions on tiktok.com. Get TikTok's search autocomplete suggestions for a query (the dropdown TikTok shows as you type). Some suggestions are hashtags (marked isHashtag) — pipe those into get_hashtag_info for stats. TikTok web has no hashtag-search results page, so this autocomplete is the only keyword-to-hashtag discovery surface.
+Automatically get TikTok search suggestions on tiktok.com. Get the search suggestions TikTok shows as you type a query, in TikTok's order. Suggestions that start with # are hashtags (marked isHashtag). TikTok web has no hashtag results page, so this is the way to find hashtags from a keyword. An empty list means TikTok has no suggestion for the query.
 
 - Site: tiktok.com
 - Address: `reduck/tiktok.com/get_search_suggestions`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-04 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -28,7 +28,7 @@ npx @reduck-ai/cli@latest run --script reduck/tiktok.com/get_search_suggestions
 
 ### What does "Get TikTok search suggestions" do?
 
-Get TikTok's search autocomplete suggestions for a query (the dropdown TikTok shows as you type). Some suggestions are hashtags (marked isHashtag) — pipe those into get_hashtag_info for stats. TikTok web has no hashtag-search results page, so this autocomplete is the only keyword-to-hashtag discovery surface.
+Get the search suggestions TikTok shows as you type a query, in TikTok's order. Suggestions that start with # are hashtags (marked isHashtag). TikTok web has no hashtag results page, so this is the way to find hashtags from a keyword. An empty list means TikTok has no suggestion for the query.
 
 ### How do I automatically get TikTok search suggestions on tiktok.com?
 
@@ -52,7 +52,7 @@ No. It only uses pages of tiktok.com that are reachable without signing in.
 
 ### Does it change anything on tiktok.com, or only read data?
 
-Unknown: its author has not declared whether it changes anything on tiktok.com, so treat it as if it could.
+It only reads. It looks things up on tiktok.com and changes nothing there.
 
 ### How do I run it?
 

@@ -4,7 +4,7 @@ Automatically update an Airtable record on airtable.com. Change field values of 
 
 - Site: airtable.com
 - Address: `reduck/airtable.com/update_record`
-- Updated: 2026-11-03 (v1)
+- Updated: 2026-11-04 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,7 +18,7 @@ npx @reduck-ai/cli@latest run --script reduck/airtable.com/update_record
 ## Input
 
 - `baseId` (string, required): Base id (app...), from list_bases or the base's URL.
-- `fields` (object, required): New values by field name (or field id); null empties a field. Text, long text, email, URL and phone take a string; number, currency and percent a number; checkbox true or false; date an ISO date (2026-11-03) or date-time; single select an option name; multiple select a list of option names, which replaces the current list. Options must already exist.
+- `fields` (object, required): New values by field name (or field id); null empties a field. Text, long text, email, URL and phone take a string; number, currency and percent a number; checkbox true or false; date an ISO date (2026-11-03) or date-time; single select an option name; multiple select a list of option names, which replaces the current list; collaborator the email or user id of someone the base is shared with; linked record a list of record ids (rec...) or primary field values, which replaces the current links; attachment a list that replaces the current files: an attachment id (att...) keeps that file, a public file link (or {url, filename}) adds one. Options must already exist.
 - `recordId` (string, required): Record id (rec...), from list_records or create_record.
 
 ## Output

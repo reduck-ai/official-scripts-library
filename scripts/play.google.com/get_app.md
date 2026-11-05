@@ -4,7 +4,7 @@ Automatically get Google Play app details on play.google.com. Fetch an Android a
 
 - Site: play.google.com
 - Address: `reduck/play.google.com/get_app`
-- Updated: 2026-09-02 (v1)
+- Updated: 2026-11-04 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

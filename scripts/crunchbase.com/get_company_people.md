@@ -4,7 +4,7 @@ Automatically get Company People on crunchbase.com. Founders, featured current e
 
 - Site: crunchbase.com
 - Address: `reduck/crunchbase.com/get_company_people`
-- Updated: 2026-08-03 (v3)
+- Updated: 2026-11-04 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

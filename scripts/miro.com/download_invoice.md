@@ -4,7 +4,7 @@ Automatically download a Miro invoice PDF on miro.com. Download one Miro billing
 
 - Site: miro.com
 - Address: `reduck/miro.com/download_invoice`
-- Updated: 2026-10-28 (v6)
+- Updated: 2026-11-04 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

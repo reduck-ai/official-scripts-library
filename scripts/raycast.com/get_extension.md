@@ -1,10 +1,10 @@
 # Raycast — get Store extension
 
-Automatically get Store extension on raycast.com. Get one Raycast Store extension by its slug (and author or owner handle): title, description, canonical Store URL, author, owning organization, downloads, status, platforms, categories, contributors, every command (name, title, description), and created / updated dates. Public data, no sign-in needed. An unknown extension is a clear error, and an ambiguous slug asks for the author.
+Automatically get Store extension on raycast.com. Get one Raycast Store extension from its Store URL parts (raycast.com/<author>/<name>): title, description, canonical Store URL, author, owning organization, downloads, status, platforms, categories, contributors, every command (name, title, description), and created / updated dates. Public data, no sign-in needed. Use the handle that is in the Store URL: for an extension owned by an organization, that is the organization (e.g. raycast/github), not the person who wrote it. An unknown author/name pair is a clear error.
 
 - Site: raycast.com
 - Address: `reduck/raycast.com/get_extension`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-04 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,8 +17,8 @@ npx @reduck-ai/cli@latest run --script reduck/raycast.com/get_extension
 
 ## Input
 
-- `name` (string, required): The extension's slug, the last part of its Store URL (e.g. "github" for raycast.com/thomaslombart/github).
-- `author` (string, optional): The author or owner handle in the Store URL (e.g. "thomaslombart" or "raycast"). Recommended: several authors can publish extensions with the same slug.
+- `name` (string, required): The extension's slug, the last part of its Store URL (e.g. "github" for raycast.com/raycast/github).
+- `author` (string, required): The author or owner handle, the first part of its Store URL (e.g. "raycast" for raycast.com/raycast/github).
 
 ## Output
 
@@ -43,7 +43,7 @@ npx @reduck-ai/cli@latest run --script reduck/raycast.com/get_extension
 
 ### What does "Raycast — get Store extension" do?
 
-Get one Raycast Store extension by its slug (and author or owner handle): title, description, canonical Store URL, author, owning organization, downloads, status, platforms, categories, contributors, every command (name, title, description), and created / updated dates. Public data, no sign-in needed. An unknown extension is a clear error, and an ambiguous slug asks for the author.
+Get one Raycast Store extension from its Store URL parts (raycast.com/<author>/<name>): title, description, canonical Store URL, author, owning organization, downloads, status, platforms, categories, contributors, every command (name, title, description), and created / updated dates. Public data, no sign-in needed. Use the handle that is in the Store URL: for an extension owned by an organization, that is the organization (e.g. raycast/github), not the person who wrote it. An unknown author/name pair is a clear error.
 
 ### How do I automatically get Store extension on raycast.com?
 
@@ -55,7 +55,7 @@ You do not need one. "Raycast — get Store extension" drives the real raycast.c
 
 ### What information do I need to provide?
 
-Required: name. Optional: author.
+Required: name, author.
 
 ### What does it return?
 

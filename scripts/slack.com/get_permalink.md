@@ -1,10 +1,10 @@
 # Get Slack message permalink
 
-Automatically get Slack message permalink on slack.com. Get the shareable permalink URL for a message by channel (name or id) and message ts. Requires login.
+Automatically get Slack message permalink on slack.com. Get the shareable permalink URL for a Slack message from its workspace, channel (id or name) and message ts, after checking that the message is in that channel. Returns the channel id too. Works for top-level messages; thread replies are not supported. Requires being signed in to that workspace.
 
 - Site: slack.com
 - Address: `reduck/slack.com/get_permalink`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-04 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,22 +17,22 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/get_permalink
 
 ## Input
 
-- `ts` (string, required): The message's ts.
-- `channel` (string, required): Channel name/#name or id (C…).
-- `workspaceDomain` (string, optional): Workspace host, e.g. acme.slack.com. Defaults to the active workspace.
+- `ts` (string, required): The message's ts, e.g. 1793723772.371299.
+- `channel` (string, required): Channel id (C…, G… or D…) or channel name, with or without #.
+- `workspaceDomain` (string, required): Workspace host, e.g. acme.slack.com.
 
 ## Output
 
 - `ok` (boolean, required)
 - `permalink` (string, required)
 - `ts` (string, optional)
-- `channel` (string, optional)
+- `channel` (string, optional): The channel id.
 
 ## FAQ
 
 ### What does "Get Slack message permalink" do?
 
-Get the shareable permalink URL for a message by channel (name or id) and message ts. Requires login.
+Get the shareable permalink URL for a Slack message from its workspace, channel (id or name) and message ts, after checking that the message is in that channel. Returns the channel id too. Works for top-level messages; thread replies are not supported. Requires being signed in to that workspace.
 
 ### How do I automatically get Slack message permalink on slack.com?
 
@@ -44,7 +44,7 @@ You do not need one. "Get Slack message permalink" drives the real slack.com pag
 
 ### What information do I need to provide?
 
-Required: channel, ts. Optional: workspaceDomain.
+Required: channel, ts, workspaceDomain.
 
 ### What does it return?
 
@@ -56,7 +56,7 @@ Yes. It acts as you on slack.com: on your own Chrome it reuses your session, and
 
 ### Does it change anything on slack.com, or only read data?
 
-Unknown: its author has not declared whether it changes anything on slack.com, so treat it as if it could.
+It only reads. It looks things up on slack.com and changes nothing there.
 
 ### How do I run it?
 

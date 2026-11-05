@@ -4,7 +4,7 @@ Automatically list followers on linkedin.com. List the people who follow the sig
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/list_followers`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-04 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/list_followers
 
 ## Input
 
-- `limit` (integer, optional): Maximum entries to return (default 100).
+- `limit` (integer, optional): Maximum entries to return.
 
 ## Output
 

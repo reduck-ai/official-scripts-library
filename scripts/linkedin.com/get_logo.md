@@ -1,10 +1,10 @@
 # Get LinkedIn company/showcase logo
 
-Automatically get LinkedIn company/showcase logo on linkedin.com. Get the logo image URL from a LinkedIn company page (/company/<slug>) or showcase page (/showcase/<slug>), by URL or bare slug (bare slug assumes company). Works for both company and showcase pages. Returns null logoUrl on pages with no logo set.
+Automatically get LinkedIn company/showcase logo on linkedin.com. Download the logo of a LinkedIn company or showcase page, by URL or bare slug (bare slug means company). Returns the logo image URL, the saved file's path and its filename; logoUrl is null when the page has no logo.
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_logo`
-- Updated: 2026-10-22 (v8)
+- Updated: 2026-11-04 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -21,20 +21,22 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/get_logo
 
 ## Output
 
+- `url` (string | null, required): Link to the saved logo when the browser is a cloud browser; null on your own Chrome or when there is no logo.
 - `name` (string, required)
+- `path` (string | null, required): Where the logo was saved on the machine running your Chrome; null on a cloud browser or when there is no logo.
 - `logoUrl` (string | null, required): Highest-resolution logo artifact URL, or null if the page has no logo set.
 - `finalUrl` (string, required): URL after LinkedIn's redirect (renamed slugs, canonical tab).
 - `pageType` (string, required): COMPANY or SHOWCASE.
 - `logoFilename` (string | null, required): Suggested filename for the downloaded logo (<universalName>-logo.<ext>), or null if logoUrl is null.
 - `requestedUrl` (string, required)
-- `logoLocalPath` (string | null, required): Local filesystem path where the logo image was downloaded (session-scoped temp location), or null if logoUrl is null.
+- `logoLocalPath` (string | null, required): Same as path, or url on a cloud browser; kept for existing callers. Null if logoUrl is null.
 - `universalName` (string, required)
 
 ## FAQ
 
 ### What does "Get LinkedIn company/showcase logo" do?
 
-Get the logo image URL from a LinkedIn company page (/company/<slug>) or showcase page (/showcase/<slug>), by URL or bare slug (bare slug assumes company). Works for both company and showcase pages. Returns null logoUrl on pages with no logo set.
+Download the logo of a LinkedIn company or showcase page, by URL or bare slug (bare slug means company). Returns the logo image URL, the saved file's path and its filename; logoUrl is null when the page has no logo.
 
 ### How do I automatically get LinkedIn company/showcase logo on linkedin.com?
 
@@ -50,7 +52,7 @@ Required: url.
 
 ### What does it return?
 
-It returns name, logoUrl, finalUrl, pageType, logoFilename, requestedUrl, logoLocalPath, universalName.
+It returns url, name, path, logoUrl, finalUrl, pageType, logoFilename, requestedUrl, logoLocalPath, universalName.
 
 ### Do I need to be logged in to linkedin.com?
 

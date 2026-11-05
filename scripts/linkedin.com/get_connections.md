@@ -4,7 +4,7 @@ Automatically get LinkedIn connections on linkedin.com. Your own 1st-degree Link
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_connections`
-- Updated: 2026-11-02 (v12)
+- Updated: 2026-11-04 (v13)
 - Author: Reduck AI (reduck)
 
 ## About

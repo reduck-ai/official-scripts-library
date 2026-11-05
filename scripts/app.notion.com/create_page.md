@@ -4,7 +4,7 @@ Automatically create a Notion page on app.notion.com. Create a Notion page with 
 
 - Site: app.notion.com
 - Address: `reduck/app.notion.com/create_page`
-- Updated: 2026-11-03 (v1)
+- Updated: 2026-11-04 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -21,7 +21,7 @@ npx @reduck-ai/cli@latest run --script reduck/app.notion.com/create_page
 - `text` (string, optional): Text for the page's body. Each line becomes its own paragraph, added as given.
 - `parent` (string, optional): Link or id of the page to put it under, or of the database to add it to as a row. Leave it out for your private pages.
 - `workspace` (string, optional): Workspace name or id for a private page, when the account belongs to several.
-- `properties` (object, optional): For a database row: values by property name. Text takes a string, number a number, checkbox true or false, date an ISO date (2026-11-03), select an option name, multi-select a list of option names.
+- `properties` (object, optional): For a database row: values by property name. Text takes a string, number a number, checkbox true or false, date an ISO date (2026-11-03), select an option name, multi-select a list of option names, person a list of workspace members' emails, relation a list of page links or ids, file a list of links (or {name, url}).
 
 ## Output
 

@@ -4,7 +4,7 @@ Reads an Etsy listing's title, description, images, price, availability, rating 
 
 - Site: etsy.com
 - Address: `reduck/etsy.com/get_listing`
-- Updated: 2026-09-18 (v1)
+- Updated: 2026-11-04 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

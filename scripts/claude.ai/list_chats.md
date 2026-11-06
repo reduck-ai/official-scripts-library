@@ -1,10 +1,10 @@
 # List Claude chats
 
-Automatically list Claude chats on claude.ai. List your recent Claude.ai chats (the /recents + sidebar list), newest first. Paginate with limit+offset.
+Automatically list Claude chats on claude.ai. List your recent Claude.ai chats (the sidebar's recent list), newest first. Paginate with limit and offset; an offset past the end returns an empty list. Signed out, the run fails and asks you to sign in.
 
 - Site: claude.ai
 - Address: `reduck/claude.ai/list_chats`
-- Updated: 2026-07-20 (v1)
+- Updated: 2026-11-05 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -24,7 +24,7 @@ npx @reduck-ai/cli@latest run --script reduck/claude.ai/list_chats
 
 ### What does "List Claude chats" do?
 
-List your recent Claude.ai chats (the /recents + sidebar list), newest first. Paginate with limit+offset.
+List your recent Claude.ai chats (the sidebar's recent list), newest first. Paginate with limit and offset; an offset past the end returns an empty list. Signed out, the run fails and asks you to sign in.
 
 ### How do I automatically list Claude chats on claude.ai?
 
@@ -44,7 +44,7 @@ Yes. It acts as you on claude.ai: on your own Chrome it reuses your session, and
 
 ### Does it change anything on claude.ai, or only read data?
 
-Unknown: its author has not declared whether it changes anything on claude.ai, so treat it as if it could.
+It only reads. It looks things up on claude.ai and changes nothing there.
 
 ### How do I run it?
 

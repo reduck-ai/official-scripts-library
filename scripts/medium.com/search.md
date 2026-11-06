@@ -4,7 +4,7 @@ Automatically search Medium articles on medium.com. Search Medium for articles b
 
 - Site: medium.com
 - Address: `reduck/medium.com/search`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-05 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

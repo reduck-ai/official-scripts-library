@@ -4,7 +4,7 @@ Reads an Etsy shop's name, rating, sales, years active, location and featured it
 
 - Site: etsy.com
 - Address: `reduck/etsy.com/get_shop`
-- Updated: 2026-09-18 (v1)
+- Updated: 2026-11-05 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

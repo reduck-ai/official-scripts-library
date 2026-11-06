@@ -1,10 +1,10 @@
 # Get TikTok video comments
 
-Automatically get TikTok video comments on tiktok.com. List the top-level comments on a TikTok video, given its URL or id, in newest-relevance order.
+Automatically get TikTok video comments on tiktok.com. List the top-level comments on a TikTok video, given its URL or id, one page at a time in TikTok's order, with the total count. Pass the returned cursor to get the next page; cursor is null on the last page. A video id that does not exist is an error.
 
 - Site: tiktok.com
 - Address: `reduck/tiktok.com/get_comments`
-- Updated: 2026-09-08 (v7)
+- Updated: 2026-11-05 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,11 +18,13 @@ npx @reduck-ai/cli@latest run --script reduck/tiktok.com/get_comments
 ## Input
 
 - `video` (string, required): Full TikTok video URL or a bare numeric video id.
-- `count` (integer, optional): Target number of top-level comments. Resuming by cursor is impossible (TikTok signs each request); the script scrolls from the top each run.
+- `count` (integer, optional): How many top-level comments to ask TikTok for on this page.
+- `cursor` (integer, optional): Where the page starts: 0 for the first page, then the cursor a previous run returned.
 
 ## Output
 
 - `total` (integer, required): Total comment count reported by TikTok.
+- `cursor` (integer | null, required): Pass as cursor for the next page; null when there is none.
 - `hasMore` (boolean, required)
 - `videoId` (string, required)
 - `comments` (array, required)
@@ -31,7 +33,7 @@ npx @reduck-ai/cli@latest run --script reduck/tiktok.com/get_comments
 
 ### What does "Get TikTok video comments" do?
 
-List the top-level comments on a TikTok video, given its URL or id, in newest-relevance order.
+List the top-level comments on a TikTok video, given its URL or id, one page at a time in TikTok's order, with the total count. Pass the returned cursor to get the next page; cursor is null on the last page. A video id that does not exist is an error.
 
 ### How do I automatically get TikTok video comments on tiktok.com?
 
@@ -43,11 +45,11 @@ You do not need one. "Get TikTok video comments" drives the real tiktok.com page
 
 ### What information do I need to provide?
 
-Required: video. Optional: count.
+Required: video. Optional: count, cursor.
 
 ### What does it return?
 
-It returns total, hasMore, videoId, comments.
+It returns total, cursor, hasMore, videoId, comments.
 
 ### Do I need to be logged in to tiktok.com?
 

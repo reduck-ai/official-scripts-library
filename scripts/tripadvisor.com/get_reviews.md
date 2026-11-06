@@ -1,10 +1,10 @@
 # Get Tripadvisor reviews
 
-Automatically get Tripadvisor reviews on tripadvisor.com. Fetch the visible reviews for a Tripadvisor listing (restaurant, hotel, or attraction): reviewer name, rating, title, date, trip type, and review text. No login required.
+Automatically get Tripadvisor reviews on tripadvisor.com. Fetch the reviews Tripadvisor shows first for a restaurant, by its location id: reviewer name, rating, title, date, trip type and review text. A restaurant with no reviews returns an empty list. An id that does not exist, or that is a hotel or attraction, is an error.
 
 - Site: tripadvisor.com
 - Address: `reduck/tripadvisor.com/get_reviews`
-- Updated: 2026-09-02 (v2)
+- Updated: 2026-11-05 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,7 +29,7 @@ npx @reduck-ai/cli@latest run --script reduck/tripadvisor.com/get_reviews
 
 ### What does "Get Tripadvisor reviews" do?
 
-Fetch the visible reviews for a Tripadvisor listing (restaurant, hotel, or attraction): reviewer name, rating, title, date, trip type, and review text. No login required.
+Fetch the reviews Tripadvisor shows first for a restaurant, by its location id: reviewer name, rating, title, date, trip type and review text. A restaurant with no reviews returns an empty list. An id that does not exist, or that is a hotel or attraction, is an error.
 
 ### How do I automatically get Tripadvisor reviews on tripadvisor.com?
 

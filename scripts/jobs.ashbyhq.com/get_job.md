@@ -1,10 +1,10 @@
 # Get Ashby job posting
 
-Automatically get Ashby job posting on jobs.ashbyhq.com. Read one Ashby job posting (jobs.ashbyhq.com/&lt;board&gt;/&lt;jobId&gt;), description HTML included.
+Automatically get Ashby job posting on jobs.ashbyhq.com. Read one Ashby job posting by board and job id: title, team, locations, workplace and employment type, pay bands, deadline and the full description HTML. A posting that does not exist fails with a clear error.
 
 - Site: jobs.ashbyhq.com
 - Address: `reduck/jobs.ashbyhq.com/get_job`
-- Updated: 2026-08-03 (v4)
+- Updated: 2026-11-05 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -40,7 +40,7 @@ npx @reduck-ai/cli@latest run --script reduck/jobs.ashbyhq.com/get_job
 
 ### What does "Get Ashby job posting" do?
 
-Read one Ashby job posting (jobs.ashbyhq.com/&lt;board&gt;/&lt;jobId&gt;), description HTML included.
+Read one Ashby job posting by board and job id: title, team, locations, workplace and employment type, pay bands, deadline and the full description HTML. A posting that does not exist fails with a clear error.
 
 ### How do I automatically get Ashby job posting on jobs.ashbyhq.com?
 

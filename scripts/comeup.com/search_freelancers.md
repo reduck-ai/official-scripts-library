@@ -4,7 +4,7 @@ Automatically search ComeUp freelancers on comeup.com. Search ComeUp sellers/fre
 
 - Site: comeup.com
 - Address: `reduck/comeup.com/search_freelancers`
-- Updated: 2026-08-25 (v2)
+- Updated: 2026-11-05 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

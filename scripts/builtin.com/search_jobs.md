@@ -4,7 +4,7 @@ Automatically search Built In jobs on builtin.com. Search Built In (builtin.com)
 
 - Site: builtin.com
 - Address: `reduck/builtin.com/search_jobs`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-11-05 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

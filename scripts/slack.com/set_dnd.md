@@ -1,10 +1,10 @@
 # Set Slack Do-Not-Disturb
 
-Automatically set Slack Do-Not-Disturb on slack.com. Snooze notifications for N minutes, or end an active snooze with minutes = 0. Returns the snooze state. Requires login.
+Automatically set Slack Do-Not-Disturb on slack.com. Pause Slack notifications for N minutes, or resume them with minutes = 0. Returns the snooze state and end time. Requires login.
 
 - Site: slack.com
 - Address: `reduck/slack.com/set_dnd`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-05 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -30,7 +30,7 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/set_dnd
 
 ### What does "Set Slack Do-Not-Disturb" do?
 
-Snooze notifications for N minutes, or end an active snooze with minutes = 0. Returns the snooze state. Requires login.
+Pause Slack notifications for N minutes, or resume them with minutes = 0. Returns the snooze state and end time. Requires login.
 
 ### How do I automatically set Slack Do-Not-Disturb on slack.com?
 

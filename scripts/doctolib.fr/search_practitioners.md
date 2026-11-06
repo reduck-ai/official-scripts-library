@@ -4,7 +4,7 @@ Automatically search Doctolib practitioners on doctolib.fr. Search Doctolib prac
 
 - Site: doctolib.fr
 - Address: `reduck/doctolib.fr/search_practitioners`
-- Updated: 2026-10-25 (v4)
+- Updated: 2026-11-05 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,8 +17,8 @@ npx @reduck-ai/cli@latest run --script reduck/doctolib.fr/search_practitioners
 
 ## Input
 
-- `location` (string, required): City slug or name resolved by Doctolib (e.g. 'paris', 'lyon').
-- `specialty` (string, required): Specialty/keyword slug or free text (e.g. 'medecin-generaliste', 'dentiste', 'dermatologue').
+- `location` (string, required): City slug or name resolved by Doctolib (e.g. 'paris', 'lyon'). doctolib.fr/autocomplete gives the place names Doctolib knows.
+- `specialty` (string, required): Specialty slug (e.g. 'medecin-generaliste', 'dentiste', 'dermatologue'), from doctolib.fr/suggest's specialities. To find one practitioner by name, use doctolib.fr/suggest instead.
 - `page` (integer, optional): 0-based page. Doctolib serves 20 providers per page. Default 0. Page>0 replays the page's own resolved search body against ?page=N (order is server-ranked; treat as stable within a session).
 
 ## Output

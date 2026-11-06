@@ -1,10 +1,10 @@
 # Search Threads posts
 
-Automatically search Threads posts on threads.com. Search Threads for posts matching a keyword, hashtag, or topic and return the matching posts with author, text, and engagement counts.
+Automatically search Threads posts on threads.com. Search Threads for posts matching a keyword, hashtag, or topic and return the matching posts with author, text, and engagement counts. Returns an empty list when Threads finds nothing. Signed out, Threads shows only its first few results.
 
 - Site: threads.com
 - Address: `reduck/threads.com/search_posts`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-11-05 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -28,7 +28,7 @@ npx @reduck-ai/cli@latest run --script reduck/threads.com/search_posts
 
 ### What does "Search Threads posts" do?
 
-Search Threads for posts matching a keyword, hashtag, or topic and return the matching posts with author, text, and engagement counts.
+Search Threads for posts matching a keyword, hashtag, or topic and return the matching posts with author, text, and engagement counts. Returns an empty list when Threads finds nothing. Signed out, Threads shows only its first few results.
 
 ### How do I automatically search Threads posts on threads.com?
 

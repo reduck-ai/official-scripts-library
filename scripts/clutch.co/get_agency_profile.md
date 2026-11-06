@@ -4,7 +4,7 @@ Automatically get Agency Profile (Clutch) on clutch.co. Reads a single agency's 
 
 - Site: clutch.co
 - Address: `reduck/clutch.co/get_agency_profile`
-- Updated: 2026-09-18 (v1)
+- Updated: 2026-11-05 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically get Medium article details on medium.com. Fetch a Medium article's
 
 - Site: medium.com
 - Address: `reduck/medium.com/get_article`
-- Updated: 2026-09-02 (v2)
+- Updated: 2026-11-05 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

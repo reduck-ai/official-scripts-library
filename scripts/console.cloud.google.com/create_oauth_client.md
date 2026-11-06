@@ -1,10 +1,10 @@
-# Create OAuth client (Web application)
+# Google Cloud Console — Create OAuth client (Web application)
 
 Automatically create OAuth client (Web application) on console.cloud.google.com. An unofficial Google Cloud API: create a web OAuth client and get its id and secret programmatically, from code or from an AI agent, with typed JSON in and out. Google offers no API to create a standard web OAuth client; it is console-only.
 
 - Site: console.cloud.google.com
 - Address: `reduck/console.cloud.google.com/create_oauth_client`
-- Updated: 2026-09-18 (v12)
+- Updated: 2026-11-05 (v12)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -30,9 +30,9 @@ npx @reduck-ai/cli@latest run --script reduck/console.cloud.google.com/create_oa
 
 ## FAQ
 
-### What does "Create OAuth client (Web application)" do?
+### What does "Google Cloud Console — Create OAuth client (Web application)" do?
 
-Create a Web-application OAuth 2.0 client in the Google Cloud Console (Google Auth Platform) for a project and return its clientId + clientSecret. Returns the full credential, including the client secret (the success dialog itself only shows the id). Requires the browser to already be signed in to Google, and a pre-existing OAuth consent screen for the project.
+Create a Web-application OAuth 2.0 client in Google Cloud Console for a project and return its client id and client secret. The Google account must be the browser's default signed-in account and the project needs an existing OAuth consent screen. A project you cannot access is an error.
 
 ### How do I automatically create OAuth client (Web application) on console.cloud.google.com?
 
@@ -40,7 +40,7 @@ Ask an AI agent connected to Reduck to run reduck/console.cloud.google.com/creat
 
 ### Is there a console.cloud.google.com API to create OAuth client (Web application)?
 
-You do not need one. "Create OAuth client (Web application)" drives the real console.cloud.google.com pages in a browser, so it works whether or not console.cloud.google.com offers an API for this.
+You do not need one. "Google Cloud Console — Create OAuth client (Web application)" drives the real console.cloud.google.com pages in a browser, so it works whether or not console.cloud.google.com offers an API for this.
 
 ### What information do I need to provide?
 

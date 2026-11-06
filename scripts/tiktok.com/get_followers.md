@@ -1,10 +1,10 @@
 # Get TikTok followers
 
-Automatically get TikTok followers on tiktok.com. List a TikTok user's followers by @username, paginated. A handle nobody owns is reported as no such account rather than a vague lookup failure, and an account that will not disclose its followers (private accounts show them only to approved followers) is reported with the reason instead of a bare API code. Note that an account hiding who it follows still discloses its followers normally. Returns total, hasMore, truncated, and users (id, uniqueId, secUid, nickname, signature, verified, privateAccount, followerCount).
+Automatically get TikTok followers on tiktok.com. List a TikTok user's followers by @username, one page at a time, newest first as TikTok gives them, with the total count. Pass the returned cursor to get the next page; cursor is null on the last page. A username nobody owns, or an account whose followers TikTok does not show (a private account), is an error with the reason.
 
 - Site: tiktok.com
 - Address: `reduck/tiktok.com/get_followers`
-- Updated: 2026-09-08 (v6)
+- Updated: 2026-11-05 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,12 +18,14 @@ npx @reduck-ai/cli@latest run --script reduck/tiktok.com/get_followers
 ## Input
 
 - `username` (string, required): TikTok handle, with or without leading @.
-- `count` (integer, optional): Target number of followers to collect.
+- `count` (integer, optional): How many followers to ask TikTok for on this page.
+- `cursor` (string, optional): Where the page starts: "0" for the first page, then the cursor a previous run returned.
 
 ## Output
 
 - `total` (integer, required): Total follower count reported by TikTok.
 - `users` (array, required)
+- `cursor` (string | null, required): Pass as cursor for the next page; null when there is none.
 - `hasMore` (boolean, required)
 - `username` (string, required)
 - `truncated` (boolean, optional): True if TikTok flagged the list as truncated (visibility-limited).
@@ -32,7 +34,7 @@ npx @reduck-ai/cli@latest run --script reduck/tiktok.com/get_followers
 
 ### What does "Get TikTok followers" do?
 
-List a TikTok user's followers by @username, paginated. A handle nobody owns is reported as no such account rather than a vague lookup failure, and an account that will not disclose its followers (private accounts show them only to approved followers) is reported with the reason instead of a bare API code. Note that an account hiding who it follows still discloses its followers normally. Returns total, hasMore, truncated, and users (id, uniqueId, secUid, nickname, signature, verified, privateAccount, followerCount).
+List a TikTok user's followers by @username, one page at a time, newest first as TikTok gives them, with the total count. Pass the returned cursor to get the next page; cursor is null on the last page. A username nobody owns, or an account whose followers TikTok does not show (a private account), is an error with the reason.
 
 ### How do I automatically get TikTok followers on tiktok.com?
 
@@ -44,11 +46,11 @@ You do not need one. "Get TikTok followers" drives the real tiktok.com pages in 
 
 ### What information do I need to provide?
 
-Required: username. Optional: count.
+Required: username. Optional: count, cursor.
 
 ### What does it return?
 
-It returns total, users, hasMore, username, truncated.
+It returns total, users, cursor, hasMore, username, truncated.
 
 ### Do I need to be logged in to tiktok.com?
 

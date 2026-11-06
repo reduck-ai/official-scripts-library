@@ -1,10 +1,10 @@
 # Get Trustpilot similar companies
 
-Automatically get Trustpilot similar companies on trustpilot.com. Get the companies Trustpilot lists as similar/competitors on a business profile (the "People also looked at" module). Returns each with its identifyingName (domain key), TrustScore, stars, review count and logo.
+Automatically get Trustpilot similar companies on trustpilot.com. Get the companies Trustpilot lists as similar to a business on its profile page, each with its domain key, TrustScore, stars, review count and logo. A domain with no Trustpilot page is an error.
 
 - Site: trustpilot.com
 - Address: `reduck/trustpilot.com/get_similar_companies`
-- Updated: 2026-10-22 (v4)
+- Updated: 2026-11-05 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -28,7 +28,7 @@ npx @reduck-ai/cli@latest run --script reduck/trustpilot.com/get_similar_compani
 
 ### What does "Get Trustpilot similar companies" do?
 
-Get the companies Trustpilot lists as similar/competitors on a business profile (the "People also looked at" module). Returns each with its identifyingName (domain key), TrustScore, stars, review count and logo.
+Get the companies Trustpilot lists as similar to a business on its profile page, each with its domain key, TrustScore, stars, review count and logo. A domain with no Trustpilot page is an error.
 
 ### How do I automatically get Trustpilot similar companies on trustpilot.com?
 

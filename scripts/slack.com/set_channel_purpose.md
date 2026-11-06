@@ -1,10 +1,10 @@
 # Set Slack channel purpose
 
-Automatically set Slack channel purpose on slack.com. Set a channel's purpose/description by name or id. Pass an empty string to clear it. Returns the applied purpose. Requires login.
+Automatically set Slack channel purpose on slack.com. Set the description of a Slack channel this account has joined, by name or id. An empty string clears it. Returns the description Slack saved. Requires login.
 
 - Site: slack.com
 - Address: `reduck/slack.com/set_channel_purpose`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-05 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -31,7 +31,7 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/set_channel_purpose
 
 ### What does "Set Slack channel purpose" do?
 
-Set a channel's purpose/description by name or id. Pass an empty string to clear it. Returns the applied purpose. Requires login.
+Set the description of a Slack channel this account has joined, by name or id. An empty string clears it. Returns the description Slack saved. Requires login.
 
 ### How do I automatically set Slack channel purpose on slack.com?
 

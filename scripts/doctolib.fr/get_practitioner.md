@@ -4,7 +4,7 @@ Automatically get Doctolib practitioner on doctolib.fr. Fetch a Doctolib practit
 
 - Site: doctolib.fr
 - Address: `reduck/doctolib.fr/get_practitioner`
-- Updated: 2026-11-02 (v3)
+- Updated: 2026-11-05 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/doctolib.fr/get_practitioner
 
 ## Input
 
-- `profile_path` (string, required): Relative path (with ?pid=practice-N) or full profile URL, as returned by search_practitioners.profile_path, e.g. 'medecin-generaliste/paris/kathleen-ohana-paris?pid=practice-47788'.
+- `profile_path` (string, required): Relative path or full profile URL, from search_practitioners (with ?pid=practice-N, e.g. 'medecin-generaliste/paris/kathleen-ohana-paris?pid=practice-47788') or from suggest (without a pid). Every address of the practitioner is returned either way.
 
 ## Output
 

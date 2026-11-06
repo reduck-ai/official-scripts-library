@@ -1,10 +1,10 @@
 # Get one of my n8n Creator Portal templates
 
-Automatically get one of my n8n Creator Portal templates on creators.n8n.io. Read one workflow template the signed-in creator submitted on the n8n Creator Portal (creators.n8n.io), by its id: name, review status, price and purchase link, dates, its description (Markdown, in the portal's sections: Quick overview, How it works, Setup, Requirements, Customization, Additional info), the workflow JSON as submitted, and the AI review's feedback once it is ready (its score explanation and the workflow JSON it suggests, null before). An id that is not one of the creator's templates fails with a clear message: get ids from creators.n8n.io/list_my_templates.
+Automatically get one of my n8n Creator Portal templates on creators.n8n.io. Read one workflow template the signed-in creator submitted on the n8n Creator Portal (creators.n8n.io), by its id, as the portal gives it: name, review status (ai_review, in_review, changes_needed, published or wont_publish), price and purchase link (null for a free template), view count, dates, its description (Markdown, in the portal's sections: Quick overview, How it works, Setup, Requirements, Customization, Additional info), the workflow as submitted with the portal's count of its nodes, and the AI review once it has answered (its decision, scores with their explanations, feedback text, and the title, description and workflow it suggests; null before). An id that is not one of the creator's templates fails with a clear message: get ids from creators.n8n.io/list_my_templates.
 
 - Site: creators.n8n.io
 - Address: `reduck/creators.n8n.io/get_my_template`
-- Updated: 2026-11-02 (v1)
+- Updated: 2026-11-05 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -22,25 +22,28 @@ npx @reduck-ai/cli@latest run --script reduck/creators.n8n.io/get_my_template
 ## Output
 
 - `id` (integer, required)
-- `name` (string | null, required)
-- `reviewStatus` (string | null, required)
-- `url` (string | null, optional)
-- `price` (number | null, optional)
+- `reviewStatus` (string | null, required): Where the template is in the portal's review: ai_review, in_review, changes_needed, published or wont_publish.
+- `name` (string | null, optional): "New Submission" until the submission is finalized.
+- `price` (number | null, optional): Null for a free template.
 - `views` (integer | null, optional)
-- `workflow` (object | null, optional): The submitted workflow JSON (nodes, connections).
+- `hidden` (boolean | null, optional)
+- `status` (string | null, optional): The status as the API sends it next to reviewStatus.
+- `quality` (any, optional): The quality mark as the API sends it, null when it has none.
+- `username` (string | null, optional): The creator's n8n username.
+- `workflow` (object | null, optional): The submitted workflow (name, nodes, connections, settings).
 - `createdAt` (string | null, optional)
 - `updatedAt` (string | null, optional)
-- `aiFeedback` (object | null, optional): The AI review's answer as the portal gives it, e.g. workflowScoreExplanation and suggestedJson. Null until it is ready.
-- `description` (string | null, optional): Markdown, in ## sections.
-- `publishedAt` (string | integer | null, optional)
-- `purchaseUrl` (string | null, optional)
-- `hasAiFeedback` (boolean, optional)
+- `aiFeedback` (object | null, optional): The AI review, null before it answers: aiDecision, the feedback text (feedbackHtml, in Markdown), scores with their explanations (general, workflow, description, title, security), and the title, description and workflow it suggests (suggestedTitle, suggestedDescription, suggestedJson), each null when it gives none.
+- `description` (string | null, optional): Markdown, in the portal's ## sections.
+- `purchaseUrl` (string | null, optional): Null for a free template.
+- `workflowInfo` (object | null, optional): The portal's summary of the workflow: nodeCount, and nodeTypes with a count per node type.
+- `publishedAtTimestamp` (string | null, optional): As the API sends it. It can be set on a template that is not published: read reviewStatus for the state.
 
 ## FAQ
 
 ### What does "Get one of my n8n Creator Portal templates" do?
 
-Read one workflow template the signed-in creator submitted on the n8n Creator Portal (creators.n8n.io), by its id: name, review status, price and purchase link, dates, its description (Markdown, in the portal's sections: Quick overview, How it works, Setup, Requirements, Customization, Additional info), the workflow JSON as submitted, and the AI review's feedback once it is ready (its score explanation and the workflow JSON it suggests, null before). An id that is not one of the creator's templates fails with a clear message: get ids from creators.n8n.io/list_my_templates.
+Read one workflow template the signed-in creator submitted on the n8n Creator Portal (creators.n8n.io), by its id, as the portal gives it: name, review status (ai_review, in_review, changes_needed, published or wont_publish), price and purchase link (null for a free template), view count, dates, its description (Markdown, in the portal's sections: Quick overview, How it works, Setup, Requirements, Customization, Additional info), the workflow as submitted with the portal's count of its nodes, and the AI review once it has answered (its decision, scores with their explanations, feedback text, and the title, description and workflow it suggests; null before). An id that is not one of the creator's templates fails with a clear message: get ids from creators.n8n.io/list_my_templates.
 
 ### How do I automatically get one of my n8n Creator Portal templates on creators.n8n.io?
 
@@ -56,7 +59,7 @@ Required: id.
 
 ### What does it return?
 
-It returns id, url, name, price, views, workflow, createdAt, updatedAt, aiFeedback, description, publishedAt, purchaseUrl, reviewStatus, hasAiFeedback.
+It returns id, name, price, views, hidden, status, quality, username, workflow, createdAt, updatedAt, aiFeedback, description, purchaseUrl, reviewStatus, workflowInfo, publishedAtTimestamp.
 
 ### Do I need to be logged in to creators.n8n.io?
 

@@ -4,7 +4,7 @@ Automatically get TikTok hashtag info on tiktok.com. Get a TikTok hashtag/challe
 
 - Site: tiktok.com
 - Address: `reduck/tiktok.com/get_hashtag_info`
-- Updated: 2026-09-03 (v2)
+- Updated: 2026-11-05 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -22,7 +22,7 @@ npx @reduck-ai/cli@latest run --script reduck/tiktok.com/get_hashtag_info
 ## Output
 
 - `id` (string, required): The challenge's numeric id.
-- `title` (string, required): Normalised hashtag name (lowercase, no #).
+- `title` (string, required): Hashtag name as TikTok spells it (no #), e.g. "BookTok".
 - `viewCount` (number, required): Exact cumulative view count (from statsV2).
 - `isCommerce` (boolean, required)
 - `videoCount` (number, required): Exact number of videos under the hashtag (from statsV2).

@@ -1,10 +1,10 @@
 # Get Slack user presence
 
-Automatically get Slack user presence on slack.com. Get a user's presence (active/away) by id (U…) or @handle, plus their display name. Requires login.
+Automatically get Slack user presence on slack.com. Get a Slack user's presence (active or away) and display name, by user id (U…), shown beside a channel or DM the signed-in account is in. Fails if the user is not in the workspace or the channel cannot be opened. Requires login.
 
 - Site: slack.com
 - Address: `reduck/slack.com/get_user_presence`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-05 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,8 +17,9 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/get_user_presence
 
 ## Input
 
-- `user` (string, required): User id (U…) or @handle.
-- `workspaceDomain` (string, optional): Workspace host, e.g. acme.slack.com. Defaults to the active workspace.
+- `user` (string, required): Slack user id (U…). It is on the user's profile, under the more actions menu (Copy member ID).
+- `channel` (string, required): Id (C…, G… or D…) of a channel or DM the signed-in account is in; the profile opens beside it. Get it from the channel's details (bottom of the About tab) or from the conversation URL in Slack (…/client/T…/<id>).
+- `workspaceDomain` (string, required): Workspace host, e.g. acme.slack.com.
 
 ## Output
 
@@ -30,7 +31,7 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/get_user_presence
 
 ### What does "Get Slack user presence" do?
 
-Get a user's presence (active/away) by id (U…) or @handle, plus their display name. Requires login.
+Get a Slack user's presence (active or away) and display name, by user id (U…), shown beside a channel or DM the signed-in account is in. Fails if the user is not in the workspace or the channel cannot be opened. Requires login.
 
 ### How do I automatically get Slack user presence on slack.com?
 
@@ -42,7 +43,7 @@ You do not need one. "Get Slack user presence" drives the real slack.com pages i
 
 ### What information do I need to provide?
 
-Required: user. Optional: workspaceDomain.
+Required: user, channel, workspaceDomain.
 
 ### What does it return?
 
@@ -54,7 +55,7 @@ Yes. It acts as you on slack.com: on your own Chrome it reuses your session, and
 
 ### Does it change anything on slack.com, or only read data?
 
-Unknown: its author has not declared whether it changes anything on slack.com, so treat it as if it could.
+It only reads. It looks things up on slack.com and changes nothing there.
 
 ### How do I run it?
 

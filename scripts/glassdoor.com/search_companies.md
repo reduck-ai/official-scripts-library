@@ -1,10 +1,10 @@
-# Search companies
+# Search Glassdoor companies
 
-Automatically search companies on glassdoor.com. Search Glassdoor employers by name → list of {employerId, name, shortName, logo, website}. Returns ~10 fuzzy matches ranked by Glassdoor's own employer search suggestions — near-name and substring matches are included (e.g. "Airbus" also yields "Air Busan"), and an exact match is not guaranteed to be first. logo/website/shortName may be null. The employerId feeds get_company and the other employer-scoped scripts. Anonymous, read-only.
+Automatically search Glassdoor companies on glassdoor.com. Search Glassdoor employers by name. Returns about 10 matches as {employerId, name, shortName, logo, website}, in Glassdoor's own suggestion order; near-name matches are included and an exact match may not be first. logo, website and shortName may be null. Returns [] when nothing matches. No sign-in needed.
 
 - Site: glassdoor.com
 - Address: `reduck/glassdoor.com/search_companies`
-- Updated: 2026-10-22 (v5)
+- Updated: 2026-11-05 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -21,17 +21,17 @@ npx @reduck-ai/cli@latest run --script reduck/glassdoor.com/search_companies
 
 ## FAQ
 
-### What does "Search companies" do?
+### What does "Search Glassdoor companies" do?
 
-Search Glassdoor employers by name → list of {employerId, name, shortName, logo, website}. Returns ~10 fuzzy matches ranked by Glassdoor's own employer search suggestions — near-name and substring matches are included (e.g. "Airbus" also yields "Air Busan"), and an exact match is not guaranteed to be first. logo/website/shortName may be null. The employerId feeds get_company and the other employer-scoped scripts. Anonymous, read-only.
+Search Glassdoor employers by name. Returns about 10 matches as {employerId, name, shortName, logo, website}, in Glassdoor's own suggestion order; near-name matches are included and an exact match may not be first. logo, website and shortName may be null. Returns [] when nothing matches. No sign-in needed.
 
-### How do I automatically search companies on glassdoor.com?
+### How do I automatically search Glassdoor companies on glassdoor.com?
 
 Ask an AI agent connected to Reduck to run reduck/glassdoor.com/search_companies, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/glassdoor.com/search_companies
 
-### Is there a glassdoor.com API to search companies?
+### Is there a glassdoor.com API to search Glassdoor companies?
 
-You do not need one. "Search companies" drives the real glassdoor.com pages in a browser, so it works whether or not glassdoor.com offers an API for this.
+You do not need one. "Search Glassdoor companies" drives the real glassdoor.com pages in a browser, so it works whether or not glassdoor.com offers an API for this.
 
 ### What information do I need to provide?
 

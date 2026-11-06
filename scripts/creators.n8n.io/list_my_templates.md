@@ -1,10 +1,10 @@
 # List my n8n Creator Portal templates
 
-Automatically list my n8n Creator Portal templates on creators.n8n.io. List the workflow templates the signed-in creator has submitted on the n8n Creator Portal (creators.n8n.io), whatever their state. Returns per template its id, name, review status (ai_review: the AI check runs or its feedback waits for you to finalize; in_review: a person reviews it; changes_needed; published; wont_publish), price and purchase link (null for a free template), view count, dates, whether AI feedback is ready, and its n8n.io url once published. A creator with no template gets an empty list. Pass an id to creators.n8n.io/get_my_template for its description, AI feedback and workflow.
+Automatically list my n8n Creator Portal templates on creators.n8n.io. List the workflow templates the signed-in creator has submitted on the n8n Creator Portal (creators.n8n.io), whatever their state, as the portal gives them. Returns per template its id, name, review status (ai_review, in_review, changes_needed, published or wont_publish), view count, dates, and the AI review once it has answered (its decision, its feedback text and the title it suggests; null before). A creator with no template gets an empty list. Pass an id to creators.n8n.io/get_my_template for the description, the workflow, the price and the purchase link.
 
 - Site: creators.n8n.io
 - Address: `reduck/creators.n8n.io/list_my_templates`
-- Updated: 2026-11-02 (v1)
+- Updated: 2026-11-05 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -21,13 +21,13 @@ It takes no input.
 
 ## Output
 
-- `templates` (array, required)
+- `templates` (array, required): Every template of the signed-in creator, as the portal's API sends it. Fields the API adds later are passed through.
 
 ## FAQ
 
 ### What does "List my n8n Creator Portal templates" do?
 
-List the workflow templates the signed-in creator has submitted on the n8n Creator Portal (creators.n8n.io), whatever their state. Returns per template its id, name, review status (ai_review: the AI check runs or its feedback waits for you to finalize; in_review: a person reviews it; changes_needed; published; wont_publish), price and purchase link (null for a free template), view count, dates, whether AI feedback is ready, and its n8n.io url once published. A creator with no template gets an empty list. Pass an id to creators.n8n.io/get_my_template for its description, AI feedback and workflow.
+List the workflow templates the signed-in creator has submitted on the n8n Creator Portal (creators.n8n.io), whatever their state, as the portal gives them. Returns per template its id, name, review status (ai_review, in_review, changes_needed, published or wont_publish), view count, dates, and the AI review once it has answered (its decision, its feedback text and the title it suggests; null before). A creator with no template gets an empty list. Pass an id to creators.n8n.io/get_my_template for the description, the workflow, the price and the purchase link.
 
 ### How do I automatically list my n8n Creator Portal templates on creators.n8n.io?
 

@@ -4,7 +4,7 @@ Automatically get Capterra Product Reviews on capterra.com. Reads a public Capte
 
 - Site: capterra.com
 - Address: `reduck/capterra.com/get_product_reviews`
-- Updated: 2026-08-27 (v1)
+- Updated: 2026-11-05 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -1,10 +1,10 @@
 # Get TikTok trending videos
 
-Automatically get TikTok trending videos on tiktok.com. Get a sample of TikTok's Explore (trending) feed. The feed is re-ranked on every request (no stable cursor), so the script accumulates distinct videos across several calls up to `count` — a fresh trending snapshot, not a deterministic paginated list.
+Automatically get TikTok trending videos on tiktok.com. Get one snapshot of TikTok's Explore (trending) feed, optionally for one Explore category. TikTok re-ranks the feed on every request and can return fewer videos than asked; run again for another snapshot. An unknown category is an error.
 
 - Site: tiktok.com
 - Address: `reduck/tiktok.com/get_trending_videos`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-11-05 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,8 +17,8 @@ npx @reduck-ai/cli@latest run --script reduck/tiktok.com/get_trending_videos
 
 ## Input
 
-- `count` (integer, optional): Target number of distinct trending videos to gather.
-- `categoryType` (integer, optional): Explore category id (120 = aggregate/all trending; other numeric ids map to the Explore category tabs). Category 0 is invalid.
+- `count` (integer, optional): How many trending videos to ask TikTok for.
+- `categoryType` (integer, optional): Explore category id (120 = all trending; other numeric ids map to the Explore category tabs). Category 0 is invalid.
 
 ## Output
 
@@ -28,7 +28,7 @@ npx @reduck-ai/cli@latest run --script reduck/tiktok.com/get_trending_videos
 
 ### What does "Get TikTok trending videos" do?
 
-Get a sample of TikTok's Explore (trending) feed. The feed is re-ranked on every request (no stable cursor), so the script accumulates distinct videos across several calls up to `count` — a fresh trending snapshot, not a deterministic paginated list.
+Get one snapshot of TikTok's Explore (trending) feed, optionally for one Explore category. TikTok re-ranks the feed on every request and can return fewer videos than asked; run again for another snapshot. An unknown category is an error.
 
 ### How do I automatically get TikTok trending videos on tiktok.com?
 

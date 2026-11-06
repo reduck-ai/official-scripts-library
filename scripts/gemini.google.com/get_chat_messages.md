@@ -4,7 +4,7 @@ Automatically get Gemini chat messages on gemini.google.com. Full message transc
 
 - Site: gemini.google.com
 - Address: `reduck/gemini.google.com/get_chat_messages`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-05 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,6 +18,7 @@ npx @reduck-ai/cli@latest run --script reduck/gemini.google.com/get_chat_message
 ## Input
 
 - `conversation_id` (string, required): Conversation id, as returned by list_chats/search_chats (also the /app/<id> URL segment).
+- `authuser` (integer, optional): Which Google account of this browser to use: 0 = first signed-in account (the default), 1 = second, and so on.
 
 ## Output
 
@@ -40,7 +41,7 @@ You do not need one. "Get Gemini chat messages" drives the real gemini.google.co
 
 ### What information do I need to provide?
 
-Required: conversation_id.
+Required: conversation_id. Optional: authuser.
 
 ### What does it return?
 

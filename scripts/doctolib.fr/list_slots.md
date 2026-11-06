@@ -4,7 +4,7 @@ Automatically list Doctolib slots on doctolib.fr. List a Doctolib practitioner's
 
 - Site: doctolib.fr
 - Address: `reduck/doctolib.fr/list_slots`
-- Updated: 2026-11-02 (v9)
+- Updated: 2026-11-05 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/doctolib.fr/list_slots
 
 ## Input
 
-- `profile_path` (string, required): Relative path (with ?pid=practice-N) or full profile URL from search_practitioners.profile_path.
+- `profile_path` (string, required): Relative path or full profile URL, from search_practitioners (with ?pid=practice-N, which picks one practice) or from suggest (without a pid: Doctolib's default practice).
 - `days` (integer, optional): Number of days to read from start_date, 1 to 15 (Doctolib serves at most 15 days at once). For a longer span, call again with start_date moved forward by days. Default 14.
 - `motive` (string, optional): Visit-motive name substring (case-insensitive), e.g. 'première consultation', 'vidéo'. It must match exactly one of the practitioner's motives; when it matches several, the run fails and lists their ids, so pass motive_id. If omitted (and no motive_id), the first motive in Doctolib's order is used.
 - `motive_id` (integer, optional): Exact visit-motive id (from search_practitioners.matched_visit_motive.id or this script's visit_motives). Takes precedence over motive; the deterministic way to target one of several same-named motives.

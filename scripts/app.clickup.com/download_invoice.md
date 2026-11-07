@@ -1,10 +1,10 @@
 # Download ClickUp invoice
 
-Automatically download ClickUp invoice on app.clickup.com. Download a single ClickUp workspace invoice PDF by its invoice number (from app.clickup.com/list_invoices). Returns the PDF bytes as base64 plus a filename.
+Automatically download ClickUp invoice on app.clickup.com. Download one ClickUp workspace invoice PDF by its invoice number. Returns the saved file (path or url) and its filename.
 
 - Site: app.clickup.com
 - Address: `reduck/app.clickup.com/download_invoice`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-06 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -22,14 +22,15 @@ npx @reduck-ai/cli@latest run --script reduck/app.clickup.com/download_invoice
 
 ## Output
 
-- `filename` (string, required)
-- `contentBase64` (string, required)
+- `filename` (string, required): Saved file name; can end in " (2)".
+- `url` (string, optional): Where to fetch the file (managed browser).
+- `path` (string, optional): Where the file was saved on the machine running the browser (user's Chrome).
 
 ## FAQ
 
 ### What does "Download ClickUp invoice" do?
 
-Download a single ClickUp workspace invoice PDF by its invoice number (from app.clickup.com/list_invoices). Returns the PDF bytes as base64 plus a filename.
+Download one ClickUp workspace invoice PDF by its invoice number. Returns the saved file (path or url) and its filename.
 
 ### How do I automatically download ClickUp invoice on app.clickup.com?
 
@@ -45,7 +46,7 @@ Required: number. Optional: workspaceId.
 
 ### What does it return?
 
-It returns filename, contentBase64.
+It returns url, path, filename.
 
 ### Do I need to be logged in to app.clickup.com?
 

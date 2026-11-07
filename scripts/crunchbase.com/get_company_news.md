@@ -1,10 +1,10 @@
 # Crunchbase: Get Company News
 
-Automatically get Company News on crunchbase.com. Recent news and press mentions for one company from Crunchbase, by permalink (title, publisher, author, URL, date). Returns the 10 most recent items; older history isn't available on the free tier.
+Automatically get Company News on crunchbase.com. News articles that mention one company on Crunchbase, by permalink, newest first: title, publisher, author, URL and date, 15 per page, with the total count. Pass nextCursor as cursor for the next page; paging needs a Crunchbase Pro account, and without it the script says so. An unknown permalink is an error.
 
 - Site: crunchbase.com
 - Address: `reduck/crunchbase.com/get_company_news`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-11-06 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,19 +18,20 @@ npx @reduck-ai/cli@latest run --script reduck/crunchbase.com/get_company_news
 ## Input
 
 - `permalink` (string, required): Crunchbase permalink slug for the company, e.g. "qonto".
+- `cursor` (string, optional): nextCursor from the previous page. Leave out for the most recent news. Paging needs a Crunchbase Pro account.
 
 ## Output
 
 - `news` (array, required)
-- `notFound` (boolean, required)
 - `permalink` (string, required)
-- `totalActivityCount` (number, required): Total count Crunchbase reports for this company's activity timeline (news + other tracked events); only the most recent 10 are returned below.
+- `nextCursor` (string | null, required): Pass as cursor to get the next page; null on the last page.
+- `totalNewsCount` (number, required): Number of news items Crunchbase holds that mention this company.
 
 ## FAQ
 
 ### What does "Crunchbase: Get Company News" do?
 
-Recent news and press mentions for one company from Crunchbase, by permalink (title, publisher, author, URL, date). Returns the 10 most recent items; older history isn't available on the free tier.
+News articles that mention one company on Crunchbase, by permalink, newest first: title, publisher, author, URL and date, 15 per page, with the total count. Pass nextCursor as cursor for the next page; paging needs a Crunchbase Pro account, and without it the script says so. An unknown permalink is an error.
 
 ### How do I automatically get Company News on crunchbase.com?
 
@@ -42,11 +43,11 @@ You do not need one. "Crunchbase: Get Company News" drives the real crunchbase.c
 
 ### What information do I need to provide?
 
-Required: permalink.
+Required: permalink. Optional: cursor.
 
 ### What does it return?
 
-It returns news, notFound, permalink, totalActivityCount.
+It returns news, permalink, nextCursor, totalNewsCount.
 
 ### Do I need to be logged in to crunchbase.com?
 

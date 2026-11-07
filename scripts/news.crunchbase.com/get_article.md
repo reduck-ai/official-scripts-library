@@ -4,7 +4,7 @@ Automatically get Crunchbase News Article on news.crunchbase.com. Fetch the full
 
 - Site: news.crunchbase.com
 - Address: `reduck/news.crunchbase.com/get_article`
-- Updated: 2026-07-27 (v3)
+- Updated: 2026-11-06 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -59,7 +59,7 @@ No. It only uses pages of news.crunchbase.com that are reachable without signing
 
 ### Does it change anything on news.crunchbase.com, or only read data?
 
-Unknown: its author has not declared whether it changes anything on news.crunchbase.com, so treat it as if it could.
+It only reads. It looks things up on news.crunchbase.com and changes nothing there.
 
 ### How do I run it?
 

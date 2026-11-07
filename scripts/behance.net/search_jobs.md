@@ -4,7 +4,7 @@ Automatically search Behance jobs on behance.net. Search Behance's job board (fr
 
 - Site: behance.net
 - Address: `reduck/behance.net/search_jobs`
-- Updated: 2026-08-25 (v2)
+- Updated: 2026-11-06 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

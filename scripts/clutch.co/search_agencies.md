@@ -4,7 +4,7 @@ Automatically search Agencies (Clutch) on clutch.co. Lists agencies from Clutch'
 
 - Site: clutch.co
 - Address: `reduck/clutch.co/search_agencies`
-- Updated: 2026-09-18 (v1)
+- Updated: 2026-11-06 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -23,8 +23,7 @@ npx @reduck-ai/cli@latest run --script reduck/clutch.co/search_agencies
 ## Output
 
 - `page` (integer, required)
-- `found` (boolean, required)
-- `agencies` (array, required)
+- `agencies` (array, required): Agencies on this page; empty past the last page.
 - `category` (string, required)
 
 ## FAQ
@@ -47,7 +46,7 @@ Required: category. Optional: page.
 
 ### What does it return?
 
-It returns page, found, agencies, category.
+It returns page, agencies, category.
 
 ### Do I need to be logged in to clutch.co?
 

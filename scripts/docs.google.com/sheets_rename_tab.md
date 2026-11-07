@@ -1,10 +1,10 @@
-# Sheets: rename tab
+# Google Sheets: rename tab
 
 Automatically rename tab on docs.google.com. Rename one tab of a Google Spreadsheet by gid. Returns the gid and the name as displayed after the rename. If no tab in the spreadsheet has that gid it stops with a clear error instead of renaming a different tab. Waits for the editor's save before resolving; needs edit rights.
 
 - Site: docs.google.com
 - Address: `reduck/docs.google.com/sheets_rename_tab`
-- Updated: 2026-10-22 (v5)
+- Updated: 2026-11-06 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -28,7 +28,7 @@ npx @reduck-ai/cli@latest run --script reduck/docs.google.com/sheets_rename_tab
 
 ## FAQ
 
-### What does "Sheets: rename tab" do?
+### What does "Google Sheets: rename tab" do?
 
 Rename one tab of a Google Spreadsheet by gid. Returns the gid and the name as displayed after the rename. If no tab in the spreadsheet has that gid it stops with a clear error instead of renaming a different tab. Waits for the editor's save before resolving; needs edit rights.
 
@@ -38,7 +38,7 @@ Ask an AI agent connected to Reduck to run reduck/docs.google.com/sheets_rename_
 
 ### Is there a docs.google.com API to rename tab?
 
-You do not need one. "Sheets: rename tab" drives the real docs.google.com pages in a browser, so it works whether or not docs.google.com offers an API for this.
+You do not need one. "Google Sheets: rename tab" drives the real docs.google.com pages in a browser, so it works whether or not docs.google.com offers an API for this.
 
 ### What information do I need to provide?
 

@@ -4,7 +4,7 @@ Automatically get LinkedIn profile skills on linkedin.com. Get the full list of 
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_profile_skills`
-- Updated: 2026-09-03 (v3)
+- Updated: 2026-11-06 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

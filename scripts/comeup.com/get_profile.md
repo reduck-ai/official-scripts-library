@@ -1,10 +1,10 @@
 # Get ComeUp freelancer profile
 
-Automatically get ComeUp freelancer profile on comeup.com. Fetches a ComeUp seller's full public profile by username (from search_freelancers' username field, e.g. "guillaumetbc"). Returns display name, headline, bio, account type, review counts, top-seller badge, response time, portfolio, and their related services with price/rating.
+Automatically get ComeUp freelancer profile on comeup.com. Read a ComeUp seller's public profile by username: name, headline, bio, account type, positive and negative review counts, top-seller badge, response time, portfolio, and their services with price and rating. An unknown username is an error that says so.
 
 - Site: comeup.com
 - Address: `reduck/comeup.com/get_profile`
-- Updated: 2026-08-25 (v3)
+- Updated: 2026-11-06 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -37,7 +37,7 @@ npx @reduck-ai/cli@latest run --script reduck/comeup.com/get_profile
 
 ### What does "Get ComeUp freelancer profile" do?
 
-Fetches a ComeUp seller's full public profile by username (from search_freelancers' username field, e.g. "guillaumetbc"). Returns display name, headline, bio, account type, review counts, top-seller badge, response time, portfolio, and their related services with price/rating.
+Read a ComeUp seller's public profile by username: name, headline, bio, account type, positive and negative review counts, top-seller badge, response time, portfolio, and their services with price and rating. An unknown username is an error that says so.
 
 ### How do I automatically get ComeUp freelancer profile on comeup.com?
 

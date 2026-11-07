@@ -4,7 +4,7 @@ Automatically get LinkedIn notifications on linkedin.com. Reads the LinkedIn not
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_notifications`
-- Updated: 2026-10-22 (v4)
+- Updated: 2026-11-06 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

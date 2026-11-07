@@ -4,7 +4,7 @@ Automatically search Dribbble jobs on dribbble.com. Search Dribbble's job board 
 
 - Site: dribbble.com
 - Address: `reduck/dribbble.com/search_jobs`
-- Updated: 2026-08-25 (v2)
+- Updated: 2026-11-06 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -53,7 +53,7 @@ No. It only uses pages of dribbble.com that are reachable without signing in.
 
 ### Does it change anything on dribbble.com, or only read data?
 
-Unknown: its author has not declared whether it changes anything on dribbble.com, so treat it as if it could.
+It only reads. It looks things up on dribbble.com and changes nothing there.
 
 ### How do I run it?
 

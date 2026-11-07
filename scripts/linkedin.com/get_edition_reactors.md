@@ -4,7 +4,7 @@ Automatically get LinkedIn newsletter edition reactors on linkedin.com. Get who 
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_edition_reactors`
-- Updated: 2026-10-22 (v4)
+- Updated: 2026-11-06 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -22,8 +22,8 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/get_edition_reactors
 
 ## Output
 
-- `total` (number, required): Total number of reactions on the edition, read from its own reactions-count control.
-- `reactors` (array, required): The reactors, in the order LinkedIn lists them, capped at limit. A list shorter than total means limit was reached. An empty list means the reactions-count control was not found (indistinguishable from a 0-reaction edition).
+- `total` (number, required): Total number of reactions on the edition.
+- `reactors` (array, required): The reactors, in the order LinkedIn lists them, capped at limit. A list shorter than total means limit was reached. An empty list with total 0 means the edition has no reactions.
 
 ## FAQ
 

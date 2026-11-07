@@ -4,7 +4,7 @@ Automatically get Investor Portfolio on crunchbase.com. Recent portfolio investm
 
 - Site: crunchbase.com
 - Address: `reduck/crunchbase.com/get_investor_portfolio`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-11-06 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -21,7 +21,6 @@ npx @reduck-ai/cli@latest run --script reduck/crunchbase.com/get_investor_portfo
 
 ## Output
 
-- `notFound` (boolean, required)
 - `permalink` (string, required)
 - `investments` (array, required)
 - `totalNumInvestments` (number | null, required): Total funding rounds this investor has ever participated in, per its profile stat (only the most recent 10 are listed below).
@@ -46,7 +45,7 @@ Required: permalink.
 
 ### What does it return?
 
-It returns notFound, permalink, investments, totalNumInvestments.
+It returns permalink, investments, totalNumInvestments.
 
 ### Do I need to be logged in to crunchbase.com?
 
@@ -54,7 +53,7 @@ Yes. It acts as you on crunchbase.com: on your own Chrome it reuses your session
 
 ### Does it change anything on crunchbase.com, or only read data?
 
-Unknown: its author has not declared whether it changes anything on crunchbase.com, so treat it as if it could.
+It only reads. It looks things up on crunchbase.com and changes nothing there.
 
 ### How do I run it?
 

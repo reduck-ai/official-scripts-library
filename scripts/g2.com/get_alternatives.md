@@ -4,7 +4,7 @@ Automatically get G2 product alternatives on g2.com. List a G2 product's alterna
 
 - Site: g2.com
 - Address: `reduck/g2.com/get_alternatives`
-- Updated: 2026-09-02 (v1)
+- Updated: 2026-11-06 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

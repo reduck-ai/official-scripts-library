@@ -1,10 +1,10 @@
 # Doctolib location autocomplete
 
-Resolve free-text location input (city, neighborhood, street) to Doctolib's own place suggestions. Use this before search_practitioners when a plain city name silently resolves to the wrong place (e.g. "Nantes" free text can server-side-match an unrelated city) — pick a suggestion's city/label and pass that into search_practitioners.location instead of raw user input. Does not return the internal URL slug (Doctolib assigns some slugs a disambiguating numeric suffix that isn't derivable from the label alone) — only the city name/label as Doctolib itself would display it.
+Doctolib place suggestions for a free-text location (city, neighborhood, street): each with the label and city as Doctolib shows them, the context line, the address for a street, the country and the Google place id. Returns [] when Doctolib suggests nothing.
 
 - Site: doctolib.fr
 - Address: `reduck/doctolib.fr/autocomplete`
-- Updated: 2026-09-18 (v1)
+- Updated: 2026-11-06 (v1)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -27,7 +27,7 @@ npx @reduck-ai/cli@latest run --script reduck/doctolib.fr/autocomplete
 
 ### What does "Doctolib location autocomplete" do?
 
-Resolve free-text location input (city, neighborhood, street) to Doctolib's own place suggestions. Use this before search_practitioners when a plain city name silently resolves to the wrong place (e.g. "Nantes" free text can server-side-match an unrelated city) — pick a suggestion's city/label and pass that into search_practitioners.location instead of raw user input. Does not return the internal URL slug (Doctolib assigns some slugs a disambiguating numeric suffix that isn't derivable from the label alone) — only the city name/label as Doctolib itself would display it.
+Doctolib place suggestions for a free-text location (city, neighborhood, street): each with the label and city as Doctolib shows them, the context line, the address for a street, the country and the Google place id. Returns [] when Doctolib suggests nothing.
 
 ### What information do I need to provide?
 

@@ -4,7 +4,7 @@ Automatically download invoice PDF on pay.postman.com. Downloads a Postman invoi
 
 - Site: pay.postman.com
 - Address: `reduck/pay.postman.com/download_invoice`
-- Updated: 2026-10-22 (v4)
+- Updated: 2026-11-06 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

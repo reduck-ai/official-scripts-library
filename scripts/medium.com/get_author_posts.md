@@ -4,7 +4,7 @@ Automatically get Medium author's posts on medium.com. List an author's publishe
 
 - Site: medium.com
 - Address: `reduck/medium.com/get_author_posts`
-- Updated: 2026-09-02 (v3)
+- Updated: 2026-11-06 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

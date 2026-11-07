@@ -4,7 +4,7 @@ Automatically get Sifted Article on sifted.eu. Fetch the text and metadata of a 
 
 - Site: sifted.eu
 - Address: `reduck/sifted.eu/get_article`
-- Updated: 2026-07-27 (v4)
+- Updated: 2026-11-06 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -59,7 +59,7 @@ No. It only uses pages of sifted.eu that are reachable without signing in.
 
 ### Does it change anything on sifted.eu, or only read data?
 
-Unknown: its author has not declared whether it changes anything on sifted.eu, so treat it as if it could.
+It only reads. It looks things up on sifted.eu and changes nothing there.
 
 ### How do I run it?
 

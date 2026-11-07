@@ -4,7 +4,7 @@ Automatically get Recent Funding Rounds on crunchbase.com. Recent funding rounds
 
 - Site: crunchbase.com
 - Address: `reduck/crunchbase.com/get_recent_funding_rounds`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-11-06 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/crunchbase.com/get_recent_funding_
 
 ## Input
 
-- `limit` (number, optional): Max rounds to return, 1-15. Crunchbase's free tier hard-caps search results at 15 regardless of the true match count. Default 15.
+- `limit` (integer, optional): Max rounds to return, 1-15. Crunchbase's free tier hard-caps search results at 15 regardless of the true match count.
 - `locations` (array, optional): Location names (city, region, country, or continent) of the funded company's HQ, e.g. "France", "Europe".
 - `industries` (array, optional): Industry/category names of the funded company, e.g. "Fintech", "SaaS". Matched rounds must belong to a company with ANY of the given industries.
 - `announcedAfter` (string, optional): Only rounds announced on/after this date, YYYY-MM-DD.
@@ -58,7 +58,7 @@ Yes. It acts as you on crunchbase.com: on your own Chrome it reuses your session
 
 ### Does it change anything on crunchbase.com, or only read data?
 
-Unknown: its author has not declared whether it changes anything on crunchbase.com, so treat it as if it could.
+It only reads. It looks things up on crunchbase.com and changes nothing there.
 
 ### How do I run it?
 

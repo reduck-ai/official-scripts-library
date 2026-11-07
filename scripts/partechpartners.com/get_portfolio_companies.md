@@ -4,7 +4,7 @@ Automatically get Partech portfolio companies on partechpartners.com. Lists all 
 
 - Site: partechpartners.com
 - Address: `reduck/partechpartners.com/get_portfolio_companies`
-- Updated: 2026-08-26 (v1)
+- Updated: 2026-11-06 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -52,7 +52,7 @@ No. It only uses pages of partechpartners.com that are reachable without signing
 
 ### Does it change anything on partechpartners.com, or only read data?
 
-Unknown: its author has not declared whether it changes anything on partechpartners.com, so treat it as if it could.
+It only reads. It looks things up on partechpartners.com and changes nothing there.
 
 ### How do I run it?
 

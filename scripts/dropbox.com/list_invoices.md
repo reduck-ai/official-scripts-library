@@ -4,7 +4,7 @@ Automatically list Dropbox invoices on dropbox.com. List Dropbox billing history
 
 - Site: dropbox.com
 - Address: `reduck/dropbox.com/list_invoices`
-- Updated: 2026-10-22 (v6)
+- Updated: 2026-11-06 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it

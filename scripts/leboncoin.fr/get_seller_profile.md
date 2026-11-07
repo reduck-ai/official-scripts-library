@@ -4,7 +4,7 @@ Automatically get Leboncoin seller profile on leboncoin.fr. Fetch a Leboncoin se
 
 - Site: leboncoin.fr
 - Address: `reduck/leboncoin.fr/get_seller_profile`
-- Updated: 2026-08-14 (v2)
+- Updated: 2026-11-06 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

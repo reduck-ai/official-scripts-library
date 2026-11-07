@@ -4,7 +4,7 @@ Automatically list HubSpot invoices on app.hubspot.com. List the billing invoice
 
 - Site: app.hubspot.com
 - Address: `reduck/app.hubspot.com/list_invoices`
-- Updated: 2026-10-23 (v7)
+- Updated: 2026-11-06 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/app.hubspot.com/list_invoices
 
 ## Input
 
-- `portalId` (string, optional): HubSpot portal/hub id (e.g. 147691106). Omit to auto-detect from the logged-in session.
+- `portalId` (string, optional): HubSpot portal/hub id (e.g. 147691106). Omit to use the portal HubSpot opens for this account.
 
 ## Output
 

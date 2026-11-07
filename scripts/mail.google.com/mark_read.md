@@ -4,7 +4,7 @@ Automatically mark Gmail thread as read on mail.google.com. Mark a Gmail thread 
 
 - Site: mail.google.com
 - Address: `reduck/mail.google.com/mark_read`
-- Updated: 2026-10-22 (v7)
+- Updated: 2026-11-06 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it

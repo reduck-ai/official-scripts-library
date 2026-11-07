@@ -4,7 +4,7 @@ Automatically get Product Hunt product on producthunt.com. Read a Product Hunt p
 
 - Site: producthunt.com
 - Address: `reduck/producthunt.com/get_product`
-- Updated: 2026-09-08 (v4)
+- Updated: 2026-11-06 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -23,23 +23,22 @@ npx @reduck-ai/cli@latest run --script reduck/producthunt.com/get_product
 
 - `url` (string, required): Canonical product page URL.
 - `name` (string, required)
-- `slug` (string, required): The product's slug on Product Hunt — the join key for its launches and reviews pages.
+- `slug` (string, required): The product's slug on Product Hunt.
 - `makers` (array, required): People credited on the product, with their Product Hunt profiles. Empty when none are credited.
-- `categories` (array, required): Categories this product is listed under. Empty for products that have not been categorised.
-- `tagline` (string | null, optional): One-line pitch shown under the product name.
-- `website` (string | null, optional): The product's own site, as linked from the page. Null when no site is linked.
-- `productId` (string | null, optional): Product Hunt's own numeric product identifier, when the page exposes it.
-- `topProduct` (boolean, optional): Whether the page shows a Top Product badge.
-- `description` (string | null, optional): Longer product description. Null when the product has not published one.
-- `goldenKitty` (boolean, optional): Whether the page shows a Golden Kitty award badge.
-- `latestAward` (string | null, optional): Text of the most recent award callout, when one is shown.
-- `ratingCount` (number | null, optional): Number of reviews behind the average. Null when the product has no reviews yet.
-- `ratingValue` (number | null, optional): Average review score out of 5. Null when the product has no reviews yet.
-- `datePublished` (string | null, optional): ISO timestamp of when the product profile was first published.
-- `launchesCount` (number | null, optional): How many times this product has launched on Product Hunt.
-- `followersApprox` (number | null, optional): The rounded display value parsed to a number. Approximate by construction — Product Hunt does not publish an exact figure here.
-- `followersDisplay` (string | null, optional): Follower count exactly as shown on the page, which Product Hunt rounds (e.g. "18K").
-- `applicationCategory` (string | null, optional): The single category Product Hunt files the product under in its structured data. Can disagree with the visible category list — it is reported as the site states it, not corrected.
+- `categories` (array, required): Categories linked in the product header, as listed. Empty when none.
+- `tagline` (string | null, optional)
+- `website` (string | null, optional)
+- `productId` (string | null, optional)
+- `topProduct` (boolean, optional)
+- `description` (string | null, optional)
+- `goldenKitty` (boolean, optional)
+- `latestAward` (string | null, optional)
+- `ratingCount` (number | null, optional)
+- `ratingValue` (number | null, optional)
+- `datePublished` (string | null, optional)
+- `launchesCount` (number | null, optional)
+- `followersCount` (number | null, optional): Exact number of followers, from the page's data. Null when the page does not carry it.
+- `applicationCategory` (string | null, optional)
 
 ## FAQ
 
@@ -61,7 +60,7 @@ Required: product.
 
 ### What does it return?
 
-It returns url, name, slug, makers, tagline, website, productId, categories, topProduct, description, goldenKitty, latestAward, ratingCount, ratingValue, datePublished, launchesCount, followersApprox, followersDisplay, applicationCategory.
+It returns url, name, slug, makers, tagline, website, productId, categories, topProduct, description, goldenKitty, latestAward, ratingCount, ratingValue, datePublished, launchesCount, followersCount, applicationCategory.
 
 ### Do I need to be logged in to producthunt.com?
 

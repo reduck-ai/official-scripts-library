@@ -1,10 +1,10 @@
 # Get Google Calendar event
 
-Automatically get Google Calendar event on calendar.google.com. Read one Google Calendar event by its eid (from list_events, search_events or create_event): title, all_day, timezone, start, end, location, description, guests (email addresses) and meetLink. Start and end are wall-clock ISO times in the event's own timezone, or dates for an all-day event. An eid that this account cannot open fails with a message that says so.
+Automatically get Google Calendar event on calendar.google.com. Read one Google Calendar event by its eid: title, all_day, timezone, start, end, location, description, guests (email addresses) and Meet link. Start and end are wall-clock ISO times in the event's own timezone, or dates for an all-day event. Pass account to read as one of several signed-in Google accounts. An eid this account cannot open is an error that says so.
 
 - Site: calendar.google.com
 - Address: `reduck/calendar.google.com/get_event`
-- Updated: 2026-11-02 (v9)
+- Updated: 2026-11-06 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -40,7 +40,7 @@ npx @reduck-ai/cli@latest run --script reduck/calendar.google.com/get_event
 
 ### What does "Get Google Calendar event" do?
 
-Read one Google Calendar event by its eid (from list_events, search_events or create_event): title, all_day, timezone, start, end, location, description, guests (email addresses) and meetLink. Start and end are wall-clock ISO times in the event's own timezone, or dates for an all-day event. An eid that this account cannot open fails with a message that says so.
+Read one Google Calendar event by its eid: title, all_day, timezone, start, end, location, description, guests (email addresses) and Meet link. Start and end are wall-clock ISO times in the event's own timezone, or dates for an all-day event. Pass account to read as one of several signed-in Google accounts. An eid this account cannot open is an error that says so.
 
 ### How do I automatically get Google Calendar event on calendar.google.com?
 

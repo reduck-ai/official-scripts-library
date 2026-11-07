@@ -4,7 +4,7 @@ Automatically list Shopify store products on admin.shopify.com. Lists products f
 
 - Site: admin.shopify.com
 - Address: `reduck/admin.shopify.com/list_products`
-- Updated: 2026-10-23 (v3)
+- Updated: 2026-11-06 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

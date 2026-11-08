@@ -1,5 +1,5 @@
 {
-	"count": 1370,
+	"count": 1373,
 	"scripts": [
 		{
 			"address": "@reduck/99designs.com/login_with_google",
@@ -1967,7 +1967,7 @@
 			"address": "@reduck/cursor.com/list_invoices",
 			"path": "scripts/cursor.com/list_invoices.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/cursor.com/list_invoices",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-11-07"
 		},
 		{
 			"address": "@reduck/cursor.com/login_with_google",
@@ -2634,6 +2634,24 @@
 			"path": "scripts/ebay.com/search_listings.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/ebay.com/search_listings",
 			"lastmod": "2026-10-22"
+		},
+		{
+			"address": "@reduck/energy-charts.info/get_cross_border_exchanges",
+			"path": "scripts/energy-charts.info/get_cross_border_exchanges.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/energy-charts.info/get_cross_border_exchanges",
+			"lastmod": "2026-11-07"
+		},
+		{
+			"address": "@reduck/energy-charts.info/get_power_futures",
+			"path": "scripts/energy-charts.info/get_power_futures.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/energy-charts.info/get_power_futures",
+			"lastmod": "2026-11-07"
+		},
+		{
+			"address": "@reduck/energy-charts.info/get_spot_prices",
+			"path": "scripts/energy-charts.info/get_spot_prices.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/energy-charts.info/get_spot_prices",
+			"lastmod": "2026-11-07"
 		},
 		{
 			"address": "@reduck/etsy.com/get_listing",

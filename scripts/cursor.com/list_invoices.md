@@ -1,10 +1,10 @@
 # Cursor — list invoices
 
-Automatically list invoices on cursor.com. List Cursor billing invoices for the logged-in team. Returns each invoice's date, status, amount, a link to view it, and a direct PDF download link.
+Automatically list invoices on cursor.com. List the billing invoices of the Cursor account signed in to this browser. Returns each invoice's date, amount, status and reference (the invoice number Cursor shows), and a direct PDF link when Cursor gives one: invoices billed through Stripe have one, the others have none. An account with no billing gets an empty list.
 
 - Site: cursor.com
 - Address: `reduck/cursor.com/list_invoices`
-- Updated: 2026-10-22 (v7)
+- Updated: 2026-11-07 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -28,7 +28,7 @@ It takes no input.
 
 ### What does "Cursor — list invoices" do?
 
-List Cursor billing invoices for the logged-in team. Returns each invoice's date, status, amount, a link to view it, and a direct PDF download link.
+List the billing invoices of the Cursor account signed in to this browser. Returns each invoice's date, amount, status and reference (the invoice number Cursor shows), and a direct PDF link when Cursor gives one: invoices billed through Stripe have one, the others have none. An account with no billing gets an empty list.
 
 ### How do I automatically list invoices on cursor.com?
 

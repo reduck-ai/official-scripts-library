@@ -4,7 +4,7 @@ Automatically get current Product Hunt user on producthunt.com. Report which Pro
 
 - Site: producthunt.com
 - Address: `reduck/producthunt.com/get_current_user`
-- Updated: 2026-10-22 (v5)
+- Updated: 2026-11-08 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

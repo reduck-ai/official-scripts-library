@@ -1,10 +1,10 @@
 # Get Wise card transaction detail
 
-Automatically get Wise card transaction detail on wise.com. Fetch the full detail of a Wise card transaction by its transaction id: amount, date, card, merchant, state, recurrence and attachment state.
+Automatically get Wise card transaction detail on wise.com. Fetch the full detail of a Wise card transaction by its transaction id (from search_transactions): amount, date, card, merchant and category, state, recurrence and attachments. Uses the profile of the signed-in Wise session unless profileId is given. An id that does not exist on the account is reported as an error that names search_transactions.
 
 - Site: wise.com
 - Address: `reduck/wise.com/get_transaction`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-09 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,7 +18,7 @@ npx @reduck-ai/cli@latest run --script reduck/wise.com/get_transaction
 ## Input
 
 - `transactionId` (string | integer, required): Wise card transaction id, e.g. "3922786193" (the number shown on the transaction, from search_transactions.transactionId).
-- `profileId` (string, optional): Wise profile id. Defaults to 73787841 (Conception AI, Inc).
+- `profileId` (string, optional): Optional Wise profile id, only needed to pin one profile. By default the transaction is read under the profile the signed-in Wise session opens it with.
 
 ## Output
 
@@ -41,7 +41,7 @@ npx @reduck-ai/cli@latest run --script reduck/wise.com/get_transaction
 
 ### What does "Get Wise card transaction detail" do?
 
-Fetch the full detail of a Wise card transaction by its transaction id: amount, date, card, merchant, state, recurrence and attachment state.
+Fetch the full detail of a Wise card transaction by its transaction id (from search_transactions): amount, date, card, merchant and category, state, recurrence and attachments. Uses the profile of the signed-in Wise session unless profileId is given. An id that does not exist on the account is reported as an error that names search_transactions.
 
 ### How do I automatically get Wise card transaction detail on wise.com?
 
@@ -65,7 +65,7 @@ Yes. It acts as you on wise.com: on your own Chrome it reuses your session, and 
 
 ### Does it change anything on wise.com, or only read data?
 
-Unknown: its author has not declared whether it changes anything on wise.com, so treat it as if it could.
+It only reads. It looks things up on wise.com and changes nothing there.
 
 ### How do I run it?
 

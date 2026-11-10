@@ -1,10 +1,10 @@
 # Download Surfshark receipt
 
-Automatically download Surfshark receipt on surfshark.com. Download a single Surfshark payment receipt PDF by order id (from surfshark.com/list_invoices). Returns the PDF bytes as base64 plus a filename.
+Automatically download Surfshark receipt on surfshark.com. Download the receipt PDF of one Surfshark order by its order id. Returns the saved file's name, and its path on the machine running the browser (or a url when the file is not on that machine). Requires login.
 
 - Site: surfshark.com
 - Address: `reduck/surfshark.com/download_invoice`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-09 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -22,13 +22,14 @@ npx @reduck-ai/cli@latest run --script reduck/surfshark.com/download_invoice
 ## Output
 
 - `filename` (string, required)
-- `contentBase64` (string, required)
+- `url` (string | null, optional)
+- `path` (string | null, optional)
 
 ## FAQ
 
 ### What does "Download Surfshark receipt" do?
 
-Download a single Surfshark payment receipt PDF by order id (from surfshark.com/list_invoices). Returns the PDF bytes as base64 plus a filename.
+Download the receipt PDF of one Surfshark order by its order id. Returns the saved file's name, and its path on the machine running the browser (or a url when the file is not on that machine). Requires login.
 
 ### How do I automatically download Surfshark receipt on surfshark.com?
 
@@ -44,7 +45,7 @@ Required: id.
 
 ### What does it return?
 
-It returns filename, contentBase64.
+It returns url, path, filename.
 
 ### Do I need to be logged in to surfshark.com?
 

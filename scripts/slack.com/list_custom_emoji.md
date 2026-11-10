@@ -1,10 +1,10 @@
 # List Slack custom emoji
 
-Automatically list Slack custom emoji on slack.com. List the workspace's custom emoji as a name→URL map (aliases point to 'alias:<name>'). Returns count and the emoji map. Requires login.
+Automatically list Slack custom emoji on slack.com. List the workspace's own custom emoji as a name to URL map (aliases point to 'alias:<name>'), with count, total and whether the list is complete (the first 100 only). Requires login and the workspace host.
 
 - Site: slack.com
 - Address: `reduck/slack.com/list_custom_emoji`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-09 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,18 +17,20 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/list_custom_emoji
 
 ## Input
 
-- `workspaceDomain` (string, optional): Workspace host, e.g. acme.slack.com. Defaults to the active workspace.
+- `workspaceDomain` (string, required): Workspace host, e.g. acme.slack.com.
 
 ## Output
 
 - `count` (integer, required)
 - `emoji` (object, required)
+- `total` (integer | null, optional)
+- `complete` (boolean, optional)
 
 ## FAQ
 
 ### What does "List Slack custom emoji" do?
 
-List the workspace's custom emoji as a name→URL map (aliases point to 'alias:<name>'). Returns count and the emoji map. Requires login.
+List the workspace's own custom emoji as a name to URL map (aliases point to 'alias:<name>'), with count, total and whether the list is complete (the first 100 only). Requires login and the workspace host.
 
 ### How do I automatically list Slack custom emoji on slack.com?
 
@@ -40,11 +42,11 @@ You do not need one. "List Slack custom emoji" drives the real slack.com pages i
 
 ### What information do I need to provide?
 
-Optional: workspaceDomain.
+Required: workspaceDomain.
 
 ### What does it return?
 
-It returns count, emoji.
+It returns count, emoji, total, complete.
 
 ### Do I need to be logged in to slack.com?
 
@@ -52,7 +54,7 @@ Yes. It acts as you on slack.com: on your own Chrome it reuses your session, and
 
 ### Does it change anything on slack.com, or only read data?
 
-Unknown: its author has not declared whether it changes anything on slack.com, so treat it as if it could.
+It only reads. It looks things up on slack.com and changes nothing there.
 
 ### How do I run it?
 

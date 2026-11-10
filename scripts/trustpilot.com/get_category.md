@@ -4,7 +4,7 @@ Automatically get Trustpilot category companies on trustpilot.com. List one page
 
 - Site: trustpilot.com
 - Address: `reduck/trustpilot.com/get_category`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-09 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -21,7 +21,7 @@ npx @reduck-ai/cli@latest run --script reduck/trustpilot.com/get_category
 - `page` (integer, optional): 1-based page; 20 companies per page.
 - `sort` (any, optional): recommended = Most relevant; reviews_count = Highest number of reviews; latest_review = Most recent reviews.
 - `claimed` (boolean, optional): Only companies with a claimed profile.
-- `country` (string, optional): ISO-3166 alpha-2 country code, e.g. "US", "GB". Defaults to the viewer locale (US).
+- `country` (string, optional): ISO-3166 alpha-2 country code, e.g. "US", "GB". Left out, the site uses the viewer locale.
 - `trustscore` (any, optional): Minimum TrustScore filter (the site's Rating chip: 3+, 4+, 4.5+). Must carry the decimal.
 
 ## Output
@@ -62,7 +62,7 @@ No. It only uses pages of trustpilot.com that are reachable without signing in.
 
 ### Does it change anything on trustpilot.com, or only read data?
 
-Unknown: its author has not declared whether it changes anything on trustpilot.com, so treat it as if it could.
+It only reads. It looks things up on trustpilot.com and changes nothing there.
 
 ### How do I run it?
 

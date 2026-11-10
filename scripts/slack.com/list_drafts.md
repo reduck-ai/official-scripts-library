@@ -4,7 +4,7 @@ Automatically list Slack drafts on slack.com. List your unsent message drafts. R
 
 - Site: slack.com
 - Address: `reduck/slack.com/list_drafts`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-09 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,11 +17,12 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/list_drafts
 
 ## Input
 
-- `workspaceDomain` (string, optional): Workspace host, e.g. acme.slack.com. Defaults to the active workspace.
+- `workspaceDomain` (string, required): Workspace host, e.g. acme.slack.com.
 
 ## Output
 
 - `drafts` (array, required)
+- `nextCursor` (string | null, optional)
 
 ## FAQ
 
@@ -39,11 +40,11 @@ You do not need one. "List Slack drafts" drives the real slack.com pages in a br
 
 ### What information do I need to provide?
 
-Optional: workspaceDomain.
+Required: workspaceDomain.
 
 ### What does it return?
 
-It returns drafts.
+It returns drafts, nextCursor.
 
 ### Do I need to be logged in to slack.com?
 
@@ -51,7 +52,7 @@ Yes. It acts as you on slack.com: on your own Chrome it reuses your session, and
 
 ### Does it change anything on slack.com, or only read data?
 
-Unknown: its author has not declared whether it changes anything on slack.com, so treat it as if it could.
+It only reads. It looks things up on slack.com and changes nothing there.
 
 ### How do I run it?
 

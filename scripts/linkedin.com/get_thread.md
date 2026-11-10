@@ -4,7 +4,7 @@ Automatically get LinkedIn message thread on linkedin.com. You get the latest me
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_thread`
-- Updated: 2026-10-20 (v11)
+- Updated: 2026-11-09 (v12)
 - Author: Reduck AI (reduck)
 
 ## About

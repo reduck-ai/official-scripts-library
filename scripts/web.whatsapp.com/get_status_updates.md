@@ -4,7 +4,7 @@ Automatically get WhatsApp Status Updates on web.whatsapp.com. Reads the list of
 
 - Site: web.whatsapp.com
 - Address: `reduck/web.whatsapp.com/get_status_updates`
-- Updated: 2026-09-03 (v1)
+- Updated: 2026-11-09 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

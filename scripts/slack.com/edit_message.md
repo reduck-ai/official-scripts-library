@@ -4,7 +4,7 @@ Automatically edit Slack message on slack.com. Edit one of your own messages, gi
 
 - Site: slack.com
 - Address: `reduck/slack.com/edit_message`
-- Updated: 2026-10-22 (v6)
+- Updated: 2026-11-09 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,9 +18,9 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/edit_message
 ## Input
 
 - `ts` (string, required): ts of the message to edit (must be your own message).
-- `text` (string, required): New message text (supports Slack mrkdwn, including <url|label> links). Replaces the whole message.
-- `channel` (string, required): Target: channel name/#name, or channel/DM id (C…/D…/G…).
-- `workspaceDomain` (string, optional): Workspace host, e.g. acme.slack.com. Defaults to the active workspace. Confirm with the user which workspace to target before running this script.
+- `text` (string, required): New message text. Replaces the whole message.
+- `channel` (string, required): Channel or DM id (C…/D…/G…). Get it from slack.com/list_channels.
+- `workspaceDomain` (string, required): Workspace host, e.g. acme.slack.com. Confirm with the user which workspace to target before running this script.
 
 ## Output
 
@@ -46,7 +46,7 @@ You do not need one. "Edit Slack message" drives the real slack.com pages in a b
 
 ### What information do I need to provide?
 
-Required: channel, ts, text. Optional: workspaceDomain.
+Required: channel, ts, text, workspaceDomain.
 
 ### What does it return?
 

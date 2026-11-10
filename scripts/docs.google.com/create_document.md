@@ -4,7 +4,7 @@ Automatically create a document on docs.google.com. Create a new Google Doc in t
 
 - Site: docs.google.com
 - Address: `reduck/docs.google.com/create_document`
-- Updated: 2026-11-03 (v2)
+- Updated: 2026-11-09 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

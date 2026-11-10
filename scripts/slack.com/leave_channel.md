@@ -4,7 +4,7 @@ Automatically leave Slack channel on slack.com. Leave a channel (by name or id).
 
 - Site: slack.com
 - Address: `reduck/slack.com/leave_channel`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-09 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,8 +17,8 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/leave_channel
 
 ## Input
 
-- `channel` (string, required): Channel name/#name or id (C…).
-- `workspaceDomain` (string, optional): Workspace host, e.g. acme.slack.com. Defaults to the active workspace.
+- `channel` (string, required): Channel id (C… or G…). Get it from slack.com/list_channels.
+- `workspaceDomain` (string, required): Workspace host, e.g. acme.slack.com.
 
 ## Output
 
@@ -41,7 +41,7 @@ You do not need one. "Leave Slack channel" drives the real slack.com pages in a 
 
 ### What information do I need to provide?
 
-Required: channel. Optional: workspaceDomain.
+Required: channel, workspaceDomain.
 
 ### What does it return?
 

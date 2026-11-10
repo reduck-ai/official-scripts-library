@@ -4,7 +4,7 @@ Automatically get Slack workspace info on slack.com. Get the current workspace's
 
 - Site: slack.com
 - Address: `reduck/slack.com/team_info`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-09 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/team_info
 
 ## Input
 
-- `workspaceDomain` (string, optional): Workspace host, e.g. acme.slack.com. Defaults to the active workspace.
+- `workspaceDomain` (string, required): Workspace host, e.g. acme.slack.com.
 
 ## Output
 
@@ -43,7 +43,7 @@ You do not need one. "Get Slack workspace info" drives the real slack.com pages 
 
 ### What information do I need to provide?
 
-Optional: workspaceDomain.
+Required: workspaceDomain.
 
 ### What does it return?
 

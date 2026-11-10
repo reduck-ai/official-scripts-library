@@ -4,7 +4,7 @@ Automatically list Descript invoices on web.descript.com. List Descript billing 
 
 - Site: web.descript.com
 - Address: `reduck/web.descript.com/list_invoices`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-11-09 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,12 +17,13 @@ npx @reduck-ai/cli@latest run --script reduck/web.descript.com/list_invoices
 
 ## Input
 
-- `limit` (integer, optional): Max invoices to list (page size).
+It takes no input.
 
 ## Output
 
 - `count` (integer, required)
 - `invoices` (array, required)
+- `hasMore` (boolean | null, optional): True when Descript holds more invoices than the first page it shows.
 
 ## FAQ
 
@@ -40,11 +41,11 @@ You do not need one. "List Descript invoices" drives the real web.descript.com p
 
 ### What information do I need to provide?
 
-Optional: limit.
+Nothing. It takes no input.
 
 ### What does it return?
 
-It returns count, invoices.
+It returns count, hasMore, invoices.
 
 ### Do I need to be logged in to web.descript.com?
 

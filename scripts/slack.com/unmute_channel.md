@@ -1,10 +1,10 @@
 # Unmute Slack channel
 
-Automatically unmute Slack channel on slack.com. Unmute a channel (by name or id), re-enabling its notifications. Idempotent. Requires login.
+Automatically unmute Slack channel on slack.com. Unmute a Slack channel by id, choosing what it notifies about afterwards (all new posts or just mentions). Returns muted, and alreadyUnmuted when it was not muted. Requires login and the workspace host.
 
 - Site: slack.com
 - Address: `reduck/slack.com/unmute_channel`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-09 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,20 +17,23 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/unmute_channel
 
 ## Input
 
-- `channel` (string, required): Channel name/#name or id (C…).
-- `workspaceDomain` (string, optional): Workspace host, e.g. acme.slack.com. Defaults to the active workspace.
+- `notify` (string, required): What the channel notifies about once unmuted: all new posts, or just mentions.
+- `channel` (string, required): Channel id (C... or G...). Get it from slack.com/list_channels.
+- `workspaceDomain` (string, required): Workspace host, e.g. acme.slack.com.
 
 ## Output
 
 - `ok` (boolean, required)
-- `muted` (array, required)
+- `muted` (boolean, required)
 - `channel` (string, required)
+- `notify` (string | null, optional)
+- `alreadyUnmuted` (boolean, optional)
 
 ## FAQ
 
 ### What does "Unmute Slack channel" do?
 
-Unmute a channel (by name or id), re-enabling its notifications. Idempotent. Requires login.
+Unmute a Slack channel by id, choosing what it notifies about afterwards (all new posts or just mentions). Returns muted, and alreadyUnmuted when it was not muted. Requires login and the workspace host.
 
 ### How do I automatically unmute Slack channel on slack.com?
 
@@ -42,11 +45,11 @@ You do not need one. "Unmute Slack channel" drives the real slack.com pages in a
 
 ### What information do I need to provide?
 
-Required: channel. Optional: workspaceDomain.
+Required: channel, workspaceDomain, notify.
 
 ### What does it return?
 
-It returns ok, muted, channel.
+It returns ok, muted, notify, channel, alreadyUnmuted.
 
 ### Do I need to be logged in to slack.com?
 

@@ -4,7 +4,7 @@ Automatically get Substack post comments on substack.com. Get the comments on a 
 
 - Site: substack.com
 - Address: `reduck/substack.com/get_post_comments`
-- Updated: 2026-08-14 (v2)
+- Updated: 2026-11-09 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

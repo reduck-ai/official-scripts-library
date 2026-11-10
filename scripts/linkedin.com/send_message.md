@@ -4,7 +4,7 @@ Automatically send LinkedIn message on linkedin.com. Send a message on LinkedIn 
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/send_message`
-- Updated: 2026-10-22 (v30)
+- Updated: 2026-11-09 (v34)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,7 +18,7 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/send_message
 ## Input
 
 - `dry_run` (boolean, optional): When true, everything runs — the recipient is resolved, the attachment is staged and confirmed in the composer, and the text is typed — then the run stops before the Send click. Nothing is delivered: sent comes back false and dry_run true. Use it to verify a recipient, a message and an attachment are accepted without messaging a real person.
-- `message` (string, optional): The message text to send. Optional if an attachment or fileBase64 is given; required (non-empty) otherwise.
+- `message` (string, optional): The message text to send. Line breaks are kept: a newline starts a new line and an empty line leaves a blank line between paragraphs. Optional if an attachment or fileBase64 is given; required (non-empty) otherwise.
 - `filename` (string, optional): Filename to attach it as, e.g. photo.png. Required when fileBase64 is set; not used by the attachment input, which is stored under its own name.
 - `mimeType` (string, optional): MIME type of the attachment. Inferred from the filename extension when omitted. Applies to fileBase64 only.
 - `recipient` (string, optional): Start/continue a conversation by the person's display name (e.g. "Jane Doe"). Every match the compose typeahead offers is checked against this name token-by-token (accent/case-insensitive) and the first one that matches is used, so a group conversation or another person ranked above your target does not block the send. A multi-word name must match the row's first and last names in order: middle names and credentials may differ ("Marie Dupont" matches "Marie Claire Dupont", "Jane Doe, PhD" matches "Jane Doe"), but "Luc Martin" does not match "Jean-Luc Martin" and "Marie Claire Dupont" does not match "Marie Dupont". A single-word name only passes on an exact full-name match: "Chris" resolving to "Chris Anderson" is refused rather than messaging the wrong person. A name that matches nobody messageable (a misspelling, someone who is not a 1st-degree connection, or your own name) is refused as such. Prefer profileUrl when you have it. Pass exactly one of threadUrl, profileUrl or recipient.

@@ -1,10 +1,10 @@
 # List Slack channel members
 
-Automatically list Slack channel members on slack.com. List the members of a Slack channel by channel id (get it from List Slack channels), each with their id and display name. One page per call; pass the returned cursor to read the next page. Requires login.
+Automatically list Slack channel members on slack.com. List the members of a Slack channel by channel id (get it from List Slack channels), each with their id and display name, as Slack's member list shows them. Returns the first page Slack loads; nextCursor is set when Slack has more members than that page. Requires login and the workspace host.
 
 - Site: slack.com
 - Address: `reduck/slack.com/list_channel_members`
-- Updated: 2026-10-21 (v2)
+- Updated: 2026-11-09 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,9 +18,7 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/list_channel_members
 ## Input
 
 - `channel` (string, required): Channel id (C… or G…). Get it from slack.com/list_channels.
-- `limit` (integer, optional): Max members per page (default 200).
-- `cursor` (string, optional): next_cursor from a previous call.
-- `workspaceDomain` (string, optional): Workspace host, e.g. acme.slack.com. Defaults to the active workspace.
+- `workspaceDomain` (string, required): Workspace host, e.g. acme.slack.com.
 
 ## Output
 
@@ -32,7 +30,7 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/list_channel_members
 
 ### What does "List Slack channel members" do?
 
-List the members of a Slack channel by channel id (get it from List Slack channels), each with their id and display name. One page per call; pass the returned cursor to read the next page. Requires login.
+List the members of a Slack channel by channel id (get it from List Slack channels), each with their id and display name, as Slack's member list shows them. Returns the first page Slack loads; nextCursor is set when Slack has more members than that page. Requires login and the workspace host.
 
 ### How do I automatically list Slack channel members on slack.com?
 
@@ -44,7 +42,7 @@ You do not need one. "List Slack channel members" drives the real slack.com page
 
 ### What information do I need to provide?
 
-Required: channel. Optional: limit, cursor, workspaceDomain.
+Required: channel, workspaceDomain.
 
 ### What does it return?
 

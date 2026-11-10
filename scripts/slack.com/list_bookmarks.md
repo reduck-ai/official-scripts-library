@@ -4,7 +4,7 @@ Automatically list Slack channel bookmarks on slack.com. List a channel's bookma
 
 - Site: slack.com
 - Address: `reduck/slack.com/list_bookmarks`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-09 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,8 +17,8 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/list_bookmarks
 
 ## Input
 
-- `channel` (string, required): Channel name/#name or id (C…).
-- `workspaceDomain` (string, optional): Workspace host, e.g. acme.slack.com. Defaults to the active workspace.
+- `channel` (string, required): Channel id (C… or G…). Get it from slack.com/list_channels.
+- `workspaceDomain` (string, required): Workspace host, e.g. acme.slack.com.
 
 ## Output
 
@@ -41,7 +41,7 @@ You do not need one. "List Slack channel bookmarks" drives the real slack.com pa
 
 ### What information do I need to provide?
 
-Required: channel. Optional: workspaceDomain.
+Required: channel, workspaceDomain.
 
 ### What does it return?
 
@@ -53,7 +53,7 @@ Yes. It acts as you on slack.com: on your own Chrome it reuses your session, and
 
 ### Does it change anything on slack.com, or only read data?
 
-Unknown: its author has not declared whether it changes anything on slack.com, so treat it as if it could.
+It only reads. It looks things up on slack.com and changes nothing there.
 
 ### How do I run it?
 

@@ -1,10 +1,10 @@
 # Crunchbase: Search Companies
 
-Automatically search Companies on crunchbase.com. Filtered company search on Crunchbase, by industry, HQ location, funding stage, funding amount, and founded date range. Returns up to 15 matching companies (Crunchbase's free-tier search limit).
+Automatically search Companies on crunchbase.com. Search Crunchbase companies by industry, headquarters location, last funding type, total funding and founding date. Returns up to 15 companies, most prominent first, and the total match count.
 
 - Site: crunchbase.com
 - Address: `reduck/crunchbase.com/search_companies`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-11-09 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,25 +17,25 @@ npx @reduck-ai/cli@latest run --script reduck/crunchbase.com/search_companies
 
 ## Input
 
-- `limit` (number, optional): Max companies to return, 1-15. Crunchbase's free tier hard-caps search results at 15 regardless of the true match count. Default 15.
-- `locations` (array, optional): Location names (city, region, country, or continent), e.g. "France", "Paris", "Europe". Matched companies must be headquartered in ANY of the given locations.
-- `industries` (array, optional): Industry/category names as typed on Crunchbase, e.g. "Fintech", "SaaS". Each is resolved to Crunchbase's category via autocomplete; matched companies must have ANY of the given industries.
-- `foundedAfter` (string, optional): Only companies founded on/after this date, YYYY-MM-DD.
-- `foundedBefore` (string, optional): Only companies founded on/before this date, YYYY-MM-DD.
-- `lastFundingTypes` (array, optional): Funding stage slugs to filter the company's most recent round, e.g. "seed", "series_a", "series_b", "debt_financing", "private_equity". Passed through as-is to Crunchbase (must match its internal slug).
+- `limit` (integer, optional): How many companies to return, 1 to 15 (Crunchbase's free plan shows at most 15).
+- `locations` (array, optional): Headquarters location names (city, region, country or continent), e.g. "France", "Paris". Companies in any of them match.
+- `industries` (array, optional): Industry names as Crunchbase shows them, e.g. "Fintech", "SaaS". Companies in any of them match.
+- `foundedAfter` (string, optional): Only companies founded on or after this date, YYYY-MM-DD.
+- `foundedBefore` (string, optional): Only companies founded on or before this date, YYYY-MM-DD.
+- `lastFundingTypes` (array, optional): Type of the company's last funding round, as Crunchbase names it, e.g. "seed", "series_a", "series_b", "debt_financing", "private_equity".
 - `maxFundingTotalUsd` (number, optional): Maximum total funding raised, in USD.
 - `minFundingTotalUsd` (number, optional): Minimum total funding raised, in USD.
 
 ## Output
 
 - `companies` (array, required)
-- `totalMatchCount` (number, required): Total number of companies matching the filters on Crunchbase, before the 15-result free-tier cap is applied.
+- `totalMatchCount` (number, required): How many companies match on Crunchbase, before the 15-result limit.
 
 ## FAQ
 
 ### What does "Crunchbase: Search Companies" do?
 
-Filtered company search on Crunchbase, by industry, HQ location, funding stage, funding amount, and founded date range. Returns up to 15 matching companies (Crunchbase's free-tier search limit).
+Search Crunchbase companies by industry, headquarters location, last funding type, total funding and founding date. Returns up to 15 companies, most prominent first, and the total match count.
 
 ### How do I automatically search Companies on crunchbase.com?
 
@@ -59,7 +59,7 @@ Yes. It acts as you on crunchbase.com: on your own Chrome it reuses your session
 
 ### Does it change anything on crunchbase.com, or only read data?
 
-Unknown: its author has not declared whether it changes anything on crunchbase.com, so treat it as if it could.
+It only reads. It looks things up on crunchbase.com and changes nothing there.
 
 ### How do I run it?
 

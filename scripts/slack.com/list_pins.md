@@ -4,7 +4,7 @@ Automatically list Slack pinned items on slack.com. List a Slack channel's pinne
 
 - Site: slack.com
 - Address: `reduck/slack.com/list_pins`
-- Updated: 2026-10-21 (v3)
+- Updated: 2026-11-09 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,7 +18,7 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/list_pins
 ## Input
 
 - `channel` (string, required): Channel id (C… or G…). Get it from slack.com/list_channels.
-- `workspaceDomain` (string, optional): Workspace host, e.g. acme.slack.com. Defaults to the active workspace.
+- `workspaceDomain` (string, required): Workspace host, e.g. acme.slack.com.
 
 ## Output
 
@@ -41,7 +41,7 @@ You do not need one. "List Slack pinned items" drives the real slack.com pages i
 
 ### What information do I need to provide?
 
-Required: channel. Optional: workspaceDomain.
+Required: channel, workspaceDomain.
 
 ### What does it return?
 

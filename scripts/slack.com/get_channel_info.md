@@ -4,7 +4,7 @@ Automatically get Slack channel info on slack.com. Get one Slack channel's detai
 
 - Site: slack.com
 - Address: `reduck/slack.com/get_channel_info`
-- Updated: 2026-10-21 (v3)
+- Updated: 2026-11-09 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,7 +18,7 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/get_channel_info
 ## Input
 
 - `channel` (string, required): Channel id (C… or G…). Get it from slack.com/list_channels.
-- `workspaceDomain` (string, optional): Workspace host, e.g. acme.slack.com. Defaults to the active workspace.
+- `workspaceDomain` (string, required): Workspace host, e.g. acme.slack.com.
 
 ## Output
 
@@ -50,7 +50,7 @@ You do not need one. "Get Slack channel info" drives the real slack.com pages in
 
 ### What information do I need to provide?
 
-Required: channel. Optional: workspaceDomain.
+Required: channel, workspaceDomain.
 
 ### What does it return?
 

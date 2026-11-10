@@ -1,10 +1,10 @@
 # Search Claude chats
 
-Automatically search Claude chats on claude.ai. Search your Claude.ai chats (the "Search chats…" box): server-side full-text over titles + message bodies. Each hit carries the matched snippet and match offsets the UI bolds.
+Automatically search Claude chats on claude.ai. Search all your Claude chats by words in their titles and messages, as Claude's Search box does. Returns up to 25 chats with uuid, title, dates, the excerpt that matched and where the words match. Claude's search also returns related chats, so a result does not always contain the words.
 
 - Site: claude.ai
 - Address: `reduck/claude.ai/search_chats`
-- Updated: 2026-07-20 (v1)
+- Updated: 2026-11-09 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,20 +17,18 @@ npx @reduck-ai/cli@latest run --script reduck/claude.ai/search_chats
 
 ## Input
 
-- `query` (string, required): Free-text query, same as the site's search box.
-- `n` (integer, optional): Max results (the site requests 200).
-- `snippet_size` (integer, optional): Target length of each matched snippet, in chars.
+- `query` (string, required): Words to look for, as typed in Claude's Search box.
 
 ## Output
 
 - `results` (array, required)
-- `next_page_token` (string | null, optional)
+- `next_page_token` (string | null, optional): Claude's own page token; null when it gives none (the Search box shows at most 25 results).
 
 ## FAQ
 
 ### What does "Search Claude chats" do?
 
-Search your Claude.ai chats (the "Search chats…" box): server-side full-text over titles + message bodies. Each hit carries the matched snippet and match offsets the UI bolds.
+Search all your Claude chats by words in their titles and messages, as Claude's Search box does. Returns up to 25 chats with uuid, title, dates, the excerpt that matched and where the words match. Claude's search also returns related chats, so a result does not always contain the words.
 
 ### How do I automatically search Claude chats on claude.ai?
 
@@ -42,7 +40,7 @@ You do not need one. "Search Claude chats" drives the real claude.ai pages in a 
 
 ### What information do I need to provide?
 
-Required: query. Optional: n, snippet_size.
+Required: query.
 
 ### What does it return?
 
@@ -54,7 +52,7 @@ Yes. It acts as you on claude.ai: on your own Chrome it reuses your session, and
 
 ### Does it change anything on claude.ai, or only read data?
 
-Unknown: its author has not declared whether it changes anything on claude.ai, so treat it as if it could.
+It only reads. It looks things up on claude.ai and changes nothing there.
 
 ### How do I run it?
 

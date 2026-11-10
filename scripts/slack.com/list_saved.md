@@ -1,10 +1,10 @@
 # List Slack saved items
 
-Automatically list Slack saved items on slack.com. List your Saved items (starred messages/files), newest first. One page per call (count/page). Returns each item's type, channel, message ts/text (resolved author) and date saved. Requires login.
+Automatically list Slack saved items on slack.com. List the items in your Slack Saved view (in progress, not archived or completed), as Slack returns them, with Slack's counts per view and a cursor when there are more. Requires login and the workspace host.
 
 - Site: slack.com
 - Address: `reduck/slack.com/list_saved`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-09 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,19 +17,19 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/list_saved
 
 ## Input
 
-- `page` (integer, optional): 1-based page (default 1).
-- `count` (integer, optional): Items per page (default 50).
-- `workspaceDomain` (string, optional): Workspace host, e.g. acme.slack.com. Defaults to the active workspace.
+- `workspaceDomain` (string, required): Workspace host, e.g. acme.slack.com.
 
 ## Output
 
 - `items` (array, required)
+- `counts` (object | null, optional)
+- `nextCursor` (string | null, optional)
 
 ## FAQ
 
 ### What does "List Slack saved items" do?
 
-List your Saved items (starred messages/files), newest first. One page per call (count/page). Returns each item's type, channel, message ts/text (resolved author) and date saved. Requires login.
+List the items in your Slack Saved view (in progress, not archived or completed), as Slack returns them, with Slack's counts per view and a cursor when there are more. Requires login and the workspace host.
 
 ### How do I automatically list Slack saved items on slack.com?
 
@@ -41,11 +41,11 @@ You do not need one. "List Slack saved items" drives the real slack.com pages in
 
 ### What information do I need to provide?
 
-Optional: page, count, workspaceDomain.
+Required: workspaceDomain.
 
 ### What does it return?
 
-It returns items.
+It returns items, counts, nextCursor.
 
 ### Do I need to be logged in to slack.com?
 
@@ -53,7 +53,7 @@ Yes. It acts as you on slack.com: on your own Chrome it reuses your session, and
 
 ### Does it change anything on slack.com, or only read data?
 
-Unknown: its author has not declared whether it changes anything on slack.com, so treat it as if it could.
+It only reads. It looks things up on slack.com and changes nothing there.
 
 ### How do I run it?
 

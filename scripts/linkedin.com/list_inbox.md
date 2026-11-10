@@ -4,7 +4,7 @@ Automatically list LinkedIn message inbox on linkedin.com. List or search the co
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/list_inbox`
-- Updated: 2026-10-20 (v10)
+- Updated: 2026-11-09 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically get Claude Code session on claude.ai. Read the transcript of one o
 
 - Site: claude.ai
 - Address: `reduck/claude.ai/get_code_session`
-- Updated: 2026-10-28 (v7)
+- Updated: 2026-11-09 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it

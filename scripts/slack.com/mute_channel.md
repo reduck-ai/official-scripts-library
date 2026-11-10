@@ -1,10 +1,10 @@
 # Mute Slack channel
 
-Automatically mute Slack channel on slack.com. Mute a channel (by name or id) so it stops notifying and greys out in the sidebar. Idempotent. Requires login.
+Automatically mute Slack channel on slack.com. Mute a Slack channel by id so it stops notifying and greys out in the sidebar. Returns muted, and alreadyMuted when it was muted before. Requires login and the workspace host.
 
 - Site: slack.com
 - Address: `reduck/slack.com/mute_channel`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-09 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,20 +17,21 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/mute_channel
 
 ## Input
 
-- `channel` (string, required): Channel name/#name or id (C…).
-- `workspaceDomain` (string, optional): Workspace host, e.g. acme.slack.com. Defaults to the active workspace.
+- `channel` (string, required): Channel id (C… or G…). Get it from slack.com/list_channels.
+- `workspaceDomain` (string, required): Workspace host, e.g. acme.slack.com.
 
 ## Output
 
 - `ok` (boolean, required)
-- `muted` (array, required)
+- `muted` (boolean, required)
 - `channel` (string, required)
+- `alreadyMuted` (boolean, optional)
 
 ## FAQ
 
 ### What does "Mute Slack channel" do?
 
-Mute a channel (by name or id) so it stops notifying and greys out in the sidebar. Idempotent. Requires login.
+Mute a Slack channel by id so it stops notifying and greys out in the sidebar. Returns muted, and alreadyMuted when it was muted before. Requires login and the workspace host.
 
 ### How do I automatically mute Slack channel on slack.com?
 
@@ -42,11 +43,11 @@ You do not need one. "Mute Slack channel" drives the real slack.com pages in a b
 
 ### What information do I need to provide?
 
-Required: channel. Optional: workspaceDomain.
+Required: channel, workspaceDomain.
 
 ### What does it return?
 
-It returns ok, muted, channel.
+It returns ok, muted, channel, alreadyMuted.
 
 ### Do I need to be logged in to slack.com?
 

@@ -4,7 +4,7 @@ Automatically create a Gmail draft on mail.google.com. Compose a Gmail message a
 
 - Site: mail.google.com
 - Address: `reduck/mail.google.com/create_draft`
-- Updated: 2026-11-03 (v45)
+- Updated: 2026-11-09 (v46)
 - Author: Reduck AI (reduck)
 
 ## Run it

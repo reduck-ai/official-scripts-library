@@ -4,7 +4,7 @@ Automatically get Slack Do-Not-Disturb on slack.com. Get your (or another user's
 
 - Site: slack.com
 - Address: `reduck/slack.com/get_dnd`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-09 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,15 +17,15 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/get_dnd
 
 ## Input
 
-- `user` (string, optional): User id (U…) or @handle. Defaults to yourself.
-- `workspaceDomain` (string, optional): Workspace host, e.g. acme.slack.com. Defaults to the active workspace.
+- `workspaceDomain` (string, required): Workspace host, e.g. acme.slack.com.
+- `user` (string, optional): Member id (U… or W…) to read. Leave out to read your own. Get it from slack.com/list_members.
 
 ## Output
 
 - `dndEnabled` (boolean, required)
 - `nextEnd` (integer | null, optional)
 - `nextStart` (integer | null, optional)
-- `snoozeEnabled` (boolean, optional)
+- `snoozeEnabled` (boolean | null, optional)
 - `snoozeEndtime` (integer | null, optional)
 
 ## FAQ
@@ -44,7 +44,7 @@ You do not need one. "Get Slack Do-Not-Disturb" drives the real slack.com pages 
 
 ### What information do I need to provide?
 
-Optional: user, workspaceDomain.
+Required: workspaceDomain. Optional: user.
 
 ### What does it return?
 
@@ -56,7 +56,7 @@ Yes. It acts as you on slack.com: on your own Chrome it reuses your session, and
 
 ### Does it change anything on slack.com, or only read data?
 
-Unknown: its author has not declared whether it changes anything on slack.com, so treat it as if it could.
+It only reads. It looks things up on slack.com and changes nothing there.
 
 ### How do I run it?
 

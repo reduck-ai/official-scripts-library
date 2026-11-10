@@ -4,7 +4,7 @@ Automatically get single Trustpilot review on trustpilot.com. Get one Trustpilot
 
 - Site: trustpilot.com
 - Address: `reduck/trustpilot.com/get_review`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-11-09 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -33,7 +33,7 @@ npx @reduck-ai/cli@latest run --script reduck/trustpilot.com/get_review
 - `consumer` (object | null, optional)
 - `language` (string | null, optional)
 - `location` (object | null, optional)
-- `isVerified` (boolean, optional)
+- `isVerified` (boolean | null, optional)
 
 ## FAQ
 

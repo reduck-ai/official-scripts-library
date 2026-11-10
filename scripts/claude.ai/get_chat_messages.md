@@ -1,10 +1,10 @@
 # Get Claude chat messages
 
-Automatically get Claude chat messages on claude.ai. Full message transcript of one Claude.ai conversation by uuid, oldest→newest. `text` is the readable prose; `tools` lists tool calls the UI renders as cards.
+Automatically get Claude chat messages on claude.ai. Read one Claude conversation by uuid: every message shown in the chat, oldest first, with sender, text and the tools Claude called. Fails if this account has no conversation with that uuid; get uuids from list_chats or search_chats.
 
 - Site: claude.ai
 - Address: `reduck/claude.ai/get_chat_messages`
-- Updated: 2026-07-20 (v1)
+- Updated: 2026-11-09 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/claude.ai/get_chat_messages
 
 ## Input
 
-- `conversation_uuid` (string, required): The conversation uuid, as returned by list_chats / search_chats (also the /chat/<uuid> URL segment).
+- `conversation_uuid` (string, required): The conversation uuid, from claude.ai/list_chats or claude.ai/search_chats (also the /chat/<uuid> part of its address).
 
 ## Output
 
@@ -33,7 +33,7 @@ npx @reduck-ai/cli@latest run --script reduck/claude.ai/get_chat_messages
 
 ### What does "Get Claude chat messages" do?
 
-Full message transcript of one Claude.ai conversation by uuid, oldest→newest. `text` is the readable prose; `tools` lists tool calls the UI renders as cards.
+Read one Claude conversation by uuid: every message shown in the chat, oldest first, with sender, text and the tools Claude called. Fails if this account has no conversation with that uuid; get uuids from list_chats or search_chats.
 
 ### How do I automatically get Claude chat messages on claude.ai?
 
@@ -57,7 +57,7 @@ Yes. It acts as you on claude.ai: on your own Chrome it reuses your session, and
 
 ### Does it change anything on claude.ai, or only read data?
 
-Unknown: its author has not declared whether it changes anything on claude.ai, so treat it as if it could.
+It only reads. It looks things up on claude.ai and changes nothing there.
 
 ### How do I run it?
 

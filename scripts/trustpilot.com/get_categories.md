@@ -1,10 +1,10 @@
 # Get Trustpilot categories
 
-Automatically get Trustpilot categories on trustpilot.com. List Trustpilot's full category tree from the /categories index: each top-level category with its categoryId, displayName and subCategories (the categoryId is the key get_category takes).
+Automatically get Trustpilot categories on trustpilot.com. List Trustpilot's full category tree: each top-level category with its categoryId, displayName and subcategories (null when the site lists none). The categoryId is what get_category takes.
 
 - Site: trustpilot.com
 - Address: `reduck/trustpilot.com/get_categories`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-09 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -28,7 +28,7 @@ It takes no input.
 
 ### What does "Get Trustpilot categories" do?
 
-List Trustpilot's full category tree from the /categories index: each top-level category with its categoryId, displayName and subCategories (the categoryId is the key get_category takes).
+List Trustpilot's full category tree: each top-level category with its categoryId, displayName and subcategories (null when the site lists none). The categoryId is what get_category takes.
 
 ### How do I automatically get Trustpilot categories on trustpilot.com?
 
@@ -52,7 +52,7 @@ No. It only uses pages of trustpilot.com that are reachable without signing in.
 
 ### Does it change anything on trustpilot.com, or only read data?
 
-Unknown: its author has not declared whether it changes anything on trustpilot.com, so treat it as if it could.
+It only reads. It looks things up on trustpilot.com and changes nothing there.
 
 ### How do I run it?
 

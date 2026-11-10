@@ -4,7 +4,7 @@ Automatically get Slack user profile on slack.com. Get one Slack member's full p
 
 - Site: slack.com
 - Address: `reduck/slack.com/get_user_profile`
-- Updated: 2026-10-21 (v3)
+- Updated: 2026-11-09 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

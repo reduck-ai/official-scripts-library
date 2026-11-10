@@ -1,10 +1,10 @@
 # Sheets: rename spreadsheet
 
-Automatically rename spreadsheet on docs.google.com. Rename a Google Spreadsheet (the document title, not a tab). Returns the title as displayed after the rename. Waits for the rename to persist server-side before resolving; needs edit rights.
+Automatically rename spreadsheet on docs.google.com. Rename a Google Spreadsheet (its title, not a tab) and return the title shown after the save. Needs edit rights. Pass authuser when the browser is signed in to several Google accounts.
 
 - Site: docs.google.com
 - Address: `reduck/docs.google.com/sheets_rename_spreadsheet`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-09 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -19,16 +19,18 @@ npx @reduck-ai/cli@latest run --script reduck/docs.google.com/sheets_rename_spre
 
 - `title` (string, required): New spreadsheet title
 - `spreadsheetId` (string, required): Spreadsheet id or any full docs.google.com spreadsheet URL
+- `authuser` (string, optional): Google account to act as when the browser is signed in to several: its email or its index (0, 1...). Omit to let Google pick.
 
 ## Output
 
 - `title` (string, required): Title as displayed after the rename
+- `alreadyTitled` (boolean, optional): true when the spreadsheet already had this title, so nothing was changed
 
 ## FAQ
 
 ### What does "Sheets: rename spreadsheet" do?
 
-Rename a Google Spreadsheet (the document title, not a tab). Returns the title as displayed after the rename. Waits for the rename to persist server-side before resolving; needs edit rights.
+Rename a Google Spreadsheet (its title, not a tab) and return the title shown after the save. Needs edit rights. Pass authuser when the browser is signed in to several Google accounts.
 
 ### How do I automatically rename spreadsheet on docs.google.com?
 
@@ -40,11 +42,11 @@ You do not need one. "Sheets: rename spreadsheet" drives the real docs.google.co
 
 ### What information do I need to provide?
 
-Required: spreadsheetId, title.
+Required: spreadsheetId, title. Optional: authuser.
 
 ### What does it return?
 
-It returns title.
+It returns title, alreadyTitled.
 
 ### Do I need to be logged in to docs.google.com?
 

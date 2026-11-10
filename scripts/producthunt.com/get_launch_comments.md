@@ -4,7 +4,7 @@ Automatically get Product Hunt launch comments on producthunt.com. Read the comm
 
 - Site: producthunt.com
 - Address: `reduck/producthunt.com/get_launch_comments`
-- Updated: 2026-11-06 (v8)
+- Updated: 2026-11-09 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -26,7 +26,7 @@ npx @reduck-ai/cli@latest run --script reduck/producthunt.com/get_launch_comment
 - `launchUrl` (string, required)
 - `launchSlug` (string, required)
 - `productSlug` (string, required)
-- `reportedTotal` (number | null, required): The comment tally Product Hunt prints for the launch. It counts more than the thread renders, so it is normally HIGHER than `returned` — that difference is expected, not a failed read. Null when the page prints no tally.
+- `reportedTotal` (number | null, required): The comment tally Product Hunt prints for the launch. It counts more than the thread renders, so it is normally higher than `returned` — that difference is expected, not a failed read. Null when the page prints no tally.
 - `sortApplied` (string | null, optional): Which ordering the thread was showing, as labelled on the page. Product Hunt defaults to its own "best" ordering; this script does not change it. Null when the launch has no thread yet.
 
 ## FAQ

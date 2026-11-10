@@ -4,7 +4,7 @@ Automatically get Slack file info on slack.com. Get metadata for a file by its i
 
 - Site: slack.com
 - Address: `reduck/slack.com/get_file_info`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-09 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,8 +17,8 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/get_file_info
 
 ## Input
 
-- `file` (string, required): File id (F…), e.g. from list_files.
-- `workspaceDomain` (string, optional): Workspace host, e.g. acme.slack.com. Defaults to the active workspace.
+- `file` (string, required): File id (F…), e.g. from slack.com/list_files.
+- `workspaceDomain` (string, required): Workspace host, e.g. acme.slack.com.
 
 ## Output
 
@@ -49,7 +49,7 @@ You do not need one. "Get Slack file info" drives the real slack.com pages in a 
 
 ### What information do I need to provide?
 
-Required: file. Optional: workspaceDomain.
+Required: file, workspaceDomain.
 
 ### What does it return?
 
@@ -61,7 +61,7 @@ Yes. It acts as you on slack.com: on your own Chrome it reuses your session, and
 
 ### Does it change anything on slack.com, or only read data?
 
-Unknown: its author has not declared whether it changes anything on slack.com, so treat it as if it could.
+It only reads. It looks things up on slack.com and changes nothing there.
 
 ### How do I run it?
 

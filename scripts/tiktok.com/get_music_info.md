@@ -4,7 +4,7 @@ Automatically get TikTok music info on tiktok.com. Get a TikTok sound's metadata
 
 - Site: tiktok.com
 - Address: `reduck/tiktok.com/get_music_info`
-- Updated: 2026-10-22 (v4)
+- Updated: 2026-11-09 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -22,16 +22,16 @@ npx @reduck-ai/cli@latest run --script reduck/tiktok.com/get_music_info
 ## Output
 
 - `id` (string, required)
-- `title` (string, required)
-- `videoCount` (number, required): Number of videos using this sound.
 - `cover` (string | null, optional): Cover image URL. Signed, expires within hours.
+- `title` (string | null, optional)
 - `author` (object | null, optional): The TikTok account that owns the sound (for original sounds, the creator).
 - `playUrl` (string | null, optional): Audio stream URL. Signed, expires within hours.
 - `duration` (number | null, optional): Usable clip length in seconds.
-- `original` (boolean, optional): True for an original creator sound (not a licensed track).
+- `original` (boolean | null, optional): True for an original creator sound (not a licensed track).
 - `authorName` (string | null, optional): Credited sound author name.
-- `isCommerce` (boolean, optional): Commercial/licensed music library track.
-- `isCopyrighted` (boolean, optional)
+- `isCommerce` (boolean | null, optional): Commercial/licensed music library track.
+- `videoCount` (number | null, optional): Number of videos using this sound.
+- `isCopyrighted` (boolean | null, optional)
 
 ## FAQ
 

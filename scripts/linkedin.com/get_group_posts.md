@@ -1,10 +1,10 @@
 # Get LinkedIn group posts
 
-Automatically get LinkedIn group posts on linkedin.com. Fetch posts from a LinkedIn group feed by group id, newest-first, with author, text, age and reaction count. Public groups are readable without joining; a private group you are not a member of returns an empty list flagged restricted rather than failing.
+Automatically get LinkedIn group posts on linkedin.com. Get posts from a LinkedIn group's feed by group id, newest first, with author, text, age line and reaction count. A private group this account has not joined, or an empty group, returns no posts with restricted true. complete says whether the feed ended before limit.
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_group_posts`
-- Updated: 2026-09-03 (v3)
+- Updated: 2026-11-10 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,22 +17,23 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/get_group_posts
 
 ## Input
 
-- `groupId` (string, required): LinkedIn group id, the number in the group URL e.g. "8794032" for linkedin.com/groups/8794032/. A full group URL is also accepted and the id is extracted from it.
-- `limit` (integer, optional): Maximum posts to return, newest-first. The feed loads 5 more per scroll; fewer are returned if the feed runs out.
+- `groupId` (string, required): LinkedIn group id, the number in the group URL, e.g. "8794032" for linkedin.com/groups/8794032/.
+- `limit` (integer, optional): Maximum posts to return, newest first. complete says whether the feed ended before the limit.
 
 ## Output
 
 - `posts` (array, required)
 - `group_id` (string, required)
-- `group_name` (string | null, required): Group display name from the page header.
+- `group_name` (string | null, required): Group name.
 - `note` (string | null, optional)
-- `restricted` (boolean, optional): True when the group exists but no posts are visible — a private group this account has not joined. posts is then empty. A nonexistent id throws instead.
+- `complete` (boolean, optional): True when the feed has no more posts than those returned; false when limit stopped the read first.
+- `restricted` (boolean, optional): True when the group exists but shows no posts: a private group this account has not joined, or an empty group. posts is then empty.
 
 ## FAQ
 
 ### What does "Get LinkedIn group posts" do?
 
-Fetch posts from a LinkedIn group feed by group id, newest-first, with author, text, age and reaction count. Public groups are readable without joining; a private group you are not a member of returns an empty list flagged restricted rather than failing.
+Get posts from a LinkedIn group's feed by group id, newest first, with author, text, age line and reaction count. A private group this account has not joined, or an empty group, returns no posts with restricted true. complete says whether the feed ended before limit.
 
 ### How do I automatically get LinkedIn group posts on linkedin.com?
 
@@ -48,7 +49,7 @@ Required: groupId. Optional: limit.
 
 ### What does it return?
 
-It returns note, posts, group_id, group_name, restricted.
+It returns note, posts, complete, group_id, group_name, restricted.
 
 ### Do I need to be logged in to linkedin.com?
 

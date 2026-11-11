@@ -1,10 +1,10 @@
 # Add Slack reaction
 
-Automatically add Slack reaction on slack.com. Add an emoji reaction to a message by channel (name or id) and message ts. Emoji name without colons (e.g. 'thumbsup'). Requires login.
+Automatically add Slack reaction on slack.com. Add an emoji reaction to a Slack message by channel id and message ts. Emoji name without colons. Returns alreadyPresent true and changes nothing when this account already left that reaction. Fails when the channel or message is not found.
 
 - Site: slack.com
 - Address: `reduck/slack.com/add_reaction`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-10 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,22 +18,24 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/add_reaction
 ## Input
 
 - `ts` (string, required): The message's ts.
-- `emoji` (string, required): Emoji name without colons, e.g. 'thumbsup', 'white_check_mark'.
-- `channel` (string, required): Channel name/#name or id (C…/D…).
-- `workspaceDomain` (string, optional): Workspace host. Defaults to the active workspace.
+- `emoji` (string, required): Emoji name without colons, e.g. 'thumbsup', 'white_check_mark'. Aliases are accepted; the output gives the name Slack stores.
+- `channel` (string, required): Channel or DM id (C…/D…/G…). Get it from slack.com/list_channels.
+- `workspaceDomain` (string, required): Workspace host, e.g. acme.slack.com. Confirm with the user which workspace to target before running.
 
 ## Output
 
 - `ok` (boolean, required)
-- `ts` (string, optional)
-- `emoji` (string, optional)
-- `channel` (string, optional)
+- `ts` (string, required)
+- `emoji` (string, required): The emoji name Slack stores, e.g. '+1' for 'thumbsup'.
+- `channel` (string, required)
+- `workspace` (string, optional)
+- `alreadyPresent` (boolean, optional)
 
 ## FAQ
 
 ### What does "Add Slack reaction" do?
 
-Add an emoji reaction to a message by channel (name or id) and message ts. Emoji name without colons (e.g. 'thumbsup'). Requires login.
+Add an emoji reaction to a Slack message by channel id and message ts. Emoji name without colons. Returns alreadyPresent true and changes nothing when this account already left that reaction. Fails when the channel or message is not found.
 
 ### How do I automatically add Slack reaction on slack.com?
 
@@ -45,11 +47,11 @@ You do not need one. "Add Slack reaction" drives the real slack.com pages in a b
 
 ### What information do I need to provide?
 
-Required: channel, ts, emoji. Optional: workspaceDomain.
+Required: channel, ts, emoji, workspaceDomain.
 
 ### What does it return?
 
-It returns ok, ts, emoji, channel.
+It returns ok, ts, emoji, channel, workspace, alreadyPresent.
 
 ### Do I need to be logged in to slack.com?
 

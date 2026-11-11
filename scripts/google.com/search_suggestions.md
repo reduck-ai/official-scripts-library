@@ -4,7 +4,7 @@ Automatically get Google Search autocomplete suggestions on google.com. Get the 
 
 - Site: google.com
 - Address: `reduck/google.com/search_suggestions`
-- Updated: 2026-10-22 (v7)
+- Updated: 2026-11-10 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,15 +17,14 @@ npx @reduck-ai/cli@latest run --script reduck/google.com/search_suggestions
 
 ## Input
 
-- `query` (string, required): The partial or full search query to get suggestions for. Partial words work well — 'generative engine optimi' returns the completions Google would offer as you type.
+- `query` (string, required): The partial or full search query to get suggestions for. Partial words work well: 'generative engine optimi' returns the completions Google would offer as you type.
 
 ## Output
 
-- `query` (string, required): The query as passed in.
-- `source` (string, required): Where the suggestions were read from. search_box means the endpoint was unavailable and the on-page dropdown was used instead.
+- `query` (string, required): The query as passed in, without leading or trailing spaces.
+- `source` (string, required): Where the suggestions were read from: Google's own suggestion answer to its search box.
 - `suggestions` (array, required): The suggestions in the order Google ranks them. Empty when Google offers none for the query.
 - `count` (integer, optional)
-- `echoedQuery` (string | null, optional): The query as Google echoed it back, which can differ from what was sent.
 
 ## FAQ
 
@@ -47,7 +46,7 @@ Required: query.
 
 ### What does it return?
 
-It returns count, query, source, echoedQuery, suggestions.
+It returns count, query, source, suggestions.
 
 ### Do I need to be logged in to google.com?
 

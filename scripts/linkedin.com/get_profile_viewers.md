@@ -1,10 +1,10 @@
-# Get profile viewers
+# Get LinkedIn profile viewers
 
-Automatically get profile viewers on linkedin.com. List who viewed your LinkedIn profile (linkedin.com/analytics/profile-views). Returns the individually-shown viewers: named ones (name, headline, degree, publicId, profileUrl, mutualConnections) and semi-anonymized private ones (occupation/industry/geo teaser only, no name), plus viewedAgo per entry, the aggregate privateModeCount (fully-hidden viewers only counted, not shown), and the total profile-viewers metric for the window. Works across English, French, German, Spanish, and Italian account UI language; other languages may not resolve the total-viewers, mutual-connections, or private-mode counts correctly. The full 90-day list needs LinkedIn Premium (free tier shows only the last few).
+Automatically get LinkedIn profile viewers on linkedin.com. List who viewed your LinkedIn profile: the total for the period LinkedIn shows, and each viewer it shows in detail (name, headline, profile link and when they viewed, or a teaser for a hidden viewer). A free account sees only a few viewers in detail; complete is false when LinkedIn holds more than returned.
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_profile_viewers`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-11-10 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,28 +17,29 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/get_profile_viewers
 
 ## Input
 
-- `limit` (integer, optional): Cap how many individually-shown viewers to load & return (stops scrolling early). Omit to return all shown viewers. Does not affect privateModeCount/total.
+- `limit` (integer, optional): Most viewers to return.
 
 ## Output
 
-- `total` (integer | null, required): Profile-viewers count for the selected window (top metric).
+- `total` (integer | null, required): Profile viewers in the period LinkedIn shows (past 90 days).
 - `viewers` (array, required)
-- `shownCount` (integer, required): Number of individually-listed viewers returned.
-- `privateModeCount` (integer | null, required): Viewers shown only as an aggregate 'N LinkedIn members viewed in Private mode' (0 if none, unless the account's UI language falls outside en/fr/de/es/it, in which case it's a best-effort match that may under-detect). Null when a `limit` stopped scrolling before the bottom row, where this count lives.
+- `complete` (boolean, required): false when LinkedIn has more viewers than returned (limit reached, or a list only Premium can open).
+- `shownCount` (integer, required)
+- `privateModeCount` (integer | null, required): Viewers counted only in aggregate as private mode; null when LinkedIn does not show that count.
 
 ## FAQ
 
-### What does "Get profile viewers" do?
+### What does "Get LinkedIn profile viewers" do?
 
-List who viewed your LinkedIn profile (linkedin.com/analytics/profile-views). Returns the individually-shown viewers: named ones (name, headline, degree, publicId, profileUrl, mutualConnections) and semi-anonymized private ones (occupation/industry/geo teaser only, no name), plus viewedAgo per entry, the aggregate privateModeCount (fully-hidden viewers only counted, not shown), and the total profile-viewers metric for the window. Works across English, French, German, Spanish, and Italian account UI language; other languages may not resolve the total-viewers, mutual-connections, or private-mode counts correctly. The full 90-day list needs LinkedIn Premium (free tier shows only the last few).
+List who viewed your LinkedIn profile: the total for the period LinkedIn shows, and each viewer it shows in detail (name, headline, profile link and when they viewed, or a teaser for a hidden viewer). A free account sees only a few viewers in detail; complete is false when LinkedIn holds more than returned.
 
-### How do I automatically get profile viewers on linkedin.com?
+### How do I automatically get LinkedIn profile viewers on linkedin.com?
 
 Ask an AI agent connected to Reduck to run reduck/linkedin.com/get_profile_viewers, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/linkedin.com/get_profile_viewers
 
-### Is there a linkedin.com API to get profile viewers?
+### Is there a linkedin.com API to get LinkedIn profile viewers?
 
-You do not need one. "Get profile viewers" drives the real linkedin.com pages in a browser, so it works whether or not linkedin.com offers an API for this.
+You do not need one. "Get LinkedIn profile viewers" drives the real linkedin.com pages in a browser, so it works whether or not linkedin.com offers an API for this.
 
 ### What information do I need to provide?
 
@@ -46,7 +47,7 @@ Optional: limit.
 
 ### What does it return?
 
-It returns total, viewers, shownCount, privateModeCount.
+It returns total, viewers, complete, shownCount, privateModeCount.
 
 ### Do I need to be logged in to linkedin.com?
 

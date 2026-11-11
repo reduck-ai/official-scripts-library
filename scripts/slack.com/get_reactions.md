@@ -4,7 +4,7 @@ Automatically get Slack message reactions on slack.com. List the reactions on a 
 
 - Site: slack.com
 - Address: `reduck/slack.com/get_reactions`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-10 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,14 +18,15 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/get_reactions
 ## Input
 
 - `ts` (string, required): The message's ts.
-- `channel` (string, required): Channel name/#name or id (C…).
-- `workspaceDomain` (string, optional): Workspace host, e.g. acme.slack.com. Defaults to the active workspace.
+- `channel` (string, required): Channel or DM id (C…/D…/G…). Get it from slack.com/list_channels.
+- `workspaceDomain` (string, required): Workspace host, e.g. acme.slack.com.
 
 ## Output
 
 - `ts` (string, required)
 - `channel` (string, required)
 - `reactions` (array, required)
+- `workspace` (string, optional)
 
 ## FAQ
 
@@ -43,11 +44,11 @@ You do not need one. "Get Slack message reactions" drives the real slack.com pag
 
 ### What information do I need to provide?
 
-Required: channel, ts. Optional: workspaceDomain.
+Required: channel, ts, workspaceDomain.
 
 ### What does it return?
 
-It returns ts, channel, reactions.
+It returns ts, channel, reactions, workspace.
 
 ### Do I need to be logged in to slack.com?
 
@@ -55,7 +56,7 @@ Yes. It acts as you on slack.com: on your own Chrome it reuses your session, and
 
 ### Does it change anything on slack.com, or only read data?
 
-Unknown: its author has not declared whether it changes anything on slack.com, so treat it as if it could.
+It only reads. It looks things up on slack.com and changes nothing there.
 
 ### How do I run it?
 

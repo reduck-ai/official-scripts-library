@@ -1,10 +1,10 @@
 # Get LinkedIn profile recommendations
 
-Automatically get LinkedIn profile recommendations on linkedin.com. Get the recommendations a LinkedIn profile has received and given, from its dedicated Recommendations page by public ID. Returns each recommendation's author/recipient (name, profile URL, connection degree, headline), the relationship note LinkedIn shows (date and how the two people worked together), and the full recommendation text. Profiles with no recommendations in a category come back with an empty list for it rather than an error. Requires being logged in to LinkedIn.
+Automatically get LinkedIn profile recommendations on linkedin.com. Get the recommendations a LinkedIn profile has received and given, by public ID. Returns up to count (default 15) per category, each with the other person's name, profile URL, connection degree, headline, the relationship note LinkedIn shows (date and how they worked together), and the full text. receivedComplete and givenComplete are false when more exist past count. A profile with none in a category returns an empty list. An unknown profile ID is an error. Requires being signed in to LinkedIn.
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_profile_recommendations`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-10 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,7 +18,7 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/get_profile_recommend
 ## Input
 
 - `publicId` (string, required): LinkedIn public profile id — the slug in linkedin.com/in/<publicId>/. A full profile URL is also accepted.
-- `count` (integer, optional): Max entries to load per category (received/given). Omit to load all.
+- `count` (integer, optional): Max entries to return per category (received/given). LinkedIn loads 15 per page; a larger count loads more pages by scrolling. receivedComplete/givenComplete say whether the list is whole.
 
 ## Output
 
@@ -26,12 +26,14 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/get_profile_recommend
 - `publicId` (string, required)
 - `received` (array, required)
 - `profileUrl` (string, required)
+- `givenComplete` (boolean, required): true when LinkedIn has no more given recommendations past this list; false when count stopped it first.
+- `receivedComplete` (boolean, required): true when LinkedIn has no more received recommendations past this list; false when count stopped it first.
 
 ## FAQ
 
 ### What does "Get LinkedIn profile recommendations" do?
 
-Get the recommendations a LinkedIn profile has received and given, from its dedicated Recommendations page by public ID. Returns each recommendation's author/recipient (name, profile URL, connection degree, headline), the relationship note LinkedIn shows (date and how the two people worked together), and the full recommendation text. Profiles with no recommendations in a category come back with an empty list for it rather than an error. Requires being logged in to LinkedIn.
+Get the recommendations a LinkedIn profile has received and given, by public ID. Returns up to count (default 15) per category, each with the other person's name, profile URL, connection degree, headline, the relationship note LinkedIn shows (date and how they worked together), and the full text. receivedComplete and givenComplete are false when more exist past count. A profile with none in a category returns an empty list. An unknown profile ID is an error. Requires being signed in to LinkedIn.
 
 ### How do I automatically get LinkedIn profile recommendations on linkedin.com?
 
@@ -47,7 +49,7 @@ Required: publicId. Optional: count.
 
 ### What does it return?
 
-It returns given, publicId, received, profileUrl.
+It returns given, publicId, received, profileUrl, givenComplete, receivedComplete.
 
 ### Do I need to be logged in to linkedin.com?
 

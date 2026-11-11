@@ -4,7 +4,7 @@ Automatically create Slack channel on slack.com. Create a new channel. The name 
 
 - Site: slack.com
 - Address: `reduck/slack.com/create_channel`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-11-10 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,15 +17,16 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/create_channel
 
 ## Input
 
-- `name` (string, required): Channel name (lowercase, hyphens; Slack normalizes it).
-- `isPrivate` (boolean, optional): Create a private channel. Default false.
-- `workspaceDomain` (string, optional): Workspace host. Defaults to the active workspace.
+- `name` (string, required): Channel name. Slack normalizes it (lowercase, hyphens, max 80 chars); the output gives the name Slack kept.
+- `workspaceDomain` (string, required): Workspace host, e.g. acme.slack.com. Confirm with the user which workspace to target before running.
+- `isPrivate` (boolean, optional): Create a private channel.
 
 ## Output
 
 - `id` (string, required)
 - `ok` (boolean, required)
 - `name` (string, required)
+- `workspace` (string, optional)
 - `is_private` (boolean, optional)
 
 ## FAQ
@@ -44,11 +45,11 @@ You do not need one. "Create Slack channel" drives the real slack.com pages in a
 
 ### What information do I need to provide?
 
-Required: name. Optional: isPrivate, workspaceDomain.
+Required: name, workspaceDomain. Optional: isPrivate.
 
 ### What does it return?
 
-It returns id, ok, name, is_private.
+It returns id, ok, name, workspace, is_private.
 
 ### Do I need to be logged in to slack.com?
 

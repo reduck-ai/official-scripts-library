@@ -4,7 +4,7 @@ Automatically get YouTube channel stats on youtube.com. Get a YouTube channel's 
 
 - Site: youtube.com
 - Address: `reduck/youtube.com/get_channel`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-11-10 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -1,10 +1,10 @@
 # List Lovable workspace members and roles
 
-Automatically list Lovable workspace members and roles on lovable.dev. List members of your current default Lovable workspace (Settings > People), with email, display name, role (owner/admin/member/viewer), invited/joined status. No scoping arg — operates on whichever workspace is currently active in your browser. Returns the workspace id, total count, hasMore flag (true if more than the first page of ~25 members exist), and the member list.
+Automatically list Lovable workspace members and roles on lovable.dev. List the members of your current Lovable workspace with email, display name, role, invite and join times (joinedAt null while an invitation is pending) and project access. Acts on the workspace open in the browser. Page with offset and limit while hasMore is true.
 
 - Site: lovable.dev
 - Address: `reduck/lovable.dev/list-users-and-roles`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-11-10 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,11 +17,13 @@ npx @reduck-ai/cli@latest run --script reduck/lovable.dev/list-users-and-roles
 
 ## Input
 
-It takes no input.
+- `limit` (integer, optional): Members per page.
+- `offset` (integer, optional): 0-based offset; pass offset + limit for the next page.
 
 ## Output
 
-- `total` (number, required)
+- `total` (integer | null, required)
+- `offset` (integer, required)
 - `hasMore` (boolean, required)
 - `members` (array, required)
 - `workspaceId` (string, required)
@@ -30,7 +32,7 @@ It takes no input.
 
 ### What does "List Lovable workspace members and roles" do?
 
-List members of your current default Lovable workspace (Settings > People), with email, display name, role (owner/admin/member/viewer), invited/joined status. No scoping arg — operates on whichever workspace is currently active in your browser. Returns the workspace id, total count, hasMore flag (true if more than the first page of ~25 members exist), and the member list.
+List the members of your current Lovable workspace with email, display name, role, invite and join times (joinedAt null while an invitation is pending) and project access. Acts on the workspace open in the browser. Page with offset and limit while hasMore is true.
 
 ### How do I automatically list Lovable workspace members and roles on lovable.dev?
 
@@ -42,11 +44,11 @@ You do not need one. "List Lovable workspace members and roles" drives the real 
 
 ### What information do I need to provide?
 
-Nothing. It takes no input.
+Optional: limit, offset.
 
 ### What does it return?
 
-It returns total, hasMore, members, workspaceId.
+It returns total, offset, hasMore, members, workspaceId.
 
 ### Do I need to be logged in to lovable.dev?
 
@@ -54,7 +56,7 @@ Yes. It acts as you on lovable.dev: on your own Chrome it reuses your session, a
 
 ### Does it change anything on lovable.dev, or only read data?
 
-Unknown: its author has not declared whether it changes anything on lovable.dev, so treat it as if it could.
+It only reads. It looks things up on lovable.dev and changes nothing there.
 
 ### How do I run it?
 

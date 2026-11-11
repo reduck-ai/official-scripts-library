@@ -4,7 +4,7 @@ Search round-trip flights on Kayak.fr with free-text origin/destination city nam
 
 - Site: kayak.fr
 - Address: `reduck/kayak.fr/search_flights_roundtrip`
-- Updated: 2026-10-22 (v13)
+- Updated: 2026-11-10 (v14)
 - Author: Reduck AI (reduck)
 
 ## Run it

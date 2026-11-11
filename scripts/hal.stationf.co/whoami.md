@@ -4,7 +4,7 @@ Report which Station F HAL account this browser is signed in as: the account ema
 
 - Site: hal.stationf.co
 - Address: `reduck/hal.stationf.co/whoami`
-- Updated: 2026-10-28 (v4)
+- Updated: 2026-11-10 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

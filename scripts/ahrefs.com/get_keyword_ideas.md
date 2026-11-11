@@ -4,7 +4,7 @@ Automatically get keyword ideas with search volume on ahrefs.com. An unofficial 
 
 - Site: ahrefs.com
 - Address: `reduck/ahrefs.com/get_keyword_ideas`
-- Updated: 2026-10-23 (v5)
+- Updated: 2026-11-10 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,7 +18,7 @@ npx @reduck-ai/cli@latest run --script reduck/ahrefs.com/get_keyword_ideas
 ## Input
 
 - `keyword` (string, required): The seed keyword, e.g. "apartment hunting".
-- `country` (string, optional): Two-letter country code, lowercase, e.g. us, gb, fr.
+- `country` (string, optional): Two-letter country code, e.g. us, gb, fr.
 
 ## Output
 

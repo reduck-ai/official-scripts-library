@@ -4,7 +4,7 @@ Automatically get TikTok sound/music videos on tiktok.com. List videos that use 
 
 - Site: tiktok.com
 - Address: `reduck/tiktok.com/get_music_videos`
-- Updated: 2026-09-03 (v1)
+- Updated: 2026-11-10 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/tiktok.com/get_music_videos
 
 ## Input
 
-- `musicId` (string, required): Numeric TikTok sound/music id (the `music.id` returned by get_video / get_user_videos).
+- `musicId` (string, required): Numeric TikTok sound/music id (the `music.id` returned by get_video / get_user_videos), or a sound URL containing it.
 - `count` (integer, optional): Target number of videos to collect; scrolls the sound feed until this many are gathered or results run out.
 
 ## Output
@@ -55,7 +55,7 @@ Yes. It acts as you on tiktok.com: on your own Chrome it reuses your session, an
 
 ### Does it change anything on tiktok.com, or only read data?
 
-Unknown: its author has not declared whether it changes anything on tiktok.com, so treat it as if it could.
+It only reads. It looks things up on tiktok.com and changes nothing there.
 
 ### How do I run it?
 

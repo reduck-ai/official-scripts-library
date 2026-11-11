@@ -4,7 +4,7 @@ Automatically compare keywords on Google Trends on trends.google.com. See which 
 
 - Site: trends.google.com
 - Address: `reduck/trends.google.com/explore_keyword`
-- Updated: 2026-10-22 (v5)
+- Updated: 2026-11-10 (v8)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -21,7 +21,7 @@ npx @reduck-ai/cli@latest run --script reduck/trends.google.com/explore_keyword
 
 ## Input
 
-- `keywords` (array, required): 1-5 search terms and/or Trends topic mids (e.g. "/g/11khcfz0y2") compared in a single query — values are relative to the shared peak, so this is the only way to compare terms. Terms must not contain commas (the site's own separator).
+- `keywords` (array, required): 1-5 search terms and/or Trends topic mids (e.g. "/g/11khcfz0y2") compared in a single query: values are relative to the shared peak, so this is the only way to compare terms. A term holds no comma, which Trends reads as a separator.
 - `geo` (string, optional): ISO region code: "US", "FR", "US-CA"… Empty string = worldwide.
 - `date` (string, optional): Trends range: "now 1-H", "now 4-H", "now 1-d", "now 7-d", "today 1-m", "today 3-m", "today 12-m", "today 5-y", "all", or explicit "YYYY-MM-DD YYYY-MM-DD".
 - `category` (integer, optional): Trends category id (0 = all categories). Same ids as the site's category picker.
@@ -32,7 +32,7 @@ npx @reduck-ai/cli@latest run --script reduck/trends.google.com/explore_keyword
 - `geo` (string, required)
 - `date` (string, required)
 - `keywords` (array, required)
-- `byKeyword` (array, required): Per-keyword panels, aligned with keywords. relatedTopics is null in compare mode — the site drops that panel when comparing.
+- `byKeyword` (array, required): Per-keyword panels, aligned with keywords. relatedTopics is null in compare mode: the site drops that panel when comparing.
 - `regionShare` (array, required): Compare mode only (2+ keywords), else []: each keyword's share (%) of combined interest per region, shares[i] aligns with keywords[i].
 - `interestOverTime` (array, required): Relative interest 0-100, shared scale across all keywords (100 = the overall peak). values[i] aligns with keywords[i]. Empty for insufficient volume.
 
@@ -100,7 +100,7 @@ Shape only: placeholder values generated from the output schema, not a real run.
 
 ### What does "Compare keywords on Google Trends" do?
 
-Google Trends explore for 1-5 keywords in one compare query: interest over time (shared scale), interest by region, per-region share %, related topics and queries (top and rising), for a given geo, date range, category and property.
+Google Trends explore for 1-5 keywords in one compare query: interest over time (shared scale), interest by region, per-region share %, related topics and queries (top and rising), for a given geo, date range, category and property. A keyword with too few searches returns an empty series and empty panels. Google refuses managed browsers with "too many requests", so run it on your own browser.
 
 ### How do I automatically compare keywords on Google Trends on trends.google.com?
 

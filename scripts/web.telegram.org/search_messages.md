@@ -1,10 +1,10 @@
-# Search Telegram messages in a conversation
+# Search Telegram messages
 
-Automatically search Telegram messages in a conversation on web.telegram.org. Search inside one Telegram conversation using the conversation's own search box, and return the matching messages: the chat they are in, the date label shown on the result, and the matched text. Returns an empty list when nothing matches, which is a real answer. Note the result rows carry no message id, so results cannot be fed straight to delete or react — use get_conversation for ids. Searching across all chats is a separate Telegram surface and is not covered here.
+Automatically search Telegram messages on web.telegram.org. Search Telegram messages by words, in one conversation (a peer id or a public @username) or in all conversations of the account. Returns up to 20 messages a page, newest first, with their conversation, id, date, sender and full text; the ids work with download_media and delete_message. Takes optional date bounds; pass nextCursor for the next page. An empty list means that nothing matched. Searching does not mark anything as read.
 
 - Site: web.telegram.org
 - Address: `reduck/web.telegram.org/search_messages`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-11 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,39 +17,39 @@ npx @reduck-ai/cli@latest run --script reduck/web.telegram.org/search_messages
 
 ## Input
 
-- `query` (string, required): The text to search for inside the conversation.
-- `peerId` (string, required): The conversation to search in, as returned by get_inbox. Required — this script drives the per-conversation search box, not Telegram's global search.
-- `count` (integer, optional): Maximum results to return from what the search dropdown has rendered.
+- `query` (string, required): The words to search for.
+- `cursor` (string, optional): Omit for the first page. For the next one, pass the nextCursor of the previous call with the same query, peerId and dates.
+- `peerId` (string, optional): Search only this conversation: its peerId from web.telegram.org/get_inbox, or a public @username (such as "@telegram"). Omit to search every conversation of the account.
+- `maxDate` (string, optional): Only messages sent before this time, ISO 8601.
+- `minDate` (string, optional): Only messages sent at or after this time, ISO 8601 (e.g. "2026-01-01").
 
 ## Output
 
-- `count` (integer, required): How many results were returned.
-- `query` (string, required): The query that was searched.
-- `peerId` (string, required): The peer id that was searched, read back from the address bar.
-- `results` (array, required): Matching messages in the order the search dropdown lists them (most recent first). Empty when nothing matched.
-- `chatTitle` (string | null, optional): The conversation title from the header, for a human-readable cross-check against peerId.
+- `results` (array, required): Up to 20 matching messages, newest first. Empty when nothing matches.
+- `nextCursor` (string | null, required): Pass it as cursor for the next page. Null on the last page.
+- `totalCount` (integer | null, optional): How many messages match in all.
 
 ## FAQ
 
-### What does "Search Telegram messages in a conversation" do?
+### What does "Search Telegram messages" do?
 
-Search inside one Telegram conversation using the conversation's own search box, and return the matching messages: the chat they are in, the date label shown on the result, and the matched text. Returns an empty list when nothing matches, which is a real answer. Note the result rows carry no message id, so results cannot be fed straight to delete or react — use get_conversation for ids. Searching across all chats is a separate Telegram surface and is not covered here.
+Search Telegram messages by words, in one conversation (a peer id or a public @username) or in all conversations of the account. Returns up to 20 messages a page, newest first, with their conversation, id, date, sender and full text; the ids work with download_media and delete_message. Takes optional date bounds; pass nextCursor for the next page. An empty list means that nothing matched. Searching does not mark anything as read.
 
-### How do I automatically search Telegram messages in a conversation on web.telegram.org?
+### How do I automatically search Telegram messages on web.telegram.org?
 
 Ask an AI agent connected to Reduck to run reduck/web.telegram.org/search_messages, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/web.telegram.org/search_messages
 
-### Is there a web.telegram.org API to search Telegram messages in a conversation?
+### Is there a web.telegram.org API to search Telegram messages?
 
-You do not need one. "Search Telegram messages in a conversation" drives the real web.telegram.org pages in a browser, so it works whether or not web.telegram.org offers an API for this.
+You do not need one. "Search Telegram messages" drives the real web.telegram.org pages in a browser, so it works whether or not web.telegram.org offers an API for this.
 
 ### What information do I need to provide?
 
-Required: peerId, query. Optional: count.
+Required: query. Optional: cursor, peerId, maxDate, minDate.
 
 ### What does it return?
 
-It returns count, query, peerId, results, chatTitle.
+It returns results, nextCursor, totalCount.
 
 ### Do I need to be logged in to web.telegram.org?
 

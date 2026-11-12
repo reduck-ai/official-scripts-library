@@ -1,10 +1,10 @@
-# Telegram — Download a message's media
+# Download a Telegram message's file
 
-Automatically download a message's media on web.telegram.org. Download the document, photo or video attached to a Telegram message, given its conversation peer id and message id. Returns the file as base64 plus the filename Telegram stores it under, and refuses a message that carries no media. Opening the conversation marks it read, and Telegram also saves the file to the browser's download folder. Photos come back as Telegram's re-encoded JPEG, not the original upload; documents come back byte-for-byte.
+Automatically download a Telegram message's file on web.telegram.org. Download the file of one Telegram message (photo, video, document, audio, voice note or sticker) as base64, with its name, type and size. Takes a peer id or a public @username, and the message id from get_conversation or search_messages. Photos come at their largest size. Refuses a message without a file, and a file larger than 6 MB. Does not mark the conversation as read.
 
 - Site: web.telegram.org
 - Address: `reduck/web.telegram.org/download_media`
-- Updated: 2026-11-02 (v4)
+- Updated: 2026-11-11 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,34 +17,32 @@ npx @reduck-ai/cli@latest run --script reduck/web.telegram.org/download_media
 
 ## Input
 
-- `peerId` (string, required): The conversation's peer id, as returned by get_inbox (e.g. "123456789"; your own user id opens Saved Messages, negative ids are channels and groups).
-- `messageId` (string, required): The message carrying the media, as returned by get_conversation or send_message. Must be one of the recently loaded messages in that conversation — get_conversation only loads a recent window, so raise its count until the target is present.
+- `peerId` (string, required): The conversation: its peerId from web.telegram.org/get_inbox, or a public @username (such as "@telegram").
+- `messageId` (string, required): The message carrying the file, as web.telegram.org/get_conversation or search_messages return it.
 
 ## Output
 
-- `kind` (string, required): Which bubble shape it was read from: "document" for a file bubble (a filename and size are shown in the chat), "media" for a photo or video bubble.
-- `base64` (string, required): The file's bytes, base64-encoded — the exact inverse of send_message's fileBase64, so a file can be round-tripped between conversations. Documents come back byte-for-byte identical to what was sent.
-- `peerId` (string, required): The peer id that was actually opened, read back from the address bar.
-- `filename` (string, required): The name Telegram saves the file under, taken from its own download action rather than guessed. For a document this is the original filename; for a photo it is Telegram's generated name (e.g. "5793955541833946033.jpg").
-- `messageId` (string, required): The message the media came from.
-- `byteLength` (integer, required): Size of the returned bytes. For a document this matches the size shown on the bubble; for a photo it is the size of Telegram's re-encoded copy, which will not match the original upload.
-- `verified_on_page` (boolean, required): True when the bytes were actually captured from the app's own download action, rather than the click being assumed to have worked.
-- `mimeType` (string | null, optional): The MIME type Telegram attached to the blob it saved, or null if it did not set one.
-- `chatTitle` (string | null, optional): The conversation title from the header — echo this to a human, since a peer id is not recognisable.
+- `kind` (string, required): photo, video, document, audio, voice, sticker or videoNote.
+- `base64` (string, required): The file's bytes, base64-encoded. Documents come back as sent; photos as Telegram stores them (the largest size).
+- `peerId` (string, required)
+- `fileName` (string, required): The file's own name for a document, audio or video; for a photo, voice note or sticker, which have none, the media id with its extension.
+- `messageId` (string, required)
+- `byteLength` (integer, required)
+- `mimeType` (string | null, optional)
 
 ## FAQ
 
-### What does "Telegram — Download a message's media" do?
+### What does "Download a Telegram message's file" do?
 
-Download the document, photo or video attached to a Telegram message, given its conversation peer id and message id. Returns the file as base64 plus the filename Telegram stores it under, and refuses a message that carries no media. Opening the conversation marks it read, and Telegram also saves the file to the browser's download folder. Photos come back as Telegram's re-encoded JPEG, not the original upload; documents come back byte-for-byte.
+Download the file of one Telegram message (photo, video, document, audio, voice note or sticker) as base64, with its name, type and size. Takes a peer id or a public @username, and the message id from get_conversation or search_messages. Photos come at their largest size. Refuses a message without a file, and a file larger than 6 MB. Does not mark the conversation as read.
 
-### How do I automatically download a message's media on web.telegram.org?
+### How do I automatically download a Telegram message's file on web.telegram.org?
 
 Ask an AI agent connected to Reduck to run reduck/web.telegram.org/download_media, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/web.telegram.org/download_media
 
-### Is there a web.telegram.org API to download a message's media?
+### Is there a web.telegram.org API to download a Telegram message's file?
 
-You do not need one. "Telegram — Download a message's media" drives the real web.telegram.org pages in a browser, so it works whether or not web.telegram.org offers an API for this.
+You do not need one. "Download a Telegram message's file" drives the real web.telegram.org pages in a browser, so it works whether or not web.telegram.org offers an API for this.
 
 ### What information do I need to provide?
 
@@ -52,7 +50,7 @@ Required: peerId, messageId.
 
 ### What does it return?
 
-It returns kind, base64, peerId, filename, mimeType, chatTitle, messageId, byteLength, verified_on_page.
+It returns kind, base64, peerId, fileName, mimeType, messageId, byteLength.
 
 ### Do I need to be logged in to web.telegram.org?
 

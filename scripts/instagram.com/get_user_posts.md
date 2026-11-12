@@ -1,10 +1,10 @@
 # Get Instagram user posts
 
-Automatically get Instagram user posts on instagram.com. Fetch the most recent posts from an Instagram user's profile, newest first. Returns code, url, taken_at, media_type, caption, like_count, comment_count, images, video_url, tagged_users, caption_mentions, coauthors, sponsor_tags, and is_paid_partnership. view_count is always null here; use get_user_reels for video play counts.
+Automatically get Instagram user posts on instagram.com. Fetch the posts of an Instagram user's profile grid, in the order the grid shows them: the posts the owner pinned first, then newest first. Returns posts and complete. Each post has code, url, taken_at, pinned, media_type, caption, like_count (null when the owner hides likes), comment_count, images, video_url, video_duration, carousel_items, tagged_users, caption_mentions, coauthors, sponsor_tags and is_paid_partnership. Reads up to count posts (default 25); complete is true only when the end of the grid was reached, false when count stopped it first. An account with no posts returns an empty list. A username that does not exist, or a private account this account does not follow, fails with an error that says so. view_count is always null here; use get_user_reels for video play counts.
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/get_user_posts`
-- Updated: 2026-10-22 (v8)
+- Updated: 2026-11-11 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,14 +17,19 @@ npx @reduck-ai/cli@latest run --script reduck/instagram.com/get_user_posts
 
 ## Input
 
-- `username` (string, required): Instagram handle without @, e.g. berniesanders
-- `count` (integer, optional): Number of most-recent posts to return
+- `username` (string, required): Instagram username without the @, e.g. "nasa"
+- `count` (integer, optional): Maximum number of posts to return, in the order the profile grid shows them.
+
+## Output
+
+- `posts` (array, required)
+- `complete` (boolean, required): True when the profile has no posts beyond these. False when count stopped the list first.
 
 ## FAQ
 
 ### What does "Get Instagram user posts" do?
 
-Fetch the most recent posts from an Instagram user's profile, newest first. Returns code, url, taken_at, media_type, caption, like_count, comment_count, images, video_url, tagged_users, caption_mentions, coauthors, sponsor_tags, and is_paid_partnership. view_count is always null here; use get_user_reels for video play counts.
+Fetch the posts of an Instagram user's profile grid, in the order the grid shows them: the posts the owner pinned first, then newest first. Returns posts and complete. Each post has code, url, taken_at, pinned, media_type, caption, like_count (null when the owner hides likes), comment_count, images, video_url, video_duration, carousel_items, tagged_users, caption_mentions, coauthors, sponsor_tags and is_paid_partnership. Reads up to count posts (default 25); complete is true only when the end of the grid was reached, false when count stopped it first. An account with no posts returns an empty list. A username that does not exist, or a private account this account does not follow, fails with an error that says so. view_count is always null here; use get_user_reels for video play counts.
 
 ### How do I automatically get Instagram user posts on instagram.com?
 
@@ -37,6 +42,10 @@ You do not need one. "Get Instagram user posts" drives the real instagram.com pa
 ### What information do I need to provide?
 
 Required: username. Optional: count.
+
+### What does it return?
+
+It returns posts, complete.
 
 ### Do I need to be logged in to instagram.com?
 

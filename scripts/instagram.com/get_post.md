@@ -4,7 +4,7 @@ Automatically get an Instagram post on instagram.com. Read one Instagram post or
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/get_post`
-- Updated: 2026-11-03 (v3)
+- Updated: 2026-11-11 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -1,10 +1,10 @@
 # Get YouTube comments
 
-Automatically get YouTube comments on youtube.com. List a YouTube video's top-level comments from a watch URL or video id. Per comment: id, text, author, channelId, authorAvatar, publishedTime, likeCount, replyCount, isVerified, isCreator, pinned. Sort by 'top' (default) or 'newest' and paginate with the returned nextCursor. likeCount and replyCount are YouTube's abbreviated strings (e.g. "255k", "960"), and comments come back empty when they are disabled.
+Automatically get YouTube comments on youtube.com. List a YouTube video's top-level comments from a watch URL or video id. Per comment: id, text, author, channelId, authorAvatar, publishedTime, likeCount, replyCount, isVerified, isCreator, pinned. Sort by 'top' (default) or 'newest' and paginate with the returned nextCursor. likeCount, replyCount and publishedTime are YouTube's display strings in the account's language (e.g. "255k", "1 year ago"). When the uploader turned comments off, comments is empty and commentsDisabled is true. A video that does not exist or cannot be watched fails with an error that names it.
 
 - Site: youtube.com
 - Address: `reduck/youtube.com/get_comments`
-- Updated: 2026-11-03 (v7)
+- Updated: 2026-11-11 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -25,14 +25,15 @@ npx @reduck-ai/cli@latest run --script reduck/youtube.com/get_comments
 
 - `sort` (string | null, required): Effective sort on the first page; null on cursor pages (the cursor carries its own order).
 - `videoId` (string, required)
-- `comments` (array, required): Empty when the video's comments are disabled. An unavailable video raises an error instead.
+- `comments` (array, required)
 - `nextCursor` (string | null, required): Pass back as cursor for the next page; null on the last page.
+- `commentsDisabled` (boolean, required): True when the uploader turned comments off for this video; comments is then empty.
 
 ## FAQ
 
 ### What does "Get YouTube comments" do?
 
-List a YouTube video's top-level comments from a watch URL or video id. Per comment: id, text, author, channelId, authorAvatar, publishedTime, likeCount, replyCount, isVerified, isCreator, pinned. Sort by 'top' (default) or 'newest' and paginate with the returned nextCursor. likeCount and replyCount are YouTube's abbreviated strings (e.g. "255k", "960"), and comments come back empty when they are disabled.
+List a YouTube video's top-level comments from a watch URL or video id. Per comment: id, text, author, channelId, authorAvatar, publishedTime, likeCount, replyCount, isVerified, isCreator, pinned. Sort by 'top' (default) or 'newest' and paginate with the returned nextCursor. likeCount, replyCount and publishedTime are YouTube's display strings in the account's language (e.g. "255k", "1 year ago"). When the uploader turned comments off, comments is empty and commentsDisabled is true. A video that does not exist or cannot be watched fails with an error that names it.
 
 ### How do I automatically get YouTube comments on youtube.com?
 
@@ -48,7 +49,7 @@ Required: video. Optional: sort, cursor.
 
 ### What does it return?
 
-It returns sort, videoId, comments, nextCursor.
+It returns sort, videoId, comments, nextCursor, commentsDisabled.
 
 ### Do I need to be logged in to youtube.com?
 

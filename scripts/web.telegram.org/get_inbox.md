@@ -1,10 +1,10 @@
 # Get Telegram inbox
 
-Automatically get Telegram inbox on web.telegram.org. List the conversations in the Telegram Web chat list, newest first: each one's name, its peer id (the handle every other Telegram script uses to open it), the last message preview, the time shown on the row, and the unread count. Scrolls to load older conversations up to the requested count. Returns an empty list when the account has no conversations, which is a real answer rather than a failure.
+Automatically get Telegram inbox on web.telegram.org. List the conversations of the Telegram account signed in to this browser, in the order Telegram shows them: each one's peer id (the id the other Telegram scripts take), kind, title, unread and mention counts, and its last message, with a read receipt for a message the account sent. Also returns the account itself. Returns 100 conversations a page: pass nextCursor for the next page, or archived for the archive. Reading does not mark anything as read.
 
 - Site: web.telegram.org
 - Address: `reduck/web.telegram.org/get_inbox`
-- Updated: 2026-10-29 (v8)
+- Updated: 2026-11-11 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,20 +17,21 @@ npx @reduck-ai/cli@latest run --script reduck/web.telegram.org/get_inbox
 
 ## Input
 
-- `count` (integer, optional): Maximum conversations to return, scrolling the chat list to load older ones.
+- `cursor` (string, optional): Omit for the first page. To read the next one, pass the nextCursor of the previous call (with the same archived value).
+- `archived` (boolean, optional): True to list the archived conversations instead of the main list.
 
 ## Output
 
-- `chats` (array, required)
-- `count` (integer, required)
-- `state` (string, required)
-- `complete` (boolean, required): True when every conversation of the chat list was returned; false when count stopped the list first.
+- `chats` (array, required): Up to 100 conversations, in the order Telegram lists them: pinned first, then by last activity. Empty when the list has none.
+- `account` (object, required): The Telegram account this browser is signed in as: confirm it before anything that writes.
+- `nextCursor` (string | null, required): Pass it as cursor to read the next page. Null on the last page.
+- `totalCount` (integer | null, optional): How many conversations the list holds in all.
 
 ## FAQ
 
 ### What does "Get Telegram inbox" do?
 
-List the conversations in the Telegram Web chat list, newest first: each one's name, its peer id (the handle every other Telegram script uses to open it), the last message preview, the time shown on the row, and the unread count. Scrolls to load older conversations up to the requested count. Returns an empty list when the account has no conversations, which is a real answer rather than a failure.
+List the conversations of the Telegram account signed in to this browser, in the order Telegram shows them: each one's peer id (the id the other Telegram scripts take), kind, title, unread and mention counts, and its last message, with a read receipt for a message the account sent. Also returns the account itself. Returns 100 conversations a page: pass nextCursor for the next page, or archived for the archive. Reading does not mark anything as read.
 
 ### How do I automatically get Telegram inbox on web.telegram.org?
 
@@ -42,11 +43,11 @@ You do not need one. "Get Telegram inbox" drives the real web.telegram.org pages
 
 ### What information do I need to provide?
 
-Optional: count.
+Optional: cursor, archived.
 
 ### What does it return?
 
-It returns chats, count, state, complete.
+It returns chats, account, nextCursor, totalCount.
 
 ### Do I need to be logged in to web.telegram.org?
 

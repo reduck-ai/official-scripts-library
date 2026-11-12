@@ -4,7 +4,7 @@ Report which Instagram account this browser is signed in as: the user id, @usern
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/whoami`
-- Updated: 2026-10-22 (v6)
+- Updated: 2026-11-11 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

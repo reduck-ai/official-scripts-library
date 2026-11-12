@@ -1,10 +1,10 @@
 # Search Instagram users
 
-Automatically search Instagram users on instagram.com. Search Instagram accounts by keyword (name or handle). Returns ranked users with pk, username, full_name, is_private, is_verified, is_business, and profile_pic_url. Results are Instagram's own ranking; count is a hint the server may not honor exactly.
+Automatically search Instagram users on instagram.com. Search Instagram accounts by keyword (a name or a handle), as the search box does. Returns the users in Instagram's own ranking, each with pk, username, full_name, is_verified and profile_pic_url; is_private and is_business are null when Instagram's search answer does not give them. count limits the list to its first entries; Instagram decides how many it returns. A query that matches no account returns an empty list.
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/search_users`
-- Updated: 2026-10-28 (v3)
+- Updated: 2026-11-11 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -24,7 +24,7 @@ npx @reduck-ai/cli@latest run --script reduck/instagram.com/search_users
 
 ### What does "Search Instagram users" do?
 
-Search Instagram accounts by keyword (name or handle). Returns ranked users with pk, username, full_name, is_private, is_verified, is_business, and profile_pic_url. Results are Instagram's own ranking; count is a hint the server may not honor exactly.
+Search Instagram accounts by keyword (a name or a handle), as the search box does. Returns the users in Instagram's own ranking, each with pk, username, full_name, is_verified and profile_pic_url; is_private and is_business are null when Instagram's search answer does not give them. count limits the list to its first entries; Instagram decides how many it returns. A query that matches no account returns an empty list.
 
 ### How do I automatically search Instagram users on instagram.com?
 
@@ -44,7 +44,7 @@ Yes. It acts as you on instagram.com: on your own Chrome it reuses your session,
 
 ### Does it change anything on instagram.com, or only read data?
 
-Unknown: its author has not declared whether it changes anything on instagram.com, so treat it as if it could.
+It only reads. It looks things up on instagram.com and changes nothing there.
 
 ### How do I run it?
 

@@ -1,10 +1,10 @@
 # Get Instagram post comments
 
-Automatically get Instagram post comments on instagram.com. Fetch the top-level comments of an Instagram post or reel by shortcode, in Instagram's own order, plus its caption and counts. Returns code, url, caption, comments (id, text, user, verified, created_at, like_count, reply_count), like_count, view_count, comment_count (Instagram's count, replies included), comments_disabled, and complete. Reads up to count comments (default 12); complete is true only when every top-level comment was read, false when count stopped the list first. Replies are not included. A post with no comments returns an empty list.
+Automatically get Instagram post comments on instagram.com. Fetch the top-level comments of an Instagram post or reel by its shortcode or link, in Instagram's own order, plus its caption and counts. Returns code, url, caption, comments (id, text, user, verified, created_at, like_count, reply_count), like_count, view_count, comment_count (Instagram's count, replies included), comments_disabled and complete. Reads up to count comments (default 12); complete is true only when every top-level comment was read, false when count stopped the list first. Replies are not included. A post with no comments returns an empty list. A post that was removed, is private to this account, or a wrong code fails with an error that says so.
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/get_post_comments`
-- Updated: 2026-10-22 (v10)
+- Updated: 2026-11-11 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,8 +17,8 @@ npx @reduck-ai/cli@latest run --script reduck/instagram.com/get_post_comments
 
 ## Input
 
-- `code` (string, required): Post shortcode, e.g. the X in instagram.com/p/X/
-- `count` (integer, optional): Max comments to return
+- `code` (string, required): The post's shortcode, the X in instagram.com/p/X/ or instagram.com/reel/X/, or that whole link. instagram.com/get_user_posts returns it as code.
+- `count` (integer, optional): Maximum number of top-level comments to return.
 
 ## Output
 
@@ -36,7 +36,7 @@ npx @reduck-ai/cli@latest run --script reduck/instagram.com/get_post_comments
 
 ### What does "Get Instagram post comments" do?
 
-Fetch the top-level comments of an Instagram post or reel by shortcode, in Instagram's own order, plus its caption and counts. Returns code, url, caption, comments (id, text, user, verified, created_at, like_count, reply_count), like_count, view_count, comment_count (Instagram's count, replies included), comments_disabled, and complete. Reads up to count comments (default 12); complete is true only when every top-level comment was read, false when count stopped the list first. Replies are not included. A post with no comments returns an empty list.
+Fetch the top-level comments of an Instagram post or reel by its shortcode or link, in Instagram's own order, plus its caption and counts. Returns code, url, caption, comments (id, text, user, verified, created_at, like_count, reply_count), like_count, view_count, comment_count (Instagram's count, replies included), comments_disabled and complete. Reads up to count comments (default 12); complete is true only when every top-level comment was read, false when count stopped the list first. Replies are not included. A post with no comments returns an empty list. A post that was removed, is private to this account, or a wrong code fails with an error that says so.
 
 ### How do I automatically get Instagram post comments on instagram.com?
 

@@ -1,10 +1,10 @@
 # Get YouTube channel stats
 
-Automatically get YouTube channel stats on youtube.com. Get a YouTube channel's stats and profile from a @handle, channel id (UC...) or channel URL. Returns channel_id, handle, name, description, subscribers, video_count, view_count, joined, country, channel_url, avatar, rss_url, is_family_safe, keywords and links. Subscribers is the abbreviated public figure (e.g. 4.51m becomes 4510000, approximate), while video_count and view_count are exact; joined is a display string (e.g. "1 Feb 2015") and each link's url is the display host without scheme.
+Automatically get YouTube channel stats on youtube.com. Get a YouTube channel's stats and profile from a @handle, channel id (UC...) or channel URL. Returns channel_id, handle, name, description, subscribers, video_count, view_count, joined, country, language, channel_url, avatar, rss_url, is_family_safe, keywords and links. Subscribers is the abbreviated public figure (e.g. 4.51M becomes 4510000, approximate), while video_count and view_count are exact, read correctly in any YouTube language. joined, country and subscribers_text are shown as YouTube writes them, in the language given by language (e.g. "Joined Feb 1, 2015" in English). Each link's url is the display host without scheme. An unknown channel fails with an error that names it.
 
 - Site: youtube.com
 - Address: `reduck/youtube.com/get_channel`
-- Updated: 2026-11-10 (v5)
+- Updated: 2026-11-11 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -26,10 +26,11 @@ npx @reduck-ai/cli@latest run --script reduck/youtube.com/get_channel
 - `links` (array, optional)
 - `avatar` (string | null, optional)
 - `handle` (string | null, optional)
-- `joined` (string | null, optional)
+- `joined` (string | null, optional): The join line as YouTube shows it, in the language of `language` (e.g. "Joined Nov 17, 2013").
 - `country` (string | null, optional)
 - `rss_url` (string | null, optional)
 - `keywords` (string | null, optional)
+- `language` (string | null, optional): YouTube's interface language for this browser (e.g. "en", "fr"): the language of subscribers_text, joined and country.
 - `view_count` (integer | null, optional)
 - `channel_url` (string | null, optional)
 - `description` (string | null, optional)
@@ -42,7 +43,7 @@ npx @reduck-ai/cli@latest run --script reduck/youtube.com/get_channel
 
 ### What does "Get YouTube channel stats" do?
 
-Get a YouTube channel's stats and profile from a @handle, channel id (UC...) or channel URL. Returns channel_id, handle, name, description, subscribers, video_count, view_count, joined, country, channel_url, avatar, rss_url, is_family_safe, keywords and links. Subscribers is the abbreviated public figure (e.g. 4.51m becomes 4510000, approximate), while video_count and view_count are exact; joined is a display string (e.g. "1 Feb 2015") and each link's url is the display host without scheme.
+Get a YouTube channel's stats and profile from a @handle, channel id (UC...) or channel URL. Returns channel_id, handle, name, description, subscribers, video_count, view_count, joined, country, language, channel_url, avatar, rss_url, is_family_safe, keywords and links. Subscribers is the abbreviated public figure (e.g. 4.51M becomes 4510000, approximate), while video_count and view_count are exact, read correctly in any YouTube language. joined, country and subscribers_text are shown as YouTube writes them, in the language given by language (e.g. "Joined Feb 1, 2015" in English). Each link's url is the display host without scheme. An unknown channel fails with an error that names it.
 
 ### How do I automatically get YouTube channel stats on youtube.com?
 
@@ -58,7 +59,7 @@ Required: channel.
 
 ### What does it return?
 
-It returns name, links, avatar, handle, joined, country, rss_url, keywords, channel_id, view_count, channel_url, description, subscribers, video_count, is_family_safe, subscribers_text.
+It returns name, links, avatar, handle, joined, country, rss_url, keywords, language, channel_id, view_count, channel_url, description, subscribers, video_count, is_family_safe, subscribers_text.
 
 ### Do I need to be logged in to youtube.com?
 

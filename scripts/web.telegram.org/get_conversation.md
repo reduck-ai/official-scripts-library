@@ -1,10 +1,10 @@
 # Get Telegram conversation
 
-Automatically get Telegram conversation on web.telegram.org. Open one Telegram conversation by its peer id (the id get_inbox returns) and read its messages in chronological order: message id, text, the time shown on the bubble, whether it carries media, and — for channel posts — the exact view and forward counts. Scrolls upward to load older messages up to the requested count. Returns an empty list for a conversation with no messages, which is a real answer rather than a failure.
+Automatically get Telegram conversation on web.telegram.org. Read the messages of one Telegram conversation, 40 at a time, oldest first: id, date, sender, text, media kind, reply link and, for channel posts, exact view and forward counts. Takes a peer id from get_inbox, or a public @username, which reads a public channel without joining it. Pass nextBeforeMessageId to read older messages. Reading does not mark the conversation as read. A conversation with no messages returns an empty list.
 
 - Site: web.telegram.org
 - Address: `reduck/web.telegram.org/get_conversation`
-- Updated: 2026-11-03 (v7)
+- Updated: 2026-11-11 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,22 +17,23 @@ npx @reduck-ai/cli@latest run --script reduck/web.telegram.org/get_conversation
 
 ## Input
 
-- `peerId` (string, required): The conversation's peer id, as returned by get_inbox (e.g. "-1001928149680"). Passed straight to Telegram's own deep link, so it must be the id and not a display name.
-- `count` (integer, optional): How many of the most recent messages to return, scrolling upward to load older ones.
+- `peerId` (string, required): The conversation: its peerId from web.telegram.org/get_inbox (a signed integer, e.g. "-1001005640892"), or the public username of a channel, group or person (e.g. "@telegram"), which works without joining it.
+- `beforeMessageId` (string, optional): Omit for the most recent messages. To read older ones, pass the nextBeforeMessageId of the previous call.
 
 ## Output
 
-- `count` (integer, required): How many messages were returned.
-- `state` (string, required): "ready" when message bubbles rendered; "empty" for a conversation that resolved (it has a title) but holds no messages — only after the empty list has held steady long enough to rule out a list that is still loading. An unresolvable peer id throws instead.
-- `peerId` (string, required): The peer id that was actually opened, read back from the address bar.
-- `messages` (array, required): Messages oldest-first, as the conversation displays them.
-- `chatTitle` (string | null, optional): The conversation title shown in the header, for a human-readable cross-check against peerId.
+- `peerId` (string, required): The conversation's peer id (also when a username was passed).
+- `messages` (array, required): Up to 40 messages, oldest first. Empty for a conversation with no messages.
+- `nextBeforeMessageId` (string | null, required): Pass it as beforeMessageId to read the page of older messages. Null when this page reaches the first message.
+- `kind` (string, optional)
+- `title` (string | null, optional): The conversation's name.
+- `totalCount` (integer | null, optional): How many messages the conversation holds in all.
 
 ## FAQ
 
 ### What does "Get Telegram conversation" do?
 
-Open one Telegram conversation by its peer id (the id get_inbox returns) and read its messages in chronological order: message id, text, the time shown on the bubble, whether it carries media, and — for channel posts — the exact view and forward counts. Scrolls upward to load older messages up to the requested count. Returns an empty list for a conversation with no messages, which is a real answer rather than a failure.
+Read the messages of one Telegram conversation, 40 at a time, oldest first: id, date, sender, text, media kind, reply link and, for channel posts, exact view and forward counts. Takes a peer id from get_inbox, or a public @username, which reads a public channel without joining it. Pass nextBeforeMessageId to read older messages. Reading does not mark the conversation as read. A conversation with no messages returns an empty list.
 
 ### How do I automatically get Telegram conversation on web.telegram.org?
 
@@ -44,11 +45,11 @@ You do not need one. "Get Telegram conversation" drives the real web.telegram.or
 
 ### What information do I need to provide?
 
-Required: peerId. Optional: count.
+Required: peerId. Optional: beforeMessageId.
 
 ### What does it return?
 
-It returns count, state, peerId, messages, chatTitle.
+It returns kind, title, peerId, messages, totalCount, nextBeforeMessageId.
 
 ### Do I need to be logged in to web.telegram.org?
 

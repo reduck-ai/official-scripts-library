@@ -4,7 +4,7 @@ Automatically get Reddit subreddit info on reddit.com. Fetch a subreddit's metad
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/get_subreddit_info`
-- Updated: 2026-10-22 (v15)
+- Updated: 2026-11-11 (v16)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -57,7 +57,7 @@ It returns id, rules, title, detail, status, created, subreddit, moderators, des
 
 ### Do I need to be logged in to reddit.com?
 
-No. It only uses pages of reddit.com that are reachable without signing in.
+Yes. It acts as you on reddit.com: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the reddit.com cookies saved by the Reduck extension.
 
 ### Does it change anything on reddit.com, or only read data?
 

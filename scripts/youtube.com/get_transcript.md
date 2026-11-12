@@ -1,10 +1,10 @@
 # Get YouTube video transcript
 
-Automatically get YouTube video transcript on youtube.com. Fetch a YouTube video's caption transcript (auto-generated or uploaded) with per-segment timestamps. Returns available:false when the video has no captions in any language. Some runs fail when YouTube plays an ad before the video, roughly 1 in 3; the script already retries, so if it still fails, call it again later. The paired-extension browser is more reliable than the managed browser, where YouTube often shows a sign-in check and no transcript is returned.
+Automatically get YouTube video transcript on youtube.com. Fetch a YouTube video's caption transcript (auto-generated or uploaded) in its default caption language, with per-segment timestamps. Returns available:false when the video has no captions in any language, and fails on a video that does not exist or cannot be played. A run can fail when YouTube does not serve the captions in time: call it again later. Works best on the paired-extension browser.
 
 - Site: youtube.com
 - Address: `reduck/youtube.com/get_transcript`
-- Updated: 2026-10-22 (v23)
+- Updated: 2026-11-11 (v24)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -30,7 +30,7 @@ npx @reduck-ai/cli@latest run --script reduck/youtube.com/get_transcript
 
 ### What does "Get YouTube video transcript" do?
 
-Fetch a YouTube video's caption transcript (auto-generated or uploaded) with per-segment timestamps. Returns available:false when the video has no captions in any language. Some runs fail when YouTube plays an ad before the video, roughly 1 in 3; the script already retries, so if it still fails, call it again later. The paired-extension browser is more reliable than the managed browser, where YouTube often shows a sign-in check and no transcript is returned.
+Fetch a YouTube video's caption transcript (auto-generated or uploaded) in its default caption language, with per-segment timestamps. Returns available:false when the video has no captions in any language, and fails on a video that does not exist or cannot be played. A run can fail when YouTube does not serve the captions in time: call it again later. Works best on the paired-extension browser.
 
 ### How do I automatically get YouTube video transcript on youtube.com?
 

@@ -4,7 +4,7 @@ Automatically get Instagram followers on instagram.com. A plain list of who foll
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/get_followers`
-- Updated: 2026-10-05 (v2)
+- Updated: 2026-11-11 (v4)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -21,15 +21,16 @@ npx @reduck-ai/cli@latest run --script reduck/instagram.com/get_followers
 
 ## Input
 
-- `username` (string, required): Handle without the @.
-- `count` (number, optional): Max followers to fetch; 0 = every page Instagram will serve.
+- `username` (string, required): Instagram username without the @, e.g. "nasa"
+- `cursor` (string, optional): next_cursor of the previous page. Omit it for the first page.
 
 ## Output
 
-- `count` (number, required)
-- `has_more` (boolean, required): True if Instagram still had pages when we stopped (count reached).
+- `count` (integer, required): Number of followers on this page.
+- `has_more` (boolean, required): True when another page can be read with next_cursor.
 - `username` (string, required)
 - `followers` (array, required)
+- `next_cursor` (string | null, required): Pass it as cursor to read the next page. Null on the last page.
 
 ## Example output
 
@@ -49,7 +50,8 @@ Shape only: placeholder values generated from the output schema, not a real run.
       "is_verified": true,
       "profile_pic_url": "https://example.com/item/123"
     }
-  ]
+  ],
+  "next_cursor": "…"
 }
 ```
 
@@ -57,7 +59,7 @@ Shape only: placeholder values generated from the output schema, not a real run.
 
 ### What does "Get Instagram followers" do?
 
-List an Instagram user's followers by their username. count=0 fetches every page. Instagram serves the full list only to the owner or accounts you follow; for other accounts it returns a capped preview, then has_more flips false. Returns count, has_more, and followers (pk, username, full_name, is_private, is_verified, profile_pic_url).
+List an Instagram user's followers by their username, one page per run. Returns username, count, has_more, next_cursor and followers (pk, username, full_name, is_private, is_verified, profile_pic_url). To read the next page, run it again with cursor set to next_cursor; has_more is false and next_cursor null on the last page. Instagram shows the full list only to the account itself and to accounts that follow it; for other accounts it serves a shorter preview, and it can leave some followers out of the count it shows. A username that does not exist, or a private account this account does not follow, fails with an error that says so.
 
 ### How do I automatically get Instagram followers on instagram.com?
 
@@ -69,11 +71,11 @@ You do not need one. "Get Instagram followers" drives the real instagram.com pag
 
 ### What information do I need to provide?
 
-Required: username. Optional: count.
+Required: username. Optional: cursor.
 
 ### What does it return?
 
-It returns count, has_more, username, followers.
+It returns count, has_more, username, followers, next_cursor.
 
 ### Do I need to be logged in to instagram.com?
 

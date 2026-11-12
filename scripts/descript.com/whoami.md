@@ -4,7 +4,7 @@ Report which Descript account this browser is signed in as: the user id, email a
 
 - Site: descript.com
 - Address: `reduck/descript.com/whoami`
-- Updated: 2026-10-20 (v2)
+- Updated: 2026-11-11 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

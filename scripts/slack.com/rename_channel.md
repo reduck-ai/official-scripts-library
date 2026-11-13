@@ -4,7 +4,7 @@ Automatically rename Slack channel on slack.com. Rename a channel (by name or id
 
 - Site: slack.com
 - Address: `reduck/slack.com/rename_channel`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-11-12 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,15 +17,18 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/rename_channel
 
 ## Input
 
-- `name` (string, required): New channel name (normalized to Slack's rules).
-- `channel` (string, required): Channel name/#name or id (C…).
-- `workspaceDomain` (string, optional): Workspace host, e.g. acme.slack.com. Defaults to the active workspace.
+- `name` (string, required): New channel name. Slack normalizes it (lowercase, hyphens); the output gives the name Slack kept.
+- `channel` (string, required): Channel id (C…/G…). Get it from slack.com/list_channels.
+- `workspaceDomain` (string, required): Workspace host, e.g. acme.slack.com. Confirm with the user which workspace to target before running.
 
 ## Output
 
 - `ok` (boolean, required)
+- `name` (string, required)
 - `channel` (string, required)
-- `name` (string, optional)
+- `unchanged` (boolean, optional)
+- `workspace` (string, optional)
+- `previousName` (string, optional)
 
 ## FAQ
 
@@ -43,11 +46,11 @@ You do not need one. "Rename Slack channel" drives the real slack.com pages in a
 
 ### What information do I need to provide?
 
-Required: channel, name. Optional: workspaceDomain.
+Required: channel, name, workspaceDomain.
 
 ### What does it return?
 
-It returns ok, name, channel.
+It returns ok, name, channel, unchanged, workspace, previousName.
 
 ### Do I need to be logged in to slack.com?
 

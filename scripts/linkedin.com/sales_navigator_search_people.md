@@ -4,7 +4,7 @@ Automatically search people on linkedin.com. Search LinkedIn Sales Navigator lea
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/sales_navigator_search_people`
-- Updated: 2026-09-03 (v9)
+- Updated: 2026-11-12 (v12)
 - Author: Reduck AI (reduck)
 
 ## Run it

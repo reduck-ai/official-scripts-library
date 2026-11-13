@@ -4,7 +4,7 @@ Automatically mark chat read/unread on web.whatsapp.com. Mark a chat (by exact n
 
 - Site: web.whatsapp.com
 - Address: `reduck/web.whatsapp.com/mark_read`
-- Updated: 2026-10-22 (v8)
+- Updated: 2026-11-12 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically search TikTok users on tiktok.com. Type part of a name or @handle 
 
 - Site: tiktok.com
 - Address: `reduck/tiktok.com/search_users`
-- Updated: 2026-10-05 (v2)
+- Updated: 2026-11-12 (v4)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -21,13 +21,14 @@ npx @reduck-ai/cli@latest run --script reduck/tiktok.com/search_users
 
 ## Input
 
-- `query` (string, required): Search keyword(s) — name or handle fragment.
+- `query` (string, required): Search keyword(s): a name or a handle fragment.
 
 ## Output
 
 - `query` (string, required)
-- `total` (integer, required): Number of users returned (TikTok web caps this around 10 per query; the endpoint's has_more/count/offset are non-functional for this surface, so there is no deeper page).
-- `users` (array, required)
+- `total` (integer, required): Number of users returned (TikTok's first page, about 10).
+- `users` (array, required): Matching accounts in TikTok's order.
+- `hasMore` (boolean, required): True when TikTok has more matches than this first page.
 
 ## Example output
 
@@ -48,7 +49,8 @@ Shape only: placeholder values generated from the output schema, not a real run.
       "heartCount": 3.5,
       "followerCount": 3.5
     }
-  ]
+  ],
+  "hasMore": true
 }
 ```
 
@@ -72,7 +74,7 @@ Required: query.
 
 ### What does it return?
 
-It returns query, total, users.
+It returns query, total, users, hasMore.
 
 ### Do I need to be logged in to tiktok.com?
 
@@ -80,7 +82,7 @@ Yes. It acts as you on tiktok.com: on your own Chrome it reuses your session, an
 
 ### Does it change anything on tiktok.com, or only read data?
 
-Unknown: its author has not declared whether it changes anything on tiktok.com, so treat it as if it could.
+It only reads. It looks things up on tiktok.com and changes nothing there.
 
 ### How do I run it?
 

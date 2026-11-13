@@ -4,7 +4,7 @@ Automatically get starred WhatsApp messages on web.whatsapp.com. Open Menu → S
 
 - Site: web.whatsapp.com
 - Address: `reduck/web.whatsapp.com/get_starred_messages`
-- Updated: 2026-10-22 (v4)
+- Updated: 2026-11-12 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically get TikTok user favorites on tiktok.com. List the videos a TikTok 
 
 - Site: tiktok.com
 - Address: `reduck/tiktok.com/get_user_favorites`
-- Updated: 2026-09-03 (v1)
+- Updated: 2026-11-12 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,13 +17,14 @@ npx @reduck-ai/cli@latest run --script reduck/tiktok.com/get_user_favorites
 
 ## Input
 
-- `username` (string, required): TikTok handle, with or without leading @.
-- `count` (integer, optional): Target number of favorited videos to collect; pages until this many are gathered or the list ends.
+- `username` (string, required): TikTok handle, with or without the leading @.
+- `cursor` (string, optional): The cursor a previous run returned, for the next page. Omit for the first page.
 
 ## Output
 
-- `videos` (array, required): Favorited videos (each authored by its ORIGINAL creator). Empty when the account keeps Favorites private, which is the default — an empty array is not an error.
-- `hasMore` (boolean, required)
+- `cursor` (string | null, required): Pass as cursor to get the next page; null on the last page.
+- `videos` (array, required): Favourited videos in TikTok's order. Each author is the original creator.
+- `hasMore` (boolean, required): True when TikTok has another page.
 - `username` (string, required)
 
 ## FAQ
@@ -42,11 +43,11 @@ You do not need one. "Get TikTok user favorites" drives the real tiktok.com page
 
 ### What information do I need to provide?
 
-Required: username. Optional: count.
+Required: username. Optional: cursor.
 
 ### What does it return?
 
-It returns videos, hasMore, username.
+It returns cursor, videos, hasMore, username.
 
 ### Do I need to be logged in to tiktok.com?
 
@@ -54,7 +55,7 @@ Yes. It acts as you on tiktok.com: on your own Chrome it reuses your session, an
 
 ### Does it change anything on tiktok.com, or only read data?
 
-Unknown: its author has not declared whether it changes anything on tiktok.com, so treat it as if it could.
+It only reads. It looks things up on tiktok.com and changes nothing there.
 
 ### How do I run it?
 

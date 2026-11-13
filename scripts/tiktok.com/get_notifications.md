@@ -4,7 +4,7 @@ Automatically get TikTok notifications on tiktok.com. List the logged-in account
 
 - Site: tiktok.com
 - Address: `reduck/tiktok.com/get_notifications`
-- Updated: 2026-09-03 (v1)
+- Updated: 2026-11-12 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,12 +17,13 @@ npx @reduck-ai/cli@latest run --script reduck/tiktok.com/get_notifications
 
 ## Input
 
-- `count` (integer, optional): Target number of notifications to collect; pages the aggregated activity feed until this many are gathered or the inbox ends.
+- `cursor` (string, optional): The cursor a previous run returned, for the next (older) page. Omit for the newest page.
 
 ## Output
 
-- `hasMore` (boolean, required)
-- `notifications` (array, required)
+- `cursor` (string | null, required): Pass as cursor to get the next (older) page; null on the last page.
+- `hasMore` (boolean, required): True when TikTok has older notifications.
+- `notifications` (array, required): Newest first, as TikTok gives them.
 
 ## FAQ
 
@@ -40,11 +41,11 @@ You do not need one. "Get TikTok notifications" drives the real tiktok.com pages
 
 ### What information do I need to provide?
 
-Optional: count.
+Optional: cursor.
 
 ### What does it return?
 
-It returns hasMore, notifications.
+It returns cursor, hasMore, notifications.
 
 ### Do I need to be logged in to tiktok.com?
 
@@ -52,7 +53,7 @@ Yes. It acts as you on tiktok.com: on your own Chrome it reuses your session, an
 
 ### Does it change anything on tiktok.com, or only read data?
 
-Unknown: its author has not declared whether it changes anything on tiktok.com, so treat it as if it could.
+It only reads. It looks things up on tiktok.com and changes nothing there.
 
 ### How do I run it?
 

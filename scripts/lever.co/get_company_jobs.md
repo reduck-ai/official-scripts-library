@@ -1,10 +1,10 @@
 # Lever: get company jobs
 
-Automatically get company jobs on lever.co. Fetch a company's live job postings from Lever's public postings API by board slug (jobs.lever.co/<slug>). Anonymous, no auth. Returns id, title, team, location(s), commitment, url, createdAt. Empty array if the company posts nothing right now; throws only on a genuine API error (not on "no jobs").
+Automatically get company jobs on lever.co. Fetch a company's live job postings from its Lever job board (jobs.lever.co/<slug>). No account needed. Returns id, title, team, location, commitment, url and createdAt for each posting. Returns an empty list when the company has no open postings; a slug that is unknown or blank is refused.
 
 - Site: lever.co
 - Address: `reduck/lever.co/get_company_jobs`
-- Updated: 2026-11-03 (v3)
+- Updated: 2026-11-12 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,7 +29,7 @@ npx @reduck-ai/cli@latest run --script reduck/lever.co/get_company_jobs
 
 ### What does "Lever: get company jobs" do?
 
-Fetch a company's live job postings from Lever's public postings API by board slug (jobs.lever.co/<slug>). Anonymous, no auth. Returns id, title, team, location(s), commitment, url, createdAt. Empty array if the company posts nothing right now; throws only on a genuine API error (not on "no jobs").
+Fetch a company's live job postings from its Lever job board (jobs.lever.co/<slug>). No account needed. Returns id, title, team, location, commitment, url and createdAt for each posting. Returns an empty list when the company has no open postings; a slug that is unknown or blank is refused.
 
 ### How do I automatically get company jobs on lever.co?
 

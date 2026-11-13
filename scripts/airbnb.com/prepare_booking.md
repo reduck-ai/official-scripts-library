@@ -4,7 +4,7 @@ Open Airbnb's confirm-and-pay page for a listing, dates and guests, signed in, a
 
 - Site: airbnb.com
 - Address: `reduck/airbnb.com/prepare_booking`
-- Updated: 2026-10-29 (v5)
+- Updated: 2026-11-12 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -25,6 +25,7 @@ npx @reduck-ai/cli@latest run --script reduck/airbnb.com/prepare_booking
 - `infants` (integer, optional)
 - `children` (integer, optional)
 - `currency` (string, optional)
+- `payment_plan` (string, optional): The payment plan to select: FULL_PAYMENT pays all now, DEPOSITS pays part now (often $0) and the rest on a later date. Omit to keep the plan Airbnb selects. A plan Airbnb does not offer for the stay fails with the plans it offers.
 
 ## Output
 
@@ -33,6 +34,7 @@ npx @reduck-ai/cli@latest run --script reduck/airbnb.com/prepare_booking
 - `checkout` (string, required)
 - `available` (boolean, required): False when Airbnb will not book these dates and guests; then only unavailableReason is filled and no confirm page is opened.
 - `priceItems` (array, required)
+- `review_hash` (string | null, required): A hash of what this booking commits to (stay, total, amount due today and plan, card, cancellation policy). Confirm an Airbnb booking takes it and books only if the checkout still matches. Null when the dates cannot be booked.
 - `paymentPlans` (array, required)
 - `total` (object | null, optional)
 - `guests` (object, optional)
@@ -52,11 +54,11 @@ Open Airbnb's confirm-and-pay page for a listing, dates and guests, signed in, a
 
 ### What information do I need to provide?
 
-Required: id, checkin, checkout. Optional: pets, adults, infants, children, currency.
+Required: id, checkin, checkout. Optional: pets, adults, infants, children, currency, payment_plan.
 
 ### What does it return?
 
-It returns id, total, guests, checkin, checkout, dueToday, available, priceItems, checkoutUrl, hostMessage, paymentPlans, paymentMethod, messageRequired, unavailableReason, cancellationPolicy.
+It returns id, total, guests, checkin, checkout, dueToday, available, priceItems, checkoutUrl, hostMessage, review_hash, paymentPlans, paymentMethod, messageRequired, unavailableReason, cancellationPolicy.
 
 ### Do I need to be logged in to airbnb.com?
 

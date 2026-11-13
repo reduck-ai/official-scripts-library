@@ -4,7 +4,7 @@ Automatically list Doctolib slots on doctolib.fr. List a Doctolib practitioner's
 
 - Site: doctolib.fr
 - Address: `reduck/doctolib.fr/list_slots`
-- Updated: 2026-11-05 (v11)
+- Updated: 2026-11-12 (v12)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically unlike YouTube video on youtube.com. Remove your like from a YouTu
 
 - Site: youtube.com
 - Address: `reduck/youtube.com/unlike_video`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-12 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,11 +18,14 @@ npx @reduck-ai/cli@latest run --script reduck/youtube.com/unlike_video
 ## Input
 
 - `video` (string, required): A YouTube video URL (watch?v=, youtu.be/, /shorts/, /embed/) or a bare 11-char video id.
+- `account` (string, optional): Email (or a distinctive part of it) of the signed-in Google account to act as, e.g. "you@example.com". Omit to use the browser's default account. When several accounts are signed in, name the intended one.
 
 ## Output
 
-- `liked` (boolean, required): Always false on success — the video is no longer liked.
+- `liked` (boolean, required): Always false on success - the video is no longer liked.
 - `videoId` (string, required)
+- `account` (string | null, optional): Email of the account the page used, when it could be read.
+- `authuser` (integer | null, optional): Session index used; null when the browser default was used.
 - `alreadyUnliked` (boolean, optional): true if the video was not liked to begin with (no click performed).
 
 ## FAQ
@@ -41,11 +44,11 @@ You do not need one. "Unlike YouTube video" drives the real youtube.com pages in
 
 ### What information do I need to provide?
 
-Required: video.
+Required: video. Optional: account.
 
 ### What does it return?
 
-It returns liked, videoId, alreadyUnliked.
+It returns liked, account, videoId, authuser, alreadyUnliked.
 
 ### Do I need to be logged in to youtube.com?
 

@@ -4,7 +4,7 @@ Automatically archive chat on web.whatsapp.com. Archive or unarchive a chat by e
 
 - Site: web.whatsapp.com
 - Address: `reduck/web.whatsapp.com/archive_chat`
-- Updated: 2026-10-22 (v7)
+- Updated: 2026-11-12 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it

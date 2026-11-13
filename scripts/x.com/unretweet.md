@@ -4,7 +4,7 @@ Undo your repost of a tweet given its URL. Tweets that aren't currently reposted
 
 - Site: x.com
 - Address: `reduck/x.com/unretweet`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-11-12 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

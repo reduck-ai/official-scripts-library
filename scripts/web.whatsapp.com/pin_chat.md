@@ -4,7 +4,7 @@ Automatically pin chat on web.whatsapp.com. Pin or unpin a chat (by exact name) 
 
 - Site: web.whatsapp.com
 - Address: `reduck/web.whatsapp.com/pin_chat`
-- Updated: 2026-10-22 (v7)
+- Updated: 2026-11-12 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it

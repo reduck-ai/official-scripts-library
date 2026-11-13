@@ -4,7 +4,7 @@ Automatically save (star) Slack message on slack.com. Save a message for later (
 
 - Site: slack.com
 - Address: `reduck/slack.com/star_message`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-11-12 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,14 +18,16 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/star_message
 ## Input
 
 - `ts` (string, required): The message's ts.
-- `channel` (string, required): Channel name/#name or id (C…).
-- `workspaceDomain` (string, optional): Workspace host, e.g. acme.slack.com. Defaults to the active workspace.
+- `channel` (string, required): Channel or DM id (C…/D…/G…). Get it from slack.com/list_channels.
+- `workspaceDomain` (string, required): Workspace host, e.g. acme.slack.com. Confirm with the user which workspace to target before running.
 
 ## Output
 
 - `ok` (boolean, required)
-- `ts` (string, optional)
-- `channel` (string, optional)
+- `ts` (string, required)
+- `channel` (string, required)
+- `workspace` (string, optional)
+- `alreadySaved` (boolean, optional): True when the message was already saved; nothing was changed.
 
 ## FAQ
 
@@ -43,11 +45,11 @@ You do not need one. "Save (star) Slack message" drives the real slack.com pages
 
 ### What information do I need to provide?
 
-Required: channel, ts. Optional: workspaceDomain.
+Required: channel, ts, workspaceDomain.
 
 ### What does it return?
 
-It returns ok, ts, channel.
+It returns ok, ts, channel, workspace, alreadySaved.
 
 ### Do I need to be logged in to slack.com?
 

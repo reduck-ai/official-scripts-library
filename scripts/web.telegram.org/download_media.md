@@ -4,7 +4,7 @@ Automatically download a Telegram message's file on web.telegram.org. Download t
 
 - Site: web.telegram.org
 - Address: `reduck/web.telegram.org/download_media`
-- Updated: 2026-11-11 (v7)
+- Updated: 2026-11-12 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it

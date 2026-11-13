@@ -4,7 +4,7 @@ Automatically delete Slack file on slack.com. Delete a file you own by its id (F
 
 - Site: slack.com
 - Address: `reduck/slack.com/delete_file`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-12 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,13 +17,16 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/delete_file
 
 ## Input
 
-- `file` (string, required): File id (F…) to delete.
-- `workspaceDomain` (string, optional): Workspace host, e.g. acme.slack.com. Defaults to the active workspace.
+- `file` (string, required): File id (F…) to delete. Permanent.
+- `channel` (string, required): Id of the channel or DM where the file was shared (C…/D…/G…). Get it from slack.com/list_channels.
+- `workspaceDomain` (string, required): Workspace host, e.g. acme.slack.com. Confirm with the user which workspace to target before running.
 
 ## Output
 
 - `ok` (boolean, required)
 - `file` (string, required)
+- `channel` (string, optional)
+- `workspace` (string, optional)
 
 ## FAQ
 
@@ -41,11 +44,11 @@ You do not need one. "Delete Slack file" drives the real slack.com pages in a br
 
 ### What information do I need to provide?
 
-Required: file. Optional: workspaceDomain.
+Required: file, channel, workspaceDomain.
 
 ### What does it return?
 
-It returns ok, file.
+It returns ok, file, channel, workspace.
 
 ### Do I need to be logged in to slack.com?
 

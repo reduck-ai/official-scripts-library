@@ -4,7 +4,7 @@ Automatically get current Nike member on nike.com. Report which Nike Member acco
 
 - Site: nike.com
 - Address: `reduck/nike.com/get_current_user`
-- Updated: 2026-10-22 (v8)
+- Updated: 2026-11-12 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it

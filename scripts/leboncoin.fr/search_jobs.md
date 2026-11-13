@@ -1,10 +1,10 @@
 # Search leboncoin jobs
 
-Automatically search leboncoin jobs on leboncoin.fr. Search leboncoin's "Offres d'emploi" (job listings) category by free-text keyword and optional free-text city location. Reads the search page's own richer underlying data rather than the visible cards, so results include salary, contract type, sector, experience, study level, and work time when the poster provided them (fields are null otherwise, which is common for private-seller ads with no company attached). Location text is matched against leboncoin's own city list, picking the closest whole-city match; an unrecognized location throws. Pagination is 1-based, 35 results per page. An unmatched keyword returns a clean empty result rather than an error. One known limitation: requesting a page beyond the search's real page count is detected and reported as an explicit out-of-range error, rather than the misleading empty result leboncoin's own site would otherwise show.
+Automatically search leboncoin jobs on leboncoin.fr. Search leboncoin's job listings ("Offres d'emploi") by free-text keyword and optional city. Results include salary, contract type, sector, experience, study level and work time when the poster provided them; those fields are null otherwise, which is common for ads with no company attached. The location is matched against leboncoin's own city list, picking the closest whole-city match; an unrecognized city is refused. Pagination is 1-based, 35 results per page; a page beyond the last is refused rather than returned as an empty result. A keyword with no match returns an empty result, not an error.
 
 - Site: leboncoin.fr
 - Address: `reduck/leboncoin.fr/search_jobs`
-- Updated: 2026-11-03 (v7)
+- Updated: 2026-11-12 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -30,7 +30,7 @@ npx @reduck-ai/cli@latest run --script reduck/leboncoin.fr/search_jobs
 
 ### What does "Search leboncoin jobs" do?
 
-Search leboncoin's "Offres d'emploi" (job listings) category by free-text keyword and optional free-text city location. Reads the search page's own richer underlying data rather than the visible cards, so results include salary, contract type, sector, experience, study level, and work time when the poster provided them (fields are null otherwise, which is common for private-seller ads with no company attached). Location text is matched against leboncoin's own city list, picking the closest whole-city match; an unrecognized location throws. Pagination is 1-based, 35 results per page. An unmatched keyword returns a clean empty result rather than an error. One known limitation: requesting a page beyond the search's real page count is detected and reported as an explicit out-of-range error, rather than the misleading empty result leboncoin's own site would otherwise show.
+Search leboncoin's job listings ("Offres d'emploi") by free-text keyword and optional city. Results include salary, contract type, sector, experience, study level and work time when the poster provided them; those fields are null otherwise, which is common for ads with no company attached. The location is matched against leboncoin's own city list, picking the closest whole-city match; an unrecognized city is refused. Pagination is 1-based, 35 results per page; a page beyond the last is refused rather than returned as an empty result. A keyword with no match returns an empty result, not an error.
 
 ### How do I automatically search leboncoin jobs on leboncoin.fr?
 

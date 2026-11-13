@@ -4,7 +4,7 @@ Automatically unlike a tweet on X (Twitter) on x.com. Remove your like from a tw
 
 - Site: x.com
 - Address: `reduck/x.com/unlike_tweet`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-11-12 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

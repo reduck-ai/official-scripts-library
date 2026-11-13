@@ -4,7 +4,7 @@ Automatically delete Slack message on slack.com. Delete one of your own messages
 
 - Site: slack.com
 - Address: `reduck/slack.com/delete_message`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-12 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,14 +18,15 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/delete_message
 ## Input
 
 - `ts` (string, required): The message's ts.
-- `channel` (string, required): Channel name/#name or id (C…/D…).
-- `workspaceDomain` (string, optional): Workspace host. Defaults to the active workspace.
+- `channel` (string, required): Channel or DM id (C…/D…/G…). Get it from slack.com/list_channels.
+- `workspaceDomain` (string, required): Workspace host, e.g. acme.slack.com. Confirm with the user which workspace to target before running.
 
 ## Output
 
 - `ok` (boolean, required)
 - `ts` (string, required)
 - `channel` (string, required)
+- `workspace` (string, optional)
 
 ## FAQ
 
@@ -43,11 +44,11 @@ You do not need one. "Delete Slack message" drives the real slack.com pages in a
 
 ### What information do I need to provide?
 
-Required: channel, ts. Optional: workspaceDomain.
+Required: channel, ts, workspaceDomain.
 
 ### What does it return?
 
-It returns ok, ts, channel.
+It returns ok, ts, channel, workspace.
 
 ### Do I need to be logged in to slack.com?
 

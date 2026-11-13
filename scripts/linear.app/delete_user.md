@@ -4,7 +4,7 @@ Remove a member's access to a Linear workspace, identified by email. A pending i
 
 - Site: linear.app
 - Address: `reduck/linear.app/delete_user`
-- Updated: 2026-11-02 (v7)
+- Updated: 2026-11-12 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it

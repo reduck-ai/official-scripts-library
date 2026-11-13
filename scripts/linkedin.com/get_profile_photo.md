@@ -4,7 +4,7 @@ Automatically get LinkedIn profile photo on linkedin.com. Get a LinkedIn profile
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_profile_photo`
-- Updated: 2026-11-03 (v14)
+- Updated: 2026-11-12 (v16)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/get_profile_photo
 
 ## Input
 
-- `publicId` (string, optional): LinkedIn public profile id — the /in/ segment. Accepts the vanity slug (e.g. 'dhuynh95'), the obfuscated member token (ACoAA…), or a full profile URL (the /in/<id> is extracted).
+- `publicId` (string, optional): LinkedIn public profile id — the /in/ segment. Accepts the vanity slug (e.g. 'firstname-lastname-123456'), the obfuscated member token (ACoAA…), or a full profile URL (the /in/<id> is extracted).
 - `publicIds` (array, optional): Not supported since 19 Oct 2026: the run fails with a message saying so. Send one publicId per call and fan out with run_script's scripts.
 
 ## Output

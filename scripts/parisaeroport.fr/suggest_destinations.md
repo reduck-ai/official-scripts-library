@@ -1,10 +1,10 @@
 # Suggest Paris flight destinations
 
-Automatically suggest Paris flight destinations on parisaeroport.fr. Resolve a free-text destination to Paris Aéroport's ranked airport suggestions [{iataCode, name, city, ...}] ([0] = best), as the site's own typeahead answers it. Disambiguates multi-airport cities; pass a returned name to search_departures. Airport names are in French and the site matches their start, so an English city name may return nothing: pass the French form (e.g. "Londres") or its first letters. An empty list means the site has no destination for that text.
+Automatically suggest Paris flight destinations on parisaeroport.fr. Resolve a free-text destination to Paris Aéroport's ranked airport suggestions [{iataCode, name, city, ...}] ([0] = best), as the site's own typeahead answers it on its English board. Disambiguates multi-airport cities; pass a returned name to search_departures. Pass the destination in English (e.g. "London"); names come back in English (LONDON GATWICK). An empty list means the site has no destination for that text.
 
 - Site: parisaeroport.fr
 - Address: `reduck/parisaeroport.fr/suggest_destinations`
-- Updated: 2026-10-28 (v11)
+- Updated: 2026-11-12 (v12)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,20 +17,20 @@ npx @reduck-ai/cli@latest run --script reduck/parisaeroport.fr/suggest_destinati
 
 ## Input
 
-- `query` (string, required): Free-text destination to look up, e.g. 'Shanghai', 'London', 'New York'. Matches the site's own typeahead (also its French names, e.g. 'Londres').
+- `query` (string, required): Free-text destination to look up, in English, e.g. 'Shanghai', 'London', 'New York'. Matches the site's own typeahead on its English board.
 - `limit` (integer, optional): Max suggestions to return.
 
 ## Output
 
 - `query` (string, required)
-- `matchedTerm` (string, required): The term the returned suggestions actually correspond to. Equals `query` in the normal case. The site prefix-matches French airport labels, so an English name can match nothing while a prefix of it does - for 'London' this is 'Lond', the longest prefix the site still resolves to the LONDRES airports. Equals `query` whenever `destinations` is empty.
+- `matchedTerm` (string, required): The term the returned suggestions correspond to. Always equals `query`.
 - `destinations` (array, required): Airport suggestions in the site's ranked order ([0] = best match). Empty when the site has no destination for the query. A metro (e.g. London) yields one entry per airport, sharing a cityCode.
 
 ## FAQ
 
 ### What does "Suggest Paris flight destinations" do?
 
-Resolve a free-text destination to Paris Aéroport's ranked airport suggestions [{iataCode, name, city, ...}] ([0] = best), as the site's own typeahead answers it. Disambiguates multi-airport cities; pass a returned name to search_departures. Airport names are in French and the site matches their start, so an English city name may return nothing: pass the French form (e.g. "Londres") or its first letters. An empty list means the site has no destination for that text.
+Resolve a free-text destination to Paris Aéroport's ranked airport suggestions [{iataCode, name, city, ...}] ([0] = best), as the site's own typeahead answers it on its English board. Disambiguates multi-airport cities; pass a returned name to search_departures. Pass the destination in English (e.g. "London"); names come back in English (LONDON GATWICK). An empty list means the site has no destination for that text.
 
 ### How do I automatically suggest Paris flight destinations on parisaeroport.fr?
 

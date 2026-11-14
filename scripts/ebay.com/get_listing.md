@@ -4,7 +4,7 @@ Automatically get eBay listing details on ebay.com. Fetch an eBay item listing: 
 
 - Site: ebay.com
 - Address: `reduck/ebay.com/get_listing`
-- Updated: 2026-11-06 (v3)
+- Updated: 2026-11-13 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

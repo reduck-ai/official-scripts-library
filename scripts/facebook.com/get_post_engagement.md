@@ -1,10 +1,10 @@
 # Get the comments and reactions of a Facebook post
 
-Automatically get the comments and reactions of a Facebook post on facebook.com. Get the comments and reactions of a Facebook post as structured data, with the reaction breakdown by type. Get reactions (total + breakdown by type), comment and share counts, and loaded comments (author, text, reactions, reply flag) for a Facebook post URL. Comments are an infinite-scroll sample in non-deterministic "Most relevant" order, capped by commentLimit.
+Automatically get the comments and reactions of a Facebook post on facebook.com. Get the engagement of a Facebook post from its link: total reactions, the count per reaction type, the number of comments and shares, and the comments themselves with author, text, reactions and whether each is a reply. Comments come in the order Facebook shows them (most relevant first) and are capped by commentLimit. For a reel, only the counts are returned. A post that is deleted, private or not visible to the browser returns a clear error.
 
 - Site: facebook.com
 - Address: `reduck/facebook.com/get_post_engagement`
-- Updated: 2026-10-22 (v10)
+- Updated: 2026-11-13 (v12)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,18 +17,21 @@ npx @reduck-ai/cli@latest run --script reduck/facebook.com/get_post_engagement
 
 ## Input
 
-- `postUrl` (string, required)
+- `postUrl` (string, required): Link to the post, photo, video or reel.
+- `commentLimit` (integer, optional): How many comments to return at most.
 
 ## Output
 
-- `post` (object, optional)
-- `comments` (array, optional)
+- `post` (object, required)
+- `comments` (array, required)
+- `isReel` (boolean, optional): Present and true when the link is a reel: counts only, no comments.
+- `reelId` (string, optional): The reel's id, when the link is a reel.
 
 ## FAQ
 
 ### What does "Get the comments and reactions of a Facebook post" do?
 
-Get the comments and reactions of a Facebook post as structured data, with the reaction breakdown by type. Get reactions (total + breakdown by type), comment and share counts, and loaded comments (author, text, reactions, reply flag) for a Facebook post URL. Comments are an infinite-scroll sample in non-deterministic "Most relevant" order, capped by commentLimit.
+Get the engagement of a Facebook post from its link: total reactions, the count per reaction type, the number of comments and shares, and the comments themselves with author, text, reactions and whether each is a reply. Comments come in the order Facebook shows them (most relevant first) and are capped by commentLimit. For a reel, only the counts are returned. A post that is deleted, private or not visible to the browser returns a clear error.
 
 ### How do I automatically get the comments and reactions of a Facebook post on facebook.com?
 
@@ -40,11 +43,11 @@ You do not need one. "Get the comments and reactions of a Facebook post" drives 
 
 ### What information do I need to provide?
 
-Required: postUrl.
+Required: postUrl. Optional: commentLimit.
 
 ### What does it return?
 
-It returns post, comments.
+It returns post, isReel, reelId, comments.
 
 ### Do I need to be logged in to facebook.com?
 

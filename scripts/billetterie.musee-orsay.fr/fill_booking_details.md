@@ -1,10 +1,10 @@
 # Identify the buyer on the Musée d'Orsay ticket shop
 
-Give the buyer's email to the official Musée d'Orsay ticket shop, for the basket filled with add_to_cart, and report what the shop needs before payment. Every order needs a Musée d'Orsay customer account, and the shop only keeps a new account once its first order is paid. A browser already identified returns already_identified and changes nothing. Otherwise the email decides: an existing account returns sign_in_required (sign in with its password in this browser), an unknown email returns new_customer_details_required with the sign-up fields the shop asks for (name, email, password, country). The script never types a password, never creates an account and stops before payment: run complete_booking next.
+Give the buyer's email to the official Musée d'Orsay ticket shop, for the basket filled with add_to_cart, and report what the shop needs before payment. Every order needs a Musée d'Orsay customer account, and the shop only keeps a new account once its first order is paid. A browser already identified returns already_identified and changes nothing. Otherwise the email decides: an existing account returns sign_in_required (sign in with its password in this browser), an unknown email returns new_customer_details_required with the sign-up fields the shop asks for (name, email, password, country). The script never types a password, never creates an account and stops before payment: run pay next.
 
 - Site: billetterie.musee-orsay.fr
 - Address: `reduck/billetterie.musee-orsay.fr/fill_booking_details`
-- Updated: 2026-10-27 (v2)
+- Updated: 2026-11-13 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,7 +29,7 @@ npx @reduck-ai/cli@latest run --script reduck/billetterie.musee-orsay.fr/fill_bo
 
 ### What does "Identify the buyer on the Musée d'Orsay ticket shop" do?
 
-Give the buyer's email to the official Musée d'Orsay ticket shop, for the basket filled with add_to_cart, and report what the shop needs before payment. Every order needs a Musée d'Orsay customer account, and the shop only keeps a new account once its first order is paid. A browser already identified returns already_identified and changes nothing. Otherwise the email decides: an existing account returns sign_in_required (sign in with its password in this browser), an unknown email returns new_customer_details_required with the sign-up fields the shop asks for (name, email, password, country). The script never types a password, never creates an account and stops before payment: run complete_booking next.
+Give the buyer's email to the official Musée d'Orsay ticket shop, for the basket filled with add_to_cart, and report what the shop needs before payment. Every order needs a Musée d'Orsay customer account, and the shop only keeps a new account once its first order is paid. A browser already identified returns already_identified and changes nothing. Otherwise the email decides: an existing account returns sign_in_required (sign in with its password in this browser), an unknown email returns new_customer_details_required with the sign-up fields the shop asks for (name, email, password, country). The script never types a password, never creates an account and stops before payment: run pay next.
 
 ### What information do I need to provide?
 

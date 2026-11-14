@@ -1,10 +1,10 @@
 # Dealroom whoami
 
-Report which Dealroom account this browser is signed in as: email, name and user id, from the dashboard's own page data. Being signed out is reported as a normal answer (loggedIn false), not an error; a Dealroom rate-limit page is named rather than guessed at.
+Report which Dealroom account this browser is signed in as: email, name and user id, from the dashboard's own page data. A signed-out browser is reported as not logged in, so it can be used to check a session before running other Dealroom scripts.
 
 - Site: dealroom.co
 - Address: `reduck/dealroom.co/whoami`
-- Updated: 2026-10-22 (v4)
+- Updated: 2026-11-13 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -30,7 +30,7 @@ It takes no input.
 
 ### What does "Dealroom whoami" do?
 
-Report which Dealroom account this browser is signed in as: email, name and user id, from the dashboard's own page data. Being signed out is reported as a normal answer (loggedIn false), not an error; a Dealroom rate-limit page is named rather than guessed at.
+Report which Dealroom account this browser is signed in as: email, name and user id, from the dashboard's own page data. A signed-out browser is reported as not logged in, so it can be used to check a session before running other Dealroom scripts.
 
 ### What information do I need to provide?
 

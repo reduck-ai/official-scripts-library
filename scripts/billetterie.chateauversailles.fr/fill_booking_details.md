@@ -1,10 +1,10 @@
 # Fill Château de Versailles booking details
 
-Give the visitor details for the cart already filled with add_to_cart on the official Château de Versailles ticket shop, as a guest (no account is created). The shop checks every email address with a 6-digit code it sends to that address, so this runs in two passes on the same browser: first with the email only, which makes the shop send the code and returns status email_code_sent; then again with the same email, the code from that email and the visitor's first and last name, which fills the guest form and returns status details_filled. Returns the fields the shop requires and whether each one is filled. It stops before payment: run complete_booking next. A wrong or expired code fails with an error that says to run the first pass again. An empty cart fails with an error that says to run add_to_cart first.
+Give the visitor details for the cart already filled with add_to_cart on the official Château de Versailles ticket shop, as a guest (no account is created). The shop checks every email address with a 6-digit code it sends to that address, so this runs in two passes on the same browser: first with the email only, which makes the shop send the code and returns status email_code_sent; then again with the same email, the code from that email and the visitor's first and last name, which fills the guest form and returns status details_filled. Returns the fields the shop requires and whether each one is filled. It stops before payment: run pay next. A wrong or expired code fails with an error that says to run the first pass again. An empty cart fails with an error that says to run add_to_cart first.
 
 - Site: billetterie.chateauversailles.fr
 - Address: `reduck/billetterie.chateauversailles.fr/fill_booking_details`
-- Updated: 2026-10-27 (v1)
+- Updated: 2026-11-13 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -37,7 +37,7 @@ npx @reduck-ai/cli@latest run --script reduck/billetterie.chateauversailles.fr/f
 
 ### What does "Fill Château de Versailles booking details" do?
 
-Give the visitor details for the cart already filled with add_to_cart on the official Château de Versailles ticket shop, as a guest (no account is created). The shop checks every email address with a 6-digit code it sends to that address, so this runs in two passes on the same browser: first with the email only, which makes the shop send the code and returns status email_code_sent; then again with the same email, the code from that email and the visitor's first and last name, which fills the guest form and returns status details_filled. Returns the fields the shop requires and whether each one is filled. It stops before payment: run complete_booking next. A wrong or expired code fails with an error that says to run the first pass again. An empty cart fails with an error that says to run add_to_cart first.
+Give the visitor details for the cart already filled with add_to_cart on the official Château de Versailles ticket shop, as a guest (no account is created). The shop checks every email address with a 6-digit code it sends to that address, so this runs in two passes on the same browser: first with the email only, which makes the shop send the code and returns status email_code_sent; then again with the same email, the code from that email and the visitor's first and last name, which fills the guest form and returns status details_filled. Returns the fields the shop requires and whether each one is filled. It stops before payment: run pay next. A wrong or expired code fails with an error that says to run the first pass again. An empty cart fails with an error that says to run add_to_cart first.
 
 ### What information do I need to provide?
 

@@ -4,7 +4,7 @@ Automatically retweet (repost) a tweet on X (Twitter) from an AI agent on x.com.
 
 - Site: x.com
 - Address: `reduck/x.com/retweet`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-11-13 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -23,10 +23,10 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/retweet
 
 - `tweet_id` (string, required)
 - `retweeted` (boolean, required)
-- `was_retweeted` (boolean, required): already_present signal: true if the repost already existed before this call
-- `verified_on_page` (boolean, required): true if the page was reloaded and re-inspected after the action, confirming the repost is actually visible/present
-- `retweet_id` (string, optional): id of the repost wrapper (only when newly created)
-- `account_used` (string | null, optional): handle of the logged-in account that performed the action, read from the account switcher UI (not assumed from input)
+- `was_retweeted` (boolean, required): true if the repost already existed before this call
+- `verified_on_page` (boolean, required): true if the tweet was opened again after the action and shows it as reposted
+- `retweet_id` (string, optional): id of the repost (only when newly created)
+- `account_used` (string | null, optional): handle of the signed-in account that performed the action
 
 ## FAQ
 

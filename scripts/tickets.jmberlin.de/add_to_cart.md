@@ -1,10 +1,10 @@
 # Add Jewish Museum Berlin tickets to the basket
 
-Automatically add Jewish Museum Berlin tickets to the basket on tickets.jmberlin.de. Put tickets for one date and one entry slot in the basket of the official Jewish Museum Berlin ticket shop, with a quantity per ticket type (adults, under age of 18). Take the slot and the ticket types from check_availability: a slot is its time (HH:MM) or its startsAt value, a ticket type is its id or a part of its title. Returns the basket lines (ticket, slot, quantity, unit price, line total) and the total in euros. The basket lives in this browser: tickets already in it stay, unless emptyBasketFirst is true. Nothing is booked until complete_booking places the order. A slot with too few places, an unknown slot or ticket type, or a quantity above the most one order can hold fails with an error that names the valid values.
+Automatically add Jewish Museum Berlin tickets to the basket on tickets.jmberlin.de. Put tickets for one date and one entry slot in the basket of the official Jewish Museum Berlin ticket shop, with a quantity per ticket type (adults, under age of 18). Take the slot and the ticket types from check_availability: a slot is its time (HH:MM) or its startsAt value, a ticket type is its id or a part of its title. Returns the basket lines (ticket, slot, quantity, unit price, line total) and the total in euros. The basket lives in this browser: tickets already in it stay, unless emptyBasketFirst is true. Nothing is booked until pay places the order. A slot with too few places, an unknown slot or ticket type, or a quantity above the most one order can hold fails with an error that names the valid values.
 
 - Site: tickets.jmberlin.de
 - Address: `reduck/tickets.jmberlin.de/add_to_cart`
-- Updated: 2026-10-27 (v1)
+- Updated: 2026-11-13 (v1)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -33,7 +33,7 @@ npx @reduck-ai/cli@latest run --script reduck/tickets.jmberlin.de/add_to_cart
 
 ### What does "Add Jewish Museum Berlin tickets to the basket" do?
 
-Put tickets for one date and one entry slot in the basket of the official Jewish Museum Berlin ticket shop, with a quantity per ticket type (adults, under age of 18). Take the slot and the ticket types from check_availability: a slot is its time (HH:MM) or its startsAt value, a ticket type is its id or a part of its title. Returns the basket lines (ticket, slot, quantity, unit price, line total) and the total in euros. The basket lives in this browser: tickets already in it stay, unless emptyBasketFirst is true. Nothing is booked until complete_booking places the order. A slot with too few places, an unknown slot or ticket type, or a quantity above the most one order can hold fails with an error that names the valid values.
+Put tickets for one date and one entry slot in the basket of the official Jewish Museum Berlin ticket shop, with a quantity per ticket type (adults, under age of 18). Take the slot and the ticket types from check_availability: a slot is its time (HH:MM) or its startsAt value, a ticket type is its id or a part of its title. Returns the basket lines (ticket, slot, quantity, unit price, line total) and the total in euros. The basket lives in this browser: tickets already in it stay, unless emptyBasketFirst is true. Nothing is booked until pay places the order. A slot with too few places, an unknown slot or ticket type, or a quantity above the most one order can hold fails with an error that names the valid values.
 
 ### How do I automatically add Jewish Museum Berlin tickets to the basket on tickets.jmberlin.de?
 

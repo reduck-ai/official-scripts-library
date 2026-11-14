@@ -1,10 +1,10 @@
 # Fill Jewish Museum Berlin booking details
 
-Give the booker's details to the official Jewish Museum Berlin ticket shop as a guest, so the basket filled with add_to_cart can be ordered with complete_booking. The guest form asks for first name, last name, email, postcode, country and correspondence language, and the shop's terms and conditions must be accepted (acceptTerms). No password and no customer account are created; the tickets are sent to the email. Returns the fields the shop requires and whether each is filled. A browser already signed in, as a guest or with an account, returns already_identified and changes nothing. It stops before the order: run complete_booking next.
+Give the booker's details to the official Jewish Museum Berlin ticket shop as a guest, so the basket filled with add_to_cart can be ordered with pay. The guest form asks for first name, last name, email, postcode, country and correspondence language, and the shop's terms and conditions must be accepted (acceptTerms). No password and no customer account are created; the tickets are sent to the email. Returns the fields the shop requires and whether each is filled. A browser already signed in, as a guest or with an account, returns already_identified and changes nothing. It stops before the order: run pay next.
 
 - Site: tickets.jmberlin.de
 - Address: `reduck/tickets.jmberlin.de/fill_booking_details`
-- Updated: 2026-10-27 (v1)
+- Updated: 2026-11-13 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -38,7 +38,7 @@ npx @reduck-ai/cli@latest run --script reduck/tickets.jmberlin.de/fill_booking_d
 
 ### What does "Fill Jewish Museum Berlin booking details" do?
 
-Give the booker's details to the official Jewish Museum Berlin ticket shop as a guest, so the basket filled with add_to_cart can be ordered with complete_booking. The guest form asks for first name, last name, email, postcode, country and correspondence language, and the shop's terms and conditions must be accepted (acceptTerms). No password and no customer account are created; the tickets are sent to the email. Returns the fields the shop requires and whether each is filled. A browser already signed in, as a guest or with an account, returns already_identified and changes nothing. It stops before the order: run complete_booking next.
+Give the booker's details to the official Jewish Museum Berlin ticket shop as a guest, so the basket filled with add_to_cart can be ordered with pay. The guest form asks for first name, last name, email, postcode, country and correspondence language, and the shop's terms and conditions must be accepted (acceptTerms). No password and no customer account are created; the tickets are sent to the email. Returns the fields the shop requires and whether each is filled. A browser already signed in, as a guest or with an account, returns already_identified and changes nothing. It stops before the order: run pay next.
 
 ### What information do I need to provide?
 

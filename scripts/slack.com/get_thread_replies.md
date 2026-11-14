@@ -1,10 +1,10 @@
 # Get Slack thread replies
 
-Automatically get Slack thread replies on slack.com. Read a Slack thread by channel id (get it from slack.com/list_channels) and the parent message ts (thread_ts). Returns the parent plus one page of its replies, with authors' display names when Slack provides them, and nextCursor to pass for the next page (null on the last page). Reading does not mark the thread as read. Fails with a signed-out error when the browser is not signed in to Slack.
+Automatically get Slack thread replies on slack.com. Read a Slack thread by channel id (get it from slack.com/list_channels) and the parent message ts (thread_ts). Returns the parent and one page of its replies, oldest first, each with its author's name (a person's display name, or the bot or app name). When the thread has more replies than limit, the first page holds the newest ones: pass nextCursor as cursor to read the older ones, until nextCursor is null. A message with no replies returns the message as parent and an empty list. Reading does not mark the thread as read. Fails with an error naming the thread when this account cannot read it, and with a signed-out error when the browser is not signed in to Slack.
 
 - Site: slack.com
 - Address: `reduck/slack.com/get_thread_replies`
-- Updated: 2026-10-22 (v4)
+- Updated: 2026-11-13 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -19,10 +19,10 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/get_thread_replies
 
 - `channel` (string, required): Channel id (C…, G… or D…). Get it from slack.com/list_channels.
 - `ts` (string, optional): The parent message's ts (same value as thread_ts). Pass this OR thread_ts.
-- `limit` (integer, optional): Max messages per page (default 100).
-- `cursor` (string, optional): nextCursor from a previous call.
+- `limit` (integer, optional): Max replies per page (default 100). The parent comes on every page and is not counted.
+- `cursor` (string, optional): nextCursor from a previous call, to read the older replies.
 - `thread_ts` (string, optional): Alias of ts: the parent message's thread_ts. Pass this OR ts.
-- `workspaceDomain` (string, optional): Workspace host, e.g. acme.slack.com. Omit to use the workspace this browser last used.
+- `workspaceDomain` (string, optional): Workspace host, e.g. acme.slack.com, from slack.com/list_workspaces. Omit to use the workspace this browser last used.
 
 ## Output
 
@@ -35,7 +35,7 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/get_thread_replies
 
 ### What does "Get Slack thread replies" do?
 
-Read a Slack thread by channel id (get it from slack.com/list_channels) and the parent message ts (thread_ts). Returns the parent plus one page of its replies, with authors' display names when Slack provides them, and nextCursor to pass for the next page (null on the last page). Reading does not mark the thread as read. Fails with a signed-out error when the browser is not signed in to Slack.
+Read a Slack thread by channel id (get it from slack.com/list_channels) and the parent message ts (thread_ts). Returns the parent and one page of its replies, oldest first, each with its author's name (a person's display name, or the bot or app name). When the thread has more replies than limit, the first page holds the newest ones: pass nextCursor as cursor to read the older ones, until nextCursor is null. A message with no replies returns the message as parent and an empty list. Reading does not mark the thread as read. Fails with an error naming the thread when this account cannot read it, and with a signed-out error when the browser is not signed in to Slack.
 
 ### How do I automatically get Slack thread replies on slack.com?
 

@@ -4,7 +4,7 @@ Automatically suggest Facebook Marketplace locations on facebook.com. Look up th
 
 - Site: facebook.com
 - Address: `reduck/facebook.com/suggest_marketplace_locations`
-- Updated: 2026-11-12 (v2)
+- Updated: 2026-11-13 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

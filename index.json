@@ -1,5 +1,5 @@
 {
-	"count": 1384,
+	"count": 1393,
 	"scripts": [
 		{
 			"address": "@reduck/99designs.com/login_with_google",
@@ -1154,6 +1154,24 @@
 			"lastmod": "2026-11-03"
 		},
 		{
+			"address": "@reduck/berlin-city-tour.de/add_to_cart",
+			"path": "scripts/berlin-city-tour.de/add_to_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/berlin-city-tour.de/add_to_cart",
+			"lastmod": "2026-11-13"
+		},
+		{
+			"address": "@reduck/berlin-city-tour.de/check_availability",
+			"path": "scripts/berlin-city-tour.de/check_availability.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/berlin-city-tour.de/check_availability",
+			"lastmod": "2026-11-13"
+		},
+		{
+			"address": "@reduck/berlin-city-tour.de/remove_from_cart",
+			"path": "scripts/berlin-city-tour.de/remove_from_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/berlin-city-tour.de/remove_from_cart",
+			"lastmod": "2026-11-13"
+		},
+		{
 			"address": "@reduck/billetterie.chateauversailles.fr/add_to_cart",
 			"path": "scripts/billetterie.chateauversailles.fr/add_to_cart.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/billetterie.chateauversailles.fr/add_to_cart",
@@ -1166,16 +1184,16 @@
 			"lastmod": "2026-10-28"
 		},
 		{
-			"address": "@reduck/billetterie.chateauversailles.fr/complete_booking",
-			"path": "scripts/billetterie.chateauversailles.fr/complete_booking.md",
-			"url": "https://reduck.ai/explore/scripts/reduck/billetterie.chateauversailles.fr/complete_booking",
-			"lastmod": "2026-10-27"
-		},
-		{
 			"address": "@reduck/billetterie.chateauversailles.fr/fill_booking_details",
 			"path": "scripts/billetterie.chateauversailles.fr/fill_booking_details.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/billetterie.chateauversailles.fr/fill_booking_details",
-			"lastmod": "2026-10-27"
+			"lastmod": "2026-11-13"
+		},
+		{
+			"address": "@reduck/billetterie.chateauversailles.fr/pay",
+			"path": "scripts/billetterie.chateauversailles.fr/pay.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/billetterie.chateauversailles.fr/pay",
+			"lastmod": "2026-11-13"
 		},
 		{
 			"address": "@reduck/billetterie.musee-orsay.fr/add_to_cart",
@@ -1190,16 +1208,16 @@
 			"lastmod": "2026-10-28"
 		},
 		{
-			"address": "@reduck/billetterie.musee-orsay.fr/complete_booking",
-			"path": "scripts/billetterie.musee-orsay.fr/complete_booking.md",
-			"url": "https://reduck.ai/explore/scripts/reduck/billetterie.musee-orsay.fr/complete_booking",
-			"lastmod": "2026-10-27"
-		},
-		{
 			"address": "@reduck/billetterie.musee-orsay.fr/fill_booking_details",
 			"path": "scripts/billetterie.musee-orsay.fr/fill_booking_details.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/billetterie.musee-orsay.fr/fill_booking_details",
-			"lastmod": "2026-10-27"
+			"lastmod": "2026-11-13"
+		},
+		{
+			"address": "@reduck/billetterie.musee-orsay.fr/pay",
+			"path": "scripts/billetterie.musee-orsay.fr/pay.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/billetterie.musee-orsay.fr/pay",
+			"lastmod": "2026-11-13"
 		},
 		{
 			"address": "@reduck/bing.com/search",
@@ -2057,7 +2075,7 @@
 			"address": "@reduck/dealroom.co/whoami",
 			"path": "scripts/dealroom.co/whoami.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/dealroom.co/whoami",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-11-13"
 		},
 		{
 			"address": "@reduck/descript.com/login_with_google",
@@ -2201,7 +2219,7 @@
 			"address": "@reduck/discord.com/search_messages",
 			"path": "scripts/discord.com/search_messages.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/discord.com/search_messages",
-			"lastmod": "2026-11-11"
+			"lastmod": "2026-11-13"
 		},
 		{
 			"address": "@reduck/discord.com/send_dm",
@@ -2579,7 +2597,7 @@
 			"address": "@reduck/drive.google.com/whoami",
 			"path": "scripts/drive.google.com/whoami.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/drive.google.com/whoami",
-			"lastmod": "2026-10-13"
+			"lastmod": "2026-11-13"
 		},
 		{
 			"address": "@reduck/dropbox.com/download_invoice",
@@ -2687,7 +2705,7 @@
 			"address": "@reduck/ebay.com/get_listing",
 			"path": "scripts/ebay.com/get_listing.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/ebay.com/get_listing",
-			"lastmod": "2026-11-06"
+			"lastmod": "2026-11-13"
 		},
 		{
 			"address": "@reduck/ebay.com/get_seller",
@@ -2723,7 +2741,7 @@
 			"address": "@reduck/etsy.com/get_listing",
 			"path": "scripts/etsy.com/get_listing.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/etsy.com/get_listing",
-			"lastmod": "2026-11-04"
+			"lastmod": "2026-11-13"
 		},
 		{
 			"address": "@reduck/etsy.com/get_shop",
@@ -2762,10 +2780,22 @@
 			"lastmod": "2026-10-22"
 		},
 		{
+			"address": "@reduck/facebook.com/comment_on_post",
+			"path": "scripts/facebook.com/comment_on_post.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/facebook.com/comment_on_post",
+			"lastmod": "2026-11-13"
+		},
+		{
+			"address": "@reduck/facebook.com/delete_own_comment",
+			"path": "scripts/facebook.com/delete_own_comment.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/facebook.com/delete_own_comment",
+			"lastmod": "2026-11-13"
+		},
+		{
 			"address": "@reduck/facebook.com/delete_own_post",
 			"path": "scripts/facebook.com/delete_own_post.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/facebook.com/delete_own_post",
-			"lastmod": "2026-10-02"
+			"lastmod": "2026-11-13"
 		},
 		{
 			"address": "@reduck/facebook.com/get_marketplace_listing",
@@ -2780,16 +2810,22 @@
 			"lastmod": "2026-11-05"
 		},
 		{
+			"address": "@reduck/facebook.com/get_messenger_inbox",
+			"path": "scripts/facebook.com/get_messenger_inbox.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/facebook.com/get_messenger_inbox",
+			"lastmod": "2026-11-13"
+		},
+		{
 			"address": "@reduck/facebook.com/get_post_engagement",
 			"path": "scripts/facebook.com/get_post_engagement.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/facebook.com/get_post_engagement",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-11-13"
 		},
 		{
 			"address": "@reduck/facebook.com/get_profile",
 			"path": "scripts/facebook.com/get_profile.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/facebook.com/get_profile",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-11-13"
 		},
 		{
 			"address": "@reduck/facebook.com/join_group",
@@ -2813,7 +2849,7 @@
 			"address": "@reduck/facebook.com/list_joined_groups",
 			"path": "scripts/facebook.com/list_joined_groups.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/facebook.com/list_joined_groups",
-			"lastmod": "2026-09-19"
+			"lastmod": "2026-11-13"
 		},
 		{
 			"address": "@reduck/facebook.com/list_marketplace_categories",
@@ -2826,6 +2862,12 @@
 			"path": "scripts/facebook.com/list_my_marketplace_listings.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/facebook.com/list_my_marketplace_listings",
 			"lastmod": "2026-11-05"
+		},
+		{
+			"address": "@reduck/facebook.com/list_my_posts_in_group",
+			"path": "scripts/facebook.com/list_my_posts_in_group.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/facebook.com/list_my_posts_in_group",
+			"lastmod": "2026-11-13"
 		},
 		{
 			"address": "@reduck/facebook.com/list_notifications",
@@ -2864,6 +2906,12 @@
 			"lastmod": "2026-11-05"
 		},
 		{
+			"address": "@reduck/facebook.com/reply_to_comment",
+			"path": "scripts/facebook.com/reply_to_comment.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/facebook.com/reply_to_comment",
+			"lastmod": "2026-11-13"
+		},
+		{
 			"address": "@reduck/facebook.com/search_groups",
 			"path": "scripts/facebook.com/search_groups.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/facebook.com/search_groups",
@@ -2873,7 +2921,7 @@
 			"address": "@reduck/facebook.com/search_marketplace_listings",
 			"path": "scripts/facebook.com/search_marketplace_listings.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/facebook.com/search_marketplace_listings",
-			"lastmod": "2026-11-05"
+			"lastmod": "2026-11-13"
 		},
 		{
 			"address": "@reduck/facebook.com/set_facebook_language",
@@ -2891,13 +2939,13 @@
 			"address": "@reduck/facebook.com/suggest_marketplace_locations",
 			"path": "scripts/facebook.com/suggest_marketplace_locations.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/facebook.com/suggest_marketplace_locations",
-			"lastmod": "2026-11-12"
+			"lastmod": "2026-11-13"
 		},
 		{
 			"address": "@reduck/facebook.com/whoami",
 			"path": "scripts/facebook.com/whoami.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/facebook.com/whoami",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-11-13"
 		},
 		{
 			"address": "@reduck/figma.com/login_with_google",
@@ -4145,7 +4193,7 @@
 			"address": "@reduck/linkedin.com/get_post_comments",
 			"path": "scripts/linkedin.com/get_post_comments.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/linkedin.com/get_post_comments",
-			"lastmod": "2026-10-28"
+			"lastmod": "2026-11-13"
 		},
 		{
 			"address": "@reduck/linkedin.com/get_post_reactors",
@@ -5243,7 +5291,7 @@
 			"address": "@reduck/parisaeroport.fr/search_departures",
 			"path": "scripts/parisaeroport.fr/search_departures.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/parisaeroport.fr/search_departures",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-11-13"
 		},
 		{
 			"address": "@reduck/parisaeroport.fr/suggest_destinations",
@@ -6107,7 +6155,7 @@
 			"address": "@reduck/slack.com/get_thread_replies",
 			"path": "scripts/slack.com/get_thread_replies.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/slack.com/get_thread_replies",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-11-13"
 		},
 		{
 			"address": "@reduck/slack.com/get_user_presence",
@@ -6216,6 +6264,12 @@
 			"path": "scripts/slack.com/list_user_groups.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/slack.com/list_user_groups",
 			"lastmod": "2026-10-22"
+		},
+		{
+			"address": "@reduck/slack.com/list_workspaces",
+			"path": "scripts/slack.com/list_workspaces.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/slack.com/list_workspaces",
+			"lastmod": "2026-11-13"
 		},
 		{
 			"address": "@reduck/slack.com/login_with_google",
@@ -6701,7 +6755,7 @@
 			"address": "@reduck/tickets.jmberlin.de/add_to_cart",
 			"path": "scripts/tickets.jmberlin.de/add_to_cart.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/tickets.jmberlin.de/add_to_cart",
-			"lastmod": "2026-10-27"
+			"lastmod": "2026-11-13"
 		},
 		{
 			"address": "@reduck/tickets.jmberlin.de/cancel_booking",
@@ -6716,16 +6770,16 @@
 			"lastmod": "2026-10-28"
 		},
 		{
-			"address": "@reduck/tickets.jmberlin.de/complete_booking",
-			"path": "scripts/tickets.jmberlin.de/complete_booking.md",
-			"url": "https://reduck.ai/explore/scripts/reduck/tickets.jmberlin.de/complete_booking",
-			"lastmod": "2026-10-27"
-		},
-		{
 			"address": "@reduck/tickets.jmberlin.de/fill_booking_details",
 			"path": "scripts/tickets.jmberlin.de/fill_booking_details.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/tickets.jmberlin.de/fill_booking_details",
-			"lastmod": "2026-10-27"
+			"lastmod": "2026-11-13"
+		},
+		{
+			"address": "@reduck/tickets.jmberlin.de/pay",
+			"path": "scripts/tickets.jmberlin.de/pay.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/tickets.jmberlin.de/pay",
+			"lastmod": "2026-11-13"
 		},
 		{
 			"address": "@reduck/tiktok.com/block_user",
@@ -7967,7 +8021,7 @@
 			"address": "@reduck/x.com/get_tweet",
 			"path": "scripts/x.com/get_tweet.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/x.com/get_tweet",
-			"lastmod": "2026-10-29"
+			"lastmod": "2026-11-13"
 		},
 		{
 			"address": "@reduck/x.com/get_user_info",
@@ -7997,7 +8051,7 @@
 			"address": "@reduck/x.com/like_tweet",
 			"path": "scripts/x.com/like_tweet.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/x.com/like_tweet",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-11-13"
 		},
 		{
 			"address": "@reduck/x.com/login_with_google",
@@ -8045,7 +8099,7 @@
 			"address": "@reduck/x.com/retweet",
 			"path": "scripts/x.com/retweet.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/x.com/retweet",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-11-13"
 		},
 		{
 			"address": "@reduck/x.com/schedule_tweet",

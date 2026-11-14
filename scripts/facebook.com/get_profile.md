@@ -1,10 +1,10 @@
 # Get Facebook profile info
 
-Automatically get Facebook profile info on facebook.com. Get header and intro info for a Facebook profile or page (pass a URL or a bare id/username). Returns the type (profile or page), the name, friends, likes and follower counts as displayed, mutual friends, and the intro lines — bio plus city, work and education for people, or the description for pages. Counts come back as the strings Facebook shows (e.g. "11 K") and intro lines are returned as they appear, not sorted into city, work or school fields. Works in either the French or the English interface. An id or username Facebook will not serve returns a clear error rather than an empty record.
+Automatically get Facebook profile info on facebook.com. Get header and intro info for a Facebook profile or page (pass a URL or a bare id/username). Returns the type (profile or page), the name, friends, likes and follower counts as displayed, mutual friends, and the intro lines: bio, then city, work and education for people or the description for pages, then links and contact lines. Counts come back as the strings Facebook shows (e.g. "11 K") and intro lines are returned as they appear, not sorted into fields. Works in any interface language. An id or username Facebook will not serve returns a clear error rather than an empty record.
 
 - Site: facebook.com
 - Address: `reduck/facebook.com/get_profile`
-- Updated: 2026-10-22 (v14)
+- Updated: 2026-11-13 (v17)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -34,7 +34,7 @@ npx @reduck-ai/cli@latest run --script reduck/facebook.com/get_profile
 
 ### What does "Get Facebook profile info" do?
 
-Get header and intro info for a Facebook profile or page (pass a URL or a bare id/username). Returns the type (profile or page), the name, friends, likes and follower counts as displayed, mutual friends, and the intro lines — bio plus city, work and education for people, or the description for pages. Counts come back as the strings Facebook shows (e.g. "11 K") and intro lines are returned as they appear, not sorted into city, work or school fields. Works in either the French or the English interface. An id or username Facebook will not serve returns a clear error rather than an empty record.
+Get header and intro info for a Facebook profile or page (pass a URL or a bare id/username). Returns the type (profile or page), the name, friends, likes and follower counts as displayed, mutual friends, and the intro lines: bio, then city, work and education for people or the description for pages, then links and contact lines. Counts come back as the strings Facebook shows (e.g. "11 K") and intro lines are returned as they appear, not sorted into fields. Works in any interface language. An id or username Facebook will not serve returns a clear error rather than an empty record.
 
 ### How do I automatically get Facebook profile info on facebook.com?
 

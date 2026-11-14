@@ -4,7 +4,7 @@ Automatically search Paris departures by destination on parisaeroport.fr. List t
 
 - Site: parisaeroport.fr
 - Address: `reduck/parisaeroport.fr/search_departures`
-- Updated: 2026-10-22 (v7)
+- Updated: 2026-11-13 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -3,16 +3,16 @@
 Automatically open the Musée d'Orsay payment step on billetterie.musee-orsay.fr. Take the basket filled with add_to_cart, for a buyer identified with fill_booking_details, to the payment step of the official Musée d'Orsay ticket shop, and stop there. It never types card details, never ticks the terms of sale and never clicks the pay button: with dryRun true (the default) it returns whether the payment step was reached, the total in euros, the basket lines, the payment provider and the fields the buyer still has to fill to pay. dryRun false is refused. A basket that is empty, or a buyer the shop has not identified yet, fails with an error that names the step to do first.
 
 - Site: billetterie.musee-orsay.fr
-- Address: `reduck/billetterie.musee-orsay.fr/complete_booking`
-- Updated: 2026-10-27 (v2)
+- Address: `reduck/billetterie.musee-orsay.fr/pay`
+- Updated: 2026-11-13 (v1)
 - Author: Reduck AI (reduck)
 
 ## Run it
 
-Ask an AI agent connected to Reduck over MCP (`https://mcp.reduck.ai/mcp`) to run `reduck/billetterie.musee-orsay.fr/complete_booking`, or run it from a terminal:
+Ask an AI agent connected to Reduck over MCP (`https://mcp.reduck.ai/mcp`) to run `reduck/billetterie.musee-orsay.fr/pay`, or run it from a terminal:
 
 ```bash
-npx @reduck-ai/cli@latest run --script reduck/billetterie.musee-orsay.fr/complete_booking
+npx @reduck-ai/cli@latest run --script reduck/billetterie.musee-orsay.fr/pay
 ```
 
 ## Input
@@ -36,7 +36,7 @@ Take the basket filled with add_to_cart, for a buyer identified with fill_bookin
 
 ### How do I automatically open the Musée d'Orsay payment step on billetterie.musee-orsay.fr?
 
-Ask an AI agent connected to Reduck to run reduck/billetterie.musee-orsay.fr/complete_booking, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/billetterie.musee-orsay.fr/complete_booking
+Ask an AI agent connected to Reduck to run reduck/billetterie.musee-orsay.fr/pay, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/billetterie.musee-orsay.fr/pay
 
 ### Is there a billetterie.musee-orsay.fr API to open the Musée d'Orsay payment step?
 
@@ -60,10 +60,10 @@ It only reads. It looks things up on billetterie.musee-orsay.fr and changes noth
 
 ### How do I run it?
 
-Ask an AI agent connected to Reduck to run reduck/billetterie.musee-orsay.fr/complete_booking, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/billetterie.musee-orsay.fr/complete_booking
+Ask an AI agent connected to Reduck to run reduck/billetterie.musee-orsay.fr/pay, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/billetterie.musee-orsay.fr/pay
 
 ### Who maintains it?
 
 It is part of Reduck's official curated catalogue.
 
-Source: https://reduck.ai/explore/scripts/reduck/billetterie.musee-orsay.fr/complete_booking
+Source: https://reduck.ai/explore/scripts/reduck/billetterie.musee-orsay.fr/pay

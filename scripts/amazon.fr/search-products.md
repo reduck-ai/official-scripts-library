@@ -4,7 +4,7 @@ Automatically search Amazon.fr products on amazon.fr. Search Amazon.fr by free-t
 
 - Site: amazon.fr
 - Address: `reduck/amazon.fr/search-products`
-- Updated: 2026-10-31 (v1)
+- Updated: 2026-11-15 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

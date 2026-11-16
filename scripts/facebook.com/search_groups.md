@@ -4,7 +4,7 @@ Automatically find Facebook groups by keyword on facebook.com. Find Facebook gro
 
 - Site: facebook.com
 - Address: `reduck/facebook.com/search_groups`
-- Updated: 2026-10-22 (v9)
+- Updated: 2026-11-15 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it

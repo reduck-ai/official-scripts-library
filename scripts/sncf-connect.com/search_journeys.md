@@ -4,7 +4,7 @@ Automatically search train journeys and fares on sncf-connect.com. An unofficial
 
 - Site: sncf-connect.com
 - Address: `reduck/sncf-connect.com/search_journeys`
-- Updated: 2026-11-11 (v21)
+- Updated: 2026-11-15 (v22)
 - Author: Reduck AI (reduck)
 
 ## Run it

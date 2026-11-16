@@ -581,7 +581,7 @@
 			"address": "@reduck/amazon.fr/search-products",
 			"path": "scripts/amazon.fr/search-products.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/amazon.fr/search-products",
-			"lastmod": "2026-10-31"
+			"lastmod": "2026-11-15"
 		},
 		{
 			"address": "@reduck/amazon.fr/whoami",
@@ -1223,7 +1223,7 @@
 			"address": "@reduck/bing.com/search",
 			"path": "scripts/bing.com/search.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/bing.com/search",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-11-15"
 		},
 		{
 			"address": "@reduck/bing.com/set_country",
@@ -2915,7 +2915,7 @@
 			"address": "@reduck/facebook.com/search_groups",
 			"path": "scripts/facebook.com/search_groups.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/facebook.com/search_groups",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-11-15"
 		},
 		{
 			"address": "@reduck/facebook.com/search_marketplace_listings",
@@ -3209,7 +3209,7 @@
 			"address": "@reduck/google.com/search_site",
 			"path": "scripts/google.com/search_site.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/google.com/search_site",
-			"lastmod": "2026-10-31"
+			"lastmod": "2026-11-15"
 		},
 		{
 			"address": "@reduck/google.com/search_suggestions",
@@ -3539,7 +3539,7 @@
 			"address": "@reduck/instagram.com/get_saved_posts",
 			"path": "scripts/instagram.com/get_saved_posts.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/instagram.com/get_saved_posts",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-11-15"
 		},
 		{
 			"address": "@reduck/instagram.com/get_stories",
@@ -6437,7 +6437,7 @@
 			"address": "@reduck/sncf-connect.com/search_journeys",
 			"path": "scripts/sncf-connect.com/search_journeys.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/sncf-connect.com/search_journeys",
-			"lastmod": "2026-11-11"
+			"lastmod": "2026-11-15"
 		},
 		{
 			"address": "@reduck/sncf-connect.com/suggest_places",

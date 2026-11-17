@@ -4,7 +4,7 @@ Automatically set Slack channel topic on slack.com. Set a channel's topic (the s
 
 - Site: slack.com
 - Address: `reduck/slack.com/set_channel_topic`
-- Updated: 2026-10-22 (v4)
+- Updated: 2026-11-16 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,14 +18,16 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/set_channel_topic
 ## Input
 
 - `topic` (string, required): New topic text, up to 250 characters (empty clears).
-- `channel` (string, required): Channel name/#name or id (C…).
-- `workspaceDomain` (string, optional): Workspace host, e.g. acme.slack.com. Defaults to the active workspace.
+- `channel` (string, required): Channel id (C…/G…). Get it from slack.com/list_channels.
+- `workspaceDomain` (string, required): Workspace host, e.g. acme.slack.com. Confirm with the user which workspace to target before running.
 
 ## Output
 
 - `ok` (boolean, required)
 - `channel` (string, required)
 - `topic` (string | null, optional)
+- `unchanged` (boolean, optional)
+- `workspace` (string, optional)
 
 ## FAQ
 
@@ -43,11 +45,11 @@ You do not need one. "Set Slack channel topic" drives the real slack.com pages i
 
 ### What information do I need to provide?
 
-Required: channel, topic. Optional: workspaceDomain.
+Required: channel, topic, workspaceDomain.
 
 ### What does it return?
 
-It returns ok, topic, channel.
+It returns ok, topic, channel, unchanged, workspace.
 
 ### Do I need to be logged in to slack.com?
 

@@ -4,7 +4,7 @@ Automatically list my policies on drata.com. List the Drata policies assigned to
 
 - Site: drata.com
 - Address: `reduck/drata.com/list_my_policies`
-- Updated: 2026-09-29 (v1)
+- Updated: 2026-11-16 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

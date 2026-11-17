@@ -4,7 +4,7 @@ Open a Facebook Marketplace listing's message box as the signed-in account and t
 
 - Site: facebook.com
 - Address: `reduck/facebook.com/message_marketplace_seller`
-- Updated: 2026-11-05 (v1)
+- Updated: 2026-11-16 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

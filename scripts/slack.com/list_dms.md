@@ -1,10 +1,10 @@
 # List Slack direct messages
 
-Automatically list Slack direct messages on slack.com. List direct-message and group-DM conversations, with the counterpart's display name and (by default) the last message. One page per call; pass cursor to paginate. Requires login.
+Automatically list Slack direct messages on slack.com. List the direct-message and group-DM conversations that Slack's DMs view shows, each with the counterpart's display name when Slack provides it and the last message. One page per call; pass cursor to paginate when Slack returns one. Requires login.
 
 - Site: slack.com
 - Address: `reduck/slack.com/list_dms`
-- Updated: 2026-11-03 (v3)
+- Updated: 2026-11-16 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,10 +17,9 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/list_dms
 
 ## Input
 
+- `workspaceDomain` (string, required): Workspace host, e.g. acme.slack.com, from slack.com/list_workspaces.
 - `limit` (integer, optional): Max conversations per page.
 - `cursor` (string, optional): nextCursor from a previous call.
-- `includeLatest` (boolean, optional): Also return each conversation's last message.
-- `workspaceDomain` (string, optional): Workspace host, e.g. acme.slack.com. Defaults to the workspace this browser used last.
 
 ## Output
 
@@ -32,7 +31,7 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/list_dms
 
 ### What does "List Slack direct messages" do?
 
-List direct-message and group-DM conversations, with the counterpart's display name and (by default) the last message. One page per call; pass cursor to paginate. Requires login.
+List the direct-message and group-DM conversations that Slack's DMs view shows, each with the counterpart's display name when Slack provides it and the last message. One page per call; pass cursor to paginate when Slack returns one. Requires login.
 
 ### How do I automatically list Slack direct messages on slack.com?
 
@@ -44,7 +43,7 @@ You do not need one. "List Slack direct messages" drives the real slack.com page
 
 ### What information do I need to provide?
 
-Optional: limit, cursor, includeLatest, workspaceDomain.
+Required: workspaceDomain. Optional: limit, cursor.
 
 ### What does it return?
 

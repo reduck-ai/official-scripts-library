@@ -1,10 +1,10 @@
 # Archive Slack channel
 
-Automatically archive Slack channel on slack.com. Archive a channel (by name or id). Archived channels are read-only and hidden from the active list (recoverable by an admin). Requires login. The workspace's #general cannot be archived.
+Automatically archive Slack channel on slack.com. Archive a channel by id (C…/G…, from slack.com/list_channels) through the channel's settings. Archived channels are read-only and hidden from the active list (recoverable by an admin). Returns alreadyArchived true and changes nothing when it was archived before. The workspace's general channel cannot be archived. Requires login and the workspace host.
 
 - Site: slack.com
 - Address: `reduck/slack.com/archive_channel`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-16 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,19 +17,21 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/archive_channel
 
 ## Input
 
-- `channel` (string, required): Channel name/#name or id (C…).
-- `workspaceDomain` (string, optional): Workspace host, e.g. acme.slack.com. Defaults to the active workspace.
+- `channel` (string, required): Channel id (C…/G…). Get it from slack.com/list_channels.
+- `workspaceDomain` (string, required): Workspace host, e.g. acme.slack.com. Confirm with the user which workspace to target before running.
 
 ## Output
 
 - `ok` (boolean, required)
 - `channel` (string, required)
+- `workspace` (string, required)
+- `alreadyArchived` (boolean, required)
 
 ## FAQ
 
 ### What does "Archive Slack channel" do?
 
-Archive a channel (by name or id). Archived channels are read-only and hidden from the active list (recoverable by an admin). Requires login. The workspace's #general cannot be archived.
+Archive a channel by id (C…/G…, from slack.com/list_channels) through the channel's settings. Archived channels are read-only and hidden from the active list (recoverable by an admin). Returns alreadyArchived true and changes nothing when it was archived before. The workspace's general channel cannot be archived. Requires login and the workspace host.
 
 ### How do I automatically archive Slack channel on slack.com?
 
@@ -41,11 +43,11 @@ You do not need one. "Archive Slack channel" drives the real slack.com pages in 
 
 ### What information do I need to provide?
 
-Required: channel. Optional: workspaceDomain.
+Required: channel, workspaceDomain.
 
 ### What does it return?
 
-It returns ok, channel.
+It returns ok, channel, workspace, alreadyArchived.
 
 ### Do I need to be logged in to slack.com?
 

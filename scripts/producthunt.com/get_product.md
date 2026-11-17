@@ -4,7 +4,7 @@ Automatically get Product Hunt product on producthunt.com. Read a Product Hunt p
 
 - Site: producthunt.com
 - Address: `reduck/producthunt.com/get_product`
-- Updated: 2026-11-06 (v7)
+- Updated: 2026-11-16 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it

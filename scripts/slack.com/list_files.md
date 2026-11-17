@@ -4,7 +4,7 @@ Automatically list Slack files on slack.com. List files shared in the workspace,
 
 - Site: slack.com
 - Address: `reduck/slack.com/list_files`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-16 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,16 +17,18 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/list_files
 
 ## Input
 
-- `page` (integer, optional): 1-based page (default 1).
-- `user` (string, optional): Filter to an uploader (user id U…). Optional.
-- `count` (integer, optional): Files per page (default 50).
-- `channel` (string, optional): Filter to a channel (name/id). Optional.
-- `workspaceDomain` (string, optional): Workspace host, e.g. acme.slack.com. Defaults to the active workspace.
+- `workspaceDomain` (string, required): Workspace host, e.g. acme.slack.com, from slack.com/list_workspaces.
+- `page` (integer, optional): 1-based page.
+- `user` (string, optional): Only files from this uploader (user id U…). Optional.
+- `count` (integer, optional): Files per page.
+- `channel` (string, optional): Only files shared in this channel (id C…, from slack.com/list_channels). Optional.
 
 ## Output
 
 - `files` (array, required)
+- `page` (integer | null, optional)
 - `total` (integer | null, optional)
+- `pageCount` (integer | null, optional)
 
 ## FAQ
 
@@ -44,11 +46,11 @@ You do not need one. "List Slack files" drives the real slack.com pages in a bro
 
 ### What information do I need to provide?
 
-Optional: page, user, count, channel, workspaceDomain.
+Required: workspaceDomain. Optional: page, user, count, channel.
 
 ### What does it return?
 
-It returns files, total.
+It returns page, files, total, pageCount.
 
 ### Do I need to be logged in to slack.com?
 
@@ -56,7 +58,7 @@ Yes. It acts as you on slack.com: on your own Chrome it reuses your session, and
 
 ### Does it change anything on slack.com, or only read data?
 
-Unknown: its author has not declared whether it changes anything on slack.com, so treat it as if it could.
+It only reads. It looks things up on slack.com and changes nothing there.
 
 ### How do I run it?
 

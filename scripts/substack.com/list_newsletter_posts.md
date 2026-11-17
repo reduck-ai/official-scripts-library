@@ -4,7 +4,7 @@ Automatically list Substack newsletter posts on substack.com. List a Substack pu
 
 - Site: substack.com
 - Address: `reduck/substack.com/list_newsletter_posts`
-- Updated: 2026-11-03 (v5)
+- Updated: 2026-11-16 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -20,7 +20,8 @@ npx @reduck-ai/cli@latest run --script reduck/substack.com/list_newsletter_posts
 - `publicationUrl` (string, required): Base URL of the Substack publication, e.g. https://example.substack.com (a publication's own domain also works)
 - `sort` (string, optional): Sort order: "new" (most recent first) or "top" (most reactions first)
 - `limit` (number, optional): Maximum number of posts to return
-- `offset` (number, optional): Number of posts to skip, for pagination
+- `cursor` (string, optional): nextCursor from a previous call with the same publication, sort and search: reads the page after it. Use it instead of offset to go past the first 25 posts.
+- `offset` (number, optional): Number of posts to skip, for pagination (reaches the first 25 posts with sort new; use cursor beyond)
 - `search` (string, optional): Optional keyword filter over the publication's posts
 
 ## Output
@@ -31,6 +32,7 @@ npx @reduck-ai/cli@latest run --script reduck/substack.com/list_newsletter_posts
 - `posts` (array, required)
 - `offset` (number, required)
 - `publicationUrl` (string, required)
+- `nextCursor` (string | null, optional): Pass as cursor (same publication, sort and search) to read the next page; null on the last page.
 
 ## FAQ
 
@@ -48,11 +50,11 @@ You do not need one. "List Substack newsletter posts" drives the real substack.c
 
 ### What information do I need to provide?
 
-Required: publicationUrl. Optional: sort, limit, offset, search.
+Required: publicationUrl. Optional: sort, limit, cursor, offset, search.
 
 ### What does it return?
 
-It returns sort, count, limit, posts, offset, publicationUrl.
+It returns sort, count, limit, posts, offset, nextCursor, publicationUrl.
 
 ### Do I need to be logged in to substack.com?
 

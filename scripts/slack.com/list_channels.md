@@ -1,10 +1,10 @@
 # List Slack channels
 
-Automatically list Slack channels on slack.com. List the workspace's channels (public + private) with membership, member count, topic and purpose. One page per call; pass cursor to paginate and types/excludeArchived to filter. Requires login.
+Automatically list Slack channels on slack.com. List the channels that Slack's channel browser shows (archived channels excluded), with id, name, member count, purpose and whether you are a member, 50 per page. Pass cursor to read the next page. Requires login.
 
 - Site: slack.com
 - Address: `reduck/slack.com/list_channels`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-11-16 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,23 +17,21 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/list_channels
 
 ## Input
 
-- `limit` (integer, optional): Max channels per page (default 200, Slack caps ~1000).
-- `types` (string, optional): Comma-separated conversation types. Default 'public_channel,private_channel'.
-- `cursor` (string, optional): next_cursor from a previous call to fetch the next page.
-- `excludeArchived` (boolean, optional): Hide archived channels. Default true.
-- `workspaceDomain` (string, optional): Workspace host to target, e.g. acme.slack.com. Defaults to the active workspace.
+- `workspaceDomain` (string, required): Workspace host, e.g. acme.slack.com, from slack.com/list_workspaces.
+- `cursor` (string, optional): nextCursor from a previous call (a page number). Slack's channel browser pages hold 50 channels.
 
 ## Output
 
+- `total` (integer | null, required)
 - `channels` (array, required)
 - `workspace` (string, required)
-- `nextCursor` (string | null, optional)
+- `nextCursor` (string | null, required)
 
 ## FAQ
 
 ### What does "List Slack channels" do?
 
-List the workspace's channels (public + private) with membership, member count, topic and purpose. One page per call; pass cursor to paginate and types/excludeArchived to filter. Requires login.
+List the channels that Slack's channel browser shows (archived channels excluded), with id, name, member count, purpose and whether you are a member, 50 per page. Pass cursor to read the next page. Requires login.
 
 ### How do I automatically list Slack channels on slack.com?
 
@@ -45,11 +43,11 @@ You do not need one. "List Slack channels" drives the real slack.com pages in a 
 
 ### What information do I need to provide?
 
-Optional: limit, types, cursor, excludeArchived, workspaceDomain.
+Required: workspaceDomain. Optional: cursor.
 
 ### What does it return?
 
-It returns channels, workspace, nextCursor.
+It returns total, channels, workspace, nextCursor.
 
 ### Do I need to be logged in to slack.com?
 

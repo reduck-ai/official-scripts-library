@@ -1,10 +1,10 @@
 # Search Google Drive
 
-Automatically search Google Drive on drive.google.com. Search Google Drive by free text in names and contents, or filter by name, file type, owner and modified-date range. Returns each match's id, name, type, size, dates, owner, parent folders and link, one page at a time: pass nextPageToken back as pageToken to read the next page. No match returns an empty list.
+Automatically search Google Drive on drive.google.com. Search Google Drive by free text in names and contents, or filter by name, file type, owner and modified-date range. Returns each match's id, name and link, up to count matches (50 by default, 1000 at most). complete is true when Drive has no more matches to show, false when count was reached first. Drive's own search can show fewer matches than a folder holds for a broad term. Pass authuser to choose the signed-in Google account. No match returns an empty list. Fails when signed out.
 
 - Site: drive.google.com
 - Address: `reduck/drive.google.com/search_files`
-- Updated: 2026-10-13 (v3)
+- Updated: 2026-11-16 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -19,25 +19,26 @@ npx @reduck-ai/cli@latest run --script reduck/drive.google.com/search_files
 
 - `name` (string, optional): Only files whose name contains this text.
 - `type` (string, optional): Only files of this type.
+- `count` (integer, optional): How many matches to return at most. Drive sends matches in batches of about 20 as the list scrolls.
 - `owner` (string, optional): Only files owned by this email address, or "me".
 - `query` (string, optional): Free text, matched by Drive against file names and contents.
-- `pageSize` (integer, optional): Number of results per page, up to 1000.
-- `pageToken` (string, optional): The nextPageToken of the previous page, to read the next one.
+- `authuser` (string, optional): Which signed-in Google account to use, by its email address or its index (0 for the first). Omit for Google's default account.
 - `modifiedAfter` (string, optional): Only files modified on or after this date, as YYYY-MM-DD.
 - `modifiedBefore` (string, optional): Only files modified before this date, as YYYY-MM-DD.
 
 ## Output
 
-- `count` (integer, required): Files on this page.
+- `count` (integer, required): Files returned.
 - `files` (array, required)
 - `query` (string, required): The search as Drive received it.
-- `nextPageToken` (string | null, required): Pass it as pageToken to read the next page. Null on the last page.
+- `complete` (boolean, required): True when Drive said it has no more matches; false when count was reached first.
+- `url` (string, optional)
 
 ## FAQ
 
 ### What does "Search Google Drive" do?
 
-Search Google Drive by free text in names and contents, or filter by name, file type, owner and modified-date range. Returns each match's id, name, type, size, dates, owner, parent folders and link, one page at a time: pass nextPageToken back as pageToken to read the next page. No match returns an empty list.
+Search Google Drive by free text in names and contents, or filter by name, file type, owner and modified-date range. Returns each match's id, name and link, up to count matches (50 by default, 1000 at most). complete is true when Drive has no more matches to show, false when count was reached first. Drive's own search can show fewer matches than a folder holds for a broad term. Pass authuser to choose the signed-in Google account. No match returns an empty list. Fails when signed out.
 
 ### How do I automatically search Google Drive on drive.google.com?
 
@@ -49,11 +50,11 @@ You do not need one. "Search Google Drive" drives the real drive.google.com page
 
 ### What information do I need to provide?
 
-Optional: name, type, owner, query, pageSize, pageToken, modifiedAfter, modifiedBefore.
+Optional: name, type, count, owner, query, authuser, modifiedAfter, modifiedBefore.
 
 ### What does it return?
 
-It returns count, files, query, nextPageToken.
+It returns url, count, files, query, complete.
 
 ### Do I need to be logged in to drive.google.com?
 

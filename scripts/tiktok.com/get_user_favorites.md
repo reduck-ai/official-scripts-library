@@ -1,10 +1,10 @@
 # Get TikTok user favorites
 
-Automatically get TikTok user favorites on tiktok.com. List the videos a TikTok user has added to their Favorites (their Favoris tab), by @username. Returns [] unless the account has set Favorites to public (private by default).
+Automatically get TikTok user favorites on tiktok.com. List the videos a TikTok user has added to their Favorites, by @username, one page per run (pass the returned cursor for the next). Fails with an error when the account keeps its Favorites private (the default).
 
 - Site: tiktok.com
 - Address: `reduck/tiktok.com/get_user_favorites`
-- Updated: 2026-11-12 (v3)
+- Updated: 2026-11-16 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -31,7 +31,7 @@ npx @reduck-ai/cli@latest run --script reduck/tiktok.com/get_user_favorites
 
 ### What does "Get TikTok user favorites" do?
 
-List the videos a TikTok user has added to their Favorites (their Favoris tab), by @username. Returns [] unless the account has set Favorites to public (private by default).
+List the videos a TikTok user has added to their Favorites, by @username, one page per run (pass the returned cursor for the next). Fails with an error when the account keeps its Favorites private (the default).
 
 ### How do I automatically get TikTok user favorites on tiktok.com?
 

@@ -4,7 +4,7 @@ Automatically edit Slack message on slack.com. Edit one of your own messages by 
 
 - Site: slack.com
 - Address: `reduck/slack.com/update_message`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-16 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -19,8 +19,8 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/update_message
 
 - `ts` (string, required): The message's ts.
 - `text` (string, required): New message text.
-- `channel` (string, required): Channel name/#name or id (C…/D…).
-- `workspaceDomain` (string, optional): Workspace host. Defaults to the active workspace.
+- `channel` (string, required): Channel or DM id (C…/D…/G…). Get it from slack.com/list_channels.
+- `workspaceDomain` (string, required): Workspace host, e.g. acme.slack.com. Confirm with the user which workspace to target before running.
 
 ## Output
 
@@ -28,6 +28,7 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/update_message
 - `ts` (string, required)
 - `channel` (string, required)
 - `text` (string | null, optional)
+- `workspace` (string, optional)
 
 ## FAQ
 
@@ -45,11 +46,11 @@ You do not need one. "Edit Slack message" drives the real slack.com pages in a b
 
 ### What information do I need to provide?
 
-Required: channel, ts, text. Optional: workspaceDomain.
+Required: channel, ts, text, workspaceDomain.
 
 ### What does it return?
 
-It returns ok, ts, text, channel.
+It returns ok, ts, text, channel, workspace.
 
 ### Do I need to be logged in to slack.com?
 

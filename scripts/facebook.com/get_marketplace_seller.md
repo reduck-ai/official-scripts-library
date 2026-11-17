@@ -4,7 +4,7 @@ Automatically get Facebook Marketplace seller profile on facebook.com. Read a se
 
 - Site: facebook.com
 - Address: `reduck/facebook.com/get_marketplace_seller`
-- Updated: 2026-11-05 (v1)
+- Updated: 2026-11-16 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

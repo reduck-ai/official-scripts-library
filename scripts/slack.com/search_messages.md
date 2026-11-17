@@ -4,7 +4,7 @@ Automatically search Slack messages on slack.com. Full-text search across the wo
 
 - Site: slack.com
 - Address: `reduck/slack.com/search_messages`
-- Updated: 2026-10-30 (v4)
+- Updated: 2026-11-16 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,11 +18,11 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/search_messages
 ## Input
 
 - `query` (string, required): Search query, incl. Slack modifiers like from:@alice in:#general after:2026-01-01.
+- `workspaceDomain` (string, required): Workspace host, e.g. acme.slack.com, from slack.com/list_workspaces.
 - `page` (integer, optional): 1-based page number.
 - `sort` (string, optional): timestamp (newest or oldest first) or score (relevance).
 - `count` (integer, optional): Results per page.
 - `sortDir` (string, optional): Sort direction.
-- `workspaceDomain` (string, optional): Workspace host, e.g. acme.slack.com. Defaults to the workspace this browser used last.
 
 ## Output
 
@@ -48,7 +48,7 @@ You do not need one. "Search Slack messages" drives the real slack.com pages in 
 
 ### What information do I need to provide?
 
-Required: query. Optional: page, sort, count, sortDir, workspaceDomain.
+Required: query, workspaceDomain. Optional: page, sort, count, sortDir.
 
 ### What does it return?
 

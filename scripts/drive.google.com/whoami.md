@@ -4,7 +4,7 @@ Returns the Google account signed in to Google Drive (email and name). If no Goo
 
 - Site: drive.google.com
 - Address: `reduck/drive.google.com/whoami`
-- Updated: 2026-11-13 (v3)
+- Updated: 2026-11-16 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/drive.google.com/whoami
 
 ## Input
 
-It takes no input.
+- `authuser` (string, optional): Which signed-in Google account to use, by its email address or its index (0 for the first). Omit for Google's default account.
 
 ## Output
 
@@ -33,7 +33,7 @@ Returns the Google account signed in to Google Drive (email and name). If no Goo
 
 ### What information do I need to provide?
 
-Nothing. It takes no input.
+Optional: authuser.
 
 ### What does it return?
 

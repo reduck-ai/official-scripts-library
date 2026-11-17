@@ -4,7 +4,7 @@ Automatically list my Facebook Marketplace listings on facebook.com. List the it
 
 - Site: facebook.com
 - Address: `reduck/facebook.com/list_my_marketplace_listings`
-- Updated: 2026-11-05 (v1)
+- Updated: 2026-11-16 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

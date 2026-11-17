@@ -4,7 +4,7 @@ Automatically send Telegram message or document on web.telegram.org. Send a text
 
 - Site: web.telegram.org
 - Address: `reduck/web.telegram.org/send_message`
-- Updated: 2026-11-11 (v9)
+- Updated: 2026-11-16 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -31,13 +31,14 @@ npx @reduck-ai/cli@latest run --script reduck/web.telegram.org/send_message
 - `sent` (boolean, required): True once Telegram's server holds the message.
 - `peerId` (string, required)
 - `account_used` (string | null, required): The name of the account that sent it.
-- `text` (string | null, optional): The text or caption Telegram holds for the message.
+- `text` (string | null, optional): The text or caption Telegram holds for the message; null when read_back is false.
 - `fileSize` (integer | null, optional): The size in bytes Telegram holds for the document.
 - `filename` (string | null, optional)
 - `accountId` (string, optional)
 - `chatTitle` (string | null, optional): The conversation's name: show it to the user, since a peer id is not readable.
+- `read_back` (boolean, optional): True when the sent message was read back from Telegram and checked. False when Telegram confirmed the send (id) but did not return the message in time: it is sent, do not send it again.
 - `repliedTo` (string | null, optional): The id of the message this one replies to, as Telegram holds it.
-- `already_present` (boolean, optional): Whether a message of this account with the same text (or a document with the same name) was already among the most recent ones before this send. Reported, not enforced.
+- `already_present` (boolean | null, optional): Whether a message of this account with the same text (or a document with the same name) was already among the most recent ones before this send. Reported, not enforced; null when Telegram did not return the recent messages in time.
 
 ## FAQ
 
@@ -59,7 +60,7 @@ Required: peerId. Optional: text, filename, attachment, fileBase64, replyToMessa
 
 ### What does it return?
 
-It returns id, kind, sent, text, peerId, fileSize, filename, accountId, chatTitle, repliedTo, account_used, already_present.
+It returns id, kind, sent, text, peerId, fileSize, filename, accountId, chatTitle, read_back, repliedTo, account_used, already_present.
 
 ### Do I need to be logged in to web.telegram.org?
 

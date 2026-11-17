@@ -1,10 +1,10 @@
 # List Slack members
 
-Automatically list Slack members on slack.com. List a Slack workspace's members with id, handle, real and display name, title, email (when visible), timezone, status and admin, owner, bot and guest flags. Deactivated accounts are included and flagged as deleted. One page per call; pass the returned cursor to read the next page. Requires login.
+Automatically list Slack members on slack.com. List the members that Slack's member directory shows, with id, handle, real and display name, title, email and phone (when visible), status, avatar and guest flags, 50 per page. Admin, owner, bot, deleted and timezone are null when the directory does not give them. Pass cursor to read the next page. Requires login.
 
 - Site: slack.com
 - Address: `reduck/slack.com/list_members`
-- Updated: 2026-10-21 (v3)
+- Updated: 2026-11-16 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,21 +17,21 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/list_members
 
 ## Input
 
-- `limit` (integer, optional): Max members per page (default 200).
-- `cursor` (string, optional): nextCursor from a previous call.
-- `workspaceDomain` (string, optional): Workspace host, e.g. acme.slack.com. Defaults to the active workspace.
+- `workspaceDomain` (string, required): Workspace host, e.g. acme.slack.com, from slack.com/list_workspaces.
+- `cursor` (string, optional): nextCursor from a previous call (a page number). Slack's member directory pages hold 50 members.
 
 ## Output
 
+- `total` (integer | null, required)
 - `members` (array, required)
 - `workspace` (string, required)
-- `nextCursor` (string | null, optional)
+- `nextCursor` (string | null, required)
 
 ## FAQ
 
 ### What does "List Slack members" do?
 
-List a Slack workspace's members with id, handle, real and display name, title, email (when visible), timezone, status and admin, owner, bot and guest flags. Deactivated accounts are included and flagged as deleted. One page per call; pass the returned cursor to read the next page. Requires login.
+List the members that Slack's member directory shows, with id, handle, real and display name, title, email and phone (when visible), status, avatar and guest flags, 50 per page. Admin, owner, bot, deleted and timezone are null when the directory does not give them. Pass cursor to read the next page. Requires login.
 
 ### How do I automatically list Slack members on slack.com?
 
@@ -43,11 +43,11 @@ You do not need one. "List Slack members" drives the real slack.com pages in a b
 
 ### What information do I need to provide?
 
-Optional: limit, cursor, workspaceDomain.
+Required: workspaceDomain. Optional: cursor.
 
 ### What does it return?
 
-It returns members, workspace, nextCursor.
+It returns total, members, workspace, nextCursor.
 
 ### Do I need to be logged in to slack.com?
 

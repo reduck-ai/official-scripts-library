@@ -4,7 +4,7 @@ Automatically scrape posts from a Facebook group or page on facebook.com. Scrape
 
 - Site: facebook.com
 - Address: `reduck/facebook.com/list_posts`
-- Updated: 2026-10-02 (v10)
+- Updated: 2026-11-16 (v13)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -19,7 +19,7 @@ npx @reduck-ai/cli@latest run --script reduck/facebook.com/list_posts
 
 - `url` (string, required): Full URL of a Facebook group (https://www.facebook.com/groups/<id>) or page (https://www.facebook.com/<username> or /profile.php?id=<id>).
 - `limit` (integer, optional): Max posts to return. The feed loads more as needed until this many unique posts are found or the feed stops yielding new ones.
-- `withStatus` (boolean, optional): Group URLs only. When true, return {groupStatus, posts} instead of the bare posts array. groupStatus: joined (membership control or readable member feed), not_member (join button shown), pending (join request sent), unavailable (group deleted, or the session is banned/excluded — Facebook shows the same 'content unavailable' page for both), unknown. With withStatus an unavailable group is a result, not an error.
+- `withStatus` (boolean, optional): Group URLs only. When true, return {groupStatus, posts} instead of the bare posts array. groupStatus: joined (member, or a readable member feed), not_member (can join or request to join), pending (join request sent), unavailable (Facebook shows no group and no feed: deleted, or the session is banned/excluded), unknown. With withStatus an unavailable group is a result, not an error.
 
 ## FAQ
 

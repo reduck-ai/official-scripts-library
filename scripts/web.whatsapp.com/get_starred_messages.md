@@ -1,10 +1,10 @@
 # Get starred WhatsApp messages
 
-Automatically get starred WhatsApp messages on web.whatsapp.com. Open Menu → Starred messages and list all starred messages: the chat they belong to, sender, text, time and date. Returns [] if none are starred.
+Automatically get starred WhatsApp messages on web.whatsapp.com. List your starred WhatsApp messages: the chat each belongs to, sender, text, time and date. Returns [] if none are starred.
 
 - Site: web.whatsapp.com
 - Address: `reduck/web.whatsapp.com/get_starred_messages`
-- Updated: 2026-11-12 (v5)
+- Updated: 2026-11-16 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -23,7 +23,7 @@ npx @reduck-ai/cli@latest run --script reduck/web.whatsapp.com/get_starred_messa
 
 ### What does "Get starred WhatsApp messages" do?
 
-Open Menu → Starred messages and list all starred messages: the chat they belong to, sender, text, time and date. Returns [] if none are starred.
+List your starred WhatsApp messages: the chat each belongs to, sender, text, time and date. Returns [] if none are starred.
 
 ### How do I automatically get starred WhatsApp messages on web.whatsapp.com?
 

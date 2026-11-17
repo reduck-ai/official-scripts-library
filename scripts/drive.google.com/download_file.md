@@ -4,7 +4,7 @@ Automatically download a Google Drive file on drive.google.com. Download one Goo
 
 - Site: drive.google.com
 - Address: `reduck/drive.google.com/download_file`
-- Updated: 2026-10-13 (v5)
+- Updated: 2026-11-16 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -20,6 +20,7 @@ npx @reduck-ai/cli@latest run --script reduck/drive.google.com/download_file
 - `fileId` (string, required): Drive file id, or any Drive or Docs URL that contains it.
 - `gid` (string | number, optional): Tab id (the gid in the sheet URL), for a csv or tsv export of a Google Sheet. Omit for the first tab.
 - `format` (string, optional): Export format for a Google Doc, Sheet or Slides file. Defaults to pdf for documents and presentations, xlsx for spreadsheets. Files stored as bytes download as they are and ignore it.
+- `authuser` (string, optional): Which signed-in Google account to use, by its email address or its index (0 for the first). Omit for Google's default account.
 
 ## Output
 
@@ -49,7 +50,7 @@ You do not need one. "Download a Google Drive file" drives the real drive.google
 
 ### What information do I need to provide?
 
-Required: fileId. Optional: gid, format.
+Required: fileId. Optional: gid, format, authuser.
 
 ### What does it return?
 

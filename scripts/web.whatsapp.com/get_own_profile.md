@@ -4,7 +4,7 @@ Automatically get own profile on web.whatsapp.com. Read the logged-in WhatsApp a
 
 - Site: web.whatsapp.com
 - Address: `reduck/web.whatsapp.com/get_own_profile`
-- Updated: 2026-10-22 (v8)
+- Updated: 2026-11-16 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -21,16 +21,16 @@ It takes no input.
 
 ## Output
 
-- `loggedIn` (boolean, required): Whether this browser is linked to a WhatsApp account. False is a normal result, not a failure, so this can be polled on a schedule without the check counting against its own health.
-- `about` (string | null, optional)
-- `phone` (string | null, optional)
-- `evidence` (string | null, optional): Only set when loggedIn is false: what proved the browser unlinked, so a genuine signed-out reading can be told from a broken run.
-- `navLayout` (string, optional)
+- `loggedIn` (boolean, required): Always true on a result: an unlinked browser throws SignedOutError.
+- `name` (string | null, optional): The profile's display name.
+- `about` (string | null, optional): The About text, or null when none is set.
+- `account` (string | null, optional): The phone number the account signs in with, digits only with country code.
+- `evidence` (string | null, optional): Always null: an unlinked browser throws SignedOutError.
+- `navLayout` (string | null, optional)
 - `hasPicture` (boolean, optional)
 - `isBusiness` (boolean, optional)
 - `pictureUrl` (string | null, optional)
 - `description` (string | null, optional)
-- `displayName` (string | null, optional): Null when there is no session.
 - `businessCategory` (string | null, optional)
 
 ## FAQ
@@ -53,11 +53,11 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns about, phone, evidence, loggedIn, navLayout, hasPicture, isBusiness, pictureUrl, description, displayName, businessCategory.
+It returns name, about, account, evidence, loggedIn, navLayout, hasPicture, isBusiness, pictureUrl, description, businessCategory.
 
 ### Do I need to be logged in to web.whatsapp.com?
 
-No. It only uses pages of web.whatsapp.com that are reachable without signing in.
+Yes. It acts as you on web.whatsapp.com: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the web.whatsapp.com cookies saved by the Reduck extension.
 
 ### Does it change anything on web.whatsapp.com, or only read data?
 

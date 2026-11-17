@@ -4,7 +4,7 @@ Automatically create Slack channel on slack.com. Create a new channel. The name 
 
 - Site: slack.com
 - Address: `reduck/slack.com/create_channel`
-- Updated: 2026-11-10 (v4)
+- Updated: 2026-11-16 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

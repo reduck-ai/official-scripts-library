@@ -4,7 +4,7 @@ Automatically upload Slack text file on slack.com. Upload a text file/snippet (i
 
 - Site: slack.com
 - Address: `reduck/slack.com/upload_file`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-16 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,12 +17,12 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/upload_file
 
 ## Input
 
-- `channel` (string, required): Channel name/#name or id (C…).
+- `channel` (string, required): Channel id (C…/G…/D…). Get it from slack.com/list_channels.
 - `content` (string, required): The text content of the file.
-- `title` (string, optional): Display title. Defaults to the filename.
+- `workspaceDomain` (string, required): Workspace host, e.g. acme.slack.com. Confirm with the user which workspace to target before running.
+- `title` (string, optional): Name shown for the snippet. Defaults to filename.
 - `comment` (string, optional): Optional message posted with the file.
-- `filename` (string, optional): File name, e.g. 'notes.txt'. Default 'file.txt'.
-- `workspaceDomain` (string, optional): Workspace host, e.g. acme.slack.com. Defaults to the active workspace.
+- `filename` (string, optional): File name, e.g. 'notes.txt'.
 
 ## Output
 
@@ -31,6 +31,7 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/upload_file
 - `name` (string | null, optional)
 - `title` (string | null, optional)
 - `permalink` (string | null, optional)
+- `workspace` (string, optional)
 
 ## FAQ
 
@@ -48,11 +49,11 @@ You do not need one. "Upload Slack text file" drives the real slack.com pages in
 
 ### What information do I need to provide?
 
-Required: channel, content. Optional: title, comment, filename, workspaceDomain.
+Required: channel, content, workspaceDomain. Optional: title, comment, filename.
 
 ### What does it return?
 
-It returns id, ok, name, title, permalink.
+It returns id, ok, name, title, permalink, workspace.
 
 ### Do I need to be logged in to slack.com?
 

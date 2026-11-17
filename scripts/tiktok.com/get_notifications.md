@@ -1,10 +1,10 @@
 # Get TikTok notifications
 
-Automatically get TikTok notifications on tiktok.com. List the logged-in account's activity notifications (the Activité inbox): likes, follows, comments and mentions received, newest first. Each notification carries who triggered it, the target video/comment, and read state.
+Automatically get TikTok notifications on tiktok.com. List the logged-in account's activity notifications (the Activity inbox): likes, follows, comments and mentions received, newest first. Each notification carries who triggered it, the target video/comment, and read state.
 
 - Site: tiktok.com
 - Address: `reduck/tiktok.com/get_notifications`
-- Updated: 2026-11-12 (v2)
+- Updated: 2026-11-16 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,7 +29,7 @@ npx @reduck-ai/cli@latest run --script reduck/tiktok.com/get_notifications
 
 ### What does "Get TikTok notifications" do?
 
-List the logged-in account's activity notifications (the Activité inbox): likes, follows, comments and mentions received, newest first. Each notification carries who triggered it, the target video/comment, and read state.
+List the logged-in account's activity notifications (the Activity inbox): likes, follows, comments and mentions received, newest first. Each notification carries who triggered it, the target video/comment, and read state.
 
 ### How do I automatically get TikTok notifications on tiktok.com?
 

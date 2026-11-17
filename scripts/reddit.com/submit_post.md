@@ -4,7 +4,7 @@ Automatically submit Reddit post on reddit.com. Create a text post (thread) in a
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/submit_post`
-- Updated: 2026-10-22 (v14)
+- Updated: 2026-11-16 (v17)
 - Author: Reduck AI (reduck)
 
 ## Run it

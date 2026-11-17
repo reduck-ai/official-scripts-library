@@ -1,10 +1,10 @@
 # Facebook whoami (signed-in account)
 
-Report which Facebook account this browser is signed in as: the user id and name. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Facebook scripts. It never signs in.
+Report which Facebook account this browser is signed in as: the user id and name, and whether it acts as a Page. A browser held at a Facebook security checkpoint is reported as such. A signed-out browser fails with a signed-out error asking you to sign in to Facebook, so it can be used to check a session before running other Facebook scripts. It never signs in.
 
 - Site: facebook.com
 - Address: `reduck/facebook.com/whoami`
-- Updated: 2026-11-13 (v5)
+- Updated: 2026-11-16 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -33,7 +33,7 @@ It takes no input.
 
 ### What does "Facebook whoami (signed-in account)" do?
 
-Report which Facebook account this browser is signed in as: the user id and name. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Facebook scripts. It never signs in.
+Report which Facebook account this browser is signed in as: the user id and name, and whether it acts as a Page. A browser held at a Facebook security checkpoint is reported as such. A signed-out browser fails with a signed-out error asking you to sign in to Facebook, so it can be used to check a session before running other Facebook scripts. It never signs in.
 
 ### What information do I need to provide?
 

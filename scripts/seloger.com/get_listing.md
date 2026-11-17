@@ -4,7 +4,7 @@ Automatically get SeLoger listing on seloger.com. Fetch a SeLoger property detai
 
 - Site: seloger.com
 - Address: `reduck/seloger.com/get_listing`
-- Updated: 2026-11-03 (v7)
+- Updated: 2026-11-16 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it

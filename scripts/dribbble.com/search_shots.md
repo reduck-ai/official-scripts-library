@@ -1,10 +1,10 @@
 # Search Dribbble shots
 
-Automatically search Dribbble shots on dribbble.com. Search Dribbble shots by keyword, returning title, url, owner, thumbnail, likes and views for each result.
+Automatically search Dribbble shots on dribbble.com. Search Dribbble shots by keyword, returning title, url, owner, thumbnail, likes and views for each result. Sponsored cards are included as the page shows them and flagged with sponsored: true; they can have no title or url, so filter on that flag if you only want regular shots.
 
 - Site: dribbble.com
 - Address: `reduck/dribbble.com/search_shots`
-- Updated: 2026-08-25 (v3)
+- Updated: 2026-11-16 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -27,7 +27,7 @@ npx @reduck-ai/cli@latest run --script reduck/dribbble.com/search_shots
 
 ### What does "Search Dribbble shots" do?
 
-Search Dribbble shots by keyword, returning title, url, owner, thumbnail, likes and views for each result.
+Search Dribbble shots by keyword, returning title, url, owner, thumbnail, likes and views for each result. Sponsored cards are included as the page shows them and flagged with sponsored: true; they can have no title or url, so filter on that flag if you only want regular shots.
 
 ### How do I automatically search Dribbble shots on dribbble.com?
 

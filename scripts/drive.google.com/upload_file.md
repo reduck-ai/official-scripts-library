@@ -4,7 +4,7 @@ Automatically upload a file to Google Drive on drive.google.com. Upload one file
 
 - Site: drive.google.com
 - Address: `reduck/drive.google.com/upload_file`
-- Updated: 2026-10-22 (v15)
+- Updated: 2026-11-16 (v16)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,6 +18,7 @@ npx @reduck-ai/cli@latest run --script reduck/drive.google.com/upload_file
 ## Input
 
 - `attachment` (string, required): The file to upload.
+- `authuser` (string, optional): Which signed-in Google account to use, by its email address or its index (0 for the first). Omit for Google's default account.
 - `filename` (string, optional): Name to store the file under, with its extension. Defaults to the file's own name. Pass it when you send the file as bytes, because such a file arrives named "attachment".
 - `folderId` (string, optional): Destination folder id, the <id> in drive.google.com/drive/folders/<id>. Omit to upload into the root of My Drive.
 - `ifExists` (string, optional): What to do when the folder already holds a file with this name. fail uploads nothing and returns an error. keepBoth stores a second file, which Drive names with a number, for example "report (1).pdf". replace uploads a new version of the existing file, which keeps its id, link and sharing.
@@ -48,7 +49,7 @@ You do not need one. "Upload a file to Google Drive" drives the real drive.googl
 
 ### What information do I need to provide?
 
-Required: attachment. Optional: filename, folderId, ifExists.
+Required: attachment. Optional: authuser, filename, folderId, ifExists.
 
 ### What does it return?
 

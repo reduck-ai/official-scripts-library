@@ -4,7 +4,7 @@ Automatically export the list of Facebook groups you're in on facebook.com. Expo
 
 - Site: facebook.com
 - Address: `reduck/facebook.com/list_joined_groups`
-- Updated: 2026-11-13 (v5)
+- Updated: 2026-11-16 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

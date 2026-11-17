@@ -4,7 +4,7 @@ Automatically get Slack thread replies on slack.com. Read a Slack thread by chan
 
 - Site: slack.com
 - Address: `reduck/slack.com/get_thread_replies`
-- Updated: 2026-11-13 (v5)
+- Updated: 2026-11-16 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,11 +18,11 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/get_thread_replies
 ## Input
 
 - `channel` (string, required): Channel id (C…, G… or D…). Get it from slack.com/list_channels.
+- `workspaceDomain` (string, required): Workspace host, e.g. acme.slack.com, from slack.com/list_workspaces.
 - `ts` (string, optional): The parent message's ts (same value as thread_ts). Pass this OR thread_ts.
 - `limit` (integer, optional): Max replies per page (default 100). The parent comes on every page and is not counted.
 - `cursor` (string, optional): nextCursor from a previous call, to read the older replies.
 - `thread_ts` (string, optional): Alias of ts: the parent message's thread_ts. Pass this OR ts.
-- `workspaceDomain` (string, optional): Workspace host, e.g. acme.slack.com, from slack.com/list_workspaces. Omit to use the workspace this browser last used.
 
 ## Output
 
@@ -47,7 +47,7 @@ You do not need one. "Get Slack thread replies" drives the real slack.com pages 
 
 ### What information do I need to provide?
 
-Required: channel. Optional: ts, limit, cursor, thread_ts, workspaceDomain.
+Required: channel, workspaceDomain. Optional: ts, limit, cursor, thread_ts.
 
 ### What does it return?
 

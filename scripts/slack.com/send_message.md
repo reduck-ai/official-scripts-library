@@ -4,7 +4,7 @@ Automatically send Slack message on slack.com. Post a message to a channel or DM
 
 - Site: slack.com
 - Address: `reduck/slack.com/send_message`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-11-16 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,10 +18,10 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/send_message
 ## Input
 
 - `text` (string, required): Message text (supports Slack mrkdwn).
-- `channel` (string, required): Target: channel name/#name, channel/DM id (C…/D…), @handle or user id (U…) for a DM.
+- `channel` (string, required): Channel or DM id (C…/G…/D…). Get it from slack.com/list_channels or slack.com/list_dms.
+- `workspaceDomain` (string, required): Workspace host, e.g. acme.slack.com. Confirm with the user which workspace to target before running.
 - `threadTs` (string, optional): Parent message ts to reply in its thread.
-- `broadcast` (boolean, optional): When replying in a thread, also post to the channel. Default false.
-- `workspaceDomain` (string, optional): Workspace host, e.g. acme.slack.com. Defaults to the active workspace.
+- `broadcast` (boolean, optional): When replying in a thread, also post to the channel.
 
 ## Output
 
@@ -29,6 +29,7 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/send_message
 - `ts` (string, required)
 - `channel` (string, required)
 - `permalink` (string | null, optional)
+- `workspace` (string, optional)
 
 ## FAQ
 
@@ -46,11 +47,11 @@ You do not need one. "Send Slack message" drives the real slack.com pages in a b
 
 ### What information do I need to provide?
 
-Required: channel, text. Optional: threadTs, broadcast, workspaceDomain.
+Required: channel, text, workspaceDomain. Optional: threadTs, broadcast.
 
 ### What does it return?
 
-It returns ok, ts, channel, permalink.
+It returns ok, ts, channel, permalink, workspace.
 
 ### Do I need to be logged in to slack.com?
 

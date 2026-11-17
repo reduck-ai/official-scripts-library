@@ -1,10 +1,10 @@
 # WhatsApp — Get group invite link
 
-Automatically get group invite link on web.whatsapp.com. Get the shareable invite link (https://chat.whatsapp.com/...) of a WhatsApp group by exact name. Opens the group-info drawer → Invite to group via link → reads the displayed link. Admin-only (non-admins can't see the link). Returns the group name and the invite URL.
+Automatically get group invite link on web.whatsapp.com. Get the shareable invite link (https://chat.whatsapp.com/...) of a WhatsApp group by its exact name. Read-only: never resets the link. Only works when you are an admin of the group. Returns the group name and the invite URL.
 
 - Site: web.whatsapp.com
 - Address: `reduck/web.whatsapp.com/get_group_invite_link`
-- Updated: 2026-11-12 (v6)
+- Updated: 2026-11-16 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -28,7 +28,7 @@ npx @reduck-ai/cli@latest run --script reduck/web.whatsapp.com/get_group_invite_
 
 ### What does "WhatsApp — Get group invite link" do?
 
-Get the shareable invite link (https://chat.whatsapp.com/...) of a WhatsApp group by exact name. Opens the group-info drawer → Invite to group via link → reads the displayed link. Admin-only (non-admins can't see the link). Returns the group name and the invite URL.
+Get the shareable invite link (https://chat.whatsapp.com/...) of a WhatsApp group by its exact name. Read-only: never resets the link. Only works when you are an admin of the group. Returns the group name and the invite URL.
 
 ### How do I automatically get group invite link on web.whatsapp.com?
 

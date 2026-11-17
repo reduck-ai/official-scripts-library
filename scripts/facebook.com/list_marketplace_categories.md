@@ -4,7 +4,7 @@ Automatically list Facebook Marketplace categories on facebook.com. List the top
 
 - Site: facebook.com
 - Address: `reduck/facebook.com/list_marketplace_categories`
-- Updated: 2026-11-05 (v1)
+- Updated: 2026-11-16 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

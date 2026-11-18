@@ -4,7 +4,7 @@ Automatically read one item listing on vinted.com. Read a single Vinted listing 
 
 - Site: vinted.com
 - Address: `reduck/vinted.com/get_item`
-- Updated: 2026-10-22 (v9)
+- Updated: 2026-11-17 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it

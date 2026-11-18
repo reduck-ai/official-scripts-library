@@ -4,7 +4,7 @@ Automatically add a Berlin City Tour ticket to the basket for a date on berlin-c
 
 - Site: berlin-city-tour.de
 - Address: `reduck/berlin-city-tour.de/add_to_cart`
-- Updated: 2026-11-13 (v6)
+- Updated: 2026-11-17 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

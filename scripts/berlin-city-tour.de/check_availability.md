@@ -4,7 +4,7 @@ Automatically check Berlin City Tour ticket availability for a date on berlin-ci
 
 - Site: berlin-city-tour.de
 - Address: `reduck/berlin-city-tour.de/check_availability`
-- Updated: 2026-11-13 (v2)
+- Updated: 2026-11-17 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

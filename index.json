@@ -1,5 +1,5 @@
 {
-	"count": 1398,
+	"count": 1413,
 	"scripts": [
 		{
 			"address": "@reduck/99designs.com/login_with_google",
@@ -938,6 +938,12 @@
 			"lastmod": "2026-10-29"
 		},
 		{
+			"address": "@reduck/app.pennylane.com/check_expense_payments",
+			"path": "scripts/app.pennylane.com/check_expense_payments.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/app.pennylane.com/check_expense_payments",
+			"lastmod": "2026-11-17"
+		},
+		{
 			"address": "@reduck/app.pennylane.com/create_supplier",
 			"path": "scripts/app.pennylane.com/create_supplier.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/app.pennylane.com/create_supplier",
@@ -1181,25 +1187,61 @@
 			"address": "@reduck/berlin-city-tour.de/add_to_cart",
 			"path": "scripts/berlin-city-tour.de/add_to_cart.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/berlin-city-tour.de/add_to_cart",
-			"lastmod": "2026-11-13"
+			"lastmod": "2026-11-17"
 		},
 		{
 			"address": "@reduck/berlin-city-tour.de/check_availability",
 			"path": "scripts/berlin-city-tour.de/check_availability.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/berlin-city-tour.de/check_availability",
-			"lastmod": "2026-11-13"
+			"lastmod": "2026-11-17"
 		},
 		{
 			"address": "@reduck/berlin-city-tour.de/fill_booking_details",
 			"path": "scripts/berlin-city-tour.de/fill_booking_details.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/berlin-city-tour.de/fill_booking_details",
-			"lastmod": "2026-11-16"
+			"lastmod": "2026-11-17"
 		},
 		{
 			"address": "@reduck/berlin-city-tour.de/remove_from_cart",
 			"path": "scripts/berlin-city-tour.de/remove_from_cart.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/berlin-city-tour.de/remove_from_cart",
-			"lastmod": "2026-11-13"
+			"lastmod": "2026-11-17"
+		},
+		{
+			"address": "@reduck/bestbuy.com/add_to_cart",
+			"path": "scripts/bestbuy.com/add_to_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/bestbuy.com/add_to_cart",
+			"lastmod": "2026-11-17"
+		},
+		{
+			"address": "@reduck/bestbuy.com/get-product",
+			"path": "scripts/bestbuy.com/get-product.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/bestbuy.com/get-product",
+			"lastmod": "2026-11-17"
+		},
+		{
+			"address": "@reduck/bestbuy.com/list_cart_items",
+			"path": "scripts/bestbuy.com/list_cart_items.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/bestbuy.com/list_cart_items",
+			"lastmod": "2026-11-17"
+		},
+		{
+			"address": "@reduck/bestbuy.com/list_search_filters",
+			"path": "scripts/bestbuy.com/list_search_filters.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/bestbuy.com/list_search_filters",
+			"lastmod": "2026-11-17"
+		},
+		{
+			"address": "@reduck/bestbuy.com/remove_from_cart",
+			"path": "scripts/bestbuy.com/remove_from_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/bestbuy.com/remove_from_cart",
+			"lastmod": "2026-11-17"
+		},
+		{
+			"address": "@reduck/bestbuy.com/search-products",
+			"path": "scripts/bestbuy.com/search-products.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/bestbuy.com/search-products",
+			"lastmod": "2026-11-17"
 		},
 		{
 			"address": "@reduck/billetterie.chateauversailles.fr/add_to_cart",
@@ -1308,6 +1350,12 @@
 			"path": "scripts/browserbase.com/list_projects.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/browserbase.com/list_projects",
 			"lastmod": "2026-10-29"
+		},
+		{
+			"address": "@reduck/browserbase.com/list_users_and_roles",
+			"path": "scripts/browserbase.com/list_users_and_roles.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/browserbase.com/list_users_and_roles",
+			"lastmod": "2026-11-17"
 		},
 		{
 			"address": "@reduck/browserbase.com/login_with_google",
@@ -2078,6 +2126,12 @@
 			"lastmod": "2026-10-22"
 		},
 		{
+			"address": "@reduck/dashboard.stripe.com/list_users_and_roles",
+			"path": "scripts/dashboard.stripe.com/list_users_and_roles.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/dashboard.stripe.com/list_users_and_roles",
+			"lastmod": "2026-11-17"
+		},
+		{
 			"address": "@reduck/dashboard.stripe.com/login_with_google",
 			"path": "scripts/dashboard.stripe.com/login_with_google.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/dashboard.stripe.com/login_with_google",
@@ -2117,7 +2171,7 @@
 			"address": "@reduck/descript.com/whoami",
 			"path": "scripts/descript.com/whoami.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/descript.com/whoami",
-			"lastmod": "2026-11-11"
+			"lastmod": "2026-11-17"
 		},
 		{
 			"address": "@reduck/digitalocean.com/login_with_google",
@@ -2237,7 +2291,7 @@
 			"address": "@reduck/discord.com/read_messages",
 			"path": "scripts/discord.com/read_messages.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/discord.com/read_messages",
-			"lastmod": "2026-11-11"
+			"lastmod": "2026-11-17"
 		},
 		{
 			"address": "@reduck/discord.com/reply_to_message",
@@ -2333,7 +2387,7 @@
 			"address": "@reduck/docs.google.com/request_signatures",
 			"path": "scripts/docs.google.com/request_signatures.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/docs.google.com/request_signatures",
-			"lastmod": "2026-11-10"
+			"lastmod": "2026-11-17"
 		},
 		{
 			"address": "@reduck/docs.google.com/sheets_add_tab",
@@ -2528,6 +2582,12 @@
 			"lastmod": "2026-11-16"
 		},
 		{
+			"address": "@reduck/drata.com/list_vendor_documents",
+			"path": "scripts/drata.com/list_vendor_documents.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/drata.com/list_vendor_documents",
+			"lastmod": "2026-11-17"
+		},
+		{
 			"address": "@reduck/drata.com/renew_evidence",
 			"path": "scripts/drata.com/renew_evidence.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/drata.com/renew_evidence",
@@ -2538,6 +2598,18 @@
 			"path": "scripts/drata.com/retest_monitor.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/drata.com/retest_monitor",
 			"lastmod": "2026-11-02"
+		},
+		{
+			"address": "@reduck/drata.com/update_vendor",
+			"path": "scripts/drata.com/update_vendor.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/drata.com/update_vendor",
+			"lastmod": "2026-11-17"
+		},
+		{
+			"address": "@reduck/drata.com/upload_vendor_document",
+			"path": "scripts/drata.com/upload_vendor_document.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/drata.com/upload_vendor_document",
+			"lastmod": "2026-11-17"
 		},
 		{
 			"address": "@reduck/drata.com/verify_platform_users",
@@ -3773,7 +3845,7 @@
 			"address": "@reduck/kayak.fr/search_flights_roundtrip",
 			"path": "scripts/kayak.fr/search_flights_roundtrip.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/kayak.fr/search_flights_roundtrip",
-			"lastmod": "2026-11-10"
+			"lastmod": "2026-11-17"
 		},
 		{
 			"address": "@reduck/king-jouet.com/add_to_cart",
@@ -5558,6 +5630,12 @@
 			"lastmod": "2026-11-16"
 		},
 		{
+			"address": "@reduck/producthunt.com/list_today_launches",
+			"path": "scripts/producthunt.com/list_today_launches.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/producthunt.com/list_today_launches",
+			"lastmod": "2026-11-17"
+		},
+		{
 			"address": "@reduck/producthunt.com/login_with_google",
 			"path": "scripts/producthunt.com/login_with_google.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/producthunt.com/login_with_google",
@@ -5628,6 +5706,12 @@
 			"path": "scripts/qonto.com/whoami.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/qonto.com/whoami",
 			"lastmod": "2026-10-19"
+		},
+		{
+			"address": "@reduck/ratp.fr/get_metro_traffic_status",
+			"path": "scripts/ratp.fr/get_metro_traffic_status.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/ratp.fr/get_metro_traffic_status",
+			"lastmod": "2026-11-17"
 		},
 		{
 			"address": "@reduck/raycast.com/get_extension",
@@ -5717,7 +5801,7 @@
 			"address": "@reduck/reddit.com/get_subreddit_threads",
 			"path": "scripts/reddit.com/get_subreddit_threads.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/reddit.com/get_subreddit_threads",
-			"lastmod": "2026-11-12"
+			"lastmod": "2026-11-17"
 		},
 		{
 			"address": "@reduck/reddit.com/get_thread",
@@ -5735,7 +5819,7 @@
 			"address": "@reduck/reddit.com/get_user_comments",
 			"path": "scripts/reddit.com/get_user_comments.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/reddit.com/get_user_comments",
-			"lastmod": "2026-11-02"
+			"lastmod": "2026-11-17"
 		},
 		{
 			"address": "@reduck/reddit.com/get_user",
@@ -5765,7 +5849,7 @@
 			"address": "@reduck/reddit.com/post_comment",
 			"path": "scripts/reddit.com/post_comment.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/reddit.com/post_comment",
-			"lastmod": "2026-11-16"
+			"lastmod": "2026-11-17"
 		},
 		{
 			"address": "@reduck/reddit.com/read_moderators",
@@ -6353,7 +6437,7 @@
 			"address": "@reduck/slack.com/search_messages",
 			"path": "scripts/slack.com/search_messages.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/slack.com/search_messages",
-			"lastmod": "2026-11-16"
+			"lastmod": "2026-11-17"
 		},
 		{
 			"address": "@reduck/slack.com/send_message",
@@ -7244,6 +7328,12 @@
 			"lastmod": "2026-10-22"
 		},
 		{
+			"address": "@reduck/vercel.com/list_upstash_databases",
+			"path": "scripts/vercel.com/list_upstash_databases.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/vercel.com/list_upstash_databases",
+			"lastmod": "2026-11-17"
+		},
+		{
 			"address": "@reduck/vercel.com/list_users_and_roles",
 			"path": "scripts/vercel.com/list_users_and_roles.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/vercel.com/list_users_and_roles",
@@ -7277,7 +7367,7 @@
 			"address": "@reduck/vinted.com/get_item",
 			"path": "scripts/vinted.com/get_item.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/vinted.com/get_item",
-			"lastmod": "2026-10-22"
+			"lastmod": "2026-11-17"
 		},
 		{
 			"address": "@reduck/vinted.com/list_favourites",

@@ -4,7 +4,7 @@ Automatically search Slack messages on slack.com. Full-text search across the wo
 
 - Site: slack.com
 - Address: `reduck/slack.com/search_messages`
-- Updated: 2026-11-16 (v7)
+- Updated: 2026-11-17 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it

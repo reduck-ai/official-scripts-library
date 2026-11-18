@@ -4,7 +4,7 @@ Automatically remove a line from the Berlin City Tour basket on berlin-city-tour
 
 - Site: berlin-city-tour.de
 - Address: `reduck/berlin-city-tour.de/remove_from_cart`
-- Updated: 2026-11-13 (v4)
+- Updated: 2026-11-17 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

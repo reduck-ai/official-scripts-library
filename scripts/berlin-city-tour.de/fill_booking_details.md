@@ -4,7 +4,7 @@ Takes a Berlin City Tour basket made by add_to_cart, enters the traveller's name
 
 - Site: berlin-city-tour.de
 - Address: `reduck/berlin-city-tour.de/fill_booking_details`
-- Updated: 2026-11-16 (v6)
+- Updated: 2026-11-17 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

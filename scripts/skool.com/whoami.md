@@ -4,7 +4,7 @@ Report which Skool account this browser is signed in as: email, name and profile
 
 - Site: skool.com
 - Address: `reduck/skool.com/whoami`
-- Updated: 2026-10-22 (v4)
+- Updated: 2026-11-18 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -24,7 +24,8 @@ It takes no input.
 - `loggedIn` (boolean, required)
 - `name` (string | null, optional)
 - `email` (string | null, optional)
-- `handle` (string | null, optional): Skool profile handle, e.g. vincent-lambert-8912
+- `handle` (string | null, optional)
+- `username` (string | null, optional)
 
 ## FAQ
 
@@ -38,7 +39,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns name, email, handle, loggedIn.
+It returns name, email, handle, loggedIn, username.
 
 ### Do I need to be logged in to skool.com?
 

@@ -4,7 +4,7 @@ Report which Pipedrive account this browser is signed in as: the user id, email,
 
 - Site: pipedrive.com
 - Address: `reduck/pipedrive.com/whoami`
-- Updated: 2026-10-22 (v4)
+- Updated: 2026-11-18 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -26,7 +26,9 @@ It takes no input.
 - `id` (string | null, optional)
 - `name` (string | null, optional)
 - `email` (string | null, optional)
+- `userId` (string | null, optional)
 - `company` (string | null, optional): Pipedrive company subdomain (<company>.pipedrive.com).
+- `workspace` (object | null, optional)
 
 ## FAQ
 
@@ -40,7 +42,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns id, name, email, company, evidence, loggedIn.
+It returns id, name, email, userId, company, evidence, loggedIn, workspace.
 
 ### Do I need to be logged in to pipedrive.com?
 

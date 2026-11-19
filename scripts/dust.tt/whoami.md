@@ -1,10 +1,10 @@
 # Dust whoami (signed-in account)
 
-Report which Dust account this browser is signed in as: the user id, email and name. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Dust scripts.
+Report which Dust account this browser is signed in as: the user id, email, username and name. When the browser is signed out of Dust, the run fails with a signed-out error asking you to sign in to dust.tt.
 
 - Site: dust.tt
 - Address: `reduck/dust.tt/whoami`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-11-18 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -26,13 +26,14 @@ It takes no input.
 - `id` (string | null, optional): Dust user sId.
 - `name` (string | null, optional)
 - `email` (string | null, optional)
+- `userId` (string | null, optional): Dust user sId.
 - `username` (string | null, optional)
 
 ## FAQ
 
 ### What does "Dust whoami (signed-in account)" do?
 
-Report which Dust account this browser is signed in as: the user id, email and name. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Dust scripts.
+Report which Dust account this browser is signed in as: the user id, email, username and name. When the browser is signed out of Dust, the run fails with a signed-out error asking you to sign in to dust.tt.
 
 ### What information do I need to provide?
 
@@ -40,7 +41,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns id, name, email, evidence, loggedIn, username.
+It returns id, name, email, userId, evidence, loggedIn, username.
 
 ### Do I need to be logged in to dust.tt?
 

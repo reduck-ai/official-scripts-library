@@ -4,7 +4,7 @@ Report which Adobe account this browser is signed in as: the Adobe ID, email, di
 
 - Site: adobe.com
 - Address: `reduck/adobe.com/whoami`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-11-18 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -23,11 +23,12 @@ It takes no input.
 
 - `evidence` (string, required)
 - `loggedIn` (boolean, required)
+- `name` (string | null, optional)
 - `email` (string | null, optional)
 - `userId` (string | null, optional): Adobe ID (…@AdobeID).
 - `lastName` (string | null, optional)
 - `firstName` (string | null, optional)
-- `accountType` (string | null, optional): type1 = personal Adobe ID; type2/type3 = enterprise / federated.
+- `accountType` (string | null, optional)
 - `countryCode` (string | null, optional)
 - `displayName` (string | null, optional)
 
@@ -43,7 +44,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns email, userId, evidence, lastName, loggedIn, firstName, accountType, countryCode, displayName.
+It returns name, email, userId, evidence, lastName, loggedIn, firstName, accountType, countryCode, displayName.
 
 ### Do I need to be logged in to adobe.com?
 

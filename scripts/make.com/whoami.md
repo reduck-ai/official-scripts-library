@@ -1,10 +1,10 @@
 # Make whoami (signed-in account)
 
-Report which Make (make.com) account this browser is signed in as: the user id, email and name. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Make scripts.
+Report which Make (make.com) account this browser is signed in as: the user id, email, name and the zone the account lives on. When the browser is signed out of Make, the run fails with a signed-out error asking you to sign in to make.com.
 
 - Site: make.com
 - Address: `reduck/make.com/whoami`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-11-18 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -27,12 +27,13 @@ It takes no input.
 - `name` (string | null, optional)
 - `zone` (string | null, optional): Make zone host the account lives on, e.g. eu1.make.com.
 - `email` (string | null, optional)
+- `userId` (string | null, optional)
 
 ## FAQ
 
 ### What does "Make whoami (signed-in account)" do?
 
-Report which Make (make.com) account this browser is signed in as: the user id, email and name. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Make scripts.
+Report which Make (make.com) account this browser is signed in as: the user id, email, name and the zone the account lives on. When the browser is signed out of Make, the run fails with a signed-out error asking you to sign in to make.com.
 
 ### What information do I need to provide?
 
@@ -40,7 +41,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns id, name, zone, email, evidence, loggedIn.
+It returns id, name, zone, email, userId, evidence, loggedIn.
 
 ### Do I need to be logged in to make.com?
 

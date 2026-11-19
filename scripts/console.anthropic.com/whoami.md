@@ -1,10 +1,10 @@
 # Anthropic Console whoami (signed-in account)
 
-Report which Anthropic Console (platform.claude.com) account this browser is signed in as: the user id, uuid, email, name, and every organization it belongs to with its uuid and role (the organization other Console scripts act on). Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Console scripts.
+Report which Anthropic Console account this browser is signed in as: the user id, uuid, email, name, the organization in use, and every organization it belongs to with its role. When the browser is signed out, the run fails with a signed-out error asking you to sign in to the Anthropic Console.
 
 - Site: console.anthropic.com
 - Address: `reduck/console.anthropic.com/whoami`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-11-18 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -27,13 +27,14 @@ It takes no input.
 - `uuid` (string | null, optional)
 - `email` (string | null, optional)
 - `userId` (string | null, optional)
+- `workspace` (object | null, optional)
 - `organizations` (array, optional)
 
 ## FAQ
 
 ### What does "Anthropic Console whoami (signed-in account)" do?
 
-Report which Anthropic Console (platform.claude.com) account this browser is signed in as: the user id, uuid, email, name, and every organization it belongs to with its uuid and role (the organization other Console scripts act on). Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Console scripts.
+Report which Anthropic Console account this browser is signed in as: the user id, uuid, email, name, the organization in use, and every organization it belongs to with its role. When the browser is signed out, the run fails with a signed-out error asking you to sign in to the Anthropic Console.
 
 ### What information do I need to provide?
 
@@ -41,7 +42,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns name, uuid, email, userId, evidence, loggedIn, organizations.
+It returns name, uuid, email, userId, evidence, loggedIn, workspace, organizations.
 
 ### Do I need to be logged in to console.anthropic.com?
 

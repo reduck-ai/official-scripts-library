@@ -4,7 +4,7 @@ Automatically get King Jouet product on king-jouet.com. Read one King Jouet prod
 
 - Site: king-jouet.com
 - Address: `reduck/king-jouet.com/get_product`
-- Updated: 2026-11-04 (v1)
+- Updated: 2026-11-18 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

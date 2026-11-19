@@ -4,7 +4,7 @@ Report which Trello account this browser is signed in as: the member id, usernam
 
 - Site: trello.com
 - Address: `reduck/trello.com/whoami`
-- Updated: 2026-10-29 (v4)
+- Updated: 2026-11-18 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -26,6 +26,7 @@ It takes no input.
 - `id` (string | null, optional)
 - `name` (string | null, optional)
 - `email` (string | null, optional)
+- `userId` (string | null, optional)
 - `username` (string | null, optional)
 
 ## FAQ
@@ -40,7 +41,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns id, name, email, evidence, loggedIn, username.
+It returns id, name, email, userId, evidence, loggedIn, username.
 
 ### Do I need to be logged in to trello.com?
 

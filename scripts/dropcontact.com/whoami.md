@@ -4,7 +4,7 @@ Report which Dropcontact account this browser is signed in as: the account id an
 
 - Site: dropcontact.com
 - Address: `reduck/dropcontact.com/whoami`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-11-18 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -25,6 +25,7 @@ It takes no input.
 - `loggedIn` (boolean, required)
 - `id` (string | null, optional)
 - `email` (string | null, optional)
+- `userId` (string | null, optional)
 
 ## FAQ
 
@@ -38,7 +39,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns id, email, evidence, loggedIn.
+It returns id, email, userId, evidence, loggedIn.
 
 ### Do I need to be logged in to dropcontact.com?
 

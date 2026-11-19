@@ -4,7 +4,7 @@ Automatically search Facebook Marketplace listings on facebook.com. Search Faceb
 
 - Site: facebook.com
 - Address: `reduck/facebook.com/search_marketplace_listings`
-- Updated: 2026-11-13 (v4)
+- Updated: 2026-11-18 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

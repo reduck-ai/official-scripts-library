@@ -1,10 +1,10 @@
 # Miro whoami (signed-in account)
 
-Report which Miro account this browser is signed in as: the user id, email, name, and every team/company account it belongs to (id, title, type). Being signed out, including an expired session, is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Miro scripts.
+Report which Miro account this browser is signed in as: the user id, email, name, the team in use, and every team it belongs to. When the browser is signed out or the session expired, the run fails with a signed-out error asking you to sign in to Miro.
 
 - Site: miro.com
 - Address: `reduck/miro.com/whoami`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-11-18 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -27,12 +27,13 @@ It takes no input.
 - `email` (string | null, optional)
 - `teams` (array, optional)
 - `userId` (string | null, optional)
+- `workspace` (object | null, optional)
 
 ## FAQ
 
 ### What does "Miro whoami (signed-in account)" do?
 
-Report which Miro account this browser is signed in as: the user id, email, name, and every team/company account it belongs to (id, title, type). Being signed out, including an expired session, is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Miro scripts.
+Report which Miro account this browser is signed in as: the user id, email, name, the team in use, and every team it belongs to. When the browser is signed out or the session expired, the run fails with a signed-out error asking you to sign in to Miro.
 
 ### What information do I need to provide?
 
@@ -40,7 +41,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns name, email, teams, userId, evidence, loggedIn.
+It returns name, email, teams, userId, evidence, loggedIn, workspace.
 
 ### Do I need to be logged in to miro.com?
 

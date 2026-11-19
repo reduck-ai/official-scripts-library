@@ -4,7 +4,7 @@ Report which Substack account this browser is signed in as: the @handle, display
 
 - Site: substack.com
 - Address: `reduck/substack.com/whoami`
-- Updated: 2026-10-22 (v4)
+- Updated: 2026-11-18 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -27,6 +27,7 @@ It takes no input.
 - `email` (string | null, optional)
 - `handle` (string | null, optional)
 - `userId` (string | null, optional)
+- `username` (string | null, optional)
 
 ## FAQ
 
@@ -40,7 +41,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns name, email, handle, userId, evidence, loggedIn.
+It returns name, email, handle, userId, evidence, loggedIn, username.
 
 ### Do I need to be logged in to substack.com?
 

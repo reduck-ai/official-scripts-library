@@ -4,7 +4,7 @@ Automatically search Glassdoor companies on glassdoor.com. Search Glassdoor empl
 
 - Site: glassdoor.com
 - Address: `reduck/glassdoor.com/search_companies`
-- Updated: 2026-11-05 (v6)
+- Updated: 2026-11-18 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

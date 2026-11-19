@@ -4,7 +4,7 @@ Report which Browserbase account this browser is signed in as: the user id, emai
 
 - Site: browserbase.com
 - Address: `reduck/browserbase.com/whoami`
-- Updated: 2026-10-22 (v4)
+- Updated: 2026-11-18 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -27,6 +27,7 @@ It takes no input.
 - `email` (string | null, optional)
 - `userId` (string | null, optional)
 - `createdAt` (string | null, optional)
+- `workspace` (object | null, optional)
 - `organizations` (array, optional)
 
 ## FAQ
@@ -41,7 +42,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns name, email, userId, evidence, loggedIn, createdAt, organizations.
+It returns name, email, userId, evidence, loggedIn, createdAt, workspace, organizations.
 
 ### Do I need to be logged in to browserbase.com?
 

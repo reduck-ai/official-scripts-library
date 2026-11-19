@@ -4,7 +4,7 @@ Report which Claude.ai account the browser is signed in as: id (the sign-in emai
 
 - Site: claude.ai
 - Address: `reduck/claude.ai/whoami`
-- Updated: 2026-10-22 (v5)
+- Updated: 2026-11-18 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -21,11 +21,16 @@ It takes no input.
 
 ## Output
 
-- `id` (string, required): The account's sign-in email; the identifier a connector for claude.ai is labelled with.
-- `orgs` (array, required): Every organisation the account is a member of. A personal account has exactly one.
-- `uuid` (string, required): The account's uuid.
-- `full_name` (string, required): The name given at signup.
-- `display_name` (string, required): The name Claude greets the user with and shows in the sidebar; equal to full_name unless changed in settings.
+- `id` (string, required): Kept for older callers: the sign-in email.
+- `orgs` (array, required)
+- `uuid` (string, required)
+- `email` (string, required): The account's sign-in email.
+- `userId` (string, required): The account's uuid.
+- `loggedIn` (boolean, required): Always true on a returned result; signed out throws SignedOutError.
+- `full_name` (string, required)
+- `display_name` (string, required)
+- `name` (string | null, optional): Full name (display name when no full name).
+- `workspace` (object | null, optional): The organisation in use (lastActiveOrg), else the first one.
 
 ## FAQ
 
@@ -39,7 +44,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns id, orgs, uuid, full_name, display_name.
+It returns id, name, orgs, uuid, email, userId, loggedIn, full_name, workspace, display_name.
 
 ### Do I need to be logged in to claude.ai?
 

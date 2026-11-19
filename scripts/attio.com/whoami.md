@@ -4,7 +4,7 @@ Report which Attio account this browser is signed in as: the user id, email, nam
 
 - Site: attio.com
 - Address: `reduck/attio.com/whoami`
-- Updated: 2026-10-22 (v4)
+- Updated: 2026-11-18 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -26,7 +26,8 @@ It takes no input.
 - `id` (string | null, optional)
 - `name` (string | null, optional)
 - `email` (string | null, optional)
-- `workspace` (string | null, optional): Slug of the workspace the app opened (app.attio.com/<workspace>).
+- `userId` (string | null, optional)
+- `workspace` (object | null, optional)
 
 ## FAQ
 
@@ -40,7 +41,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns id, name, email, evidence, loggedIn, workspace.
+It returns id, name, email, userId, evidence, loggedIn, workspace.
 
 ### Do I need to be logged in to attio.com?
 

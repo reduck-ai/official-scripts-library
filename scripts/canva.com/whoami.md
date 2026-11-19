@@ -4,7 +4,7 @@ Report which Canva account this browser is signed in as: the user id, email, dis
 
 - Site: canva.com
 - Address: `reduck/canva.com/whoami`
-- Updated: 2026-10-20 (v4)
+- Updated: 2026-11-18 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -23,6 +23,7 @@ It takes no input.
 
 - `evidence` (string, required)
 - `loggedIn` (boolean, required)
+- `name` (string | null, optional)
 - `email` (string | null, optional)
 - `userId` (string | null, optional)
 - `username` (string | null, optional)
@@ -40,7 +41,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns email, userId, evidence, loggedIn, username, displayName.
+It returns name, email, userId, evidence, loggedIn, username, displayName.
 
 ### Do I need to be logged in to canva.com?
 

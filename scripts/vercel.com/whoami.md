@@ -4,7 +4,7 @@ Report which Vercel account this browser is signed in as: the user id, email, us
 
 - Site: vercel.com
 - Address: `reduck/vercel.com/whoami`
-- Updated: 2026-10-22 (v5)
+- Updated: 2026-11-18 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,6 +29,7 @@ It takes no input.
 - `teams` (array, optional)
 - `userId` (string | null, optional)
 - `username` (string | null, optional)
+- `workspace` (object | null, optional)
 - `defaultTeamId` (string | null, optional)
 
 ## FAQ
@@ -43,7 +44,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns name, plan, email, teams, userId, evidence, loggedIn, username, defaultTeamId.
+It returns name, plan, email, teams, userId, evidence, loggedIn, username, workspace, defaultTeamId.
 
 ### Do I need to be logged in to vercel.com?
 

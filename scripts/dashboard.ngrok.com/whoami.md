@@ -4,7 +4,7 @@ Report which ngrok dashboard account this browser is signed in as: the email, nu
 
 - Site: dashboard.ngrok.com
 - Address: `reduck/dashboard.ngrok.com/whoami`
-- Updated: 2026-10-22 (v5)
+- Updated: 2026-11-18 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -25,6 +25,7 @@ It takes no input.
 - `loggedIn` (boolean, required)
 - `plan` (string | null, optional)
 - `email` (string | null, optional)
+- `userId` (string | null, optional)
 - `accountId` (string | null, optional)
 
 ## FAQ
@@ -39,7 +40,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns plan, email, evidence, loggedIn, accountId.
+It returns plan, email, userId, evidence, loggedIn, accountId.
 
 ### Do I need to be logged in to dashboard.ngrok.com?
 

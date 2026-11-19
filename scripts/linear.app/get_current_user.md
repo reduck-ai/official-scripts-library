@@ -4,7 +4,7 @@ Automatically get current Linear user on linear.app. Report which Linear account
 
 - Site: linear.app
 - Address: `reduck/linear.app/get_current_user`
-- Updated: 2026-10-22 (v6)
+- Updated: 2026-11-18 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -24,7 +24,9 @@ npx @reduck-ai/cli@latest run --script reduck/linear.app/get_current_user
 - `loggedIn` (boolean, required)
 - `name` (string | null, optional)
 - `email` (string | null, optional)
-- `workspace` (string | null, optional): Workspace slug the profile page opened in
+- `userId` (string | null, optional)
+- `workspace` (object, optional)
+- `workspaceSlug` (string | null, optional): Workspace slug the profile page opened in
 
 ## FAQ
 
@@ -46,7 +48,7 @@ Optional: workspaceUrl.
 
 ### What does it return?
 
-It returns name, email, loggedIn, workspace.
+It returns name, email, userId, loggedIn, workspace, workspaceSlug.
 
 ### Do I need to be logged in to linear.app?
 

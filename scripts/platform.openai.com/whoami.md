@@ -4,7 +4,7 @@ Report which OpenAI API Platform account this browser is signed in as: the accou
 
 - Site: platform.openai.com
 - Address: `reduck/platform.openai.com/whoami`
-- Updated: 2026-10-22 (v4)
+- Updated: 2026-11-18 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -24,6 +24,7 @@ It takes no input.
 - `loggedIn` (boolean, required)
 - `name` (string | null, optional)
 - `email` (string | null, optional)
+- `workspace` (object | null, optional)
 - `organization` (string | null, optional)
 
 ## FAQ
@@ -38,7 +39,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns name, email, loggedIn, organization.
+It returns name, email, loggedIn, workspace, organization.
 
 ### Do I need to be logged in to platform.openai.com?
 

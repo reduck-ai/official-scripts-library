@@ -1,10 +1,10 @@
 # Dealroom whoami
 
-Report which Dealroom account this browser is signed in as: email, name and user id, from the dashboard's own page data. A signed-out browser is reported as not logged in, so it can be used to check a session before running other Dealroom scripts.
+Report which Dealroom account this browser is signed in as: email, name and user id. When the browser is signed out of Dealroom, the run fails with a signed-out error asking you to sign in to app.dealroom.co.
 
 - Site: dealroom.co
 - Address: `reduck/dealroom.co/whoami`
-- Updated: 2026-11-13 (v4)
+- Updated: 2026-11-18 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -25,12 +25,13 @@ It takes no input.
 - `id` (string | null, optional): Dealroom user id
 - `name` (string | null, optional)
 - `email` (string | null, optional)
+- `userId` (string | null, optional): Dealroom user id (whoami format)
 
 ## FAQ
 
 ### What does "Dealroom whoami" do?
 
-Report which Dealroom account this browser is signed in as: email, name and user id, from the dashboard's own page data. A signed-out browser is reported as not logged in, so it can be used to check a session before running other Dealroom scripts.
+Report which Dealroom account this browser is signed in as: email, name and user id. When the browser is signed out of Dealroom, the run fails with a signed-out error asking you to sign in to app.dealroom.co.
 
 ### What information do I need to provide?
 
@@ -38,7 +39,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns id, name, email, loggedIn.
+It returns id, name, email, userId, loggedIn.
 
 ### Do I need to be logged in to dealroom.co?
 

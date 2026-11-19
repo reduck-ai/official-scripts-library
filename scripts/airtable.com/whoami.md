@@ -4,7 +4,7 @@ Report which Airtable account this browser is signed in as: the user id and emai
 
 - Site: airtable.com
 - Address: `reduck/airtable.com/whoami`
-- Updated: 2026-10-22 (v4)
+- Updated: 2026-11-18 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -25,6 +25,7 @@ It takes no input.
 - `loggedIn` (boolean, required)
 - `id` (string | null, optional): Airtable user id, e.g. usrXXXXXXXXXXXXXX.
 - `email` (string | null, optional)
+- `userId` (string | null, optional): Same as id (whoami format).
 
 ## FAQ
 
@@ -38,7 +39,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns id, email, evidence, loggedIn.
+It returns id, email, userId, evidence, loggedIn.
 
 ### Do I need to be logged in to airtable.com?
 

@@ -4,7 +4,7 @@ Report which Luma account this browser is signed in as: the account email, the L
 
 - Site: luma.com
 - Address: `reduck/luma.com/whoami`
-- Updated: 2026-10-22 (v6)
+- Updated: 2026-11-18 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -21,11 +21,12 @@ It takes no input.
 
 ## Output
 
-- `name` (string | null, required): The account's display name. Null when signed out.
-- `userId` (string | null, required): Luma user id, e.g. usr-XXXXXXXXXXXXXXX. It stays the same if the account's email changes. Null when signed out.
-- `account` (string | null, required): The signed-in account's email, which a login probe records on the connector it checked. Null when signed out, or when Luma shows no email.
-- `username` (string | null, required): Luma username (luma.com/user/<username>). Null when signed out, or when the account never picked one.
-- `connected` (boolean, required): Whether this browser is signed in to Luma. Signed out is false, not an error, so the script can be passed as a run's `login.probe`.
+- `name` (string | null, required): The account's display name.
+- `userId` (string | null, required): Luma user id, e.g. usr-XXXXXXXXXXXXXXX.
+- `account` (string | null, required): The signed-in account's email. Null when Luma shows no email.
+- `loggedIn` (boolean, required): Whether this browser is signed in to Luma (whoami format). Signed out throws SignedOutError.
+- `username` (string | null, required): Luma username (luma.com/user/<username>). Null when the account never picked one.
+- `connected` (boolean, required): Kept for older callers; same value as loggedIn.
 
 ## FAQ
 
@@ -39,7 +40,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns name, userId, account, username, connected.
+It returns name, userId, account, loggedIn, username, connected.
 
 ### Do I need to be logged in to luma.com?
 

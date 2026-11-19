@@ -1,10 +1,10 @@
-# Get current user
+# Cloudflare whoami (signed-in account)
 
-Automatically get current user on cloudflare.com. Report which Cloudflare account this browser is signed in as: email, display name (first + last name from the profile; null when none is set) and user id, from the dashboard's own user API. Being signed out is a normal answer (loggedIn false), not an error.
+Report which Cloudflare account this browser is signed in as: the user id, email and name (first + last name from the profile; null when none is set). When the browser is signed out of Cloudflare, the run fails with a signed-out error asking you to sign in to dash.cloudflare.com.
 
 - Site: cloudflare.com
 - Address: `reduck/cloudflare.com/get_current_user`
-- Updated: 2026-10-22 (v4)
+- Updated: 2026-11-18 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -23,22 +23,16 @@ It takes no input.
 
 - `loggedIn` (boolean, required)
 - `id` (string | null, optional)
+- `name` (string | null, optional)
 - `email` (string | null, optional)
+- `userId` (string | null, optional)
 - `displayName` (string | null, optional)
 
 ## FAQ
 
-### What does "Get current user" do?
+### What does "Cloudflare whoami (signed-in account)" do?
 
-Report which Cloudflare account this browser is signed in as: email, display name (first + last name from the profile; null when none is set) and user id, from the dashboard's own user API. Being signed out is a normal answer (loggedIn false), not an error.
-
-### How do I automatically get current user on cloudflare.com?
-
-Ask an AI agent connected to Reduck to run reduck/cloudflare.com/get_current_user, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/cloudflare.com/get_current_user
-
-### Is there a cloudflare.com API to get current user?
-
-You do not need one. "Get current user" drives the real cloudflare.com pages in a browser, so it works whether or not cloudflare.com offers an API for this.
+Report which Cloudflare account this browser is signed in as: the user id, email and name (first + last name from the profile; null when none is set). When the browser is signed out of Cloudflare, the run fails with a signed-out error asking you to sign in to dash.cloudflare.com.
 
 ### What information do I need to provide?
 
@@ -46,7 +40,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns id, email, loggedIn, displayName.
+It returns id, name, email, userId, loggedIn, displayName.
 
 ### Do I need to be logged in to cloudflare.com?
 

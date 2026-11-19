@@ -4,7 +4,7 @@ Report which Instagram account this browser is signed in as: the user id, @usern
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/whoami`
-- Updated: 2026-11-11 (v7)
+- Updated: 2026-11-18 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -25,6 +25,7 @@ It takes no input.
 - `loggedIn` (boolean, required)
 - `id` (string | null, optional)
 - `name` (string | null, optional)
+- `userId` (string | null, optional)
 - `username` (string | null, optional)
 
 ## FAQ
@@ -39,7 +40,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns id, name, evidence, loggedIn, username.
+It returns id, name, userId, evidence, loggedIn, username.
 
 ### Do I need to be logged in to instagram.com?
 

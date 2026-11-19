@@ -4,7 +4,7 @@ Automatically get current Crunchbase user on crunchbase.com. Report which Crunch
 
 - Site: crunchbase.com
 - Address: `reduck/crunchbase.com/get_current_user`
-- Updated: 2026-10-22 (v6)
+- Updated: 2026-11-18 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -22,6 +22,7 @@ It takes no input.
 ## Output
 
 - `loggedIn` (boolean, required)
+- `name` (string | null, optional)
 - `email` (string | null, optional)
 - `lastName` (string | null, optional)
 - `firstName` (string | null, optional)
@@ -46,7 +47,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns email, lastName, loggedIn, firstName.
+It returns name, email, lastName, loggedIn, firstName.
 
 ### Do I need to be logged in to crunchbase.com?
 

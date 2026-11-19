@@ -4,7 +4,7 @@ Report which HubSpot account this browser is signed in as: the numeric user id, 
 
 - Site: app.hubspot.com
 - Address: `reduck/app.hubspot.com/whoami`
-- Updated: 2026-10-22 (v5)
+- Updated: 2026-11-18 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -23,6 +23,7 @@ It takes no input.
 
 - `evidence` (string, required)
 - `loggedIn` (boolean, required)
+- `name` (string | null, optional)
 - `email` (string | null, optional)
 - `userId` (string | null, optional)
 - `lastName` (string | null, optional)
@@ -40,7 +41,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns email, userId, evidence, lastName, loggedIn, firstName.
+It returns name, email, userId, evidence, lastName, loggedIn, firstName.
 
 ### Do I need to be logged in to app.hubspot.com?
 

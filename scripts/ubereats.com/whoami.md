@@ -4,7 +4,7 @@ Report which Uber Eats account this browser is signed in as: the account name, t
 
 - Site: ubereats.com
 - Address: `reduck/ubereats.com/whoami`
-- Updated: 2026-10-22 (v5)
+- Updated: 2026-11-18 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -24,8 +24,10 @@ It takes no input.
 - `evidence` (string, required)
 - `loggedIn` (boolean, required)
 - `name` (string | null, optional)
-- `email` (string | null, optional): Plain email, only when Uber Eats exposes it (usually null).
-- `hashedEmail` (string | null, optional): SHA-256 of the lowercased account email, as Uber Eats reports it.
+- `email` (string | null, optional)
+- `userId` (string | null, optional): Uber user uuid.
+- `account` (string | null, optional): What the account signs in with: the email when exposed, else the phone number.
+- `hashedEmail` (string | null, optional)
 
 ## FAQ
 
@@ -39,7 +41,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns name, email, evidence, loggedIn, hashedEmail.
+It returns name, email, userId, account, evidence, loggedIn, hashedEmail.
 
 ### Do I need to be logged in to ubereats.com?
 

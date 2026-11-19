@@ -4,7 +4,7 @@ Report which Cursor account this browser is signed in as: the user id, email, na
 
 - Site: cursor.com
 - Address: `reduck/cursor.com/whoami`
-- Updated: 2026-10-22 (v4)
+- Updated: 2026-11-18 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -27,6 +27,7 @@ It takes no input.
 - `email` (string | null, optional)
 - `teamId` (number | null, optional)
 - `userId` (string | null, optional)
+- `workspace` (object | null, optional)
 - `membershipType` (string | null, optional)
 
 ## FAQ
@@ -41,7 +42,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns name, email, teamId, userId, evidence, loggedIn, membershipType.
+It returns name, email, teamId, userId, evidence, loggedIn, workspace, membershipType.
 
 ### Do I need to be logged in to cursor.com?
 

@@ -4,7 +4,7 @@ Automatically set the price of a Facebook Marketplace listing on facebook.com. C
 
 - Site: facebook.com
 - Address: `reduck/facebook.com/set_marketplace_listing_price`
-- Updated: 2026-11-16 (v2)
+- Updated: 2026-11-18 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

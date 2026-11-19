@@ -4,7 +4,7 @@ Report which Mistral account the Mistral admin console is signed in as in this b
 
 - Site: admin.mistral.ai
 - Address: `reduck/admin.mistral.ai/whoami`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-11-18 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -26,6 +26,7 @@ It takes no input.
 - `id` (string | null, optional)
 - `name` (string | null, optional)
 - `email` (string | null, optional)
+- `userId` (string | null, optional)
 
 ## FAQ
 
@@ -39,7 +40,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns id, name, email, evidence, loggedIn.
+It returns id, name, email, userId, evidence, loggedIn.
 
 ### Do I need to be logged in to admin.mistral.ai?
 

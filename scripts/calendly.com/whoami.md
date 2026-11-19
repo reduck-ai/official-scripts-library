@@ -4,7 +4,7 @@ Report which Calendly account this browser is signed in as: the user id, email, 
 
 - Site: calendly.com
 - Address: `reduck/calendly.com/whoami`
-- Updated: 2026-10-22 (v5)
+- Updated: 2026-11-18 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -27,6 +27,7 @@ It takes no input.
 - `email` (string | null, optional)
 - `userId` (string | null, optional)
 - `timezone` (string | null, optional)
+- `workspace` (object | null, optional)
 - `organizationId` (string | null, optional)
 
 ## FAQ
@@ -41,7 +42,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns name, email, userId, evidence, loggedIn, timezone, organizationId.
+It returns name, email, userId, evidence, loggedIn, timezone, workspace, organizationId.
 
 ### Do I need to be logged in to calendly.com?
 

@@ -4,7 +4,7 @@ Automatically get current Amazon user on amazon.com. Report the first name of th
 
 - Site: amazon.com
 - Address: `reduck/amazon.com/get_current_user`
-- Updated: 2026-10-31 (v8)
+- Updated: 2026-11-18 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -22,6 +22,7 @@ It takes no input.
 ## Output
 
 - `loggedIn` (boolean, required)
+- `name` (string | null, optional)
 - `firstName` (string | null, optional)
 
 ## FAQ
@@ -44,7 +45,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns loggedIn, firstName.
+It returns name, loggedIn, firstName.
 
 ### Do I need to be logged in to amazon.com?
 

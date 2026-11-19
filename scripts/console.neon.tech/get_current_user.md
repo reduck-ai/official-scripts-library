@@ -4,7 +4,7 @@ Automatically get current Neon console user on console.neon.tech. Report which N
 
 - Site: console.neon.tech
 - Address: `reduck/console.neon.tech/get_current_user`
-- Updated: 2026-10-27 (v6)
+- Updated: 2026-11-18 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -22,7 +22,9 @@ It takes no input.
 ## Output
 
 - `loggedIn` (boolean, required)
+- `name` (string | null, optional)
 - `email` (string | null, optional)
+- `userId` (string | null, optional)
 - `lastName` (string | null, optional)
 - `firstName` (string | null, optional)
 
@@ -46,7 +48,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns email, lastName, loggedIn, firstName.
+It returns name, email, userId, lastName, loggedIn, firstName.
 
 ### Do I need to be logged in to console.neon.tech?
 

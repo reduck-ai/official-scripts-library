@@ -4,7 +4,7 @@ Report which Hugging Face account this browser is signed in as: the user id, Hub
 
 - Site: huggingface.co
 - Address: `reduck/huggingface.co/whoami`
-- Updated: 2026-10-22 (v4)
+- Updated: 2026-11-18 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -23,12 +23,14 @@ It takes no input.
 
 - `evidence` (string, required)
 - `loggedIn` (boolean, required)
+- `name` (string | null, optional)
 - `orgs` (array, optional)
 - `email` (string | null, optional)
 - `isPro` (boolean | null, optional)
 - `userId` (string | null, optional)
 - `fullName` (string | null, optional)
-- `username` (string | null, optional): The Hub handle (huggingface.co/<username>).
+- `username` (string | null, optional)
+- `workspace` (object | null, optional)
 - `emailVerified` (boolean | null, optional)
 
 ## FAQ
@@ -43,7 +45,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns orgs, email, isPro, userId, evidence, fullName, loggedIn, username, emailVerified.
+It returns name, orgs, email, isPro, userId, evidence, fullName, loggedIn, username, workspace, emailVerified.
 
 ### Do I need to be logged in to huggingface.co?
 

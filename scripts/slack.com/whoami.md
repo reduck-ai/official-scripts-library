@@ -4,7 +4,7 @@ Report which Slack account this browser is signed in as: the user's name, email,
 
 - Site: slack.com
 - Address: `reduck/slack.com/whoami`
-- Updated: 2026-10-22 (v5)
+- Updated: 2026-11-18 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,6 +29,7 @@ It takes no input.
 - `teamId` (string | null, optional)
 - `userId` (string | null, optional)
 - `teamUrl` (string | null, optional)
+- `workspace` (object, optional)
 
 ## FAQ
 
@@ -42,7 +43,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns name, team, email, teamId, userId, teamUrl, evidence, loggedIn.
+It returns name, team, email, teamId, userId, teamUrl, evidence, loggedIn, workspace.
 
 ### Do I need to be logged in to slack.com?
 

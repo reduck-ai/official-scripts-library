@@ -4,7 +4,7 @@ Report which DocuSign account this browser is signed in as: the user id, email, 
 
 - Site: docusign.com
 - Address: `reduck/docusign.com/whoami`
-- Updated: 2026-10-20 (v2)
+- Updated: 2026-11-18 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -28,8 +28,9 @@ It takes no input.
 - `userId` (string | null, optional)
 - `isAdmin` (boolean | null, optional)
 - `accounts` (array, optional)
-- `accountId` (string | null, optional): The current account's number (as shown in DocuSign settings).
-- `apiBaseUri` (string | null, optional): The account's regional DocuSign server, e.g. https://eu.docusign.net.
+- `accountId` (string | null, optional)
+- `workspace` (object | null, optional)
+- `apiBaseUri` (string | null, optional)
 - `accountName` (string | null, optional)
 - `accountIdGuid` (string | null, optional)
 - `permissionProfile` (string | null, optional)
@@ -46,7 +47,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns name, email, userId, isAdmin, accounts, evidence, loggedIn, accountId, apiBaseUri, accountName, accountIdGuid, permissionProfile.
+It returns name, email, userId, isAdmin, accounts, evidence, loggedIn, accountId, workspace, apiBaseUri, accountName, accountIdGuid, permissionProfile.
 
 ### Do I need to be logged in to docusign.com?
 

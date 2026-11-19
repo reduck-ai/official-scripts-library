@@ -4,7 +4,7 @@ Report which Loom account this browser is signed in as: the user id, email and n
 
 - Site: loom.com
 - Address: `reduck/loom.com/whoami`
-- Updated: 2026-10-22 (v4)
+- Updated: 2026-11-18 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -26,6 +26,7 @@ It takes no input.
 - `id` (string | null, optional)
 - `name` (string | null, optional)
 - `email` (string | null, optional)
+- `userId` (string | null, optional)
 
 ## FAQ
 
@@ -39,7 +40,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns id, name, email, evidence, loggedIn.
+It returns id, name, email, userId, evidence, loggedIn.
 
 ### Do I need to be logged in to loom.com?
 

@@ -4,7 +4,7 @@ Report which Facebook account this browser is signed in as: the user id and name
 
 - Site: facebook.com
 - Address: `reduck/facebook.com/whoami`
-- Updated: 2026-11-16 (v6)
+- Updated: 2026-11-18 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -21,13 +21,14 @@ It takes no input.
 
 ## Output
 
-- `id` (string | null, required): User id of the signed-in account; null when signed out.
-- `name` (string | null, required): Display name of the identity the browser acts as.
-- `state` (string, required): ok: signed in. logged_out: no account signed in. checkpoint: Facebook holds the session at a security check the user must pass in the browser.
-- `actingId` (string | null, required): Id of the identity the browser acts as: the account itself, or the Page it is switched to.
+- `id` (string | null, required): Kept for older callers; same as userId.
+- `name` (string | null, required)
+- `state` (string, required)
+- `actingId` (string | null, required)
 - `evidence` (string, required)
-- `loggedIn` (boolean, required): True when a Facebook account is signed in and usable (state ok).
-- `actingAsPage` (boolean, required): True when the account is switched to a Page: posts, comments and group membership are then the Page's, not the personal profile's.
+- `loggedIn` (boolean, required)
+- `actingAsPage` (boolean, required)
+- `userId` (string | null, optional): User id of the signed-in account (whoami format).
 
 ## FAQ
 
@@ -41,7 +42,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns id, name, state, actingId, evidence, loggedIn, actingAsPage.
+It returns id, name, state, userId, actingId, evidence, loggedIn, actingAsPage.
 
 ### Do I need to be logged in to facebook.com?
 

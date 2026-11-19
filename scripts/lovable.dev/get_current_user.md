@@ -4,7 +4,7 @@ Automatically get current Lovable user on lovable.dev. Report which Lovable acco
 
 - Site: lovable.dev
 - Address: `reduck/lovable.dev/get_current_user`
-- Updated: 2026-10-22 (v6)
+- Updated: 2026-11-18 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -23,7 +23,9 @@ It takes no input.
 
 - `loggedIn` (boolean, required)
 - `id` (string | null, optional)
+- `name` (string | null, optional)
 - `email` (string | null, optional)
+- `userId` (string | null, optional)
 - `photoUrl` (string | null, optional)
 - `displayName` (string | null, optional)
 - `emailVerified` (boolean | null, optional)
@@ -48,7 +50,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns id, email, loggedIn, photoUrl, displayName, emailVerified.
+It returns id, name, email, userId, loggedIn, photoUrl, displayName, emailVerified.
 
 ### Do I need to be logged in to lovable.dev?
 

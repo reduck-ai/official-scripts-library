@@ -4,7 +4,7 @@ Report which Uber rider account this browser is signed in as: the rider id, firs
 
 - Site: riders.uber.com
 - Address: `reduck/riders.uber.com/whoami`
-- Updated: 2026-10-20 (v2)
+- Updated: 2026-11-18 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -23,8 +23,9 @@ It takes no input.
 
 - `evidence` (string, required)
 - `loggedIn` (boolean, required)
+- `name` (string | null, optional)
 - `email` (string | null, optional)
-- `phone` (string | null, optional): Phone number as Uber formats it, e.g. "+33 6 12 34 56 78".
+- `phone` (string | null, optional)
 - `userId` (string | null, optional): The rider's Uber uuid.
 - `lastName` (string | null, optional)
 - `firstName` (string | null, optional)
@@ -41,7 +42,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns email, phone, userId, evidence, lastName, loggedIn, firstName.
+It returns name, email, phone, userId, evidence, lastName, loggedIn, firstName.
 
 ### Do I need to be logged in to riders.uber.com?
 

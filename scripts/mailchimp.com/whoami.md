@@ -1,10 +1,10 @@
 # Mailchimp whoami (signed-in account)
 
-Report which Mailchimp account this browser is signed in as: the user id, login id, email, first and last name, account name, role, plan and the account's data center (e.g. us16). Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Mailchimp scripts.
+Report which Mailchimp account this browser is signed in as: the user id, email, name, account name (as the workspace), role and plan. When the browser is signed out of Mailchimp, the run fails with a signed-out error asking you to sign in.
 
 - Site: mailchimp.com
 - Address: `reduck/mailchimp.com/whoami`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-18 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -23,6 +23,7 @@ It takes no input.
 
 - `evidence` (string, required)
 - `loggedIn` (boolean, required)
+- `name` (string | null, optional)
 - `plan` (string | null, optional)
 - `role` (string | null, optional)
 - `email` (string | null, optional)
@@ -30,14 +31,15 @@ It takes no input.
 - `loginId` (string | null, optional)
 - `lastName` (string | null, optional)
 - `firstName` (string | null, optional)
-- `dataCenter` (string | null, optional): The account's data center (e.g. us16), which is the host prefix other Mailchimp pages use.
+- `workspace` (object | null, optional)
+- `dataCenter` (string | null, optional): The account's data center, which is the host prefix other Mailchimp pages use.
 - `accountName` (string | null, optional)
 
 ## FAQ
 
 ### What does "Mailchimp whoami (signed-in account)" do?
 
-Report which Mailchimp account this browser is signed in as: the user id, login id, email, first and last name, account name, role, plan and the account's data center (e.g. us16). Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Mailchimp scripts.
+Report which Mailchimp account this browser is signed in as: the user id, email, name, account name (as the workspace), role and plan. When the browser is signed out of Mailchimp, the run fails with a signed-out error asking you to sign in.
 
 ### What information do I need to provide?
 
@@ -45,7 +47,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns plan, role, email, userId, loginId, evidence, lastName, loggedIn, firstName, dataCenter, accountName.
+It returns name, plan, role, email, userId, loginId, evidence, lastName, loggedIn, firstName, workspace, dataCenter, accountName.
 
 ### Do I need to be logged in to mailchimp.com?
 

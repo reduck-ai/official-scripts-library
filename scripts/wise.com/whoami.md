@@ -4,7 +4,7 @@ Report which Wise account this browser is signed in as: the account email. Being
 
 - Site: wise.com
 - Address: `reduck/wise.com/whoami`
-- Updated: 2026-11-09 (v4)
+- Updated: 2026-11-18 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -41,7 +41,7 @@ It returns email, evidence, loggedIn.
 
 ### Do I need to be logged in to wise.com?
 
-No. It only uses pages of wise.com that are reachable without signing in.
+Yes. It acts as you on wise.com: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the wise.com cookies saved by the Reduck extension.
 
 ### Does it change anything on wise.com, or only read data?
 

@@ -4,7 +4,7 @@ Automatically get the signed-in Strava athlete on strava.com. Returns the Strava
 
 - Site: strava.com
 - Address: `reduck/strava.com/whoami`
-- Updated: 2026-10-28 (v1)
+- Updated: 2026-11-18 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -21,7 +21,9 @@ It takes no input.
 
 ## Output
 
-- `athlete_id` (string, required)
+- `userId` (string, required): Strava athlete id.
+- `loggedIn` (boolean, required)
+- `athlete_id` (string, required): Kept for older callers; same as userId.
 - `name` (string | null, optional)
 - `premium` (boolean, optional)
 - `photo_url` (string | null, optional)
@@ -47,7 +49,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns name, premium, photo_url, athlete_id, profile_url.
+It returns name, userId, premium, loggedIn, photo_url, athlete_id, profile_url.
 
 ### Do I need to be logged in to strava.com?
 

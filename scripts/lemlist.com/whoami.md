@@ -4,7 +4,7 @@ Report which lemlist account this browser is signed in as: the user id and email
 
 - Site: lemlist.com
 - Address: `reduck/lemlist.com/whoami`
-- Updated: 2026-10-22 (v8)
+- Updated: 2026-11-18 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -23,8 +23,10 @@ It takes no input.
 
 - `evidence` (string, required)
 - `loggedIn` (boolean, required)
-- `id` (string | null, optional)
+- `id` (string | null, optional): Kept for older callers; same as userId.
+- `name` (string | null, optional)
 - `email` (string | null, optional)
+- `userId` (string | null, optional)
 
 ## FAQ
 
@@ -38,7 +40,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns id, email, evidence, loggedIn.
+It returns id, name, email, userId, evidence, loggedIn.
 
 ### Do I need to be logged in to lemlist.com?
 

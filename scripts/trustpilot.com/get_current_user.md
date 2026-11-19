@@ -4,7 +4,7 @@ Report which Trustpilot account this browser is signed in as: email and display 
 
 - Site: trustpilot.com
 - Address: `reduck/trustpilot.com/get_current_user`
-- Updated: 2026-10-22 (v5)
+- Updated: 2026-11-18 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -22,6 +22,7 @@ It takes no input.
 ## Output
 
 - `loggedIn` (boolean, required)
+- `name` (string | null, optional)
 - `email` (string | null, optional)
 - `displayName` (string | null, optional)
 
@@ -37,7 +38,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns email, loggedIn, displayName.
+It returns name, email, loggedIn, displayName.
 
 ### Do I need to be logged in to trustpilot.com?
 

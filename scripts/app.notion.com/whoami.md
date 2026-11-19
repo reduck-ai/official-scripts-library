@@ -4,7 +4,7 @@ Report which Notion account this browser is signed in as: the user id, email and
 
 - Site: app.notion.com
 - Address: `reduck/app.notion.com/whoami`
-- Updated: 2026-10-22 (v4)
+- Updated: 2026-11-18 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -26,6 +26,7 @@ It takes no input.
 - `name` (string | null, optional)
 - `email` (string | null, optional)
 - `userId` (string | null, optional)
+- `workspace` (object | null, optional)
 - `workspaces` (array, optional)
 - `currentWorkspace` (string | null, optional)
 
@@ -41,7 +42,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns name, email, userId, evidence, loggedIn, workspaces, currentWorkspace.
+It returns name, email, userId, evidence, loggedIn, workspace, workspaces, currentWorkspace.
 
 ### Do I need to be logged in to app.notion.com?
 

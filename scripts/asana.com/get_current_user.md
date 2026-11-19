@@ -4,7 +4,7 @@ Automatically get current Asana user on asana.com. Report which Asana account th
 
 - Site: asana.com
 - Address: `reduck/asana.com/get_current_user`
-- Updated: 2026-10-22 (v6)
+- Updated: 2026-11-18 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -25,6 +25,7 @@ It takes no input.
 - `gid` (string | null, optional)
 - `name` (string | null, optional)
 - `email` (string | null, optional)
+- `userId` (string | null, optional)
 
 ## FAQ
 
@@ -46,7 +47,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns gid, name, email, loggedIn.
+It returns gid, name, email, userId, loggedIn.
 
 ### Do I need to be logged in to asana.com?
 

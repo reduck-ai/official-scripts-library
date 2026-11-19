@@ -1,10 +1,10 @@
 # Raycast whoami (signed-in account)
 
-Report which Raycast account this browser is signed in as: the user id, Raycast handle, name, email and whether it has Pro features. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Raycast scripts.
+Report which Raycast account this browser is signed in as: the user id, username, name, email and whether it has Pro features. When the browser is signed out, the run fails with a signed-out error asking you to sign in to raycast.com.
 
 - Site: raycast.com
 - Address: `reduck/raycast.com/whoami`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-11-18 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -25,15 +25,16 @@ It takes no input.
 - `loggedIn` (boolean, required)
 - `name` (string | null, optional)
 - `email` (string | null, optional)
-- `handle` (string | null, optional): The account's Raycast handle (raycast.com/<handle>).
+- `handle` (string | null, optional)
 - `hasPro` (boolean | null, optional)
 - `userId` (string | null, optional)
+- `username` (string | null, optional)
 
 ## FAQ
 
 ### What does "Raycast whoami (signed-in account)" do?
 
-Report which Raycast account this browser is signed in as: the user id, Raycast handle, name, email and whether it has Pro features. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Raycast scripts.
+Report which Raycast account this browser is signed in as: the user id, username, name, email and whether it has Pro features. When the browser is signed out, the run fails with a signed-out error asking you to sign in to raycast.com.
 
 ### What information do I need to provide?
 
@@ -41,7 +42,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns name, email, handle, hasPro, userId, evidence, loggedIn.
+It returns name, email, handle, hasPro, userId, evidence, loggedIn, username.
 
 ### Do I need to be logged in to raycast.com?
 

@@ -4,7 +4,7 @@ Report which Pulley account this browser is signed in as: the user id, email, na
 
 - Site: pulley.com
 - Address: `reduck/pulley.com/whoami`
-- Updated: 2026-10-22 (v4)
+- Updated: 2026-11-18 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -27,9 +27,10 @@ It takes no input.
 - `email` (string | null, optional)
 - `has2fa` (boolean | null, optional)
 - `userId` (string | null, optional)
-- `companies` (array, optional): Companies (Pulley firms) the user belongs to, as Pulley returns them.
+- `companies` (array, optional)
 - `createdAt` (string | null, optional)
-- `stakeholderCount` (integer | null, optional): How many cap tables the user holds equity on as a stakeholder.
+- `workspace` (object | null, optional)
+- `stakeholderCount` (integer | null, optional)
 
 ## FAQ
 
@@ -43,7 +44,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns name, email, has2fa, userId, evidence, loggedIn, companies, createdAt, stakeholderCount.
+It returns name, email, has2fa, userId, evidence, loggedIn, companies, createdAt, workspace, stakeholderCount.
 
 ### Do I need to be logged in to pulley.com?
 

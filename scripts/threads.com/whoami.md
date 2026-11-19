@@ -4,7 +4,7 @@ Report which Threads account this browser is signed in as: the user id and @user
 
 - Site: threads.com
 - Address: `reduck/threads.com/whoami`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-11-18 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -24,6 +24,7 @@ It takes no input.
 - `evidence` (string, required)
 - `loggedIn` (boolean, required)
 - `id` (string | null, optional)
+- `userId` (string | null, optional)
 - `username` (string | null, optional)
 
 ## FAQ
@@ -38,7 +39,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns id, evidence, loggedIn, username.
+It returns id, userId, evidence, loggedIn, username.
 
 ### Do I need to be logged in to threads.com?
 

@@ -4,7 +4,7 @@ Automatically quote a tweet on X (Twitter) from an AI agent on x.com. Quote-twee
 
 - Site: x.com
 - Address: `reduck/x.com/quote_tweet`
-- Updated: 2026-10-22 (v21)
+- Updated: 2026-11-18 (v23)
 - Author: Reduck AI (reduck)
 
 ## Run it

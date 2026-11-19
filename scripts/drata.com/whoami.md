@@ -1,10 +1,10 @@
 # Drata whoami (signed-in account)
 
-Report which Drata account this browser is signed in as: the user id, email, first and last name, roles, account type, and the workspace and region the app opened. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Drata scripts.
+Report which Drata account this browser is signed in as: the user id, email, name, roles, account type, and the workspace and region the app opened. When the browser is signed out, the run fails with a signed-out error asking you to sign in to Drata.
 
 - Site: drata.com
 - Address: `reduck/drata.com/whoami`
-- Updated: 2026-10-05 (v4)
+- Updated: 2026-11-18 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -23,12 +23,14 @@ It takes no input.
 
 - `evidence` (string, required)
 - `loggedIn` (boolean, required)
+- `name` (string | null, optional)
 - `email` (string | null, optional)
 - `roles` (array, optional)
 - `region` (string | null, optional)
 - `userId` (string | null, optional)
 - `lastName` (string | null, optional)
 - `firstName` (string | null, optional)
+- `workspace` (object | null, optional)
 - `accountType` (string | null, optional)
 - `workspaceSlug` (string | null, optional)
 
@@ -36,7 +38,7 @@ It takes no input.
 
 ### What does "Drata whoami (signed-in account)" do?
 
-Report which Drata account this browser is signed in as: the user id, email, first and last name, roles, account type, and the workspace and region the app opened. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Drata scripts.
+Report which Drata account this browser is signed in as: the user id, email, name, roles, account type, and the workspace and region the app opened. When the browser is signed out, the run fails with a signed-out error asking you to sign in to Drata.
 
 ### What information do I need to provide?
 
@@ -44,7 +46,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns email, roles, region, userId, evidence, lastName, loggedIn, firstName, accountType, workspaceSlug.
+It returns name, email, roles, region, userId, evidence, lastName, loggedIn, firstName, workspace, accountType, workspaceSlug.
 
 ### Do I need to be logged in to drata.com?
 

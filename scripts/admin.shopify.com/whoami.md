@@ -4,7 +4,7 @@ Report which store this browser's Shopify admin opens: the store handle, the sto
 
 - Site: admin.shopify.com
 - Address: `reduck/admin.shopify.com/whoami`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-11-18 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -26,6 +26,7 @@ It takes no input.
 - `name` (string | null, optional): Store name.
 - `email` (string | null, optional): Store contact email.
 - `store` (string | null, optional): Store handle from admin.shopify.com/store/<handle>.
+- `workspace` (object, optional): The store in use.
 
 ## FAQ
 
@@ -39,7 +40,7 @@ Nothing. It takes no input.
 
 ### What does it return?
 
-It returns name, email, store, evidence, loggedIn.
+It returns name, email, store, evidence, loggedIn, workspace.
 
 ### Do I need to be logged in to admin.shopify.com?
 

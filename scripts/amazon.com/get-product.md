@@ -1,10 +1,10 @@
 # Get Amazon product
 
-Automatically get Amazon product on amazon.com. Fetch a single Amazon product page by ASIN. Returns title, byline, brand, price, list_price, rating, review_count, rating_breakdown, availability, breadcrumb, image_url, feature_bullets, description, attributes, variant_asins, delivery_estimate, return_policy, and seller. The returned asin can differ from the requested one when Amazon resolves a variant. For books, brand is null and feature_bullets and attributes are usually empty. Audible audiobook ASINs open Audible's own product page instead, so they fail at once with an error that gives that page's URL.
+Automatically get Amazon product on amazon.com. Fetch a single Amazon product page by ASIN. Returns title, byline, brand, price, list_price, rating, review_count, rating_breakdown, availability, breadcrumb, image_url, feature_bullets, description, attributes, variant_asins, deal, badges, delivery_estimate, return_policy, and seller. deal is the deal the page shows: its id, its label as Amazon writes it (for example "Limited time deal" or "Black Friday Deal") and its end time. badges are the other badges next to the title, for example Amazon's Choice. The returned asin can differ from the requested one when Amazon resolves a variant. For books, brand is null and feature_bullets and attributes are usually empty. Audible audiobook ASINs open Audible's own product page instead, so they fail at once with an error that gives that page's URL.
 
 - Site: amazon.com
 - Address: `reduck/amazon.com/get-product`
-- Updated: 2026-10-31 (v18)
+- Updated: 2026-11-18 (v19)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -25,9 +25,11 @@ npx @reduck-ai/cli@latest run --script reduck/amazon.com/get-product
 - `url` (string, required): Canonical URL the page declares. Usually /dp/<asin>; some Amazon-brand products declare a /clp/<asin> URL instead.
 - `zip` (string, required): US ZIP the store was pinned to for this fetch.
 - `asin` (string | null, required): ASIN actually displayed (differs from requested when Amazon resolves a variant).
+- `deal` (object | null, required): The deal that the page shows for this product. Null when there is no deal. A deal can apply to one variant only: then only the ASIN of that variant shows it.
 - `brand` (string | null, required): Brand parsed from the byline. Null for books, whose byline names authors instead.
 - `price` (object | null, required): Featured-offer price as {value, currency}. Null when no buy-now price shows (e.g. a Kindle title not available for purchase). {raw,value:null} when a currency symbol couldn't be parsed.
 - `title` (string | null, required)
+- `badges` (array, required): Badges next to the title, other than the deal. Empty when there are none.
 - `byline` (string | null, required): Verbatim byline — e.g. "Visit the Anker Store", "by Author (Author)".
 - `rating` (number | null, required): Average stars out of 5.
 - `seller` (object | null, required): Sold-by seller {name, id}, e.g. {name: "Amazon.com", id: null}; id is null for Amazon Retail / when no seller link is shown. Both null when the page shows no seller.
@@ -49,7 +51,7 @@ npx @reduck-ai/cli@latest run --script reduck/amazon.com/get-product
 
 ### What does "Get Amazon product" do?
 
-Fetch a single Amazon product page by ASIN. Returns title, byline, brand, price, list_price, rating, review_count, rating_breakdown, availability, breadcrumb, image_url, feature_bullets, description, attributes, variant_asins, delivery_estimate, return_policy, and seller. The returned asin can differ from the requested one when Amazon resolves a variant. For books, brand is null and feature_bullets and attributes are usually empty. Audible audiobook ASINs open Audible's own product page instead, so they fail at once with an error that gives that page's URL.
+Fetch a single Amazon product page by ASIN. Returns title, byline, brand, price, list_price, rating, review_count, rating_breakdown, availability, breadcrumb, image_url, feature_bullets, description, attributes, variant_asins, deal, badges, delivery_estimate, return_policy, and seller. deal is the deal the page shows: its id, its label as Amazon writes it (for example "Limited time deal" or "Black Friday Deal") and its end time. badges are the other badges next to the title, for example Amazon's Choice. The returned asin can differ from the requested one when Amazon resolves a variant. For books, brand is null and feature_bullets and attributes are usually empty. Audible audiobook ASINs open Audible's own product page instead, so they fail at once with an error that gives that page's URL.
 
 ### How do I automatically get Amazon product on amazon.com?
 
@@ -65,7 +67,7 @@ Required: asin. Optional: zipCode.
 
 ### What does it return?
 
-It returns url, zip, asin, brand, price, title, byline, rating, seller, image_url, attributes, breadcrumb, list_price, description, availability, review_count, return_policy, variant_asins, requested_asin, feature_bullets, rating_breakdown, delivery_estimate.
+It returns url, zip, asin, deal, brand, price, title, badges, byline, rating, seller, image_url, attributes, breadcrumb, list_price, description, availability, review_count, return_policy, variant_asins, requested_asin, feature_bullets, rating_breakdown, delivery_estimate.
 
 ### Do I need to be logged in to amazon.com?
 

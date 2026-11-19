@@ -4,7 +4,7 @@ Automatically list Google Calendar events on calendar.google.com. List the signe
 
 - Site: calendar.google.com
 - Address: `reduck/calendar.google.com/list_events`
-- Updated: 2026-11-02 (v8)
+- Updated: 2026-11-18 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it

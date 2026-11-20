@@ -4,7 +4,7 @@ Automatically invite Supabase Team Member on supabase.com. Invites a new member 
 
 - Site: supabase.com
 - Address: `reduck/supabase.com/create_user`
-- Updated: 2026-11-04 (v9)
+- Updated: 2026-11-19 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it

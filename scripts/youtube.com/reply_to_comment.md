@@ -4,7 +4,7 @@ Automatically reply to YouTube comment on youtube.com. Reply to a YouTube commen
 
 - Site: youtube.com
 - Address: `reduck/youtube.com/reply_to_comment`
-- Updated: 2026-11-02 (v5)
+- Updated: 2026-11-19 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it

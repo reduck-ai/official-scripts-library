@@ -4,7 +4,7 @@ Automatically add King Jouet product to cart on king-jouet.com. Add a King Jouet
 
 - Site: king-jouet.com
 - Address: `reduck/king-jouet.com/add_to_cart`
-- Updated: 2026-11-04 (v1)
+- Updated: 2026-11-19 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

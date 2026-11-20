@@ -1,10 +1,10 @@
 # Download Cloudflare invoice/receipt
 
-Automatically download Cloudflare invoice/receipt on cloudflare.com. Download a single Cloudflare billing-history entry's PDF by accountId + invoiceId (from cloudflare.com/list_invoices). Returns the PDF bytes as base64 plus a filename.
+Automatically download Cloudflare invoice/receipt on cloudflare.com. Download a single Cloudflare billing-history entry's PDF by accountId + invoiceId (from cloudflare.com/list_invoices). Saves the PDF and returns its filename plus path (own Chrome) or url (managed browser).
 
 - Site: cloudflare.com
 - Address: `reduck/cloudflare.com/download_invoice`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-19 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -19,18 +19,19 @@ npx @reduck-ai/cli@latest run --script reduck/cloudflare.com/download_invoice
 
 - `accountId` (string, required): 32-char account id from cloudflare.com/list_invoices.
 - `invoiceId` (string, required): Billing-history entry UUID from cloudflare.com/list_invoices.
-- `type` (string, optional): The entry's `type` field from cloudflare.com/list_invoices, e.g. "invoice". Defaults to "invoice" if omitted.
+- `type` (string, optional): The entry's `type` field from cloudflare.com/list_invoices, e.g. "invoice".
 
 ## Output
 
-- `filename` (string, required)
-- `contentBase64` (string, required)
+- `url` (string | null, required): Where to fetch the PDF when the run used a managed browser. Null on the user's own Chrome.
+- `path` (string | null, required): Where the PDF was saved in the Downloads folder of the user's own Chrome. Null on a managed browser.
+- `filename` (string, required): The saved file name; can end in " (2)" when the same invoice was saved before.
 
 ## FAQ
 
 ### What does "Download Cloudflare invoice/receipt" do?
 
-Download a single Cloudflare billing-history entry's PDF by accountId + invoiceId (from cloudflare.com/list_invoices). Returns the PDF bytes as base64 plus a filename.
+Download a single Cloudflare billing-history entry's PDF by accountId + invoiceId (from cloudflare.com/list_invoices). Saves the PDF and returns its filename plus path (own Chrome) or url (managed browser).
 
 ### How do I automatically download Cloudflare invoice/receipt on cloudflare.com?
 
@@ -46,7 +47,7 @@ Required: accountId, invoiceId. Optional: type.
 
 ### What does it return?
 
-It returns filename, contentBase64.
+It returns url, path, filename.
 
 ### Do I need to be logged in to cloudflare.com?
 

@@ -4,7 +4,7 @@ Automatically share a Google Drive file on drive.google.com. Grant, update, or r
 
 - Site: drive.google.com
 - Address: `reduck/drive.google.com/share_file`
-- Updated: 2026-10-22 (v5)
+- Updated: 2026-11-19 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it

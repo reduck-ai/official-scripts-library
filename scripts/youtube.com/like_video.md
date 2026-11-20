@@ -4,7 +4,7 @@ Automatically like YouTube video on youtube.com. Like a YouTube video — has no
 
 - Site: youtube.com
 - Address: `reduck/youtube.com/like_video`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-19 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,6 +18,7 @@ npx @reduck-ai/cli@latest run --script reduck/youtube.com/like_video
 ## Input
 
 - `video` (string, required): A YouTube video URL (watch?v=, youtu.be/, /shorts/, /embed/) or a bare 11-char video id.
+- `account` (string, optional): Email (or a distinctive part of it) of the signed-in Google account to like as. Omit to use the browser's default account.
 
 ## Output
 
@@ -41,7 +42,7 @@ You do not need one. "Like YouTube video" drives the real youtube.com pages in a
 
 ### What information do I need to provide?
 
-Required: video.
+Required: video. Optional: account.
 
 ### What does it return?
 

@@ -4,7 +4,7 @@ Automatically get Upwork job description on upwork.com. Fetch a single Upwork jo
 
 - Site: upwork.com
 - Address: `reduck/upwork.com/get_job_description`
-- Updated: 2026-11-16 (v4)
+- Updated: 2026-11-19 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

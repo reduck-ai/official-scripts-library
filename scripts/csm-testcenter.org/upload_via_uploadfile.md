@@ -4,7 +4,7 @@ Automatically upload a file to CSM-Testcenter (file input) on csm-testcenter.org
 
 - Site: csm-testcenter.org
 - Address: `reduck/csm-testcenter.org/upload_via_uploadfile`
-- Updated: 2026-10-22 (v9)
+- Updated: 2026-11-19 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/csm-testcenter.org/upload_via_uplo
 
 ## Input
 
-- `test-upload.pdf` (string, optional)
+- `test-upload.pdf` (string, optional): The file to upload. Required: a run without it is refused.
 
 ## Output
 

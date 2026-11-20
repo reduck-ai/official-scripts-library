@@ -4,7 +4,7 @@ Automatically search eBay listings on ebay.com. One page of active listings (abo
 
 - Site: ebay.com
 - Address: `reduck/ebay.com/search_listings`
-- Updated: 2026-10-22 (v10)
+- Updated: 2026-11-19 (v15)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -90,7 +90,7 @@ Shape only: placeholder values generated from the output schema, not a real run.
 
 ### What does "Search eBay listings" do?
 
-Search eBay (ebay.com) for items by keyword, one page at a time: item id, title, price, currency, shipping cost, the card's attribute lines and seller feedback. No login required. Filters: sort, condition (new/used/not specified), min/max price, buying format (auction, Buy It Now, accepts offers), free returns, returns accepted, authorized sellers, sold or completed items, deals. Brand and other category-specific filters and local pickup are not offered. Pass page 2, 3, ... for later pages and perPage (60/120/240) for page size; resultCountText is eBay's total. When nothing matches, results is empty and emptyReason carries eBay's own notice when it gives one (e.g. a too-short query), otherwise null. Listings eBay pads a short result with are returned apart in relatedResults.
+Search eBay (ebay.com) for items by keyword, one page at a time: item id, title, price, currency, shipping cost, the card's attribute lines and seller feedback. No login required, except for sold items: eBay shows them only to a browser signed in to eBay, and a signed-out one fails with an error that says so. Filters: sort, condition (new/used/not specified), min/max price, buying format (auction, Buy It Now, accepts offers), free returns, returns accepted, authorized sellers, sold or completed items, deals. Brand and other category-specific filters and local pickup are not offered. Pass page 2, 3, ... for later pages and perPage (60/120/240) for page size; resultCountText is eBay's total. When nothing matches, results is empty and emptyReason carries eBay's own notice when it gives one (e.g. a too-short query), otherwise null. Listings eBay pads a short result with are returned apart in relatedResults.
 
 ### How do I automatically search eBay listings on ebay.com?
 

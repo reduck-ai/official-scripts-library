@@ -1,10 +1,10 @@
-# Sheets: add tab
+# Google Sheets: add tab
 
 Automatically add tab on docs.google.com. Add a tab to a Google Spreadsheet, optionally naming it in the same pass. Returns the new tab's gid and final name. Waits for the editor's save before resolving; needs edit rights.
 
 - Site: docs.google.com
 - Address: `reduck/docs.google.com/sheets_add_tab`
-- Updated: 2026-10-29 (v9)
+- Updated: 2026-11-19 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -27,7 +27,7 @@ npx @reduck-ai/cli@latest run --script reduck/docs.google.com/sheets_add_tab
 
 ## FAQ
 
-### What does "Sheets: add tab" do?
+### What does "Google Sheets: add tab" do?
 
 Add a tab to a Google Spreadsheet, optionally naming it in the same pass. Returns the new tab's gid and final name. Waits for the editor's save before resolving; needs edit rights.
 
@@ -37,7 +37,7 @@ Ask an AI agent connected to Reduck to run reduck/docs.google.com/sheets_add_tab
 
 ### Is there a docs.google.com API to add tab?
 
-You do not need one. "Sheets: add tab" drives the real docs.google.com pages in a browser, so it works whether or not docs.google.com offers an API for this.
+You do not need one. "Google Sheets: add tab" drives the real docs.google.com pages in a browser, so it works whether or not docs.google.com offers an API for this.
 
 ### What information do I need to provide?
 

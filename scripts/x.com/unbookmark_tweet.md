@@ -4,7 +4,7 @@ Automatically remove a bookmark from a tweet on X (Twitter) on x.com. Remove you
 
 - Site: x.com
 - Address: `reduck/x.com/unbookmark_tweet`
-- Updated: 2026-11-03 (v5)
+- Updated: 2026-11-19 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

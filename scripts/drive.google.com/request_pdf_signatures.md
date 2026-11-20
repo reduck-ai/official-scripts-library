@@ -4,7 +4,7 @@ Automatically request eSignatures on a PDF on drive.google.com. Send a PDF store
 
 - Site: drive.google.com
 - Address: `reduck/drive.google.com/request_pdf_signatures`
-- Updated: 2026-11-10 (v1)
+- Updated: 2026-11-19 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

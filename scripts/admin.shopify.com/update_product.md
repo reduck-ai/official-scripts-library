@@ -4,7 +4,7 @@ Automatically update a Shopify product on admin.shopify.com. Changes an existing
 
 - Site: admin.shopify.com
 - Address: `reduck/admin.shopify.com/update_product`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-19 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically get Product Hunt launch comments on producthunt.com. Read the comm
 
 - Site: producthunt.com
 - Address: `reduck/producthunt.com/get_launch_comments`
-- Updated: 2026-11-09 (v10)
+- Updated: 2026-11-19 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it

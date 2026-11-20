@@ -4,7 +4,7 @@ Sign a Google Docs / Drive eSignature request addressed to the signed-in account
 
 - Site: docs.google.com
 - Address: `reduck/docs.google.com/sign_document`
-- Updated: 2026-11-10 (v3)
+- Updated: 2026-11-19 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

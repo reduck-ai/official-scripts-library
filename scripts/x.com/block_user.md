@@ -4,7 +4,7 @@ Automatically block an account on X (Twitter) on x.com. Block an X user by handl
 
 - Site: x.com
 - Address: `reduck/x.com/block_user`
-- Updated: 2026-10-22 (v6)
+- Updated: 2026-11-19 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it

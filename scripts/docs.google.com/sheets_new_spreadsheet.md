@@ -4,7 +4,7 @@ Automatically create a Google Sheets spreadsheet on docs.google.com. Create a ne
 
 - Site: docs.google.com
 - Address: `reduck/docs.google.com/sheets_new_spreadsheet`
-- Updated: 2026-10-22 (v9)
+- Updated: 2026-11-19 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it

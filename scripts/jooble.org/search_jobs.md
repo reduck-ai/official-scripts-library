@@ -4,7 +4,7 @@ Automatically search Jooble jobs on jooble.org. Search job listings on Jooble Fr
 
 - Site: jooble.org
 - Address: `reduck/jooble.org/search_jobs`
-- Updated: 2026-11-04 (v16)
+- Updated: 2026-11-19 (v17)
 - Author: Reduck AI (reduck)
 
 ## Run it

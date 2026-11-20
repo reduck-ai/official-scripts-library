@@ -4,7 +4,7 @@ Automatically post YouTube comment on youtube.com. Post a top-level comment on a
 
 - Site: youtube.com
 - Address: `reduck/youtube.com/post_comment`
-- Updated: 2026-11-02 (v4)
+- Updated: 2026-11-19 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

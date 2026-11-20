@@ -1,10 +1,10 @@
 # Cloudflare: remove member
 
-Automatically remove member on cloudflare.com. Remove a member from one Cloudflare account by email, via the Members list's "Remove member" action. Returns the removed email, accountId and status.
+Automatically remove member on cloudflare.com. Remove a member from one Cloudflare account by email (any letter case). Returns the removed email, accountId and status. Fails with a clear message when the email is not a member, is the signed-in user, or the account is not reachable.
 
 - Site: cloudflare.com
 - Address: `reduck/cloudflare.com/delete_user`
-- Updated: 2026-10-22 (v7)
+- Updated: 2026-11-19 (v13)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -30,7 +30,7 @@ npx @reduck-ai/cli@latest run --script reduck/cloudflare.com/delete_user
 
 ### What does "Cloudflare: remove member" do?
 
-Remove a member from one Cloudflare account by email, via the Members list's "Remove member" action. Returns the removed email, accountId and status.
+Remove a member from one Cloudflare account by email (any letter case). Returns the removed email, accountId and status. Fails with a clear message when the email is not a member, is the signed-in user, or the account is not reachable.
 
 ### How do I automatically remove member on cloudflare.com?
 

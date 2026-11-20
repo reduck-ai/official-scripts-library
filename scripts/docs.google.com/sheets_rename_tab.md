@@ -4,7 +4,7 @@ Automatically rename tab on docs.google.com. Rename one tab of a Google Spreadsh
 
 - Site: docs.google.com
 - Address: `reduck/docs.google.com/sheets_rename_tab`
-- Updated: 2026-11-06 (v5)
+- Updated: 2026-11-19 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it

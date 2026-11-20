@@ -4,7 +4,7 @@ Automatically invite member on cloudflare.com. Invite a new member into one Clou
 
 - Site: cloudflare.com
 - Address: `reduck/cloudflare.com/create_user`
-- Updated: 2026-10-22 (v6)
+- Updated: 2026-11-19 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it

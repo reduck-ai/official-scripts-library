@@ -4,7 +4,7 @@ Automatically get TikTok sound/music videos on tiktok.com. List videos that use 
 
 - Site: tiktok.com
 - Address: `reduck/tiktok.com/get_music_videos`
-- Updated: 2026-11-10 (v2)
+- Updated: 2026-11-19 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

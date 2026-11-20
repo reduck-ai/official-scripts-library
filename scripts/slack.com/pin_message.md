@@ -4,7 +4,7 @@ Automatically pin Slack message on slack.com. Pin a message in a Slack channel, 
 
 - Site: slack.com
 - Address: `reduck/slack.com/pin_message`
-- Updated: 2026-11-04 (v6)
+- Updated: 2026-11-19 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically read a Notion page on app.notion.com. Read a Notion page the signe
 
 - Site: app.notion.com
 - Address: `reduck/app.notion.com/get_page`
-- Updated: 2026-11-03 (v1)
+- Updated: 2026-11-19 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

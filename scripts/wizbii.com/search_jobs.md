@@ -4,7 +4,7 @@ Automatically search Wizbii jobs on wizbii.com. Searches job listings on jobs.wi
 
 - Site: wizbii.com
 - Address: `reduck/wizbii.com/search_jobs`
-- Updated: 2026-08-14 (v4)
+- Updated: 2026-11-19 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

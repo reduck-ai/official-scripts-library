@@ -4,7 +4,7 @@ Automatically unsave Reddit post on reddit.com. Remove a Reddit post from your s
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/unsave_post`
-- Updated: 2026-10-22 (v4)
+- Updated: 2026-11-19 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

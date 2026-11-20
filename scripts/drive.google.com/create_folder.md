@@ -4,7 +4,7 @@ Automatically create Google Drive folder on drive.google.com. Create a new folde
 
 - Site: drive.google.com
 - Address: `reduck/drive.google.com/create_folder`
-- Updated: 2026-10-22 (v4)
+- Updated: 2026-11-19 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

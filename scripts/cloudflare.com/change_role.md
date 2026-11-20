@@ -4,7 +4,7 @@ Automatically change member role on cloudflare.com. Change one member's role wit
 
 - Site: cloudflare.com
 - Address: `reduck/cloudflare.com/change_role`
-- Updated: 2026-10-23 (v6)
+- Updated: 2026-11-19 (v12)
 - Author: Reduck AI (reduck)
 
 ## Run it

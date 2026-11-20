@@ -4,7 +4,7 @@ Respond to a Google Calendar invitation (RSVP yes / no / maybe) by its eid, as t
 
 - Site: calendar.google.com
 - Address: `reduck/calendar.google.com/respond_invitation`
-- Updated: 2026-11-02 (v7)
+- Updated: 2026-11-19 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it

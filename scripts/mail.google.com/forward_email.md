@@ -4,7 +4,7 @@ Automatically forward Gmail thread on mail.google.com. Forward an entire Gmail t
 
 - Site: mail.google.com
 - Address: `reduck/mail.google.com/forward_email`
-- Updated: 2026-11-03 (v25)
+- Updated: 2026-11-19 (v26)
 - Author: Reduck AI (reduck)
 
 ## Run it

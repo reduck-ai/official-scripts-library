@@ -4,7 +4,7 @@ Automatically create an Airtable record on airtable.com. Add a record to a table
 
 - Site: airtable.com
 - Address: `reduck/airtable.com/create_record`
-- Updated: 2026-11-04 (v3)
+- Updated: 2026-11-19 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

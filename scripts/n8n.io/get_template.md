@@ -4,7 +4,7 @@ Automatically get an n8n workflow template on n8n.io. Read one template of the n
 
 - Site: n8n.io
 - Address: `reduck/n8n.io/get_template`
-- Updated: 2026-11-02 (v1)
+- Updated: 2026-11-19 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

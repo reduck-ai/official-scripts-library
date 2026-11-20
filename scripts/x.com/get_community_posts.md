@@ -4,7 +4,7 @@ Automatically read an X (Twitter) Community's posts on x.com. Read the posts of 
 
 - Site: x.com
 - Address: `reduck/x.com/get_community_posts`
-- Updated: 2026-11-02 (v9)
+- Updated: 2026-11-19 (v12)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically get G2 product profile on g2.com. Fetch a G2 product's profile by 
 
 - Site: g2.com
 - Address: `reduck/g2.com/get_product`
-- Updated: 2026-10-22 (v5)
+- Updated: 2026-11-19 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

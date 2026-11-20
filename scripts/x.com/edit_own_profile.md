@@ -4,7 +4,7 @@ Update the signed-in X (Twitter) account's own display name (50 characters at mo
 
 - Site: x.com
 - Address: `reduck/x.com/edit_own_profile`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-19 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

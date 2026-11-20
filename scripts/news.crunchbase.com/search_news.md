@@ -4,7 +4,7 @@ Automatically search Crunchbase News on news.crunchbase.com. Get the newest fund
 
 - Site: news.crunchbase.com
 - Address: `reduck/news.crunchbase.com/search_news`
-- Updated: 2026-11-03 (v5)
+- Updated: 2026-11-19 (v6)
 - Author: Reduck AI (reduck)
 
 ## About

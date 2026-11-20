@@ -4,7 +4,7 @@ Searches Etsy listings by keyword and returns every listing on one results page 
 
 - Site: etsy.com
 - Address: `reduck/etsy.com/search_listings`
-- Updated: 2026-10-23 (v3)
+- Updated: 2026-11-19 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically like Substack post on substack.com. Like a Substack post as the lo
 
 - Site: substack.com
 - Address: `reduck/substack.com/like_post`
-- Updated: 2026-08-14 (v1)
+- Updated: 2026-11-19 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -24,6 +24,7 @@ npx @reduck-ai/cli@latest run --script reduck/substack.com/like_post
 - `url` (string, required)
 - `liked` (boolean, required)
 - `postId` (number, required)
+- `alreadyLiked` (boolean, optional): True when the post was already liked, so nothing was clicked.
 
 ## FAQ
 
@@ -45,7 +46,7 @@ Required: url.
 
 ### What does it return?
 
-It returns url, liked, postId.
+It returns url, liked, postId, alreadyLiked.
 
 ### Do I need to be logged in to substack.com?
 
@@ -53,7 +54,7 @@ Yes. It acts as you on substack.com: on your own Chrome it reuses your session, 
 
 ### Does it change anything on substack.com, or only read data?
 
-It makes changes on substack.com, like sending, posting or booking something.
+It makes changes on substack.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

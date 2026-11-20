@@ -1,10 +1,10 @@
 # List Notion workspace members and guests
 
-Automatically list Notion workspace members and guests on app.notion.com. List the email addresses of a Notion workspace's members and guests, along with the seat counters. Read-only — it changes nothing. Pass the optional email argument to also get a present true/false verdict, the quick way to confirm an offboarding landed. The full member list is returned, including the rows Notion only loads as you scroll. Acts on the workspace currently active in the browser, so there is no workspace name to pass. Requires being signed into Notion as a workspace owner.
+Automatically list Notion workspace members and guests on app.notion.com. List the email addresses of a Notion workspace's members and guests, along with the seat counters. Read-only: it changes nothing. The full member list is returned, including the rows Notion only loads as you scroll. Acts on the workspace currently active in the browser, so there is no workspace name to pass. Requires being signed into Notion as a workspace owner.
 
 - Site: app.notion.com
 - Address: `reduck/app.notion.com/list_users_and_roles`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-11-19 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,22 +17,20 @@ npx @reduck-ai/cli@latest run --script reduck/app.notion.com/list_users_and_role
 
 ## Input
 
-- `email` (string, optional): Optional email to check for presence/absence among members and guests
+It takes no input.
 
 ## Output
 
-- `guestEmails` (array, required)
-- `memberEmails` (array, required)
-- `present` (boolean | null, optional)
+- `guestEmails` (array, required): Emails on the Guests tab, as Notion lists them
+- `memberEmails` (array, required): Emails on the Members tab, as Notion lists them
 - `guestCount` (number | null, optional): Guest count as the workspace itself reports it
 - `memberCount` (number | null, optional): Member count as the workspace itself reports it
-- `checkedEmail` (string | null, optional)
 
 ## FAQ
 
 ### What does "List Notion workspace members and guests" do?
 
-List the email addresses of a Notion workspace's members and guests, along with the seat counters. Read-only — it changes nothing. Pass the optional email argument to also get a present true/false verdict, the quick way to confirm an offboarding landed. The full member list is returned, including the rows Notion only loads as you scroll. Acts on the workspace currently active in the browser, so there is no workspace name to pass. Requires being signed into Notion as a workspace owner.
+List the email addresses of a Notion workspace's members and guests, along with the seat counters. Read-only: it changes nothing. The full member list is returned, including the rows Notion only loads as you scroll. Acts on the workspace currently active in the browser, so there is no workspace name to pass. Requires being signed into Notion as a workspace owner.
 
 ### How do I automatically list Notion workspace members and guests on app.notion.com?
 
@@ -44,11 +42,11 @@ You do not need one. "List Notion workspace members and guests" drives the real 
 
 ### What information do I need to provide?
 
-Optional: email.
+Nothing. It takes no input.
 
 ### What does it return?
 
-It returns present, guestCount, guestEmails, memberCount, checkedEmail, memberEmails.
+It returns guestCount, guestEmails, memberCount, memberEmails.
 
 ### Do I need to be logged in to app.notion.com?
 

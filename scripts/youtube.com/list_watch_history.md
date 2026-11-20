@@ -4,7 +4,7 @@ Automatically list YouTube watch history on youtube.com. List the videos and Sho
 
 - Site: youtube.com
 - Address: `reduck/youtube.com/list_watch_history`
-- Updated: 2026-09-17 (v1)
+- Updated: 2026-11-19 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

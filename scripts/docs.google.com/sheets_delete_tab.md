@@ -1,10 +1,10 @@
-# Sheets: delete tab
+# Google Sheets: delete tab
 
 Automatically delete tab on docs.google.com. Delete one tab of a Google Spreadsheet by gid. Returns deletedGid and remainingTabs (names left). The sheet's data goes with it (recover via Undo / Drive history); an unknown gid throws rather than risk deleting the wrong sheet; needs edit rights.
 
 - Site: docs.google.com
 - Address: `reduck/docs.google.com/sheets_delete_tab`
-- Updated: 2026-10-22 (v5)
+- Updated: 2026-11-19 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -27,7 +27,7 @@ npx @reduck-ai/cli@latest run --script reduck/docs.google.com/sheets_delete_tab
 
 ## FAQ
 
-### What does "Sheets: delete tab" do?
+### What does "Google Sheets: delete tab" do?
 
 Delete one tab of a Google Spreadsheet by gid. Returns deletedGid and remainingTabs (names left). The sheet's data goes with it (recover via Undo / Drive history); an unknown gid throws rather than risk deleting the wrong sheet; needs edit rights.
 
@@ -37,7 +37,7 @@ Ask an AI agent connected to Reduck to run reduck/docs.google.com/sheets_delete_
 
 ### Is there a docs.google.com API to delete tab?
 
-You do not need one. "Sheets: delete tab" drives the real docs.google.com pages in a browser, so it works whether or not docs.google.com offers an API for this.
+You do not need one. "Google Sheets: delete tab" drives the real docs.google.com pages in a browser, so it works whether or not docs.google.com offers an API for this.
 
 ### What information do I need to provide?
 

@@ -4,7 +4,7 @@ Automatically get Loom video transcript on loom.com. Fetch the full transcript o
 
 - Site: loom.com
 - Address: `reduck/loom.com/get_transcript`
-- Updated: 2026-11-03 (v5)
+- Updated: 2026-11-19 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

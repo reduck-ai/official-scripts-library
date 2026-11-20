@@ -4,7 +4,7 @@ Automatically list Shopify store orders on admin.shopify.com. Lists orders from 
 
 - Site: admin.shopify.com
 - Address: `reduck/admin.shopify.com/list_orders`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-11-19 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,9 +17,10 @@ npx @reduck-ai/cli@latest run --script reduck/admin.shopify.com/list_orders
 
 ## Input
 
-- `limit` (integer, optional): Maximum number of orders to return.
+- `limit` (integer, optional): Maximum number of orders to return in this page.
 - `query` (string, optional): Free-text search as typed in the admin's order search box (order number, customer name or email, and more). Shopify search syntax such as tag:wholesale is also accepted.
 - `store` (string, optional): The store handle as it appears in the admin URL. Omit it to use the store the signed-in admin opens by default.
+- `cursor` (string, optional): The nextCursor from a previous call, to get the next page. Omit for the first page.
 - `status` (string, optional): Only return orders with this order status.
 - `financialStatus` (string, optional): Only return orders with this payment status.
 - `fulfillmentStatus` (string, optional): Only return orders with this fulfilment status.
@@ -32,6 +33,7 @@ npx @reduck-ai/cli@latest run --script reduck/admin.shopify.com/list_orders
 - `search` (string | null, required): The search string sent to Shopify, or null when unfiltered.
 - `hasMore` (boolean, required)
 - `shopName` (string | null, optional)
+- `nextCursor` (string | null, optional): Pass as cursor to get the next page; null on the last page.
 
 ## FAQ
 
@@ -49,11 +51,11 @@ You do not need one. "List Shopify store orders" drives the real admin.shopify.c
 
 ### What information do I need to provide?
 
-Optional: limit, query, store, status, financialStatus, fulfillmentStatus.
+Optional: limit, query, store, cursor, status, financialStatus, fulfillmentStatus.
 
 ### What does it return?
 
-It returns count, store, orders, search, hasMore, shopName.
+It returns count, store, orders, search, hasMore, shopName, nextCursor.
 
 ### Do I need to be logged in to admin.shopify.com?
 

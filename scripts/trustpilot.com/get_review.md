@@ -4,7 +4,7 @@ Automatically get single Trustpilot review on trustpilot.com. Get one Trustpilot
 
 - Site: trustpilot.com
 - Address: `reduck/trustpilot.com/get_review`
-- Updated: 2026-11-09 (v4)
+- Updated: 2026-11-19 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it

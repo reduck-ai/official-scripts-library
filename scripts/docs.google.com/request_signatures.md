@@ -4,7 +4,7 @@ Automatically request eSignatures on a document on docs.google.com. Send a Googl
 
 - Site: docs.google.com
 - Address: `reduck/docs.google.com/request_signatures`
-- Updated: 2026-11-17 (v6)
+- Updated: 2026-11-19 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

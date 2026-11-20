@@ -4,7 +4,7 @@ Automatically write cells on docs.google.com. Write a 2D block of values into on
 
 - Site: docs.google.com
 - Address: `reduck/docs.google.com/sheets_write_cells`
-- Updated: 2026-10-22 (v7)
+- Updated: 2026-11-19 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it

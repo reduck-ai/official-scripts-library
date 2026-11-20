@@ -4,7 +4,7 @@ Automatically get Leboncoin ad details on leboncoin.fr. Read one Leboncoin ad by
 
 - Site: leboncoin.fr
 - Address: `reduck/leboncoin.fr/get_ad_details`
-- Updated: 2026-11-05 (v1)
+- Updated: 2026-11-19 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically send an X (Twitter) DM from an AI agent on x.com. Send a direct me
 
 - Site: x.com
 - Address: `reduck/x.com/send_dm`
-- Updated: 2026-10-23 (v7)
+- Updated: 2026-11-19 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it

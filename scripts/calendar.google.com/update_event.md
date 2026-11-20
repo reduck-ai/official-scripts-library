@@ -4,7 +4,7 @@ Automatically update a Google Calendar event on calendar.google.com. Edit an exi
 
 - Site: calendar.google.com
 - Address: `reduck/calendar.google.com/update_event`
-- Updated: 2026-11-02 (v9)
+- Updated: 2026-11-19 (v13)
 - Author: Reduck AI (reduck)
 
 ## Run it

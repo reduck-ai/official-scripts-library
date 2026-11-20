@@ -4,7 +4,7 @@ Automatically unlike Substack post on substack.com. Remove the logged-in account
 
 - Site: substack.com
 - Address: `reduck/substack.com/unlike_post`
-- Updated: 2026-08-14 (v1)
+- Updated: 2026-11-19 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -53,7 +53,7 @@ Yes. It acts as you on substack.com: on your own Chrome it reuses your session, 
 
 ### Does it change anything on substack.com, or only read data?
 
-It makes changes on substack.com, like sending, posting or booking something.
+It makes changes on substack.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

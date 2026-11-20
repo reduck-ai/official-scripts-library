@@ -4,7 +4,7 @@ Automatically add Slack reaction on slack.com. Add an emoji reaction to a Slack 
 
 - Site: slack.com
 - Address: `reduck/slack.com/add_reaction`
-- Updated: 2026-11-10 (v5)
+- Updated: 2026-11-19 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

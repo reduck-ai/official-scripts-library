@@ -4,7 +4,7 @@ Automatically pin a tweet to your X (Twitter) profile on x.com. Pin one of your 
 
 - Site: x.com
 - Address: `reduck/x.com/pin_tweet`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-19 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically save Reddit post on reddit.com. Save a Reddit post to your saved l
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/save_post`
-- Updated: 2026-10-22 (v4)
+- Updated: 2026-11-19 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically get Sifted Article on sifted.eu. Fetch the text and metadata of a 
 
 - Site: sifted.eu
 - Address: `reduck/sifted.eu/get_article`
-- Updated: 2026-11-06 (v5)
+- Updated: 2026-11-19 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

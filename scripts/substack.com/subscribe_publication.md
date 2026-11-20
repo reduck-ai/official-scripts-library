@@ -4,7 +4,7 @@ Automatically subscribe to Substack publication on substack.com. Subscribe the l
 
 - Site: substack.com
 - Address: `reduck/substack.com/subscribe_publication`
-- Updated: 2026-08-25 (v3)
+- Updated: 2026-11-19 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -54,7 +54,7 @@ Yes. It acts as you on substack.com: on your own Chrome it reuses your session, 
 
 ### Does it change anything on substack.com, or only read data?
 
-It makes changes on substack.com, like sending, posting or booking something.
+It makes changes on substack.com, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

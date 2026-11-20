@@ -4,7 +4,7 @@ Automatically get TradingView ticker overview on tradingview.com. Read a Trading
 
 - Site: tradingview.com
 - Address: `reduck/tradingview.com/get_ticker_overview`
-- Updated: 2026-10-29 (v5)
+- Updated: 2026-11-19 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

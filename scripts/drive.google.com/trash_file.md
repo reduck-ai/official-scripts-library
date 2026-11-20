@@ -4,7 +4,7 @@ Automatically move a Google Drive file to the Bin on drive.google.com. Moves a f
 
 - Site: drive.google.com
 - Address: `reduck/drive.google.com/trash_file`
-- Updated: 2026-10-22 (v8)
+- Updated: 2026-11-19 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it

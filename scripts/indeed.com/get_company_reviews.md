@@ -4,7 +4,7 @@ Automatically get Indeed company reviews on indeed.com. Get one page (20) of Ind
 
 - Site: indeed.com
 - Address: `reduck/indeed.com/get_company_reviews`
-- Updated: 2026-10-28 (v5)
+- Updated: 2026-11-19 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

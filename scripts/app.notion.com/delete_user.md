@@ -4,7 +4,7 @@ Automatically remove workspace member (Notion) on app.notion.com. Remove a membe
 
 - Site: app.notion.com
 - Address: `reduck/app.notion.com/delete_user`
-- Updated: 2026-10-22 (v13)
+- Updated: 2026-11-19 (v18)
 - Author: Reduck AI (reduck)
 
 ## Run it

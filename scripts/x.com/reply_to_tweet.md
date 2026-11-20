@@ -4,7 +4,7 @@ Automatically reply to a tweet on X (Twitter) from an AI agent on x.com. Reply t
 
 - Site: x.com
 - Address: `reduck/x.com/reply_to_tweet`
-- Updated: 2026-10-22 (v9)
+- Updated: 2026-11-19 (v12)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/reply_to_tweet
 
 ## Input
 
-- `text` (string, required): The reply body text (≤280 chars). Any deliberate @handle in the text (not X's own auto-prepended participant mentions) is validated against a real, non-suspended X account before anything is posted — the run throws naming the bad handle if one doesn't resolve. Every call posts immediately and irreversibly in public, with no preview or confirmation step inside the script, so show the exact text to the user and get their explicit approval for this specific content before running — approval from an earlier or unrelated message does not carry over. X also prepends its own computed reply mentions (the tweet's participants) to the published text, so any @mentions at the very start of this field are stripped before typing to avoid duplicates; put a deliberate @mention of a different account mid-sentence rather than leading with it.
+- `text` (string, required): The reply body text (280 characters at most). Every call posts immediately and irreversibly in public, with no preview or confirmation step inside the script, so show the exact text to the user and get their explicit approval for this specific content before running; approval from an earlier or unrelated message does not carry over. The script does not check that @mentions name real accounts, nor whether the same reply is already there: check those first if they matter. X prepends its own reply mentions (the tweet's participants), so @mentions at the very start of this field are stripped before typing to avoid duplicates; put a deliberate @mention of another account mid-sentence.
 - `tweet_url` (string, required): Full URL of the tweet to reply to, e.g. https://x.com/handle/status/123
 
 ## Output
@@ -27,8 +27,8 @@ npx @reduck-ai/cli@latest run --script reduck/x.com/reply_to_tweet
 - `handle` (string | null, required)
 - `tweet_id` (string | null, required)
 - `in_reply_to` (string | null, required): id of the parent tweet
-- `account_used` (string | null, required): handle of the logged-in account that performed the action, read from the account switcher UI (not assumed from input).
-- `already_present` (boolean, required): true if a reply with this exact text was already visible on the tweet's page before attempting to publish (duplicate-avoidance check); when true, publishing is skipped and tweet_id/url are null.
+- `account_used` (string | null, required): handle of the logged-in account that performed the action, read from the page.
+- `already_present` (boolean, required): Always false: the script no longer checks for an existing identical reply (that check is the caller's).
 - `verified_on_page` (boolean, required): true if the script navigated to the new reply's URL after publishing and confirmed the article is actually present.
 
 ## FAQ

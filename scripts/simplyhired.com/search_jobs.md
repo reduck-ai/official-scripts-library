@@ -4,7 +4,7 @@ Automatically search SimplyHired jobs on simplyhired.com. Search SimplyHired (In
 
 - Site: simplyhired.com
 - Address: `reduck/simplyhired.com/search_jobs`
-- Updated: 2026-11-02 (v4)
+- Updated: 2026-11-19 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

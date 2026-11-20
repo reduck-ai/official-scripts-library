@@ -4,7 +4,7 @@ Automatically get TikTok followers on tiktok.com. List a TikTok user's followers
 
 - Site: tiktok.com
 - Address: `reduck/tiktok.com/get_followers`
-- Updated: 2026-11-05 (v7)
+- Updated: 2026-11-19 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it

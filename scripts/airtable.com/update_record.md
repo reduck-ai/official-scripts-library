@@ -4,7 +4,7 @@ Automatically update an Airtable record on airtable.com. Change field values of 
 
 - Site: airtable.com
 - Address: `reduck/airtable.com/update_record`
-- Updated: 2026-11-04 (v3)
+- Updated: 2026-11-19 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

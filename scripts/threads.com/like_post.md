@@ -4,7 +4,7 @@ Automatically like a Threads post on threads.com. Like a post on Threads by its 
 
 - Site: threads.com
 - Address: `reduck/threads.com/like_post`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-20 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

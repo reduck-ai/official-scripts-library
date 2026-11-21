@@ -4,7 +4,7 @@ Automatically get a lawyer's details from the Barreau de Nantes on barreaunantes
 
 - Site: barreaunantes.fr
 - Address: `reduck/barreaunantes.fr/get_lawyer`
-- Updated: 2026-11-03 (v4)
+- Updated: 2026-11-20 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

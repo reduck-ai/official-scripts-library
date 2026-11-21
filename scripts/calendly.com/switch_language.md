@@ -4,7 +4,7 @@ Automatically switch Calendly language on calendly.com. Change the display langu
 
 - Site: calendly.com
 - Address: `reduck/calendly.com/switch_language`
-- Updated: 2026-10-22 (v5)
+- Updated: 2026-11-20 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -21,7 +21,9 @@ npx @reduck-ai/cli@latest run --script reduck/calendly.com/switch_language
 
 ## Output
 
-- `language` (string, required): The document language tag (document.documentElement.lang) read back after the switch, confirming what actually applied.
+- `language` (string, required): The account's language code as Calendly stores it after the run.
+- `changed` (boolean, optional): false when the account was already in the requested language (nothing saved).
+- `previousLanguage` (string, optional): The account's language code before the run; pass it back to restore.
 
 ## FAQ
 
@@ -43,7 +45,7 @@ Required: language.
 
 ### What does it return?
 
-It returns language.
+It returns changed, language, previousLanguage.
 
 ### Do I need to be logged in to calendly.com?
 

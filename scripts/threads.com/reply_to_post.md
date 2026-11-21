@@ -4,7 +4,7 @@ Automatically reply to Threads post on threads.com. Publish a text reply to a sp
 
 - Site: threads.com
 - Address: `reduck/threads.com/reply_to_post`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-20 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

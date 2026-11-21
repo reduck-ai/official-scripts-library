@@ -4,7 +4,7 @@ Automatically mark an Outlook.com email read or unread on outlook.live.com. Mark
 
 - Site: outlook.live.com
 - Address: `reduck/outlook.live.com/set_read_state`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-20 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

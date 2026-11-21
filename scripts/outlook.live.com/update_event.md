@@ -4,7 +4,7 @@ Automatically update calendar event (Outlook) on outlook.live.com. Edit an exist
 
 - Site: outlook.live.com
 - Address: `reduck/outlook.live.com/update_event`
-- Updated: 2026-11-02 (v6)
+- Updated: 2026-11-20 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

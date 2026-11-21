@@ -1,10 +1,10 @@
 # Cancel an Airbnb reservation
 
-Automatically cancel an Airbnb reservation on airbnb.com. Cancel one of your Airbnb stay reservations by confirmation code, as the guest. Returns the refund Airbnb grants under the reservation's cancellation policy (what you paid, what comes back) and the reservation's status afterwards. A reservation that is already cancelled, or that Airbnb no longer lets you cancel, fails with a clear error and nothing changes. The host is told at once.
+Automatically cancel an Airbnb reservation on airbnb.com. Cancel one of your Airbnb stay reservations by confirmation code, as the guest, in two steps. First call without confirm: it shows what you paid and the refund Airbnb grants under the reservation's cancellation policy, with a reviewHash, and changes nothing. Then call with confirm true and that reviewHash to cancel: it goes through only if the refund terms are unchanged, and returns the reservation's status afterwards. A reservation that is already cancelled, or that Airbnb no longer lets you cancel, fails with a clear error and nothing changes. The host is told at once.
 
 - Site: airbnb.com
 - Address: `reduck/airbnb.com/cancel_reservation`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-20 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,20 +18,24 @@ npx @reduck-ai/cli@latest run --script reduck/airbnb.com/cancel_reservation
 ## Input
 
 - `code` (string, required): Reservation confirmation code, e.g. HMEZNST29K (Confirm an Airbnb booking returns it).
+- `confirm` (boolean, optional): false (default) only reviews: returns what you paid, the refund, and a reviewHash, and cancels nothing. true cancels, and needs the reviewHash from the review.
 - `reasonId` (string, optional): Airbnb's cancellation reason code: 101 I no longer need accommodations (default), 102 I made the reservation by accident.
+- `reviewHash` (string, optional): The reviewHash a review call returned. Required with confirm: the cancellation goes through only if the refund terms still match it.
 
 ## Output
 
 - `code` (string, required)
-- `status` (string, required): The reservation's status after the request, as Airbnb names it, e.g. CANCELED_BY_GUEST.
+- `status` (string, required): The reservation's status, as Airbnb names it, e.g. ACCEPTED before or CANCELED_BY_GUEST after.
+- `cancelled` (boolean, required): true only after a confirmed cancellation; false for a review.
+- `reviewHash` (string, required): Hash of the reservation, reason, paid and refund shown; pass it back with confirm:true to cancel.
 - `paid` (string | null, optional)
-- `refund` (string | null, optional): The total refund Airbnb showed before confirming.
+- `refund` (string | null, optional): The total refund Airbnb shows on the cancellation screen.
 
 ## FAQ
 
 ### What does "Cancel an Airbnb reservation" do?
 
-Cancel one of your Airbnb stay reservations by confirmation code, as the guest. Returns the refund Airbnb grants under the reservation's cancellation policy (what you paid, what comes back) and the reservation's status afterwards. A reservation that is already cancelled, or that Airbnb no longer lets you cancel, fails with a clear error and nothing changes. The host is told at once.
+Cancel one of your Airbnb stay reservations by confirmation code, as the guest, in two steps. First call without confirm: it shows what you paid and the refund Airbnb grants under the reservation's cancellation policy, with a reviewHash, and changes nothing. Then call with confirm true and that reviewHash to cancel: it goes through only if the refund terms are unchanged, and returns the reservation's status afterwards. A reservation that is already cancelled, or that Airbnb no longer lets you cancel, fails with a clear error and nothing changes. The host is told at once.
 
 ### How do I automatically cancel an Airbnb reservation on airbnb.com?
 
@@ -43,11 +47,11 @@ You do not need one. "Cancel an Airbnb reservation" drives the real airbnb.com p
 
 ### What information do I need to provide?
 
-Required: code. Optional: reasonId.
+Required: code. Optional: confirm, reasonId, reviewHash.
 
 ### What does it return?
 
-It returns code, paid, refund, status.
+It returns code, paid, refund, status, cancelled, reviewHash.
 
 ### Do I need to be logged in to airbnb.com?
 

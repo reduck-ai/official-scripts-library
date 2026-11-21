@@ -4,7 +4,7 @@ Automatically move an Outlook.com email to a folder on outlook.live.com. Move on
 
 - Site: outlook.live.com
 - Address: `reduck/outlook.live.com/move_email`
-- Updated: 2026-11-02 (v9)
+- Updated: 2026-11-20 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it

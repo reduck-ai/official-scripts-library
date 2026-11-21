@@ -4,7 +4,7 @@ Automatically get LinkedIn profile comments on linkedin.com. Get the comments a 
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_profile_comments`
-- Updated: 2026-10-23 (v7)
+- Updated: 2026-11-20 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it

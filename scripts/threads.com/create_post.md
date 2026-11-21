@@ -4,7 +4,7 @@ Automatically create Threads post on threads.com. Publish a new text post (threa
 
 - Site: threads.com
 - Address: `reduck/threads.com/create_post`
-- Updated: 2026-10-22 (v7)
+- Updated: 2026-11-20 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it

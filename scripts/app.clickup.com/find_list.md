@@ -1,10 +1,10 @@
-# Find a ClickUp list by name
+# List all ClickUp lists in a workspace
 
-Automatically find a ClickUp list by name on app.clickup.com. Looks up ClickUp lists by name and returns each match with its identifier and its full location, so a list name can be turned into the identifier other ClickUp scripts need. Every match is returned rather than one being guessed at.
+Automatically list all ClickUp lists in a workspace on app.clickup.com. Returns every list in a ClickUp workspace with its identifier, link, space and folder, so a list name can be turned into the identifier other ClickUp scripts need. Lists that sit directly in a space have no folder. Choosing a list by name is left to the caller.
 
 - Site: app.clickup.com
 - Address: `reduck/app.clickup.com/find_list`
-- Updated: 2026-09-23 (v1)
+- Updated: 2026-11-20 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,39 +17,35 @@ npx @reduck-ai/cli@latest run --script reduck/app.clickup.com/find_list
 
 ## Input
 
-- `name` (string, required): The list name to look for. Matching ignores case and surrounding spaces. An exact match wins; if there is none, lists containing the text are returned instead.
 - `workspaceId` (string, optional): Numeric ClickUp workspace id. Omit to use whichever workspace ClickUp opens by default.
 
 ## Output
 
-- `query` (string, required)
-- `matches` (array, required)
-- `matchType` (string, required)
-- `matchCount` (integer, required)
+- `lists` (array, required)
 - `totalLists` (integer, required)
 - `workspaceId` (string, required)
 
 ## FAQ
 
-### What does "Find a ClickUp list by name" do?
+### What does "List all ClickUp lists in a workspace" do?
 
-Looks up ClickUp lists by name and returns each match with its identifier and its full location, so a list name can be turned into the identifier other ClickUp scripts need. Every match is returned rather than one being guessed at.
+Returns every list in a ClickUp workspace with its identifier, link, space and folder, so a list name can be turned into the identifier other ClickUp scripts need. Lists that sit directly in a space have no folder. Choosing a list by name is left to the caller.
 
-### How do I automatically find a ClickUp list by name on app.clickup.com?
+### How do I automatically list all ClickUp lists in a workspace on app.clickup.com?
 
 Ask an AI agent connected to Reduck to run reduck/app.clickup.com/find_list, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/app.clickup.com/find_list
 
-### Is there a app.clickup.com API to find a ClickUp list by name?
+### Is there a app.clickup.com API to list all ClickUp lists in a workspace?
 
-You do not need one. "Find a ClickUp list by name" drives the real app.clickup.com pages in a browser, so it works whether or not app.clickup.com offers an API for this.
+You do not need one. "List all ClickUp lists in a workspace" drives the real app.clickup.com pages in a browser, so it works whether or not app.clickup.com offers an API for this.
 
 ### What information do I need to provide?
 
-Required: name. Optional: workspaceId.
+Optional: workspaceId.
 
 ### What does it return?
 
-It returns query, matches, matchType, matchCount, totalLists, workspaceId.
+It returns lists, totalLists, workspaceId.
 
 ### Do I need to be logged in to app.clickup.com?
 

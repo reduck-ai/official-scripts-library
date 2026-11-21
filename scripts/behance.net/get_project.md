@@ -4,7 +4,7 @@ Automatically get Behance project on behance.net. Fetch a Behance project's deta
 
 - Site: behance.net
 - Address: `reduck/behance.net/get_project`
-- Updated: 2026-11-16 (v9)
+- Updated: 2026-11-20 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it

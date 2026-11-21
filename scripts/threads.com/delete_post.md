@@ -4,7 +4,7 @@ Automatically delete Threads post on threads.com. Delete a post or reply owned b
 
 - Site: threads.com
 - Address: `reduck/threads.com/delete_post`
-- Updated: 2026-10-22 (v5)
+- Updated: 2026-11-20 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it

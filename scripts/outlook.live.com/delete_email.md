@@ -4,7 +4,7 @@ Automatically delete an Outlook.com email on outlook.live.com. Delete one receiv
 
 - Site: outlook.live.com
 - Address: `reduck/outlook.live.com/delete_email`
-- Updated: 2026-10-22 (v7)
+- Updated: 2026-11-20 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it

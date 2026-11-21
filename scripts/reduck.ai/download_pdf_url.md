@@ -4,7 +4,7 @@ Automatically download PDF from a direct URL on reduck.ai. Download a PDF from a
 
 - Site: reduck.ai
 - Address: `reduck/reduck.ai/download_pdf_url`
-- Updated: 2026-10-22 (v7)
+- Updated: 2026-11-20 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it

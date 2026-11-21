@@ -4,7 +4,7 @@ Automatically ask Google AI Mode on google.com. Ask Google AI Mode one question 
 
 - Site: google.com
 - Address: `reduck/google.com/ask_ai_mode`
-- Updated: 2026-11-19 (v3)
+- Updated: 2026-11-20 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

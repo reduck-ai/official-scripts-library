@@ -1,10 +1,10 @@
 # Renew an evidence with a new file (Drata)
 
-Uploads a new file to an evidence of the Drata evidence library, making it the current artifact and moving the previous one to past artifacts. Sets the creation date (today by default); Drata computes the next renewal date from the evidence's schedule. Returns the new current artifact with its creation and renewal dates. Requires being signed in to Drata.
+Adds a new file to an evidence of the Drata evidence library as a new current artifact, with the creation date you give (today by default). Artifacts that were already current stay current until they are archived. Returns the new artifact's name and creation date, and the evidence's status and renewal date when Drata reports them. Requires being signed in to Drata.
 
 - Site: drata.com
 - Address: `reduck/drata.com/renew_evidence`
-- Updated: 2026-11-09 (v7)
+- Updated: 2026-11-20 (v13)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -35,7 +35,7 @@ npx @reduck-ai/cli@latest run --script reduck/drata.com/renew_evidence
 
 ### What does "Renew an evidence with a new file (Drata)" do?
 
-Uploads a new file to an evidence of the Drata evidence library, making it the current artifact and moving the previous one to past artifacts. Sets the creation date (today by default); Drata computes the next renewal date from the evidence's schedule. Returns the new current artifact with its creation and renewal dates. Requires being signed in to Drata.
+Adds a new file to an evidence of the Drata evidence library as a new current artifact, with the creation date you give (today by default). Artifacts that were already current stay current until they are archived. Returns the new artifact's name and creation date, and the evidence's status and renewal date when Drata reports them. Requires being signed in to Drata.
 
 ### What information do I need to provide?
 

@@ -4,7 +4,7 @@ Automatically get Amazon product reviews on amazon.com. You get each review's te
 
 - Site: amazon.com
 - Address: `reduck/amazon.com/get-product-reviews`
-- Updated: 2026-10-31 (v18)
+- Updated: 2026-11-20 (v19)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -110,7 +110,7 @@ It returns source, product, reviews, nextCursor, authenticated.
 
 ### Do I need to be logged in to amazon.com?
 
-No. It only uses pages of amazon.com that are reachable without signing in.
+Yes. It acts as you on amazon.com: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the amazon.com cookies saved by the Reduck extension.
 
 ### Does it change anything on amazon.com, or only read data?
 

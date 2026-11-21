@@ -4,7 +4,7 @@ Automatically reply to an Outlook.com email on outlook.live.com. Reply to one Ou
 
 - Site: outlook.live.com
 - Address: `reduck/outlook.live.com/reply_email`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-20 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

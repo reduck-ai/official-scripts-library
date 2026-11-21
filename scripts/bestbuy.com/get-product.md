@@ -4,7 +4,7 @@ Automatically get Best Buy product on bestbuy.com. Fetch one Best Buy (US) produ
 
 - Site: bestbuy.com
 - Address: `reduck/bestbuy.com/get-product`
-- Updated: 2026-11-17 (v2)
+- Updated: 2026-11-20 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

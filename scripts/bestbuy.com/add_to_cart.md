@@ -4,7 +4,7 @@ Automatically add to Best Buy cart on bestbuy.com. Add one unit of a Best Buy (U
 
 - Site: bestbuy.com
 - Address: `reduck/bestbuy.com/add_to_cart`
-- Updated: 2026-11-19 (v2)
+- Updated: 2026-11-20 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

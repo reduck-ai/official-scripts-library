@@ -4,7 +4,7 @@ Automatically follow a Threads account on threads.com. Follow a Threads account 
 
 - Site: threads.com
 - Address: `reduck/threads.com/follow_user`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-20 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

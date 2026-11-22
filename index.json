@@ -1613,7 +1613,7 @@
 			"address": "@reduck/chatgpt.com/list_invoices",
 			"path": "scripts/chatgpt.com/list_invoices.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/chatgpt.com/list_invoices",
-			"lastmod": "2026-10-20"
+			"lastmod": "2026-11-21"
 		},
 		{
 			"address": "@reduck/chatgpt.com/list_models",
@@ -8429,7 +8429,7 @@
 			"address": "@reduck/youtube.com/get_transcript",
 			"path": "scripts/youtube.com/get_transcript.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/youtube.com/get_transcript",
-			"lastmod": "2026-11-11"
+			"lastmod": "2026-11-21"
 		},
 		{
 			"address": "@reduck/youtube.com/get_video",

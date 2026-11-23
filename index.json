@@ -2321,7 +2321,7 @@
 			"address": "@reduck/discord.com/read_messages",
 			"path": "scripts/discord.com/read_messages.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/discord.com/read_messages",
-			"lastmod": "2026-11-19"
+			"lastmod": "2026-11-22"
 		},
 		{
 			"address": "@reduck/discord.com/reply_to_message",
@@ -2333,7 +2333,7 @@
 			"address": "@reduck/discord.com/search_messages",
 			"path": "scripts/discord.com/search_messages.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/discord.com/search_messages",
-			"lastmod": "2026-11-13"
+			"lastmod": "2026-11-22"
 		},
 		{
 			"address": "@reduck/discord.com/send_dm",
@@ -3293,7 +3293,7 @@
 			"address": "@reduck/google.com/get_ai_overview",
 			"path": "scripts/google.com/get_ai_overview.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/google.com/get_ai_overview",
-			"lastmod": "2026-11-20"
+			"lastmod": "2026-11-22"
 		},
 		{
 			"address": "@reduck/google.com/get_current_user",
@@ -3341,7 +3341,7 @@
 			"address": "@reduck/google.com/search_site",
 			"path": "scripts/google.com/search_site.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/google.com/search_site",
-			"lastmod": "2026-11-15"
+			"lastmod": "2026-11-22"
 		},
 		{
 			"address": "@reduck/google.com/search_suggestions",
@@ -7505,7 +7505,7 @@
 			"address": "@reduck/walmart.com/search-products",
 			"path": "scripts/walmart.com/search-products.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/walmart.com/search-products",
-			"lastmod": "2026-11-20"
+			"lastmod": "2026-11-22"
 		},
 		{
 			"address": "@reduck/web.descript.com/list_invoices",

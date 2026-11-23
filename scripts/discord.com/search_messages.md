@@ -1,10 +1,10 @@
 # Search Discord server messages
 
-Automatically search Discord server messages on discord.com. Search one Discord server's message history with Discord's own search, as the signed-in account, newest first. Search by words (content), and narrow by authors, channels, mentioned users and content type, each given as ids: get user ids from discord.com/get_member_list and channel ids from discord.com/list_channels. Returns one page of up to 25 matching messages with their author, text, time and link, Discord's total count of matches, and next_offset to read the next page (null on the last one). Fails with a clear error when the browser is not signed in to Discord, when the account is not a member of the server or can see no text channel in it, or when Discord is still indexing the server. Direct messages are not searched.
+Automatically search Discord server messages on discord.com. Search one Discord server's message history with Discord's own search, as the signed-in account, newest first. Search by words (content), and narrow by authors, channels, mentioned users and content type, each given as ids: get user ids from discord.com/get_member_list and channel ids from discord.com/list_channels. Returns one page of up to 25 matching messages with their author, text, time and link, Discord's total count of matches, and next_offset to read the next page (null on the last one). Discord serves only the first 10,000 hits of a search (offset at most 9975): to reach older messages, narrow the search with filters. Fails with a clear error when the browser is not signed in to Discord, when the account is not a member of the server or can see no text channel in it, or when Discord is still indexing the server. Direct messages are not searched.
 
 - Site: discord.com
 - Address: `reduck/discord.com/search_messages`
-- Updated: 2026-11-13 (v38)
+- Updated: 2026-11-22 (v39)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -19,7 +19,7 @@ npx @reduck-ai/cli@latest run --script reduck/discord.com/search_messages
 
 - `guildId` (string, required): Server id to search, from discord.com/list_servers.
 - `has` (array, optional): Only messages that include this kind of content.
-- `offset` (integer, optional): How many hits to skip: pass next_offset of the previous answer to read the next page.
+- `offset` (integer, optional): How many hits to skip: pass next_offset of the previous answer to read the next page. Discord serves at most 9975 as offset, so a search reaches only its first 10,000 hits: narrow it with filters (channelIds, authorIds) to reach older messages.
 - `content` (string, optional): Words the messages must contain (plain words; Discord operators such as from: or in: are rejected: use the filter arguments). Optional when a filter is given.
 - `mentions` (array, optional): Only messages that mention these users (user ids).
 - `authorIds` (array, optional): Only messages sent by these users (user ids, from discord.com/get_member_list).
@@ -32,14 +32,14 @@ npx @reduck-ai/cli@latest run --script reduck/discord.com/search_messages
 - `messages` (any, required)
 - `count` (integer, optional)
 - `complete` (boolean, optional): True when no hits remain after this page.
-- `next_offset` (integer | null, optional): Pass as offset to read the next page; null on the last page.
+- `next_offset` (integer | null, optional): Pass as offset to read the next page; null on the last page, and also when the next page would start past Discord's offset limit of 9975 (then complete is false).
 - `total_results` (integer | null, optional): Discord's own count of matching messages.
 
 ## FAQ
 
 ### What does "Search Discord server messages" do?
 
-Search one Discord server's message history with Discord's own search, as the signed-in account, newest first. Search by words (content), and narrow by authors, channels, mentioned users and content type, each given as ids: get user ids from discord.com/get_member_list and channel ids from discord.com/list_channels. Returns one page of up to 25 matching messages with their author, text, time and link, Discord's total count of matches, and next_offset to read the next page (null on the last one). Fails with a clear error when the browser is not signed in to Discord, when the account is not a member of the server or can see no text channel in it, or when Discord is still indexing the server. Direct messages are not searched.
+Search one Discord server's message history with Discord's own search, as the signed-in account, newest first. Search by words (content), and narrow by authors, channels, mentioned users and content type, each given as ids: get user ids from discord.com/get_member_list and channel ids from discord.com/list_channels. Returns one page of up to 25 matching messages with their author, text, time and link, Discord's total count of matches, and next_offset to read the next page (null on the last one). Discord serves only the first 10,000 hits of a search (offset at most 9975): to reach older messages, narrow the search with filters. Fails with a clear error when the browser is not signed in to Discord, when the account is not a member of the server or can see no text channel in it, or when Discord is still indexing the server. Direct messages are not searched.
 
 ### How do I automatically search Discord server messages on discord.com?
 

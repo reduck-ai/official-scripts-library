@@ -4,7 +4,7 @@ Automatically search Walmart products on walmart.com. Search Walmart.com by free
 
 - Site: walmart.com
 - Address: `reduck/walmart.com/search-products`
-- Updated: 2026-11-20 (v6)
+- Updated: 2026-11-22 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

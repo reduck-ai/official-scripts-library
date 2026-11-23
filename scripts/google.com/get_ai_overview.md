@@ -4,7 +4,7 @@ Automatically get Google AI Overview on google.com. Run a Google search and retu
 
 - Site: google.com
 - Address: `reduck/google.com/get_ai_overview`
-- Updated: 2026-11-20 (v7)
+- Updated: 2026-11-22 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it

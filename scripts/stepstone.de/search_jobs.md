@@ -4,7 +4,7 @@ Automatically search StepStone (Germany) jobs on stepstone.de. Search StepStone.
 
 - Site: stepstone.de
 - Address: `reduck/stepstone.de/search_jobs`
-- Updated: 2026-10-22 (v4)
+- Updated: 2026-11-23 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/stepstone.de/search_jobs
 
 ## Input
 
-- `page` (integer, optional): 1-based page number, 25 results per page. Defaults to 1.
+- `page` (integer, optional): 1-based page number, 25 results per page.
 - `query` (string, optional): Free-text keyword, e.g. 'Entwickler'. Omit to browse all jobs.
 - `location` (string, optional): Free-text city name, e.g. 'Berlin'. Omit for nationwide search.
 

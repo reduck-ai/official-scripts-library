@@ -4,7 +4,7 @@ Log into ClickUp with Continue with Google, picking the given Google account, an
 
 - Site: app.clickup.com
 - Address: `reduck/app.clickup.com/login_with_google`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-23 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

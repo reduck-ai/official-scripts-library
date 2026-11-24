@@ -4,7 +4,7 @@ Automatically search Indeed jobs on indeed.com. First page of Indeed job cards w
 
 - Site: indeed.com
 - Address: `reduck/indeed.com/search_jobs`
-- Updated: 2026-10-22 (v9)
+- Updated: 2026-11-23 (v11)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -25,7 +25,7 @@ npx @reduck-ai/cli@latest run --script reduck/indeed.com/search_jobs
 - `page` (integer, optional): 1-based page. Only page=1 is reliably supported anonymously — Indeed shows a sign-in wall for further pages, which the script surfaces as a thrown error.
 - `radius` (integer, optional): Distance around `location`, from Indeed's distance menu: miles on www.indeed.com, kilometres on most other country sites; 0 = exact location only. Omit for Indeed's default (25).
 - `sortBy` (string, optional): Sort order. Default: relevance (Indeed's own default).
-- `country` (string, optional): Indeed country site to search, as its subdomain code (e.g. "us", "fr", "de", "uk", "ca"). Lowercased; "us" maps to www.indeed.com, others to "<country>.indeed.com".
+- `country` (string, optional): Indeed country site to search, as its subdomain code (e.g. "us", "fr", "de", "uk", "ca"). Lowercased; "us" maps to www.indeed.com, others to "<country>.indeed.com". On a managed browser, also set the run's country to that country (e.g. GB for "uk"): Indeed answers a datacenter network with a sign-in page instead of results.
 - `location` (string, optional): Free-text location (e.g. "Paris", "Berlin"). Must match the chosen country site or Indeed marks the result outOfCountry and returns unrelated jobs.
 - `jobTypeId` (string, optional): Indeed's id for one job type, as its own job-type filter puts it in the URL (`sc=0kf:attr(<id>);`), e.g. "CF3CP" = full-time. Omit for every job type.
 - `postedWithinDays` (integer, optional): Only jobs posted in the last 1, 3, 7 or 14 days (Indeed's date-posted menu). Omit for any date.

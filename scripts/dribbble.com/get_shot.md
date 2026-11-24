@@ -4,7 +4,7 @@ Automatically get Dribbble shot on dribbble.com. Fetch a Dribbble shot's details
 
 - Site: dribbble.com
 - Address: `reduck/dribbble.com/get_shot`
-- Updated: 2026-10-23 (v6)
+- Updated: 2026-11-23 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it

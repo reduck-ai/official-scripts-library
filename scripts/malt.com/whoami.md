@@ -1,10 +1,10 @@
 # Malt whoami (signed-in account)
 
-Report which Malt account this browser is signed in as: the account email. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Malt scripts.
+Report which Malt account this browser is signed in as, if any: the account email. The browser does not need to be signed in: when it is signed out, the result is loggedIn false with no email, not an error. Use it to check the session before you run other Malt scripts.
 
 - Site: malt.com
 - Address: `reduck/malt.com/whoami`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-23 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,7 +29,7 @@ It takes no input.
 
 ### What does "Malt whoami (signed-in account)" do?
 
-Report which Malt account this browser is signed in as: the account email. Being signed out is reported as a normal answer (loggedIn false), not an error, so it can be used to check a session before running other Malt scripts.
+Report which Malt account this browser is signed in as, if any: the account email. The browser does not need to be signed in: when it is signed out, the result is loggedIn false with no email, not an error. Use it to check the session before you run other Malt scripts.
 
 ### What information do I need to provide?
 
@@ -41,7 +41,7 @@ It returns email, evidence, loggedIn.
 
 ### Do I need to be logged in to malt.com?
 
-Yes. It acts as you on malt.com: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the malt.com cookies saved by the Reduck extension.
+No. It only uses pages of malt.com that are reachable without signing in.
 
 ### Does it change anything on malt.com, or only read data?
 

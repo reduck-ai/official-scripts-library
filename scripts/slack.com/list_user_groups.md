@@ -4,7 +4,7 @@ Automatically list Slack user groups on slack.com. List the workspace's user gro
 
 - Site: slack.com
 - Address: `reduck/slack.com/list_user_groups`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-23 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

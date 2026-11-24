@@ -4,7 +4,7 @@ Automatically edit Instagram bio on instagram.com. Update the signed-in Instagra
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/edit_own_profile`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-11-23 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

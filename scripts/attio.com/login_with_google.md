@@ -4,7 +4,7 @@ Log into the Attio CRM with Sign in with Google, handling the Google account cho
 
 - Site: attio.com
 - Address: `reduck/attio.com/login_with_google`
-- Updated: 2026-10-22 (v6)
+- Updated: 2026-11-23 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it

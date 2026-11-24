@@ -4,7 +4,7 @@ Automatically get received LinkedIn connection invitations on linkedin.com. List
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_received_invitations`
-- Updated: 2026-11-06 (v12)
+- Updated: 2026-11-23 (v13)
 - Author: Reduck AI (reduck)
 
 ## Run it

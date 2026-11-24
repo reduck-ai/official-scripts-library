@@ -4,7 +4,7 @@ Automatically cancel a pending Sentry invitation on sentry.io. Cancels the pendi
 
 - Site: sentry.io
 - Address: `reduck/sentry.io/remove_pending_invite`
-- Updated: 2026-11-03 (v1)
+- Updated: 2026-11-23 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

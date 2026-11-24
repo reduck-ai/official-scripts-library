@@ -4,7 +4,7 @@ Automatically search Google News on news.google.com. Search Google News for arti
 
 - Site: news.google.com
 - Address: `reduck/news.google.com/search_news`
-- Updated: 2026-10-22 (v6)
+- Updated: 2026-11-23 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,7 +18,7 @@ npx @reduck-ai/cli@latest run --script reduck/news.google.com/search_news
 ## Input
 
 - `query` (string, required): Search keywords, e.g. "anthropic". Google's search operators work here too (site:, intitle:, OR).
-- `when` (string, optional): Optional recency filter, appended to the query as Google's own `when:` operator. Verified working with "1d" (past 24h, server-side filtered). Google's other documented units follow the same syntax: "1h", "7d", "1y". Note the site's own Date dropdown keeps displaying "Anytime" even when this operator is filtering — the filter is applied server-side regardless of that label. Omit for the site's inclusive "Anytime" default.
+- `when` (string, optional): Optional recency filter, appended to the query as Google's own `when:` operator. Verified working with "1d" (past 24h, server-side filtered). Google's other documented units follow the same syntax: "1h", "7d", "1y". The site's own Date dropdown keeps displaying "Anytime" even when this operator is filtering: the filter is applied server-side regardless of that label. Omit for the site's inclusive "Anytime" default.
 - `count` (integer, optional): Number of articles to return. Fewer come back when Google News has fewer results for the query; complete then says so.
 - `country` (string, optional): Google News `gl` edition country code, e.g. "US", "FR", "JP". Combined with `language` into the site's `ceid` edition parameter.
 - `language` (string, optional): Google News `hl` interface/content language, e.g. "en-US", "fr", "ja".

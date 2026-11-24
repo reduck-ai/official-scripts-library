@@ -4,7 +4,7 @@ Automatically invite a member to a Sentry organization on sentry.io. Invites one
 
 - Site: sentry.io
 - Address: `reduck/sentry.io/invite_member`
-- Updated: 2026-11-03 (v1)
+- Updated: 2026-11-23 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

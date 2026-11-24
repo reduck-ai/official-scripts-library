@@ -4,7 +4,7 @@ Automatically check Château de Versailles ticket availability on billetterie.ch
 
 - Site: billetterie.chateauversailles.fr
 - Address: `reduck/billetterie.chateauversailles.fr/check_availability`
-- Updated: 2026-10-28 (v3)
+- Updated: 2026-11-23 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

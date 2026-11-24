@@ -4,7 +4,7 @@ Automatically switch Le Chat display language on chat.mistral.ai. Change the sig
 
 - Site: chat.mistral.ai
 - Address: `reduck/chat.mistral.ai/switch_language`
-- Updated: 2026-10-22 (v8)
+- Updated: 2026-11-23 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it

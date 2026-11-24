@@ -4,7 +4,7 @@ Automatically send Telegram message or document on web.telegram.org. Send a text
 
 - Site: web.telegram.org
 - Address: `reduck/web.telegram.org/send_message`
-- Updated: 2026-11-16 (v11)
+- Updated: 2026-11-23 (v12)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically compare keywords on Google Trends on trends.google.com. See which 
 
 - Site: trends.google.com
 - Address: `reduck/trends.google.com/explore_keyword`
-- Updated: 2026-11-10 (v8)
+- Updated: 2026-11-23 (v10)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -100,7 +100,7 @@ Shape only: placeholder values generated from the output schema, not a real run.
 
 ### What does "Compare keywords on Google Trends" do?
 
-Google Trends explore for 1-5 keywords in one compare query: interest over time (shared scale), interest by region, per-region share %, related topics and queries (top and rising), for a given geo, date range, category and property. A keyword with too few searches returns an empty series and empty panels. Google refuses managed browsers with "too many requests", so run it on your own browser.
+Google Trends explore for 1-5 keywords in one compare query: interest over time (shared scale), interest by region, per-region share %, related topics and queries (top and rising), for a given geo, date range, category and property. A keyword with too few searches returns an empty series and empty panels. When Google keeps answering "too many requests", the run fails with a rate-limit error: retry later.
 
 ### How do I automatically compare keywords on Google Trends on trends.google.com?
 

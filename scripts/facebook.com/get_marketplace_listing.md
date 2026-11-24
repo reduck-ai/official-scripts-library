@@ -4,7 +4,7 @@ Automatically get Facebook Marketplace listing on facebook.com. Read one Faceboo
 
 - Site: facebook.com
 - Address: `reduck/facebook.com/get_marketplace_listing`
-- Updated: 2026-11-18 (v5)
+- Updated: 2026-11-23 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

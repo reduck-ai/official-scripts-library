@@ -4,7 +4,7 @@ Automatically get Tripadvisor reviews on tripadvisor.com. Fetch the reviews Trip
 
 - Site: tripadvisor.com
 - Address: `reduck/tripadvisor.com/get_reviews`
-- Updated: 2026-11-16 (v5)
+- Updated: 2026-11-23 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

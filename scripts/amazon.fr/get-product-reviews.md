@@ -4,7 +4,7 @@ Automatically get Amazon.fr product reviews on amazon.fr. Fetch Amazon.fr custom
 
 - Site: amazon.fr
 - Address: `reduck/amazon.fr/get-product-reviews`
-- Updated: 2026-10-31 (v1)
+- Updated: 2026-11-23 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -33,6 +33,7 @@ npx @reduck-ai/cli@latest run --script reduck/amazon.fr/get-product-reviews
 - `reviews` (array, required)
 - `nextCursor` (string | null, required): Pass as cursor to get the next 10 reviews. Null when Amazon offers no next page, and always null when source=product_page_medley.
 - `authenticated` (boolean, required): Whether the run had a usable Amazon session. False means the result came from the anonymous medley and is thinner by design, not by failure: the top reviews only.
+- `reviewAccess` (string | null, optional): Review access as the reviews page shows it. full: the whole list, with sort, filters and paging. limited: Amazon limits this account after unusual activity, so the page shows only its top reviews, with no filters and no paging; the reviews page offers a request to restore access. limited_request_sent: limited, and a request is pending until Amazon answers by email. Null on the signed-out product page.
 
 ## FAQ
 
@@ -54,7 +55,7 @@ Required: asin. Optional: cursor, sortBy, zipCode, mediaType, filterByStar, revi
 
 ### What does it return?
 
-It returns source, product, reviews, nextCursor, authenticated.
+It returns source, product, reviews, nextCursor, reviewAccess, authenticated.
 
 ### Do I need to be logged in to amazon.fr?
 

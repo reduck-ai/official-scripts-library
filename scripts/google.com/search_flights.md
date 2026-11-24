@@ -4,7 +4,7 @@ Automatically search flights on Google Flights on google.com. Search one-way or 
 
 - Site: google.com
 - Address: `reduck/google.com/search_flights`
-- Updated: 2026-11-20 (v33)
+- Updated: 2026-11-23 (v34)
 - Author: Reduck AI (reduck)
 
 ## Run it

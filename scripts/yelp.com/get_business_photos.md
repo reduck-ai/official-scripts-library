@@ -4,7 +4,7 @@ Automatically get Yelp business photos on yelp.com. Lists photos for a Yelp busi
 
 - Site: yelp.com
 - Address: `reduck/yelp.com/get_business_photos`
-- Updated: 2026-11-03 (v3)
+- Updated: 2026-11-23 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

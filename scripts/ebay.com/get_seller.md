@@ -4,7 +4,7 @@ Automatically get eBay seller storefront details on ebay.com. Fetch an eBay sell
 
 - Site: ebay.com
 - Address: `reduck/ebay.com/get_seller`
-- Updated: 2026-11-18 (v8)
+- Updated: 2026-11-23 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it

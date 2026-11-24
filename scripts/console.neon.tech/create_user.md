@@ -4,7 +4,7 @@ Automatically invite Neon organization member on console.neon.tech. Invite (crea
 
 - Site: console.neon.tech
 - Address: `reduck/console.neon.tech/create_user`
-- Updated: 2026-10-22 (v7)
+- Updated: 2026-11-23 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it

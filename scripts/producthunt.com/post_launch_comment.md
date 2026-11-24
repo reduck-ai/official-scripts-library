@@ -4,7 +4,7 @@ Automatically post a comment on a Product Hunt launch on producthunt.com. Post a
 
 - Site: producthunt.com
 - Address: `reduck/producthunt.com/post_launch_comment`
-- Updated: 2026-11-02 (v6)
+- Updated: 2026-11-23 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

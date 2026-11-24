@@ -4,7 +4,7 @@ Automatically send Discord DM on discord.com. Send a direct message to a Discord
 
 - Site: discord.com
 - Address: `reduck/discord.com/send_dm`
-- Updated: 2026-10-22 (v14)
+- Updated: 2026-11-23 (v16)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically post a Discord message on discord.com. Posts a text message, optio
 
 - Site: discord.com
 - Address: `reduck/discord.com/post_message`
-- Updated: 2026-11-19 (v25)
+- Updated: 2026-11-23 (v26)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/discord.com/post_message
 
 ## Input
 
-- `channelUrl` (string, required): Full channel URL, e.g. https://discord.com/channels/<guildId>/<channelId>
+- `channelUrl` (string, required): Full channel URL: https://discord.com/channels/<guildId>/<channelId> for a server channel, or https://discord.com/channels/@me/<channelId> for a direct message or group DM.
 - `dry_run` (boolean, optional): When true, the message and any attachment are prepared in the channel but not sent. Nothing is posted: sent comes back false, messageId is null and dry_run is true. Use it to check that a channel, message and attachment are accepted without posting a real, visible message.
 - `message` (string, optional): Text of the message. Optional when a file is attached, in which case it becomes the message's caption. Up to 2000 characters.
 - `filename` (string, optional): Name the attached file is posted under, e.g. report.csv. Omitted: the file keeps the name it arrives with.

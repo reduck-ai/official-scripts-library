@@ -4,7 +4,7 @@ Automatically delete Le Chat conversation on chat.mistral.ai. Delete one Le Chat
 
 - Site: chat.mistral.ai
 - Address: `reduck/chat.mistral.ai/delete_chat`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-11-23 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically get Instagram DM inbox on instagram.com. List the state of every D
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/get_inbox`
-- Updated: 2026-10-22 (v8)
+- Updated: 2026-11-23 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it

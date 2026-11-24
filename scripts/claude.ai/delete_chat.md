@@ -1,10 +1,10 @@
 # Delete Claude chats
 
-Automatically delete Claude chats on claude.ai. Permanently delete one or more Claude.ai conversations by uuid (from list_chats, search_chats, or ask's conversationId). This is irreversible and cannot be undone — claude.ai has no trash and no undo for conversations. dryRun (default true) resolves every uuid and reports the exact conversation names that would be deleted, without deleting anything; set it to false to actually delete. Each uuid is resolved before the destructive call, so a wrong or already-deleted uuid is reported as notFound rather than acted on blindly, and each deletion is confirmed by re-reading the conversation until the site itself 404s it — never on the strength of an optimistic 204. Addresses conversations by uuid, not by title: titles are model-generated and routinely collide.
+Automatically delete Claude chats on claude.ai. Permanently delete one or more Claude.ai conversations by uuid (from list_chats, search_chats, or ask's conversationId). This cannot be undone: claude.ai has no trash for conversations. dryRun (default true) resolves every uuid and reports the exact conversation names that would be deleted, without deleting anything; set it to false to actually delete. A wrong or already-deleted uuid is reported as not existing and nothing is done to it, and each deletion is confirmed by reading the conversation again and finding it gone. Conversations are addressed by uuid, not title, because titles are generated and often repeat. Fails as signed out when there is no Claude.ai session.
 
 - Site: claude.ai
 - Address: `reduck/claude.ai/delete_chat`
-- Updated: 2026-08-17 (v1)
+- Updated: 2026-11-23 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,7 +18,7 @@ npx @reduck-ai/cli@latest run --script reduck/claude.ai/delete_chat
 ## Input
 
 - `uuids` (array, required): Conversation uuids to delete. Order is preserved in the results.
-- `dryRun` (boolean, optional): If true (default), resolve every uuid and report what WOULD be deleted, deleting nothing. Set false to actually delete.
+- `dryRun` (boolean, optional): If true (default), resolve every uuid and report what would be deleted, deleting nothing. Set false to actually delete.
 
 ## Output
 
@@ -29,7 +29,7 @@ npx @reduck-ai/cli@latest run --script reduck/claude.ai/delete_chat
 
 ### What does "Delete Claude chats" do?
 
-Permanently delete one or more Claude.ai conversations by uuid (from list_chats, search_chats, or ask's conversationId). This is irreversible and cannot be undone — claude.ai has no trash and no undo for conversations. dryRun (default true) resolves every uuid and reports the exact conversation names that would be deleted, without deleting anything; set it to false to actually delete. Each uuid is resolved before the destructive call, so a wrong or already-deleted uuid is reported as notFound rather than acted on blindly, and each deletion is confirmed by re-reading the conversation until the site itself 404s it — never on the strength of an optimistic 204. Addresses conversations by uuid, not by title: titles are model-generated and routinely collide.
+Permanently delete one or more Claude.ai conversations by uuid (from list_chats, search_chats, or ask's conversationId). This cannot be undone: claude.ai has no trash for conversations. dryRun (default true) resolves every uuid and reports the exact conversation names that would be deleted, without deleting anything; set it to false to actually delete. A wrong or already-deleted uuid is reported as not existing and nothing is done to it, and each deletion is confirmed by reading the conversation again and finding it gone. Conversations are addressed by uuid, not title, because titles are generated and often repeat. Fails as signed out when there is no Claude.ai session.
 
 ### How do I automatically delete Claude chats on claude.ai?
 
@@ -53,7 +53,7 @@ Yes. It acts as you on claude.ai: on your own Chrome it reuses your session, and
 
 ### Does it change anything on claude.ai, or only read data?
 
-It makes changes on claude.ai, like sending, posting or booking something.
+It makes changes on claude.ai, like sending, posting, booking or buying something.
 
 ### How do I run it?
 

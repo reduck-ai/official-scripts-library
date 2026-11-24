@@ -4,7 +4,7 @@ Automatically search Welcome to the Jungle jobs on welcometothejungle.com. Searc
 
 - Site: welcometothejungle.com
 - Address: `reduck/welcometothejungle.com/search_jobs`
-- Updated: 2026-10-22 (v5)
+- Updated: 2026-11-23 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically get the comments and reactions of a Facebook post on facebook.com.
 
 - Site: facebook.com
 - Address: `reduck/facebook.com/get_post_engagement`
-- Updated: 2026-11-16 (v15)
+- Updated: 2026-11-23 (v16)
 - Author: Reduck AI (reduck)
 
 ## Run it

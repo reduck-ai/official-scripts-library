@@ -1,10 +1,10 @@
 # Capture a page as a PNG
 
-Automatically capture a page as a PNG on reddit.com. Screenshot any URL (not limited to Reddit) at a pinned viewport width and pixel density, and save it to the machine's Downloads folder as a real browser download. Runs signed in when the target host has a session, so Reddit captures have no cookie banner and no logged-out login panel. fullPage:true captures the whole scrollable page for assets that need scrolling; pass clipHeight to bound a very long page. Returns the filename, size in bytes, image width and height, and the page title. Confirmed on reddit.com: capturing while signed OUT triggers Reddit's bot detection (tab gets detached non-deterministically); once the device is actually logged into Reddit, both fullPage and viewport-only captures are clean.
+Automatically capture a page as a PNG on reddit.com. Screenshot any URL (not limited to Reddit) at a pinned viewport width and pixel density, and save it to the machine's Downloads folder as a real browser download. Runs signed in when the target host has a session, so Reddit captures have no cookie banner and no logged-out login panel. fullPage:true captures the whole scrollable page for assets that need scrolling; pass clipHeight to bound a very long page. Returns the filename, size in bytes, image width and height, and the page title. On reddit.com the browser must be signed in to Reddit: a signed-out capture fails with a sign-in error.
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/capture_page_png`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-11-23 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -39,7 +39,7 @@ npx @reduck-ai/cli@latest run --script reduck/reddit.com/capture_page_png
 
 ### What does "Capture a page as a PNG" do?
 
-Screenshot any URL (not limited to Reddit) at a pinned viewport width and pixel density, and save it to the machine's Downloads folder as a real browser download. Runs signed in when the target host has a session, so Reddit captures have no cookie banner and no logged-out login panel. fullPage:true captures the whole scrollable page for assets that need scrolling; pass clipHeight to bound a very long page. Returns the filename, size in bytes, image width and height, and the page title. Confirmed on reddit.com: capturing while signed OUT triggers Reddit's bot detection (tab gets detached non-deterministically); once the device is actually logged into Reddit, both fullPage and viewport-only captures are clean.
+Screenshot any URL (not limited to Reddit) at a pinned viewport width and pixel density, and save it to the machine's Downloads folder as a real browser download. Runs signed in when the target host has a session, so Reddit captures have no cookie banner and no logged-out login panel. fullPage:true captures the whole scrollable page for assets that need scrolling; pass clipHeight to bound a very long page. Returns the filename, size in bytes, image width and height, and the page title. On reddit.com the browser must be signed in to Reddit: a signed-out capture fails with a sign-in error.
 
 ### How do I automatically capture a page as a PNG on reddit.com?
 

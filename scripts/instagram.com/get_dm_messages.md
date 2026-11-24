@@ -4,7 +4,7 @@ Automatically get Instagram DM messages on instagram.com. Read the messages of a
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/get_dm_messages`
-- Updated: 2026-10-14 (v16)
+- Updated: 2026-11-23 (v18)
 - Author: Reduck AI (reduck)
 
 ## Run it

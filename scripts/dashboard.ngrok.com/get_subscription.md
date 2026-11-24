@@ -4,7 +4,7 @@ Automatically get subscription on dashboard.ngrok.com. Read the signed-in ngrok 
 
 - Site: dashboard.ngrok.com
 - Address: `reduck/dashboard.ngrok.com/get_subscription`
-- Updated: 2026-09-28 (v1)
+- Updated: 2026-11-23 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

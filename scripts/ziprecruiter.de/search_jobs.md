@@ -4,7 +4,7 @@ Automatically search ZipRecruiter.com jobs on ziprecruiter.de. Search ZipRecruit
 
 - Site: ziprecruiter.de
 - Address: `reduck/ziprecruiter.de/search_jobs`
-- Updated: 2026-11-09 (v3)
+- Updated: 2026-11-23 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

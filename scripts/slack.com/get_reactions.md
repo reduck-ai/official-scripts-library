@@ -4,7 +4,7 @@ Automatically get Slack message reactions on slack.com. List the reactions on a 
 
 - Site: slack.com
 - Address: `reduck/slack.com/get_reactions`
-- Updated: 2026-11-10 (v3)
+- Updated: 2026-11-23 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

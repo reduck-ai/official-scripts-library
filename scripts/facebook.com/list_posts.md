@@ -4,7 +4,7 @@ Automatically scrape posts from a Facebook group or page on facebook.com. Scrape
 
 - Site: facebook.com
 - Address: `reduck/facebook.com/list_posts`
-- Updated: 2026-11-16 (v13)
+- Updated: 2026-11-23 (v15)
 - Author: Reduck AI (reduck)
 
 ## Run it

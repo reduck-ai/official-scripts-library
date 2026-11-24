@@ -4,7 +4,7 @@ Switch the ChatGPT web app's display language via Settings, for a signed-in acco
 
 - Site: chatgpt.com
 - Address: `reduck/chatgpt.com/switch_language`
-- Updated: 2026-10-22 (v5)
+- Updated: 2026-11-23 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it

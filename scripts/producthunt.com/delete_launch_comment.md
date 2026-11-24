@@ -4,7 +4,7 @@ Automatically delete your comment on a Product Hunt launch on producthunt.com. D
 
 - Site: producthunt.com
 - Address: `reduck/producthunt.com/delete_launch_comment`
-- Updated: 2026-11-02 (v2)
+- Updated: 2026-11-23 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

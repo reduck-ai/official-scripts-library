@@ -1,10 +1,10 @@
 # Get TikTok user reposts
 
-Automatically get TikTok user reposts on tiktok.com. List the videos a TikTok user has reposted (from their Reposts tab), by @username, up to `count`.
+Automatically get TikTok user reposts on tiktok.com. List the videos a TikTok user has reposted (from their Reposts tab), by @username, one page per run; pass the returned cursor to get the next page.
 
 - Site: tiktok.com
 - Address: `reduck/tiktok.com/get_user_reposts`
-- Updated: 2026-11-12 (v6)
+- Updated: 2026-11-23 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -31,7 +31,7 @@ npx @reduck-ai/cli@latest run --script reduck/tiktok.com/get_user_reposts
 
 ### What does "Get TikTok user reposts" do?
 
-List the videos a TikTok user has reposted (from their Reposts tab), by @username, up to `count`.
+List the videos a TikTok user has reposted (from their Reposts tab), by @username, one page per run; pass the returned cursor to get the next page.
 
 ### How do I automatically get TikTok user reposts on tiktok.com?
 

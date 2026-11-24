@@ -4,7 +4,7 @@ Automatically delete a Telegram message on web.telegram.org. Delete one message 
 
 - Site: web.telegram.org
 - Address: `reduck/web.telegram.org/delete_message`
-- Updated: 2026-11-11 (v3)
+- Updated: 2026-11-23 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

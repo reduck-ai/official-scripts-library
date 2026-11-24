@@ -4,7 +4,7 @@ Automatically update a WordPress post on wordpress.com. Change a post on a WordP
 
 - Site: wordpress.com
 - Address: `reduck/wordpress.com/update_post`
-- Updated: 2026-11-04 (v3)
+- Updated: 2026-11-23 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

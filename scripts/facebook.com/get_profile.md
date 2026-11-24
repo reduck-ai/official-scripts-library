@@ -4,7 +4,7 @@ Automatically get Facebook profile info on facebook.com. Get header and intro in
 
 - Site: facebook.com
 - Address: `reduck/facebook.com/get_profile`
-- Updated: 2026-11-13 (v17)
+- Updated: 2026-11-23 (v18)
 - Author: Reduck AI (reduck)
 
 ## Run it

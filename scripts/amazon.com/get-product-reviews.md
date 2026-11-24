@@ -4,7 +4,7 @@ Automatically get Amazon product reviews on amazon.com. You get each review's te
 
 - Site: amazon.com
 - Address: `reduck/amazon.com/get-product-reviews`
-- Updated: 2026-11-20 (v19)
+- Updated: 2026-11-23 (v20)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -37,6 +37,7 @@ npx @reduck-ai/cli@latest run --script reduck/amazon.com/get-product-reviews
 - `reviews` (array, required)
 - `nextCursor` (string | null, required): Pass as cursor to get the next 10 reviews. Null when Amazon offers no next page, and always null when source=product_page_medley.
 - `authenticated` (boolean, required): Whether the run had a usable Amazon session. False means the result came from the anonymous medley and is thinner by design, not by failure: the top reviews only.
+- `reviewAccess` (string | null, optional): Review access as the reviews page shows it. full: the whole list, with sort, filters and paging. limited: Amazon limits this account after unusual activity, so the page shows only its top reviews (about 8), with no filters and no paging; Request Amazon review access asks Amazon to restore it. limited_request_sent: limited, and a request is pending until Amazon answers by email (up to 3 days). Null on the signed-out product page.
 
 ## Example output
 
@@ -82,6 +83,7 @@ Shape only: placeholder values generated from the output schema, not a real run.
     }
   ],
   "nextCursor": "…",
+  "reviewAccess": "full",
   "authenticated": true
 }
 ```
@@ -90,7 +92,7 @@ Shape only: placeholder values generated from the output schema, not a real run.
 
 ### What does "Get Amazon product reviews" do?
 
-Fetch Amazon customer reviews for a product by ASIN. With a signed-in Amazon session it returns 10 reviews at a time, with sort, star, media, verified-purchase and keyword filters, plus a cursor for the next 10; pass it back with the same filters to continue, until no cursor comes back (Amazon stops after about 10 pages). Without a session it returns the top reviews shown on the product page (one page only, no filters, reviews from other Amazon countries included), says so in the result, and fails with a clear error instead of ignoring a filter or cursor it cannot serve, or when Amazon hides the reviews from the visitor. Returns the product's rating summary and each review's rating, title, text, date, reviewer, country, variation, helpful votes, verified badge, Vine badge, images and videos. With sortBy=recent the pages can shift between calls as new reviews arrive; sortBy=helpful is more stable.
+Fetch Amazon customer reviews for a product by ASIN, on a browser signed in to Amazon: amazon.com hides the reviews from signed-out visitors, and a signed-out run fails with an error that says to sign in. It returns 10 reviews at a time, with sort, star, media, verified-purchase and keyword filters, plus a cursor for the next 10; pass it back with the same filters to continue, until no cursor comes back (Amazon stops after about 10 pages). When Amazon limits review access for the account after unusual activity, its reviews pages show only the top reviews, with no filters and no paging: reviewAccess says so, a filter or a cursor then fails with an error that says why, and Request Amazon review access asks Amazon to restore access. Returns the product's rating summary and each review's rating, title, text, date, reviewer, country, variation, helpful votes, verified badge, Vine badge, images and videos. With sortBy=recent the pages can shift between calls as new reviews arrive; sortBy=helpful is more stable.
 
 ### How do I automatically get Amazon product reviews on amazon.com?
 
@@ -106,7 +108,7 @@ Required: asin. Optional: cursor, sortBy, zipCode, mediaType, filterByStar, revi
 
 ### What does it return?
 
-It returns source, product, reviews, nextCursor, authenticated.
+It returns source, product, reviews, nextCursor, reviewAccess, authenticated.
 
 ### Do I need to be logged in to amazon.com?
 

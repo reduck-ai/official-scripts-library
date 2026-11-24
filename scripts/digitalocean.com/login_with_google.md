@@ -1,10 +1,10 @@
 # DigitalOcean login (Google SSO)
 
-Log into DigitalOcean via 'Sign In with Google'. Auto-selects the sole signed-in account (no chooser), landing on cloud.digitalocean.com/dashboard; the chooser is still handled when shown. Only works when run through the browser extension, using the browser's native Google session — it does not work on managed/cloud browser runs.
+Log into DigitalOcean with Sign in with Google, picking the given Google account, and land on your DigitalOcean dashboard. Returns straight away if you are already signed in, and reports the signed-in account. Needs a browser already signed in to that Google account; it works through the browser extension, not on a managed browser.
 
 - Site: digitalocean.com
 - Address: `reduck/digitalocean.com/login_with_google`
-- Updated: 2026-10-22 (v4)
+- Updated: 2026-11-23 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,7 +29,7 @@ npx @reduck-ai/cli@latest run --script reduck/digitalocean.com/login_with_google
 
 ### What does "DigitalOcean login (Google SSO)" do?
 
-Log into DigitalOcean via 'Sign In with Google'. Auto-selects the sole signed-in account (no chooser), landing on cloud.digitalocean.com/dashboard; the chooser is still handled when shown. Only works when run through the browser extension, using the browser's native Google session — it does not work on managed/cloud browser runs.
+Log into DigitalOcean with Sign in with Google, picking the given Google account, and land on your DigitalOcean dashboard. Returns straight away if you are already signed in, and reports the signed-in account. Needs a browser already signed in to that Google account; it works through the browser extension, not on a managed browser.
 
 ### What information do I need to provide?
 

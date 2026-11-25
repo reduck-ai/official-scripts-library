@@ -1,10 +1,10 @@
 # Get Instagram hashtag posts
 
-Automatically get Instagram hashtag posts on instagram.com. Fetch the top posts for a hashtag. Returns how many posts carry the hashtag and the top-grid entries (code, url, user, like_count, comment_count, caption, thumbnail, media_type, taken_at). This is the Top preview Instagram renders first, not the full paginated Recent feed. Pass the tag without the leading #; it is matched the way Instagram spells it, so capitals are fine. Some hashtags have posts but no preview, because Instagram withholds the top grid for topics it restricts: the post list then comes back empty and restricted is true, so that case is distinguishable from a hashtag nobody has used. A hashtag with no posts at all is reported as such.
+Automatically get Instagram hashtag posts on instagram.com. Get the top posts Instagram shows for a hashtag: code, url, user, like and comment counts, caption, thumbnail, media type and posting time for each. This is the first page Instagram shows for the hashtag, not its full feed. Pass the tag without the leading #; capitals are fine. A hashtag nobody has used returns an empty post list. Instagram no longer shows how many posts carry a hashtag or whether it withholds some, so media_count and restricted are always null.
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/get_hashtag_posts`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-11-24 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -21,16 +21,16 @@ npx @reduck-ai/cli@latest run --script reduck/instagram.com/get_hashtag_posts
 
 ## Output
 
-- `tag` (string, required): The hashtag as Instagram spells it (always lowercase).
+- `tag` (string, required): The hashtag as searched, lowercase.
 - `posts` (array, required)
-- `restricted` (boolean, required): True when Instagram withholds the top-post preview for this hashtag even though posts exist, so an empty posts list is not the same as an unused hashtag.
-- `media_count` (integer | null, required)
+- `restricted` (boolean | null, required): Always null: Instagram no longer says when it withholds a hashtag's posts.
+- `media_count` (integer | null, required): Always null: Instagram no longer shows how many posts carry the hashtag.
 
 ## FAQ
 
 ### What does "Get Instagram hashtag posts" do?
 
-Fetch the top posts for a hashtag. Returns how many posts carry the hashtag and the top-grid entries (code, url, user, like_count, comment_count, caption, thumbnail, media_type, taken_at). This is the Top preview Instagram renders first, not the full paginated Recent feed. Pass the tag without the leading #; it is matched the way Instagram spells it, so capitals are fine. Some hashtags have posts but no preview, because Instagram withholds the top grid for topics it restricts: the post list then comes back empty and restricted is true, so that case is distinguishable from a hashtag nobody has used. A hashtag with no posts at all is reported as such.
+Get the top posts Instagram shows for a hashtag: code, url, user, like and comment counts, caption, thumbnail, media type and posting time for each. This is the first page Instagram shows for the hashtag, not its full feed. Pass the tag without the leading #; capitals are fine. A hashtag nobody has used returns an empty post list. Instagram no longer shows how many posts carry a hashtag or whether it withholds some, so media_count and restricted are always null.
 
 ### How do I automatically get Instagram hashtag posts on instagram.com?
 
@@ -50,7 +50,7 @@ It returns tag, posts, restricted, media_count.
 
 ### Do I need to be logged in to instagram.com?
 
-Yes. It acts as you on instagram.com: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the instagram.com cookies saved by the Reduck extension.
+Yes. It acts as you on instagram.com: in your browser it reuses your session, and on a cloud browser it loads your Auth session cookies for instagram.com.
 
 ### Does it change anything on instagram.com, or only read data?
 
@@ -62,6 +62,6 @@ Ask an AI agent connected to Reduck to run reduck/instagram.com/get_hashtag_post
 
 ### Who maintains it?
 
-It is part of Reduck's official curated catalogue.
+It is one of Reduck's official scripts.
 
 Source: https://reduck.ai/explore/scripts/reduck/instagram.com/get_hashtag_posts

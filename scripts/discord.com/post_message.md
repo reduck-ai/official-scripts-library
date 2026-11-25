@@ -1,10 +1,10 @@
 # Post a Discord message
 
-Automatically post a Discord message on discord.com. Posts a text message, optionally with a file attached (the attachment file input, renamed with filename), in a Discord channel addressed by its URL. Requires being logged in to Discord. Returns `sent` plus the created message's messageId, channelId, timestamp and content as Discord stored it. The message is visible to everyone who can see the channel. Empty messages, messages over 2000 characters and forum channels are refused with a clear reason. Use dry_run to check a channel and message without posting.
+Automatically post a Discord message on discord.com. Posts a text message, optionally with a file attached (posted under filename when given), in a Discord channel addressed by its URL. Requires being logged in to Discord. Returns `sent` plus the created message's messageId, channelId, timestamp and content as Discord stored it. The message is visible to everyone who can see the channel. Empty messages, messages over 2000 characters and forum channels are refused with a clear reason. Use dry_run to check a channel and message without posting.
 
 - Site: discord.com
 - Address: `reduck/discord.com/post_message`
-- Updated: 2026-11-23 (v26)
+- Updated: 2026-11-24 (v26)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -37,7 +37,7 @@ npx @reduck-ai/cli@latest run --script reduck/discord.com/post_message
 
 ### What does "Post a Discord message" do?
 
-Posts a text message, optionally with a file attached (the attachment file input, renamed with filename), in a Discord channel addressed by its URL. Requires being logged in to Discord. Returns `sent` plus the created message's messageId, channelId, timestamp and content as Discord stored it. The message is visible to everyone who can see the channel. Empty messages, messages over 2000 characters and forum channels are refused with a clear reason. Use dry_run to check a channel and message without posting.
+Posts a text message, optionally with a file attached (posted under filename when given), in a Discord channel addressed by its URL. Requires being logged in to Discord. Returns `sent` plus the created message's messageId, channelId, timestamp and content as Discord stored it. The message is visible to everyone who can see the channel. Empty messages, messages over 2000 characters and forum channels are refused with a clear reason. Use dry_run to check a channel and message without posting.
 
 ### How do I automatically post a Discord message on discord.com?
 
@@ -57,7 +57,7 @@ It returns sent, content, dry_run, channelId, messageId, timestamp, attachment.
 
 ### Do I need to be logged in to discord.com?
 
-Yes. It acts as you on discord.com: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the discord.com cookies saved by the Reduck extension.
+Yes. It acts as you on discord.com: in your browser it reuses your session, and on a cloud browser it loads your Auth session cookies for discord.com.
 
 ### Does it change anything on discord.com, or only read data?
 
@@ -69,6 +69,6 @@ Ask an AI agent connected to Reduck to run reduck/discord.com/post_message, or r
 
 ### Who maintains it?
 
-It is part of Reduck's official curated catalogue.
+It is one of Reduck's official scripts.
 
 Source: https://reduck.ai/explore/scripts/reduck/discord.com/post_message

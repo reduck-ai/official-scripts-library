@@ -4,7 +4,7 @@ Search the web on Bing, one page of results at a time. Returns each organic resu
 
 - Site: bing.com
 - Address: `reduck/bing.com/search`
-- Updated: 2026-11-23 (v55)
+- Updated: 2026-11-24 (v56)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -60,6 +60,6 @@ Ask an AI agent connected to Reduck to run reduck/bing.com/search, or run it fro
 
 ### Who maintains it?
 
-It is part of Reduck's official curated catalogue.
+It is one of Reduck's official scripts.
 
 Source: https://reduck.ai/explore/scripts/reduck/bing.com/search

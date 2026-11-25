@@ -1,0 +1,68 @@
+# Cancel Amazon.es order
+
+Automatically cancel Amazon.es order on amazon.es. Cancel an Amazon.es order that has not shipped yet, by order number, and confirm the cancellation on the order page. Every item of the order is cancelled; returns the item titles and the order's status afterwards. Orders that already shipped cannot be cancelled this way and fail.
+
+- Site: amazon.es
+- Address: `reduck/amazon.es/cancel_order`
+- Updated: 2026-11-24 (v1)
+- Author: Reduck AI (reduck)
+
+## Run it
+
+Ask an AI agent connected to Reduck over MCP (`https://mcp.reduck.ai/mcp`) to run `reduck/amazon.es/cancel_order`, or run it from a terminal:
+
+```bash
+npx @reduck-ai/cli@latest run --script reduck/amazon.es/cancel_order
+```
+
+## Input
+
+- `order_id` (string, required): Amazon.es order number, e.g. 403-1814615-7224222 (as shown in Your Orders).
+
+## Output
+
+- `items` (array, required): Titles of the items the cancellation was requested for.
+- `pending` (boolean, required): True when Amazon accepted the request but is still processing it; the order can still ship. Check the order again later.
+- `order_id` (string, required)
+- `cancelled` (boolean, required): True when the order page shows the cancellation as done.
+- `status` (string | null, optional): Shipment status headline on the order page after the request, as displayed.
+
+## FAQ
+
+### What does "Cancel Amazon.es order" do?
+
+Cancel an Amazon.es order that has not shipped yet, by order number, and confirm the cancellation on the order page. Every item of the order is cancelled; returns the item titles and the order's status afterwards. Orders that already shipped cannot be cancelled this way and fail.
+
+### How do I automatically cancel Amazon.es order on amazon.es?
+
+Ask an AI agent connected to Reduck to run reduck/amazon.es/cancel_order, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/amazon.es/cancel_order
+
+### Is there a amazon.es API to cancel Amazon.es order?
+
+You do not need one. "Cancel Amazon.es order" drives the real amazon.es pages in a browser, so it works whether or not amazon.es offers an API for this.
+
+### What information do I need to provide?
+
+Required: order_id.
+
+### What does it return?
+
+It returns items, status, pending, order_id, cancelled.
+
+### Do I need to be logged in to amazon.es?
+
+Yes. It acts as you on amazon.es: in your browser it reuses your session, and on a cloud browser it loads your Auth session cookies for amazon.es.
+
+### Does it change anything on amazon.es, or only read data?
+
+It makes changes on amazon.es, like sending, posting, booking or buying something.
+
+### How do I run it?
+
+Ask an AI agent connected to Reduck to run reduck/amazon.es/cancel_order, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/amazon.es/cancel_order
+
+### Who maintains it?
+
+It is one of Reduck's official scripts.
+
+Source: https://reduck.ai/explore/scripts/reduck/amazon.es/cancel_order

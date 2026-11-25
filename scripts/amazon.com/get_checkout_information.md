@@ -4,7 +4,7 @@ Automatically get Amazon checkout information on amazon.com. Review the checkout
 
 - Site: amazon.com
 - Address: `reduck/amazon.com/get_checkout_information`
-- Updated: 2026-11-02 (v8)
+- Updated: 2026-11-24 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -56,7 +56,7 @@ It returns groups, totals, address, payment, recipient, order_total, review_hash
 
 ### Do I need to be logged in to amazon.com?
 
-Yes. It acts as you on amazon.com: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the amazon.com cookies saved by the Reduck extension.
+Yes. It acts as you on amazon.com: in your browser it reuses your session, and on a cloud browser it loads your Auth session cookies for amazon.com.
 
 ### Does it change anything on amazon.com, or only read data?
 
@@ -68,6 +68,6 @@ Ask an AI agent connected to Reduck to run reduck/amazon.com/get_checkout_inform
 
 ### Who maintains it?
 
-It is part of Reduck's official curated catalogue.
+It is one of Reduck's official scripts.
 
 Source: https://reduck.ai/explore/scripts/reduck/amazon.com/get_checkout_information

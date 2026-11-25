@@ -1,10 +1,10 @@
 # Invite Neon organization member
 
-Automatically invite Neon organization member on console.neon.tech. Invite (create) a member on the current Neon organization by email and role. Role is free-text matched case-insensitively against Neon's own invite role picker (Admin, Member). Membership is invite-based; the invitee starts as Pending until they accept (or may auto-join if their Neon account already exists, per Neon's own behavior). Returns the invitation's email, role, id and invited-at timestamp.
+Automatically invite Neon organization member on console.neon.tech. Invite a member to the current Neon organization by email with one of Neon's organization roles. The invitee shows as Pending until they accept (someone who already has a Neon account may join directly). Returns the invitation's email, role, id and invited-at time.
 
 - Site: console.neon.tech
 - Address: `reduck/console.neon.tech/create_user`
-- Updated: 2026-11-23 (v10)
+- Updated: 2026-11-24 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -31,7 +31,7 @@ npx @reduck-ai/cli@latest run --script reduck/console.neon.tech/create_user
 
 ### What does "Invite Neon organization member" do?
 
-Invite (create) a member on the current Neon organization by email and role. Role is free-text matched case-insensitively against Neon's own invite role picker (Admin, Member). Membership is invite-based; the invitee starts as Pending until they accept (or may auto-join if their Neon account already exists, per Neon's own behavior). Returns the invitation's email, role, id and invited-at timestamp.
+Invite a member to the current Neon organization by email with one of Neon's organization roles. The invitee shows as Pending until they accept (someone who already has a Neon account may join directly). Returns the invitation's email, role, id and invited-at time.
 
 ### How do I automatically invite Neon organization member on console.neon.tech?
 
@@ -51,7 +51,7 @@ It returns role, email, invitedAt, invitationId.
 
 ### Do I need to be logged in to console.neon.tech?
 
-Yes. It acts as you on console.neon.tech: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the console.neon.tech cookies saved by the Reduck extension.
+Yes. It acts as you on console.neon.tech: in your browser it reuses your session, and on a cloud browser it loads your Auth session cookies for console.neon.tech.
 
 ### Does it change anything on console.neon.tech, or only read data?
 
@@ -63,6 +63,6 @@ Ask an AI agent connected to Reduck to run reduck/console.neon.tech/create_user,
 
 ### Who maintains it?
 
-It is part of Reduck's official curated catalogue.
+It is one of Reduck's official scripts.
 
 Source: https://reduck.ai/explore/scripts/reduck/console.neon.tech/create_user

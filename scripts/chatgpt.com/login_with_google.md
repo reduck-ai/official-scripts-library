@@ -4,7 +4,7 @@ Log into OpenAI / ChatGPT via Google SSO — picks the right account when severa
 
 - Site: chatgpt.com
 - Address: `reduck/chatgpt.com/login_with_google`
-- Updated: 2026-10-22 (v6)
+- Updated: 2026-11-24 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,6 +18,7 @@ npx @reduck-ai/cli@latest run --script reduck/chatgpt.com/login_with_google
 ## Input
 
 - `email` (string, optional): Google account to pick in the chooser when several are signed in. Omit to use the first/only account.
+- `workspace` (string, optional): When OpenAI asks which workspace to open (a team workspace or the personal account): the workspace id, or its name as OpenAI shows it. Omit it and the run stops with the list of workspaces to choose from.
 
 ## Output
 
@@ -34,7 +35,7 @@ Log into OpenAI / ChatGPT via Google SSO — picks the right account when severa
 
 ### What information do I need to provide?
 
-Optional: email.
+Optional: email, workspace.
 
 ### What does it return?
 
@@ -42,7 +43,7 @@ It returns url, account, already, loggedIn.
 
 ### Do I need to be logged in to chatgpt.com?
 
-Yes. It acts as you on chatgpt.com: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the chatgpt.com cookies saved by the Reduck extension.
+Yes. It acts as you on chatgpt.com: in your browser it reuses your session, and on a cloud browser it loads your Auth session cookies for chatgpt.com.
 
 ### Does it change anything on chatgpt.com, or only read data?
 
@@ -54,6 +55,6 @@ Ask an AI agent connected to Reduck to run reduck/chatgpt.com/login_with_google,
 
 ### Who maintains it?
 
-It is part of Reduck's official curated catalogue.
+It is one of Reduck's official scripts.
 
 Source: https://reduck.ai/explore/scripts/reduck/chatgpt.com/login_with_google

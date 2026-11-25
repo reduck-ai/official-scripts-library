@@ -1,10 +1,10 @@
 # Descript login (Google SSO)
 
-Log into Descript via 'Continue with Google'. Drives the chooser and confirms the logged-in web.descript.com app shell. Only works when run through the browser extension, using the browser's native Google session — it does not work on managed/cloud browser runs.
+Sign in to Descript with Google, using the Google account already signed in to your browser (pick one with email when several are). Returns the Descript account that is now signed in. Works only on your own paired browser, not on a Reduck cloud browser.
 
 - Site: descript.com
 - Address: `reduck/descript.com/login_with_google`
-- Updated: 2026-11-23 (v9)
+- Updated: 2026-11-24 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,7 +29,7 @@ npx @reduck-ai/cli@latest run --script reduck/descript.com/login_with_google
 
 ### What does "Descript login (Google SSO)" do?
 
-Log into Descript via 'Continue with Google'. Drives the chooser and confirms the logged-in web.descript.com app shell. Only works when run through the browser extension, using the browser's native Google session — it does not work on managed/cloud browser runs.
+Sign in to Descript with Google, using the Google account already signed in to your browser (pick one with email when several are). Returns the Descript account that is now signed in. Works only on your own paired browser, not on a Reduck cloud browser.
 
 ### What information do I need to provide?
 
@@ -53,6 +53,6 @@ Ask an AI agent connected to Reduck to run reduck/descript.com/login_with_google
 
 ### Who maintains it?
 
-It is part of Reduck's official curated catalogue.
+It is one of Reduck's official scripts.
 
 Source: https://reduck.ai/explore/scripts/reduck/descript.com/login_with_google

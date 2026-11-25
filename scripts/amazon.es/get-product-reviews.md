@@ -1,0 +1,76 @@
+# Get Amazon.es product reviews
+
+Automatically get Amazon.es product reviews on amazon.es. Fetch Amazon.es customer reviews for a product by ASIN. With a signed-in Amazon session it returns 10 reviews at a time, with sort, star, media, verified-purchase and keyword filters, plus a cursor for the next 10; pass it back with the same filters to continue, until no cursor comes back (Amazon stops after about 10 pages). Without a session it returns the top reviews shown on the product page (one page only, no filters, reviews from other Amazon countries included), says so in the result, and fails with a clear error instead of ignoring a filter or cursor it cannot serve, or when Amazon hides the reviews from the visitor. When Amazon limits review access for the account after unusual activity, its reviews pages show only the top reviews, with no filters and no paging: reviewAccess says so. Returns the product's rating summary and each review's rating, title, text, date, reviewer, country, variation, helpful votes, verified badge, Vine badge, images and videos. With sortBy=recent the pages can shift between calls as new reviews arrive; sortBy=helpful is more stable.
+
+- Site: amazon.es
+- Address: `reduck/amazon.es/get-product-reviews`
+- Updated: 2026-11-24 (v2)
+- Author: Reduck AI (reduck)
+
+## Run it
+
+Ask an AI agent connected to Reduck over MCP (`https://mcp.reduck.ai/mcp`) to run `reduck/amazon.es/get-product-reviews`, or run it from a terminal:
+
+```bash
+npx @reduck-ai/cli@latest run --script reduck/amazon.es/get-product-reviews
+```
+
+## Input
+
+- `asin` (string, required): 10-character Amazon ASIN.
+- `cursor` (string, optional): nextCursor from a previous call with the same ASIN, sortBy and filters. Needs a session.
+- `sortBy` (string, optional): recent = most recent; helpful = top reviews. Honoured only with a session.
+- `zipCode` (string, optional): Spanish postcode used to pin the store.
+- `mediaType` (string, optional): Needs a session.
+- `filterByStar` (string, optional): Needs a session.
+- `reviewerType` (string, optional): Needs a session.
+- `filterByKeyword` (string, optional): Needs a session.
+
+## Output
+
+- `source` (string, required): Which Amazon surface produced this result. reviews_page = the full reviews list (needs a session; supports sort, filters and paging). product_page_medley = the top-reviews block on the product page, all an anonymous browser can read: one page only, no filters, Amazon's own ordering, and it mixes in reviews from other Amazon stores (read `country` per review) where reviews_page returns Spain only. Sort, filter and cursor arguments throw on this surface rather than being silently dropped. Amazon sometimes serves an anonymous browser the product page without its reviews (rating and star histogram shown, a sign-in prompt in place of the review list); the run then fails with an error saying so instead of returning an empty list, so reviews: [] on this surface means the product really has no written reviews.
+- `product` (object, required)
+- `reviews` (array, required)
+- `nextCursor` (string | null, required): Pass as cursor to get the next 10 reviews. Null when Amazon offers no next page, and always null when source=product_page_medley.
+- `authenticated` (boolean, required): Whether the run had a usable Amazon session. False means the result came from the anonymous medley and is thinner by design, not by failure: the top reviews only.
+- `reviewAccess` (string | null, optional): Review access as the reviews page shows it. full: the whole list, with sort, filters and paging. limited: Amazon limits this account after unusual activity, so the page shows only its top reviews, with no filters and no paging; the reviews page offers a request to restore access. limited_request_sent: limited, and a request is pending until Amazon answers by email. Null on the signed-out product page.
+
+## FAQ
+
+### What does "Get Amazon.es product reviews" do?
+
+Fetch Amazon.es customer reviews for a product by ASIN. With a signed-in Amazon session it returns 10 reviews at a time, with sort, star, media, verified-purchase and keyword filters, plus a cursor for the next 10; pass it back with the same filters to continue, until no cursor comes back (Amazon stops after about 10 pages). Without a session it returns the top reviews shown on the product page (one page only, no filters, reviews from other Amazon countries included), says so in the result, and fails with a clear error instead of ignoring a filter or cursor it cannot serve, or when Amazon hides the reviews from the visitor. When Amazon limits review access for the account after unusual activity, its reviews pages show only the top reviews, with no filters and no paging: reviewAccess says so. Returns the product's rating summary and each review's rating, title, text, date, reviewer, country, variation, helpful votes, verified badge, Vine badge, images and videos. With sortBy=recent the pages can shift between calls as new reviews arrive; sortBy=helpful is more stable.
+
+### How do I automatically get Amazon.es product reviews on amazon.es?
+
+Ask an AI agent connected to Reduck to run reduck/amazon.es/get-product-reviews, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/amazon.es/get-product-reviews
+
+### Is there a amazon.es API to get Amazon.es product reviews?
+
+You do not need one. "Get Amazon.es product reviews" drives the real amazon.es pages in a browser, so it works whether or not amazon.es offers an API for this.
+
+### What information do I need to provide?
+
+Required: asin. Optional: cursor, sortBy, zipCode, mediaType, filterByStar, reviewerType, filterByKeyword.
+
+### What does it return?
+
+It returns source, product, reviews, nextCursor, reviewAccess, authenticated.
+
+### Do I need to be logged in to amazon.es?
+
+No. It only uses pages of amazon.es that are reachable without signing in.
+
+### Does it change anything on amazon.es, or only read data?
+
+It only reads. It looks things up on amazon.es and changes nothing there.
+
+### How do I run it?
+
+Ask an AI agent connected to Reduck to run reduck/amazon.es/get-product-reviews, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/amazon.es/get-product-reviews
+
+### Who maintains it?
+
+It is one of Reduck's official scripts.
+
+Source: https://reduck.ai/explore/scripts/reduck/amazon.es/get-product-reviews

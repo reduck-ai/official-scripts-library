@@ -4,7 +4,7 @@ Log into Crunchbase with Continue with Google, using a Google account already si
 
 - Site: crunchbase.com
 - Address: `reduck/crunchbase.com/login_with_google`
-- Updated: 2026-11-23 (v10)
+- Updated: 2026-11-24 (v11)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -54,6 +54,6 @@ Ask an AI agent connected to Reduck to run reduck/crunchbase.com/login_with_goog
 
 ### Who maintains it?
 
-It is part of Reduck's official curated catalogue.
+It is one of Reduck's official scripts.
 
 Source: https://reduck.ai/explore/scripts/reduck/crunchbase.com/login_with_google

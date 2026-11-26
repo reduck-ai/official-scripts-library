@@ -1,10 +1,10 @@
 # Search Amazon.es products
 
-Automatically search Amazon.es products on amazon.es. Search Amazon.es by free-text query, with Amazon's own filters: department, sort order, price range and refinements. Returns one page of results (asin, title, url, price, list_price, rating, review_count, image_url, sponsored, deal, badges, formats) with has_next_page. deal is the deal the card shows: its id, its label as Amazon writes it, and the end of its countdown when it shows one. badges are the other badges of the card, for example Amazon's Choice or a sustainability label. Prices are in euros, pinned to a Spanish postcode.
+Automatically search Amazon.es products on amazon.es. Search Amazon.es by free-text query, with Amazon's own filters: department, sort order, price range and refinements. Returns one page of results (asin, title, url, price, list_price, rating, review_count, image_url, sponsored, deal, badges, formats) with currency and has_next_page. deal is the deal the card shows: its id, its label as Amazon writes it, and the end of its countdown when it shows one. badges are the other badges of the card, for example Amazon's Choice or a sustainability label. Prices are in the currency the store displays, returned as currency: euros unless the browser prefers another. Pinned to a Spanish postcode.
 
 - Site: amazon.es
 - Address: `reduck/amazon.es/search-products`
-- Updated: 2026-11-24 (v2)
+- Updated: 2026-11-25 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -21,8 +21,8 @@ npx @reduck-ai/cli@latest run --script reduck/amazon.es/search-products
 - `page` (integer, optional): Result page. has_next_page says when to stop.
 - `sort` (string, optional): Sort order.
 - `zipCode` (string, optional): Spanish postcode used to pin the store location (prices, availability).
-- `price_max` (number, optional): Maximum price in euros.
-- `price_min` (number, optional): Minimum price in euros.
+- `price_max` (number, optional): Maximum price, in euros: the store's own currency, even when the page displays another.
+- `price_min` (number, optional): Minimum price, in euros: the store's own currency, even when the page displays another.
 - `department` (string, optional): Department search alias, from list_search_filters.
 - `refinements` (array, optional): Filters as group:value, from list_search_filters for the same query.
 
@@ -33,13 +33,14 @@ npx @reduck-ai/cli@latest run --script reduck/amazon.es/search-products
 - `page` (integer, required)
 - `items` (array, required)
 - `query` (string, required)
+- `currency` (string, required): ISO 4217 code of the currency of every price in this result, as the store displays it: the store's own (euros (EUR)) unless the browser prefers another, which Amazon then shows instead.
 - `has_next_page` (boolean, required)
 
 ## FAQ
 
 ### What does "Search Amazon.es products" do?
 
-Search Amazon.es by free-text query, with Amazon's own filters: department, sort order, price range and refinements. Returns one page of results (asin, title, url, price, list_price, rating, review_count, image_url, sponsored, deal, badges, formats) with has_next_page. deal is the deal the card shows: its id, its label as Amazon writes it, and the end of its countdown when it shows one. badges are the other badges of the card, for example Amazon's Choice or a sustainability label. Prices are in euros, pinned to a Spanish postcode.
+Search Amazon.es by free-text query, with Amazon's own filters: department, sort order, price range and refinements. Returns one page of results (asin, title, url, price, list_price, rating, review_count, image_url, sponsored, deal, badges, formats) with currency and has_next_page. deal is the deal the card shows: its id, its label as Amazon writes it, and the end of its countdown when it shows one. badges are the other badges of the card, for example Amazon's Choice or a sustainability label. Prices are in the currency the store displays, returned as currency: euros unless the browser prefers another. Pinned to a Spanish postcode.
 
 ### How do I automatically search Amazon.es products on amazon.es?
 
@@ -55,7 +56,7 @@ Required: query. Optional: page, sort, zipCode, price_max, price_min, department
 
 ### What does it return?
 
-It returns url, zip, page, items, query, has_next_page.
+It returns url, zip, page, items, query, currency, has_next_page.
 
 ### Do I need to be logged in to amazon.es?
 

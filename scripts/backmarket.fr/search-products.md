@@ -1,10 +1,10 @@
 # Search Back Market France products
 
-Automatically search Back Market France products on backmarket.fr. Search backmarket.fr by free text and return the first page of results: for each the product id, the offer shown (offer id, price in euros, condition grade, warranty), the seller id, rating, review count, stock, image and product page link. Also returns the total number of products found over all pages; later pages are not available. A search with no match returns an empty list. Pass a product link to Get Back Market France product, or to Add Back Market France product to cart.
+Automatically search Back Market France products on backmarket.fr. Search backmarket.fr by free text and return one page of results: for each the product id, the offer shown (offer id, price in euros, condition grade, warranty), the seller id, rating, review count, stock, image and product page link. Pass page to read further ones; a page past the last returns an empty list. Also returns the total number of products found over all pages. A search with no match returns an empty list. Pass a product link to Get Back Market France product, or to Add Back Market France product to cart.
 
 - Site: backmarket.fr
 - Address: `reduck/backmarket.fr/search-products`
-- Updated: 2026-11-24 (v1)
+- Updated: 2026-11-25 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,9 +18,11 @@ npx @reduck-ai/cli@latest run --script reduck/backmarket.fr/search-products
 ## Input
 
 - `query` (string, required): Free-text search, e.g. iPhone 13 or coque iPhone
+- `page` (integer, optional): Result page, starting at 1.
 
 ## Output
 
+- `page` (integer, required)
 - `items` (array, required)
 - `query` (string, required)
 - `total_results` (integer | null, optional): Number of products the site found for the search, over all its pages.
@@ -29,7 +31,7 @@ npx @reduck-ai/cli@latest run --script reduck/backmarket.fr/search-products
 
 ### What does "Search Back Market France products" do?
 
-Search backmarket.fr by free text and return the first page of results: for each the product id, the offer shown (offer id, price in euros, condition grade, warranty), the seller id, rating, review count, stock, image and product page link. Also returns the total number of products found over all pages; later pages are not available. A search with no match returns an empty list. Pass a product link to Get Back Market France product, or to Add Back Market France product to cart.
+Search backmarket.fr by free text and return one page of results: for each the product id, the offer shown (offer id, price in euros, condition grade, warranty), the seller id, rating, review count, stock, image and product page link. Pass page to read further ones; a page past the last returns an empty list. Also returns the total number of products found over all pages. A search with no match returns an empty list. Pass a product link to Get Back Market France product, or to Add Back Market France product to cart.
 
 ### How do I automatically search Back Market France products on backmarket.fr?
 
@@ -41,11 +43,11 @@ You do not need one. "Search Back Market France products" drives the real backma
 
 ### What information do I need to provide?
 
-Required: query.
+Required: query. Optional: page.
 
 ### What does it return?
 
-It returns items, query, total_results.
+It returns page, items, query, total_results.
 
 ### Do I need to be logged in to backmarket.fr?
 

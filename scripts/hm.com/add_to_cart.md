@@ -1,10 +1,10 @@
 # Add H&M France product to cart
 
-Automatically add H&M France product to cart on hm.com. Add one size of an H&M France product (hm.com/fr_fr) to the guest cart of this browser, with a quantity from 1 to 10, and return the cart as the site holds it afterwards: each line with variant id, product id, name, brand, size, color, quantity, unit price and line price in euros, plus the item count and the items subtotal. Pass the variant id (product id plus size code, from Search or Get H&M France product). Given only a product id or a link, it fails with the list of sizes and their variant ids. A size that is out of stock fails with an error. Nothing is paid or ordered.
+Automatically add H&M France product to cart on hm.com. Add an H&M France product (hm.com/fr_fr) to the guest cart of this browser, with a quantity from 1 to 10, and return the cart as the site holds it afterwards: the item count, the items subtotal in euros and each line with its product id, variant id (offerId, which names the size), name, seller, quantity, unit price and line price. Pass a variant id, or a product id or link with a size label. A product with one size needs no size label. A size that is out of stock, or a link that is not a product, fails with an error. Nothing is paid or ordered.
 
 - Site: hm.com
 - Address: `reduck/hm.com/add_to_cart`
-- Updated: 2026-11-24 (v1)
+- Updated: 2026-11-25 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,8 +17,9 @@ npx @reduck-ai/cli@latest run --script reduck/hm.com/add_to_cart
 
 ## Input
 
-- `product` (string, required): Variant id (13 digits: product id plus size code, for example 0685816001003 for size M), as returned by Search H&M France products or Get H&M France product. A product id or a product link is refused with the list of its variants.
-- `quantity` (integer, optional): Number of units to add.
+- `product` (string, required): Product id (10 digits, for example 0685816001; it includes the color), variant id (13 digits: product id plus size code, for example 0685816001003 for size M) or a link to an H&M France product page, as returned by Search H&M France products or Get H&M France product.
+- `size` (string, optional): Size label as the product lists it (for example "M" or "134/140 (8-10Y)"). Needed with a product id or link when the product has several sizes; not used with a variant id.
+- `quantity` (integer, optional): Number of units to add, 1 to 10.
 
 ## Output
 
@@ -27,14 +28,14 @@ npx @reduck-ai/cli@latest run --script reduck/hm.com/add_to_cart
 - `count` (integer, required)
 - `lines` (array, required)
 - `total` (number | null, required)
-- `offerId` (string, required)
+- `offerId` (string | null, required)
 - `productId` (string, required)
 
 ## FAQ
 
 ### What does "Add H&M France product to cart" do?
 
-Add one size of an H&M France product (hm.com/fr_fr) to the guest cart of this browser, with a quantity from 1 to 10, and return the cart as the site holds it afterwards: each line with variant id, product id, name, brand, size, color, quantity, unit price and line price in euros, plus the item count and the items subtotal. Pass the variant id (product id plus size code, from Search or Get H&M France product). Given only a product id or a link, it fails with the list of sizes and their variant ids. A size that is out of stock fails with an error. Nothing is paid or ordered.
+Add an H&M France product (hm.com/fr_fr) to the guest cart of this browser, with a quantity from 1 to 10, and return the cart as the site holds it afterwards: the item count, the items subtotal in euros and each line with its product id, variant id (offerId, which names the size), name, seller, quantity, unit price and line price. Pass a variant id, or a product id or link with a size label. A product with one size needs no size label. A size that is out of stock, or a link that is not a product, fails with an error. Nothing is paid or ordered.
 
 ### How do I automatically add H&M France product to cart on hm.com?
 
@@ -46,7 +47,7 @@ You do not need one. "Add H&M France product to cart" drives the real hm.com pag
 
 ### What information do I need to provide?
 
-Required: product. Optional: quantity.
+Required: product. Optional: size, quantity.
 
 ### What does it return?
 

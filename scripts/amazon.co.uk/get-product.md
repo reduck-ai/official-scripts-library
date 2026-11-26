@@ -1,10 +1,10 @@
 # Get Amazon.co.uk product
 
-Automatically get Amazon.co.uk product on amazon.co.uk. Fetch one Amazon.co.uk product page by ASIN: title, byline, brand, price in pounds sterling, list price, rating, review count, rating breakdown, availability, breadcrumb, image, feature bullets, description, attributes, variants, deal, badges, delivery estimate, return policy and seller. deal is the deal the page shows: its id, its label as Amazon writes it (for example "Early Black Friday" or "Ends in" before a countdown) and its end time. badges are the other badges next to the title, for example Amazon's Choice. The returned asin can differ from the requested one when Amazon resolves a variant.
+Automatically get Amazon.co.uk product on amazon.co.uk. Fetch one Amazon.co.uk product page by ASIN: title, byline, brand, price and its currency, list price, rating, review count, rating breakdown, availability, breadcrumb, image, feature bullets, description, attributes, variants, deal, badges, delivery estimate, return policy and seller. deal is the deal the page shows: its id, its label as Amazon writes it (for example "Early Black Friday" or "Ends in" before a countdown) and its end time. badges are the other badges next to the title, for example Amazon's Choice. The returned asin can differ from the requested one when Amazon resolves a variant.
 
 - Site: amazon.co.uk
 - Address: `reduck/amazon.co.uk/get-product`
-- Updated: 2026-11-24 (v2)
+- Updated: 2026-11-25 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -51,7 +51,7 @@ npx @reduck-ai/cli@latest run --script reduck/amazon.co.uk/get-product
 
 ### What does "Get Amazon.co.uk product" do?
 
-Fetch one Amazon.co.uk product page by ASIN: title, byline, brand, price in pounds sterling, list price, rating, review count, rating breakdown, availability, breadcrumb, image, feature bullets, description, attributes, variants, deal, badges, delivery estimate, return policy and seller. deal is the deal the page shows: its id, its label as Amazon writes it (for example "Early Black Friday" or "Ends in" before a countdown) and its end time. badges are the other badges next to the title, for example Amazon's Choice. The returned asin can differ from the requested one when Amazon resolves a variant.
+Fetch one Amazon.co.uk product page by ASIN: title, byline, brand, price and its currency, list price, rating, review count, rating breakdown, availability, breadcrumb, image, feature bullets, description, attributes, variants, deal, badges, delivery estimate, return policy and seller. deal is the deal the page shows: its id, its label as Amazon writes it (for example "Early Black Friday" or "Ends in" before a countdown) and its end time. badges are the other badges next to the title, for example Amazon's Choice. The returned asin can differ from the requested one when Amazon resolves a variant.
 
 ### How do I automatically get Amazon.co.uk product on amazon.co.uk?
 

@@ -1,10 +1,10 @@
 # Get Amazon.co.uk product offers from all sellers
 
-Automatically get Amazon.co.uk product offers from all sellers on amazon.co.uk. List every seller offering an Amazon.co.uk product, one page of 10 offers at a time: price in pounds sterling, condition, seller name and id, seller rating, ships-from and delivery estimate. Page 1 also carries the buy-box offer. Prices are pinned to a UK postcode.
+Automatically get Amazon.co.uk product offers from all sellers on amazon.co.uk. List every seller offering an Amazon.co.uk product, one page of 10 offers at a time: price as the store displays it, condition, seller name and id, seller rating, ships-from and delivery estimate. Page 1 also carries the buy-box offer. Prices are pinned to a UK postcode.
 
 - Site: amazon.co.uk
 - Address: `reduck/amazon.co.uk/get-product-offers`
-- Updated: 2026-11-24 (v1)
+- Updated: 2026-11-25 (v1)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -36,7 +36,7 @@ npx @reduck-ai/cli@latest run --script reduck/amazon.co.uk/get-product-offers
 
 ### What does "Get Amazon.co.uk product offers from all sellers" do?
 
-List every seller offering an Amazon.co.uk product, one page of 10 offers at a time: price in pounds sterling, condition, seller name and id, seller rating, ships-from and delivery estimate. Page 1 also carries the buy-box offer. Prices are pinned to a UK postcode.
+List every seller offering an Amazon.co.uk product, one page of 10 offers at a time: price as the store displays it, condition, seller name and id, seller rating, ships-from and delivery estimate. Page 1 also carries the buy-box offer. Prices are pinned to a UK postcode.
 
 ### How do I automatically get Amazon.co.uk product offers from all sellers on amazon.co.uk?
 

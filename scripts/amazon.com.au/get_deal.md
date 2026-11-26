@@ -1,10 +1,10 @@
 # Get an Amazon.com.au deal
 
-Automatically get an Amazon.com.au deal on amazon.com.au. Get one Amazon.com.au deal by its id (deal_id from List Amazon.com.au deals or Get Amazon.com.au product): its type (LIGHTNING_DEAL, BEST_DEAL, TOP_DEAL), state, discount badge and deal label as Amazon writes them, end time when it counts down, percent claimed for lightning deals, and every product the deal covers, each with ASIN, title, URL, image, deal price and list price in Australian dollars, rating and review count. A deal that has ended or does not exist is refused with a message that says so.
+Automatically get an Amazon.com.au deal on amazon.com.au. Get one Amazon.com.au deal by its id (deal_id from List Amazon.com.au deals or Get Amazon.com.au product): its type (LIGHTNING_DEAL, BEST_DEAL, TOP_DEAL), state, discount badge and deal label as Amazon writes them, end time when it counts down, percent claimed for lightning deals, and every product the deal covers, each with ASIN, title, URL, image, deal price and list price, rating and review count. A deal that has ended or does not exist is refused with a message that says so.
 
 - Site: amazon.com.au
 - Address: `reduck/amazon.com.au/get_deal`
-- Updated: 2026-11-24 (v1)
+- Updated: 2026-11-25 (v1)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -36,7 +36,7 @@ npx @reduck-ai/cli@latest run --script reduck/amazon.com.au/get_deal
 
 ### What does "Get an Amazon.com.au deal" do?
 
-Get one Amazon.com.au deal by its id (deal_id from List Amazon.com.au deals or Get Amazon.com.au product): its type (LIGHTNING_DEAL, BEST_DEAL, TOP_DEAL), state, discount badge and deal label as Amazon writes them, end time when it counts down, percent claimed for lightning deals, and every product the deal covers, each with ASIN, title, URL, image, deal price and list price in Australian dollars, rating and review count. A deal that has ended or does not exist is refused with a message that says so.
+Get one Amazon.com.au deal by its id (deal_id from List Amazon.com.au deals or Get Amazon.com.au product): its type (LIGHTNING_DEAL, BEST_DEAL, TOP_DEAL), state, discount badge and deal label as Amazon writes them, end time when it counts down, percent claimed for lightning deals, and every product the deal covers, each with ASIN, title, URL, image, deal price and list price, rating and review count. A deal that has ended or does not exist is refused with a message that says so.
 
 ### How do I automatically get an Amazon.com.au deal on amazon.com.au?
 

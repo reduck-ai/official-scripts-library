@@ -4,7 +4,7 @@ Automatically search Cdiscount products on cdiscount.com. Search Cdiscount.com b
 
 - Site: cdiscount.com
 - Address: `reduck/cdiscount.com/search-products`
-- Updated: 2026-11-24 (v2)
+- Updated: 2026-11-25 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -1,10 +1,10 @@
 # Get Amazon.com.au product
 
-Automatically get Amazon.com.au product on amazon.com.au. Fetch one Amazon.com.au product page by ASIN: title, byline, brand, price in Australian dollars, list price, rating, review count, rating breakdown, availability, breadcrumb, image, feature bullets, description, attributes, variants, deal, badges, delivery estimate, return policy and seller. deal is the deal the page shows: its id, its label as Amazon writes it (for example "Black Friday Deal" or "Limited time deal") and its end time. badges are the other badges next to the title, for example Amazon's Choice. Prices and availability are pinned to an Australian postcode. The returned asin can differ from the requested one when Amazon resolves a variant.
+Automatically get Amazon.com.au product on amazon.com.au. Fetch one Amazon.com.au product page by ASIN: title, byline, brand, price and its currency, list price, rating, review count, rating breakdown, availability, breadcrumb, image, feature bullets, description, attributes, variants, deal, badges, delivery estimate, return policy and seller. deal is the deal the page shows: its id, its label as Amazon writes it (for example "Black Friday Deal" or "Limited time deal") and its end time. badges are the other badges next to the title, for example Amazon's Choice. Prices and availability are pinned to an Australian postcode. The returned asin can differ from the requested one when Amazon resolves a variant.
 
 - Site: amazon.com.au
 - Address: `reduck/amazon.com.au/get-product`
-- Updated: 2026-11-24 (v1)
+- Updated: 2026-11-25 (v1)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -51,7 +51,7 @@ npx @reduck-ai/cli@latest run --script reduck/amazon.com.au/get-product
 
 ### What does "Get Amazon.com.au product" do?
 
-Fetch one Amazon.com.au product page by ASIN: title, byline, brand, price in Australian dollars, list price, rating, review count, rating breakdown, availability, breadcrumb, image, feature bullets, description, attributes, variants, deal, badges, delivery estimate, return policy and seller. deal is the deal the page shows: its id, its label as Amazon writes it (for example "Black Friday Deal" or "Limited time deal") and its end time. badges are the other badges next to the title, for example Amazon's Choice. Prices and availability are pinned to an Australian postcode. The returned asin can differ from the requested one when Amazon resolves a variant.
+Fetch one Amazon.com.au product page by ASIN: title, byline, brand, price and its currency, list price, rating, review count, rating breakdown, availability, breadcrumb, image, feature bullets, description, attributes, variants, deal, badges, delivery estimate, return policy and seller. deal is the deal the page shows: its id, its label as Amazon writes it (for example "Black Friday Deal" or "Limited time deal") and its end time. badges are the other badges next to the title, for example Amazon's Choice. Prices and availability are pinned to an Australian postcode. The returned asin can differ from the requested one when Amazon resolves a variant.
 
 ### How do I automatically get Amazon.com.au product on amazon.com.au?
 

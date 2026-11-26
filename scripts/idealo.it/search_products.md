@@ -4,7 +4,7 @@ Automatically search idealo.it products on idealo.it. Search the idealo.it price
 
 - Site: idealo.it
 - Address: `reduck/idealo.it/search_products`
-- Updated: 2026-11-24 (v1)
+- Updated: 2026-11-25 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -1,10 +1,10 @@
 # Get Amazon.fr product
 
-Automatically get Amazon.fr product on amazon.fr. Fetch a single Amazon.fr product page by ASIN. Returns title, byline, brand, price, list_price, rating, review_count, rating_breakdown, availability, breadcrumb, image_url, feature_bullets, description, attributes, variant_asins, deal, badges, delivery_estimate, return_policy, and seller. deal is the deal the page shows: its id, its label as Amazon writes it (for example "Offre Pré-Black Friday") and its end time. badges are the other badges next to the title, for example Choix d'Amazon. The returned asin can differ from the requested one when Amazon resolves a variant. For books, brand is null and feature_bullets and attributes are usually empty. Audible audiobook ASINs open Audible's own product page instead, so they fail at once with an error that gives that page's URL.
+Automatically get Amazon.fr product on amazon.fr. Fetch a single Amazon.fr product page by ASIN. Returns title, byline, brand, price and its currency, list_price, rating, review_count, rating_breakdown, availability, breadcrumb, image_url, feature_bullets, description, attributes, variant_asins, deal, badges, delivery_estimate, return_policy, and seller. deal is the deal the page shows: its id, its label as Amazon writes it (for example "Offre Pré-Black Friday") and its end time. badges are the other badges next to the title, for example Choix d'Amazon. The returned asin can differ from the requested one when Amazon resolves a variant. For books, brand is null and feature_bullets and attributes are usually empty. Audible audiobook ASINs open Audible's own product page instead, so they fail at once with an error that gives that page's URL.
 
 - Site: amazon.fr
 - Address: `reduck/amazon.fr/get-product`
-- Updated: 2026-11-18 (v2)
+- Updated: 2026-11-25 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -51,7 +51,7 @@ npx @reduck-ai/cli@latest run --script reduck/amazon.fr/get-product
 
 ### What does "Get Amazon.fr product" do?
 
-Fetch a single Amazon.fr product page by ASIN. Returns title, byline, brand, price, list_price, rating, review_count, rating_breakdown, availability, breadcrumb, image_url, feature_bullets, description, attributes, variant_asins, deal, badges, delivery_estimate, return_policy, and seller. deal is the deal the page shows: its id, its label as Amazon writes it (for example "Offre Pré-Black Friday") and its end time. badges are the other badges next to the title, for example Choix d'Amazon. The returned asin can differ from the requested one when Amazon resolves a variant. For books, brand is null and feature_bullets and attributes are usually empty. Audible audiobook ASINs open Audible's own product page instead, so they fail at once with an error that gives that page's URL.
+Fetch a single Amazon.fr product page by ASIN. Returns title, byline, brand, price and its currency, list_price, rating, review_count, rating_breakdown, availability, breadcrumb, image_url, feature_bullets, description, attributes, variant_asins, deal, badges, delivery_estimate, return_policy, and seller. deal is the deal the page shows: its id, its label as Amazon writes it (for example "Offre Pré-Black Friday") and its end time. badges are the other badges next to the title, for example Choix d'Amazon. The returned asin can differ from the requested one when Amazon resolves a variant. For books, brand is null and feature_bullets and attributes are usually empty. Audible audiobook ASINs open Audible's own product page instead, so they fail at once with an error that gives that page's URL.
 
 ### How do I automatically get Amazon.fr product on amazon.fr?
 
@@ -83,6 +83,6 @@ Ask an AI agent connected to Reduck to run reduck/amazon.fr/get-product, or run 
 
 ### Who maintains it?
 
-It is part of Reduck's official curated catalogue.
+It is one of Reduck's official scripts.
 
 Source: https://reduck.ai/explore/scripts/reduck/amazon.fr/get-product

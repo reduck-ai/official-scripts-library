@@ -4,7 +4,7 @@ Automatically get current Crunchbase user on crunchbase.com. Report which Crunch
 
 - Site: crunchbase.com
 - Address: `reduck/crunchbase.com/get_current_user`
-- Updated: 2026-11-18 (v7)
+- Updated: 2026-11-25 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -51,7 +51,7 @@ It returns name, email, lastName, loggedIn, firstName.
 
 ### Do I need to be logged in to crunchbase.com?
 
-Yes. It acts as you on crunchbase.com: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the crunchbase.com cookies saved by the Reduck extension.
+Yes. It acts as you on crunchbase.com: in your browser it reuses your session, and on a cloud browser it loads your Auth session cookies for crunchbase.com.
 
 ### Does it change anything on crunchbase.com, or only read data?
 
@@ -63,6 +63,6 @@ Ask an AI agent connected to Reduck to run reduck/crunchbase.com/get_current_use
 
 ### Who maintains it?
 
-It is part of Reduck's official curated catalogue.
+It is one of Reduck's official scripts.
 
 Source: https://reduck.ai/explore/scripts/reduck/crunchbase.com/get_current_user

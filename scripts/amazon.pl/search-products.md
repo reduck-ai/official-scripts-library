@@ -1,10 +1,10 @@
 # Search Amazon.pl products
 
-Automatically search Amazon.pl products on amazon.pl. Search Amazon.pl by free-text query, with Amazon's own filters: department, sort order, price range and refinements. Returns one page of results (asin, title, url, price, list_price, rating, review_count, image_url, sponsored, deal, badges, formats) with has_next_page. deal is the deal the card shows: its id, its label as Amazon writes it, and the end of its countdown when it shows one. badges are the other badges of the card, for example Amazon's Choice. Prices are in złoty, pinned to a Polish postcode.
+Automatically search Amazon.pl products on amazon.pl. Search Amazon.pl by free-text query, with Amazon's own filters: department, sort order, price range and refinements. Returns one page of results (asin, title, url, price, list_price, rating, review_count, image_url, sponsored, deal, badges, formats) with currency and has_next_page. deal is the deal the card shows: its id, its label as Amazon writes it, and the end of its countdown when it shows one. badges are the other badges of the card, for example Amazon's Choice. Prices are in the currency the store displays, returned as currency: złoty unless the browser prefers another. Pinned to a Polish postcode.
 
 - Site: amazon.pl
 - Address: `reduck/amazon.pl/search-products`
-- Updated: 2026-11-24 (v1)
+- Updated: 2026-11-25 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -21,8 +21,8 @@ npx @reduck-ai/cli@latest run --script reduck/amazon.pl/search-products
 - `page` (integer, optional): Result page. has_next_page says when to stop.
 - `sort` (string, optional): Sort order.
 - `zipCode` (string, optional): Polish postcode used to pin the store location (prices, availability).
-- `price_max` (number, optional): Maximum price in złoty.
-- `price_min` (number, optional): Minimum price in złoty.
+- `price_max` (number, optional): Maximum price, in złoty: the store's own currency, even when the page displays another.
+- `price_min` (number, optional): Minimum price, in złoty: the store's own currency, even when the page displays another.
 - `department` (string, optional): Department search alias, as in Amazon's i= URL parameter.
 - `refinements` (array, optional): Filters as group:value, as in Amazon's rh= URL parameter.
 
@@ -33,13 +33,14 @@ npx @reduck-ai/cli@latest run --script reduck/amazon.pl/search-products
 - `page` (integer, required)
 - `items` (array, required)
 - `query` (string, required)
+- `currency` (string, required): ISO 4217 code of the currency of every price in this result, as the store displays it: the store's own (złoty (PLN)) unless the browser prefers another, which Amazon then shows instead.
 - `has_next_page` (boolean, required)
 
 ## FAQ
 
 ### What does "Search Amazon.pl products" do?
 
-Search Amazon.pl by free-text query, with Amazon's own filters: department, sort order, price range and refinements. Returns one page of results (asin, title, url, price, list_price, rating, review_count, image_url, sponsored, deal, badges, formats) with has_next_page. deal is the deal the card shows: its id, its label as Amazon writes it, and the end of its countdown when it shows one. badges are the other badges of the card, for example Amazon's Choice. Prices are in złoty, pinned to a Polish postcode.
+Search Amazon.pl by free-text query, with Amazon's own filters: department, sort order, price range and refinements. Returns one page of results (asin, title, url, price, list_price, rating, review_count, image_url, sponsored, deal, badges, formats) with currency and has_next_page. deal is the deal the card shows: its id, its label as Amazon writes it, and the end of its countdown when it shows one. badges are the other badges of the card, for example Amazon's Choice. Prices are in the currency the store displays, returned as currency: złoty unless the browser prefers another. Pinned to a Polish postcode.
 
 ### How do I automatically search Amazon.pl products on amazon.pl?
 
@@ -55,7 +56,7 @@ Required: query. Optional: page, sort, zipCode, price_max, price_min, department
 
 ### What does it return?
 
-It returns url, zip, page, items, query, has_next_page.
+It returns url, zip, page, items, query, currency, has_next_page.
 
 ### Do I need to be logged in to amazon.pl?
 

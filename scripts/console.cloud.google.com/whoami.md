@@ -4,7 +4,7 @@ Report which Google account the Google Cloud console is signed in as in this bro
 
 - Site: console.cloud.google.com
 - Address: `reduck/console.cloud.google.com/whoami`
-- Updated: 2026-10-22 (v6)
+- Updated: 2026-11-25 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -42,7 +42,7 @@ It returns name, email, evidence, loggedIn.
 
 ### Do I need to be logged in to console.cloud.google.com?
 
-Yes. It acts as you on console.cloud.google.com: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the console.cloud.google.com cookies saved by the Reduck extension.
+Yes. It acts as you on console.cloud.google.com: in your browser it reuses your session, and on a cloud browser it loads your Auth session cookies for console.cloud.google.com.
 
 ### Does it change anything on console.cloud.google.com, or only read data?
 
@@ -54,6 +54,6 @@ Ask an AI agent connected to Reduck to run reduck/console.cloud.google.com/whoam
 
 ### Who maintains it?
 
-It is part of Reduck's official curated catalogue.
+It is one of Reduck's official scripts.
 
 Source: https://reduck.ai/explore/scripts/reduck/console.cloud.google.com/whoami

@@ -1,10 +1,10 @@
 # Get Amazon Bestsellers by Category
 
-Automatically get Amazon Bestsellers by Category on amazon.com. Reads Amazon's Best Sellers list for a top-level category (rank, title, price, rating, review count).
+Automatically get Amazon Bestsellers by Category on amazon.com. Reads Amazon's Best Sellers list for a top-level category (rank, title, price, rating, review count). Prices are in the currency the store displays, returned as currency: US dollars unless the browser prefers another.
 
 - Site: amazon.com
 - Address: `reduck/amazon.com/get_bestsellers_category`
-- Updated: 2026-10-31 (v9)
+- Updated: 2026-11-25 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -23,13 +23,14 @@ npx @reduck-ai/cli@latest run --script reduck/amazon.com/get_bestsellers_categor
 ## Output
 
 - `category` (string, required)
+- `currency` (string, required): ISO 4217 code of the currency of every price in this result, as the store displays it: the store's own (US dollars (USD)) unless the browser prefers another, which Amazon then shows instead.
 - `products` (array, required)
 
 ## FAQ
 
 ### What does "Get Amazon Bestsellers by Category" do?
 
-Reads Amazon's Best Sellers list for a top-level category (rank, title, price, rating, review count).
+Reads Amazon's Best Sellers list for a top-level category (rank, title, price, rating, review count). Prices are in the currency the store displays, returned as currency: US dollars unless the browser prefers another.
 
 ### How do I automatically get Amazon Bestsellers by Category on amazon.com?
 
@@ -45,7 +46,7 @@ Required: category. Optional: limit.
 
 ### What does it return?
 
-It returns category, products.
+It returns category, currency, products.
 
 ### Do I need to be logged in to amazon.com?
 
@@ -61,6 +62,6 @@ Ask an AI agent connected to Reduck to run reduck/amazon.com/get_bestsellers_cat
 
 ### Who maintains it?
 
-It is part of Reduck's official curated catalogue.
+It is one of Reduck's official scripts.
 
 Source: https://reduck.ai/explore/scripts/reduck/amazon.com/get_bestsellers_category

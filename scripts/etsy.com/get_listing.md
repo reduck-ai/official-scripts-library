@@ -1,10 +1,10 @@
 # Etsy get listing
 
-Reads an Etsy listing's title, description, images, price, availability, rating and shop from its public product page.
+Reads an Etsy listing's title, description, images, price, availability, rating and shop from its public product page. On a managed browser, set country to US: Etsy blocks managed browsers that have no country.
 
 - Site: etsy.com
 - Address: `reduck/etsy.com/get_listing`
-- Updated: 2026-11-20 (v5)
+- Updated: 2026-11-25 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -44,7 +44,7 @@ npx @reduck-ai/cli@latest run --script reduck/etsy.com/get_listing
 
 ### What does "Etsy get listing" do?
 
-Reads an Etsy listing's title, description, images, price, availability, rating and shop from its public product page.
+Reads an Etsy listing's title, description, images, price, availability, rating and shop from its public product page. On a managed browser, set country to US: Etsy blocks managed browsers that have no country.
 
 ### What information do I need to provide?
 
@@ -68,6 +68,6 @@ Ask an AI agent connected to Reduck to run reduck/etsy.com/get_listing, or run i
 
 ### Who maintains it?
 
-It is part of Reduck's official curated catalogue.
+It is one of Reduck's official scripts.
 
 Source: https://reduck.ai/explore/scripts/reduck/etsy.com/get_listing

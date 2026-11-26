@@ -4,7 +4,7 @@ Search round-trip flights on Kayak.fr with free-text origin/destination city nam
 
 - Site: kayak.fr
 - Address: `reduck/kayak.fr/search_flights_roundtrip`
-- Updated: 2026-11-23 (v18)
+- Updated: 2026-11-25 (v20)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -79,7 +79,7 @@ Ask an AI agent connected to Reduck to run reduck/kayak.fr/search_flights_roundt
 
 ### Who maintains it?
 
-It is part of Reduck's official curated catalogue.
+It is one of Reduck's official scripts.
 
 ### Is there a Kayak API to search round-trip flights and prices?
 

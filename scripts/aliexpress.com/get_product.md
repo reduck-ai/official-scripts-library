@@ -4,7 +4,7 @@ Automatically get AliExpress product on aliexpress.com. Read an AliExpress produ
 
 - Site: aliexpress.com
 - Address: `reduck/aliexpress.com/get_product`
-- Updated: 2026-11-23 (v11)
+- Updated: 2026-11-25 (v12)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -74,6 +74,6 @@ Ask an AI agent connected to Reduck to run reduck/aliexpress.com/get_product, or
 
 ### Who maintains it?
 
-It is part of Reduck's official curated catalogue.
+It is one of Reduck's official scripts.
 
 Source: https://reduck.ai/explore/scripts/reduck/aliexpress.com/get_product

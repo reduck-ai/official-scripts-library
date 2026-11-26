@@ -1,10 +1,10 @@
 # List H&M France cart items
 
-Automatically list H&M France cart items on hm.com. List the items in the H&M France cart of this browser (hm.com/fr_fr), as the site holds it: for each line the variant id, product id, name, brand, size, color, quantity, unit price and line price in euros, plus the item count and the items subtotal (delivery not included). The cart is the guest cart of the browser, so no sign-in is needed. An empty cart returns an empty list and a zero count.
+Automatically list H&M France cart items on hm.com. List the items in the H&M France guest cart of this browser (hm.com/fr_fr), as the site holds it: the item count, the items subtotal in euros (delivery not included) and each line with its product id, variant id (offerId, which names the size), name, seller, quantity, unit price and line price. No sign-in is needed. An empty cart returns no lines and a count of 0.
 
 - Site: hm.com
 - Address: `reduck/hm.com/list_cart_items`
-- Updated: 2026-11-24 (v1)
+- Updated: 2026-11-25 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -29,7 +29,7 @@ It takes no input.
 
 ### What does "List H&M France cart items" do?
 
-List the items in the H&M France cart of this browser (hm.com/fr_fr), as the site holds it: for each line the variant id, product id, name, brand, size, color, quantity, unit price and line price in euros, plus the item count and the items subtotal (delivery not included). The cart is the guest cart of the browser, so no sign-in is needed. An empty cart returns an empty list and a zero count.
+List the items in the H&M France guest cart of this browser (hm.com/fr_fr), as the site holds it: the item count, the items subtotal in euros (delivery not included) and each line with its product id, variant id (offerId, which names the size), name, seller, quantity, unit price and line price. No sign-in is needed. An empty cart returns no lines and a count of 0.
 
 ### How do I automatically list H&M France cart items on hm.com?
 

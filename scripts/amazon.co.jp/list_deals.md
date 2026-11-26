@@ -4,7 +4,7 @@ Automatically list Amazon.co.jp deals on amazon.co.jp. List the deals on Amazon.
 
 - Site: amazon.co.jp
 - Address: `reduck/amazon.co.jp/list_deals`
-- Updated: 2026-11-24 (v1)
+- Updated: 2026-11-25 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -19,8 +19,8 @@ npx @reduck-ai/cli@latest run --script reduck/amazon.co.jp/list_deals
 
 - `tab` (string, optional): A tab of the deals page, by its id from tabs. Omit for the page's default view.
 - `cursor` (integer, optional): next_cursor of the previous page; 0 for the first.
-- `maxPrice` (number, optional): Maximum deal price, in the currency the page shows.
-- `minPrice` (number, optional): Minimum deal price, in the currency the page shows.
+- `maxPrice` (number, optional): Maximum deal price, in Japanese yen. Amazon offers this filter only while the page shows prices in the store's own currency; otherwise the run is refused and names the filters the page offers.
+- `minPrice` (number, optional): Minimum deal price, in Japanese yen. Amazon offers this filter only while the page shows prices in the store's own currency; otherwise the run is refused and names the filters the page offers.
 - `maxDiscount` (integer, optional): Maximum discount in percent, when the page offers a discount filter.
 - `minDiscount` (integer, optional): Minimum discount in percent, when the page offers a discount filter.
 - `refinements` (array, optional): Filters as group:value, taken from refinements of an earlier call (departments, brands, reviewRating, accessType…).

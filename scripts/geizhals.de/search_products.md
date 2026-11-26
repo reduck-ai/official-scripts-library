@@ -4,7 +4,7 @@ Automatically search Geizhals products on geizhals.de. Search the Geizhals.de pr
 
 - Site: geizhals.de
 - Address: `reduck/geizhals.de/search_products`
-- Updated: 2026-11-24 (v1)
+- Updated: 2026-11-25 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -1,10 +1,10 @@
 # Get an Amazon.com.br deal
 
-Automatically get an Amazon.com.br deal on amazon.com.br. Read one deal on Amazon.com.br by its deal id (the 8-character id in an amazon.com.br/deal/<id> link, or deal_id from list_deals): the deal's type, state, label as Amazon writes it, discount badge, end time and percent claimed, plus every product in it with ASIN, title, URL, image, deal price and list price in reais with their labels, rating, review count and brand. A deal that Amazon shows no product for is refused.
+Automatically get an Amazon.com.br deal on amazon.com.br. Read one deal on Amazon.com.br by its deal id (the 8-character id in an amazon.com.br/deal/<id> link, or deal_id from list_deals): the deal's type, state, label as Amazon writes it, discount badge, end time and percent claimed, plus every product in it with ASIN, title, URL, image, deal price and list price with their labels, rating, review count and brand. A deal that Amazon shows no product for is refused.
 
 - Site: amazon.com.br
 - Address: `reduck/amazon.com.br/get_deal`
-- Updated: 2026-11-24 (v1)
+- Updated: 2026-11-25 (v1)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -35,7 +35,7 @@ npx @reduck-ai/cli@latest run --script reduck/amazon.com.br/get_deal
 
 ### What does "Get an Amazon.com.br deal" do?
 
-Read one deal on Amazon.com.br by its deal id (the 8-character id in an amazon.com.br/deal/<id> link, or deal_id from list_deals): the deal's type, state, label as Amazon writes it, discount badge, end time and percent claimed, plus every product in it with ASIN, title, URL, image, deal price and list price in reais with their labels, rating, review count and brand. A deal that Amazon shows no product for is refused.
+Read one deal on Amazon.com.br by its deal id (the 8-character id in an amazon.com.br/deal/<id> link, or deal_id from list_deals): the deal's type, state, label as Amazon writes it, discount badge, end time and percent claimed, plus every product in it with ASIN, title, URL, image, deal price and list price with their labels, rating, review count and brand. A deal that Amazon shows no product for is refused.
 
 ### How do I automatically get an Amazon.com.br deal on amazon.com.br?
 

@@ -4,7 +4,7 @@ Automatically get Brico Depot product on bricodepot.fr. Fetch one Brico Depot pr
 
 - Site: bricodepot.fr
 - Address: `reduck/bricodepot.fr/get-product`
-- Updated: 2026-11-24 (v1)
+- Updated: 2026-11-25 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -30,11 +30,14 @@ npx @reduck-ai/cli@latest run --script reduck/bricodepot.fr/get-product
 - `brand` (string | null, required)
 - `price` (number | null, required): Price in euros, taxes included.
 - `images` (array, required)
+- `rating` (number | null, required): Average customer rating out of 5; null when the product has no review.
 - `currency` (string, required)
 - `depot_id` (integer | null, required)
 - `attributes` (array, required)
 - `categories` (array, required)
 - `list_price` (number | null, required): Struck-through regular price when the product is discounted.
+- `description` (string | null, required): Product description of the page, as plain text with list items on their own lines. Null when the site has none.
+- `review_count` (integer, required): Number of customer reviews.
 - `stock_status` (string | null, required)
 - `measure_price` (object | null, required)
 - `price_excl_tax` (number | null, required)
@@ -61,7 +64,7 @@ Required: product. Optional: depot_id.
 
 ### What does it return?
 
-It returns ean, sku, url, name, unit, brand, price, images, currency, depot_id, attributes, categories, list_price, stock_status, measure_price, price_excl_tax, stock_quantity, available_at_depot.
+It returns ean, sku, url, name, unit, brand, price, images, rating, currency, depot_id, attributes, categories, list_price, description, review_count, stock_status, measure_price, price_excl_tax, stock_quantity, available_at_depot.
 
 ### Do I need to be logged in to bricodepot.fr?
 

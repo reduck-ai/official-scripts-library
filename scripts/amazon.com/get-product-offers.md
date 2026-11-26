@@ -4,7 +4,7 @@ Automatically get Amazon product offers from all sellers on amazon.com. See ever
 
 - Site: amazon.com
 - Address: `reduck/amazon.com/get-product-offers`
-- Updated: 2026-10-31 (v11)
+- Updated: 2026-11-25 (v12)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -68,6 +68,6 @@ Ask an AI agent connected to Reduck to run reduck/amazon.com/get-product-offers,
 
 ### Who maintains it?
 
-It is part of Reduck's official curated catalogue.
+It is one of Reduck's official scripts.
 
 Source: https://reduck.ai/explore/scripts/reduck/amazon.com/get-product-offers

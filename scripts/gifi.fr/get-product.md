@@ -1,10 +1,10 @@
 # Get Gifi product
 
-Automatically get Gifi product on gifi.fr. Fetch one Gifi.fr product page from its link (the url that Search Gifi products returns): id, name, price in euros, availability and condition as the site declares them, rating and review count, images, breadcrumb, whether the add button is enabled and the stock label shown. Gifi availability depends on the store chosen in the browser, so a product can read as unavailable until a store is selected. A page that does not exist fails with an error that says so; a link that is not a Gifi product page fails with an error.
+Automatically get Gifi product on gifi.fr. Fetch one Gifi.fr product page from its product id (e.g. 577264) or its link (the url that Search Gifi products returns), both passed as url: id, name, price in euros, availability and condition as the site declares them, rating and review count, images, breadcrumb, whether the add button is enabled and the stock label shown. Gifi availability depends on the store chosen in the browser, so a product can read as unavailable until a store is selected. A page that does not exist fails with an error that says so; a link that is not a Gifi product page fails with an error.
 
 - Site: gifi.fr
 - Address: `reduck/gifi.fr/get-product`
-- Updated: 2026-11-24 (v1)
+- Updated: 2026-11-25 (v1)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -39,7 +39,7 @@ npx @reduck-ai/cli@latest run --script reduck/gifi.fr/get-product
 
 ### What does "Get Gifi product" do?
 
-Fetch one Gifi.fr product page from its link (the url that Search Gifi products returns): id, name, price in euros, availability and condition as the site declares them, rating and review count, images, breadcrumb, whether the add button is enabled and the stock label shown. Gifi availability depends on the store chosen in the browser, so a product can read as unavailable until a store is selected. A page that does not exist fails with an error that says so; a link that is not a Gifi product page fails with an error.
+Fetch one Gifi.fr product page from its product id (e.g. 577264) or its link (the url that Search Gifi products returns), both passed as url: id, name, price in euros, availability and condition as the site declares them, rating and review count, images, breadcrumb, whether the add button is enabled and the stock label shown. Gifi availability depends on the store chosen in the browser, so a product can read as unavailable until a store is selected. A page that does not exist fails with an error that says so; a link that is not a Gifi product page fails with an error.
 
 ### How do I automatically get Gifi product on gifi.fr?
 

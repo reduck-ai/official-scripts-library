@@ -1,10 +1,10 @@
 # Search Amazon.de products
 
-Automatically search Amazon.de products on amazon.de. Search Amazon.de by free-text query, with Amazon's own filters: department, sort order, price range, and the refinements of its left column (Prime, delivery speed, brand, customer reviews, condition, seller and the product's attributes), whose values List Amazon search filters gives. Returns one page of results: query, page, zip, url, has_next_page and items (asin, title, url, price, list_price, rating, review_count, image_url, sponsored, deal, badges, formats). deal is the deal the card shows: its id, its label as Amazon writes it, and the end of its countdown when it shows one. badges are the other badges of the card, for example Amazon's Choice or a sustainability label. formats lists each edition a result links to (for example Hardcover, Kindle and Audiobook for a book), with its own ASIN, URL and price when shown. has_next_page is false on the last page, on a page past the last one (Amazon stops near page 20) and when nothing matches; then Amazon can still show a few unrelated sponsored products. Organic results are stable per page but sponsored slots rotate between fetches.
+Automatically search Amazon.de products on amazon.de. Search Amazon.de by free-text query, with Amazon's own filters: department, sort order, price range, and the refinements of its left column (Prime, delivery speed, brand, customer reviews, condition, seller and the product's attributes), whose values List Amazon search filters gives. Returns one page of results: query, page, zip, url, currency, has_next_page and items (asin, title, url, price, list_price, rating, review_count, image_url, sponsored, deal, badges, formats). deal is the deal the card shows: its id, its label as Amazon writes it, and the end of its countdown when it shows one. badges are the other badges of the card, for example Amazon's Choice or a sustainability label. formats lists each edition a result links to (for example Hardcover, Kindle and Audiobook for a book), with its own ASIN, URL and price when shown. Prices are in the currency the store displays, returned as currency: euros unless the browser prefers another. has_next_page is false on the last page, on a page past the last one (Amazon stops near page 20) and when nothing matches; then Amazon can still show a few unrelated sponsored products. Organic results are stable per page but sponsored slots rotate between fetches.
 
 - Site: amazon.de
 - Address: `reduck/amazon.de/search-products`
-- Updated: 2026-11-18 (v2)
+- Updated: 2026-11-25 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -21,8 +21,8 @@ npx @reduck-ai/cli@latest run --script reduck/amazon.de/search-products
 - `page` (integer, optional): Result page (about 16 to 22 organic results a page; Amazon stops near page 20). has_next_page says when to stop.
 - `sort` (string, optional): Sort order: relevanceblender (featured, the default), price-asc-rank, price-desc-rank, review-rank (average customer review), date-desc-rank (newest arrivals), exact-aware-popularity-rank (best sellers).
 - `zipCode` (string, optional): German postcode used to pin the store location (prices, availability).
-- `price_max` (number, optional): Maximum price in euros.
-- `price_min` (number, optional): Minimum price in euros.
+- `price_max` (number, optional): Maximum price, in euros: the store's own currency, even when the page displays another.
+- `price_min` (number, optional): Minimum price, in euros: the store's own currency, even when the page displays another.
 - `department` (string, optional): Department to search in, as its search alias, e.g. "stripbooks" (Books) or "electronics" (values from list_search_filters, key department). Default: all departments.
 - `refinements` (array, optional): Filters from Amazon's left column, each as group:value, e.g. "p_123:<id>" for a brand. Get them from List Amazon.de search filters for the same query: the ids are this store's own. Values of one group are alternatives; different groups all apply.
 
@@ -33,13 +33,14 @@ npx @reduck-ai/cli@latest run --script reduck/amazon.de/search-products
 - `page` (integer, required)
 - `items` (array, required): The results in page order, sponsored ones included. When nothing matches the query, Amazon can still show a few sponsored products that are not about it.
 - `query` (string, required)
+- `currency` (string, required): ISO 4217 code of the currency of every price in this result, as the store displays it: the store's own (euros (EUR)) unless the browser prefers another, which Amazon then shows instead.
 - `has_next_page` (boolean, required): True when Amazon offers a next page of results for this search. False on the last page, on a page past the last one, and when nothing matches the query.
 
 ## FAQ
 
 ### What does "Search Amazon.de products" do?
 
-Search Amazon.de by free-text query, with Amazon's own filters: department, sort order, price range, and the refinements of its left column (Prime, delivery speed, brand, customer reviews, condition, seller and the product's attributes), whose values List Amazon search filters gives. Returns one page of results: query, page, zip, url, has_next_page and items (asin, title, url, price, list_price, rating, review_count, image_url, sponsored, deal, badges, formats). deal is the deal the card shows: its id, its label as Amazon writes it, and the end of its countdown when it shows one. badges are the other badges of the card, for example Amazon's Choice or a sustainability label. formats lists each edition a result links to (for example Hardcover, Kindle and Audiobook for a book), with its own ASIN, URL and price when shown. has_next_page is false on the last page, on a page past the last one (Amazon stops near page 20) and when nothing matches; then Amazon can still show a few unrelated sponsored products. Organic results are stable per page but sponsored slots rotate between fetches.
+Search Amazon.de by free-text query, with Amazon's own filters: department, sort order, price range, and the refinements of its left column (Prime, delivery speed, brand, customer reviews, condition, seller and the product's attributes), whose values List Amazon search filters gives. Returns one page of results: query, page, zip, url, currency, has_next_page and items (asin, title, url, price, list_price, rating, review_count, image_url, sponsored, deal, badges, formats). deal is the deal the card shows: its id, its label as Amazon writes it, and the end of its countdown when it shows one. badges are the other badges of the card, for example Amazon's Choice or a sustainability label. formats lists each edition a result links to (for example Hardcover, Kindle and Audiobook for a book), with its own ASIN, URL and price when shown. Prices are in the currency the store displays, returned as currency: euros unless the browser prefers another. has_next_page is false on the last page, on a page past the last one (Amazon stops near page 20) and when nothing matches; then Amazon can still show a few unrelated sponsored products. Organic results are stable per page but sponsored slots rotate between fetches.
 
 ### How do I automatically search Amazon.de products on amazon.de?
 
@@ -55,7 +56,7 @@ Required: query. Optional: page, sort, zipCode, price_max, price_min, department
 
 ### What does it return?
 
-It returns url, zip, page, items, query, has_next_page.
+It returns url, zip, page, items, query, currency, has_next_page.
 
 ### Do I need to be logged in to amazon.de?
 
@@ -71,6 +72,6 @@ Ask an AI agent connected to Reduck to run reduck/amazon.de/search-products, or 
 
 ### Who maintains it?
 
-It is part of Reduck's official curated catalogue.
+It is one of Reduck's official scripts.
 
 Source: https://reduck.ai/explore/scripts/reduck/amazon.de/search-products

@@ -4,7 +4,7 @@ Automatically search Best Buy products on bestbuy.com. Search Best Buy (US) by f
 
 - Site: bestbuy.com
 - Address: `reduck/bestbuy.com/search-products`
-- Updated: 2026-11-24 (v6)
+- Updated: 2026-11-25 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it

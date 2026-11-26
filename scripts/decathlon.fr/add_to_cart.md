@@ -4,7 +4,7 @@ Automatically add Decathlon product to cart on decathlon.fr. Add a Decathlon.fr 
 
 - Site: decathlon.fr
 - Address: `reduck/decathlon.fr/add_to_cart`
-- Updated: 2026-11-24 (v2)
+- Updated: 2026-11-25 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically list Amazon deals on amazon.com. List the deals on Amazon.com's de
 
 - Site: amazon.com
 - Address: `reduck/amazon.com/list_deals`
-- Updated: 2026-11-24 (v1)
+- Updated: 2026-11-25 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -20,8 +20,8 @@ npx @reduck-ai/cli@latest run --script reduck/amazon.com/list_deals
 - `tab` (string, optional): A tab of the deals page, by its id from tabs (for example deal-collection-lightning). Omit for the page's default view.
 - `cursor` (integer, optional): next_cursor of the previous page; 0 for the first.
 - `zipCode` (string, optional): US ZIP code prices and availability are shown for. Default 10001.
-- `maxPrice` (number, optional): Maximum deal price, in dollars.
-- `minPrice` (number, optional): Minimum deal price, in dollars.
+- `maxPrice` (number, optional): Maximum deal price, in US dollars. Amazon offers this filter only while the page shows prices in the store's own currency; otherwise the run is refused and names the filters the page offers.
+- `minPrice` (number, optional): Minimum deal price, in US dollars. Amazon offers this filter only while the page shows prices in the store's own currency; otherwise the run is refused and names the filters the page offers.
 - `maxDiscount` (integer, optional): Maximum discount in percent.
 - `minDiscount` (integer, optional): Minimum discount in percent.
 - `refinements` (array, optional): Filters as group:value, taken from refinements of an earlier call: departments:<id>, brands:<id|name>, reviewRating:4, accessType:<id>. Values of one group are combined as the page does.

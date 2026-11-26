@@ -1,10 +1,10 @@
 # Get an Amazon.ca deal
 
-Automatically get an Amazon.ca deal on amazon.ca. Read one deal on Amazon.ca by its deal id (the 8-character id in an amazon.ca/deal/<id> link, or deal_id from list_deals): the deal's type, state, label as Amazon writes it, discount badge, end time and percent claimed, plus every product in it with ASIN, title, URL, image, deal price and list price in Canadian dollars with their labels, rating, review count and brand. A deal that Amazon shows no product for is refused.
+Automatically get an Amazon.ca deal on amazon.ca. Read one deal on Amazon.ca by its deal id (the 8-character id in an amazon.ca/deal/<id> link, or deal_id from list_deals): the deal's type, state, label as Amazon writes it, discount badge, end time and percent claimed, plus every product in it with ASIN, title, URL, image, deal price and list price with their labels, rating, review count and brand. A deal that Amazon shows no product for is refused.
 
 - Site: amazon.ca
 - Address: `reduck/amazon.ca/get_deal`
-- Updated: 2026-11-24 (v1)
+- Updated: 2026-11-25 (v1)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -35,7 +35,7 @@ npx @reduck-ai/cli@latest run --script reduck/amazon.ca/get_deal
 
 ### What does "Get an Amazon.ca deal" do?
 
-Read one deal on Amazon.ca by its deal id (the 8-character id in an amazon.ca/deal/<id> link, or deal_id from list_deals): the deal's type, state, label as Amazon writes it, discount badge, end time and percent claimed, plus every product in it with ASIN, title, URL, image, deal price and list price in Canadian dollars with their labels, rating, review count and brand. A deal that Amazon shows no product for is refused.
+Read one deal on Amazon.ca by its deal id (the 8-character id in an amazon.ca/deal/<id> link, or deal_id from list_deals): the deal's type, state, label as Amazon writes it, discount badge, end time and percent claimed, plus every product in it with ASIN, title, URL, image, deal price and list price with their labels, rating, review count and brand. A deal that Amazon shows no product for is refused.
 
 ### How do I automatically get an Amazon.ca deal on amazon.ca?
 

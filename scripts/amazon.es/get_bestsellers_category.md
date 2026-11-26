@@ -1,10 +1,10 @@
 # Get Amazon.es bestsellers by category
 
-Automatically get Amazon.es bestsellers by category on amazon.es. Read Amazon.es's Best Sellers list for a top-level category: rank, ASIN, title, price in euros, rating and review count. Pass the category's URL slug, as it appears on amazon.es/gp/bestsellers.
+Automatically get Amazon.es bestsellers by category on amazon.es. Read Amazon.es's Best Sellers list for a top-level category: rank, ASIN, title, price, rating and review count. Prices are in the currency the store displays, returned as currency: euros unless the browser prefers another. Pass the category's URL slug, as it appears on amazon.es/gp/bestsellers.
 
 - Site: amazon.es
 - Address: `reduck/amazon.es/get_bestsellers_category`
-- Updated: 2026-11-24 (v1)
+- Updated: 2026-11-25 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -23,13 +23,14 @@ npx @reduck-ai/cli@latest run --script reduck/amazon.es/get_bestsellers_category
 ## Output
 
 - `category` (string, required)
+- `currency` (string, required): ISO 4217 code of the currency of every price in this result, as the store displays it: the store's own (euros (EUR)) unless the browser prefers another, which Amazon then shows instead.
 - `products` (array, required)
 
 ## FAQ
 
 ### What does "Get Amazon.es bestsellers by category" do?
 
-Read Amazon.es's Best Sellers list for a top-level category: rank, ASIN, title, price in euros, rating and review count. Pass the category's URL slug, as it appears on amazon.es/gp/bestsellers.
+Read Amazon.es's Best Sellers list for a top-level category: rank, ASIN, title, price, rating and review count. Prices are in the currency the store displays, returned as currency: euros unless the browser prefers another. Pass the category's URL slug, as it appears on amazon.es/gp/bestsellers.
 
 ### How do I automatically get Amazon.es bestsellers by category on amazon.es?
 
@@ -45,7 +46,7 @@ Required: category. Optional: limit.
 
 ### What does it return?
 
-It returns category, products.
+It returns category, currency, products.
 
 ### Do I need to be logged in to amazon.es?
 

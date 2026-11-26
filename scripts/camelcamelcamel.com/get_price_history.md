@@ -4,7 +4,7 @@ Automatically get CamelCamelCamel Amazon price history on camelcamelcamel.com. G
 
 - Site: camelcamelcamel.com
 - Address: `reduck/camelcamelcamel.com/get_price_history`
-- Updated: 2026-11-24 (v1)
+- Updated: 2026-11-25 (v1)
 - Author: Reduck AI (reduck)
 
 ## Run it

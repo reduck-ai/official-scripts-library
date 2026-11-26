@@ -1,10 +1,10 @@
 # Get an Amazon.pl deal
 
-Automatically get an Amazon.pl deal on amazon.pl. Read one deal on Amazon.pl by its deal id (the 8-character id in an amazon.pl/deal/<id> link, or deal_id from list_deals): the deal's type, state, label as Amazon writes it, discount badge, end time and percent claimed, plus every product in it with ASIN, title, URL, image, deal price and list price in złoty with their labels, rating, review count and brand. A deal that Amazon shows no product for is refused.
+Automatically get an Amazon.pl deal on amazon.pl. Read one deal on Amazon.pl by its deal id (the 8-character id in an amazon.pl/deal/<id> link, or deal_id from list_deals): the deal's type, state, label as Amazon writes it, discount badge, end time and percent claimed, plus every product in it with ASIN, title, URL, image, deal price and list price with their labels, rating, review count and brand. A deal that Amazon shows no product for is refused.
 
 - Site: amazon.pl
 - Address: `reduck/amazon.pl/get_deal`
-- Updated: 2026-11-24 (v1)
+- Updated: 2026-11-25 (v1)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -35,7 +35,7 @@ npx @reduck-ai/cli@latest run --script reduck/amazon.pl/get_deal
 
 ### What does "Get an Amazon.pl deal" do?
 
-Read one deal on Amazon.pl by its deal id (the 8-character id in an amazon.pl/deal/<id> link, or deal_id from list_deals): the deal's type, state, label as Amazon writes it, discount badge, end time and percent claimed, plus every product in it with ASIN, title, URL, image, deal price and list price in złoty with their labels, rating, review count and brand. A deal that Amazon shows no product for is refused.
+Read one deal on Amazon.pl by its deal id (the 8-character id in an amazon.pl/deal/<id> link, or deal_id from list_deals): the deal's type, state, label as Amazon writes it, discount badge, end time and percent claimed, plus every product in it with ASIN, title, URL, image, deal price and list price with their labels, rating, review count and brand. A deal that Amazon shows no product for is refused.
 
 ### How do I automatically get an Amazon.pl deal on amazon.pl?
 

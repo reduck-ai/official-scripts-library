@@ -1,10 +1,10 @@
 # Get Amazon.co.uk bestsellers by category
 
-Automatically get Amazon.co.uk bestsellers by category on amazon.co.uk. Read Amazon.co.uk's Best Sellers list for a top-level category: rank, ASIN, title, price in pounds sterling, rating and review count. Pass the category's URL slug, as it appears in the Best Sellers URL.
+Automatically get Amazon.co.uk bestsellers by category on amazon.co.uk. Read Amazon.co.uk's Best Sellers list for a top-level category: rank, ASIN, title, price, rating and review count. Prices are in the currency the store displays, returned as currency: pounds sterling unless the browser prefers another. Pass the category's URL slug, as it appears in the Best Sellers URL.
 
 - Site: amazon.co.uk
 - Address: `reduck/amazon.co.uk/get_bestsellers_category`
-- Updated: 2026-11-24 (v1)
+- Updated: 2026-11-25 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -23,13 +23,14 @@ npx @reduck-ai/cli@latest run --script reduck/amazon.co.uk/get_bestsellers_categ
 ## Output
 
 - `category` (string, required)
+- `currency` (string, required): ISO 4217 code of the currency of every price in this result, as the store displays it: the store's own (pounds sterling (GBP)) unless the browser prefers another, which Amazon then shows instead.
 - `products` (array, required)
 
 ## FAQ
 
 ### What does "Get Amazon.co.uk bestsellers by category" do?
 
-Read Amazon.co.uk's Best Sellers list for a top-level category: rank, ASIN, title, price in pounds sterling, rating and review count. Pass the category's URL slug, as it appears in the Best Sellers URL.
+Read Amazon.co.uk's Best Sellers list for a top-level category: rank, ASIN, title, price, rating and review count. Prices are in the currency the store displays, returned as currency: pounds sterling unless the browser prefers another. Pass the category's URL slug, as it appears in the Best Sellers URL.
 
 ### How do I automatically get Amazon.co.uk bestsellers by category on amazon.co.uk?
 
@@ -45,7 +46,7 @@ Required: category. Optional: limit.
 
 ### What does it return?
 
-It returns category, products.
+It returns category, currency, products.
 
 ### Do I need to be logged in to amazon.co.uk?
 

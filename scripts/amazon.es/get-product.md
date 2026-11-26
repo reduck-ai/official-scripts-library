@@ -1,10 +1,10 @@
 # Get Amazon.es product
 
-Automatically get Amazon.es product on amazon.es. Fetch one Amazon.es product page by ASIN: title, byline, brand, price in euros, list price, rating, review count, rating breakdown, availability, breadcrumb, image, feature bullets, description, attributes, variants, deal, badges, delivery estimate, return policy and seller. deal is the deal the page shows: its id, its label as Amazon writes it and its end time. badges are the other badges next to the title, for example Amazon's Choice. The returned asin can differ from the requested one when Amazon resolves a variant.
+Automatically get Amazon.es product on amazon.es. Fetch one Amazon.es product page by ASIN: title, byline, brand, price and its currency, list price, rating, review count, rating breakdown, availability, breadcrumb, image, feature bullets, description, attributes, variants, deal, badges, delivery estimate, return policy and seller. deal is the deal the page shows: its id, its label as Amazon writes it and its end time. badges are the other badges next to the title, for example Amazon's Choice. The returned asin can differ from the requested one when Amazon resolves a variant.
 
 - Site: amazon.es
 - Address: `reduck/amazon.es/get-product`
-- Updated: 2026-11-24 (v2)
+- Updated: 2026-11-25 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -51,7 +51,7 @@ npx @reduck-ai/cli@latest run --script reduck/amazon.es/get-product
 
 ### What does "Get Amazon.es product" do?
 
-Fetch one Amazon.es product page by ASIN: title, byline, brand, price in euros, list price, rating, review count, rating breakdown, availability, breadcrumb, image, feature bullets, description, attributes, variants, deal, badges, delivery estimate, return policy and seller. deal is the deal the page shows: its id, its label as Amazon writes it and its end time. badges are the other badges next to the title, for example Amazon's Choice. The returned asin can differ from the requested one when Amazon resolves a variant.
+Fetch one Amazon.es product page by ASIN: title, byline, brand, price and its currency, list price, rating, review count, rating breakdown, availability, breadcrumb, image, feature bullets, description, attributes, variants, deal, badges, delivery estimate, return policy and seller. deal is the deal the page shows: its id, its label as Amazon writes it and its end time. badges are the other badges next to the title, for example Amazon's Choice. The returned asin can differ from the requested one when Amazon resolves a variant.
 
 ### How do I automatically get Amazon.es product on amazon.es?
 

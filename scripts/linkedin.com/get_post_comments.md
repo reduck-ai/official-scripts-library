@@ -4,7 +4,7 @@ Automatically get LinkedIn post comments on linkedin.com. Get the comments of a 
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/get_post_comments`
-- Updated: 2026-11-23 (v24)
+- Updated: 2026-11-25 (v26)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -19,7 +19,7 @@ npx @reduck-ai/cli@latest run --script reduck/linkedin.com/get_post_comments
 
 - `postUrl` (string, required): LinkedIn post permalink, e.g. https://www.linkedin.com/posts/<slug>-<id>-<code>/ or https://www.linkedin.com/feed/update/urn:li:activity:<id>/. Query string is stripped.
 - `sort` (string, optional): Comment sort, mirroring the post's own dropdown. 'relevant' is LinkedIn's default but returns a relevance-filtered subset (low-engagement comments are hidden); 'recent' shows all comments newest-first and is the only way to reach every comment. Use 'recent' when completeness matters.
-- `maxComments` (integer, optional): Maximum top-level comment threads to return. The script wheel-scrolls until this many are loaded or the post has no more; higher values cost proportionally more time.
+- `maxComments` (integer, optional): Maximum top-level comment threads to return. Fewer are returned when the post has fewer; higher values make the run take proportionally longer.
 
 ## Output
 
@@ -51,7 +51,7 @@ It returns total, comments, complete.
 
 ### Do I need to be logged in to linkedin.com?
 
-Yes. It acts as you on linkedin.com: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the linkedin.com cookies saved by the Reduck extension.
+Yes. It acts as you on linkedin.com: in your browser it reuses your session, and on a cloud browser it loads your Auth session cookies for linkedin.com.
 
 ### Does it change anything on linkedin.com, or only read data?
 
@@ -63,6 +63,6 @@ Ask an AI agent connected to Reduck to run reduck/linkedin.com/get_post_comments
 
 ### Who maintains it?
 
-It is part of Reduck's official curated catalogue.
+It is one of Reduck's official scripts.
 
 Source: https://reduck.ai/explore/scripts/reduck/linkedin.com/get_post_comments

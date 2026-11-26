@@ -4,7 +4,7 @@ Automatically read Discord messages on discord.com. Pull the latest messages of 
 
 - Site: discord.com
 - Address: `reduck/discord.com/read_messages`
-- Updated: 2026-11-22 (v32)
+- Updated: 2026-11-25 (v33)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -72,7 +72,7 @@ It returns count, complete, messages, channelId, nextBefore.
 
 ### Do I need to be logged in to discord.com?
 
-Yes. It acts as you on discord.com: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the discord.com cookies saved by the Reduck extension.
+Yes. It acts as you on discord.com: in your browser it reuses your session, and on a cloud browser it loads your Auth session cookies for discord.com.
 
 ### Does it change anything on discord.com, or only read data?
 
@@ -84,7 +84,7 @@ Ask an AI agent connected to Reduck to run reduck/discord.com/read_messages, or 
 
 ### Who maintains it?
 
-It is part of Reduck's official curated catalogue.
+It is one of Reduck's official scripts.
 
 ### How many messages can I read from a Discord channel in one run?
 

@@ -4,7 +4,7 @@ Automatically search IKEA France products on ikea.com. Search the IKEA France sh
 
 - Site: ikea.com
 - Address: `reduck/ikea.com/search-products`
-- Updated: 2026-11-24 (v2)
+- Updated: 2026-11-25 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

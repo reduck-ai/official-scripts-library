@@ -1,10 +1,10 @@
 # Get Amazon.es product offers from all sellers
 
-Automatically get Amazon.es product offers from all sellers on amazon.es. List every seller offering an Amazon.es product, one page of 10 offers at a time: price in euros, condition, seller name and id, seller rating, ships-from and delivery estimate. Page 1 also carries the buy-box offer. Prices are pinned to a Spanish postcode.
+Automatically get Amazon.es product offers from all sellers on amazon.es. List every seller offering an Amazon.es product, one page of 10 offers at a time: price as the store displays it, condition, seller name and id, seller rating, ships-from and delivery estimate. Page 1 also carries the buy-box offer. Prices are pinned to a Spanish postcode.
 
 - Site: amazon.es
 - Address: `reduck/amazon.es/get-product-offers`
-- Updated: 2026-11-24 (v1)
+- Updated: 2026-11-25 (v1)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -36,7 +36,7 @@ npx @reduck-ai/cli@latest run --script reduck/amazon.es/get-product-offers
 
 ### What does "Get Amazon.es product offers from all sellers" do?
 
-List every seller offering an Amazon.es product, one page of 10 offers at a time: price in euros, condition, seller name and id, seller rating, ships-from and delivery estimate. Page 1 also carries the buy-box offer. Prices are pinned to a Spanish postcode.
+List every seller offering an Amazon.es product, one page of 10 offers at a time: price as the store displays it, condition, seller name and id, seller rating, ships-from and delivery estimate. Page 1 also carries the buy-box offer. Prices are pinned to a Spanish postcode.
 
 ### How do I automatically get Amazon.es product offers from all sellers on amazon.es?
 

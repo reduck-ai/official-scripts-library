@@ -1,10 +1,10 @@
 # Get Amazon.co.jp product
 
-Automatically get Amazon.co.jp product on amazon.co.jp. Fetch one Amazon.co.jp product page by ASIN: title, byline, brand, price in the currency the page shows (Japanese yen unless the browser asks Amazon for another), list price, rating, review count, rating breakdown, availability, breadcrumb, image, feature bullets, description, attributes, variants, deal, badges, delivery estimate, return policy and seller. deal is the deal the page shows: its id, its label as Amazon writes it and its end time. badges are the other badges next to the title. The returned asin can differ from the requested one when Amazon resolves a variant.
+Automatically get Amazon.co.jp product on amazon.co.jp. Fetch one Amazon.co.jp product page by ASIN: title, byline, brand, price and its currency, list price, rating, review count, rating breakdown, availability, breadcrumb, image, feature bullets, description, attributes, variants, deal, badges, delivery estimate, return policy and seller. deal is the deal the page shows: its id, its label as Amazon writes it and its end time. badges are the other badges next to the title. The returned asin can differ from the requested one when Amazon resolves a variant.
 
 - Site: amazon.co.jp
 - Address: `reduck/amazon.co.jp/get-product`
-- Updated: 2026-11-24 (v1)
+- Updated: 2026-11-25 (v1)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -51,7 +51,7 @@ npx @reduck-ai/cli@latest run --script reduck/amazon.co.jp/get-product
 
 ### What does "Get Amazon.co.jp product" do?
 
-Fetch one Amazon.co.jp product page by ASIN: title, byline, brand, price in the currency the page shows (Japanese yen unless the browser asks Amazon for another), list price, rating, review count, rating breakdown, availability, breadcrumb, image, feature bullets, description, attributes, variants, deal, badges, delivery estimate, return policy and seller. deal is the deal the page shows: its id, its label as Amazon writes it and its end time. badges are the other badges next to the title. The returned asin can differ from the requested one when Amazon resolves a variant.
+Fetch one Amazon.co.jp product page by ASIN: title, byline, brand, price and its currency, list price, rating, review count, rating breakdown, availability, breadcrumb, image, feature bullets, description, attributes, variants, deal, badges, delivery estimate, return policy and seller. deal is the deal the page shows: its id, its label as Amazon writes it and its end time. badges are the other badges next to the title. The returned asin can differ from the requested one when Amazon resolves a variant.
 
 ### How do I automatically get Amazon.co.jp product on amazon.co.jp?
 

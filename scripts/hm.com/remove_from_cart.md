@@ -1,10 +1,10 @@
 # Remove H&M France product from cart
 
-Automatically remove H&M France product from cart on hm.com. Remove a product from the H&M France guest cart of this browser (hm.com/fr_fr), whatever its quantity, and return what is left: each line with variant id, product id, name, brand, size, color, quantity, unit price and line price in euros, plus the item count and the items subtotal. Pass a variant id (product id plus size code) to remove that size, or a product id to remove every size of it. A product that is not in the cart is reported with removed false and the cart unchanged, not as a failure.
+Automatically remove H&M France product from cart on hm.com. Remove a product from the H&M France guest cart of this browser (hm.com/fr_fr), whatever its quantity, and return what is left: the item count, the items subtotal in euros and each line with its product id, variant id (offerId), name, seller, quantity, unit price and line price, plus removed. Pass a variant id to remove one size, or a product id or link to remove every size of that product. A product that is not in the cart gives removed false and the cart unchanged, not an error.
 
 - Site: hm.com
 - Address: `reduck/hm.com/remove_from_cart`
-- Updated: 2026-11-24 (v1)
+- Updated: 2026-11-25 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -30,7 +30,7 @@ npx @reduck-ai/cli@latest run --script reduck/hm.com/remove_from_cart
 
 ### What does "Remove H&M France product from cart" do?
 
-Remove a product from the H&M France guest cart of this browser (hm.com/fr_fr), whatever its quantity, and return what is left: each line with variant id, product id, name, brand, size, color, quantity, unit price and line price in euros, plus the item count and the items subtotal. Pass a variant id (product id plus size code) to remove that size, or a product id to remove every size of it. A product that is not in the cart is reported with removed false and the cart unchanged, not as a failure.
+Remove a product from the H&M France guest cart of this browser (hm.com/fr_fr), whatever its quantity, and return what is left: the item count, the items subtotal in euros and each line with its product id, variant id (offerId), name, seller, quantity, unit price and line price, plus removed. Pass a variant id to remove one size, or a product id or link to remove every size of that product. A product that is not in the cart gives removed false and the cart unchanged, not an error.
 
 ### How do I automatically remove H&M France product from cart on hm.com?
 

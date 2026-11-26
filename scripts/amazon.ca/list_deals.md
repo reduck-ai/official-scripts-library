@@ -1,10 +1,10 @@
 # List Amazon.ca deals
 
-Automatically list Amazon.ca deals on amazon.ca. List the deals on Amazon.ca's deals page (Today's Deals, Black Friday), one page of 30 at a time: each deal's ASIN, title, URL, image, deal price and list price in Canadian dollars with their labels as Amazon writes them, the discount badge, the deal label as Amazon writes it and its end time, deal id, type (LIGHTNING_DEAL, BEST_DEAL, TOP_DEAL) and state, percent claimed for lightning deals, rating, review count and brand. Optional: a tab of the page by the id from tabs, refinements as group:value taken from refinements, a discount range in percent and a price range, when the page offers them. Returns the store's tabs and the refinements available for this view. Pass next_cursor back as cursor for the next page; it is null when the page is empty. A filter the page does not offer is refused, not ignored. Tabs and filters change with Amazon's events. A product without a deal of its own can appear in the grid; its deal fields are null.
+Automatically list Amazon.ca deals on amazon.ca. List the deals on Amazon.ca's deals page (Today's Deals, Black Friday), one page of 30 at a time: each deal's ASIN, title, URL, image, deal price and list price with their labels as Amazon writes them and the currency the page shows, the discount badge, the deal label as Amazon writes it and its end time, deal id, type (LIGHTNING_DEAL, BEST_DEAL, TOP_DEAL) and state, percent claimed for lightning deals, rating, review count and brand. Optional: a tab of the page by the id from tabs, refinements as group:value taken from refinements, a discount range in percent and a price range, when the page offers them. Returns the store's tabs and the refinements available for this view. Pass next_cursor back as cursor for the next page; it is null when the page is empty. A filter the page does not offer is refused, not ignored. Tabs and filters change with Amazon's events. A product without a deal of its own can appear in the grid; its deal fields are null.
 
 - Site: amazon.ca
 - Address: `reduck/amazon.ca/list_deals`
-- Updated: 2026-11-24 (v1)
+- Updated: 2026-11-25 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -19,8 +19,8 @@ npx @reduck-ai/cli@latest run --script reduck/amazon.ca/list_deals
 
 - `tab` (string, optional): A tab of the deals page, by its id from tabs. Omit for the page's default view.
 - `cursor` (integer, optional): next_cursor of the previous page; 0 for the first.
-- `maxPrice` (number, optional): Maximum deal price, in Canadian dollars.
-- `minPrice` (number, optional): Minimum deal price, in Canadian dollars.
+- `maxPrice` (number, optional): Maximum deal price, in Canadian dollars. Amazon offers this filter only while the page shows prices in the store's own currency; otherwise the run is refused and names the filters the page offers.
+- `minPrice` (number, optional): Minimum deal price, in Canadian dollars. Amazon offers this filter only while the page shows prices in the store's own currency; otherwise the run is refused and names the filters the page offers.
 - `maxDiscount` (integer, optional): Maximum discount in percent, when the page offers a discount filter.
 - `minDiscount` (integer, optional): Minimum discount in percent, when the page offers a discount filter.
 - `refinements` (array, optional): Filters as group:value, taken from refinements of an earlier call (departments, brands, reviewRating, accessType…).
@@ -38,7 +38,7 @@ npx @reduck-ai/cli@latest run --script reduck/amazon.ca/list_deals
 
 ### What does "List Amazon.ca deals" do?
 
-List the deals on Amazon.ca's deals page (Today's Deals, Black Friday), one page of 30 at a time: each deal's ASIN, title, URL, image, deal price and list price in Canadian dollars with their labels as Amazon writes them, the discount badge, the deal label as Amazon writes it and its end time, deal id, type (LIGHTNING_DEAL, BEST_DEAL, TOP_DEAL) and state, percent claimed for lightning deals, rating, review count and brand. Optional: a tab of the page by the id from tabs, refinements as group:value taken from refinements, a discount range in percent and a price range, when the page offers them. Returns the store's tabs and the refinements available for this view. Pass next_cursor back as cursor for the next page; it is null when the page is empty. A filter the page does not offer is refused, not ignored. Tabs and filters change with Amazon's events. A product without a deal of its own can appear in the grid; its deal fields are null.
+List the deals on Amazon.ca's deals page (Today's Deals, Black Friday), one page of 30 at a time: each deal's ASIN, title, URL, image, deal price and list price with their labels as Amazon writes them and the currency the page shows, the discount badge, the deal label as Amazon writes it and its end time, deal id, type (LIGHTNING_DEAL, BEST_DEAL, TOP_DEAL) and state, percent claimed for lightning deals, rating, review count and brand. Optional: a tab of the page by the id from tabs, refinements as group:value taken from refinements, a discount range in percent and a price range, when the page offers them. Returns the store's tabs and the refinements available for this view. Pass next_cursor back as cursor for the next page; it is null when the page is empty. A filter the page does not offer is refused, not ignored. Tabs and filters change with Amazon's events. A product without a deal of its own can appear in the grid; its deal fields are null.
 
 ### How do I automatically list Amazon.ca deals on amazon.ca?
 

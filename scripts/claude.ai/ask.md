@@ -4,7 +4,7 @@ Automatically ask Claude on claude.ai on claude.ai. Open a new Claude.ai chat, s
 
 - Site: claude.ai
 - Address: `reduck/claude.ai/ask`
-- Updated: 2026-11-12 (v32)
+- Updated: 2026-11-25 (v33)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -56,7 +56,7 @@ It returns url, model, answer, sources, searches, citations, messageId, stopReas
 
 ### Do I need to be logged in to claude.ai?
 
-Yes. It acts as you on claude.ai: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the claude.ai cookies saved by the Reduck extension.
+Yes. It acts as you on claude.ai: in your browser it reuses your session, and on a cloud browser it loads your Auth session cookies for claude.ai.
 
 ### Does it change anything on claude.ai, or only read data?
 
@@ -68,6 +68,6 @@ Ask an AI agent connected to Reduck to run reduck/claude.ai/ask, or run it from 
 
 ### Who maintains it?
 
-It is part of Reduck's official curated catalogue.
+It is one of Reduck's official scripts.
 
 Source: https://reduck.ai/explore/scripts/reduck/claude.ai/ask

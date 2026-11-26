@@ -1,10 +1,10 @@
 # Etsy search listings
 
-Searches Etsy listings by keyword and returns every listing on one results page (about 60, ads included as Etsy shows them) with title, link, price, original price when on sale, currency, shop and image, plus Etsy's total match count. Use page to go further. Etsy always suggests near matches, so an empty list is rare; availability is not shown in search results and comes back null.
+Searches Etsy listings by keyword and returns every listing on one results page (about 60, ads included as Etsy shows them) with title, link, price, original price when on sale, currency, shop and image, plus Etsy's total match count. Use page to go further. Etsy always suggests near matches, so an empty list is rare; availability is not shown in search results and comes back null. On a managed browser, set country to US: Etsy blocks managed browsers that have no country.
 
 - Site: etsy.com
 - Address: `reduck/etsy.com/search_listings`
-- Updated: 2026-11-19 (v4)
+- Updated: 2026-11-25 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -33,7 +33,7 @@ npx @reduck-ai/cli@latest run --script reduck/etsy.com/search_listings
 
 ### What does "Etsy search listings" do?
 
-Searches Etsy listings by keyword and returns every listing on one results page (about 60, ads included as Etsy shows them) with title, link, price, original price when on sale, currency, shop and image, plus Etsy's total match count. Use page to go further. Etsy always suggests near matches, so an empty list is rare; availability is not shown in search results and comes back null.
+Searches Etsy listings by keyword and returns every listing on one results page (about 60, ads included as Etsy shows them) with title, link, price, original price when on sale, currency, shop and image, plus Etsy's total match count. Use page to go further. Etsy always suggests near matches, so an empty list is rare; availability is not shown in search results and comes back null. On a managed browser, set country to US: Etsy blocks managed browsers that have no country.
 
 ### What information do I need to provide?
 
@@ -57,6 +57,6 @@ Ask an AI agent connected to Reduck to run reduck/etsy.com/search_listings, or r
 
 ### Who maintains it?
 
-It is part of Reduck's official curated catalogue.
+It is one of Reduck's official scripts.
 
 Source: https://reduck.ai/explore/scripts/reduck/etsy.com/search_listings

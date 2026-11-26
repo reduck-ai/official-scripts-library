@@ -1,10 +1,10 @@
 # Search Amazon.nl products
 
-Automatically search Amazon.nl products on amazon.nl. Search Amazon.nl by free-text query, with Amazon's own filters: department, sort order, price range and refinements. Returns one page of results (asin, title, url, price, list_price, rating, review_count, image_url, sponsored, deal, badges, formats) with has_next_page. deal is the deal the card shows: its id, its label as Amazon writes it, and the end of its countdown when it shows one. badges are the other badges of the card, for example Amazon's Choice. Prices are in euros. Amazon.nl takes no postcode from a signed-out visitor (only a country), so the delivery location is the one the browser already has and zip is empty.
+Automatically search Amazon.nl products on amazon.nl. Search Amazon.nl by free-text query, with Amazon's own filters: department, sort order, price range and refinements. Returns one page of results (asin, title, url, price, list_price, rating, review_count, image_url, sponsored, deal, badges, formats) with currency and has_next_page. deal is the deal the card shows: its id, its label as Amazon writes it, and the end of its countdown when it shows one. badges are the other badges of the card, for example Amazon's Choice. Prices are in the currency the store displays, returned as currency: euros unless the browser prefers another. Amazon.nl takes no postcode from a signed-out visitor (only a country), so the delivery location is the one the browser already has and zip is empty.
 
 - Site: amazon.nl
 - Address: `reduck/amazon.nl/search-products`
-- Updated: 2026-11-24 (v1)
+- Updated: 2026-11-25 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -20,8 +20,8 @@ npx @reduck-ai/cli@latest run --script reduck/amazon.nl/search-products
 - `query` (string, required): Free-text search query.
 - `page` (integer, optional): Result page. has_next_page says when to stop.
 - `sort` (string, optional): Sort order.
-- `price_max` (number, optional): Maximum price in euros.
-- `price_min` (number, optional): Minimum price in euros.
+- `price_max` (number, optional): Maximum price, in euros: the store's own currency, even when the page displays another.
+- `price_min` (number, optional): Minimum price, in euros: the store's own currency, even when the page displays another.
 - `department` (string, optional): Department search alias, as in Amazon's i= URL parameter.
 - `refinements` (array, optional): Filters as group:value, as in Amazon's rh= URL parameter.
 
@@ -32,13 +32,14 @@ npx @reduck-ai/cli@latest run --script reduck/amazon.nl/search-products
 - `page` (integer, required)
 - `items` (array, required)
 - `query` (string, required)
+- `currency` (string, required): ISO 4217 code of the currency of every price in this result, as the store displays it: the store's own (euros (EUR)) unless the browser prefers another, which Amazon then shows instead.
 - `has_next_page` (boolean, required)
 
 ## FAQ
 
 ### What does "Search Amazon.nl products" do?
 
-Search Amazon.nl by free-text query, with Amazon's own filters: department, sort order, price range and refinements. Returns one page of results (asin, title, url, price, list_price, rating, review_count, image_url, sponsored, deal, badges, formats) with has_next_page. deal is the deal the card shows: its id, its label as Amazon writes it, and the end of its countdown when it shows one. badges are the other badges of the card, for example Amazon's Choice. Prices are in euros. Amazon.nl takes no postcode from a signed-out visitor (only a country), so the delivery location is the one the browser already has and zip is empty.
+Search Amazon.nl by free-text query, with Amazon's own filters: department, sort order, price range and refinements. Returns one page of results (asin, title, url, price, list_price, rating, review_count, image_url, sponsored, deal, badges, formats) with currency and has_next_page. deal is the deal the card shows: its id, its label as Amazon writes it, and the end of its countdown when it shows one. badges are the other badges of the card, for example Amazon's Choice. Prices are in the currency the store displays, returned as currency: euros unless the browser prefers another. Amazon.nl takes no postcode from a signed-out visitor (only a country), so the delivery location is the one the browser already has and zip is empty.
 
 ### How do I automatically search Amazon.nl products on amazon.nl?
 
@@ -54,7 +55,7 @@ Required: query. Optional: page, sort, price_max, price_min, department, refinem
 
 ### What does it return?
 
-It returns url, zip, page, items, query, has_next_page.
+It returns url, zip, page, items, query, currency, has_next_page.
 
 ### Do I need to be logged in to amazon.nl?
 

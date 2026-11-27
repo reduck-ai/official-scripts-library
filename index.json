@@ -1,5 +1,5 @@
 {
-	"count": 1717,
+	"count": 1905,
 	"scripts": [
 		{
 			"address": "@reduck/99designs.com/login_with_google",
@@ -12,6 +12,12 @@
 			"path": "scripts/99designs.com/whoami.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/99designs.com/whoami",
 			"lastmod": "2026-11-18"
+		},
+		{
+			"address": "@reduck/ably.com/invite_user",
+			"path": "scripts/ably.com/invite_user.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/ably.com/invite_user",
+			"lastmod": "2026-11-26"
 		},
 		{
 			"address": "@reduck/account.postmarkapp.com/download_invoice",
@@ -197,7 +203,7 @@
 			"address": "@reduck/airbnb.com/get_listing",
 			"path": "scripts/airbnb.com/get_listing.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/airbnb.com/get_listing",
-			"lastmod": "2026-11-23"
+			"lastmod": "2026-11-26"
 		},
 		{
 			"address": "@reduck/airbnb.com/get_reservation",
@@ -296,10 +302,34 @@
 			"lastmod": "2026-11-25"
 		},
 		{
+			"address": "@reduck/aliexpress.com/add_to_cart",
+			"path": "scripts/aliexpress.com/add_to_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/aliexpress.com/add_to_cart",
+			"lastmod": "2026-11-26"
+		},
+		{
 			"address": "@reduck/aliexpress.com/get_product",
 			"path": "scripts/aliexpress.com/get_product.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/aliexpress.com/get_product",
 			"lastmod": "2026-11-25"
+		},
+		{
+			"address": "@reduck/aliexpress.com/get-product",
+			"path": "scripts/aliexpress.com/get-product.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/aliexpress.com/get-product",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/aliexpress.com/list_cart_items",
+			"path": "scripts/aliexpress.com/list_cart_items.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/aliexpress.com/list_cart_items",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/aliexpress.com/remove_from_cart",
+			"path": "scripts/aliexpress.com/remove_from_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/aliexpress.com/remove_from_cart",
+			"lastmod": "2026-11-26"
 		},
 		{
 			"address": "@reduck/aliexpress.com/search_products",
@@ -638,6 +668,12 @@
 			"lastmod": "2026-11-25"
 		},
 		{
+			"address": "@reduck/amazon.com.mx/get_deal",
+			"path": "scripts/amazon.com.mx/get_deal.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/amazon.com.mx/get_deal",
+			"lastmod": "2026-11-26"
+		},
+		{
 			"address": "@reduck/amazon.com.mx/get-product-reviews",
 			"path": "scripts/amazon.com.mx/get-product-reviews.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/amazon.com.mx/get-product-reviews",
@@ -650,6 +686,12 @@
 			"lastmod": "2026-11-25"
 		},
 		{
+			"address": "@reduck/amazon.com.mx/list_deals",
+			"path": "scripts/amazon.com.mx/list_deals.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/amazon.com.mx/list_deals",
+			"lastmod": "2026-11-26"
+		},
+		{
 			"address": "@reduck/amazon.com.mx/search-products",
 			"path": "scripts/amazon.com.mx/search-products.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/amazon.com.mx/search-products",
@@ -660,6 +702,12 @@
 			"path": "scripts/amazon.com.tr/get_deal.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/amazon.com.tr/get_deal",
 			"lastmod": "2026-11-25"
+		},
+		{
+			"address": "@reduck/amazon.com.tr/get-product-reviews",
+			"path": "scripts/amazon.com.tr/get-product-reviews.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/amazon.com.tr/get-product-reviews",
+			"lastmod": "2026-11-26"
 		},
 		{
 			"address": "@reduck/amazon.com.tr/get-product",
@@ -768,6 +816,12 @@
 			"path": "scripts/amazon.com/list_deals.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/amazon.com/list_deals",
 			"lastmod": "2026-11-25"
+		},
+		{
+			"address": "@reduck/amazon.com/list_orders",
+			"path": "scripts/amazon.com/list_orders.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/amazon.com/list_orders",
+			"lastmod": "2026-11-26"
 		},
 		{
 			"address": "@reduck/amazon.com/list_search_filters",
@@ -1172,6 +1226,24 @@
 			"lastmod": "2026-10-31"
 		},
 		{
+			"address": "@reduck/amazon.in/get-product-offers",
+			"path": "scripts/amazon.in/get-product-offers.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/amazon.in/get-product-offers",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/amazon.in/get-product",
+			"path": "scripts/amazon.in/get-product.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/amazon.in/get-product",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/amazon.in/search-products",
+			"path": "scripts/amazon.in/search-products.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/amazon.in/search-products",
+			"lastmod": "2026-11-26"
+		},
+		{
 			"address": "@reduck/amazon.it/get_deal",
 			"path": "scripts/amazon.it/get_deal.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/amazon.it/get_deal",
@@ -1268,6 +1340,12 @@
 			"lastmod": "2026-11-25"
 		},
 		{
+			"address": "@reduck/amazon.se/get_deal",
+			"path": "scripts/amazon.se/get_deal.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/amazon.se/get_deal",
+			"lastmod": "2026-11-26"
+		},
+		{
 			"address": "@reduck/amazon.se/get-product-reviews",
 			"path": "scripts/amazon.se/get-product-reviews.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/amazon.se/get-product-reviews",
@@ -1284,6 +1362,12 @@
 			"path": "scripts/amazon.se/list_deals.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/amazon.se/list_deals",
 			"lastmod": "2026-11-25"
+		},
+		{
+			"address": "@reduck/amazon.se/search-products",
+			"path": "scripts/amazon.se/search-products.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/amazon.se/search-products",
+			"lastmod": "2026-11-26"
 		},
 		{
 			"address": "@reduck/apec.fr/search_jobs",
@@ -1802,6 +1886,48 @@
 			"lastmod": "2026-10-22"
 		},
 		{
+			"address": "@reduck/asos.com/get-product",
+			"path": "scripts/asos.com/get-product.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/asos.com/get-product",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/asos.com/search-products",
+			"path": "scripts/asos.com/search-products.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/asos.com/search-products",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/athleta.gap.com/add_to_cart",
+			"path": "scripts/athleta.gap.com/add_to_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/athleta.gap.com/add_to_cart",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/athleta.gap.com/get-product",
+			"path": "scripts/athleta.gap.com/get-product.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/athleta.gap.com/get-product",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/athleta.gap.com/list_cart_items",
+			"path": "scripts/athleta.gap.com/list_cart_items.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/athleta.gap.com/list_cart_items",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/athleta.gap.com/remove_from_cart",
+			"path": "scripts/athleta.gap.com/remove_from_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/athleta.gap.com/remove_from_cart",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/athleta.gap.com/search-products",
+			"path": "scripts/athleta.gap.com/search-products.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/athleta.gap.com/search-products",
+			"lastmod": "2026-11-26"
+		},
+		{
 			"address": "@reduck/atlassian.com/login_with_google",
 			"path": "scripts/atlassian.com/login_with_google.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/atlassian.com/login_with_google",
@@ -1860,6 +1986,42 @@
 			"path": "scripts/attio.com/whoami.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/attio.com/whoami",
 			"lastmod": "2026-11-18"
+		},
+		{
+			"address": "@reduck/auchan.fr/add_to_cart",
+			"path": "scripts/auchan.fr/add_to_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/auchan.fr/add_to_cart",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/auchan.fr/get-product-offers",
+			"path": "scripts/auchan.fr/get-product-offers.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/auchan.fr/get-product-offers",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/auchan.fr/get-product",
+			"path": "scripts/auchan.fr/get-product.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/auchan.fr/get-product",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/auchan.fr/list_cart_items",
+			"path": "scripts/auchan.fr/list_cart_items.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/auchan.fr/list_cart_items",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/auchan.fr/remove_from_cart",
+			"path": "scripts/auchan.fr/remove_from_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/auchan.fr/remove_from_cart",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/auchan.fr/search-products",
+			"path": "scripts/auchan.fr/search-products.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/auchan.fr/search-products",
+			"lastmod": "2026-11-26"
 		},
 		{
 			"address": "@reduck/autozone.com/add_to_cart",
@@ -1934,6 +2096,36 @@
 			"lastmod": "2026-11-04"
 		},
 		{
+			"address": "@reduck/bananarepublic.gap.com/add_to_cart",
+			"path": "scripts/bananarepublic.gap.com/add_to_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/bananarepublic.gap.com/add_to_cart",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/bananarepublic.gap.com/get-product",
+			"path": "scripts/bananarepublic.gap.com/get-product.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/bananarepublic.gap.com/get-product",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/bananarepublic.gap.com/list_cart_items",
+			"path": "scripts/bananarepublic.gap.com/list_cart_items.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/bananarepublic.gap.com/list_cart_items",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/bananarepublic.gap.com/remove_from_cart",
+			"path": "scripts/bananarepublic.gap.com/remove_from_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/bananarepublic.gap.com/remove_from_cart",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/bananarepublic.gap.com/search-products",
+			"path": "scripts/bananarepublic.gap.com/search-products.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/bananarepublic.gap.com/search-products",
+			"lastmod": "2026-11-26"
+		},
+		{
 			"address": "@reduck/bankofamerica.com/get-auto-loan-rates",
 			"path": "scripts/bankofamerica.com/get-auto-loan-rates.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/bankofamerica.com/get-auto-loan-rates",
@@ -1956,6 +2148,36 @@
 			"path": "scripts/barreaunantes.fr/list_lawyers.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/barreaunantes.fr/list_lawyers",
 			"lastmod": "2026-11-03"
+		},
+		{
+			"address": "@reduck/bedbathandbeyond.com/add_to_cart",
+			"path": "scripts/bedbathandbeyond.com/add_to_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/bedbathandbeyond.com/add_to_cart",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/bedbathandbeyond.com/get-product",
+			"path": "scripts/bedbathandbeyond.com/get-product.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/bedbathandbeyond.com/get-product",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/bedbathandbeyond.com/list_cart_items",
+			"path": "scripts/bedbathandbeyond.com/list_cart_items.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/bedbathandbeyond.com/list_cart_items",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/bedbathandbeyond.com/remove_from_cart",
+			"path": "scripts/bedbathandbeyond.com/remove_from_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/bedbathandbeyond.com/remove_from_cart",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/bedbathandbeyond.com/search-products",
+			"path": "scripts/bedbathandbeyond.com/search-products.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/bedbathandbeyond.com/search-products",
+			"lastmod": "2026-11-26"
 		},
 		{
 			"address": "@reduck/behance.net/get_project",
@@ -2448,6 +2670,42 @@
 			"path": "scripts/capterra.com/get_product_reviews.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/capterra.com/get_product_reviews",
 			"lastmod": "2026-11-05"
+		},
+		{
+			"address": "@reduck/carrefour.fr/add_to_cart",
+			"path": "scripts/carrefour.fr/add_to_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/carrefour.fr/add_to_cart",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/carrefour.fr/get-product-offers",
+			"path": "scripts/carrefour.fr/get-product-offers.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/carrefour.fr/get-product-offers",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/carrefour.fr/get-product",
+			"path": "scripts/carrefour.fr/get-product.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/carrefour.fr/get-product",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/carrefour.fr/list_cart_items",
+			"path": "scripts/carrefour.fr/list_cart_items.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/carrefour.fr/list_cart_items",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/carrefour.fr/remove_from_cart",
+			"path": "scripts/carrefour.fr/remove_from_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/carrefour.fr/remove_from_cart",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/carrefour.fr/search-products",
+			"path": "scripts/carrefour.fr/search-products.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/carrefour.fr/search-products",
+			"lastmod": "2026-11-26"
 		},
 		{
 			"address": "@reduck/castorama.fr/add_to_cart",
@@ -3026,6 +3284,36 @@
 			"lastmod": "2026-10-29"
 		},
 		{
+			"address": "@reduck/containerstore.com/add_to_cart",
+			"path": "scripts/containerstore.com/add_to_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/containerstore.com/add_to_cart",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/containerstore.com/get-product",
+			"path": "scripts/containerstore.com/get-product.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/containerstore.com/get-product",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/containerstore.com/list_cart_items",
+			"path": "scripts/containerstore.com/list_cart_items.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/containerstore.com/list_cart_items",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/containerstore.com/remove_from_cart",
+			"path": "scripts/containerstore.com/remove_from_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/containerstore.com/remove_from_cart",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/containerstore.com/search-products",
+			"path": "scripts/containerstore.com/search-products.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/containerstore.com/search-products",
+			"lastmod": "2026-11-26"
+		},
+		{
 			"address": "@reduck/coolblue.nl/add_to_cart",
 			"path": "scripts/coolblue.nl/add_to_cart.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/coolblue.nl/add_to_cart",
@@ -3080,6 +3368,36 @@
 			"lastmod": "2026-11-02"
 		},
 		{
+			"address": "@reduck/crateandbarrel.com/add_to_cart",
+			"path": "scripts/crateandbarrel.com/add_to_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/crateandbarrel.com/add_to_cart",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/crateandbarrel.com/get-product",
+			"path": "scripts/crateandbarrel.com/get-product.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/crateandbarrel.com/get-product",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/crateandbarrel.com/list_cart_items",
+			"path": "scripts/crateandbarrel.com/list_cart_items.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/crateandbarrel.com/list_cart_items",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/crateandbarrel.com/remove_from_cart",
+			"path": "scripts/crateandbarrel.com/remove_from_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/crateandbarrel.com/remove_from_cart",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/crateandbarrel.com/search-products",
+			"path": "scripts/crateandbarrel.com/search-products.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/crateandbarrel.com/search-products",
+			"lastmod": "2026-11-26"
+		},
+		{
 			"address": "@reduck/creators.n8n.io/get_my_template",
 			"path": "scripts/creators.n8n.io/get_my_template.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/creators.n8n.io/get_my_template",
@@ -3131,7 +3449,7 @@
 			"address": "@reduck/crunchbase.com/get_current_user",
 			"path": "scripts/crunchbase.com/get_current_user.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/crunchbase.com/get_current_user",
-			"lastmod": "2026-11-25"
+			"lastmod": "2026-11-26"
 		},
 		{
 			"address": "@reduck/crunchbase.com/get_investor_portfolio",
@@ -3210,6 +3528,12 @@
 			"path": "scripts/cursor.com/whoami.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/cursor.com/whoami",
 			"lastmod": "2026-11-18"
+		},
+		{
+			"address": "@reduck/cvs.com/get-product",
+			"path": "scripts/cvs.com/get-product.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/cvs.com/get-product",
+			"lastmod": "2026-11-26"
 		},
 		{
 			"address": "@reduck/darty.com/get-product",
@@ -3534,6 +3858,36 @@
 			"path": "scripts/discord.com/whoami.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/discord.com/whoami",
 			"lastmod": "2026-11-02"
+		},
+		{
+			"address": "@reduck/dm.de/add_to_cart",
+			"path": "scripts/dm.de/add_to_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/dm.de/add_to_cart",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/dm.de/get-product",
+			"path": "scripts/dm.de/get-product.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/dm.de/get-product",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/dm.de/list_cart_items",
+			"path": "scripts/dm.de/list_cart_items.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/dm.de/list_cart_items",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/dm.de/remove_from_cart",
+			"path": "scripts/dm.de/remove_from_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/dm.de/remove_from_cart",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/dm.de/search-products",
+			"path": "scripts/dm.de/search-products.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/dm.de/search-products",
+			"lastmod": "2026-11-26"
 		},
 		{
 			"address": "@reduck/docs.google.com/append_text",
@@ -4076,6 +4430,12 @@
 			"lastmod": "2026-11-24"
 		},
 		{
+			"address": "@reduck/elcorteingles.es/search-products",
+			"path": "scripts/elcorteingles.es/search-products.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/elcorteingles.es/search-products",
+			"lastmod": "2026-11-26"
+		},
+		{
 			"address": "@reduck/emag.ro/add_to_cart",
 			"path": "scripts/emag.ro/add_to_cart.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/emag.ro/add_to_cart",
@@ -4382,16 +4742,46 @@
 			"lastmod": "2026-10-30"
 		},
 		{
+			"address": "@reduck/flipkart.com/add_to_cart",
+			"path": "scripts/flipkart.com/add_to_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/flipkart.com/add_to_cart",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/flipkart.com/get-product-offers",
+			"path": "scripts/flipkart.com/get-product-offers.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/flipkart.com/get-product-offers",
+			"lastmod": "2026-11-26"
+		},
+		{
 			"address": "@reduck/flipkart.com/get-product-reviews",
 			"path": "scripts/flipkart.com/get-product-reviews.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/flipkart.com/get-product-reviews",
 			"lastmod": "2026-11-24"
 		},
 		{
+			"address": "@reduck/flipkart.com/get-product",
+			"path": "scripts/flipkart.com/get-product.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/flipkart.com/get-product",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/flipkart.com/list_cart_items",
+			"path": "scripts/flipkart.com/list_cart_items.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/flipkart.com/list_cart_items",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/flipkart.com/remove_from_cart",
+			"path": "scripts/flipkart.com/remove_from_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/flipkart.com/remove_from_cart",
+			"lastmod": "2026-11-26"
+		},
+		{
 			"address": "@reduck/flipkart.com/search-products",
 			"path": "scripts/flipkart.com/search-products.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/flipkart.com/search-products",
-			"lastmod": "2026-11-24"
+			"lastmod": "2026-11-26"
 		},
 		{
 			"address": "@reduck/fnac.com/add_to_cart",
@@ -4415,13 +4805,25 @@
 			"address": "@reduck/fnac.com/list_cart_items",
 			"path": "scripts/fnac.com/list_cart_items.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/fnac.com/list_cart_items",
-			"lastmod": "2026-11-25"
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/fnac.com/remove_from_cart",
+			"path": "scripts/fnac.com/remove_from_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/fnac.com/remove_from_cart",
+			"lastmod": "2026-11-26"
 		},
 		{
 			"address": "@reduck/fnac.com/search-products",
 			"path": "scripts/fnac.com/search-products.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/fnac.com/search-products",
 			"lastmod": "2026-11-25"
+		},
+		{
+			"address": "@reduck/footlocker.com/get-product",
+			"path": "scripts/footlocker.com/get-product.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/footlocker.com/get-product",
+			"lastmod": "2026-11-26"
 		},
 		{
 			"address": "@reduck/francetravail.fr/search_jobs",
@@ -4494,6 +4896,42 @@
 			"path": "scripts/gamestop.com/search-products.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/gamestop.com/search-products",
 			"lastmod": "2026-11-25"
+		},
+		{
+			"address": "@reduck/gap.com/add_to_cart",
+			"path": "scripts/gap.com/add_to_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/gap.com/add_to_cart",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/gap.com/get-product",
+			"path": "scripts/gap.com/get-product.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/gap.com/get-product",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/gap.com/list_cart_items",
+			"path": "scripts/gap.com/list_cart_items.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/gap.com/list_cart_items",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/gap.com/remove_from_cart",
+			"path": "scripts/gap.com/remove_from_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/gap.com/remove_from_cart",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/gap.com/search-products",
+			"path": "scripts/gap.com/search-products.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/gap.com/search-products",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/geizhals.de/get_price_history",
+			"path": "scripts/geizhals.de/get_price_history.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/geizhals.de/get_price_history",
+			"lastmod": "2026-11-26"
 		},
 		{
 			"address": "@reduck/geizhals.de/search_products",
@@ -4727,7 +5165,7 @@
 			"address": "@reduck/google.com/search_flights",
 			"path": "scripts/google.com/search_flights.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/google.com/search_flights",
-			"lastmod": "2026-11-23"
+			"lastmod": "2026-11-26"
 		},
 		{
 			"address": "@reduck/google.com/search_places",
@@ -4868,6 +5306,12 @@
 			"lastmod": "2026-11-24"
 		},
 		{
+			"address": "@reduck/hepsiburada.com/search-products",
+			"path": "scripts/hepsiburada.com/search-products.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/hepsiburada.com/search-products",
+			"lastmod": "2026-11-26"
+		},
+		{
 			"address": "@reduck/himalayas.app/search_jobs",
 			"path": "scripts/himalayas.app/search_jobs.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/himalayas.app/search_jobs",
@@ -4976,6 +5420,36 @@
 			"lastmod": "2026-11-24"
 		},
 		{
+			"address": "@reduck/hp.com/add_to_cart",
+			"path": "scripts/hp.com/add_to_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/hp.com/add_to_cart",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/hp.com/get-product",
+			"path": "scripts/hp.com/get-product.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/hp.com/get-product",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/hp.com/list_cart_items",
+			"path": "scripts/hp.com/list_cart_items.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/hp.com/list_cart_items",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/hp.com/remove_from_cart",
+			"path": "scripts/hp.com/remove_from_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/hp.com/remove_from_cart",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/hp.com/search-products",
+			"path": "scripts/hp.com/search-products.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/hp.com/search-products",
+			"lastmod": "2026-11-26"
+		},
+		{
 			"address": "@reduck/huggingface.co/get_repo",
 			"path": "scripts/huggingface.co/get_repo.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/huggingface.co/get_repo",
@@ -5027,7 +5501,13 @@
 			"address": "@reduck/idealo.fr/search_products",
 			"path": "scripts/idealo.fr/search_products.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/idealo.fr/search_products",
-			"lastmod": "2026-11-24"
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/idealo.it/get_price_history",
+			"path": "scripts/idealo.it/get_price_history.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/idealo.it/get_price_history",
+			"lastmod": "2026-11-26"
 		},
 		{
 			"address": "@reduck/idealo.it/search_products",
@@ -5094,6 +5574,42 @@
 			"path": "scripts/infogreffe.fr/get_company.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/infogreffe.fr/get_company",
 			"lastmod": "2026-11-03"
+		},
+		{
+			"address": "@reduck/instacart.com/add_to_cart",
+			"path": "scripts/instacart.com/add_to_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/instacart.com/add_to_cart",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/instacart.com/get-product-offers",
+			"path": "scripts/instacart.com/get-product-offers.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/instacart.com/get-product-offers",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/instacart.com/get-product",
+			"path": "scripts/instacart.com/get-product.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/instacart.com/get-product",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/instacart.com/list_cart_items",
+			"path": "scripts/instacart.com/list_cart_items.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/instacart.com/list_cart_items",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/instacart.com/remove_from_cart",
+			"path": "scripts/instacart.com/remove_from_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/instacart.com/remove_from_cart",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/instacart.com/search-products",
+			"path": "scripts/instacart.com/search-products.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/instacart.com/search-products",
+			"lastmod": "2026-11-26"
 		},
 		{
 			"address": "@reduck/instagram.com/block_user",
@@ -5411,13 +5927,37 @@
 			"address": "@reduck/instagram.com/whoami",
 			"path": "scripts/instagram.com/whoami.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/instagram.com/whoami",
-			"lastmod": "2026-11-18"
+			"lastmod": "2026-11-26"
 		},
 		{
 			"address": "@reduck/instagram.com/write_comment",
 			"path": "scripts/instagram.com/write_comment.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/instagram.com/write_comment",
 			"lastmod": "2026-10-22"
+		},
+		{
+			"address": "@reduck/intermarche.com/get-product",
+			"path": "scripts/intermarche.com/get-product.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/intermarche.com/get-product",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/intermarche.com/list_cart_items",
+			"path": "scripts/intermarche.com/list_cart_items.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/intermarche.com/list_cart_items",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/intermarche.com/remove_from_cart",
+			"path": "scripts/intermarche.com/remove_from_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/intermarche.com/remove_from_cart",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/intermarche.com/search-products",
+			"path": "scripts/intermarche.com/search-products.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/intermarche.com/search-products",
+			"lastmod": "2026-11-26"
 		},
 		{
 			"address": "@reduck/invoice.stripe.com/download_invoice_pdf",
@@ -5444,6 +5984,36 @@
 			"lastmod": "2026-10-20"
 		},
 		{
+			"address": "@reduck/johnlewis.com/add_to_cart",
+			"path": "scripts/johnlewis.com/add_to_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/johnlewis.com/add_to_cart",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/johnlewis.com/get-product",
+			"path": "scripts/johnlewis.com/get-product.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/johnlewis.com/get-product",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/johnlewis.com/list_cart_items",
+			"path": "scripts/johnlewis.com/list_cart_items.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/johnlewis.com/list_cart_items",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/johnlewis.com/remove_from_cart",
+			"path": "scripts/johnlewis.com/remove_from_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/johnlewis.com/remove_from_cart",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/johnlewis.com/search-products",
+			"path": "scripts/johnlewis.com/search-products.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/johnlewis.com/search-products",
+			"lastmod": "2026-11-26"
+		},
+		{
 			"address": "@reduck/jooble.org/search_jobs",
 			"path": "scripts/jooble.org/search_jobs.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/jooble.org/search_jobs",
@@ -5453,7 +6023,7 @@
 			"address": "@reduck/kayak.fr/search_flights_roundtrip",
 			"path": "scripts/kayak.fr/search_flights_roundtrip.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/kayak.fr/search_flights_roundtrip",
-			"lastmod": "2026-11-25"
+			"lastmod": "2026-11-26"
 		},
 		{
 			"address": "@reduck/keepa.com/get_price_history",
@@ -5544,6 +6114,36 @@
 			"path": "scripts/kleinanzeigen.de/search_listings.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/kleinanzeigen.de/search_listings",
 			"lastmod": "2026-10-30"
+		},
+		{
+			"address": "@reduck/kroger.com/add_to_cart",
+			"path": "scripts/kroger.com/add_to_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/kroger.com/add_to_cart",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/kroger.com/get-product",
+			"path": "scripts/kroger.com/get-product.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/kroger.com/get-product",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/kroger.com/list_cart_items",
+			"path": "scripts/kroger.com/list_cart_items.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/kroger.com/list_cart_items",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/kroger.com/remove_from_cart",
+			"path": "scripts/kroger.com/remove_from_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/kroger.com/remove_from_cart",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/kroger.com/search-products",
+			"path": "scripts/kroger.com/search-products.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/kroger.com/search-products",
+			"lastmod": "2026-11-26"
 		},
 		{
 			"address": "@reduck/la-french-tech.welcomekit.co/search_jobs",
@@ -5664,6 +6264,18 @@
 			"path": "scripts/lemlist.com/whoami.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/lemlist.com/whoami",
 			"lastmod": "2026-11-18"
+		},
+		{
+			"address": "@reduck/lenovo.com/get-product",
+			"path": "scripts/lenovo.com/get-product.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/lenovo.com/get-product",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/lenovo.com/search-products",
+			"path": "scripts/lenovo.com/search-products.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/lenovo.com/search-products",
+			"lastmod": "2026-11-26"
 		},
 		{
 			"address": "@reduck/leroymerlin.fr/add_to_cart",
@@ -6293,7 +6905,7 @@
 			"address": "@reduck/linkedin.com/search_posts",
 			"path": "scripts/linkedin.com/search_posts.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/linkedin.com/search_posts",
-			"lastmod": "2026-10-30"
+			"lastmod": "2026-11-26"
 		},
 		{
 			"address": "@reduck/linkedin.com/send_inmail",
@@ -6360,6 +6972,18 @@
 			"path": "scripts/linkedin.com/withdraw.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/linkedin.com/withdraw",
 			"lastmod": "2026-11-02"
+		},
+		{
+			"address": "@reduck/llbean.com/get-product",
+			"path": "scripts/llbean.com/get-product.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/llbean.com/get-product",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/llbean.com/search-products",
+			"path": "scripts/llbean.com/search-products.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/llbean.com/search-products",
+			"lastmod": "2026-11-26"
 		},
 		{
 			"address": "@reduck/loom.com/get_transcript",
@@ -6443,7 +7067,7 @@
 			"address": "@reduck/lowes.com/search-products",
 			"path": "scripts/lowes.com/search-products.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/lowes.com/search-products",
-			"lastmod": "2026-11-25"
+			"lastmod": "2026-11-26"
 		},
 		{
 			"address": "@reduck/lucid.app/download_invoice",
@@ -6528,6 +7152,18 @@
 			"path": "scripts/luma.com/whoami.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/luma.com/whoami",
 			"lastmod": "2026-11-18"
+		},
+		{
+			"address": "@reduck/macys.com/get-product",
+			"path": "scripts/macys.com/get-product.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/macys.com/get-product",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/macys.com/search-products",
+			"path": "scripts/macys.com/search-products.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/macys.com/search-products",
+			"lastmod": "2026-11-26"
 		},
 		{
 			"address": "@reduck/mail.google.com/add_label",
@@ -6824,6 +7460,42 @@
 			"lastmod": "2026-11-05"
 		},
 		{
+			"address": "@reduck/mercadolibre.com/add_to_cart",
+			"path": "scripts/mercadolibre.com/add_to_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/mercadolibre.com/add_to_cart",
+			"lastmod": "2026-11-25"
+		},
+		{
+			"address": "@reduck/mercadolibre.com/get-product-offers",
+			"path": "scripts/mercadolibre.com/get-product-offers.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/mercadolibre.com/get-product-offers",
+			"lastmod": "2026-11-25"
+		},
+		{
+			"address": "@reduck/mercadolibre.com/get-product",
+			"path": "scripts/mercadolibre.com/get-product.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/mercadolibre.com/get-product",
+			"lastmod": "2026-11-25"
+		},
+		{
+			"address": "@reduck/mercadolibre.com/list_cart_items",
+			"path": "scripts/mercadolibre.com/list_cart_items.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/mercadolibre.com/list_cart_items",
+			"lastmod": "2026-11-25"
+		},
+		{
+			"address": "@reduck/mercadolibre.com/remove_from_cart",
+			"path": "scripts/mercadolibre.com/remove_from_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/mercadolibre.com/remove_from_cart",
+			"lastmod": "2026-11-25"
+		},
+		{
+			"address": "@reduck/mercadolibre.com/search-products",
+			"path": "scripts/mercadolibre.com/search-products.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/mercadolibre.com/search-products",
+			"lastmod": "2026-11-25"
+		},
+		{
 			"address": "@reduck/meteoblue.com/get_14day_forecast",
 			"path": "scripts/meteoblue.com/get_14day_forecast.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/meteoblue.com/get_14day_forecast",
@@ -6840,6 +7512,66 @@
 			"path": "scripts/meteojob.com/search_jobs.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/meteojob.com/search_jobs",
 			"lastmod": "2026-11-04"
+		},
+		{
+			"address": "@reduck/microcenter.com/add_to_cart",
+			"path": "scripts/microcenter.com/add_to_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/microcenter.com/add_to_cart",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/microcenter.com/get-product",
+			"path": "scripts/microcenter.com/get-product.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/microcenter.com/get-product",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/microcenter.com/list_cart_items",
+			"path": "scripts/microcenter.com/list_cart_items.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/microcenter.com/list_cart_items",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/microcenter.com/remove_from_cart",
+			"path": "scripts/microcenter.com/remove_from_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/microcenter.com/remove_from_cart",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/microcenter.com/search-products",
+			"path": "scripts/microcenter.com/search-products.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/microcenter.com/search-products",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/micromania.fr/add_to_cart",
+			"path": "scripts/micromania.fr/add_to_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/micromania.fr/add_to_cart",
+			"lastmod": "2026-11-24"
+		},
+		{
+			"address": "@reduck/micromania.fr/get-product",
+			"path": "scripts/micromania.fr/get-product.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/micromania.fr/get-product",
+			"lastmod": "2026-11-24"
+		},
+		{
+			"address": "@reduck/micromania.fr/list_cart_items",
+			"path": "scripts/micromania.fr/list_cart_items.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/micromania.fr/list_cart_items",
+			"lastmod": "2026-11-24"
+		},
+		{
+			"address": "@reduck/micromania.fr/remove_from_cart",
+			"path": "scripts/micromania.fr/remove_from_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/micromania.fr/remove_from_cart",
+			"lastmod": "2026-11-24"
+		},
+		{
+			"address": "@reduck/micromania.fr/search-products",
+			"path": "scripts/micromania.fr/search-products.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/micromania.fr/search-products",
+			"lastmod": "2026-11-24"
 		},
 		{
 			"address": "@reduck/miro.com/download_invoice",
@@ -6878,6 +7610,36 @@
 			"lastmod": "2026-10-20"
 		},
 		{
+			"address": "@reduck/muse.ai/ask",
+			"path": "scripts/muse.ai/ask.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/muse.ai/ask",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/muse.ai/get_chat",
+			"path": "scripts/muse.ai/get_chat.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/muse.ai/get_chat",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/muse.ai/list_chats",
+			"path": "scripts/muse.ai/list_chats.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/muse.ai/list_chats",
+			"lastmod": "2026-11-25"
+		},
+		{
+			"address": "@reduck/muse.ai/search_chats",
+			"path": "scripts/muse.ai/search_chats.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/muse.ai/search_chats",
+			"lastmod": "2026-11-25"
+		},
+		{
+			"address": "@reduck/muse.ai/send_message",
+			"path": "scripts/muse.ai/send_message.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/muse.ai/send_message",
+			"lastmod": "2026-11-25"
+		},
+		{
 			"address": "@reduck/my.surfshark.com/login_with_google",
 			"path": "scripts/my.surfshark.com/login_with_google.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/my.surfshark.com/login_with_google",
@@ -6890,6 +7652,24 @@
 			"lastmod": "2026-10-22"
 		},
 		{
+			"address": "@reduck/mydealz.de/get_deal",
+			"path": "scripts/mydealz.de/get_deal.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/mydealz.de/get_deal",
+			"lastmod": "2026-11-24"
+		},
+		{
+			"address": "@reduck/mydealz.de/list_hot_deals",
+			"path": "scripts/mydealz.de/list_hot_deals.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/mydealz.de/list_hot_deals",
+			"lastmod": "2026-11-24"
+		},
+		{
+			"address": "@reduck/mydealz.de/search_deals",
+			"path": "scripts/mydealz.de/search_deals.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/mydealz.de/search_deals",
+			"lastmod": "2026-11-24"
+		},
+		{
 			"address": "@reduck/n8n.io/get_template",
 			"path": "scripts/n8n.io/get_template.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/n8n.io/get_template",
@@ -6900,6 +7680,42 @@
 			"path": "scripts/n8n.io/search_templates.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/n8n.io/search_templates",
 			"lastmod": "2026-11-02"
+		},
+		{
+			"address": "@reduck/newegg.com/add_to_cart",
+			"path": "scripts/newegg.com/add_to_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/newegg.com/add_to_cart",
+			"lastmod": "2026-11-25"
+		},
+		{
+			"address": "@reduck/newegg.com/get-product-offers",
+			"path": "scripts/newegg.com/get-product-offers.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/newegg.com/get-product-offers",
+			"lastmod": "2026-11-25"
+		},
+		{
+			"address": "@reduck/newegg.com/get-product",
+			"path": "scripts/newegg.com/get-product.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/newegg.com/get-product",
+			"lastmod": "2026-11-25"
+		},
+		{
+			"address": "@reduck/newegg.com/list_cart_items",
+			"path": "scripts/newegg.com/list_cart_items.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/newegg.com/list_cart_items",
+			"lastmod": "2026-11-25"
+		},
+		{
+			"address": "@reduck/newegg.com/remove_from_cart",
+			"path": "scripts/newegg.com/remove_from_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/newegg.com/remove_from_cart",
+			"lastmod": "2026-11-25"
+		},
+		{
+			"address": "@reduck/newegg.com/search-products",
+			"path": "scripts/newegg.com/search-products.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/newegg.com/search-products",
+			"lastmod": "2026-11-25"
 		},
 		{
 			"address": "@reduck/news.crunchbase.com/get_article",
@@ -6938,16 +7754,46 @@
 			"lastmod": "2026-08-26"
 		},
 		{
+			"address": "@reduck/nike.com/get-product",
+			"path": "scripts/nike.com/get-product.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/nike.com/get-product",
+			"lastmod": "2026-11-25"
+		},
+		{
 			"address": "@reduck/nike.com/search_products",
 			"path": "scripts/nike.com/search_products.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/nike.com/search_products",
-			"lastmod": "2026-09-11"
+			"lastmod": "2026-11-25"
+		},
+		{
+			"address": "@reduck/nike.com/search-products",
+			"path": "scripts/nike.com/search-products.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/nike.com/search-products",
+			"lastmod": "2026-11-25"
 		},
 		{
 			"address": "@reduck/nike.com/whoami",
 			"path": "scripts/nike.com/whoami.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/nike.com/whoami",
 			"lastmod": "2026-10-22"
+		},
+		{
+			"address": "@reduck/noon.com/get-product-reviews",
+			"path": "scripts/noon.com/get-product-reviews.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/noon.com/get-product-reviews",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/noon.com/get-product",
+			"path": "scripts/noon.com/get-product.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/noon.com/get-product",
+			"lastmod": "2026-11-24"
+		},
+		{
+			"address": "@reduck/noon.com/search-products",
+			"path": "scripts/noon.com/search-products.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/noon.com/search-products",
+			"lastmod": "2026-11-24"
 		},
 		{
 			"address": "@reduck/noota.io/download_recording",
@@ -7038,6 +7884,66 @@
 			"path": "scripts/numerous.ai/whoami.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/numerous.ai/whoami",
 			"lastmod": "2026-10-22"
+		},
+		{
+			"address": "@reduck/officedepot.com/add_to_cart",
+			"path": "scripts/officedepot.com/add_to_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/officedepot.com/add_to_cart",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/officedepot.com/get-product",
+			"path": "scripts/officedepot.com/get-product.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/officedepot.com/get-product",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/officedepot.com/list_cart_items",
+			"path": "scripts/officedepot.com/list_cart_items.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/officedepot.com/list_cart_items",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/officedepot.com/remove_from_cart",
+			"path": "scripts/officedepot.com/remove_from_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/officedepot.com/remove_from_cart",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/officedepot.com/search-products",
+			"path": "scripts/officedepot.com/search-products.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/officedepot.com/search-products",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/oldnavy.gap.com/add_to_cart",
+			"path": "scripts/oldnavy.gap.com/add_to_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/oldnavy.gap.com/add_to_cart",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/oldnavy.gap.com/get-product",
+			"path": "scripts/oldnavy.gap.com/get-product.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/oldnavy.gap.com/get-product",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/oldnavy.gap.com/list_cart_items",
+			"path": "scripts/oldnavy.gap.com/list_cart_items.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/oldnavy.gap.com/list_cart_items",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/oldnavy.gap.com/remove_from_cart",
+			"path": "scripts/oldnavy.gap.com/remove_from_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/oldnavy.gap.com/remove_from_cart",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/oldnavy.gap.com/search-products",
+			"path": "scripts/oldnavy.gap.com/search-products.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/oldnavy.gap.com/search-products",
+			"lastmod": "2026-11-26"
 		},
 		{
 			"address": "@reduck/open.spotify.com/add_tracks_to_playlist",
@@ -7166,6 +8072,36 @@
 			"lastmod": "2026-10-22"
 		},
 		{
+			"address": "@reduck/overstock.com/add_to_cart",
+			"path": "scripts/overstock.com/add_to_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/overstock.com/add_to_cart",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/overstock.com/get-product",
+			"path": "scripts/overstock.com/get-product.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/overstock.com/get-product",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/overstock.com/list_cart_items",
+			"path": "scripts/overstock.com/list_cart_items.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/overstock.com/list_cart_items",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/overstock.com/remove_from_cart",
+			"path": "scripts/overstock.com/remove_from_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/overstock.com/remove_from_cart",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/overstock.com/search-products",
+			"path": "scripts/overstock.com/search-products.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/overstock.com/search-products",
+			"lastmod": "2026-11-26"
+		},
+		{
 			"address": "@reduck/pap.fr/search_listings",
 			"path": "scripts/pap.fr/search_listings.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/pap.fr/search_listings",
@@ -7232,6 +8168,54 @@
 			"lastmod": "2026-11-06"
 		},
 		{
+			"address": "@reduck/pccomponentes.com/get-product",
+			"path": "scripts/pccomponentes.com/get-product.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/pccomponentes.com/get-product",
+			"lastmod": "2026-11-24"
+		},
+		{
+			"address": "@reduck/pccomponentes.com/search-products",
+			"path": "scripts/pccomponentes.com/search-products.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/pccomponentes.com/search-products",
+			"lastmod": "2026-11-24"
+		},
+		{
+			"address": "@reduck/pelando.com.br/get_deal",
+			"path": "scripts/pelando.com.br/get_deal.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/pelando.com.br/get_deal",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/pelando.com.br/list_hot_deals",
+			"path": "scripts/pelando.com.br/list_hot_deals.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/pelando.com.br/list_hot_deals",
+			"lastmod": "2026-11-24"
+		},
+		{
+			"address": "@reduck/pelando.com.br/search_deals",
+			"path": "scripts/pelando.com.br/search_deals.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/pelando.com.br/search_deals",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/pepper.pl/get_deal",
+			"path": "scripts/pepper.pl/get_deal.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/pepper.pl/get_deal",
+			"lastmod": "2026-11-24"
+		},
+		{
+			"address": "@reduck/pepper.pl/list_hot_deals",
+			"path": "scripts/pepper.pl/list_hot_deals.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/pepper.pl/list_hot_deals",
+			"lastmod": "2026-11-24"
+		},
+		{
+			"address": "@reduck/pepper.pl/search_deals",
+			"path": "scripts/pepper.pl/search_deals.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/pepper.pl/search_deals",
+			"lastmod": "2026-11-24"
+		},
+		{
 			"address": "@reduck/perplexity.ai/ask",
 			"path": "scripts/perplexity.ai/ask.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/perplexity.ai/ask",
@@ -7272,6 +8256,66 @@
 			"path": "scripts/perplexity.ai/whoami.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/perplexity.ai/whoami",
 			"lastmod": "2026-10-29"
+		},
+		{
+			"address": "@reduck/petsmart.com/add_to_cart",
+			"path": "scripts/petsmart.com/add_to_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/petsmart.com/add_to_cart",
+			"lastmod": "2026-11-25"
+		},
+		{
+			"address": "@reduck/petsmart.com/get-product",
+			"path": "scripts/petsmart.com/get-product.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/petsmart.com/get-product",
+			"lastmod": "2026-11-25"
+		},
+		{
+			"address": "@reduck/petsmart.com/list_cart_items",
+			"path": "scripts/petsmart.com/list_cart_items.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/petsmart.com/list_cart_items",
+			"lastmod": "2026-11-25"
+		},
+		{
+			"address": "@reduck/petsmart.com/remove_from_cart",
+			"path": "scripts/petsmart.com/remove_from_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/petsmart.com/remove_from_cart",
+			"lastmod": "2026-11-25"
+		},
+		{
+			"address": "@reduck/petsmart.com/search-products",
+			"path": "scripts/petsmart.com/search-products.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/petsmart.com/search-products",
+			"lastmod": "2026-11-25"
+		},
+		{
+			"address": "@reduck/picard.fr/add_to_cart",
+			"path": "scripts/picard.fr/add_to_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/picard.fr/add_to_cart",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/picard.fr/get-product",
+			"path": "scripts/picard.fr/get-product.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/picard.fr/get-product",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/picard.fr/list_cart_items",
+			"path": "scripts/picard.fr/list_cart_items.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/picard.fr/list_cart_items",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/picard.fr/remove_from_cart",
+			"path": "scripts/picard.fr/remove_from_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/picard.fr/remove_from_cart",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/picard.fr/search-products",
+			"path": "scripts/picard.fr/search-products.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/picard.fr/search-products",
+			"lastmod": "2026-11-26"
 		},
 		{
 			"address": "@reduck/pinterest.com/get_pin",
@@ -7481,7 +8525,7 @@
 			"address": "@reduck/producthunt.com/upvote_launch",
 			"path": "scripts/producthunt.com/upvote_launch.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/producthunt.com/upvote_launch",
-			"lastmod": "2026-10-23"
+			"lastmod": "2026-11-25"
 		},
 		{
 			"address": "@reduck/producthunt.com/whoami",
@@ -7524,6 +8568,54 @@
 			"path": "scripts/qonto.com/whoami.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/qonto.com/whoami",
 			"lastmod": "2026-10-19"
+		},
+		{
+			"address": "@reduck/qvc.com/add_to_cart",
+			"path": "scripts/qvc.com/add_to_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/qvc.com/add_to_cart",
+			"lastmod": "2026-11-25"
+		},
+		{
+			"address": "@reduck/qvc.com/get-product",
+			"path": "scripts/qvc.com/get-product.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/qvc.com/get-product",
+			"lastmod": "2026-11-25"
+		},
+		{
+			"address": "@reduck/qvc.com/list_cart_items",
+			"path": "scripts/qvc.com/list_cart_items.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/qvc.com/list_cart_items",
+			"lastmod": "2026-11-25"
+		},
+		{
+			"address": "@reduck/qvc.com/remove_from_cart",
+			"path": "scripts/qvc.com/remove_from_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/qvc.com/remove_from_cart",
+			"lastmod": "2026-11-25"
+		},
+		{
+			"address": "@reduck/qvc.com/search-products",
+			"path": "scripts/qvc.com/search-products.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/qvc.com/search-products",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/rakuten.co.jp/get-product-reviews",
+			"path": "scripts/rakuten.co.jp/get-product-reviews.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/rakuten.co.jp/get-product-reviews",
+			"lastmod": "2026-11-24"
+		},
+		{
+			"address": "@reduck/rakuten.co.jp/get-product",
+			"path": "scripts/rakuten.co.jp/get-product.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/rakuten.co.jp/get-product",
+			"lastmod": "2026-11-24"
+		},
+		{
+			"address": "@reduck/rakuten.co.jp/search-products",
+			"path": "scripts/rakuten.co.jp/search-products.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/rakuten.co.jp/search-products",
+			"lastmod": "2026-11-24"
 		},
 		{
 			"address": "@reduck/ratp.fr/get_metro_traffic_status",
@@ -7608,6 +8700,12 @@
 			"path": "scripts/reddit.com/get_inbox.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/reddit.com/get_inbox",
 			"lastmod": "2026-10-22"
+		},
+		{
+			"address": "@reduck/reddit.com/get_notifications",
+			"path": "scripts/reddit.com/get_notifications.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/reddit.com/get_notifications",
+			"lastmod": "2026-11-24"
 		},
 		{
 			"address": "@reduck/reddit.com/get_subreddit_info",
@@ -7788,6 +8886,36 @@
 			"path": "scripts/riders.uber.com/whoami.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/riders.uber.com/whoami",
 			"lastmod": "2026-11-18"
+		},
+		{
+			"address": "@reduck/rossmann.de/get-product",
+			"path": "scripts/rossmann.de/get-product.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/rossmann.de/get-product",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/rossmann.de/search-products",
+			"path": "scripts/rossmann.de/search-products.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/rossmann.de/search-products",
+			"lastmod": "2026-11-26"
+		},
+		{
+			"address": "@reduck/rueducommerce.fr/add_to_cart",
+			"path": "scripts/rueducommerce.fr/add_to_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/rueducommerce.fr/add_to_cart",
+			"lastmod": "2026-11-24"
+		},
+		{
+			"address": "@reduck/rueducommerce.fr/get-product",
+			"path": "scripts/rueducommerce.fr/get-product.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/rueducommerce.fr/get-product",
+			"lastmod": "2026-11-24"
+		},
+		{
+			"address": "@reduck/rueducommerce.fr/list_cart_items",
+			"path": "scripts/rueducommerce.fr/list_cart_items.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/rueducommerce.fr/list_cart_items",
+			"lastmod": "2026-11-24"
 		},
 		{
 			"address": "@reduck/scholar.google.com/get_author_papers",

@@ -4,7 +4,7 @@ Automatically upvote a Product Hunt launch on producthunt.com. Casts one vote on
 
 - Site: producthunt.com
 - Address: `reduck/producthunt.com/upvote_launch`
-- Updated: 2026-10-23 (v2)
+- Updated: 2026-11-25 (v6)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -75,7 +75,7 @@ It returns postId, hasVoted, launchUrl, scoreAfter, scoreBefore, account_used, a
 
 ### Do I need to be logged in to producthunt.com?
 
-Yes. It acts as you on producthunt.com: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the producthunt.com cookies saved by the Reduck extension.
+Yes. It acts as you on producthunt.com: in your browser it reuses your session, and on a cloud browser it loads your Auth session cookies for producthunt.com.
 
 ### Does it change anything on producthunt.com, or only read data?
 
@@ -87,7 +87,7 @@ Ask an AI agent connected to Reduck to run reduck/producthunt.com/upvote_launch,
 
 ### Who maintains it?
 
-It is part of Reduck's official curated catalogue.
+It is one of Reduck's official scripts.
 
 ### What happens if Product Hunt redesigns its upvote button?
 

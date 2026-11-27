@@ -4,7 +4,7 @@ Automatically list the Fnac cart items on fnac.com. List the items in the Fnac.c
 
 - Site: fnac.com
 - Address: `reduck/fnac.com/list_cart_items`
-- Updated: 2026-11-25 (v1)
+- Updated: 2026-11-26 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

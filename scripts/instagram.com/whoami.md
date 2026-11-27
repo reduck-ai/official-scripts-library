@@ -4,7 +4,7 @@ Report which Instagram account this browser is signed in as: the user id, @usern
 
 - Site: instagram.com
 - Address: `reduck/instagram.com/whoami`
-- Updated: 2026-11-18 (v8)
+- Updated: 2026-11-26 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -44,7 +44,7 @@ It returns id, name, userId, evidence, loggedIn, username.
 
 ### Do I need to be logged in to instagram.com?
 
-Yes. It acts as you on instagram.com: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the instagram.com cookies saved by the Reduck extension.
+Yes. It acts as you on instagram.com: in your browser it reuses your session, and on a cloud browser it loads your Auth session cookies for instagram.com.
 
 ### Does it change anything on instagram.com, or only read data?
 
@@ -56,6 +56,6 @@ Ask an AI agent connected to Reduck to run reduck/instagram.com/whoami, or run i
 
 ### Who maintains it?
 
-It is part of Reduck's official curated catalogue.
+It is one of Reduck's official scripts.
 
 Source: https://reduck.ai/explore/scripts/reduck/instagram.com/whoami

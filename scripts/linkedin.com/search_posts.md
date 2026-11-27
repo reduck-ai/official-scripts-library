@@ -4,7 +4,7 @@ Automatically search LinkedIn posts on linkedin.com. Search LinkedIn posts by ke
 
 - Site: linkedin.com
 - Address: `reduck/linkedin.com/search_posts`
-- Updated: 2026-10-30 (v20)
+- Updated: 2026-11-26 (v21)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -53,7 +53,7 @@ It returns posts, start, total, complete.
 
 ### Do I need to be logged in to linkedin.com?
 
-Yes. It acts as you on linkedin.com: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the linkedin.com cookies saved by the Reduck extension.
+Yes. It acts as you on linkedin.com: in your browser it reuses your session, and on a cloud browser it loads your Auth session cookies for linkedin.com.
 
 ### Does it change anything on linkedin.com, or only read data?
 
@@ -65,6 +65,6 @@ Ask an AI agent connected to Reduck to run reduck/linkedin.com/search_posts, or 
 
 ### Who maintains it?
 
-It is part of Reduck's official curated catalogue.
+It is one of Reduck's official scripts.
 
 Source: https://reduck.ai/explore/scripts/reduck/linkedin.com/search_posts

@@ -1,0 +1,64 @@
+# List Muse chats (muse.ai)
+
+Automatically list Muse chats (muse.ai) on muse.ai. List every chat of the signed-in Muse account (Meta's personal agent at muse.ai), as its chat list shows them: the main chat and each side chat, with its id, title, the text of its last message, when it was created and last updated, and whether it is pinned, archived or has unread messages. Muse gives the whole list at once, so the list is complete. Pass archived: true to list the archived chats instead. Pass a chat's id to muse.ai/get_chat to read it. Requires a signed-in session: a signed-out browser fails at once with an error that says so.
+
+- Site: muse.ai
+- Address: `reduck/muse.ai/list_chats`
+- Updated: 2026-11-25 (v2)
+- Author: Reduck AI (reduck)
+
+## Run it
+
+Ask an AI agent connected to Reduck over MCP (`https://mcp.reduck.ai/mcp`) to run `reduck/muse.ai/list_chats`, or run it from a terminal:
+
+```bash
+npx @reduck-ai/cli@latest run --script reduck/muse.ai/list_chats
+```
+
+## Input
+
+- `archived` (boolean, optional): true lists the archived chats instead of the others.
+
+## Output
+
+- `chats` (array, required): Every chat of the list, in the order Muse gives them. Empty when the account has none.
+
+## FAQ
+
+### What does "List Muse chats (muse.ai)" do?
+
+List every chat of the signed-in Muse account (Meta's personal agent at muse.ai), as its chat list shows them: the main chat and each side chat, with its id, title, the text of its last message, when it was created and last updated, and whether it is pinned, archived or has unread messages. Muse gives the whole list at once, so the list is complete. Pass archived: true to list the archived chats instead. Pass a chat's id to muse.ai/get_chat to read it. Requires a signed-in session: a signed-out browser fails at once with an error that says so.
+
+### How do I automatically list Muse chats (muse.ai) on muse.ai?
+
+Ask an AI agent connected to Reduck to run reduck/muse.ai/list_chats, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/muse.ai/list_chats
+
+### Is there a muse.ai API to list Muse chats (muse.ai)?
+
+You do not need one. "List Muse chats (muse.ai)" drives the real muse.ai pages in a browser, so it works whether or not muse.ai offers an API for this.
+
+### What information do I need to provide?
+
+Optional: archived.
+
+### What does it return?
+
+It returns chats.
+
+### Do I need to be logged in to muse.ai?
+
+Yes. It acts as you on muse.ai: in your browser it reuses your session, and on a cloud browser it loads your Auth session cookies for muse.ai.
+
+### Does it change anything on muse.ai, or only read data?
+
+It only reads. It looks things up on muse.ai and changes nothing there.
+
+### How do I run it?
+
+Ask an AI agent connected to Reduck to run reduck/muse.ai/list_chats, or run it from a terminal with the Reduck CLI: npx @reduck-ai/cli@latest run --script reduck/muse.ai/list_chats
+
+### Who maintains it?
+
+It is one of Reduck's official scripts.
+
+Source: https://reduck.ai/explore/scripts/reduck/muse.ai/list_chats

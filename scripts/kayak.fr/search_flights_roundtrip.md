@@ -1,10 +1,10 @@
 # Kayak round-trip flight search
 
-Search round-trip flights on Kayak.fr with free-text origin/destination city names and dates. Matches each city to its airport and returns price_eur (round-trip total), airline(s), duration, stops and layover text. Ad and promo cards (car rental, etc.) are excluded. An unresolvable city name returns noResults:true.
+Search round-trip flights on Kayak.fr with free-text origin/destination city names and dates. Matches each city to its airport and returns price_eur (round-trip total), airline(s), duration, stops and layover text. Ad and promo cards (car rental, etc.) are excluded. An unresolvable city name returns noResults:true. Note: when Kayak shows its "are you human" reCAPTCHA, the script solves the image grid with an AI model, so a run can take longer and may occasionally fail with "kept its are-you-human check"; retry then.
 
 - Site: kayak.fr
 - Address: `reduck/kayak.fr/search_flights_roundtrip`
-- Updated: 2026-11-25 (v20)
+- Updated: 2026-11-26 (v20)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -55,7 +55,7 @@ Shape only: placeholder values generated from the output schema, not a real run.
 
 ### What does "Kayak round-trip flight search" do?
 
-Search round-trip flights on Kayak.fr with free-text origin/destination city names and dates. Matches each city to its airport and returns price_eur (round-trip total), airline(s), duration, stops and layover text. Ad and promo cards (car rental, etc.) are excluded. An unresolvable city name returns noResults:true.
+Search round-trip flights on Kayak.fr with free-text origin/destination city names and dates. Matches each city to its airport and returns price_eur (round-trip total), airline(s), duration, stops and layover text. Ad and promo cards (car rental, etc.) are excluded. An unresolvable city name returns noResults:true. Note: when Kayak shows its "are you human" reCAPTCHA, the script solves the image grid with an AI model, so a run can take longer and may occasionally fail with "kept its are-you-human check"; retry then.
 
 ### What information do I need to provide?
 

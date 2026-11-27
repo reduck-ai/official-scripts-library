@@ -4,7 +4,7 @@ Automatically search Nike products on nike.com. Search Nike.com products by free
 
 - Site: nike.com
 - Address: `reduck/nike.com/search_products`
-- Updated: 2026-09-11 (v5)
+- Updated: 2026-11-25 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -18,14 +18,17 @@ npx @reduck-ai/cli@latest run --script reduck/nike.com/search_products
 ## Input
 
 - `query` (string, required)
-- `max` (integer, optional)
+- `max` (integer, optional): Return at most this many products of the page (kept for older callers).
+- `page` (integer, optional): Result page, 24 products per page. Nike loads results as you scroll; page N is results (N-1)*24+1 to N*24.
 
 ## Output
 
-- `count` (integer, required): Number of cards returned in results, capped by max.
+- `page` (integer, required)
+- `count` (integer, required): Number of cards returned on this page.
 - `query` (string, required)
 - `results` (array, required)
-- `total` (integer | null, optional): How many results Nike itself reports for this query, which can be far larger than count. Nike matches loosely: a query it cannot match well still returns lower-relevance products and counts them here as results, so a non-zero total is not a promise that the products relate to the query.
+- `has_next_page` (boolean, required)
+- `total` (integer | null, optional): How many results Nike itself reports for this query. Nike matches loosely: a query it cannot match well still returns lower-relevance products and counts them here, so a non-zero total is not a promise that the products relate to the query.
 
 ## FAQ
 
@@ -43,11 +46,11 @@ You do not need one. "Search Nike products" drives the real nike.com pages in a 
 
 ### What information do I need to provide?
 
-Required: query. Optional: max.
+Required: query. Optional: max, page.
 
 ### What does it return?
 
-It returns count, query, total, results.
+It returns page, count, query, total, results, has_next_page.
 
 ### Do I need to be logged in to nike.com?
 
@@ -63,6 +66,6 @@ Ask an AI agent connected to Reduck to run reduck/nike.com/search_products, or r
 
 ### Who maintains it?
 
-It is part of Reduck's official curated catalogue.
+It is one of Reduck's official scripts.
 
 Source: https://reduck.ai/explore/scripts/reduck/nike.com/search_products

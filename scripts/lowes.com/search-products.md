@@ -4,7 +4,7 @@ Automatically search Lowe's products on lowes.com. Search Lowes.com by free-text
 
 - Site: lowes.com
 - Address: `reduck/lowes.com/search-products`
-- Updated: 2026-11-25 (v1)
+- Updated: 2026-11-26 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

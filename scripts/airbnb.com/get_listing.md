@@ -4,7 +4,7 @@ Automatically get Airbnb listing on airbnb.com. Get one Airbnb listing by room i
 
 - Site: airbnb.com
 - Address: `reduck/airbnb.com/get_listing`
-- Updated: 2026-11-23 (v17)
+- Updated: 2026-11-26 (v18)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -87,6 +87,6 @@ Ask an AI agent connected to Reduck to run reduck/airbnb.com/get_listing, or run
 
 ### Who maintains it?
 
-It is part of Reduck's official curated catalogue.
+It is one of Reduck's official scripts.
 
 Source: https://reduck.ai/explore/scripts/reduck/airbnb.com/get_listing

@@ -4,7 +4,7 @@ Automatically search Flipkart products on flipkart.com. Search Flipkart India (f
 
 - Site: flipkart.com
 - Address: `reduck/flipkart.com/search-products`
-- Updated: 2026-11-24 (v1)
+- Updated: 2026-11-26 (v2)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -4,7 +4,7 @@ Automatically get Slack message permalink on slack.com. Get the shareable permal
 
 - Site: slack.com
 - Address: `reduck/slack.com/get_permalink`
-- Updated: 2026-11-04 (v7)
+- Updated: 2026-11-24 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -52,7 +52,7 @@ It returns ok, ts, channel, permalink.
 
 ### Do I need to be logged in to slack.com?
 
-Yes. It acts as you on slack.com: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the slack.com cookies saved by the Reduck extension.
+Yes. It acts as you on slack.com: in your browser it reuses your session, and on a cloud browser it loads your Auth session cookies for slack.com.
 
 ### Does it change anything on slack.com, or only read data?
 
@@ -64,6 +64,6 @@ Ask an AI agent connected to Reduck to run reduck/slack.com/get_permalink, or ru
 
 ### Who maintains it?
 
-It is part of Reduck's official curated catalogue.
+It is one of Reduck's official scripts.
 
 Source: https://reduck.ai/explore/scripts/reduck/slack.com/get_permalink

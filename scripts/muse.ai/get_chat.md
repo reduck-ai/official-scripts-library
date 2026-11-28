@@ -4,7 +4,7 @@ Automatically read a Muse chat (muse.ai) on muse.ai. Read one chat of the signed
 
 - Site: muse.ai
 - Address: `reduck/muse.ai/get_chat`
-- Updated: 2026-11-26 (v3)
+- Updated: 2026-11-27 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it

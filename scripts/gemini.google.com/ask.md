@@ -4,7 +4,7 @@ Automatically ask Gemini on gemini.google.com. Open a new Gemini chat, send one 
 
 - Site: gemini.google.com
 - Address: `reduck/gemini.google.com/ask`
-- Updated: 2026-10-22 (v7)
+- Updated: 2026-11-27 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -49,7 +49,7 @@ It returns answer, citations, conversationId.
 
 ### Do I need to be logged in to gemini.google.com?
 
-Yes. It acts as you on gemini.google.com: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the gemini.google.com cookies saved by the Reduck extension.
+Yes. It acts as you on gemini.google.com: in your browser it reuses your session, and on a cloud browser it loads your Auth session cookies for gemini.google.com.
 
 ### Does it change anything on gemini.google.com, or only read data?
 
@@ -61,6 +61,6 @@ Ask an AI agent connected to Reduck to run reduck/gemini.google.com/ask, or run 
 
 ### Who maintains it?
 
-It is part of Reduck's official curated catalogue.
+It is one of Reduck's official scripts.
 
 Source: https://reduck.ai/explore/scripts/reduck/gemini.google.com/ask

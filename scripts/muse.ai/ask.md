@@ -4,7 +4,7 @@ Automatically ask Muse (muse.ai) on muse.ai. Open a new side chat with Muse, Met
 
 - Site: muse.ai
 - Address: `reduck/muse.ai/ask`
-- Updated: 2026-11-26 (v5)
+- Updated: 2026-11-27 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it

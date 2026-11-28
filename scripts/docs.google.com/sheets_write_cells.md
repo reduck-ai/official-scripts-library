@@ -4,7 +4,7 @@ Automatically write cells on docs.google.com. Write a 2D block of values into on
 
 - Site: docs.google.com
 - Address: `reduck/docs.google.com/sheets_write_cells`
-- Updated: 2026-11-19 (v9)
+- Updated: 2026-11-27 (v10)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -53,7 +53,7 @@ It returns cols, rows, range, saved.
 
 ### Do I need to be logged in to docs.google.com?
 
-Yes. It acts as you on docs.google.com: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the docs.google.com cookies saved by the Reduck extension.
+Yes. It acts as you on docs.google.com: in your browser it reuses your session, and on a cloud browser it loads your Auth session cookies for docs.google.com.
 
 ### Does it change anything on docs.google.com, or only read data?
 
@@ -65,6 +65,6 @@ Ask an AI agent connected to Reduck to run reduck/docs.google.com/sheets_write_c
 
 ### Who maintains it?
 
-It is part of Reduck's official curated catalogue.
+It is one of Reduck's official scripts.
 
 Source: https://reduck.ai/explore/scripts/reduck/docs.google.com/sheets_write_cells

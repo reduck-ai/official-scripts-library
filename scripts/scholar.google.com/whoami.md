@@ -4,7 +4,7 @@ Report which Google account Google Scholar is signed in as in this browser: disp
 
 - Site: scholar.google.com
 - Address: `reduck/scholar.google.com/whoami`
-- Updated: 2026-10-22 (v4)
+- Updated: 2026-11-24 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -42,7 +42,7 @@ It returns name, email, evidence, loggedIn.
 
 ### Do I need to be logged in to scholar.google.com?
 
-Yes. It acts as you on scholar.google.com: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the scholar.google.com cookies saved by the Reduck extension.
+Yes. It acts as you on scholar.google.com: in your browser it reuses your session, and on a cloud browser it loads your Auth session cookies for scholar.google.com.
 
 ### Does it change anything on scholar.google.com, or only read data?
 
@@ -54,6 +54,6 @@ Ask an AI agent connected to Reduck to run reduck/scholar.google.com/whoami, or 
 
 ### Who maintains it?
 
-It is part of Reduck's official curated catalogue.
+It is one of Reduck's official scripts.
 
 Source: https://reduck.ai/explore/scripts/reduck/scholar.google.com/whoami

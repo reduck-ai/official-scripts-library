@@ -4,7 +4,7 @@ Automatically get Leboncoin ad on leboncoin.fr. Fetch a single Leboncoin classif
 
 - Site: leboncoin.fr
 - Address: `reduck/leboncoin.fr/get_ad`
-- Updated: 2026-10-22 (v6)
+- Updated: 2026-11-27 (v7)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -81,6 +81,6 @@ Ask an AI agent connected to Reduck to run reduck/leboncoin.fr/get_ad, or run it
 
 ### Who maintains it?
 
-It is part of Reduck's official curated catalogue.
+It is one of Reduck's official scripts.
 
 Source: https://reduck.ai/explore/scripts/reduck/leboncoin.fr/get_ad

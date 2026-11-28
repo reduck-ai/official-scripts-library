@@ -4,7 +4,7 @@ Report which Facebook account this browser is signed in as: the user id and name
 
 - Site: facebook.com
 - Address: `reduck/facebook.com/whoami`
-- Updated: 2026-11-19 (v8)
+- Updated: 2026-11-27 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -46,7 +46,7 @@ It returns id, name, state, userId, actingId, evidence, loggedIn, actingAsPage.
 
 ### Do I need to be logged in to facebook.com?
 
-Yes. It acts as you on facebook.com: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the facebook.com cookies saved by the Reduck extension.
+Yes. It acts as you on facebook.com: in your browser it reuses your session, and on a cloud browser it loads your Auth session cookies for facebook.com.
 
 ### Does it change anything on facebook.com, or only read data?
 
@@ -58,6 +58,6 @@ Ask an AI agent connected to Reduck to run reduck/facebook.com/whoami, or run it
 
 ### Who maintains it?
 
-It is part of Reduck's official curated catalogue.
+It is one of Reduck's official scripts.
 
 Source: https://reduck.ai/explore/scripts/reduck/facebook.com/whoami

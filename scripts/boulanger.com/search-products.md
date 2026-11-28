@@ -4,7 +4,7 @@ Automatically search Boulanger products on boulanger.com. Search Boulanger.com b
 
 - Site: boulanger.com
 - Address: `reduck/boulanger.com/search-products`
-- Updated: 2026-11-24 (v2)
+- Updated: 2026-11-27 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

@@ -1,10 +1,10 @@
 # Search Leroy Merlin products
 
-Automatically search Leroy Merlin products on leroymerlin.fr. Search leroymerlin.fr by free-text query, with the site's sort order, one page at a time of about 48 products. Returns the page number, the page count, has_next_page, the result count the site shows (it stops counting at 10000), and for each product its reference, offer id, name, brand, link, price in euros, rating, review count, seller and image. Prices are those the site shows for the browser's current store, or the online price when no store is chosen. Stop paging when has_next_page is false. Pass the link to Get Leroy Merlin product or Add Leroy Merlin product to cart.
+Automatically search Leroy Merlin products on leroymerlin.fr. Search leroymerlin.fr by free-text query, with the site's sort order, one page at a time of about 48 products. Returns the page number, the page count, has_next_page, the result count the site shows (it stops counting at 10000), and for each product its reference, offer id, name, brand, link, price in euros, rating, review count, seller and image. Prices are those the site shows for the browser's current store, or the online price when no store is chosen. Stop paging when has_next_page is false. Pass the link to Get Leroy Merlin product or Add Leroy Merlin product to cart. On a managed browser, set the country to FR: Leroy Merlin blocks the search from a datacenter address.
 
 - Site: leroymerlin.fr
 - Address: `reduck/leroymerlin.fr/search-products`
-- Updated: 2026-11-24 (v6)
+- Updated: 2026-11-27 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -35,7 +35,7 @@ npx @reduck-ai/cli@latest run --script reduck/leroymerlin.fr/search-products
 
 ### What does "Search Leroy Merlin products" do?
 
-Search leroymerlin.fr by free-text query, with the site's sort order, one page at a time of about 48 products. Returns the page number, the page count, has_next_page, the result count the site shows (it stops counting at 10000), and for each product its reference, offer id, name, brand, link, price in euros, rating, review count, seller and image. Prices are those the site shows for the browser's current store, or the online price when no store is chosen. Stop paging when has_next_page is false. Pass the link to Get Leroy Merlin product or Add Leroy Merlin product to cart.
+Search leroymerlin.fr by free-text query, with the site's sort order, one page at a time of about 48 products. Returns the page number, the page count, has_next_page, the result count the site shows (it stops counting at 10000), and for each product its reference, offer id, name, brand, link, price in euros, rating, review count, seller and image. Prices are those the site shows for the browser's current store, or the online price when no store is chosen. Stop paging when has_next_page is false. Pass the link to Get Leroy Merlin product or Add Leroy Merlin product to cart. On a managed browser, set the country to FR: Leroy Merlin blocks the search from a datacenter address.
 
 ### How do I automatically search Leroy Merlin products on leroymerlin.fr?
 

@@ -4,7 +4,7 @@ Automatically open Slack DM on slack.com. Open (or fetch) a direct message with 
 
 - Site: slack.com
 - Address: `reduck/slack.com/open_dm`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-24 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -50,7 +50,7 @@ It returns ok, channel, alreadyOpen.
 
 ### Do I need to be logged in to slack.com?
 
-Yes. It acts as you on slack.com: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the slack.com cookies saved by the Reduck extension.
+Yes. It acts as you on slack.com: in your browser it reuses your session, and on a cloud browser it loads your Auth session cookies for slack.com.
 
 ### Does it change anything on slack.com, or only read data?
 
@@ -62,6 +62,6 @@ Ask an AI agent connected to Reduck to run reduck/slack.com/open_dm, or run it f
 
 ### Who maintains it?
 
-It is part of Reduck's official curated catalogue.
+It is one of Reduck's official scripts.
 
 Source: https://reduck.ai/explore/scripts/reduck/slack.com/open_dm

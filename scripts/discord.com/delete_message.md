@@ -4,7 +4,7 @@ Automatically delete Discord message on discord.com. Deletes a single Discord me
 
 - Site: discord.com
 - Address: `reduck/discord.com/delete_message`
-- Updated: 2026-11-23 (v11)
+- Updated: 2026-11-27 (v13)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -49,7 +49,7 @@ It returns deleted, messageId.
 
 ### Do I need to be logged in to discord.com?
 
-Yes. It acts as you on discord.com: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the discord.com cookies saved by the Reduck extension.
+Yes. It acts as you on discord.com: in your browser it reuses your session, and on a cloud browser it loads your Auth session cookies for discord.com.
 
 ### Does it change anything on discord.com, or only read data?
 
@@ -61,6 +61,6 @@ Ask an AI agent connected to Reduck to run reduck/discord.com/delete_message, or
 
 ### Who maintains it?
 
-It is part of Reduck's official curated catalogue.
+It is one of Reduck's official scripts.
 
 Source: https://reduck.ai/explore/scripts/reduck/discord.com/delete_message

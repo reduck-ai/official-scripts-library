@@ -4,7 +4,7 @@ Automatically get Reddit thread on reddit.com. Fetch a Reddit thread by its id o
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/get_thread`
-- Updated: 2026-11-03 (v28)
+- Updated: 2026-11-27 (v29)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -65,7 +65,7 @@ It returns id, score, title, author, domain, created, op_text, comments, complet
 
 ### Do I need to be logged in to reddit.com?
 
-Yes. It acts as you on reddit.com: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the reddit.com cookies saved by the Reduck extension.
+Yes. It acts as you on reddit.com: in your browser it reuses your session, and on a cloud browser it loads your Auth session cookies for reddit.com.
 
 ### Does it change anything on reddit.com, or only read data?
 
@@ -77,6 +77,6 @@ Ask an AI agent connected to Reduck to run reduck/reddit.com/get_thread, or run 
 
 ### Who maintains it?
 
-It is part of Reduck's official curated catalogue.
+It is one of Reduck's official scripts.
 
 Source: https://reduck.ai/explore/scripts/reduck/reddit.com/get_thread

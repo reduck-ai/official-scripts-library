@@ -4,7 +4,7 @@ Log into Make (formerly Integromat) with Continue with Google, handling the Goog
 
 - Site: make.com
 - Address: `reduck/make.com/login_with_google`
-- Updated: 2026-10-22 (v6)
+- Updated: 2026-11-27 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -55,6 +55,6 @@ Ask an AI agent connected to Reduck to run reduck/make.com/login_with_google, or
 
 ### Who maintains it?
 
-It is part of Reduck's official curated catalogue.
+It is one of Reduck's official scripts.
 
 Source: https://reduck.ai/explore/scripts/reduck/make.com/login_with_google

@@ -1,10 +1,10 @@
 # Get Slack channel messages
 
-Automatically get Slack channel messages on slack.com. Read a channel's message history by name (e.g. 'social' or '#social') or id (C…). Newest first; pass cursor to paginate, oldest/latest (unix ts) to bound the range. Authors are resolved to display names. Requires login.
+Automatically get Slack channel messages on slack.com. Read the latest messages of a Slack channel by its id (C…, G… or D…), as the Slack app loads them when the channel is opened: one page of recent history, in Slack's own order. Authors are resolved to display names. Opening the channel does not mark it read. Requires being signed in to that workspace.
 
 - Site: slack.com
 - Address: `reduck/slack.com/get_channel_messages`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-24 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,12 +17,8 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/get_channel_messages
 
 ## Input
 
-- `channel` (string, required): Channel name (with or without #) or id (C…).
-- `limit` (integer, optional): Max messages per page (default 50).
-- `cursor` (string, optional): next_cursor from a previous call.
-- `latest` (string, optional): Only messages before this unix ts.
-- `oldest` (string, optional): Only messages after this unix ts (inclusive).
-- `workspaceDomain` (string, optional): Workspace host, e.g. acme.slack.com. Defaults to the active workspace.
+- `channel` (string, required): Channel id (C…, G… or D…), as listed by slack.com/list_channels.
+- `workspaceDomain` (string, required): Workspace host, e.g. acme.slack.com.
 
 ## Output
 
@@ -34,7 +30,7 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/get_channel_messages
 
 ### What does "Get Slack channel messages" do?
 
-Read a channel's message history by name (e.g. 'social' or '#social') or id (C…). Newest first; pass cursor to paginate, oldest/latest (unix ts) to bound the range. Authors are resolved to display names. Requires login.
+Read the latest messages of a Slack channel by its id (C…, G… or D…), as the Slack app loads them when the channel is opened: one page of recent history, in Slack's own order. Authors are resolved to display names. Opening the channel does not mark it read. Requires being signed in to that workspace.
 
 ### How do I automatically get Slack channel messages on slack.com?
 
@@ -46,7 +42,7 @@ You do not need one. "Get Slack channel messages" drives the real slack.com page
 
 ### What information do I need to provide?
 
-Required: channel. Optional: limit, cursor, latest, oldest, workspaceDomain.
+Required: channel, workspaceDomain.
 
 ### What does it return?
 
@@ -54,11 +50,11 @@ It returns channel, messages, nextCursor.
 
 ### Do I need to be logged in to slack.com?
 
-Yes. It acts as you on slack.com: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the slack.com cookies saved by the Reduck extension.
+Yes. It acts as you on slack.com: in your browser it reuses your session, and on a cloud browser it loads your Auth session cookies for slack.com.
 
 ### Does it change anything on slack.com, or only read data?
 
-Unknown: its author has not declared whether it changes anything on slack.com, so treat it as if it could.
+It only reads. It looks things up on slack.com and changes nothing there.
 
 ### How do I run it?
 
@@ -66,6 +62,6 @@ Ask an AI agent connected to Reduck to run reduck/slack.com/get_channel_messages
 
 ### Who maintains it?
 
-It is part of Reduck's official curated catalogue.
+It is one of Reduck's official scripts.
 
 Source: https://reduck.ai/explore/scripts/reduck/slack.com/get_channel_messages

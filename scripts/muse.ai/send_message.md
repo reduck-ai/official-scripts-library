@@ -4,7 +4,7 @@ Automatically send a message in a Muse chat (muse.ai) on muse.ai. Continue a cha
 
 - Site: muse.ai
 - Address: `reduck/muse.ai/send_message`
-- Updated: 2026-11-25 (v1)
+- Updated: 2026-11-27 (v1)
 - Author: Reduck AI (reduck)
 
 ## Run it

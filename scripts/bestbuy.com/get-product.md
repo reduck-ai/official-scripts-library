@@ -4,7 +4,7 @@ Automatically get Best Buy product on bestbuy.com. Fetch one Best Buy (US) produ
 
 - Site: bestbuy.com
 - Address: `reduck/bestbuy.com/get-product`
-- Updated: 2026-11-20 (v3)
+- Updated: 2026-11-27 (v4)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,7 +17,7 @@ npx @reduck-ai/cli@latest run --script reduck/bestbuy.com/get-product
 
 ## Input
 
-- `sku` (string, required): Best Buy SKU: the number after /sku/ in a product link, or the sku of Search Best Buy products.
+- `sku` (string, required): Best Buy SKU (the number after /sku/ in a product link, or the sku of Search Best Buy products), or a bestbuy.com product link that holds one.
 - `zipCode` (string, optional): US ZIP code the shipping options and dates are for.
 
 ## Output
@@ -84,6 +84,6 @@ Ask an AI agent connected to Reduck to run reduck/bestbuy.com/get-product, or ru
 
 ### Who maintains it?
 
-It is part of Reduck's official curated catalogue.
+It is one of Reduck's official scripts.
 
 Source: https://reduck.ai/explore/scripts/reduck/bestbuy.com/get-product

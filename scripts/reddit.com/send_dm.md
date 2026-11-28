@@ -4,7 +4,7 @@ Automatically send Reddit DM on reddit.com. Send a Reddit direct message to a us
 
 - Site: reddit.com
 - Address: `reduck/reddit.com/send_dm`
-- Updated: 2026-10-22 (v4)
+- Updated: 2026-11-27 (v9)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -24,7 +24,7 @@ npx @reduck-ai/cli@latest run --script reduck/reddit.com/send_dm
 ## Output
 
 - `to` (string, required): Recipient username the message was sent to (u/ prefix stripped)
-- `sent` (boolean, required): True only when the SendDirectChatToRedditor mutation returned ok
+- `sent` (boolean, required): True only when Reddit confirmed the message was sent
 
 ## FAQ
 
@@ -50,7 +50,7 @@ It returns to, sent.
 
 ### Do I need to be logged in to reddit.com?
 
-Yes. It acts as you on reddit.com: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the reddit.com cookies saved by the Reduck extension.
+Yes. It acts as you on reddit.com: in your browser it reuses your session, and on a cloud browser it loads your Auth session cookies for reddit.com.
 
 ### Does it change anything on reddit.com, or only read data?
 
@@ -62,6 +62,6 @@ Ask an AI agent connected to Reduck to run reduck/reddit.com/send_dm, or run it 
 
 ### Who maintains it?
 
-It is part of Reduck's official curated catalogue.
+It is one of Reduck's official scripts.
 
 Source: https://reduck.ai/explore/scripts/reduck/reddit.com/send_dm

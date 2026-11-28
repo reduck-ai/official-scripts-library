@@ -4,7 +4,7 @@ Automatically set Slack status on slack.com. Set your own Slack status: text plu
 
 - Site: slack.com
 - Address: `reduck/slack.com/set_status`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-24 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -53,7 +53,7 @@ It returns ok, status_text, status_emoji, status_expiration.
 
 ### Do I need to be logged in to slack.com?
 
-Yes. It acts as you on slack.com: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the slack.com cookies saved by the Reduck extension.
+Yes. It acts as you on slack.com: in your browser it reuses your session, and on a cloud browser it loads your Auth session cookies for slack.com.
 
 ### Does it change anything on slack.com, or only read data?
 
@@ -65,6 +65,6 @@ Ask an AI agent connected to Reduck to run reduck/slack.com/set_status, or run i
 
 ### Who maintains it?
 
-It is part of Reduck's official curated catalogue.
+It is one of Reduck's official scripts.
 
 Source: https://reduck.ai/explore/scripts/reduck/slack.com/set_status

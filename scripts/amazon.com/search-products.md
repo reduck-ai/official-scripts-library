@@ -4,7 +4,7 @@ Automatically search Amazon products on amazon.com. Search Amazon by free-text q
 
 - Site: amazon.com
 - Address: `reduck/amazon.com/search-products`
-- Updated: 2026-11-25 (v20)
+- Updated: 2026-11-27 (v21)
 - Author: Reduck AI (reduck)
 
 ## Run it

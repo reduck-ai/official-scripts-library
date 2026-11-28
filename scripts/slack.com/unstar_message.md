@@ -4,7 +4,7 @@ Automatically unsave (unstar) Slack message on slack.com. Remove a message from 
 
 - Site: slack.com
 - Address: `reduck/slack.com/unstar_message`
-- Updated: 2026-10-22 (v3)
+- Updated: 2026-11-24 (v5)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -51,7 +51,7 @@ It returns ok, ts, channel.
 
 ### Do I need to be logged in to slack.com?
 
-Yes. It acts as you on slack.com: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the slack.com cookies saved by the Reduck extension.
+Yes. It acts as you on slack.com: in your browser it reuses your session, and on a cloud browser it loads your Auth session cookies for slack.com.
 
 ### Does it change anything on slack.com, or only read data?
 
@@ -63,6 +63,6 @@ Ask an AI agent connected to Reduck to run reduck/slack.com/unstar_message, or r
 
 ### Who maintains it?
 
-It is part of Reduck's official curated catalogue.
+It is one of Reduck's official scripts.
 
 Source: https://reduck.ai/explore/scripts/reduck/slack.com/unstar_message

@@ -4,7 +4,7 @@ Automatically search Fnac products on fnac.com. Search Fnac.com by free-text que
 
 - Site: fnac.com
 - Address: `reduck/fnac.com/search-products`
-- Updated: 2026-11-25 (v1)
+- Updated: 2026-11-27 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

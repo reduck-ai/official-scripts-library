@@ -4,7 +4,7 @@ Automatically get Slack mentions on slack.com. Read the Activity feed's Mentions
 
 - Site: slack.com
 - Address: `reduck/slack.com/get_mentions`
-- Updated: 2026-10-22 (v2)
+- Updated: 2026-11-24 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,16 +17,17 @@ npx @reduck-ai/cli@latest run --script reduck/slack.com/get_mentions
 
 ## Input
 
-- `limit` (integer, optional): Max items (default 20).
-- `unreadOnly` (boolean, optional): Only unread mentions. Default false.
-- `workspaceDomain` (string, optional): Workspace host, e.g. acme.slack.com. Defaults to the active workspace.
+- `workspaceDomain` (string, required): Workspace host, e.g. acme.slack.com.
+- `limit` (integer, optional): Items per page.
+- `cursor` (string, optional): nextCursor from the previous page, to read the next one.
+- `unreadOnly` (boolean, optional): Only unread mentions.
 
 ## Output
 
 - `count` (integer, required)
 - `items` (array, required)
-- `nextTs` (string | null, optional)
 - `hasMore` (boolean, optional)
+- `nextCursor` (string | null, optional)
 
 ## FAQ
 
@@ -44,19 +45,19 @@ You do not need one. "Get Slack mentions" drives the real slack.com pages in a b
 
 ### What information do I need to provide?
 
-Optional: limit, unreadOnly, workspaceDomain.
+Required: workspaceDomain. Optional: limit, cursor, unreadOnly.
 
 ### What does it return?
 
-It returns count, items, nextTs, hasMore.
+It returns count, items, hasMore, nextCursor.
 
 ### Do I need to be logged in to slack.com?
 
-Yes. It acts as you on slack.com: on your own Chrome it reuses your session, and on a Reduck-hosted browser it loads the slack.com cookies saved by the Reduck extension.
+Yes. It acts as you on slack.com: in your browser it reuses your session, and on a cloud browser it loads your Auth session cookies for slack.com.
 
 ### Does it change anything on slack.com, or only read data?
 
-Unknown: its author has not declared whether it changes anything on slack.com, so treat it as if it could.
+It only reads. It looks things up on slack.com and changes nothing there.
 
 ### How do I run it?
 
@@ -64,6 +65,6 @@ Ask an AI agent connected to Reduck to run reduck/slack.com/get_mentions, or run
 
 ### Who maintains it?
 
-It is part of Reduck's official curated catalogue.
+It is one of Reduck's official scripts.
 
 Source: https://reduck.ai/explore/scripts/reduck/slack.com/get_mentions

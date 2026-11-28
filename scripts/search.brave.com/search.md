@@ -4,7 +4,7 @@ Brave's ranked results for any query or site: check, about 20 a page, with title
 
 - Site: search.brave.com
 - Address: `reduck/search.brave.com/search`
-- Updated: 2026-10-19 (v27)
+- Updated: 2026-11-25 (v28)
 - Author: Reduck AI (reduck)
 
 ## About
@@ -91,7 +91,7 @@ Ask an AI agent connected to Reduck to run reduck/search.brave.com/search, or ru
 
 ### Who maintains it?
 
-It is part of Reduck's official curated catalogue.
+It is one of Reduck's official scripts.
 
 ### How many Brave results can I get for one query?
 
